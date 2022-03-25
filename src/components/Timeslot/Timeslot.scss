@@ -1,0 +1,84 @@
+@import '../../_global.scss';
+
+.Timeslot {
+    display: block;
+    background-color: rgb(226, 243, 243);
+    padding: 0.2em 1.3em;
+    border-top: solid 8px $gold;
+    
+    .timeslot-date {
+        font-size: 7.6vw;
+        font-weight: 700;
+
+        @media (min-width: $medium-width)  {
+            font-size: 1.55em;
+            white-space: nowrap;
+        }
+
+        .date-gmt, .date-local {
+            line-height: 1;
+            margin-bottom: 0.2em;
+
+            @media (min-width: $medium-width)  {
+                margin-bottom: .5em;
+            }
+        }
+
+        .date-label {
+            font-size: 0.53em;
+            font-style: italic;
+            font-weight: 600;
+            position: relative;
+            top: 0.5em;
+            left: -0.25em;
+            background-color: rgba(255,255,255,0.5);
+            display: inline-block;
+            border-radius: 1em;
+            padding: 0.15em .7em 0.5em .5em;
+            z-index: 5;
+
+            @media (min-width: $medium-width)  {
+                font-size: 0.53em;
+            }
+        }
+        .date-time {
+            position: relative;
+            z-index: 10;
+        }
+
+    }
+
+    .timeslot-participation {
+        margin-top: 1em;
+        
+        display: flex;
+        > div {
+            flex: 8;
+            &:first-child {
+                flex: 5;
+            }
+            @media (min-width: $medium-width)  {
+                flex: 6;
+                &:first-child {
+                    flex: 5;
+                }    
+            }
+        }
+
+
+        .participation-badge {
+            background-color: $dark-bg;
+            color: white;
+            display: inline-block;
+            border-radius: 4px;
+            padding: 0.25em .5em;
+            font-weight: 600;
+            line-height: 1;
+        }
+    }
+
+    .timeslot-info {
+        
+    }
+
+}

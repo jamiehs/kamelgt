@@ -1,0 +1,145 @@
+@import '_global.scss';
+
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+
+  a, a:link {
+    color: $brown;
+    font-weight: 700;
+
+    &[target="_blank"] {
+      &::after {
+        content: '';
+        vertical-align: middle;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-left: 0.1em;
+        margin-bottom: 0.2em;
+        background-color: $brown;
+        mask-size: contain;
+        mask-image: url('images/icons8-external-link.svg');
+      }
+    }
+  }
+
+  header {
+    overflow: hidden;
+    background-color: $blue;
+    border-bottom: solid 8px $brown;
+    h1, h2 {
+      font-weight: 400;
+    }
+    h1 {
+      line-height: 1;
+      font-size: 9.8vw;
+      margin-top: 0.4vw;
+      margin-bottom: -0.2em;
+      font-family: 'Dela Gothic One', sans-serif;
+      color: $gold;
+    }
+    h2 {
+      font-size: 4.6vw;
+      margin-top: 3.1vw;
+      margin-bottom: 0.4vw;
+      font-family: 'Knewave', cursive;
+      color: #c7b19d;
+    }
+    @media (min-width: $medium-width)  {
+      margin-bottom: 1em;
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 0;
+        margin-top: 0.6em;
+      }
+      h2 {
+        margin-top: -0.3em;
+        margin-bottom: 1.5em;
+        font-size: 24px;
+      }
+    }  
+  }
+}
+
+.section {
+  margin: 0;
+  padding: 0.75em;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+
+  h2.title {
+    font-weight: 100;
+    font-family: 'Knewave', cursive;
+    color: white;
+    background-color: $dark-bg;
+    padding: 0 0 .2em .5em;
+  }
+  
+  @media (min-width: $medium-width)  {
+    padding: 0;
+    margin: 0 auto 3em;
+    max-width: 900px;
+  }
+}
+.header-section {
+  margin: 0;
+  padding: 0.75em;
+
+  @media (min-width: $medium-width)  {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+.footnote {
+  font-size: 0.8rem;
+  padding: .75em 0;
+  font-style: italic;
+}
+
+.timeslots-wrapper {
+  background-color: $dark-bg;
+  overflow: hidden;
+
+  .footnote {
+    color: $light-text;
+  }
+
+  .timeslots {
+    display: block;
+
+    .Timeslot {
+      margin-top: 1em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    
+    @media (min-width: $medium-width)  {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 1em;
+
+      .Timeslot {
+        margin-top: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }  
+    }
+  }
+}
+
+.chatter-servers {
+  .Server {
+    margin-bottom: 2em;
+  }
+}
