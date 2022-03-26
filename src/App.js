@@ -16,7 +16,7 @@ function App() {
             <div className="intro section">
                 <div className="intro-copy">
                     <p>
-                        Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you will need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn't here, you'll need to start the discussion and get people to&nbsp;show&nbsp;up.
+                        Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you'll need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn't here, you'll need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
                     <p>
                         The timeslots here are the ones that are guaranteed to go official. Occasionally 6 strangers find themselves in a lucky official race, but it's very rare.
