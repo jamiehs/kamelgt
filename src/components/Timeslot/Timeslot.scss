@@ -11,15 +11,19 @@
         font-weight: 700;
 
         @media (min-width: $medium-width)  {
-            font-size: 1.55em;
+            font-size: 1.1em;
             white-space: nowrap;
+        }
+
+        @media (min-width: $large-width)  {
+            font-size: 1.55em;
         }
 
         .date-gmt, .date-local {
             line-height: 1;
             margin-bottom: 0.2em;
 
-            @media (min-width: $medium-width)  {
+            @media (min-width: $large-width)  {
                 margin-bottom: .5em;
             }
         }
@@ -37,7 +41,7 @@
             padding: 0.15em .7em 0.5em .5em;
             z-index: 5;
 
-            @media (min-width: $medium-width)  {
+            @media (min-width: $large-width)  {
                 font-size: 0.53em;
             }
         }
@@ -55,13 +59,7 @@
         > div {
             flex: 8;
             &:first-child {
-                flex: 5;
-            }
-            @media (min-width: $medium-width)  {
-                flex: 6;
-                &:first-child {
-                    flex: 5;
-                }    
+                flex: 2;
             }
         }
 
@@ -74,6 +72,17 @@
             padding: 0.25em .5em;
             font-weight: 600;
             line-height: 1;
+            white-space: nowrap;
+            margin-right: 0.5em;
+
+            @media (min-width: $medium-width)  {
+                font-size: 0.7rem;
+            }
+
+            @media (min-width: $large-width)  {
+                font-size: 1rem;
+            }
+
         }
     }
 

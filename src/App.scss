@@ -31,6 +31,23 @@
     }
   }
 
+  .header-section {
+    margin: 0;
+    padding: 0.75em;
+  
+    @media (min-width: $medium-width) {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+
+    @media (min-width: $large-width) {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+  }
+
   header {
     overflow: hidden;
     background-color: $blue;
@@ -53,6 +70,7 @@
       font-family: 'Knewave', cursive;
       color: #c7b19d;
     }
+
     @media (min-width: $medium-width) {
       margin-bottom: 1em;
 
@@ -66,7 +84,7 @@
         margin-bottom: 1.5em;
         font-size: 24px;
       }
-    }  
+    }
   }
 
   .intro {
@@ -78,9 +96,14 @@
 
     @media (min-width: $medium-width) {
       font-size: 18px;
+      margin-top: 1em;
+      margin-bottom: 1.4em;
+    }
+
+    @media (min-width: $large-width) {
+      font-size: 18px;
       margin-top: 3em;
       margin-bottom: 3.33em;
-  
     }
   }
 }
@@ -104,16 +127,12 @@
   @media (min-width: $medium-width) {
     padding: 0;
     margin: 0 auto 3em;
-    max-width: 900px;
+    max-width: 90%;
   }
-}
-.header-section {
-  margin: 0;
-  padding: 0.75em;
-
-  @media (min-width: $medium-width) {
+  
+  @media (min-width: $large-width) {
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 3em;
     max-width: 900px;
   }
 }
@@ -128,7 +147,7 @@
   background-color: $dark-bg;
   overflow: hidden;
 
-  @media (min-width: $medium-width) {
+  @media (min-width: $large-width) {
     margin-bottom: 6em;
   }
 
@@ -147,9 +166,9 @@
       }
     }
     
-    @media (min-width: $medium-width) {
+    @media (min-width: 760px) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       column-gap: 1em;
 
       .Timeslot {
