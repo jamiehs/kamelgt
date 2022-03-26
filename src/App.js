@@ -29,6 +29,7 @@ function App() {
                     <div className="timeslots">
                         <Timeslot
                             dayIndex={3}
+                            day="Wednesday"
                             time="19:00"
                             entries="20"
                             sof="2935"
@@ -39,6 +40,7 @@ function App() {
                         </Timeslot>
                         <Timeslot
                             dayIndex={5}
+                            day="Friday"
                             time="21:00"
                             entries="27"
                             sof="2879"
@@ -49,6 +51,7 @@ function App() {
                         </Timeslot>
                         <Timeslot
                             dayIndex={6}
+                            day="Saturday"
                             time="17:00"
                             entries="45"
                             sof="3016"

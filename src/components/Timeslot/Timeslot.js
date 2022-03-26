@@ -19,6 +19,7 @@ class Timeslot extends React.Component {
     render() {
         let {
             dayIndex,
+            day,
             time,
             entries,
             sof,
@@ -28,7 +29,6 @@ class Timeslot extends React.Component {
         const tz = moment.tz.guess()
         const nextRaceDate = moment.tz(nextRaceDay(dayIndex, time), tz)
         const nextRaceDayLocal = nextRaceDate.toDate().toLocaleDateString(undefined, { weekday: 'long' })
-        const nextRaceDayEng = nextRaceDate.toDate().toLocaleString('en-us', {weekday:'long'})
         const nextRaceTimeLocal = nextRaceDate.toDate().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
     
         return (
@@ -36,7 +36,7 @@ class Timeslot extends React.Component {
                 <div className="timeslot-date">
                     <div className="date-gmt">
                         <div className="date-label">GMT</div><br />
-                        <div className="date-time">{nextRaceDayEng} {time}</div>
+                        <div className="date-time">{day} {time}</div>
                     </div>
                     <div className="date-local">
                         <div className="date-label">{tz.replace('_', ' ')}</div><br />
