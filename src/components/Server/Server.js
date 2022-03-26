@@ -14,7 +14,7 @@ function Server(props) {
             <div>{description}</div>
             <div className="discord-url">
                 <img src={discord} />
-                <a href="{url}" target="_blank" rel="noreferrer">{url}</a>
+                <a href={url} target="_blank" rel="noreferrer">{url}</a>
             </div>
         </div>
     );

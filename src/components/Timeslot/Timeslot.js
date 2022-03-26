@@ -1,73 +1,96 @@
 import './Timeslot.scss';
 import moment from 'moment-timezone';
+import React from 'react';
 
-function Timeslot(props) {
-    let {
-        dayIndex,
-        time,
-        entries,
-        sof,
-        children,
-    } = props
+class Timeslot extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            time: Date.now()
+        }
+    }
+    componentDidMount() {
+        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+    render() {
+        let {
+            dayIndex,
+            time,
+            entries,
+            sof,
+            children,
+        } = this.props
     
-
-    const tz = moment.tz.guess()
-    const nextRaceDate = moment.tz(nextRaceDay(dayIndex, time), tz)
-    const nextRaceDayLocal = nextRaceDate.toDate().toLocaleDateString(undefined, { weekday: 'long' })
-    const nextRaceDayEng = nextRaceDate.toDate().toLocaleString('en-us', {weekday:'long'})
-    const nextRaceTimeLocal = nextRaceDate.toDate().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
-
-    return (
-        <div className="Timeslot">
-            <div className="timeslot-date">
-                <div className="date-gmt">
-                    <div className="date-label">GMT</div><br />
-                    <div className="date-time">{nextRaceDayEng} {time}</div>
-                </div>
-                <div className="date-local">
-                    <div className="date-label">{tz.replace('_', ' ')}</div><br />
-                    <div className="date-time">{nextRaceDayLocal} {nextRaceTimeLocal}</div>
-                </div>
-            </div>
-            <div className="timeslot-participation">
-                <div>
-                    <div className="participation-badge drivers">
-                        Drivers: {entries}
+        const tz = moment.tz.guess()
+        const nextRaceDate = moment.tz(nextRaceDay(dayIndex, time), tz)
+        const nextRaceDayLocal = nextRaceDate.toDate().toLocaleDateString(undefined, { weekday: 'long' })
+        const nextRaceDayEng = nextRaceDate.toDate().toLocaleString('en-us', {weekday:'long'})
+        const nextRaceTimeLocal = nextRaceDate.toDate().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+    
+        return (
+            <div className="Timeslot">
+                <div className="timeslot-date">
+                    <div className="date-gmt">
+                        <div className="date-label">GMT</div><br />
+                        <div className="date-time">{nextRaceDayEng} {time}</div>
+                    </div>
+                    <div className="date-local">
+                        <div className="date-label">{tz.replace('_', ' ')}</div><br />
+                        <div className="date-time">{nextRaceDayLocal} {nextRaceTimeLocal}</div>
                     </div>
                 </div>
-                <div>
-                    <div className="participation-badge sof">
-                        <abbr title="Strength of Field">SOF</abbr>: {sof}
+                <div className="timeslot-participation">
+                    <div>
+                        <div className="participation-badge drivers">
+                            Drivers: {entries}
+                        </div>
+                    </div>
+                    <div>
+                        <div className="participation-badge sof">
+                            <abbr title="Strength of Field">SOF</abbr>: {sof}
+                        </div>
                     </div>
                 </div>
+                <div className="timeslot-info">
+                    {children}
+                </div>
             </div>
-            <div className="timeslot-info">
-                {children}
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Timeslot;
 
 
-function nextRaceDay(dayIndex, time) {
+function nextRaceDay(raceDay, time) {
     const today = moment.tz().isoWeekday();
+    const nowHour = parseInt(moment.tz().hour(), 10);
+    const nowMinute = parseInt(moment.tz().minute(), 10);
+    const raceHour = parseInt(time.split(':')[0], 10);
+    const raceMinute = parseInt(time.split(':')[1], 10);
 
-    // if we haven't yet passed the day of the week that I need:
-    if (today <= dayIndex) { 
-        // then just give me this week's instance of that day
-        return moment.tz()
-            .isoWeekday(dayIndex)
-            .hour(time.split(':')[0])
-            .minute(time.split(':')[1])
-            .second(0)
+    let momentObj = moment.tz()
+
+    if(today < raceDay) {
+        // race is upcoming
+    } else if(today == raceDay) {
+        // race is today, still upcoming
+        if(nowHour > raceHour && nowMinute > raceMinute) {
+            // race was today
+            momentObj = moment.tz().add(1, 'weeks')
+        }
     } else {
-        // otherwise, give me *next week's* instance of that same day
-        return moment.tz().add(1, 'weeks')
-            .isoWeekday(dayIndex)
-            .hour(time.split(':')[0])
-            .minute(time.split(':')[1])
-            .second(0)
-    }    
+        // race has passed
+        momentObj = moment.tz().add(1, 'weeks')
+    }
+
+    return momentObj
+        .isoWeekday(raceDay)
+        .hour(raceHour)
+        .minute(raceMinute)
+        .second(0)
 }
