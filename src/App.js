@@ -19,7 +19,7 @@ function App() {
                         Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you'll need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn't here, you'll need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
                     <p>
-                        The timeslots here are the ones that are guaranteed to go official. Occasionally 6 strangers find themselves in a lucky official race, but it's very rare.
+                        The timeslots here are the ones that are guaranteed to go official.
                     </p>
                 </div>
             </div>
@@ -79,7 +79,7 @@ function App() {
             <div className="format section">
                 <h2 className="title">Race Format</h2>
                 <ul>
-                    <li>Rolling Start</li>
+                    <li>Rolling start</li>
                     <li>Multiclass: Nissan GTP &amp; Audi GTO</li>
                     <li>Ten of the twelve races per season are 40 minutes long; require no pitstop</li>
                     <li>Two of the twelve races per season are 60 minutes (or a number of laps) "endurance" rounds that may require a stop</li>
