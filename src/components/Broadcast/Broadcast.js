@@ -7,7 +7,7 @@ function Broadcast(props) {
     } = props
 
     function getId(url) {
-        let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/)
+        let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
         return matches[1]
     }
 

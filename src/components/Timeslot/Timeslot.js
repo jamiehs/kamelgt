@@ -77,7 +77,7 @@ function nextRaceDay(raceDay, time) {
 
     if(today < raceDay) {
         // race is upcoming
-    } else if(today == raceDay) {
+    } else if(today === raceDay) {
         // race is today, still upcoming
         if(nowHour > raceHour && nowMinute > raceMinute) {
             // race was today

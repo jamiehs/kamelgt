@@ -13,7 +13,7 @@ function Server(props) {
             <h3>{title}</h3>
             <div>{description}</div>
             <div className="discord-url">
-                <img src={discord} />
+                <img src={discord} alt="" />
                 <a href={url} target="_blank" rel="noreferrer">{url}</a>
             </div>
         </div>
