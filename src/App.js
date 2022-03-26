@@ -1,6 +1,7 @@
 import './App.scss';
 import Timeslot from './components/Timeslot/Timeslot.js';
 import Server from './components/Server/Server.js';
+import Broadcast from './components/Broadcast/Broadcast.js';
 
 function App() {
     return (
@@ -13,12 +14,14 @@ function App() {
             </header>
 
             <div className="intro section">
-                <p>
-                    Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you will need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn't here, you'll need to start the discussion and get people to&nbsp;show&nbsp;up.
-                </p>
-                <p>
-                    The timeslots here are the ones that are guaranteed to go official. Occasionally 6 strangers find themselves in a lucky official race, but it's very rare.
-                </p>
+                <div className="intro-copy">
+                    <p>
+                        Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you will need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn't here, you'll need to start the discussion and get people to&nbsp;show&nbsp;up.
+                    </p>
+                    <p>
+                        The timeslots here are the ones that are guaranteed to go official. Occasionally 6 strangers find themselves in a lucky official race, but it's very rare.
+                    </p>
+                </div>
             </div>
             <div className="timeslots-wrapper">
                 <div className="section">
@@ -55,14 +58,14 @@ function App() {
                             </p>
                         </Timeslot>
                     </div>
-                    <div className="footnote">SOF and Avg. Drivers data updated by hand occasionally</div>
+                    <div className="footnote">SOF and Drivers data averaged from 2022 Season 1</div>
                 </div>
             </div>
             <div className="chatter section">
-                <h2 className="title">Discord Servers</h2>
+                <h2 className="title">Chatter &amp; Community</h2>
                 <div className="chatter-servers">
                     <Server
-                        title="VCR Discord (uses official races, with custom scoring)"
+                        title="VCR Discord (official races, with custom scoring)"
                         url="https://discord.gg/6arPQbNMbt"
                         description="The largest Kamel GT community. Setups and tips are being shared weekly."
                     />
@@ -77,9 +80,17 @@ function App() {
                 <h2 className="title">Race Format</h2>
                 <ul>
                     <li>Rolling Start</li>
-                    <li>10/12 races per season are 40 minutes long; require no pitstop</li>
-                    <li>2/12 races per season are 60 minutes (or a number of laps) that may require a stop</li>
+                    <li>Multiclass: Nissan GTP &amp; Audi GTO</li>
+                    <li>Ten of the twelve races per season are 40 minutes long; require no pitstop</li>
+                    <li>Two of the twelve races per season are 60 minutes (or a number of laps) "endurance" rounds that may require a stop</li>
                 </ul>
+            </div>
+            <div className="broadcast section">
+                <h2 className="title">Previous Broadcast Race</h2>
+                <Broadcast
+                    title="Road Atlanta 2022 Season 2 Round 1"
+                    url="https://youtu.be/bf1DsFC2Ku4?t=1209"
+                />
             </div>
         </div>
     );

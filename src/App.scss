@@ -22,6 +22,12 @@
         mask-size: contain;
         mask-image: url('images/icons8-external-link.svg');
       }
+
+      &.no-icon {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
@@ -47,7 +53,7 @@
       font-family: 'Knewave', cursive;
       color: #c7b19d;
     }
-    @media (min-width: $medium-width)  {
+    @media (min-width: $medium-width) {
       margin-bottom: 1em;
 
       h1 {
@@ -61,6 +67,21 @@
         font-size: 24px;
       }
     }  
+  }
+
+  .intro {
+    font-weight: 600;
+    
+    .intro-copy {
+      max-width: 45rem;
+    }
+
+    @media (min-width: $medium-width) {
+      font-size: 18px;
+      margin-top: 3em;
+      margin-bottom: 3.33em;
+  
+    }
   }
 }
 
@@ -80,7 +101,7 @@
     padding: 0 0 .2em .5em;
   }
   
-  @media (min-width: $medium-width)  {
+  @media (min-width: $medium-width) {
     padding: 0;
     margin: 0 auto 3em;
     max-width: 900px;
@@ -90,7 +111,7 @@
   margin: 0;
   padding: 0.75em;
 
-  @media (min-width: $medium-width)  {
+  @media (min-width: $medium-width) {
     padding: 0;
     margin: 0 auto;
     max-width: 900px;
@@ -107,6 +128,10 @@
   background-color: $dark-bg;
   overflow: hidden;
 
+  @media (min-width: $medium-width) {
+    margin-bottom: 6em;
+  }
+
   .footnote {
     color: $light-text;
   }
@@ -122,7 +147,7 @@
       }
     }
     
-    @media (min-width: $medium-width)  {
+    @media (min-width: $medium-width) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 1em;
