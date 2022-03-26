@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/kamelgt/static/css/main.2a78ddc6.css",
-    "main.js": "/kamelgt/static/js/main.0b2a051d.js",
+    "main.js": "/kamelgt/static/js/main.48be8db2.js",
     "static/js/787.9c05a8ca.chunk.js": "/kamelgt/static/js/787.9c05a8ca.chunk.js",
     "static/media/Discord-Logo-Color.svg": "/kamelgt/static/media/Discord-Logo-Color.1a0c3dc4dcc0b742fb4cadd8fd118649.svg",
     "index.html": "/kamelgt/index.html",
     "static/media/icons8-external-link.svg": "/kamelgt/static/media/icons8-external-link.fa10c79f8225bc2f6ee8.svg",
     "main.2a78ddc6.css.map": "/kamelgt/static/css/main.2a78ddc6.css.map",
-    "main.0b2a051d.js.map": "/kamelgt/static/js/main.0b2a051d.js.map",
+    "main.48be8db2.js.map": "/kamelgt/static/js/main.48be8db2.js.map",
     "787.9c05a8ca.chunk.js.map": "/kamelgt/static/js/787.9c05a8ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a78ddc6.css",
-    "static/js/main.0b2a051d.js"
+    "static/js/main.48be8db2.js"
   ]
 }
