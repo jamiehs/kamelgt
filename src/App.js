@@ -88,7 +88,7 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Race</h2>
                 <Broadcast
-                    title="Road Atlanta 2022 Season 2 Round 1"
+                    title="2022 Season 2 Round 1: Road Atlanta"
                     url="https://youtu.be/bf1DsFC2Ku4?t=1209"
                 />
             </div>
