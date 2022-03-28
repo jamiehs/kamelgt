@@ -2,6 +2,8 @@ import './Timeslot.scss';
 import moment from 'moment-timezone';
 import React from 'react';
 
+// prevents GMT race days from being localized or shifted inadvertantly
+const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
 class Timeslot extends React.Component {
     constructor(props) {
         super(props)
@@ -19,7 +21,6 @@ class Timeslot extends React.Component {
     render() {
         let {
             dayIndex,
-            day,
             time,
             entries,
             sof,
@@ -36,7 +37,7 @@ class Timeslot extends React.Component {
                 <div className="timeslot-date">
                     <div className="date-gmt">
                         <div className="date-label">GMT</div><br />
-                        <div className="date-time">{day} {time}</div>
+                        <div className="date-time">{dayLabels[dayIndex]} {time}</div>
                     </div>
                     <div className="date-local">
                         <div className="date-label">{tz.replace('_', ' ')}</div><br />

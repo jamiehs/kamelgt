@@ -16,7 +16,7 @@ function App() {
             <div className="intro section">
                 <div className="intro-copy">
                     <p>
-                        Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you'll need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn't here, you'll need to start the discussion and get people to&nbsp;show&nbsp;up.
+                        Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you&rsquo;ll need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn&rsquo;t here, you&rsquo;ll need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
                     <p>
                         The timeslots here are the ones that are guaranteed to go official.
@@ -29,18 +29,16 @@ function App() {
                     <div className="timeslots">
                         <Timeslot
                             dayIndex={3}
-                            day="Wednesday"
                             time="19:00"
                             entries="20"
                             sof="2935"
                         >
                             <p>
-                                The <b>"Midweek Madness"</b> session; if you can make it at this time, you will find a variety of racers from beginner to veteran. Field size can vary greatly by&nbsp;track.
+                                The <b>&ldquo;Midweek Madness&rdquo;</b> session; if you can make it at this time, you will find a variety of racers from beginner to veteran. Field size can vary greatly by&nbsp;track.
                             </p>
                         </Timeslot>
                         <Timeslot
                             dayIndex={5}
-                            day="Friday"
                             time="21:00"
                             entries="27"
                             sof="2879"
@@ -51,7 +49,6 @@ function App() {
                         </Timeslot>
                         <Timeslot
                             dayIndex={6}
-                            day="Saturday"
                             time="17:00"
                             entries="45"
                             sof="3016"
@@ -61,7 +58,7 @@ function App() {
                             </p>
                         </Timeslot>
                     </div>
-                    <div className="footnote">SOF and Drivers data averaged from 2022 Season 1</div>
+                    <div className="footnote">Drivers &amp; SOF data averaged from 2022 Season 1</div>
                 </div>
             </div>
             <div className="chatter section">
