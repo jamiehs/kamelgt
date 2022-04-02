@@ -16,10 +16,10 @@ function App() {
             <div className="intro section">
                 <div className="intro-copy">
                     <p>
-                        Kamel GT is a &ldquo;low participation series&rdquo;. There's great racing here, but you&rsquo;ll need to show up at specific times. The timeslots below are (organically) community generated; if you want a timeslot that isn&rsquo;t here, you&rsquo;ll need to start the discussion and get people to&nbsp;show&nbsp;up.
+                        Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in Kamel GT, but you will need to show up at specific times. The timeslots below are the most popular ones; if you want a timeslot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
                     <p>
-                        The timeslots here are the ones that are guaranteed to go official.
+                        Below are the ones that are guaranteed to go official.
                     </p>
                 </div>
             </div>
@@ -87,6 +87,10 @@ function App() {
             </div>
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Race</h2>
+                <Broadcast
+                    title="2022 Season 2 Round 3: Road America"
+                    url="https://youtu.be/IMvUGCCVOOk?t=224"
+                />
                 <Broadcast
                     title="2022 Season 2 Round 2: Homestead Miami"
                     url="https://www.youtube.com/watch?v=vhaQO7XM5c0"
