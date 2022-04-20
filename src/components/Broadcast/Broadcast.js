@@ -15,12 +15,14 @@ function Broadcast(props) {
         <div className="Broadcast">
             <a className="no-icon" href={url} target="_blank" rel="noreferrer">
                 <h3>{title}</h3>
+            </a>
                 <div className="yt-video">
+            <a className="no-icon" href={url} target="_blank" rel="noreferrer">
                     <div className="thumb" style={{backgroundImage: `url(https://img.youtube.com/vi/${getId(url)}/1.jpg)`}}></div>
                     <div className="thumb" style={{backgroundImage: `url(https://img.youtube.com/vi/${getId(url)}/2.jpg)`}}></div>
                     <div className="thumb" style={{backgroundImage: `url(https://img.youtube.com/vi/${getId(url)}/3.jpg)`}}></div>
-                </div>
             </a>
+                </div>
         </div>
     );
 }

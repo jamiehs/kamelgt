@@ -86,7 +86,15 @@ function App() {
                 </ul>
             </div>
             <div className="broadcast section">
-                <h2 className="title">Previous Broadcast Race</h2>
+                <h2 className="title">Previous Broadcast Races</h2>
+                <Broadcast
+                    title="2022 Season 2 Round 5: Laguna Seca"
+                    url="https://youtu.be/QL2Mh7MLgKI?t=899"
+                />
+                <Broadcast
+                    title="2022 Season 2 Round 4: Montreal"
+                    url="https://youtu.be/PyKE722KNoQ?t=837"
+                />
                 <Broadcast
                     title="2022 Season 2 Round 3: Road America"
                     url="https://youtu.be/IMvUGCCVOOk?t=224"
