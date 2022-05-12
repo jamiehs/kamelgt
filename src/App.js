@@ -38,6 +38,19 @@ function App() {
                             </p>
                         </Timeslot>
                         <Timeslot
+                            dayIndex={4}
+                            entries="7"
+                            sof="2700"
+                            time="19:00"
+                        >
+                            <p>
+                                <b>GTO Sprint Race</b>
+                            </p>
+                            <p>
+                            The GTO Sprint is a league race, part of the <a href="https://discord.gg/q7PwQFs8qN" target="_blank" rel="noreferrer">DTRL</a>. 10 minutes qualifying, 10 minute race and a 20 minute reverse grid race.
+                            </p>
+                        </Timeslot>
+                        <Timeslot
                             dayIndex={5}
                             time="21:00"
                             entries="27"
@@ -87,6 +100,18 @@ function App() {
             </div>
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
+                <Broadcast
+                    title="2022 Season 2 Round 8: Spa"
+                    url="https://youtu.be/4SdGFU0hk-c?t=120"
+                />
+                <Broadcast
+                    title="2022 Season 2 Round 7: Interlagos"
+                    url="https://youtu.be/OpP7wrWOsyA?t=1055"
+                />
+                <Broadcast
+                    title="2022 Season 2 Round 6: Donington Park"
+                    url="https://youtu.be/7GL9hvhdUV8?t=981"
+                />
                 <Broadcast
                     title="2022 Season 2 Round 5: Laguna Seca"
                     url="https://youtu.be/QL2Mh7MLgKI?t=899"
