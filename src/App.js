@@ -38,19 +38,6 @@ function App() {
                             </p>
                         </Timeslot>
                         <Timeslot
-                            dayIndex={4}
-                            entries="7"
-                            sof="2700"
-                            time="19:00"
-                        >
-                            <p>
-                                <b>GTO Sprint Race</b>
-                            </p>
-                            <p>
-                            The GTO Sprint is a league race, part of the <a href="https://discord.gg/q7PwQFs8qN" target="_blank" rel="noreferrer">DTRL</a>. 10 minutes qualifying, 10 minute race and a 20 minute reverse grid race.
-                            </p>
-                        </Timeslot>
-                        <Timeslot
                             dayIndex={5}
                             time="21:00"
                             entries="27"
@@ -74,6 +61,33 @@ function App() {
                     <div className="footnote">Drivers &amp; SOF data averaged from 2022 Season 1</div>
                 </div>
             </div>
+            <div className="intro section">
+                <div className="intro-copy">
+                    <p>
+                        If league racing is what you&rsquo;re after, there are a couple of leagues that run mainly the GTO as a touring car. Currently the TART league is on hiatus, but the Dirty Torque Racing League has a weekly GTO sprint race format.
+                    </p>
+                </div>
+            </div>
+            <div className="timeslots-wrapper">
+                <div className="section">
+                    <h2 className="title">League Race Times</h2>
+                    <div className="timeslots">
+                        <Timeslot
+                            dayIndex={4}
+                            entries="7"
+                            sof="2700"
+                            time="19:00"
+                        >
+                            <p>
+                                <b>GTO Sprint Race</b>
+                            </p>
+                            <p>
+                            The GTO Sprint is a league race, part of the <a href="https://discord.gg/q7PwQFs8qN" target="_blank" rel="noreferrer">DTRL</a>. 10 minutes qualifying, 10 minute race and a 20 minute reverse grid race.
+                            </p>
+                        </Timeslot>
+                    </div>
+                </div>
+            </div>
             <div className="chatter section">
                 <h2 className="title">Chatter &amp; Community</h2>
                 <div className="chatter-servers">
@@ -81,6 +95,11 @@ function App() {
                         title="VCR Discord (official races, with custom scoring)"
                         url="https://discord.gg/6arPQbNMbt"
                         description="The largest Kamel GT community. Setups and tips are being shared weekly."
+                    />
+                    <Server
+                        title="Dirty Torque Racing League"
+                        url="https://discord.gg/q7PwQFs8qN"
+                        description="Home of racing Legends on strange tracks, the Historic IMSA Championship, and more."
                     />
                     <Server
                         title="Thrillhouse Arcade Discord (TART&nbsp;GTO&nbsp;League)"
