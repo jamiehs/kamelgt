@@ -160,7 +160,7 @@
 
     .Timeslot {
       margin-top: 1em;
-
+      
       &:first-child {
         margin-top: 0;
       }
@@ -168,7 +168,22 @@
     
     @media (min-width: 760px) {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1em;
+      row-gap: 1em;
+
+      .Timeslot {
+        margin-top: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }  
+    }
+
+    @media (min-width: $large-width) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       column-gap: 1em;
 
       .Timeslot {

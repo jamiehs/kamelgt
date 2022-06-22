@@ -20,6 +20,7 @@ class Timeslot extends React.Component {
 
     render() {
         let {
+            label,
             dayIndex,
             time,
             entries,
@@ -34,6 +35,7 @@ class Timeslot extends React.Component {
     
         return (
             <div className="Timeslot">
+                <h3 className="label">{label}</h3>
                 <div className="timeslot-date">
                     <div className="date-gmt">
                         <div className="date-label">GMT</div><br />

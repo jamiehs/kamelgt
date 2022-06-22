@@ -3,15 +3,29 @@
 .Timeslot {
     display: block;
     background-color: rgb(226, 243, 243);
-    padding: 0.2em 1.3em;
+    padding: 0 1.3em;
     border-top: solid 8px $gold;
+    overflow: hidden;
+
+    h3.label {
+        margin: 0 0 0.5em;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-left: -50%;
+        margin-right: -50%;
+        padding-left: 50%;
+        background: #d5e7ef;
+        line-height: 2.2em;
+        font-size: 126%;
+        border-bottom: solid 1px #bcd8e5;
+    }
     
     .timeslot-date {
         font-size: 7.6vw;
         font-weight: 700;
 
         @media (min-width: $medium-width)  {
-            font-size: 0.92em;
+            font-size: 2.6vw;
             white-space: nowrap;
         }
 
@@ -84,7 +98,7 @@
             }
 
             @media (min-width: $large-width)  {
-                font-size: 1rem;
+                font-size: 0.83rem;
             }
 
         }
