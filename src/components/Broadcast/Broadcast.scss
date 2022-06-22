@@ -6,6 +6,9 @@
     
     .yt-video {
         position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 1px 1px 1px #666;
         
         &:after {
             content: '';
@@ -35,6 +38,7 @@
             background-position: center;
             background-size: cover;
             position: relative;
+            border-left: solid 1px #444;
 
             .glitch {
                 position: absolute;
