@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ea6cd5a.css",
-    "main.js": "/static/js/main.b15be69b.js",
+    "main.css": "/static/css/main.cbb46bc7.css",
+    "main.js": "/static/js/main.38c2de22.js",
     "static/js/787.9c05a8ca.chunk.js": "/static/js/787.9c05a8ca.chunk.js",
+    "static/media/vhs1.jpg": "/static/media/vhs1.58fbbab030060216a13c.jpg",
+    "static/media/vhs2.jpg": "/static/media/vhs2.24a2bcf4fc7ea5bee141.jpg",
+    "static/media/vhs4.jpg": "/static/media/vhs4.3a42339c1102c8288d25.jpg",
+    "static/media/vhs5.jpg": "/static/media/vhs5.6db3125c22aabdf65b4b.jpg",
+    "static/media/vhs3.jpg": "/static/media/vhs3.c1a95bab3950b3008ed8.jpg",
     "static/media/Discord-Logo-Color.svg": "/static/media/Discord-Logo-Color.1a0c3dc4dcc0b742fb4cadd8fd118649.svg",
     "index.html": "/index.html",
     "static/media/icons8-external-link.svg": "/static/media/icons8-external-link.fa10c79f8225bc2f6ee8.svg",
-    "main.8ea6cd5a.css.map": "/static/css/main.8ea6cd5a.css.map",
-    "main.b15be69b.js.map": "/static/js/main.b15be69b.js.map",
+    "main.cbb46bc7.css.map": "/static/css/main.cbb46bc7.css.map",
+    "main.38c2de22.js.map": "/static/js/main.38c2de22.js.map",
     "787.9c05a8ca.chunk.js.map": "/static/js/787.9c05a8ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ea6cd5a.css",
-    "static/js/main.b15be69b.js"
+    "static/css/main.cbb46bc7.css",
+    "static/js/main.38c2de22.js"
   ]
 }
