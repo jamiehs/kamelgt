@@ -5,13 +5,17 @@
         "audi90gto": [
             {
                 "file": "fuji-22-S3-r-01.sto",
-                "comment": "Jamie Hamel-Smith; Adapted from Suzuka"
+                "comment": "Jamie; Adapted from Suzuka"
+            },
+            {
+                "file": "KB_2022-S3_Fuji_R.sto",
+                "comment": "Kheireddine; first try at Fuji set"
             }
         ],
         "nissangtpzxt": [
             {
                 "file": "fuji-22S3-r-NGTP_Fuji_1-3.sto",
-                "comment": "Ferran Grau; adapted from week 13 sprint races"
+                "comment": "Ferran; adapted from week 13 sprint races"
             }
         ]
     },
@@ -21,9 +25,22 @@
         "audi90gto": [
             {
                 "file": "watkins-classic-boot-21S2-r2.sto"
+            },
+            {
+                "file": "watkins-21S2-Y_Gijsen_R.sto"
+            },
+            {
+                "file": "watkins-21S2-02.sto"
             }
         ],
-        "nissangtpzxt": []
+        "nissangtpzxt": [
+            {
+                "file": "Watkins_Glen_CB_R_v1.2.sto"
+            },
+            {
+                "file": "Watkins5W2v3.sto"
+            }
+        ]
     },
     {
         "label": "Brands Hatch Circuit - Grand Prix",
