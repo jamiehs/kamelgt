@@ -22,6 +22,12 @@ jobs:
           npm ci
           npm run build
 
+      - name: Zip Audi Setups
+        run: zip -rj build/audi90gto-setups.zip public/setups/audi90gto/*
+
+      - name: Zip Nissan Setups
+        run: zip -rj build/nissangtpzxt-setups.zip public/setups/nissangtpzxt/*
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
