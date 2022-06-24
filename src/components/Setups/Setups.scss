@@ -21,7 +21,7 @@
         .week-prefix {
             display: none;
             @media (min-width: $medium-width) {
-                display: block;
+                display: inline;
             }    
         }
 
