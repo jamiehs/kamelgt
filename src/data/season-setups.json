@@ -17,17 +17,21 @@
         "audi90gto": [
             {
                 "file": "fuji-22-S3-r-01.sto",
-                "comment": "Jamie; Adapted from Suzuka"
+                "comment": "Adapted from Suzuka"
             },
             {
                 "file": "KB_2022-S3_Fuji_R.sto",
-                "comment": "Kheireddine; first try at Fuji set"
+                "comment": "First try at Fuji set"
             }
         ],
         "nissangtpzxt": [
             {
                 "file": "fuji-22S3-r-NGTP_Fuji_1-3.sto",
-                "comment": "Ferran; adapted from week 13 sprint races"
+                "comment": "Adapted from week 13 sprint races"
+            },
+            {
+                "file": "Lgo22S3_Fuji_NoCh_R41.sto",
+                "comment": "Hard to control and sliding all over the place - be warned"
             }
         ]
     },
