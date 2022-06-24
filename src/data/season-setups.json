@@ -1,7 +1,19 @@
 [
     {
+        "label": "Le Mans - Historic",
+        "week": 1,
+        "weekStart": "2022-06-14",
+        "audi90gto": [
+            {
+                "file": "le-mans-22S3-r1.sto"
+            }
+        ],
+        "nissangtpzxt": []
+    },
+    {
         "label": "Fuji International Speedway - No Chicane",
-        "lastRace": "2022-06-26",
+        "week": 2,
+        "weekStart": "2022-06-21",
         "audi90gto": [
             {
                 "file": "fuji-22-S3-r-01.sto",
@@ -20,8 +32,9 @@
         ]
     },
     {
-        "label": "Watkins Glen International Boot",
-        "lastRace": "2022-07-03",
+        "label": "Watkins Glen International - Boot",
+        "week": 3,
+        "weekStart": "2022-06-28",
         "audi90gto": [
             {
                 "file": "watkins-classic-boot-21S2-r2.sto"
@@ -44,7 +57,8 @@
     },
     {
         "label": "Brands Hatch Circuit - Grand Prix",
-        "lastRace": "2022-07-10",
+        "week": 4,
+        "weekStart": "2022-07-05",
         "audi90gto": [
             {
                 "file": "brands-21S3-r2.sto"
@@ -55,5 +69,105 @@
                 "file": "brands-hatch-21S3-r1.sto"
             }
         ]
+    },
+    {
+        "label": "Sebring International Raceway - International",
+        "week": 5,
+        "weekStart": "2022-07-12",
+        "audi90gto": [
+            {
+                "file": "sebring-21S4-r3.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "DWC_Sebring_R3.sto"
+            }
+        ]
+    },
+    {
+        "label": "Silverstone Circuit 2008 - Historical Grand Prix",
+        "week": 6,
+        "weekStart": "2022-07-19",
+        "audi90gto": [
+
+        ],
+        "nissangtpzxt": [
+
+        ]
+    },
+    {
+        "label": "Phillip Island Circuit",
+        "week": 7,
+        "weekStart": "2022-07-26",
+        "audi90gto": [
+            {
+                "file": "phillip-island-21S4-r4.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "DWC_21S4_Phillip_wing6_R6.sto"
+            }
+        ]
+    },
+    {
+        "label": "Nürburgring - Grand Prix w/out Arena",
+        "week": 8,
+        "weekStart": "2022-08-06",
+        "audi90gto": [
+            {
+                "file": "nurburgring-gp-21S3-r5.sto"
+            }
+        ],
+        "nissangtpzxt": [
+
+        ]
+    },
+    {
+        "label": "Charlotte Motor Speedway - Roval",
+        "week": 9,
+        "weekStart": "2022-08-13",
+        "audi90gto": [
+            {
+                "file": "charlotte_roval-21S3-r1.sto"
+            }
+        ],
+        "nissangtpzxt": [
+
+        ]
+    },
+    {
+        "label": "Canadian Tire Motorsports Park",
+        "week": 10,
+        "weekStart": "2022-08-20",
+        "audi90gto": [
+            {
+                "file": "mosport-21S4-r4.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "DWC_21S4_Mosport_tg_R2.sto"
+            }
+        ]
+    },
+    {
+        "label": "Sonoma Raceway - Cup",
+        "week": 11,
+        "weekStart": "2022-08-27",
+        "audi90gto": [],
+        "nissangtpzxt": []
+    },
+    {
+        "label": "Long Beach Street Circuit",
+        "week": 12,
+        "weekStart": "2022-09-03",
+        "audi90gto": [
+            {
+                "file": "long-beach-21S4-r2.sto"
+            }
+        ],
+        "nissangtpzxt": []
     }
 ]

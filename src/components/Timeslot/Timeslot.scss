@@ -24,7 +24,7 @@
         font-size: 7.6vw;
         font-weight: 700;
 
-        @media (min-width: $medium-width)  {
+        @media (min-width: $small-width)  {
             font-size: 2.6vw;
             white-space: nowrap;
         }
@@ -55,7 +55,7 @@
             padding: 0.15em .7em 0.5em .5em;
             z-index: 5;
 
-            @media (min-width: $medium-width)  {
+            @media (min-width: $small-width)  {
                 font-size: 0.73em;
             }
 
@@ -80,32 +80,10 @@
                 flex: 2;
             }
         }
-
-
-        .participation-badge {
-            background-color: $dark-bg;
-            color: white;
-            display: inline-block;
-            border-radius: 4px;
-            padding: 0.25em .5em;
-            font-weight: 600;
-            line-height: 1;
-            white-space: nowrap;
-            margin-right: 0.5em;
-
-            @media (min-width: $medium-width)  {
-                font-size: 0.7rem;
-            }
-
-            @media (min-width: $large-width)  {
-                font-size: 0.83rem;
-            }
-
-        }
     }
 
     .timeslot-info {
-        @media (min-width: $medium-width)  {
+        @media (min-width: $small-width)  {
             font-size: 90%;
         }
     }

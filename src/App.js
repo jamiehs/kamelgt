@@ -2,6 +2,7 @@ import './App.scss';
 import Timeslot from './components/Timeslot/Timeslot.js';
 import Server from './components/Server/Server.js';
 import Broadcast from './components/Broadcast/Broadcast.js';
+import Setups from './components/Setups/Setups.js';
 
 function App() {
     return (
@@ -71,12 +72,16 @@ function App() {
                             sof="2564"
                         >
                             <p>
-                                <b>Our weekly broadcast race.</b> This will usually have the most participants and may even split once or twice per season. <a href="https://www.youtube.com/channel/UC76vyQZnIIF7iA5ta24ukVw" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
+                                <b>Our weekly broadcast race.</b> This will usually have the most participants and may even split once or twice per season. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
                             </p>
                         </Timeslot>
                     </div>
                     <div className="footnote">Drivers &amp; SOF data averaged from 2022 Season 2</div>
                 </div>
+            </div>
+            <div id="setups" className="setups section">
+                <h2 className="title">Setups</h2>
+                <Setups upcomingWeeks={3} />
             </div>
             <div id="chatter" className="chatter section">
                 <h2 className="title">Chatter &amp; Community</h2>
@@ -84,7 +89,7 @@ function App() {
                     <Server
                         title="VCR Discord (official races, with custom scoring)"
                         url="https://discord.gg/6arPQbNMbt"
-                        description="The largest Kamel GT community. Setups and tips are being shared weekly."
+                        description="The largest Kamel GT community. Setups, tips, and chatter about racing these cars."
                     />
                     <Server
                         title="Dirty Torque Racing League"

@@ -49,14 +49,14 @@ class Timeslot extends React.Component {
                 <div className="timeslot-participation">
                     {entries && (
                         <div>
-                            <div className="participation-badge drivers">
+                            <div className="badge drivers">
                                 Drivers: {entries}
                             </div>
                         </div>
                     )}
                     {sof && (
                         <div>
-                            <div className="participation-badge sof">
+                            <div className="badge sof">
                                 <abbr title="Strength of Field">SOF</abbr>: {sof}
                             </div>
                         </div>

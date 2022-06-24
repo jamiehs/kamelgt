@@ -1,0 +1,71 @@
+@import '../../_global.scss';
+
+.Setups {
+    .cars-grid {
+        
+        @media (min-width: $medium-width) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }        
+    }
+
+    .round-container {
+        border-bottom: solid 1px rgba(0,0,0,0.33);
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        h3 {
+            margin-bottom: 0.33em;
+        }
+
+        .week-prefix {
+            display: none;
+            @media (min-width: $medium-width) {
+                display: block;
+            }    
+        }
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul {
+            margin: 0.5em 0 1.5em;
+        }
+
+        li {
+            margin-bottom: 0.25em;
+            line-height: 1em;
+
+            a {
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+        }
+
+        .comment {
+            font-style: italic;
+            font-size: 0.75em;
+        }
+
+    }
+
+
+    .download-zips {
+        margin-top: 2em;
+        ul, li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin-top: 0.5em;
+        }
+        li {
+            display: inline-block;
+            margin-right: 1em
+        }
+    }
+}

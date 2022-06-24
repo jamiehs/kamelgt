@@ -1,3 +1,49 @@
+ 
+@keyframes shimmer1 {
+    0% {
+        background-size: 100% 106%;
+    }
+    100% {
+        background-size: 100% 103%;
+    }
+}
+
+@keyframes shimmer2 {
+    0% {
+        background-size: 101% 106%;
+    }
+    100% {
+        background-size: 102% 108%;
+    }
+}
+
+@keyframes shimmer3 {
+    0% {
+        background-size: 104% 106%;
+    }
+    100% {
+        background-size: 106% 104%;
+    }
+}
+
+@keyframes shimmer4 {
+    0% {
+        background-size: 103% 105%;
+    }
+    100% {
+        background-size: 102% 103%;
+    }
+}
+
+@keyframes shimmer5 {
+    0% {
+        background-size: 101% 105%;
+    }
+    100% {
+        background-size: 102% 108%;
+    }
+}
+
 .Broadcast {
     h3 {
         margin-bottom: .25em;
@@ -47,25 +93,30 @@
                 right: 0;
                 bottom: 0;
                 background-size: 100% 100%;
-                background-position: center;
+                background-position: 50% 50%;
                 mix-blend-mode: screen;
                 opacity: 1;
                 transition: opacity 300ms ease;
             }
             .glitch-1 {
                 background-image: url(../../../public/vhs1.jpg);
+                animation: shimmer1 75ms infinite;
             }
             .glitch-2 {
                 background-image: url(../../../public/vhs2.jpg);
+                animation: shimmer2 70ms infinite;
             }
             .glitch-3 {
                 background-image: url(../../../public/vhs3.jpg);
+                animation: shimmer3 67ms infinite;
             }
             .glitch-4 {
                 background-image: url(../../../public/vhs4.jpg);
+                animation: shimmer4 80ms infinite;
             }
             .glitch-5 {
                 background-image: url(../../../public/vhs5.jpg);
+                animation: shimmer5 88ms infinite;
             }
         }
 
