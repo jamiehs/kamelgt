@@ -18,7 +18,7 @@ function Setups(props) {
                     let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
                     let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 7));
                     let upcomingRound = weekEndGmt > new Date();
-                    const setupsExist = round.audi90gto && round.audi90gto.length > 0 || round.nissangtpzxt && round.nissangtpzxt.length > 0
+                    const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0);
 
                     if(setupsExist && upcomingRound && outputRoundsCount < upcomingWeeks) {
                         console.log(round)
@@ -57,6 +57,7 @@ function Setups(props) {
                             </div>
                         )
                     }
+                    return null;
                 })}
             </div>
             <div className="download-zips">
