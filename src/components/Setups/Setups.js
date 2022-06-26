@@ -25,7 +25,7 @@ function Setups(props) {
                         outputRoundsCount++;
                         return (
                             <div className="round-container" key={round.label}>
-                                <h3><span className="week-prefix">Week {round.week+1}: </span>{round.label}</h3>
+                                <h3><span className="week-prefix">Week {round.week}: </span>{round.label}</h3>
                                 <div className="cars-grid">
                                     {round.audi90gto.length > 0 && (
                                         <div>
