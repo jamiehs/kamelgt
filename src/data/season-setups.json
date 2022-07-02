@@ -20,6 +20,9 @@
                 "comment": "Adapted from Suzuka"
             },
             {
+                "file": "Fuji_S3_2022_1.2_Race.sto"
+            },
+            {
                 "file": "KB_2022-S3_Fuji_R.sto",
                 "comment": "First try at Fuji set"
             }
@@ -48,6 +51,12 @@
             },
             {
                 "file": "watkins-21S2-02.sto"
+            },
+            {
+                "file": "Watkins_2022_S3_RACE_v1.sto"
+            },
+            {
+                "file": "watkinsintlboot_2022_S3_R.sto"
             }
         ],
         "nissangtpzxt": [
@@ -56,26 +65,40 @@
             },
             {
                 "file": "Watkins5W2v3.sto"
+            },
+            {
+                "file": "watkins-22S3-AG_WGI_5W2.sto"
             }
         ]
     },
     {
-        "label": "Brands Hatch Circuit - Grand Prix",
+        "label": "Brands Hatch Grand Prix",
         "week": 4,
         "weekStart": "2022-07-05",
         "audi90gto": [
             {
-                "file": "brands-21S3-r2.sto"
+                "file": "brands-21S3-r2.sto",
+                "comment": "Adjusted from Reid's initial setup"
+            },
+            {
+                "file": "brands-hatch-21S3_Marti.sto"
+            },
+            {
+                "file": "brands-hatch-21S3_MarcOlle_2.2_Race.sto"
             }
         ],
         "nissangtpzxt": [
             {
-                "file": "brands-hatch-21S3-r1.sto"
+                "file": "brands-hatch-21S3_Havdal_R_v1.sto",
+                "comment": "It gets a bit bouncy in some places, but other than that it's not too bad."
+            },
+            {
+                "file": "brands-hatch-21S3_Ruder_r6.sto"
             }
         ]
     },
     {
-        "label": "Sebring International Raceway - International",
+        "label": "Sebring International Raceway",
         "week": 5,
         "weekStart": "2022-07-12",
         "audi90gto": [
@@ -86,6 +109,9 @@
         "nissangtpzxt": [
             {
                 "file": "DWC_Sebring_R3.sto"
+            },
+            {
+                "file": "sebring-21S1_Havdal_R_v1.1.sto"
             }
         ]
     },
