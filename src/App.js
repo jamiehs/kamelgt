@@ -32,8 +32,8 @@ function App() {
                             label="Pacific Warmup"
                             dayIndex={3}
                             time="01:00"
-                            entries="~6"
-                            sof="2676"
+                            entries="9"
+                            sof="1702"
                         >
                             <p>
                                 Convenient for some U.S. racers on the west&nbsp;coast, or Aussie racers on the east&nbsp;coast.
@@ -46,8 +46,8 @@ function App() {
                             label="Midweek Madness"
                             dayIndex={3}
                             time="19:00"
-                            entries="18"
-                            sof="2676"
+                            entries="29"
+                            sof="2346"
                         >
                             <p>
                                 If you can make it at this time, you will find a variety of racers from beginner to veteran. Field size can vary greatly by&nbsp;track.
@@ -57,8 +57,8 @@ function App() {
                             label="Friday Night Race"
                             dayIndex={5}
                             time="21:00"
-                            entries="21"
-                            sof="2665"
+                            entries="27"
+                            sof="2287"
                         >
                             <p>
                                 The big race that is not the broadcast race. If you want <b>a full field with no broadcast pressure</b> this is it. Also a great practice race for the&nbsp;broadcast.
@@ -68,15 +68,15 @@ function App() {
                             label="Broadcast Race"
                             dayIndex={6}
                             time="17:00"
-                            entries="40"
-                            sof="2564"
+                            entries="50"
+                            sof="2797"
                         >
                             <p>
                                 <b>Our weekly broadcast race.</b> This will usually have the most participants and may even split once or twice per season. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
                             </p>
                         </Timeslot>
                     </div>
-                    <div className="footnote">Drivers &amp; SOF data averaged from 2022 Season 2</div>
+                    <div className="footnote">Drivers &amp; SOF data averaged from previous weeks</div>
                 </div>
             </div>
             <div id="setups" className="setups section">
