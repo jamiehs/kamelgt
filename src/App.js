@@ -3,6 +3,7 @@ import Timeslot from './components/Timeslot/Timeslot.js';
 import Server from './components/Server/Server.js';
 import Broadcast from './components/Broadcast/Broadcast.js';
 import Setups from './components/Setups/Setups.js';
+import {VCR_DISCORD_URL, DTRL_DISCORD_URL} from './data/constants';
 
 function App() {
     return (
@@ -39,7 +40,7 @@ function App() {
                                 Convenient for some U.S. racers on the west&nbsp;coast, or Aussie racers on the east&nbsp;coast.
                             </p>
                             <p>
-                                Not always official; show up, <a href="#chatter">join the VCR Discord</a>, and let&rsquo;s make it a regular&nbsp;thing!
+                                Not always official; show up, <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">join the VCR Discord</a>, and let&rsquo;s make it a regular&nbsp;thing!
                             </p>
                         </Timeslot>
                         <Timeslot
@@ -88,12 +89,12 @@ function App() {
                 <div className="chatter-servers">
                     <Server
                         title="VCR Discord (official races, with custom scoring)"
-                        url="https://discord.gg/6arPQbNMbt"
+                        url={VCR_DISCORD_URL}
                         description="The largest Kamel GT community. Setups, tips, and chatter about racing these cars."
                     />
                     <Server
                         title="Dirty Torque Racing League"
-                        url="https://discord.gg/q7PwQFs8qN"
+                        url={DTRL_DISCORD_URL}
                         description="Home of racing Legends on strange tracks, the Historic IMSA Championship, and more."
                     />
                 </div>
