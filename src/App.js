@@ -110,6 +110,10 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
                 <Broadcast
+                    title="2022 Season 3 Round 4: Brands Hatch"
+                    url="https://youtu.be/Ydq0wDq0GBY?t=1191"
+                />
+                <Broadcast
                     title="2022 Season 3 Round 3: Watkins Glen"
                     url="https://youtu.be/bncdRkxyUZI?t=1208"
                 />
