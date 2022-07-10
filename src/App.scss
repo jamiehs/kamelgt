@@ -13,14 +13,14 @@
       &::after {
         content: '';
         vertical-align: middle;
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        margin-left: 0.1em;
+        padding-left: 1em;
+        margin-left: 0.05em;
         margin-bottom: 0.2em;
         background-color: $brown;
         mask-size: contain;
         mask-image: url('images/icons8-external-link.svg');
+        mask-repeat: no-repeat;
+        mask-position: 50% 28%;
       }
 
       &.no-icon {
