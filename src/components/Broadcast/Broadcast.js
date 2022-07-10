@@ -17,7 +17,7 @@ function Broadcast(props) {
 
     return (
         <div className="Broadcast">
-            <a className="no-icon" href={url} target="_blank" rel="noreferrer">
+            <a href={url} target="_blank" rel="noreferrer">
                 <h3>{title}</h3>
             </a>
                 <div className="yt-video">
