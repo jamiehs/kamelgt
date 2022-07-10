@@ -1,4 +1,5 @@
-import './Setups.scss';
+import './Setups.scss'
+import {VCR_DISCORD_URL} from '../../data/constants'
 
 import seasonSetups from '../../data/season-setups.json';
 const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
@@ -20,39 +21,45 @@ function Setups(props) {
                     let upcomingRound = weekEndGmt > new Date();
                     const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0);
 
-                    if(setupsExist && upcomingRound && outputRoundsCount < upcomingWeeks) {
+                    if(upcomingRound && outputRoundsCount < upcomingWeeks) {
                         outputRoundsCount++;
                         return (
                             <div className="round-container" key={round.label}>
                                 <h3><span className="week-prefix">Week {round.week}: </span>{round.label}</h3>
-                                <div className="cars-grid">
-                                    {round.audi90gto.length > 0 && (
-                                        <div>
-                                            <span className="car badge">Audi GTO</span>
-                                            <ul>
-                                                {round.audi90gto.sort(sortSetups).map(setup => (
-                                                    <li key={setup.file}>
-                                                        <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
-                                                        <span className="comment">{setup.comment}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
-                                    {round.nissangtpzxt.length > 0 && (
-                                        <div>
-                                            <span className="car badge">Nissan GTP</span>
-                                            <ul>
-                                                {round.nissangtpzxt.sort(sortSetups).map(setup => (
-                                                    <li key={setup.file}>
-                                                        <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
-                                                        <span className="comment">{setup.comment}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div>
+                                {setupsExist ? (
+                                    <div className="cars-grid">
+                                        {round.audi90gto.length > 0 && (
+                                            <div>
+                                                <span className="car badge">Audi GTO</span>
+                                                <ul>
+                                                    {round.audi90gto.sort(sortSetups).map(setup => (
+                                                        <li key={setup.file}>
+                                                            <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
+                                                            <span className="comment">{setup.comment}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                        {round.nissangtpzxt.length > 0 && (
+                                            <div>
+                                                <span className="car badge">Nissan GTP</span>
+                                                <ul>
+                                                    {round.nissangtpzxt.sort(sortSetups).map(setup => (
+                                                        <li key={setup.file}>
+                                                            <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
+                                                            <span className="comment">{setup.comment}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <div className="no-setups">
+                                        There are no recent setups in the archive yet. Check the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server's</a> <code>#audi-setups</code> & <code>#nissan-setups</code> channels, or check here again closer to the race date.
+                                    </div>
+                                )}
                             </div>
                         )
                     }
