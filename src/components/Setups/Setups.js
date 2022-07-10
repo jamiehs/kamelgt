@@ -21,7 +21,6 @@ function Setups(props) {
                     const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0);
 
                     if(setupsExist && upcomingRound && outputRoundsCount < upcomingWeeks) {
-                        console.log(round)
                         outputRoundsCount++;
                         return (
                             <div className="round-container" key={round.label}>
