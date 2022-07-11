@@ -51,7 +51,7 @@ function App() {
                             sof="2346"
                         >
                             <p>
-                                If you can make it at this time, you will find a variety of racers from beginner to veteran. Field size can vary greatly by&nbsp;track.
+                                If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
                             </p>
                         </Timeslot>
                         <Timeslot
