@@ -17,10 +17,11 @@
         margin-left: 0.05em;
         margin-bottom: 0.2em;
         background-color: $brown;
-        mask-size: contain;
+        position: relative;
+        top: 0.075em;
+        mask-size: cover;
         mask-image: url('images/icons8-external-link.svg');
         mask-repeat: no-repeat;
-        mask-position: 50% 28%;
       }
 
       &.no-icon {

@@ -21,7 +21,7 @@
     }
     
     .timeslot-date {
-        font-size: 7.6vw;
+        font-size: 6vw;
         font-weight: 700;
 
         @media (min-width: $small-width)  {
@@ -35,11 +35,17 @@
 
         .date-gmt, .date-local {
             line-height: 1;
-            margin-bottom: 0.2em;
+            margin-bottom: 0.15em;
+            margin-top: -0.33em;
 
             @media (min-width: $large-width)  {
                 margin-bottom: .5em;
             }
+        }
+
+        .date-gmt {
+            transform-origin: 0 50%;
+            transform: scale(0.75);
         }
 
         .date-label {

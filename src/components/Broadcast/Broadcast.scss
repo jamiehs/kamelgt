@@ -55,6 +55,8 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 1px 1px 1px #666;
+        max-width: 480px;
+
         
         &:after {
             content: '';
@@ -109,10 +111,12 @@
             .glitch-3 {
                 background-image: url(../../../public/vhs3.jpg);
                 animation: shimmer3 67ms infinite;
+                opacity: 0.4;
             }
             .glitch-4 {
                 background-image: url(../../../public/vhs4.jpg);
                 animation: shimmer4 80ms infinite;
+                opacity: 0.5;
             }
             .glitch-5 {
                 background-image: url(../../../public/vhs5.jpg);

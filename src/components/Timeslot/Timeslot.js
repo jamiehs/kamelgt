@@ -38,11 +38,11 @@ class Timeslot extends React.Component {
                 <h3 className="label">{label}</h3>
                 <div className="timeslot-date">
                     <div className="date-gmt">
-                        <div className="date-label">GMT</div><br />
+                        <div className="date-label">GMT</div>
                         <div className="date-time">{dayLabels[dayIndex]} {time}</div>
                     </div>
                     <div className="date-local">
-                        <div className="date-label">{tz.replace('_', ' ')}</div><br />
+                        <div className="date-label">{tz.replace('_', ' ')}</div>
                         <div className="date-time">{nextRaceDayLocal} {nextRaceTimeLocal}</div>
                     </div>
                 </div>
