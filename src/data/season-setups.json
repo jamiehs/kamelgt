@@ -103,10 +103,21 @@
         "weekStart": "2022-07-12",
         "audi90gto": [
             {
+                "file": "Sebring_Kheireddine_22s3.sto",
+                "comment": "I need to reduce tires wear at the front…feels a bit sluggish on fast corners"
+            },
+            {
+                "file": "Sebring_Franco_22s3_RACE.sto"
+            },
+            {
                 "file": "sebring-21S4-r3.sto"
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "Sebring_Ferran_22s3_1-4.sto",
+                "comment": "fast but it does not like the bumps so much and it's hard on the tyres"
+            },
             {
                 "file": "DWC_Sebring_R3.sto"
             },
