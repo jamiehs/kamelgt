@@ -40,19 +40,22 @@
         }
 
         li {
-            margin-bottom: 0.25em;
+            margin-bottom: 0.65em;
             line-height: 1em;
 
             a {
                 display: inline-block;
                 margin-right: 0.5em;
             }
+
+            .comment {
+                font-style: italic;
+                font-size: 0.75em;
+                line-height: 1;
+                display: inline-block;
+            }
         }
 
-        .comment {
-            font-style: italic;
-            font-size: 0.75em;
-        }
 
     }
 
