@@ -4,10 +4,6 @@ import {VCR_DISCORD_URL} from '../../data/constants'
 import seasonSetups from '../../data/season-setups.json';
 const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
 
-function sortSetups(a, b) {
-    return b.file > a.file ? 1 : -1;
-}
-
 function Setups(props) {
     const {upcomingWeeks} = props;
     var outputRoundsCount = 0;
@@ -32,7 +28,7 @@ function Setups(props) {
                                             <div>
                                                 <span className="car badge">Audi GTO</span>
                                                 <ul>
-                                                    {round.audi90gto.sort(sortSetups).map(setup => (
+                                                    {round.audi90gto.map(setup => (
                                                         <li key={setup.file}>
                                                             <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
                                                             <span className="comment">{setup.comment}</span>
@@ -45,7 +41,7 @@ function Setups(props) {
                                             <div>
                                                 <span className="car badge">Nissan GTP</span>
                                                 <ul>
-                                                    {round.nissangtpzxt.sort(sortSetups).map(setup => (
+                                                    {round.nissangtpzxt.map(setup => (
                                                         <li key={setup.file}>
                                                             <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
                                                             <span className="comment">{setup.comment}</span>
