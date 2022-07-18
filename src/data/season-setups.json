@@ -131,7 +131,12 @@
         "week": 6,
         "weekStart": "2022-07-19",
         "audi90gto": [
-
+            {
+                "file": "Silly_Historic_1.0.sto"
+            },
+            {
+                "file": "silverstone-2008-historic-22S3-r1.sto"
+            }
         ],
         "nissangtpzxt": [
 
