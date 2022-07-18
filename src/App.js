@@ -130,18 +130,6 @@ function App() {
                     title="2022 Season 3 Round 1: Le Mans"
                     url="https://youtu.be/8zgn6ACLQlw?t=1095"
                 />
-                <Broadcast
-                    title="2022 Season 2 Round 7: Interlagos"
-                    url="https://youtu.be/OpP7wrWOsyA?t=888"
-                />
-                <Broadcast
-                    title="2022 Season 2 Round 2: Homestead Miami"
-                    url="https://youtu.be/vhaQO7XM5c0?t=51"
-                />
-                <Broadcast
-                    title="2022 Season 2 Round 1: Road Atlanta"
-                    url="https://youtu.be/bf1DsFC2Ku4?t=1209"
-                />
             </div>
         </div>
     );
