@@ -111,6 +111,10 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
                 <Broadcast
+                    title="2022 Season 3 Round 6: Silverstone Historic GP"
+                    url="https://youtu.be/ulo0uVTLQy4?t=1167"
+                />
+                <Broadcast
                     title="2022 Season 3 Round 5: Sebring"
                     url="https://youtu.be/hHPyFl15foI?t=1199"
                 />

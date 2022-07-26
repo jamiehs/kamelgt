@@ -139,7 +139,14 @@
             }
         ],
         "nissangtpzxt": [
-
+            {
+                "file": "Lgo22S3_Silverstone_Hist_AG_WGI_6W1_R61.sto",
+                "comment": "Based on Alex's Watkins Glen setup"
+            },
+            {
+                "file": "silverstone_historic_22S3_Mosquera_V5.sto",
+                "comment": "Based on Fabian's set from 20S4"
+            }
         ]
     },
     {
