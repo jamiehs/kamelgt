@@ -155,12 +155,27 @@
         "weekStart": "2022-07-26",
         "audi90gto": [
             {
-                "file": "phillip-island-21S4-r4.sto"
+                "file": "phillip-island-22S3-Phil3.1.1.sto",
+                "comment": "too much fuel, 15L left at end of race"
+            },
+            {
+                "file": "phillip-island-22S3-r1.sto"
+            },
+            {
+                "file": "A90_-_22S3_-_Phillip_Island_-_Y_Gijsen_-_220727_-_R.sto",
+                "comment": "Drove well enough, but I had too much understeer mid corner"
             }
         ],
         "nissangtpzxt": [
             {
-                "file": "DWC_21S4_Phillip_wing6_R6.sto"
+                "file": "phillip-island-22S3_1-1.sto",
+                "comment": "It's fun and it's quite fast"
+            },
+            {
+                "file": "phillip-island-22S3_wing7_R6.sto"
+            },
+            {
+                "file": "phillip-island-22S3-Lgo_AG_WGI_6W1_R62.sto"
             }
         ]
     },
