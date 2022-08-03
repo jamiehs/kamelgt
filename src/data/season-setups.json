@@ -185,11 +185,19 @@
         "weekStart": "2022-08-06",
         "audi90gto": [
             {
-                "file": "nurburgring-gp-21S3-r5.sto"
+                "file": "nurburgring-gp-22S3_andreas.sto",
+                "comment": "Felt nice through the whole race - Andreas"
+            },
+            {
+                "file": "nurburgring-gp-21S3-r5.sto",
+                "comment": "Setup from 21S3 - Jamie"
             }
         ],
         "nissangtpzxt": [
-
+            {
+                "file": "nurburgring-gp-22S3_MH_R_v1.1.sto",
+                "comment": "Went with wing 6 in the end - Mathias"
+            }
         ]
     },
     {
