@@ -185,6 +185,10 @@
         "weekStart": "2022-08-06",
         "audi90gto": [
             {
+                "file": "nurburgring-gp-22S3_JavierNurg4.1.sto",
+                "comment": "Mid-week update from Javier"
+            },
+            {
                 "file": "nurburgring-gp-22S3_andreas.sto",
                 "comment": "Felt nice through the whole race - Andreas"
             },
@@ -194,6 +198,10 @@
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "nurburgring-gp-22S3_Ferran_1-2.sto",
+                "comment": "It needs a bit more of rear grip but it's quite fast - Ferran"
+            },
             {
                 "file": "nurburgring-gp-22S3_MH_R_v1.1.sto",
                 "comment": "Went with wing 6 in the end - Mathias"
