@@ -135,10 +135,10 @@ function App() {
                 <h3>For GTO Drivers:</h3>
                 <ol>
                     <li>
-                        Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly.
+                        Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
                     </li>
                     <li>
-                        If you are missing shifts, try to pre-select the gear and then stomp the clutch; flat-shift; there is no need to lift. When downshifting you just need to blip; no clutch needed.
+                        If you are missing shifts, try to pre-select the gear and then press the clutch; flat-shift; there is no need to lift. When downshifting you just need to blip; no clutch needed.
                     </li>
                 </ol>
                 <h4>For everyone:</h4>
