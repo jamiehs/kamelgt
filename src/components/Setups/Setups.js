@@ -13,7 +13,11 @@ function Setups(props) {
             <div className="rounds-grid">
                 {sortedRounds.map((round) => {
                     let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
-                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 7));
+
+                    // +7 days is for Monday/Tuesday rollover
+                    // +5 days is for the week to end after the broadcast
+                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
+                    
                     let upcomingRound = weekEndGmt > new Date();
                     const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0);
 
