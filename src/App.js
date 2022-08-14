@@ -4,6 +4,7 @@ import Server from './components/Server/Server.js';
 import Broadcast from './components/Broadcast/Broadcast.js';
 import Setups from './components/Setups/Setups.js';
 import {VCR_DISCORD_URL, DTRL_DISCORD_URL} from './data/constants';
+import discord from './images/Discord-Logo-Color.svg'
 
 function App() {
     return (
@@ -20,29 +21,15 @@ function App() {
                     <p>
                         Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in this series but you will need to show up at specific times. The timeslots below are the most popular ones; if you want a timeslot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
-                    <p>
-                        Below are the ones that are guaranteed to go official. <i>However, the &ldquo;Pacific Warmup&rdquo; is not a guaranteed slot yet.</i>
-                    </p>
+                    <span className="inline-discord-callout">
+                        <img src={discord} alt="" /><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>
+                    </span>
                 </div>
             </div>
-            <div className="timeslots-wrapper">
+            <div id="timeslots" className="timeslots-wrapper">
                 <div className="section">
-                    <h2 className="title">Race Times</h2>
+                    <h2 className="title">Official Race Times</h2>
                     <div className="timeslots">
-                        <Timeslot
-                            label="Pacific Warmup"
-                            dayIndex={3}
-                            time="01:00"
-                            entries="9"
-                            sof="1702"
-                        >
-                            <p>
-                                Convenient for some U.S. racers on the west&nbsp;coast, or Aussie racers on the east&nbsp;coast.
-                            </p>
-                            <p>
-                                Not always official; show up, <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">join the VCR Discord</a>, and let&rsquo;s make it a regular&nbsp;thing!
-                            </p>
-                        </Timeslot>
                         <Timeslot
                             label="Midweek Madness"
                             dayIndex={3}
@@ -80,6 +67,31 @@ function App() {
                     <div className="footnote">Drivers &amp; SOF data averaged from previous weeks</div>
                 </div>
             </div>
+            <div className="faq section">
+                <h2 className="title">Common Questions</h2>
+                <dl>
+                    <dt>When are the races?</dt>
+                    <dd>
+                        The official race slots shown above in your local times are the only races guaranteed to go official. Like other low-participation series, you may see other sessions going official during a week when the Nordschleife or Le Mans is on the schedule. If you want to race, just practice and show up to one of the <a href="#timeslots">times posted on&nbsp;this&nbsp;page</a>.
+                    </dd>
+
+                    <dt>Is this a league?</dt>
+                    <dd>
+                        No. We run the official iRacing scheduled races 3 times per week and the Saturday race is broadcasted live on GSRC. Points are calculated for the broadcast race. 1st and 2nd splits are scored, and there are two cups: VCR Championship and VCR Junior (junior is &lt; 2800 iRating) See <code>#vcr-rules</code> and <code>#vcr-standings</code> in the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> for&nbsp;more&nbsp;info.</span> 
+                    </dd>
+
+                    <dt>Do I need to pit?</dt>
+                    <dd>
+                        Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long, or (rarely) a number of laps approximating 40 minutes; usually Le Mans, Monza Combined, or the Nordschleife.
+                    </dd>
+
+                    <dt>Where can I get a setup?</dt>
+                    <dd>
+                        On this page. If you can't find a setup here that suits you then you may have luck checking the <code>#audi-setups</code> and <code>#nissan-setups</code> channels on the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a></span>
+                    </dd>
+
+                </dl>
+            </div>
             <div id="setups" className="setups section">
                 <h2 className="title">Setups</h2>
                 <Setups upcomingWeeks={3} />
@@ -102,14 +114,43 @@ function App() {
             <div className="format section">
                 <h2 className="title">Race Format</h2>
                 <ul>
-                    <li>Rolling start</li>
-                    <li>Multiclass: Nissan GTP &amp; Audi GTO</li>
-                    <li>Ten of the twelve races per season are 40 minutes long; require no pitstop</li>
-                    <li>Two of the twelve races per season are 60 minutes (or a number of laps) "endurance" rounds that may require a pit stop for fuel and optionally tires.</li>
+                    <li><strong>Multiclass series</strong> featuring the Nissan GTP &amp; Audi GTO</li>
+                    <li><strong>Rolling start</strong>, GTO field leaves a gap to the GTPs ahead</li>
+                    <li><strong>Ten races per season are 40 minutes long</strong>; require no pitstop</li>
+                    <li><strong>Two races per season are 60 minute "endurance" rounds</strong> that may require a pit stop</li>
+                    <li><strong>Tires and fuel are worked on at the same time</strong> during a pit stop</li>
                 </ul>
+            </div>
+            <div className="tips section">
+                <h2 className="title">Race Tips</h2>
+                <h3>For GTP Drivers:</h3>
+                <ol>
+                    <li>
+                        The Audi understeers a lot and uses the whole track. What might look like opening a door is just the Audi preparing to take the apex. Follow some Audis in practice to identify where they are likely to go wide.
+                    </li>
+                    <li>
+                        The GTP stops more quickly than the GTO can. If you pass a GTO and then pull in front of it into the braking zone, you may very well get hit from behind. It's hard to avoid a slowing GTP when already hard on the brakes.
+                    </li>
+                </ol>
+                <h3>For GTO Drivers:</h3>
+                <ol>
+                    <li>
+                        Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly.
+                    </li>
+                    <li>
+                        If you are missing shifts, try to pre-select the gear and then stomp the clutch; flat-shift; there is no need to lift. When downshifting you just need to blip; no clutch needed.
+                    </li>
+                </ol>
+                <h4>For everyone:</h4>
+                <p><a href="https://yousuckatracing.com/2021/04/07/the-vortex-of-danger-is-your-fault/" target="_blank" rel="noreferrer">The vortex of danger</a> is real. Read about it and understand how it applies to your racing.</p>
+                <p>We aspire to be a fun &amp; exciting series made up of a civilized group of racers. There's no need to moan and whine when you wreck, and you can get protested for your conduct just like in any other iRacing series. Remember the human on the other side of the connection. Remember that netcode and mistakes are facts of life/racing.</p>
             </div>
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
+                <Broadcast
+                    title="2022 Season 3 Round 9: Charlotte Roval"
+                    url="https://youtu.be/lxJ72IILRY8?t=1049"
+                />
                 <Broadcast
                     title="2022 Season 3 Round 8: Nurburgring GP"
                     url="https://youtu.be/ci4nn0qrgWk?t=1086"

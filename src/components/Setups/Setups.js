@@ -77,7 +77,7 @@ function Setups(props) {
                     </li>
                 </ul>
                 <p>
-                    For the latest and greatest setups, along with discussion about wing angles, rake, camber, roll-bars, and tire pressures, check out the <code>#nissan-setups</code> and <code>#audi-setups</code> channels in <a href="#chatter">the VCR Discord</a>.
+                    For the latest and greatest setups, along with discussion about wing angles, rake, camber, roll-bars, and tire pressures, check out the <code>#nissan-setups</code> and <code>#audi-setups</code> channels in <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">the VCR Discord</a>.
                 </p>
             </div>
         </div>

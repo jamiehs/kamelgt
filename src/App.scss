@@ -88,8 +88,7 @@
       font-size: 4.6vw;
       margin-top: 3.1vw;
       margin-bottom: 0.4vw;
-      font-family: 'Knewave', cursive;
-      color: #c7b19d;
+      color: #fff;
     }
 
     @media (min-width: $small-width) {
@@ -189,7 +188,7 @@
     
     @media (min-width: $medium-width) {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       column-gap: 1em;
       row-gap: 1em;
 
@@ -204,7 +203,7 @@
 
     @media (min-width: $large-width) {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       column-gap: 1em;
 
       .Timeslot {
@@ -221,5 +220,24 @@
 .chatter-servers {
   .Server {
     margin-bottom: 2em;
+  }
+}
+
+.faq.section {
+  dt {
+    font-size: 1.15em;
+    font-weight: 700;
+  }
+  dd {
+    margin-bottom: 1.4em;
+  }
+}
+
+.inline-discord-callout {
+  img {
+    display: inline-block;
+    height: 1em;
+    vertical-align: middle;
+    padding-right: 0.2em
   }
 }

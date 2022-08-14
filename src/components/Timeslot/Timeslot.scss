@@ -25,12 +25,12 @@
         font-weight: 700;
 
         @media (min-width: $small-width)  {
-            font-size: 2.6vw;
+            font-size: 2.35vw;
             white-space: nowrap;
         }
 
         @media (min-width: $large-width)  {
-            font-size: 1.1em;
+            font-size: 1.3em;
         }
 
         .date-gmt, .date-local {
