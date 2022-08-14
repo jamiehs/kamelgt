@@ -232,7 +232,8 @@
         "weekStart": "2022-08-16",
         "audi90gto": [
             {
-                "file": "mosport-21S4-r4.sto"
+                "file": "ctmp-22S3-r1.sto",
+                "comment": "Copied from 21S4 feels great to me - Jamie"
             }
         ],
         "nissangtpzxt": [
