@@ -2,6 +2,8 @@ import './Timeslot.scss';
 import moment from 'moment-timezone';
 import React from 'react';
 
+import {nextRaceDay} from '../../helpers.js'
+
 // prevents GMT race days from being localized or shifted inadvertantly
 const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
 class Timeslot extends React.Component {
@@ -29,9 +31,9 @@ class Timeslot extends React.Component {
         } = this.props
     
         const tz = moment.tz.guess()
-        const nextRaceDate = moment.tz(nextRaceDay(dayIndex, time), tz)
-        const nextRaceDayLocal = nextRaceDate.toDate().toLocaleDateString(undefined, { weekday: 'long' })
-        const nextRaceTimeLocal = nextRaceDate.toDate().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+        const nextRaceDate = nextRaceDay(dayIndex, time)
+        const nextRaceDayLocal = nextRaceDate.toLocaleDateString(undefined, { weekday: 'long' })
+        const nextRaceTimeLocal = nextRaceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
     
         return (
             <div className="Timeslot">
@@ -71,33 +73,3 @@ class Timeslot extends React.Component {
 }
 
 export default Timeslot;
-
-
-function nextRaceDay(raceDay, time) {
-    const today = moment.tz().isoWeekday();
-    const nowHour = parseInt(moment.tz().hour(), 10);
-    const nowMinute = parseInt(moment.tz().minute(), 10);
-    const raceHour = parseInt(time.split(':')[0], 10);
-    const raceMinute = parseInt(time.split(':')[1], 10);
-
-    let momentObj = moment.tz()
-
-    if(today < raceDay) {
-        // race is upcoming
-    } else if(today === raceDay) {
-        // race is today, still upcoming
-        if(nowHour > raceHour && nowMinute > raceMinute) {
-            // race was today
-            momentObj = moment.tz().add(1, 'weeks')
-        }
-    } else {
-        // race has passed
-        momentObj = moment.tz().add(1, 'weeks')
-    }
-
-    return momentObj
-        .isoWeekday(raceDay)
-        .hour(raceHour)
-        .minute(raceMinute)
-        .second(0)
-}
