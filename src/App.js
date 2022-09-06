@@ -148,6 +148,14 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
                 <Broadcast
+                    title='2022 Season 3 Round 12: Long Beach'
+                    url="https://youtu.be/TYR0gs6-ZUU?t=977"
+                />
+                <Broadcast
+                    title='2022 Season 3 Round 11: Sonoma'
+                    url="https://youtu.be/UQX4hLHHtIo?t=983"
+                />
+                <Broadcast
                     title='2022 Season 3 Round 10: CTMP "Mosport"'
                     url="https://youtu.be/WbBzeqt_Pq4?t=1024"
                 />
