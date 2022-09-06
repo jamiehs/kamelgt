@@ -67,7 +67,7 @@ function Setups(props) {
                 })}
             </div>
             <div className="download-zips">
-                <p>If you prefer, you can download all the (recent-ish) setups for your car:</p>
+                <p>You can download all the (recent-ish) setups for your car:</p>
                 <ul>
                     <li>
                         <a href="/audi90gto-setups.zip">audi90gto-setups.zip</a>
