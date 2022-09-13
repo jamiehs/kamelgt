@@ -21,19 +21,6 @@ function App() {
                     <p>
                         Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in this series but you will need to show up at specific times. The timeslots below are the most popular ones; if you want a timeslot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
-                    <div style={{
-                        padding: '4em 0 7em',
-                        textAlign: 'center'
-                    }}>
-                        <h3>It&rsquo;s week 13!</h3>
-                        <p>
-                            The Audi 90 is in the iRacing 13th Week Deutsche&nbsp;Drifters (Fun) Series!
-                        </p>
-                        <p>
-                            Nürburgring Nordschleife - Industriefahrten <a href="/setups/audi90gto/nords-22S3W13-r1.sto">Setup&nbsp;for&nbsp;the&nbsp;Audi&nbsp;90&nbsp;GTO</a>
-                        </p>
-                        <p>60L of fuel should be enough, but if you're not sure you can take 66L or so.</p>
-                    </div>
                     <span className="inline-discord-callout">
                         <img src={discord} alt="" /><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>
                     </span>
