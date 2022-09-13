@@ -138,7 +138,7 @@ function App() {
                         Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
                     </li>
                     <li>
-                        If you are missing shifts, try to pre-select the gear and then press the clutch; flat-shift; there is no need to lift. When downshifting you just need to blip; no clutch needed.
+                        If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a>, or the pinned messages in the <code>#audi-setup-discussion</code> channel of the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR&nbsp;Discord&nbsp;Server</a>.
                     </li>
                 </ol>
                 <h4>For everyone:</h4>
