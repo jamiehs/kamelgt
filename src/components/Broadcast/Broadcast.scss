@@ -55,7 +55,7 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 1px 1px 1px #666;
-        max-width: 480px;
+        max-width: 33%;
 
         
         &:after {
@@ -66,13 +66,13 @@
             right: 0;
             bottom: 0;
             pointer-events: none;
-            box-shadow: inset 0 0 9vw rgb(195 158 103 / 75%);
+            box-shadow: inset 0 0 9vw rgb(195 158 103 / 30%);
             transition: box-shadow 300ms ease;
         }
         
         a {
             min-width: 0;
-            display: grid;
+            display: block;
             max-width: 100%;
             grid-template-columns: 1fr 1fr 1fr;
             filter: saturate(50%) hue-rotate(-10deg) contrast(120%);
@@ -127,10 +127,6 @@
         &:hover {
             a {
                 filter: saturate(80%) hue-rotate(-5deg) contrast(100%);
-            }
-
-            &:after {
-                box-shadow: inset 0 0 9vw rgb(195 158 103 / 45%);
             }
 
             .glitch {

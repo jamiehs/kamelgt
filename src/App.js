@@ -148,52 +148,8 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
                 <Broadcast
-                    title='2022 Season 3 Round 12: Long Beach'
-                    url="https://youtu.be/TYR0gs6-ZUU?t=977"
-                />
-                <Broadcast
-                    title='2022 Season 3 Round 11: Sonoma'
-                    url="https://youtu.be/UQX4hLHHtIo?t=983"
-                />
-                <Broadcast
-                    title='2022 Season 3 Round 10: CTMP "Mosport"'
-                    url="https://youtu.be/WbBzeqt_Pq4?t=1024"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 9: Charlotte Roval"
-                    url="https://youtu.be/lxJ72IILRY8?t=1049"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 8: Nurburgring GP"
-                    url="https://youtu.be/ci4nn0qrgWk?t=1086"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 7: Phillip Island"
-                    url="https://youtu.be/O2G6NyzfsZ4?t=1167"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 6: Silverstone Historic GP"
-                    url="https://youtu.be/ulo0uVTLQy4?t=1167"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 5: Sebring"
-                    url="https://youtu.be/hHPyFl15foI?t=1199"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 4: Brands Hatch"
-                    url="https://youtu.be/Ydq0wDq0GBY?t=1191"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 3: Watkins Glen"
-                    url="https://youtu.be/bncdRkxyUZI?t=1208"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 2: Fuji"
-                    url="https://youtu.be/5huzNPgmsJc?t=1043"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 1: Le Mans"
-                    url="https://youtu.be/8zgn6ACLQlw?t=1095"
+                    title='22S4 Round 1: Monza Combined'
+                    url="https://youtu.be/IBlwz3SltOw?t=1113"
                 />
             </div>
         </div>
