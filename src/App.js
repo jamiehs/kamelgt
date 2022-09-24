@@ -138,7 +138,7 @@ function App() {
                         Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
                     </li>
                     <li>
-                        If you are missing shifts, try to pre-select the gear and then press the clutch; flat-shift; there is no need to lift. When downshifting you just need to blip; no clutch needed.
+                        If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a>, or the pinned messages in the <code>#audi-setup-discussion</code> channel of the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR&nbsp;Discord&nbsp;Server</a>.
                     </li>
                 </ol>
                 <h4>For everyone:</h4>
@@ -148,40 +148,8 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
                 <Broadcast
-                    title="2022 Season 3 Round 9: Charlotte Roval"
-                    url="https://youtu.be/lxJ72IILRY8?t=1049"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 8: Nurburgring GP"
-                    url="https://youtu.be/ci4nn0qrgWk?t=1086"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 7: Phillip Island"
-                    url="https://youtu.be/O2G6NyzfsZ4?t=1167"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 6: Silverstone Historic GP"
-                    url="https://youtu.be/ulo0uVTLQy4?t=1167"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 5: Sebring"
-                    url="https://youtu.be/hHPyFl15foI?t=1199"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 4: Brands Hatch"
-                    url="https://youtu.be/Ydq0wDq0GBY?t=1191"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 3: Watkins Glen"
-                    url="https://youtu.be/bncdRkxyUZI?t=1208"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 2: Fuji"
-                    url="https://youtu.be/5huzNPgmsJc?t=1043"
-                />
-                <Broadcast
-                    title="2022 Season 3 Round 1: Le Mans"
-                    url="https://youtu.be/8zgn6ACLQlw?t=1095"
+                    title='22S4 Round 1: Monza Combined'
+                    url="https://youtu.be/IBlwz3SltOw?t=1113"
                 />
             </div>
         </div>

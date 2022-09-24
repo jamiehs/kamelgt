@@ -250,8 +250,26 @@
         "label": "Sonoma Raceway - Cup",
         "week": 11,
         "weekStart": "2022-08-23",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "sonoma-22S3-2.3.sto",
+                "comment": "Posted by Javier"
+            },
+            {
+                "file": "sonoma-22S3-Yoeri_Gijsen_-_220824_-_R.sto",
+                "comment": "No 5th gear. Fuel should be safe. - Yoeri"
+            },
+            {
+                "file": "sonoma-22S3-r1.sto",
+                "comment": "Based on Emerson's setup from Garage 61. - Jamie"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R61.sto",
+                "comment": "Definitely need more work. I destroyed the tires very quickly. - Laust"
+            }
+        ]
     },
     {
         "label": "Long Beach Street Circuit",
