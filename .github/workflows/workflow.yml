@@ -24,12 +24,12 @@ jobs:
 
       - name: Zip Audi Setups
         run: |
-          rm build/audi90gto-setups.zip
+          rm -rf build/audi90gto-setups.zip
           zip -rj build/audi90gto-setups.zip public/setups/audi90gto/*
 
       - name: Zip Nissan Setups
         run: |
-          rm build/nissangtpzxt-setups.zip
+          rm -rf build/nissangtpzxt-setups.zip
           zip -rj build/nissangtpzxt-setups.zip public/setups/nissangtpzxt/*
 
       - name: Deploy
