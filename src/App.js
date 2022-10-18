@@ -151,6 +151,22 @@ function App() {
                     title='22S4 Round 1: Monza Combined'
                     url="https://youtu.be/IBlwz3SltOw?t=1113"
                 />
+                <Broadcast
+                    title='22S4 Round 2: Oschersleben'
+                    url="https://youtu.be/h1nc78hWwxI?t=1016"
+                />
+                <Broadcast
+                    title='22S4 Round 3: Road America'
+                    url="https://youtu.be/82kwglhoAw8?t=1063"
+                />
+                <Broadcast
+                    title='22S4 Round 4: Fuji'
+                    url="https://youtu.be/LE-AysOjutY?t=1119"
+                />
+                <Broadcast
+                    title='22S4 Round 5: Red Bull Ring'
+                    url="https://youtu.be/WtxOacSwKKs?t=947"
+                />
             </div>
         </div>
     );
