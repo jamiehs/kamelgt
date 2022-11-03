@@ -34,8 +34,8 @@ function App() {
                             label="Midweek Madness"
                             dayIndex={3}
                             time="19:00"
-                            entries="29"
-                            sof="2346"
+                            entries="33"
+                            sof="2194"
                         >
                             <p>
                                 If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
@@ -45,8 +45,8 @@ function App() {
                             label="Friday Night Race"
                             dayIndex={5}
                             time="21:00"
-                            entries="27"
-                            sof="2287"
+                            entries="31"
+                            sof="2521"
                         >
                             <p>
                                 The big race that is not the broadcast race. If you want <b>a full field with no broadcast pressure</b> this is it. Also a great practice race for the&nbsp;broadcast.
@@ -56,8 +56,8 @@ function App() {
                             label="Broadcast Race"
                             dayIndex={6}
                             time="17:00"
-                            entries="50"
-                            sof="2797"
+                            entries="59"
+                            sof="3306"
                         >
                             <p>
                                 <b>Our weekly broadcast race.</b> This will usually have the most participants and may even split once or twice per season. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
@@ -166,6 +166,14 @@ function App() {
                 <Broadcast
                     title='22S4 Round 5: Red Bull Ring'
                     url="https://youtu.be/WtxOacSwKKs?t=947"
+                />
+                <Broadcast
+                    title='22S4 Round 6: Summit Point'
+                    url="https://youtu.be/cfEwnRCsa-A?t=932"
+                />
+                <Broadcast
+                    title='22S4 Round 7: Detroit'
+                    url="https://youtu.be/GQ6SigoX5QA?t=1010"
                 />
             </div>
         </div>
