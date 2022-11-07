@@ -175,6 +175,10 @@ function App() {
                     title='22S4 Round 7: Detroit'
                     url="https://youtu.be/GQ6SigoX5QA?t=1010"
                 />
+                <Broadcast
+                    title='22S4 Round 8: Spa'
+                    url="https://youtu.be/3coWzmh3vMk?t=1014"
+                />
             </div>
         </div>
     );
