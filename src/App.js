@@ -179,6 +179,22 @@ function App() {
                     title='22S4 Round 8: Spa'
                     url="https://youtu.be/3coWzmh3vMk?t=1014"
                 />
+                <Broadcast
+                    title='22S4 Round 9: Imola'
+                    url="https://youtu.be/dq0vS6DnknY?t=1148"
+                />
+                <Broadcast
+                    title='22S4 Round 10: Okayama'
+                    url="https://youtu.be/Wq2WVFKiP1w?t=1057"
+                />
+                <Broadcast
+                    title='22S4 Round 11: VIR'
+                    url="https://youtu.be/iJRGkebK6kM?t=993"
+                />
+                <Broadcast
+                    title='22S4 Round 12: Road Atlanta'
+                    url="https://youtu.be/WolhGM8Dfws?t=779"
+                />
             </div>
         </div>
     );
