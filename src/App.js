@@ -87,9 +87,18 @@ function App() {
 
                     <dt>Where can I get a setup?</dt>
                     <dd>
-                        On this page. If you can't find a setup here that suits you then you may have luck checking the <code>#audi-setups</code> and <code>#nissan-setups</code> channels on the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a></span>
+                        <ul>
+                            <li>
+                                Check the <code>#audi-setups</code> and <code>#nissan-setups</code> channels on the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a></span>
+                            </li>
+                            <li>
+                                There is also <a href="https://forums.iracing.com/discussion/9089/audi-90-gto-setup-packs" target="_blank" rel="noreferrer">a thread in the iRacing forums for the Audi</a>.
+                            </li>
+                            <li>
+                                One of our regulars, Laust has been posting <a href="https://forums.iracing.com/discussion/29309/nissan-gtp-setups-22s4" target="_blank" rel="noreferrer">Nissan setups in the forums</a> as well.
+                            </li>
+                        </ul>
                     </dd>
-
                 </dl>
             </div>
             <div id="setups" className="setups section">
