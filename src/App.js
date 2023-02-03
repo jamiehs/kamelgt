@@ -157,52 +157,32 @@ function App() {
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>
                 <Broadcast
-                    title='22S4 Round 1: Monza Combined'
-                    url="https://youtu.be/IBlwz3SltOw?t=1113"
+                    title='23S1 Round 1: Nurburgring Combined'
+                    url="https://youtu.be/qnkOVXM99q0?=718"
                 />
                 <Broadcast
-                    title='22S4 Round 2: Oschersleben'
-                    url="https://youtu.be/h1nc78hWwxI?t=1016"
+                    title='23S1 Round 2: Magny-Cours'
+                    url="https://youtu.be/lPRCKZcIrxk?t=720"
                 />
                 <Broadcast
-                    title='22S4 Round 3: Road America'
-                    url="https://youtu.be/82kwglhoAw8?t=1063"
+                    title='23S1 Round 3: Indianapolis'
+                    url="https://youtu.be/I-4EdrrgFtM?t=520"
                 />
                 <Broadcast
-                    title='22S4 Round 4: Fuji'
-                    url="https://youtu.be/LE-AysOjutY?t=1119"
+                    title='23S1 Round 4: Bathurst'
+                    url="https://youtu.be/EDxZkP4qbQM?t=888"
                 />
                 <Broadcast
-                    title='22S4 Round 5: Red Bull Ring'
-                    url="https://youtu.be/WtxOacSwKKs?t=947"
+                    title='23S1 Round 5: Hockenheim'
+                    url="https://youtu.be/Ep-hjQZpv34?t=772"
                 />
                 <Broadcast
-                    title='22S4 Round 6: Summit Point'
-                    url="https://youtu.be/cfEwnRCsa-A?t=932"
+                    title='23S1 Round 6: Barcelona'
+                    url="https://youtu.be/NbtMgYusMgI?t=977"
                 />
                 <Broadcast
-                    title='22S4 Round 7: Detroit'
-                    url="https://youtu.be/GQ6SigoX5QA?t=1010"
-                />
-                <Broadcast
-                    title='22S4 Round 8: Spa'
-                    url="https://youtu.be/3coWzmh3vMk?t=1014"
-                />
-                <Broadcast
-                    title='22S4 Round 9: Imola'
-                    url="https://youtu.be/dq0vS6DnknY?t=1148"
-                />
-                <Broadcast
-                    title='22S4 Round 10: Okayama'
-                    url="https://youtu.be/Wq2WVFKiP1w?t=1057"
-                />
-                <Broadcast
-                    title='22S4 Round 11: VIR'
-                    url="https://youtu.be/iJRGkebK6kM?t=993"
-                />
-                <Broadcast
-                    title='22S4 Round 12: Road Atlanta'
-                    url="https://youtu.be/WolhGM8Dfws?t=779"
+                    title='23S1 Round 7: Mid Ohio'
+                    url="https://youtu.be/2QdLxTG8C94?t=546"
                 />
             </div>
         </div>
