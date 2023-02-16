@@ -184,6 +184,14 @@ function App() {
                     title='23S1 Round 7: Mid Ohio'
                     url="https://youtu.be/2QdLxTG8C94?t=546"
                 />
+                <Broadcast
+                    title='23S1 Round 8: Le Mans Historic'
+                    url="https://youtu.be/a4JHWiWrxwo?t=1024"
+                />
+                <Broadcast
+                    title='23S1 Round 9: Suzuka'
+                    url="https://youtu.be/SA_9qOT8THo?t=1031"
+                />
             </div>
         </div>
     );
