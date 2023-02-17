@@ -35,10 +35,26 @@ function App() {
                             dayIndex={3}
                             time="19:00"
                             entries="33"
-                            sof="2194"
+                            sof="2418"
+                            guaranteed={true}
                         >
                             <p>
                                 If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
+                            </p>
+                        </Timeslot>
+                        <Timeslot
+                            label="Midweek Americas"
+                            dayIndex={4}
+                            time="03:00"
+                            entries="?"
+                            sof="?"
+                            guaranteed={false}
+                        >
+                            <p>
+                                Wednesday race for the US time zones. Early evening on the west coast and late evening on the east&nbsp;coast.
+                            </p>
+                            <p>
+                                Show up and let's make it an official time&nbsp;slot!
                             </p>
                         </Timeslot>
                         <Timeslot
@@ -46,7 +62,8 @@ function App() {
                             dayIndex={5}
                             time="21:00"
                             entries="31"
-                            sof="2521"
+                            sof="2510"
+                            guaranteed={true}
                         >
                             <p>
                                 The big race that is not the broadcast race. If you want <b>a full field with no broadcast pressure</b> this is it. Also a great practice race for the&nbsp;broadcast.
@@ -57,7 +74,8 @@ function App() {
                             dayIndex={6}
                             time="17:00"
                             entries="59"
-                            sof="3306"
+                            sof="3331"
+                            guaranteed={true}
                         >
                             <p>
                                 <b>Our weekly broadcast race.</b> This will usually have the most participants and may even split once or twice per season. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
@@ -69,7 +87,7 @@ function App() {
             </div>
             <div className="faq section">
                 <h2 className="title">Common Questions</h2>
-                <dl>
+                <dl className="text-content">
                     <dt>When are the races?</dt>
                     <dd>
                         The official race slots shown above in your local times are the only races guaranteed to go official. Like other low-participation series, you may see other sessions going official during a week when the Nordschleife or Le Mans is on the schedule. If you want to race, just practice and show up to one of the <a href="#timeslots">times posted on&nbsp;this&nbsp;page</a>.
@@ -107,7 +125,7 @@ function App() {
             </div>
             <div id="chatter" className="chatter section">
                 <h2 className="title">Chatter &amp; Community</h2>
-                <div className="chatter-servers">
+                <div className="chatter-servers text-content">
                     <Server
                         title="VCR Discord (official races, with custom scoring)"
                         url={VCR_DISCORD_URL}
@@ -122,7 +140,7 @@ function App() {
             </div>
             <div className="format section">
                 <h2 className="title">Race Format</h2>
-                <ul>
+                <ul className="text-content">
                     <li><strong>Multiclass series</strong> featuring the Nissan GTP &amp; Audi GTO</li>
                     <li><strong>Rolling start</strong>, GTO field leaves a gap to the GTPs ahead</li>
                     <li><strong>Ten races per season are 40 minutes long</strong>; require no pitstop</li>
@@ -132,27 +150,29 @@ function App() {
             </div>
             <div className="tips section">
                 <h2 className="title">Race Tips</h2>
-                <h3>For GTP Drivers:</h3>
-                <ol>
-                    <li>
-                        The Audi understeers a lot and uses the whole track. What might look like opening a door is just the Audi preparing to take the apex. Follow some Audis in practice to identify where they are likely to go wide.
-                    </li>
-                    <li>
-                        The GTP stops more quickly than the GTO can. If you pass a GTO and then pull in front of it into the braking zone, you may very well get hit from behind. It's hard to avoid a slowing GTP when already hard on the brakes.
-                    </li>
-                </ol>
-                <h3>For GTO Drivers:</h3>
-                <ol>
-                    <li>
-                        Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
-                    </li>
-                    <li>
-                        If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a>, or the pinned messages in the <code>#audi-setup-discussion</code> channel of the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR&nbsp;Discord&nbsp;Server</a>.
-                    </li>
-                </ol>
-                <h4>For everyone:</h4>
-                <p><a href="https://yousuckatracing.com/2021/04/07/the-vortex-of-danger-is-your-fault/" target="_blank" rel="noreferrer">The vortex of danger</a> is real. Read about it and understand how it applies to your racing.</p>
-                <p>We aspire to be a fun &amp; exciting series made up of a civilized group of racers. There's no need to moan and whine when you wreck, and you can get protested for your conduct just like in any other iRacing series. Remember the human on the other side of the connection. Remember that netcode and mistakes are facts of life/racing.</p>
+                <div className="text-content">
+                    <h3>For GTP Drivers:</h3>
+                    <ol>
+                        <li>
+                            The Audi understeers a lot and uses the whole track. What might look like opening a door is just the Audi preparing to take the apex. Follow some Audis in practice to identify where they are likely to go wide.
+                        </li>
+                        <li>
+                            The GTP stops more quickly than the GTO can. If you pass a GTO and then pull in front of it into the braking zone, you may very well get hit from behind. It's hard to avoid a slowing GTP when already hard on the brakes.
+                        </li>
+                    </ol>
+                    <h3>For GTO Drivers:</h3>
+                    <ol>
+                        <li>
+                            Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
+                        </li>
+                        <li>
+                            If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a>, or the pinned messages in the <code>#audi-setup-discussion</code> channel of the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR&nbsp;Discord&nbsp;Server</a>.
+                        </li>
+                    </ol>
+                    <h4>For everyone:</h4>
+                    <p><a href="https://yousuckatracing.com/2021/04/07/the-vortex-of-danger-is-your-fault/" target="_blank" rel="noreferrer">The vortex of danger</a> is real. Read about it and understand how it applies to your racing.</p>
+                    <p>We aspire to be a fun &amp; exciting series made up of a civilized group of racers. There's no need to moan and whine when you wreck, and you can get protested for your conduct just like in any other iRacing series. Remember the human on the other side of the connection. Remember that netcode and mistakes are facts of life/racing.</p>
+                </div>
             </div>
             <div className="broadcast section">
                 <h2 className="title">Previous Broadcast Races</h2>

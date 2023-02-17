@@ -4,11 +4,21 @@
     display: block;
     background-color: rgb(226, 243, 243);
     padding: 0 1.3em;
-    border-top: solid 8px $gold;
+    border-top: solid 8px rgb(51, 132, 10);
     overflow: hidden;
+    border-radius: 4px;
+
+    @media (min-width: $medium-width) {
+        padding: 0 .66em;
+    }
+
+    @media (min-width: $large-width) {
+        padding: 0 1.3em;
+    }
+
 
     h3.label {
-        margin: 0 0 0.5em;
+        margin: 0;
         font-weight: 700;
         white-space: nowrap;
         margin-left: -50%;
@@ -16,8 +26,39 @@
         padding-left: 50%;
         background: #d5e7ef;
         line-height: 2.2em;
-        font-size: 126%;
+        font-size: 111%;
         border-bottom: solid 1px #bcd8e5;
+        
+        @media (min-width: $medium-width) {
+            font-size: 1.9vw;
+        }
+
+        @media (min-width: $large-width)  {
+            text-align: center;
+            font-size: 126%;
+            padding-left: 0;
+        }
+    }
+
+    .official-likelihood {
+        font-size: 0.8em;
+        display: block;
+        margin-top: 0.33em;
+        margin-bottom: 0.33em;
+        font-style: italic;
+        
+        @media (min-width: $medium-width) {
+            text-align: center;
+            margin-top: -0.37em;
+        }
+    }
+
+    &[data-guaranteed="true"] {
+        .official-likelihood {
+            .badge {
+                background-color: rgb(51, 132, 10);
+            }
+        }
     }
     
     .timeslot-date {
@@ -25,12 +66,16 @@
         font-weight: 700;
 
         @media (min-width: $small-width)  {
-            font-size: 2.35vw;
+            font-size: 3.05vw;
             white-space: nowrap;
         }
 
+        @media (min-width: $medium-width)  {
+            font-size: 1.75vw;
+        }
+
         @media (min-width: $large-width)  {
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
 
         .date-gmt, .date-local {
@@ -53,7 +98,7 @@
             font-style: italic;
             font-weight: 600;
             position: relative;
-            top: 0.5em;
+            top: 0.3em;
             left: -0.25em;
             background-color: rgba(255,255,255,0.5);
             display: inline-block;
@@ -92,6 +137,11 @@
         @media (min-width: $small-width)  {
             font-size: 90%;
         }
+    }
+
+    &[data-guaranteed="false"] {
+        filter: saturate(15%);
+        background-color: rgb(255, 255, 255);
     }
 
 }

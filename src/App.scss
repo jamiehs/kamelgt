@@ -37,7 +37,7 @@
     color: white;
     display: inline-block;
     border-radius: 4px;
-    padding: 0.25em .5em;
+    padding: 0.25em 0.5em 0.33em 0.5em;
     font-weight: 600;
     line-height: 1;
     white-space: nowrap;
@@ -65,7 +65,7 @@
     @media (min-width: $large-width) {
       padding: 0;
       margin: 0 auto;
-      max-width: 900px;
+      max-width: $section-max-width;
     }
   }
 
@@ -100,7 +100,7 @@
         margin-top: 0.6em;
       }
       h2 {
-        margin-top: -0.3em;
+        margin-top: 0;
         margin-bottom: 1.5em;
         font-size: 24px;
       }
@@ -128,6 +128,11 @@
   }
 }
 
+// Quick way to limit text max-width
+.text-content {
+  max-width: $text-content-max-width;
+}
+
 .section {
   margin: 0;
   padding: 0.75em;
@@ -153,7 +158,7 @@
   @media (min-width: $large-width) {
     padding: 0;
     margin: 0 auto 3em;
-    max-width: 900px;
+    max-width: $section-max-width;
   }
 }
 
@@ -188,7 +193,7 @@
     
     @media (min-width: $medium-width) {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       column-gap: 1em;
       row-gap: 1em;
 
@@ -203,7 +208,7 @@
 
     @media (min-width: $large-width) {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       column-gap: 1em;
 
       .Timeslot {

@@ -66,7 +66,7 @@ function Setups(props) {
                     return null;
                 })}
             </div>
-            <div className="download-zips">
+            <div className="download-zips text-content">
                 <p>You can download all the (recent-ish) setups for your car:</p>
                 <ul>
                     <li>

@@ -6,6 +6,15 @@ import {nextRaceDay} from '../../helpers.js'
 
 // prevents GMT race days from being localized or shifted inadvertantly
 const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
+
+const toLocaleStringIfNumber = (input) => {
+    if(isNaN(input)) {
+        return input
+    }
+
+    return Number(input).toLocaleString()
+}
+
 class Timeslot extends React.Component {
     constructor(props) {
         super(props)
@@ -28,6 +37,7 @@ class Timeslot extends React.Component {
             entries,
             sof,
             children,
+            guaranteed,
         } = this.props
     
         const tz = moment.tz.guess()
@@ -36,8 +46,17 @@ class Timeslot extends React.Component {
         const nextRaceTimeLocal = nextRaceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
     
         return (
-            <div className="Timeslot">
+            <div className="Timeslot" data-guaranteed={guaranteed}>
                 <h3 className="label">{label}</h3>
+                <div className="official-likelihood">
+                    <div className="badge">
+                        {guaranteed ? (
+                            'Always official'
+                        ) : (
+                            'Maybe official'
+                        )}
+                    </div>
+                </div>
                 <div className="timeslot-date">
                     <div className="date-gmt">
                         <div className="date-label">GMT</div>
@@ -52,14 +71,14 @@ class Timeslot extends React.Component {
                     {entries && (
                         <div>
                             <div className="badge drivers">
-                                Drivers: {entries}
+                                Drivers: {toLocaleStringIfNumber(entries)}
                             </div>
                         </div>
                     )}
                     {sof && (
                         <div>
                             <div className="badge sof">
-                                <abbr title="Strength of Field">SOF</abbr>: {sof}
+                                <abbr title="Strength of Field">SOF</abbr>: {toLocaleStringIfNumber(sof)}
                             </div>
                         </div>
                     )}
