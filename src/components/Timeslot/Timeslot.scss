@@ -2,9 +2,9 @@
 
 .Timeslot {
     display: block;
-    background-color: rgb(226, 243, 243);
+    background-color: $timeslot-bg;
     padding: 0 1.3em;
-    border-top: solid 8px rgb(51, 132, 10);
+    border-top: solid 8px $timeslot-positive;
     overflow: hidden;
     border-radius: 4px;
 

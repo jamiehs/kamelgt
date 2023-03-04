@@ -78,7 +78,7 @@
     }
     h1 {
       line-height: 1;
-      font-size: 9.8vw;
+      font-size: 8.3vw;
       margin-top: 0.4vw;
       margin-bottom: -0.2em;
       font-family: 'Dela Gothic One', sans-serif;
@@ -95,7 +95,7 @@
       margin-bottom: 1em;
 
       h1 {
-        font-size: 50px;
+        font-size: 38px;
         margin-bottom: 0;
         margin-top: 0.6em;
       }
@@ -110,10 +110,6 @@
   .intro {
     font-weight: 600;
     
-    .intro-copy {
-      max-width: 45rem;
-    }
-
     @media (min-width: $small-width) {
       font-size: 18px;
       margin-top: 1em;
@@ -244,5 +240,13 @@
     height: 1em;
     vertical-align: middle;
     padding-right: 0.2em
+  }
+}
+
+#announcements {
+  .Announcement {
+    &:first-child {
+      margin-top: 2em;
+    }
   }
 }

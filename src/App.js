@@ -2,6 +2,7 @@ import './App.scss';
 import Timeslot from './components/Timeslot/Timeslot.js';
 import Server from './components/Server/Server.js';
 import Broadcast from './components/Broadcast/Broadcast.js';
+import Announcement from './components/Announcement/Announcement.js';
 import Setups from './components/Setups/Setups.js';
 import {VCR_DISCORD_URL, DTRL_DISCORD_URL} from './data/constants';
 import discord from './images/Discord-Logo-Color.svg'
@@ -19,11 +20,31 @@ function App() {
             <div className="intro section">
                 <div className="intro-copy">
                     <p>
-                        Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in this series but you will need to show up at specific times. The timeslots below are the most popular ones; if you want a timeslot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
+                        Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in this series but you will need to show up at specific times. The time slots below are the most popular ones; if you want a time slot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
                     </p>
                     <span className="inline-discord-callout">
                         <img src={discord} alt="" /><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>
                     </span>
+                </div>
+            </div>
+            <div id="announcements">
+                <div className="section">
+                    <Announcement expires="2023-04-13">
+                        <h3>
+                            This Season (2023 S2) is the (Virtual) <a href="https://en.wikipedia.org/wiki/Road_Race_Showcase_at_Road_America" target="_blank" rel="noreferrer">Road&nbsp;America&nbsp;500</a>.
+                        </h3>
+                        <p>
+                            The RA500 is a 500 mile team endurance event in the Kamel GT cars! Check <a href="https://forums.iracing.com/categories/special-events" target="_blank" rel="noreferrer">the forums for more information</a>.
+                        </p>
+                    </Announcement>
+                    <Announcement begins="2023-03-06" expires="2023-03-13">
+                        <h3>
+                            It's Week 13! Most Official Series Are Not Active This Week.
+                        </h3>
+                        <p>
+                            Regular races will resume on March 14th (GMT). For now you should be checking out the new content and doing some fun, unranked&nbsp;races! See you at Sebring!
+                        </p>
+                    </Announcement>
                 </div>
             </div>
             <div id="timeslots" className="timeslots-wrapper">
@@ -45,7 +66,7 @@ function App() {
                         <Timeslot
                             label="Midweek Americas"
                             dayIndex={4}
-                            time="03:00"
+                            time="01:00"
                             entries="?"
                             sof="?"
                             guaranteed={false}
