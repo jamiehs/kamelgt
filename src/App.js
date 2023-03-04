@@ -233,6 +233,18 @@ function App() {
                     title='23S1 Round 9: Suzuka'
                     url="https://youtu.be/SA_9qOT8THo?t=1031"
                 />
+                <Broadcast
+                    title='23S1 Round 10: Watkins Glen Classic'
+                    url="https://youtu.be/qVbLZmG_VNY?t=877"
+                />
+                <Broadcast
+                    title='23S1 Round 11: Twin Ring Motegi'
+                    url="https://youtu.be/tHUVKQzvyfI?t=981"
+                />
+                <Broadcast
+                    title='23S1 Round 12: Daytona'
+                    url="https://youtu.be/wzdzBU8c8zw?t=850"
+                />
             </div>
         </div>
     );
