@@ -34,7 +34,7 @@ function App() {
                             It's Week 13! Most Official Series Are Not Active This Week.
                         </h3>
                         <p>
-                            For now you should be checking out the new content and doing a few races in the <a href="https://www.iracing.com/iracing-2023-season-1-week-13-schedule-released/#:~:text=13th%20Week%20iRacing%20Deutsche%20Drifters%3A%20Audi%20RS%203%20LMS%2C%20R8%20GT3%2C%20and%2090%20at%20Nurburgring%20Industrifahrten" target="_blank" rel="noreferrer">13th Week Deutsche Drifters in the Audi 90 at the Nordschleife</a>. See you at Sebring in Season 2!
+                            For now you should be checking out the new content and doing a few races in the <a href="https://www.iracing.com/iracing-2023-season-1-week-13-schedule-released/#:~:text=13th%20Week%20iRacing%20Deutsche%20Drifters%3A%20Audi%20RS%203%20LMS%2C%20R8%20GT3%2C%20and%2090%20at%20Nurburgring%20Industrifahrten" target="_blank" rel="noreferrer">13th Week Deutsche Drifters in the Audi 90 at the Nordschleife</a>. See you at Sebring in Season&nbsp;2!
                         </p>
                     </Announcement>
                     <Announcement begins="2023-03-13" expires="2023-04-13">
