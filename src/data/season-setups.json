@@ -1,285 +1,171 @@
 [
     {
-        "label": "Le Mans - Historic",
+        "label": "Sebring - International",
         "week": 1,
-        "weekStart": "2022-06-14",
+        "weekStart": "2023-03-14",
         "audi90gto": [
             {
-                "file": "le-mans-22S3-r1.sto"
+                "file": "A90_23S2_Sebring_Y_Gijsen_R.sto",
+                "comment": "Yoeri: Tested it at 26C, 50% rubber; still need to work out fuel"
+            },
+            {
+                "file": "JdelOlmoAudiSebring23S2.sto",
+                "comment": "Javier: You have to adjust fuel it is with a full tank"
             }
         ],
+        "nissangtpzxt": [
+            {
+                "file": "GTP-Sebring-SW-R.sto",
+                "comment": "Sören: First time trying to make a set for the Nissan"
+            }
+        ]
+    },
+    {
+        "label": "Circuito de Jerez - Moto",
+        "week": 2,
+        "weekStart": "2023-03-21",
+        "audi90gto": [
+            {
+                "file": "A90_23S1w13_jerez_andreas.sto",
+                "comment": "From a week 13 fun event; check fuel before using!"
+            },
+            {
+                "file": "A90_23S1w13_Jerez_Y_Gijsen_R.sto",
+                "comment": "From a week 13 fun event; check fuel before using!"
+            },
+            {
+                "file": "23s2-tuupola-jerez-r1.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "jerez-22S1w13_NGTP_1-5_Togo_Q.sto",
+                "comment": "From a week 13 fun event; check fuel before using!"
+            }
+        ]
+    },
+    {
+        "label": "Circuit Gilles Villeneuve",
+        "week": 3,
+        "weekStart": "2023-03-28",
+        "audi90gto": [],
         "nissangtpzxt": []
     },
     {
-        "label": "Fuji International Speedway - No Chicane",
-        "week": 2,
-        "weekStart": "2022-06-21",
-        "audi90gto": [
-            {
-                "file": "fuji-22-S3-r-01.sto",
-                "comment": "Adapted from Suzuka"
-            },
-            {
-                "file": "Fuji_S3_2022_1.2_Race.sto"
-            },
-            {
-                "file": "KB_2022-S3_Fuji_R.sto",
-                "comment": "First try at Fuji set"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "fuji-22S3-r-NGTP_Fuji_1-3.sto",
-                "comment": "Adapted from week 13 sprint races"
-            },
-            {
-                "file": "Lgo22S3_Fuji_NoCh_R41.sto",
-                "comment": "Hard to control and sliding all over the place - be warned"
-            }
-        ]
-    },
-    {
-        "label": "Watkins Glen International - Boot",
-        "week": 3,
-        "weekStart": "2022-06-28",
-        "audi90gto": [
-            {
-                "file": "watkins-classic-boot-21S4-r5.sto"
-            },
-            {
-                "file": "watkins-21S2-Y_Gijsen_R.sto"
-            },
-            {
-                "file": "watkins-21S2-02.sto"
-            },
-            {
-                "file": "Watkins_2022_S3_RACE_v1.sto"
-            },
-            {
-                "file": "watkinsintlboot_2022_S3_R.sto"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "Watkins_Glen_CB_R_v1.2.sto"
-            },
-            {
-                "file": "Watkins5W2v3.sto"
-            },
-            {
-                "file": "watkins-22S3-AG_WGI_5W2.sto"
-            }
-        ]
-    },
-    {
-        "label": "Brands Hatch Grand Prix",
+        "label": "Nürburgring - BES/WEC",
         "week": 4,
-        "weekStart": "2022-07-05",
+        "weekStart": "2023-04-04",
         "audi90gto": [
             {
-                "file": "brands-21S3-r2.sto",
-                "comment": "Adjusted from Reid's initial setup"
+                "file": "nurburgring-gp-22S3_andreas.sto"
             },
             {
-                "file": "brands-hatch-21S3_Marti.sto"
+                "file": "nurburgring-gp-22S3_JavierNurg4.1.sto"
             },
             {
-                "file": "brands-hatch-21S3_MarcOlle_2.2_Race.sto"
+                "file": "nurburgring-gp-22S3-q.sto"
+            },
+            {
+                "file": "nurburgring-gp-22S3-r1.sto"
             }
-        ],
+        ],  
         "nissangtpzxt": [
             {
-                "file": "brands-hatch-21S3_Havdal_R_v1.sto",
-                "comment": "It gets a bit bouncy in some places, but other than that it's not too bad."
+                "file": "nurburgring-gp-22S3_Ferran_1-2.sto"
             },
             {
-                "file": "brands-hatch-21S3_Ruder_r6.sto"
+                "file": "nurburgring-gp-22S3_MH_R_v1.1.sto"
             }
         ]
     },
     {
-        "label": "Sebring International Raceway",
+        "label": "Road America 500 - Full Course",
         "week": 5,
-        "weekStart": "2022-07-12",
+        "weekStart": "2023-04-11",
         "audi90gto": [
             {
-                "file": "Sebring_Kheireddine_22s3.sto",
-                "comment": "I need to reduce tires wear at the front…feels a bit sluggish on fast corners"
+                "file": "A90 - 22S4 - RoadAmerica - J Del Olmo - R.sto"
             },
             {
-                "file": "Sebring_Franco_22s3_RACE.sto"
+                "file": "A90 - 22S4 - RoadAmerica - M Ollé - R.sto"
             },
             {
-                "file": "sebring-21S4-r3.sto"
+                "file": "road-america-22S4-r2.sto"
             }
         ],
         "nissangtpzxt": [
             {
-                "file": "Sebring_Ferran_22s3_1-4.sto",
-                "comment": "fast but it does not like the bumps so much and it's hard on the tyres"
+                "file": "road_america_22s4_Full_R_v1-4.sto"
             },
             {
-                "file": "DWC_Sebring_R3.sto"
+                "file": "Lgo22S4_Road_America_MH_Int_R_Q40.sto"
             },
             {
-                "file": "sebring-21S1_Havdal_R_v1.1.sto"
+                "file": "Lgo22S4_Road_America_MH_Int_R_R50.sto"
+            },
+            {
+                "file": "Lgo22S4_Road_America_MH_Int_R_R60.sto"
+            },
+            {
+                "file": "NGTP_RAm_Full_R_v1-4.sto"
             }
         ]
     },
     {
-        "label": "Silverstone Circuit 2008 - Historical Grand Prix",
+        "label": "VIR - Full Course",
         "week": 6,
-        "weekStart": "2022-07-19",
+        "weekStart": "2023-04-18",
         "audi90gto": [
             {
-                "file": "Silly_Historic_1.0.sto"
-            },
-            {
-                "file": "silverstone-2008-historic-22S3-r1.sto"
+                "file": "vir-22S4-r3.sto"
             }
         ],
         "nissangtpzxt": [
             {
-                "file": "Lgo22S3_Silverstone_Hist_AG_WGI_6W1_R61.sto",
-                "comment": "Based on Alex's Watkins Glen setup"
-            },
-            {
-                "file": "silverstone_historic_22S3_Mosquera_V5.sto",
-                "comment": "Based on Fabian's set from 20S4"
+                "file": "NGTP_VIR_Full_R_v1-5.sto"
             }
         ]
     },
     {
-        "label": "Phillip Island Circuit",
+        "label": "Interlagos",
         "week": 7,
-        "weekStart": "2022-07-26",
-        "audi90gto": [
-            {
-                "file": "phillip-island-22S3-Phil3.1.1.sto",
-                "comment": "too much fuel, 15L left at end of race"
-            },
-            {
-                "file": "phillip-island-22S3-r1.sto"
-            },
-            {
-                "file": "phillip-island-22S3-Y_Gijsen-220727-R.sto",
-                "comment": "drove well enough, too much understeer mid corner"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "phillip-island-22S3_1-1.sto",
-                "comment": "It's fun and it's quite fast"
-            },
-            {
-                "file": "phillip-island-22S3_wing7_R6.sto"
-            },
-            {
-                "file": "phillip-island-22S3-Lgo_AG_WGI_6W1_R62.sto"
-            }
-        ]
+        "weekStart": "2023-04-25",
+        "audi90gto": [],
+        "nissangtpzxt": []
     },
     {
-        "label": "Nürburgring - Grand Prix w/out Arena",
+        "label": "Long Beach",
         "week": 8,
-        "weekStart": "2022-08-02",
-        "audi90gto": [
-            {
-                "file": "nurburgring-gp-22S3_JavierNurg4.1.sto",
-                "comment": "Mid-week update from Javier"
-            },
-            {
-                "file": "nurburgring-gp-22S3_andreas.sto",
-                "comment": "Felt nice through the whole race - Andreas"
-            },
-            {
-                "file": "nurburgring-gp-21S3-r5.sto",
-                "comment": "Setup from 21S3 - Jamie"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "nurburgring-gp-22S3_Ferran_1-2.sto",
-                "comment": "It needs a bit more of rear grip but it's quite fast - Ferran"
-            },
-            {
-                "file": "nurburgring-gp-22S3_MH_R_v1.1.sto",
-                "comment": "Went with wing 6 in the end - Mathias"
-            }
-        ]
+        "weekStart": "2023-05-02",
+        "audi90gto": [],
+        "nissangtpzxt": []
     },
     {
-        "label": "Charlotte Motor Speedway - Roval",
+        "label": "Monza - GP Without First Chicane",
         "week": 9,
-        "weekStart": "2022-08-09",
-        "audi90gto": [
-            {
-                "file": "charlotte-roval-22S3_Marc_1.1.sto"
-            },
-            {
-                "file": "charlotte-roval-22S3-r1.sto"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "charlotte-roval-22S3-Lgo_AG_WGI_6W1_R62.sto"
-            }
-        ]
+        "weekStart": "2023-05-09",
+        "audi90gto": [],
+        "nissangtpzxt": []
     },
     {
-        "label": "Canadian Tire Motorsports Park",
+        "label": "Fuji - No Chicane",
         "week": 10,
-        "weekStart": "2022-08-16",
-        "audi90gto": [
-            {
-                "file": "ctmp-22S3-r1.sto",
-                "comment": "Copied from 21S4 feels great to me - Jamie"
-            },
-            {
-                "file": "ctmp-22S3-Marc-r1.sto",
-                "comment": "Some changes that made me improve a bit. Drive split, 5th gear and rear toe. - Marc"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "DWC_21S4_Mosport_tg_R2.sto"
-            }
-        ]
+        "weekStart": "2023-05-16",
+        "audi90gto": [],
+        "nissangtpzxt": []
     },
     {
-        "label": "Sonoma Raceway - Cup",
+        "label": "Silverstone 2008 - Historical Grand Prix",
         "week": 11,
-        "weekStart": "2022-08-23",
-        "audi90gto": [
-            {
-                "file": "sonoma-22S3-2.3.sto",
-                "comment": "Posted by Javier"
-            },
-            {
-                "file": "sonoma-22S3-Yoeri_Gijsen_-_220824_-_R.sto",
-                "comment": "No 5th gear. Fuel should be safe. - Yoeri"
-            },
-            {
-                "file": "sonoma-22S3-r1.sto",
-                "comment": "Based on Emerson's setup from Garage 61. - Jamie"
-            }
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R61.sto",
-                "comment": "Definitely need more work. I destroyed the tires very quickly. - Laust"
-            }
-        ]
+        "weekStart": "2023-05-23",
+        "audi90gto": [],
+        "nissangtpzxt": []
     },
     {
-        "label": "Long Beach Street Circuit",
+        "label": "Belle Isle",
         "week": 12,
-        "weekStart": "2022-08-30",
-        "audi90gto": [
-            {
-                "file": "long-beach-21S4-r2.sto"
-            }
-        ],
+        "weekStart": "2023-05-30",
+        "audi90gto": [],
         "nissangtpzxt": []
     }
 ]
