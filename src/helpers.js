@@ -44,7 +44,31 @@ const nextRaceDay = (dayIndex, timeSlot, nowString = null) => {
         .toDate()
 }
 
+const getCurrentWeekData = (seasonSetups) => {
+    const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
+    var currentWeek = null
+    
+    sortedRounds.some((round, i) => {
+        let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
+
+        // +7 days is for Monday/Tuesday rollover
+        // +5 days is for the week to end after the broadcast
+        let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
+        
+        currentWeek = {
+            week: round.week,
+            label: round.label
+        }
+
+        // Stop if this week is not over
+        return weekEndGmt > new Date();
+    })
+
+    return currentWeek
+}
+
 
 export {
     nextRaceDay,
+    getCurrentWeekData,
 }
