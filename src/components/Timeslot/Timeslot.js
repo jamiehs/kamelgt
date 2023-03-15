@@ -19,11 +19,11 @@ class Timeslot extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            time: Date.now()
+            timestamp: Date.now()
         }
     }
     componentDidMount() {
-        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+        this.interval = setInterval(() => this.setState({ timestamp: Date.now() }), 1000);
     }
     componentWillUnmount() {
         clearInterval(this.interval);
@@ -44,7 +44,7 @@ class Timeslot extends React.Component {
         const nextRaceDate = nextRaceDay(dayIndex, time)
         const nextRaceDayLocal = nextRaceDate.toLocaleDateString(undefined, { weekday: 'long' })
         const nextRaceTimeLocal = nextRaceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
-    
+
         return (
             <div className="Timeslot" data-guaranteed={guaranteed}>
                 <h3 className="label">{label}</h3>
