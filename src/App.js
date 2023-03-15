@@ -72,9 +72,11 @@ class App extends React.Component {
                     <div className="section">
                         <h2 className="title">
                             Official Race Times
-                            <span className="week-info">
-                                Week {currentWeek.week}: {currentWeek.label}
-                            </span>
+                            {currentWeek && (
+                                <span className="week-info">
+                                    Week {currentWeek.week}: {currentWeek.label}
+                                </span>
+                            )}
                         </h2>
                         <div className="timeslots">
                             <Timeslot

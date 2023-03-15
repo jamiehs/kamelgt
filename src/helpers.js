@@ -44,16 +44,23 @@ const nextRaceDay = (dayIndex, timeSlot, nowString = null) => {
         .toDate()
 }
 
-const getCurrentWeekData = (seasonSetups) => {
+
+/**
+ * Get Current Week Data
+ * @param {array} seasonSetups the array of season events and setup files
+ * @param {integer} rolloverDay 5 is after the broadcast; 7 is on Mon/Tues
+ * @returns {object} a single week number and label
+ */
+const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
     const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
     var currentWeek = null
     
     sortedRounds.some((round, i) => {
         let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
 
-        // +7 days is for Monday/Tuesday rollover
-        // +5 days is for the week to end after the broadcast
-        let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
+        // rolloverDay +7 days is for Monday/Tuesday rollover
+        // rolloverDay +5 days is for the week to end after the broadcast
+        let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + rolloverDay));
         
         currentWeek = {
             week: round.week,
