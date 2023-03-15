@@ -50,14 +50,6 @@ class App extends React.Component {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-03-06" expires="2023-03-13">
-                            <h3>
-                                It's Week 13! Most Official Series Are Not Active This Week.
-                            </h3>
-                            <p>
-                                For now you should be checking out the new content and doing a few races in the <a href="https://www.iracing.com/iracing-2023-season-1-week-13-schedule-released/#:~:text=13th%20Week%20iRacing%20Deutsche%20Drifters%3A%20Audi%20RS%203%20LMS%2C%20R8%20GT3%2C%20and%2090%20at%20Nurburgring%20Industrifahrten" target="_blank" rel="noreferrer">13th Week Deutsche Drifters in the Audi 90 at the Nordschleife</a>. See you at Sebring in Season 2!
-                            </p>
-                        </Announcement>
                         <Announcement begins="2023-03-13" expires="2023-04-13">
                             <h3>
                                 This Season (2023 S2) is the (Virtual) <a href="https://en.wikipedia.org/wiki/Road_Race_Showcase_at_Road_America" target="_blank" rel="noreferrer">Road&nbsp;America&nbsp;500</a>.
