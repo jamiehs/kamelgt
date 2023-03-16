@@ -53,7 +53,7 @@ class Timeslot extends React.Component {
                         {guaranteed ? (
                             'Always official'
                         ) : (
-                            'Maybe official'
+                            'Often official'
                         )}
                     </div>
                 </div>
