@@ -75,8 +75,8 @@ class App extends React.Component {
                                 label="Midweek Madness"
                                 dayIndex={3}
                                 time="19:00"
-                                entries="33"
-                                sof="2418"
+                                entries="38"
+                                sof="2459"
                                 guaranteed={true}
                             >
                                 <p>
@@ -87,8 +87,8 @@ class App extends React.Component {
                                 label="Midweek Americas"
                                 dayIndex={4}
                                 time="01:00"
-                                entries="?"
-                                sof="?"
+                                entries="28"
+                                sof="1761"
                                 guaranteed={false}
                             >
                                 <p>
@@ -102,8 +102,8 @@ class App extends React.Component {
                                 label="Friday Night Race"
                                 dayIndex={5}
                                 time="21:00"
-                                entries="31"
-                                sof="2510"
+                                entries="38"
+                                sof="2502"
                                 guaranteed={true}
                             >
                                 <p>
@@ -114,8 +114,8 @@ class App extends React.Component {
                                 label="Broadcast Race"
                                 dayIndex={6}
                                 time="17:00"
-                                entries="59"
-                                sof="3331"
+                                entries="53"
+                                sof="3319"
                                 guaranteed={true}
                             >
                                 <p>
