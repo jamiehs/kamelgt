@@ -148,7 +148,10 @@ class App extends React.Component {
                         <dd>
                             <ul>
                                 <li>
-                                    Check the <code>#audi-setups</code> and <code>#nissan-setups</code> channels on the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a></span>
+                                    The section below on this page should have a list of setups, or links to dowload archives of setups for&nbsp;each&nbsp;car.
+                                </li>
+                                <li>
+                                    The <code>#audi-setups</code> and <code>#nissan-setups</code> channels on the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> are active and new setups are typically posted multiple times per week.</span>
                                 </li>
                                 <li>
                                     There is also <a href="https://forums.iracing.com/discussion/9089/audi-90-gto-setup-packs" target="_blank" rel="noreferrer">a thread in the iRacing forums for the Audi</a>.
