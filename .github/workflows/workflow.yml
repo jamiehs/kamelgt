@@ -33,7 +33,7 @@ jobs:
           zip -rj build/nissangtpzxt-setups.zip public/setups/nissangtpzxt/*
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
           folder: build
