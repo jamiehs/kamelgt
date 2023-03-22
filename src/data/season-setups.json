@@ -46,6 +46,9 @@
         "weekStart": "2023-03-21",
         "audi90gto": [
             {
+                "file": "A90_23S2_Jerez_Y_Gijsen_R.sto"
+            },
+            {
                 "file": "jerez-23S2-r1.sto",
                 "comment": "Jamie: Modified Ian's setup from Garage61 a bit"
             },
@@ -58,10 +61,6 @@
             },
             {
                 "file": "A90_23S1w13_jerez_andreas.sto",
-                "comment": "From a week 13 fun event; check fuel before using!"
-            },
-            {
-                "file": "A90_23S1w13_Jerez_Y_Gijsen_R.sto",
                 "comment": "From a week 13 fun event; check fuel before using!"
             },
             {
