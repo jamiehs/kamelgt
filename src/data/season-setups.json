@@ -78,8 +78,22 @@
         "label": "Circuit Gilles Villeneuve",
         "week": 3,
         "weekStart": "2023-03-28",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "JdelOlmoAudiVilleneuve23S2.sto"
+            },
+            {
+                "file": "A90_23S2_Montreal_Y_Gijsen_R.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "EG_CGV_22S2_V35555.sto"
+            },
+            {
+                "file": "BL_Giles_V_Q73.1.sto"
+            }
+        ]
     },
     {
         "label": "Nürburgring - BES/WEC",
