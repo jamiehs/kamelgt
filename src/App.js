@@ -167,21 +167,6 @@ class App extends React.Component {
                     <h2 className="title">Setups</h2>
                     <Setups upcomingWeeks={3} />
                 </div>
-                <div id="chatter" className="chatter section">
-                    <h2 className="title">Chatter &amp; Community</h2>
-                    <div className="chatter-servers text-content">
-                        <Server
-                            title="VCR Discord (official races, with custom scoring)"
-                            url={VCR_DISCORD_URL}
-                            description="The largest Kamel GT community. Setups, tips, and chatter about racing these cars."
-                        />
-                        <Server
-                            title="Dirty Torque Racing League"
-                            url={DTRL_DISCORD_URL}
-                            description="Home of racing Legends on strange tracks, the Historic IMSA Championship, and more."
-                        />
-                    </div>
-                </div>
                 <div className="format section">
                     <h2 className="title">Race Format</h2>
                     <ul className="text-content">
