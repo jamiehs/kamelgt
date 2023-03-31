@@ -195,7 +195,7 @@ class App extends React.Component {
                                 Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
                             </li>
                             <li>
-                                If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a>, or the pinned messages in the <code>#audi-setup-discussion</code> channel of the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR&nbsp;Discord&nbsp;Server</a>.
+                                If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="#shifting">Taming the Audi 90 GTO gearbox</a> below.
                             </li>
                         </ol>
                         <h4>For everyone:</h4>
@@ -206,53 +206,102 @@ class App extends React.Component {
                 <div className="broadcast section">
                     <h2 className="title">Previous Broadcast Races</h2>
                     <Broadcast
-                        title='23S1 Round 1: Nurburgring Combined'
-                        url="https://youtu.be/qnkOVXM99q0?=718"
+                        title='23S1 Round 1: Sebring'
+                        url="https://youtu.be/AE2VmQ_0ZK0?t=635"
                     />
                     <Broadcast
-                        title='23S1 Round 2: Magny-Cours'
-                        url="https://youtu.be/lPRCKZcIrxk?t=720"
+                        title='23S1 Round 2: Jerez'
+                        url="https://youtu.be/6gQrAfswvMc?t=986"
                     />
-                    <Broadcast
-                        title='23S1 Round 3: Indianapolis'
-                        url="https://youtu.be/I-4EdrrgFtM?t=520"
-                    />
-                    <Broadcast
-                        title='23S1 Round 4: Bathurst'
-                        url="https://youtu.be/EDxZkP4qbQM?t=888"
-                    />
-                    <Broadcast
-                        title='23S1 Round 5: Hockenheim'
-                        url="https://youtu.be/Ep-hjQZpv34?t=772"
-                    />
-                    <Broadcast
-                        title='23S1 Round 6: Barcelona'
-                        url="https://youtu.be/NbtMgYusMgI?t=977"
-                    />
-                    <Broadcast
-                        title='23S1 Round 7: Mid Ohio'
-                        url="https://youtu.be/2QdLxTG8C94?t=546"
-                    />
-                    <Broadcast
-                        title='23S1 Round 8: Le Mans Historic'
-                        url="https://youtu.be/a4JHWiWrxwo?t=1024"
-                    />
-                    <Broadcast
-                        title='23S1 Round 9: Suzuka'
-                        url="https://youtu.be/SA_9qOT8THo?t=1031"
-                    />
-                    <Broadcast
-                        title='23S1 Round 10: Watkins Glen Classic'
-                        url="https://youtu.be/qVbLZmG_VNY?t=877"
-                    />
-                    <Broadcast
-                        title='23S1 Round 11: Twin Ring Motegi'
-                        url="https://youtu.be/tHUVKQzvyfI?t=981"
-                    />
-                    <Broadcast
-                        title='23S1 Round 12: Daytona'
-                        url="https://youtu.be/wzdzBU8c8zw?t=850"
-                    />
+                </div>
+                <div id="shifting" className="audi-shifting section">
+                    <h2 className="title">Taming the Audi <span className="hidden-xs">90 GTO</span> Gearbox</h2>
+                    
+                    
+                    <h3>Why are you missing shifts?</h3>
+                    <p>
+                        In a real manual transmission car, the shifting is intuitive and happens simultaneously with clutch movement. However in sim racing, the h-pattern shifter needs to send the signal to the sim that the gear is engaged; this signal can take time to fully register as you shift out of one gear, into neutral, and into the other gear. If you happen to release the clutch even a millisecond before your shifter tells the sim that you are in gear again, you will find neutral instead.
+                    </p>
+
+                    <p>
+                        If you are missing shifts constantly, slow down your shifting process.
+                    </p>
+
+                    <div className="highlight">
+                        <h3>A note about pre-selecting gears</h3>
+                        <p>
+                            You may have heard someone suggest pre-selecting gears; while it removes some of the immersion, it can help with missed shifts quite a bit. iRacing even references it in <a href="https://support.iracing.com/support/solutions/articles/31000157032-transmission-gearbox-shifting-types-method" target="_blank" rel="noreferrer">their FAQ about shifting</a> under "Synchromesh H-Pattern".
+                        </p>
+                        <blockquote>
+                            You may pre-select gears by moving the shifter into the position for the next gear before you intend to shift. The load on the transmission from the will hold the car in its current gear, and the gear change will not begin until you release load the transmission via a blip on downshift, a lift for an upshift, or press in the clutch to engage the next gear.
+                        </blockquote>
+                        <p>
+                            If you're missing upshifts, we suggest you try pre-selecting gears; it only has to be a little before the clutch press.
+                        </p>
+                    </div>
+
+                    <h3>Types of shifting setups</h3>
+                    <p>
+                        The following combinations of shifter setups for the Audi are all valid and work fine.
+                    </p>
+                    <ul>
+                        <li>
+                            <p><b>H-Pattern shifter and a clutch pedal</b><br />
+                            Slam those gears in like a Group B rally driver; have fun! (pre-select if you need to)</p>
+                        </li>
+                        <li>
+                            <p><b>H-Pattern shifter and a clutch button mapped to your wheel</b><br />
+                            Hit the clutch button (immediately after) upshifts, blip on downshifts</p>
+                        </li>
+                        <li>
+                            <p><b>Paddles and a clutch pedal</b><br />
+                            Be sure to hold the paddle for the duration of the shift; only after the gear is in can you let go!</p>
+                        </li>
+                        <li>
+                            <p><b>Paddles and a clutch button mapped to your wheel</b><br />
+                            Be sure to hold the paddle for the duration of the shift (pre-select); press the button to complete the shift.</p>
+                        </li>
+                        <li>
+                            <p><b>Paddles and auto-clutch</b><br />
+                            Be sure to hold the paddle for the entire duration of the shift!</p>
+                        </li>
+                        <li>
+                            <p><b>H-Pattern shifter and auto-clutch</b><br />
+                            The sim should take care of everything except the actual shifting for you!</p>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Dave Cam on YouTube created <a href="https://www.youtube.com/watch?v=uTBmMDmNMUk" target="_blank" rel="noreferrer">a great video where he benchmarks the different clutch assists</a> in iRacing. tl;dw: anything other than 'None' or 'Anti-Stall Clutch' will make you a bit slower. Keep in mind that as a beginner in Kamel, survival is the goal, not speed!
+                    </p>
+
+                    <h3>Upshifting</h3>
+                    <p>
+                        You can flat-shift in the Audi most of the time. Just keep your foot on the accelerator and change gear while hitting the clutch quickly. This will unload the transmission and the gear should go in immediately. On slower upshifts (ones that occur in slow corners or out of chicanes) you may get better performance by shifting slowly and intentionally (lift, clutch, shift, release clutch).
+                    </p>
+
+                    <h3>Downshifting</h3>
+                    <p>
+                        While heel & toe makes you feel like Hans-Joachim Stuck, it's not necessary in this car.
+                    </p>
+                    <p>
+                        You can simply left-foot brake and blip the throttle while downshifting. This works better for some of us than others, but it can be a great help when starting out in the Audi.
+                    </p>
+                    <p>
+                        See <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a> for more details on all of the above.
+                    </p>
+
+                    <h3>Clutch calibration</h3>
+                    <p>
+                        It can be helpful to "short-calibrate" your clutch too. The idea is to avoid taking too long to fully depress the clutch during a shift. To short-calibrate your clutch, simply follow the iRacing calibration wizard but only press your clutch pedal 20% - 25% while calibrating. This tells iRacing that 25% clutch in the real-world is 100% clutch in the sim. You'll still press it much further than 25% during a race, but the sim will register 100% clutch input every time and this will help ensure your shifts complete correctly.
+                    </p>
+
+                    <hr />
+
+                    <p>Hopefully this information helps you avoid "a box full of neutrals".</p>
+
+
+
                 </div>
             </div>
         )

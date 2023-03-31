@@ -1,9 +1,18 @@
 @import '_global.scss';
 
+.hidden-xs {
+  display: none;
+
+  @media (min-width: $small-width)  {
+    display: initial;
+  }
+}
+
 .App {
   min-height: 100vh;
   overflow: hidden;
   padding: 0;
+  margin-bottom: 50vh;
 
   a, a:link {
     color: $brown;
@@ -127,6 +136,38 @@
 // Quick way to limit text max-width
 .text-content {
   max-width: $text-content-max-width;
+}
+
+blockquote {
+  border-left: solid 4px rgba(0, 0, 0, 0.15);
+  padding: .66em;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  background-color: rgba(250, 245, 227, 0.773);
+  
+  @media (min-width: $small-width) {
+    margin-left: 1em;
+  }
+}
+
+.highlight {
+  padding: 1em 1em 1em 1.5em;
+  background-color: rgb(245, 240, 225);
+  border-radius: $callout-border-radius;
+  
+  @media (min-width: $small-width) {
+    margin-left: 1em;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  blockquote {
+    border-left: solid 4px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.698);
+  }
 }
 
 .section {
