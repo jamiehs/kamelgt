@@ -1,12 +1,11 @@
 import './App.scss';
 import React from 'react';
 import Timeslot from './components/Timeslot/Timeslot.js';
-import Server from './components/Server/Server.js';
 import Broadcast from './components/Broadcast/Broadcast.js';
 import Announcement from './components/Announcement/Announcement.js';
 import Setups from './components/Setups/Setups.js';
 import seasonSetups from './data/season-setups.json';
-import {VCR_DISCORD_URL, DTRL_DISCORD_URL} from './data/constants';
+import {VCR_DISCORD_URL} from './data/constants';
 import discord from './images/Discord-Logo-Color.svg'
 import {getCurrentWeekData} from './helpers.js'
 
