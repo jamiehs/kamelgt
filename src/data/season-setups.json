@@ -104,10 +104,14 @@
         "weekStart": "2023-04-04",
         "audi90gto": [
             {
+                "file": "M.Olle_Nurb_GP_S1_2023_1.0.sto",
+                "comemnt": "Marc: Comfortable and good for me... I did 1:53.022 W.tmp 18ºC and T.Temp 25"
+            },
+            {
                 "file": "nurburgring-gp-22S3_andreas.sto"
             },
             {
-                "file": "nurburgring-gp-22S3_JavierNurg4.1.sto"
+                "file": "JdelOlmoAudiNurg23S2.sto"
             },
             {
                 "file": "nurburgring-gp-22S3-q.sto"
