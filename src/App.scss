@@ -131,6 +131,24 @@
       margin-bottom: 3.33em;
     }
   }
+
+  .broadcast {
+    .videos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      
+      @media (min-width: $small-width) {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: $medium-width) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+  }
 }
 
 // Quick way to limit text max-width
@@ -173,18 +191,7 @@ blockquote {
 .section {
   margin: 0;
   padding: 0.75em;
-  
-  &:first-child {
-    margin-top: 0;
-  }
 
-  h2.title {
-    font-weight: 700;
-    color: $light-text;
-    background-color: $dark-bg;
-    padding: 0 0 .1em .5em;
-  }
-  
   @media (min-width: $small-width) {
     padding: 0;
     margin: 0 auto 3em;
@@ -196,6 +203,23 @@ blockquote {
     margin: 0 auto 3em;
     max-width: $section-max-width;
   }
+  
+  &:first-child {
+    margin-top: 0;
+  }
+
+  h2.title {
+    font-weight: 700;
+    color: $light-text;
+    background-color: $dark-bg;
+    padding: 0 0 .1em .5em;
+    font-size: 1.2em;
+
+    @media (min-width: $small-width) {
+      font-size: 1.5em;
+    }
+  }
+
 }
 
 .footnote {

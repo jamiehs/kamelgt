@@ -201,14 +201,25 @@ class App extends React.Component {
                 </div>
                 <div className="broadcast section">
                     <h2 className="title">Previous Broadcast Races</h2>
-                    <Broadcast
-                        title='23S1 Round 1: Sebring'
-                        url="https://youtu.be/AE2VmQ_0ZK0?t=635"
-                    />
-                    <Broadcast
-                        title='23S1 Round 2: Jerez'
-                        url="https://youtu.be/6gQrAfswvMc?t=986"
-                    />
+                    <h3>2023 Season 2</h3>
+                    <div className="videos-grid">
+                        <Broadcast
+                            title='R1: Sebring'
+                            url="https://youtu.be/AE2VmQ_0ZK0?t=635"
+                        />
+                        <Broadcast
+                            title='R2: Jerez'
+                            url="https://youtu.be/6gQrAfswvMc?t=986"
+                        />
+                        <Broadcast
+                            title='R3: Montreal'
+                            url="https://youtu.be/MVY4NrQ6xwI?t=1342"
+                        />
+                        <Broadcast
+                            title='R4: Nürburgring GP'
+                            url="https://youtu.be/5TYJjykBfb0?t=961"
+                        />
+                    </div>
                 </div>
                 <div id="shifting" className="audi-shifting section">
                     <h2 className="title">Taming the Audi <span className="hidden-xs">90 GTO</span> Gearbox</h2>
