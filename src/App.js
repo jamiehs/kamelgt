@@ -74,8 +74,8 @@ class App extends React.Component {
                                 label="Midweek Madness"
                                 dayIndex={3}
                                 time="19:00"
-                                entries="38"
-                                sof="2459"
+                                entries="52"
+                                sof="2634"
                                 guaranteed={true}
                             >
                                 <p>
@@ -86,35 +86,32 @@ class App extends React.Component {
                                 label="Midweek Americas"
                                 dayIndex={4}
                                 time="01:00"
-                                entries="28"
-                                sof="1761"
-                                guaranteed={false}
+                                entries="35"
+                                sof="1974"
+                                guaranteed={true}
                             >
                                 <p>
                                     Wednesday race for the US time zones. Early evening on the west coast and late evening on the east&nbsp;coast.
-                                </p>
-                                <p>
-                                    Show up and let's make it an official time&nbsp;slot!
                                 </p>
                             </Timeslot>
                             <Timeslot
                                 label="Friday Night Race"
                                 dayIndex={5}
                                 time="21:00"
-                                entries="38"
-                                sof="2502"
+                                entries="61"
+                                sof="2926"
                                 guaranteed={true}
                             >
                                 <p>
-                                    The big race that is not the broadcast race. If you want <b>a full field with no broadcast pressure</b> this is it. Also a great practice race for the&nbsp;broadcast.
+                                    The big race that is not the broadcast race. If you want a full field to practice/compete in, this&nbsp;is&nbsp;it.
                                 </p>
                             </Timeslot>
                             <Timeslot
                                 label="Broadcast Race"
                                 dayIndex={6}
                                 time="17:00"
-                                entries="53"
-                                sof="3319"
+                                entries="73"
+                                sof="3740"
                                 guaranteed={true}
                             >
                                 <p>
