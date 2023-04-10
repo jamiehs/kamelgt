@@ -41,6 +41,36 @@
     }
   }
 
+  p:first-child {
+    margin-top: 0;
+  }
+
+  dt {
+    font-size: 1.15em;
+    font-weight: 700;
+  }
+  dd {
+    margin: 0 1em 1.4em 1em;
+
+    *:first-child {
+      margin-top: 0.33em;
+    }
+  }
+  ul, ol {
+    margin-left: 0;
+    padding-left: 1em;
+
+    li {
+      &::marker {
+        padding-left: 1em;
+      }
+
+      *:first-child {
+        margin-top: 0.33em;
+      }
+    }
+  }
+
   .badge {
     background-color: $dark-bg;
     color: $light-text;
@@ -51,6 +81,11 @@
     line-height: 1;
     white-space: nowrap;
     margin-right: 0.5em;
+
+    &.light {
+      background-color: $light-text;
+      color: $dark-bg;  
+    }
 
     @media (min-width: $small-width)  {
       font-size: 0.7rem;
@@ -78,10 +113,10 @@
     }
   }
 
-  header {
+  .main-header {
     overflow: hidden;
     background-color: $blue;
-    border-bottom: solid 8px $brown;
+    border-bottom: solid 4px $brown;
     h1, h2 {
       font-weight: 400;
     }
@@ -212,11 +247,15 @@ blockquote {
     font-weight: 700;
     color: $light-text;
     background-color: $dark-bg;
-    padding: 0 0 .1em .5em;
+    padding: 0.5em 0 .6em .5em;
     font-size: 1.2em;
+    margin-left: -0.6em;
+    margin-right: -0.6em;
 
     @media (min-width: $small-width) {
       font-size: 1.5em;
+      margin-left: 0;
+      margin-right: 0;  
     }
   }
 
@@ -234,6 +273,20 @@ blockquote {
 
   @media (min-width: $large-width) {
     margin-bottom: 6em;
+  }
+
+  .notes {
+    font-size: 0.8em;
+    margin-top: -0.66em;
+    margin-bottom: 1em;
+    
+    @media (min-width: $large-width) {
+      font-size: 1em;
+    }  
+
+    .badge {
+      margin-bottom: 0.3em;
+    }
   }
 
   .footnote {
@@ -294,29 +347,11 @@ blockquote {
   }
 }
 
-.faq.section {
-  dt {
-    font-size: 1.15em;
-    font-weight: 700;
-  }
-  dd {
-    margin-bottom: 1.4em;
-  }
-}
-
 .inline-discord-callout {
   img {
     display: inline-block;
     height: 1em;
     vertical-align: middle;
     padding-right: 0.2em
-  }
-}
-
-#announcements {
-  .Announcement {
-    &:first-child {
-      margin-top: 2em;
-    }
   }
 }

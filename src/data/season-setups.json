@@ -133,6 +133,10 @@
         "label": "Road America 500 - Full Course",
         "week": 5,
         "weekStart": "2023-04-11",
+        "notes": [
+            "60 minute race; pit stop required",
+            "Road America 500 special event week"
+        ],
         "audi90gto": [
             {
                 "file": "A90 - 22S4 - RoadAmerica - J Del Olmo - R.sto"
@@ -195,6 +199,9 @@
         "label": "Monza - GP Without First Chicane",
         "week": 9,
         "weekStart": "2023-05-09",
+        "notes": [
+            "60 minute race; pit stop required"
+        ],
         "audi90gto": [],
         "nissangtpzxt": []
     },

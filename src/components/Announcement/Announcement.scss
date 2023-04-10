@@ -6,12 +6,24 @@
     background: $timeslot-bg;
     line-height: 1.2em;
     border-radius: $callout-border-radius;
-
     margin-bottom: 1em;
+    font-size: 0.9em;
+    
+    @media (min-width: $small-width)  {
+        font-size: 1em;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     h3 {
         margin: 0;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        
+        @media (min-width: $small-width)  {
+            font-size: 1rem;
+        }
     }
 
     p {

@@ -49,7 +49,7 @@ const nextRaceDay = (dayIndex, timeSlot, nowString = null) => {
  * Get Current Week Data
  * @param {array} seasonSetups the array of season events and setup files
  * @param {integer} rolloverDay 5 is after the broadcast; 7 is on Mon/Tues
- * @returns {object} a single week number and label
+ * @returns {object} a single week number, label & notes
  */
 const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
     const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
@@ -64,7 +64,8 @@ const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
         
         currentWeek = {
             week: round.week,
-            label: round.label
+            label: round.label,
+            notes: round.notes,
         }
 
         // Stop if this week is not over

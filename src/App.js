@@ -30,7 +30,7 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <header>
+                <header className="main-header">
                     <div className="header-section">
                         <h1>Kamel GT Championship</h1>
                         <h2>Nissan GTP ZX-T &amp; Audi 90 GTO</h2>
@@ -54,21 +54,28 @@ class App extends React.Component {
                                 This Season (2023 S2) is the (Virtual) <a href="https://en.wikipedia.org/wiki/Road_Race_Showcase_at_Road_America" target="_blank" rel="noreferrer">Road&nbsp;America&nbsp;500</a>.
                             </h3>
                             <p>
-                                The RA500 is a 500 mile team endurance event in the Kamel GT cars! Check <a href="https://forums.iracing.com/categories/special-events" target="_blank" rel="noreferrer">the forums for more information</a>.
+                                This is a 500 mile team endurance event in the Kamel GT cars! Check <a href="https://forums.iracing.com/categories/special-events" target="_blank" rel="noreferrer">the forums for more information</a>.
                             </p>
                         </Announcement>
                     </div>
                 </div>
                 <div id="timeslots" className="timeslots-wrapper">
                     <div className="section">
-                        <h2 className="title">
-                            Official Race Times
-                            {currentWeek && (
-                                <span className="week-info">
-                                    Week {currentWeek.week}: {currentWeek.label}
-                                </span>
+                        <header>
+                            <h2 className="title">
+                                Official Race Times
+                                {currentWeek && (
+                                    <span className="week-info">
+                                        Week {currentWeek.week}: {currentWeek.label}
+                                    </span>
+                                )}
+                            </h2>
+                            {currentWeek.notes && currentWeek.notes.length > 0 && (
+                                <div className="notes">
+                                    {currentWeek.notes.map((note, i) => <div key={i} className="note badge light">{note}</div>)}
+                                </div>
                             )}
-                        </h2>
+                        </header>
                         <div className="timeslots">
                             <Timeslot
                                 label="Midweek Madness"
@@ -127,17 +134,23 @@ class App extends React.Component {
                     <dl className="text-content">
                         <dt>When are the races?</dt>
                         <dd>
-                            The official race slots shown above in your local times are the only races guaranteed to go official. Like other low-participation series, you may see other sessions going official during a week when the Nordschleife or Le Mans is on the schedule. If you want to race, just practice and show up to one of the <a href="#timeslots">times posted on&nbsp;this&nbsp;page</a>.
+                            <p>
+                                The official race slots shown above in your local times are the only races guaranteed to go official. Like other low-participation series, you may see other sessions going official during a week when the Nordschleife or Le Mans is on the schedule. If you want to race, just practice and show up to one of the <a href="#timeslots">times posted on&nbsp;this&nbsp;page</a>.
+                            </p>
                         </dd>
 
                         <dt>Is this a league?</dt>
                         <dd>
-                            No. We run the official iRacing scheduled races 3 times per week and the Saturday race is broadcasted live on GSRC. Points are calculated for the broadcast race. 1st and 2nd splits are scored, and there are two cups: VCR Championship and VCR Junior (junior is &lt; 2800 iRating) See <code>#vcr-rules</code> and <code>#vcr-standings</code> in the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> for&nbsp;more&nbsp;info.</span> 
+                            <p>
+                                No. We run the official iRacing scheduled races 3 times per week and the Saturday race is broadcasted live on GSRC. Points are calculated for this broadcast race. 1st and 2nd splits are scored, and there are two cups: VCR Championship and VCR Junior (junior is &lt; 2800 iRating) See <code>#vcr-rules</code> and <code>#vcr-standings</code> in the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> for&nbsp;more&nbsp;info.</span> 
+                            </p>
                         </dd>
 
                         <dt>Do I need to pit?</dt>
                         <dd>
-                            Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long, or (rarely) a number of laps approximating 40 minutes; usually Le Mans, Monza Combined, or the Nordschleife.
+                            <p>
+                                Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long, or (rarely) a number of laps approximating 60 minutes; usually Le Mans, Monza Combined, or the Nordschleife.
+                            </p>
                         </dd>
 
                         <dt>Where can I get a setup?</dt>
@@ -166,11 +179,31 @@ class App extends React.Component {
                 <div className="format section">
                     <h2 className="title">Race Format</h2>
                     <ul className="text-content">
-                        <li><strong>Multiclass series</strong> featuring the Nissan GTP &amp; Audi GTO</li>
-                        <li><strong>Rolling start</strong>, GTO field leaves a gap to the GTPs ahead</li>
-                        <li><strong>Ten races per season are 40 minutes long</strong>; require no pitstop</li>
-                        <li><strong>Two races per season are 60 minute "endurance" rounds</strong> that may require a pit stop</li>
-                        <li><strong>Tires and fuel are worked on at the same time</strong> during a pit stop</li>
+                        <li>
+                            <p>
+                                <strong>Multiclass series</strong> featuring the Nissan GTP &amp; Audi GTO
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Rolling start</strong>, GTO field leaves a generous gap to the GTPs ahead
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Ten races per season are 40 minutes long</strong>; require no pitstop
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Two races per season are ~60 minute "endurance" rounds</strong> that may require a pit stop and may be counted in laps
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Tires and fuel are worked on at the same time</strong> during a pit stop
+                            </p>
+                        </li>
                     </ul>
                 </div>
                 <div className="tips section">
@@ -179,19 +212,27 @@ class App extends React.Component {
                         <h3>For GTP Drivers:</h3>
                         <ol>
                             <li>
-                                The Audi understeers a lot and uses the whole track. What might look like opening a door is just the Audi preparing to take the apex. Follow some Audis in practice to identify where they are likely to go wide.
+                                <p>
+                                    The Audi understeers a lot and uses the whole track. What might look like opening a door is just the Audi preparing to take the apex. Follow some Audis in practice to identify where they are likely to track out.
+                                </p>
                             </li>
                             <li>
-                                The GTP stops more quickly than the GTO can. If you pass a GTO and then pull in front of it into the braking zone, you may very well get hit from behind. It's hard to avoid a slowing GTP when already hard on the brakes.
+                                <p>
+                                    The GTP stops more quickly than the GTO can. If you pass a GTO and then pull in front of it into the braking zone, you may very well get hit from behind. It's hard to avoid a slowing GTP when already hard on the brakes.
+                                </p>
                             </li>
                         </ol>
                         <h3>For GTO Drivers:</h3>
                         <ol>
                             <li>
-                                Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
+                                <p>
+                                    Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
+                                </p>
                             </li>
                             <li>
-                                If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="#shifting">Taming the Audi 90 GTO gearbox</a> below.
+                                <p>
+                                    If you are missing shifts, try to pre-select the gear when upshifting and <em>then</em> press the clutch; flat-shift, there is no need to lift. When downshifting you just need to blip as you select the gear; no clutch needed. For more info on shifting the Audi, see <a href="#shifting">Taming the Audi 90 GTO gearbox</a> below.
+                                </p>
                             </li>
                         </ol>
                         <h4>For everyone:</h4>
