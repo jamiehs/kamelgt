@@ -295,11 +295,15 @@ class App extends React.Component {
                     <ul>
                         <li>
                             <p><b>H-Pattern shifter and a clutch pedal</b><br />
-                            Slam those gears in like a Group B rally driver; have fun! (pre-select if you need to)</p>
+                            Slam those gears in like a Group B rally driver; have fun! (pre-select if you need to).</p>
                         </li>
                         <li>
                             <p><b>H-Pattern shifter and a clutch button mapped to your wheel</b><br />
-                            Hit the clutch button (immediately after) upshifts, blip on downshifts</p>
+                            Hit the clutch button (immediately after) upshifts, blip on downshifts.</p>
+                        </li>
+                        <li>
+                            <p><b>H-Pattern shifter and no clutch ("Anti-Stall Clutch" assist on)</b><br />
+                            Pre-select and then lift briefly to upshift; blip on downshifts. It is still recommended to map a clutch button in this situation as a tap of the clutch can rescue you from a false neutral.</p>
                         </li>
                         <li>
                             <p><b>Paddles and a clutch pedal</b><br />
@@ -333,7 +337,7 @@ class App extends React.Component {
                         While heel & toe makes you feel like Hans-Joachim Stuck, it's not necessary in this car.
                     </p>
                     <p>
-                        You can simply left-foot brake and blip the throttle while downshifting. This works better for some of us than others, but it can be a great help when starting out in the Audi.
+                        You can simply left-foot brake and blip the throttle while downshifting. This works better for some of us than others, but it can be a great help when starting out in the Audi. <i>Note: It's technically not necessary to blip as some folks can downshift without blipping. Your mileage may vary!</i>
                     </p>
                     <p>
                         See <a href="https://www.youtube.com/watch?v=gNqVtUF6Vj0" target="_blank" rel="noreferrer">Phil's Audi 90 shifting video</a> for more details on all of the above.
