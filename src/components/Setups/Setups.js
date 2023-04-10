@@ -28,26 +28,26 @@ function Setups(props) {
                                 <h3><span className="week-prefix">Week {round.week}: </span>{round.label}</h3>
                                 {setupsExist ? (
                                     <div className="cars-grid">
-                                        {round.audi90gto.length > 0 && (
+                                        {round.nissangtpzxt.length > 0 && (
                                             <div>
-                                                <span className="car badge">Audi GTO</span>
+                                                <span className="car badge" data-class="first">Nissan GTP</span>
                                                 <ul>
-                                                    {round.audi90gto.map(setup => (
+                                                    {round.nissangtpzxt.map(setup => (
                                                         <li key={setup.file}>
-                                                            <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
+                                                            <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
                                                             <span className="comment">{setup.comment}</span>
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </div>
                                         )}
-                                        {round.nissangtpzxt.length > 0 && (
+                                        {round.audi90gto.length > 0 && (
                                             <div>
-                                                <span className="car badge">Nissan GTP</span>
+                                                <span className="car badge" data-class="second">Audi GTO</span>
                                                 <ul>
-                                                    {round.nissangtpzxt.map(setup => (
+                                                    {round.audi90gto.map(setup => (
                                                         <li key={setup.file}>
-                                                            <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
+                                                            <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
                                                             <span className="comment">{setup.comment}</span>
                                                         </li>
                                                     ))}

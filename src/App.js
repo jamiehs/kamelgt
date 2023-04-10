@@ -129,7 +129,7 @@ class App extends React.Component {
                         <div className="footnote">Drivers &amp; SOF data averaged from previous weeks</div>
                     </div>
                 </div>
-                <div className="faq section">
+                <div id="faq" className="faq section">
                     <h2 className="title">Common Questions</h2>
                     <dl className="text-content">
                         <dt>When are the races?</dt>

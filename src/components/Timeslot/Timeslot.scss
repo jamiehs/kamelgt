@@ -123,6 +123,12 @@
 
     .timeslot-participation {
         margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 79%;
+
+        @media (min-width: $large-width)  {
+            font-size: 100%;
+        }
         
         display: flex;
         > div {
@@ -134,7 +140,9 @@
     }
 
     .timeslot-info {
-        @media (min-width: $small-width)  {
+        font-size: 85%;
+
+        @media (min-width: $large-width)  {
             font-size: 90%;
         }
     }

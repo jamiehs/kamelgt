@@ -1,5 +1,8 @@
 @import '_global.scss';
 
+/////////////////////////////////////////////
+// Utilities
+/////////////////////////////////////////////
 .hidden-xs {
   display: none;
 
@@ -8,115 +11,164 @@
   }
 }
 
-.App {
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 0;
-  margin-bottom: 50vh;
 
-  a, a:link {
-    color: $brown;
-    font-weight: 700;
+/////////////////////////////////////////////
+// General/Globally Applied
+/////////////////////////////////////////////
+p:first-child {
+  margin-top: 0;
+}
 
-    &[target="_blank"] {
+a, a:link {
+  color: $brown;
+  font-weight: 700;
+
+  &[target="_blank"] {
+    &::after {
+      content: '';
+      vertical-align: middle;
+      padding-left: 1em;
+      margin-left: 0.05em;
+      margin-bottom: 0.2em;
+      background-color: $brown;
+      position: relative;
+      top: 0.075em;
+      mask-size: cover;
+      mask-image: url('images/icons8-external-link.svg');
+      mask-repeat: no-repeat;
+    }
+
+    &.no-icon {
       &::after {
-        content: '';
-        vertical-align: middle;
-        padding-left: 1em;
-        margin-left: 0.05em;
-        margin-bottom: 0.2em;
-        background-color: $brown;
-        position: relative;
-        top: 0.075em;
-        mask-size: cover;
-        mask-image: url('images/icons8-external-link.svg');
-        mask-repeat: no-repeat;
-      }
-
-      &.no-icon {
-        &::after {
-          display: none;
-        }
+        display: none;
       }
     }
   }
+}
 
-  p:first-child {
-    margin-top: 0;
-  }
+dt {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+dd {
+  margin: 0 1em 1.4em 1em;
 
-  dt {
-    font-size: 1.15em;
-    font-weight: 700;
+  *:first-child {
+    margin-top: 0.33em;
   }
-  dd {
-    margin: 0 1em 1.4em 1em;
+}
+ul, ol {
+  margin-left: 0;
+  padding-left: 1em;
+
+  li {
+    &::marker {
+      padding-left: 1em;
+    }
 
     *:first-child {
       margin-top: 0.33em;
     }
   }
-  ul, ol {
-    margin-left: 0;
-    padding-left: 1em;
+}
 
-    li {
-      &::marker {
-        padding-left: 1em;
-      }
+.badge {
+  background-color: $dark-bg;
+  color: $light-text;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0.25em 0.5em 0.33em 0.5em;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  margin-right: 0.5em;
 
-      *:first-child {
-        margin-top: 0.33em;
-      }
-    }
+  &.light {
+    background-color: $light-text;
+    color: $dark-bg;  
   }
 
-  .badge {
-    background-color: $dark-bg;
-    color: $light-text;
-    display: inline-block;
-    border-radius: 4px;
-    padding: 0.25em 0.5em 0.33em 0.5em;
-    font-weight: 600;
-    line-height: 1;
-    white-space: nowrap;
-    margin-right: 0.5em;
-
-    &.light {
-      background-color: $light-text;
-      color: $dark-bg;  
-    }
-
-    @media (min-width: $small-width)  {
-      font-size: 0.7rem;
-    }
-
-    @media (min-width: $large-width)  {
-        font-size: 0.83rem;
-    }
+  @media (min-width: $small-width)  {
+    font-size: 0.7rem;
   }
 
-  .header-section {
-    margin: 0;
-    padding: 0.75em;
+  @media (min-width: $large-width)  {
+      font-size: 0.83rem;
+  }
+}
+
+.text-content {
+  max-width: $text-content-max-width;
+}
+
+blockquote {
+  border-left: solid 4px rgba(0, 0, 0, 0.15);
+  padding: .66em;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  background-color: rgba(250, 245, 227, 0.773);
   
-    @media (min-width: $small-width) {
-      padding: 0;
-      margin: 0 auto;
-      max-width: 90%;
-    }
-
-    @media (min-width: $large-width) {
-      padding: 0;
-      margin: 0 auto;
-      max-width: $section-max-width;
-    }
+  @media (min-width: $small-width) {
+    margin-left: 1em;
   }
+}
 
+.highlight {
+  padding: 1em 1em 1em 1.5em;
+  background-color: rgb(245, 240, 225);
+  border-radius: $callout-border-radius;
+  
+  @media (min-width: $small-width) {
+    margin-left: 1em;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  blockquote {
+    border-left: solid 4px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.698);
+  }
+}
+
+
+/////////////////////////////////////////////
+// Global App Structure
+/////////////////////////////////////////////
+body {
+  background-color: $light-bg;
+}
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 50vh;
+  color: $dark-text;
+  
   .main-header {
     overflow: hidden;
     background-color: $blue;
     border-bottom: solid 4px $brown;
+    
+    .header-section {
+      margin: 0;
+      padding: 0.75em;
+    
+      @media (min-width: $small-width) {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 90%;
+      }
+  
+      @media (min-width: $large-width) {
+        padding: 0;
+        margin: 0 auto;
+        max-width: $section-max-width;
+      }
+    }
+    
     h1, h2 {
       font-weight: 400;
     }
@@ -163,7 +215,7 @@
     @media (min-width: $large-width) {
       font-size: 18px;
       margin-top: 3em;
-      margin-bottom: 3.33em;
+      margin-bottom: 2em;
     }
   }
 
@@ -184,174 +236,134 @@
       }
     }
   }
-}
 
-// Quick way to limit text max-width
-.text-content {
-  max-width: $text-content-max-width;
-}
-
-blockquote {
-  border-left: solid 4px rgba(0, 0, 0, 0.15);
-  padding: .66em;
-  margin-left: 0;
-  margin-right: 0;
-  font-style: italic;
-  background-color: rgba(250, 245, 227, 0.773);
+  .section {
+    margin: 0;
+    padding: 0.75em;
   
-  @media (min-width: $small-width) {
-    margin-left: 1em;
-  }
-}
-
-.highlight {
-  padding: 1em 1em 1em 1.5em;
-  background-color: rgb(245, 240, 225);
-  border-radius: $callout-border-radius;
-  
-  @media (min-width: $small-width) {
-    margin-left: 1em;
-  }
-  
-  h3 {
-    margin-top: 0;
-  }
-  
-  blockquote {
-    border-left: solid 4px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 0.698);
-  }
-}
-
-.section {
-  margin: 0;
-  padding: 0.75em;
-
-  @media (min-width: $small-width) {
-    padding: 0;
-    margin: 0 auto 3em;
-    max-width: 90%;
-  }
-  
-  @media (min-width: $large-width) {
-    padding: 0;
-    margin: 0 auto 3em;
-    max-width: $section-max-width;
-  }
-  
-  &:first-child {
-    margin-top: 0;
-  }
-
-  h2.title {
-    font-weight: 700;
-    color: $light-text;
-    background-color: $dark-bg;
-    padding: 0.5em 0 .6em .5em;
-    font-size: 1.2em;
-    margin-left: -0.6em;
-    margin-right: -0.6em;
-
     @media (min-width: $small-width) {
-      font-size: 1.5em;
-      margin-left: 0;
-      margin-right: 0;  
+      padding: 0;
+      margin: 0 auto 2em;
+      max-width: 90%;
     }
-  }
-
-}
-
-.footnote {
-  font-size: 0.8rem;
-  padding: .75em 0;
-  font-style: italic;
-}
-
-.timeslots-wrapper {
-  background-color: $dark-bg;
-  overflow: hidden;
-
-  @media (min-width: $large-width) {
-    margin-bottom: 6em;
-  }
-
-  .notes {
-    font-size: 0.8em;
-    margin-top: -0.66em;
-    margin-bottom: 1em;
     
     @media (min-width: $large-width) {
-      font-size: 1em;
-    }  
-
-    .badge {
-      margin-bottom: 0.3em;
+      max-width: $section-max-width;
     }
-  }
-
-  .footnote {
-    color: $light-text;
-  }
-
-  .week-info {
-    font-size: 60%;
-    display: block;
-    color: $light-text;
-  }
-
-  .timeslots {
-    display: block;
-
-    .Timeslot {
-      margin-top: 1em;
-      
-      &:first-child {
-        margin-top: 0;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  
+    h2.title {
+      font-weight: 700;
+      color: $light-text;
+      background-color: $dark-bg;
+      padding: 0.5em 0 .6em .5em;
+      font-size: 1.2em;
+      margin-left: -0.6em;
+      margin-right: -0.6em;
+  
+      @media (min-width: $small-width) {
+        font-size: 1.5em;
+        margin-left: 0;
+        margin-right: 0;  
       }
     }
-    
-    @media (min-width: $medium-width) {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      column-gap: 1em;
-      row-gap: 1em;
-
-      .Timeslot {
-        margin-top: 0;
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }  
-    }
-
+  }
+  
+  .footnote {
+    font-size: 0.8rem;
+    padding: .75em 0;
+    font-style: italic;
+  }
+  
+  .timeslots-wrapper {
+    background-color: $dark-bg;
+    overflow: hidden;
+  
     @media (min-width: $large-width) {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      column-gap: 1em;
-
+      margin-bottom: 6em;
+    }
+  
+    .notes {
+      font-size: 0.8em;
+      margin-top: -0.66em;
+      margin-bottom: 1em;
+      
+      @media (min-width: $large-width) {
+        font-size: 1em;
+      }  
+  
+      .badge {
+        margin-bottom: 0.3em;
+      }
+    }
+  
+    .footnote {
+      color: $light-text;
+    }
+  
+    .week-info {
+      font-size: 60%;
+      display: block;
+      color: $light-text;
+    }
+  
+    .timeslots {
+      display: block;
+  
       .Timeslot {
-        margin-top: 0;
-
+        margin-top: 1em;
+        
         &:first-child {
           margin-top: 0;
         }
-      }  
+      }
+      
+      @media (min-width: $medium-width) {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 1em;
+        row-gap: 1em;
+  
+        .Timeslot {
+          margin-top: 0;
+  
+          &:first-child {
+            margin-top: 0;
+          }
+        }  
+      }
+  
+      @media (min-width: $large-width) {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 1em;
+  
+        .Timeslot {
+          margin-top: 0;
+  
+          &:first-child {
+            margin-top: 0;
+          }
+        }  
+      }
     }
   }
-}
-
-.chatter-servers {
-  .Server {
-    margin-bottom: 2em;
+  
+  .chatter-servers {
+    .Server {
+      margin-bottom: 2em;
+    }
   }
-}
-
-.inline-discord-callout {
-  img {
-    display: inline-block;
-    height: 1em;
-    vertical-align: middle;
-    padding-right: 0.2em
+  
+  .inline-discord-callout {
+    img {
+      display: inline-block;
+      height: 1em;
+      vertical-align: middle;
+      padding-right: 0.2em
+    }
   }
 }

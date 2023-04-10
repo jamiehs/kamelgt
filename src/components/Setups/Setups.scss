@@ -1,12 +1,23 @@
 @import '../../_global.scss';
 
 .Setups {
+    [data-class="first"],
+    [data-class="second"] {
+        color: $dark-text;
+        font-weight: 700;
+    }
+    [data-class="first"] {
+        background-color: $first-class;
+    }
+    [data-class="second"] {
+        background-color: $second-class;
+    }
+
     .cars-grid {
-        
         @media (min-width: $medium-width) {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-        }        
+        }
     }
 
     .no-setups {
