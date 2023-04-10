@@ -226,7 +226,7 @@ class App extends React.Component {
                         <ol>
                             <li>
                                 <p>
-                                    Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the GTP that they should navigate around you. Do not move or react unexpectedly. Be predictable.
+                                    Do not try to move out of the way or let GTPs by. Choose your line and stick to it. This communicates to the faster class that they should navigate around you. Do not move or react unexpectedly. Be predictable.
                                 </p>
                             </li>
                             <li>
