@@ -5,12 +5,14 @@ class Broadcast extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            glitchId: 0
+            videoGlitchId: 0,
+            glitchId: 0,
         }
     }
     componentDidMount() {
         this.setState({
-            glitchId: this.randomGlitchId()
+            videoGlitchId: this.randomGlitchId(3),
+            glitchId: this.randomGlitchId(),
         })
     }
 
@@ -36,7 +38,7 @@ class Broadcast extends React.Component {
                 </a>
                     <div className="yt-video">
                 <a className="no-icon" href={url} target="_blank" rel="noreferrer">
-                    <div className="thumb" style={{backgroundImage: `url(https://img.youtube.com/vi/${this.getId(url)}/3.jpg)`}}>
+                    <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${this.getId(url)}/3.jpg)`}}>
                         <div className={`glitch glitch-${this.state.glitchId}`}></div>
                     </div>
                 </a>

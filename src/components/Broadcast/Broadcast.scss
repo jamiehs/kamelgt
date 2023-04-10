@@ -2,7 +2,7 @@
 
 @keyframes shimmer1 {
     0% {
-        background-size: 100% 106%;
+        background-size: 100% 102%;
     }
     100% {
         background-size: 100% 103%;
@@ -42,6 +42,31 @@
     }
     100% {
         background-size: 102% 108%;
+    }
+}
+
+@keyframes videoJump1 {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 52% 50.5%;
+    }
+}
+@keyframes videoJump2 {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 52% 51.5%;
+    }
+}
+@keyframes videoJump3 {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 52% 49%;
     }
 }
 
@@ -97,7 +122,7 @@
             display: block;
             max-width: 100%;
             grid-template-columns: 1fr 1fr 1fr;
-            filter: saturate(50%) hue-rotate(-10deg) contrast(120%);
+            filter: saturate(45%) hue-rotate(-10deg) contrast(120%);
             transition: filter 300ms ease;
         }
         
@@ -108,7 +133,17 @@
             background-position: center;
             background-size: cover;
             position: relative;
-            border-left: solid 1px #444;
+            border: solid 1px $dark-bg;
+
+            &.jump-1 {
+                animation: videoJump1 75ms infinite;
+            }
+            &.jump-2 {
+                animation: videoJump2 70ms infinite;
+            }
+            &.jump-3 {
+                animation: videoJump3 67ms infinite;
+            }
 
             .glitch {
                 position: absolute;
@@ -121,34 +156,35 @@
                 mix-blend-mode: screen;
                 opacity: 1;
                 transition: opacity 300ms ease;
-            }
-            .glitch-1 {
-                background-image: url(../../../public/vhs1.jpg);
-                animation: shimmer1 75ms infinite;
-            }
-            .glitch-2 {
-                background-image: url(../../../public/vhs2.jpg);
-                animation: shimmer2 70ms infinite;
-            }
-            .glitch-3 {
-                background-image: url(../../../public/vhs3.jpg);
-                animation: shimmer3 67ms infinite;
-                opacity: 0.4;
-            }
-            .glitch-4 {
-                background-image: url(../../../public/vhs4.jpg);
-                animation: shimmer4 80ms infinite;
-                opacity: 0.5;
-            }
-            .glitch-5 {
-                background-image: url(../../../public/vhs5.jpg);
-                animation: shimmer5 88ms infinite;
+
+                &.glitch-1 {
+                    background-image: url(../../../public/vhs1.jpg);
+                    animation: shimmer1 75ms infinite;
+                }
+                &.glitch-2 {
+                    background-image: url(../../../public/vhs2.jpg);
+                    animation: shimmer2 70ms infinite;
+                }
+                &.glitch-3 {
+                    background-image: url(../../../public/vhs3.jpg);
+                    animation: shimmer3 67ms infinite;
+                    opacity: 0.4;
+                }
+                &.glitch-4 {
+                    background-image: url(../../../public/vhs4.jpg);
+                    animation: shimmer4 80ms infinite;
+                    opacity: 0.5;
+                }
+                &.glitch-5 {
+                    background-image: url(../../../public/vhs5.jpg);
+                    animation: shimmer5 88ms infinite;
+                }
             }
         }
 
         &:hover {
             a {
-                filter: saturate(80%) hue-rotate(-5deg) contrast(100%);
+                filter: saturate(90%) hue-rotate(-2deg) contrast(100%);
             }
 
             .glitch {
