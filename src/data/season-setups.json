@@ -139,6 +139,10 @@
         ],
         "audi90gto": [
             {
+                "file": "RA500_2023_1.2_120L_RACE.sto",
+                "comment": "From Marc Ollé (for Road America 500)"
+            },
+            {
                 "file": "A90 - 22S4 - RoadAmerica - J Del Olmo - R.sto"
             },
             {
@@ -149,6 +153,14 @@
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "MH_RAmer_R_v1.sto",
+                "comment": "From Mathias Havdal (Wednesday session)"
+            },
+            {
+                "file": "MH_RAmer_Q_v1.sto",
+                "comment": "From Mathias Havdal (Wednesday session)"
+            },
             {
                 "file": "road_america_22s4_Full_R_v1-4.sto"
             },
