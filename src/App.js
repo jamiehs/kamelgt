@@ -49,6 +49,12 @@ class App extends React.Component {
                 </div>
                 <div id="announcements">
                     <div className="section">
+                        <Announcement begins="2023-03-13" expires="2023-04-13">
+                            <h3>
+                            </h3>
+                            <p>
+                            </p>
+                        </Announcement>
                     </div>
                 </div>
                 <div id="timeslots" className="timeslots-wrapper">
