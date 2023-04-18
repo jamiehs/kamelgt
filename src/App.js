@@ -49,14 +49,6 @@ class App extends React.Component {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-03-13" expires="2023-04-13">
-                            <h3>
-                                This Season (2023 S2) is the (Virtual) <a href="https://en.wikipedia.org/wiki/Road_Race_Showcase_at_Road_America" target="_blank" rel="noreferrer">Road&nbsp;America&nbsp;500</a>.
-                            </h3>
-                            <p>
-                                This is a 500 mile team endurance event in the Kamel GT cars! Check <a href="https://forums.iracing.com/categories/special-events" target="_blank" rel="noreferrer">the forums for more information</a>.
-                            </p>
-                        </Announcement>
                     </div>
                 </div>
                 <div id="timeslots" className="timeslots-wrapper">
