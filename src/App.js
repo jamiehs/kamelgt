@@ -262,6 +262,10 @@ class App extends React.Component {
                             title='R5: Road America 500'
                             url="https://youtu.be/xIKDpzoqDcY?t=610"
                         />
+                        <Broadcast
+                            title='R6: VIR'
+                            url="https://youtu.be/z8xsIcXdvyw?t=970"
+                        />
                     </div>
                 </div>
                 <div id="shifting" className="audi-shifting section">
