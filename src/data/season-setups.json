@@ -197,8 +197,16 @@
         "label": "Interlagos",
         "week": 7,
         "weekStart": "2023-04-25",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "A90_23S2_Interlagos_Y_Gijsen_R.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "NGTP_Interlagos_1-6.sto"
+            }
+        ]
     },
     {
         "label": "Long Beach",
