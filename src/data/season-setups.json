@@ -212,7 +212,11 @@
         "label": "Long Beach",
         "week": 8,
         "weekStart": "2023-05-02",
-        "audi90gto": [],
+        "audi90gto": [
+            {
+                "file": "long-beach-21S4-r2.sto"
+            }
+        ],
         "nissangtpzxt": []
     },
     {
