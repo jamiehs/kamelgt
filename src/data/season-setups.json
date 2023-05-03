@@ -217,7 +217,17 @@
                 "file": "long-beach-21S4-r2.sto"
             }
         ],
-        "nissangtpzxt": []
+        "nissangtpzxt": [
+            {
+                "file": "23s1w08-LBCH-CHI-VDS1.sto"
+            },
+            {
+                "file": "NGTP_LongBeach_1-2_Q.sto"
+            },
+            {
+                "file": "NGTP_LongBeach_1-2.sto"
+            }
+        ]
     },
     {
         "label": "Monza - GP Without First Chicane",
