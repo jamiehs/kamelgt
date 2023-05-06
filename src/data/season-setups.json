@@ -236,22 +236,72 @@
         "notes": [
             "60 minute race; pit stop required"
         ],
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "monza-22S1-r1.sto",
+                "comment": "Correct layout, but an older setup: 22S1"
+            },
+            {
+                "file": "monza-combined-22S4-r1.sto",
+                "comment": "Incorrect layout, but a more recent setup: 22S4"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "Lgo22S4_Monza_10k_AG_Indy_2W8_R10.sto"
+            },
+            {
+                "file": "DWC_ZXT_Monza_R2.sto"
+            }
+        ]
     },
     {
         "label": "Fuji - No Chicane",
         "week": 10,
         "weekStart": "2023-05-16",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "Fuji_S3_2022_1.2_Race.sto"
+            },
+            {
+                "file": "KB_2022-S3_Fuji_R.sto"
+            },
+            {
+                "file": "A90 - 22S4 - Fuji - J Del Olmo - R.sto"
+            },
+            {
+                "file": "A90 - 22S4 - Fuji - Y Gijsen - 221005 - Q.sto"
+            },
+            {
+                "file": "A90 - 22S4 - Fuji - Y Gijsen - 221005 - R.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "fuji-22S3-r-NGTP_Fuji_1-3.sto"
+            },
+            {
+                "file": "Lgo22S3_Fuji_NoCh_R41.sto"
+            }
+        ]
     },
     {
         "label": "Silverstone 2008 - Historical Grand Prix",
         "week": 11,
         "weekStart": "2023-05-23",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "silverstone-2008-historic-22S3-r1.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "silverstone_historic_22S3_Mosquera_V5.sto"
+            },
+            {
+                "file": "Lgo22S3_Silverstone_Hist_AG_WGI_6W1_R61.sto"
+            }
+        ]
     },
     {
         "label": "Belle Isle",
