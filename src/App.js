@@ -280,6 +280,10 @@ class App extends React.Component {
                             title='R9: Monza'
                             url="https://youtu.be/hAZ36kU50cM?t=1220"
                         />
+                        <Broadcast
+                            title='R10: Fuji'
+                            url="https://youtu.be/kHkBhxhajg0?t=802"
+                        />
                     </div>
                 </div>
                 <div id="shifting" className="audi-shifting section">
