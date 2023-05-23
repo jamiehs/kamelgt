@@ -49,10 +49,12 @@ class App extends React.Component {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-03-13" expires="2023-04-13">
+                        <Announcement begins="2023-06-06" expires="2023-06-12">
                             <h3>
+                                It&rsquo;s Week 13! No regular Kamel GT races this week
                             </h3>
                             <p>
+                                Regular races will resume on June 13th. Until then try not to get into too much trouble participating in the week&nbsp;13&nbsp;madness!
                             </p>
                         </Announcement>
                     </div>
