@@ -292,6 +292,12 @@
         "audi90gto": [
             {
                 "file": "silverstone-2008-historic-22S3-r1.sto"
+            },
+            {
+                "file": "A90_23S2_Silverstone08H_Y_Gijsen_Q.sto"
+            },
+            {
+                "file": "A90_23S2_Silverstone08H_Y_Gijsen_R.sto"
             }
         ],
         "nissangtpzxt": [
@@ -300,6 +306,12 @@
             },
             {
                 "file": "Lgo22S3_Silverstone_Hist_AG_WGI_6W1_R61.sto"
+            },
+            {
+                "file": "Lgo22S4_Fuji_NoCh_MH_Silverstone_Int_R_Q61.sto"
+            },
+            {
+                "file": "Lgo22S4_Fuji_NoCh_MH_Silverstone_Int_R_R61.sto"
             }
         ]
     },
@@ -307,7 +319,21 @@
         "label": "Belle Isle",
         "week": 12,
         "weekStart": "2023-05-30",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "belle-isle-22S4-r2.sto"
+            },
+            {
+                "file": "DWC_22S4_BelleIsle_R1.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "NGTP_DET_Full_R_v1-6q.sto"
+            },
+            {
+                "file": "Lgo22S4_Detroit_MH_Hungaroring_R80.sto"
+            }
+        ]
     }
 ]
