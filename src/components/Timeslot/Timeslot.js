@@ -35,7 +35,8 @@ class Timeslot extends React.Component {
             dayIndex,
             time,
             entries,
-            sof,
+            gtoSof,
+            gtpSof,
             children,
             guaranteed,
         } = this.props
@@ -44,6 +45,7 @@ class Timeslot extends React.Component {
         const nextRaceDate = nextRaceDay(dayIndex, time)
         const nextRaceDayLocal = nextRaceDate.toLocaleDateString(undefined, { weekday: 'long' })
         const nextRaceTimeLocal = nextRaceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+        const avgSof = Math.round((parseInt(gtoSof) + parseInt(gtpSof)) / 2)
 
         return (
             <div className="Timeslot" data-guaranteed={guaranteed}>
@@ -75,13 +77,13 @@ class Timeslot extends React.Component {
                             </div>
                         </div>
                     )}
-                    {sof && (
+                    {(gtoSof && gtpSof) ? (
                         <div>
                             <div className="badge sof">
-                                <abbr title="Strength of Field">SOF</abbr>: {toLocaleStringIfNumber(sof)}
+                                <abbr title="Strength of Field">SOF</abbr>: <span className="sof-combined" title={`GTP: ${gtpSof}, GTO: ${gtoSof}`}>{toLocaleStringIfNumber(avgSof)}</span>
                             </div>
                         </div>
-                    )}
+                    ) : null}
                 </div>
                 <div className="timeslot-info">
                     {children}
