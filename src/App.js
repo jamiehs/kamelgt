@@ -290,7 +290,7 @@ class App extends React.Component {
                         />
                         <Broadcast
                             title='R12: Detroit Belle Isle'
-                            url="https://youtu.be/eGP8_JxQfO0?t=983"
+                            url="https://youtu.be/eGP8_JxQfO0?t=1069"
                         />
                     </div>
                 </div>
