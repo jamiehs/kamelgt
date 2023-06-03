@@ -126,7 +126,7 @@ class App extends React.Component {
                                 guaranteed={true}
                             >
                                 <p>
-                                    <b>Our weekly broadcast race.</b> This will usually have the most participants and may even split once or twice per season. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
+                                    <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
                                 </p>
                             </Timeslot>
                         </div>
