@@ -81,8 +81,9 @@ class App extends React.Component {
                                 label="Midweek Madness"
                                 dayIndex={3}
                                 time="19:00"
-                                entries="52"
-                                sof="2634"
+                                entries="48"
+                                gtoSof="2715"
+                                gtpSof="2578"
                                 guaranteed={true}
                             >
                                 <p>
@@ -93,8 +94,9 @@ class App extends React.Component {
                                 label="Midweek Americas"
                                 dayIndex={4}
                                 time="01:00"
-                                entries="35"
-                                sof="1974"
+                                entries="32"
+                                gtoSof="2201"
+                                gtpSof="2165"
                                 guaranteed={true}
                             >
                                 <p>
@@ -105,8 +107,9 @@ class App extends React.Component {
                                 label="Friday Night Race"
                                 dayIndex={5}
                                 time="21:00"
-                                entries="61"
-                                sof="2926"
+                                entries="49"
+                                gtoSof="2708"
+                                gtpSof="2491"
                                 guaranteed={true}
                             >
                                 <p>
@@ -117,8 +120,9 @@ class App extends React.Component {
                                 label="Broadcast Race"
                                 dayIndex={6}
                                 time="17:00"
-                                entries="73"
-                                sof="3740"
+                                entries="61"
+                                gtoSof="3281"
+                                gtpSof="2964"
                                 guaranteed={true}
                             >
                                 <p>
@@ -126,7 +130,7 @@ class App extends React.Component {
                                 </p>
                             </Timeslot>
                         </div>
-                        <div className="footnote">Drivers &amp; SOF data averaged from previous weeks</div>
+                        <div className="footnote">Drivers &amp; SOF data averaged from 2023 Season 2</div>
                     </div>
                 </div>
                 <div id="faq" className="faq section">
