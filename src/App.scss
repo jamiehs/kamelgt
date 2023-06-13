@@ -291,12 +291,18 @@ body {
       margin-top: -0.66em;
       margin-bottom: 1em;
       
+      @media (min-width: $small-width) {
+        padding-left: 1rem;
+      }  
+  
       @media (min-width: $large-width) {
         font-size: 1em;
       }  
   
       .badge {
         margin-bottom: 0.3em;
+        white-space: normal;
+        display: table;
       }
     }
   
