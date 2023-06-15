@@ -116,7 +116,11 @@
         "label": "Willow Springs",
         "week": 10,
         "weekStart": "2023-08-15",
-        "audi90gto": [],
+        "audi90gto": [
+            {
+                "file": "willow-springs-23S3-r1.sto"
+            }
+        ],
         "nissangtpzxt": []
     },
     {
