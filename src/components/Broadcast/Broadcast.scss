@@ -74,13 +74,12 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-bottom: 1.2em;
     @media (min-width: $small-width) {
         margin-bottom: 0;
     }
 
     h3 {
-        font-size: 3.9vw;
+        font-size: 3.1vw;
         margin: 0;
         display: inline-block;
         
@@ -93,7 +92,7 @@
         }
         
         @media (min-width: $large-width) {
-            font-size: 110%;
+            font-size: 100%;
         }
     }
     
@@ -135,15 +134,18 @@
             position: relative;
             border: solid 1px $dark-bg;
 
-            &.jump-1 {
-                animation: videoJump1 75ms infinite;
+            @media (min-width: $large-width) {
+                &.jump-1 {
+                    animation: videoJump1 75ms infinite;
+                }
+                &.jump-2 {
+                    animation: videoJump2 70ms infinite;
+                }
+                &.jump-3 {
+                    animation: videoJump3 67ms infinite;
+                }
             }
-            &.jump-2 {
-                animation: videoJump2 70ms infinite;
-            }
-            &.jump-3 {
-                animation: videoJump3 67ms infinite;
-            }
+
 
             .glitch {
                 position: absolute;
@@ -159,25 +161,35 @@
 
                 &.glitch-1 {
                     background-image: url(../../../public/vhs1.jpg);
-                    animation: shimmer1 75ms infinite;
+                    @media (min-width: $large-width) {
+                        animation: shimmer1 75ms infinite;
+                    }
                 }
                 &.glitch-2 {
                     background-image: url(../../../public/vhs2.jpg);
-                    animation: shimmer2 70ms infinite;
+                    @media (min-width: $large-width) {
+                        animation: shimmer2 70ms infinite;
+                    }
                 }
                 &.glitch-3 {
                     background-image: url(../../../public/vhs3.jpg);
-                    animation: shimmer3 67ms infinite;
+                    @media (min-width: $large-width) {
+                        animation: shimmer3 67ms infinite;
+                    }
                     opacity: 0.4;
                 }
                 &.glitch-4 {
                     background-image: url(../../../public/vhs4.jpg);
-                    animation: shimmer4 80ms infinite;
+                    @media (min-width: $large-width) {
+                        animation: shimmer4 80ms infinite;
+                    }
                     opacity: 0.5;
                 }
                 &.glitch-5 {
                     background-image: url(../../../public/vhs5.jpg);
-                    animation: shimmer5 88ms infinite;
+                    @media (min-width: $large-width) {
+                        animation: shimmer5 88ms infinite;
+                    }
                 }
             }
         }

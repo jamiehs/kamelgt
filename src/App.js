@@ -5,15 +5,17 @@ import Broadcast from './components/Broadcast/Broadcast.js';
 import Announcement from './components/Announcement/Announcement.js';
 import Setups from './components/Setups/Setups.js';
 import seasonSetups from './data/season-setups.json';
+import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
 import discord from './images/Discord-Logo-Color.svg'
-import {getCurrentWeekData} from './helpers.js'
+import {getCurrentWeekData, localDateFromString} from './helpers.js'
 
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentWeekData: getCurrentWeekData(seasonSetups)
+            currentWeekData: getCurrentWeekData(seasonSetups),
+            broadcastsSeason: broadcasts[broadcasts.length-1].id
         }
     }
     componentDidMount() {
@@ -23,6 +25,13 @@ class App extends React.Component {
     }
     componentWillUnmount() {
         clearInterval(this.interval);
+    }
+
+    handleBroadcastSeasonChange(event) {
+        const selectedSeason = event.target.value
+        this.setState({
+            broadcastsSeason: selectedSeason
+        })
     }
 
     render() {
@@ -244,59 +253,45 @@ class App extends React.Component {
                         <p>We aspire to be a fun &amp; exciting series made up of a civilized group of racers. There's no need to moan and whine when you wreck, and you can get protested for your conduct just like in any other iRacing series. Remember the human on the other side of the connection. Remember that netcode and mistakes are facts of life/racing.</p>
                     </div>
                 </div>
-                <div className="broadcast section">
+                <div id="broadcasts" className="broadcast section">
                     <h2 className="title">Previous Broadcast Races</h2>
-                    <h3>2023 Season 2</h3>
-                    <div className="videos-grid">
-                        <Broadcast
-                            title='R1: Sebring'
-                            url="https://youtu.be/AE2VmQ_0ZK0?t=635"
-                        />
-                        <Broadcast
-                            title='R2: Jerez'
-                            url="https://youtu.be/6gQrAfswvMc?t=986"
-                        />
-                        <Broadcast
-                            title='R3: Montreal'
-                            url="https://youtu.be/MVY4NrQ6xwI?t=1342"
-                        />
-                        <Broadcast
-                            title='R4: Nürburgring GP'
-                            url="https://youtu.be/5TYJjykBfb0?t=961"
-                        />
-                        <Broadcast
-                            title='R5: Road America 500'
-                            url="https://youtu.be/xIKDpzoqDcY?t=610"
-                        />
-                        <Broadcast
-                            title='R6: VIR'
-                            url="https://youtu.be/z8xsIcXdvyw?t=970"
-                        />
-                        <Broadcast
-                            title='R7: Interlagos'
-                            url="https://youtu.be/FjyxKwoi9KY?t=983"
-                        />
-                        <Broadcast
-                            title='R8: Long Beach'
-                            url="https://youtu.be/QeZC9_JPJpA?t=884"
-                        />
-                        <Broadcast
-                            title='R9: Monza'
-                            url="https://youtu.be/hAZ36kU50cM?t=1220"
-                        />
-                        <Broadcast
-                            title='R10: Fuji'
-                            url="https://youtu.be/kHkBhxhajg0?t=802"
-                        />
-                        <Broadcast
-                            title='R11: Silverstone 2008'
-                            url="https://youtu.be/aaEZUxBVBSQ?t=1229"
-                        />
-                        <Broadcast
-                            title='R12: Detroit Belle Isle'
-                            url="https://youtu.be/eGP8_JxQfO0?t=1069"
-                        />
+                    
+                    <div className="broadcast-season-selector">
+                        <h3>Choose a season:</h3>
+                        <select
+                            className="broadcast-season"
+                            defaultValue={this.state.broadcastsSeason}
+                            onChange={(event) => this.handleBroadcastSeasonChange(event)}
+                        >
+                            {broadcasts.reverse().map(season => (
+                                <option key={season.id} value={season.id}>
+                                    {season.id}
+                                    {`: `}
+                                    {localDateFromString(season.startDate)}
+                                    &#8201;&ndash;&#8201;
+                                    {localDateFromString(season.endDate)}
+                                </option>
+                            ))}
+                        </select>
                     </div>
+                    {broadcasts.map(season => {
+                        if(season && season.id === this.state.broadcastsSeason) {
+                            return (
+                                <div key={season.id} className="videos-grid">
+                                    {season.youTube.map(week => {
+                                        const {url, title} = week
+                                        if(url && url !== '' && title && title !== '') {
+                                            return <Broadcast key={url} title={title} url={url} />
+                                        } else {
+                                            return null // no valid URL or title
+                                        }
+                                    })}
+                                </div>
+                            )
+                        } else {
+                            return null // season is invalid or missing
+                        }
+                    })}
                 </div>
                 <div id="shifting" className="audi-shifting section">
                     <h2 className="title">Taming the Audi <span className="hidden-xs">90 GTO</span> Gearbox</h2>

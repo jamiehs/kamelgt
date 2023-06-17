@@ -220,6 +220,32 @@ body {
   }
 
   .broadcast {
+    .broadcast-season-selector {
+      margin-bottom: 1em;
+
+      @media (min-width: $small-width) {
+        display: flex;
+        align-items: center;
+      }
+
+
+      h3 {
+        margin: 0;
+        margin-right: 0.66em;
+      }
+
+      select.broadcast-season {
+          background: $dark-bg;
+          color: $light-text;
+          padding: 0.3em;
+          border-radius: 5px;
+          border: solid 1px transparent;
+          font-weight: 600;
+          font-size: 1rem;
+      }
+    }
+
+    
     .videos-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -231,6 +257,11 @@ body {
       }
 
       @media (min-width: $medium-width) {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: $large-width) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 2rem;
       }

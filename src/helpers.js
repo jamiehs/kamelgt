@@ -75,8 +75,26 @@ const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
     return currentWeek
 }
 
+/**
+ * Local Date From String
+ * @param {string} dateString input date: 2023-03-28 
+ * @returns {string} as a local date: 28. März 2023
+ */
+const localDateFromString = (dateString) => {
+    const dateStringParts = dateString.split('-')
+    const year = dateStringParts[0]
+    const month = dateStringParts[1]
+    const day = dateStringParts[2]
+
+    const event = new Date(Date.UTC(year, month, day, 0, 0, 0));
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+
+    return event.toLocaleDateString(undefined, options)
+}
+
 
 export {
     nextRaceDay,
     getCurrentWeekData,
+    localDateFromString,
 }
