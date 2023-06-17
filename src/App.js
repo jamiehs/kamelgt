@@ -263,7 +263,7 @@ class App extends React.Component {
                             defaultValue={this.state.broadcastsSeason}
                             onChange={(event) => this.handleBroadcastSeasonChange(event)}
                         >
-                            {broadcasts.toReversed().map(season => (
+                            {broadcasts.slice().reverse().map(season => (
                                 <option key={season.id} value={season.id}>
                                     {season.id}
                                     {`: `}
