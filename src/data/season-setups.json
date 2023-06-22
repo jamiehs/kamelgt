@@ -32,8 +32,16 @@
         "label": "MotorLand Aragón - Outer",
         "week": 2,
         "weekStart": "2023-06-20",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "aragon-23S3-r2.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "BL_Aragon_Outer_R51.sto"
+            }
+        ]
     },
     {
         "label": "Phillip Island Circuit",
