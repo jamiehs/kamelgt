@@ -72,6 +72,34 @@ class App extends React.Component {
                         </Announcement>
                     </div>
                 </div>
+                <div id="video-spotlight">
+                    <div className="section">
+                        <header>
+                            <h3>
+                                Kamel Clip Spotlight
+                                <span>This one was posted by iRacing on their official YouTube channel!</span>
+                            </h3>
+                        </header>
+                        <div className="clip">
+                            <div className="thumbnail-wrapper">
+                                <a className="no-icon" href="https://youtu.be/1Dd8jGkICr4" target="_blank" rel="nofollow">
+                                    <div
+                                        className="thumbnail"
+                                        style={{backgroundImage: `url(https://img.youtube.com/vi/1Dd8jGkICr4/3.jpg)`}}
+                                    />
+                                </a>
+                            </div>
+                            <div className="description">
+                                <a className="no-icon" href="https://youtu.be/1Dd8jGkICr4" target="_blank" rel="nofollow">
+                                    <h5>iRacing Kamel GT - Epic GTO Battle for&nbsp;the&nbsp;Lead</h5>
+                                </a>
+                                <p>
+                                Jouko Leskela and Ville Ruola battle for the GTO lead in the Kamel GT Series - side by side for a lap and a half!  Massive respect from everyone involved, including the faster GTP cars behind.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="timeslots" className="timeslots-wrapper">
                     <div className="section">
                         <header>
