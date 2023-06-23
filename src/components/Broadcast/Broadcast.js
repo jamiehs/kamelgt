@@ -1,5 +1,6 @@
 import './Broadcast.scss';
 import React from 'react';
+import { getYouTubeId } from '../../helpers';
 
 class Broadcast extends React.Component {
     constructor(props) {
@@ -14,11 +15,6 @@ class Broadcast extends React.Component {
             videoGlitchId: this.randomGlitchId(3),
             glitchId: this.randomGlitchId(),
         })
-    }
-
-    getId(url) {
-        let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
-        return matches[1]
     }
 
     randomGlitchId(variants = 5) {
@@ -38,7 +34,7 @@ class Broadcast extends React.Component {
                 </a>
                     <div className="yt-video">
                 <a className="no-icon" href={url} target="_blank" rel="noreferrer">
-                    <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${this.getId(url)}/3.jpg)`}}>
+                    <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(url)}/3.jpg)`}}>
                         <div className={`glitch glitch-${this.state.glitchId}`}></div>
                     </div>
                 </a>

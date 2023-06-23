@@ -92,8 +92,14 @@ const localDateFromString = (dateString) => {
     return event.toLocaleDateString(undefined, options)
 }
 
+const getYouTubeId = (url) => {
+    let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
+    return matches[1]
+}
+
 
 export {
+    getYouTubeId,
     nextRaceDay,
     getCurrentWeekData,
     localDateFromString,
