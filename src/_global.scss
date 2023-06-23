@@ -12,9 +12,11 @@ $gold: #f9c24d;
 $first-class: #ffd65a; 
 $second-class: #33cfff; 
 
+$positive-action: rgb(51, 132, 10);
+
 $timeslot-bg: rgb(226, 243, 243);
 $timeslot-bg-2: rgb(173, 205, 205);
-$timeslot-positive: rgb(51, 132, 10);
+$timeslot-positive: $positive-action;
 
 $light-bg: #fff;
 $dark-text: #333;

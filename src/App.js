@@ -7,8 +7,9 @@ import Setups from './components/Setups/Setups.js';
 import seasonSetups from './data/season-setups.json';
 import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
-import discord from './images/Discord-Logo-Color.svg'
-import {getCurrentWeekData, localDateFromString} from './helpers.js'
+import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
+import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
+import {getCurrentWeekData, localDateFromString} from './helpers.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -51,8 +52,11 @@ class App extends React.Component {
                         <p>
                             Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in this series but you will need to show up at specific times. The time slots below are the most popular ones; if you want a time slot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
                         </p>
-                        <span className="inline-discord-callout">
-                            <img src={discord} alt="" /><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>
+                        <span className="discord inline-callout intro-callout">
+                            <DiscordIcon /><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>
+                        </span>
+                        <span className="setups inline-callout intro-callout">
+                            <DownloadSetupIcon /><a href="#setups">Download Setups</a>
                         </span>
                     </div>
                 </div>

@@ -394,13 +394,30 @@ body {
       margin-bottom: 2em;
     }
   }
+
+  .intro-callout {
+    margin-inline-end: 1em;
+  }
   
-  .inline-discord-callout {
-    img {
+  .inline-callout {
+    white-space: nowrap;
+    display: inline-block;
+
+    svg {
       display: inline-block;
+      width: auto;
       height: 1em;
       vertical-align: middle;
       padding-right: 0.2em
+    }
+
+    &.setups {
+      svg {
+        height: 1.3em;
+        path {
+          stroke: $positive-action;
+        }
+      }
     }
   }
 }
