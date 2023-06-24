@@ -58,6 +58,10 @@ const broadcasts = [
                 alternateTitle: "Watkins Glen International - Classic Boot",
                 url: "https://youtu.be/Z1TfQZ3WcOA?t=1072"
             },
+            {
+                title: "R13: Phoenix Oval",
+                url: "https://youtu.be/3bZlueI7RXE?t=1053"
+            },
         ]
     },
     {
@@ -121,6 +125,10 @@ const broadcasts = [
                 title: "R12: Bathurst",
                 alternateTitle: "Mount Panorama Circuit",
                 url: "https://youtu.be/cz2aKmuQuaE?t=1050"
+            },
+            {
+                title: "R13: DTRL Road America 500 km",
+                url: "https://youtu.be/CTrtDWDTx-I?t=1134"
             },
         ]
     },
@@ -363,6 +371,10 @@ const broadcasts = [
                 title: "R12: Daytona",
                 url: "https://youtu.be/wzdzBU8c8zw?t=850"
             },
+            {
+                title: "R13: GP of Connecticut - Lime Rock Park",
+                url: "https://youtu.be/bjfqphjy9k0?t=1246"
+            },
         ]
     },
     {
@@ -390,7 +402,7 @@ const broadcasts = [
                 url: "https://youtu.be/5TYJjykBfb0?t=961"
             },
             {
-                title: "R5: Road America 500",
+                title: "R5: Road America 500 mi",
                 url: "https://youtu.be/xIKDpzoqDcY?t=610"
             },
             {
