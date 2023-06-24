@@ -82,11 +82,11 @@ const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
  */
 const localDateFromString = (dateString) => {
     const dateStringParts = dateString.split('-')
-    const year = dateStringParts[0]
-    const month = dateStringParts[1]
-    const day = dateStringParts[2]
+    const year = parseInt(dateStringParts[0], 10)
+    const month = parseInt(dateStringParts[1], 10)
+    const day = parseInt(dateStringParts[2], 10)
 
-    const event = new Date(Date.UTC(year, month, day, 0, 0, 0));
+    const event = new Date(Date.UTC(year, month-1, day, 0, 0, 0));
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
 
     return event.toLocaleDateString(undefined, options)
