@@ -1,5 +1,69 @@
 const broadcasts = [
     {
+        id: "22S1",
+        label: "2022 Season 1",
+        startDate: "2021-12-14",
+        endDate: "2022-03-01",
+        youTube: [
+            {
+                title: "R1: Detroit Belle Isle",
+                url: "https://youtu.be/O11sQZRlLfI?t=1060"
+            },
+            {
+                title: "R2: Zolder Alternate",
+                alternateTitle: "Circuit Zolder - Alternate",
+                url: "https://youtu.be/CxbyHx9RX78?t=1084"
+            },
+            {
+                title: "R3: Imola",
+                alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari",
+                url: "https://youtu.be/gRE0HnzSVxU?t=1064"
+            },
+            {
+                title: "R4: Nürburgring Combined",
+                alternateTitle: "Nurburgring Combined 24H",
+                url: "https://youtu.be/jGq82uRosIM?t=841"
+            },
+            {
+                title: "R5: Barcelona Historic",
+                alternateTitle: "Circuit de Barcelona-Catalunya - Historic",
+                url: "https://youtu.be/HCl0HcQdjEo?t=1050"
+            },
+            {
+                title: "R6: Mid Ohio",
+                url: "https://youtu.be/oBgYn342OQk?t=981"
+            },
+            {
+                title: "R7: Hockenheim GP",
+                alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix",
+                url: "https://youtu.be/flJveQil82s?t=1098"
+            },
+            {
+                title: "R8: Okayama",
+                url: "https://youtu.be/A3djT18Sf1g?t=1123"
+            },
+            {
+                title: "R9: Monza",
+                alternateTitle: "Autodromo Nazionale Monza - GP without first chicane",
+                url: "https://youtu.be/wnRE8dKN_s0?t=1075"
+            },
+            {
+                title: "R10: Snetterton 200",
+                alternateTitle: "Snetterton Circuit - 200",
+                url: "https://youtu.be/ThlF-Y12yHs?t=1026"
+            },
+            {
+                title: "R11: Twin Ring Motegi",
+                url: "https://youtu.be/Qlynwhq4E9M?t=1090"
+            },
+            {
+                title: "R12: Bathurst",
+                alternateTitle: "Mount Panorama Circuit",
+                url: "https://youtu.be/cz2aKmuQuaE?t=1050"
+            },
+        ]
+    },
+    {
         id: "22S2",
         label: "2022 Season 2",
         startDate: "2022-03-15",
@@ -149,7 +213,7 @@ const broadcasts = [
                 url: "https://youtu.be/cfEwnRCsa-A?t=932"
             },
             {
-                title: "R7: Detroit",
+                title: "R7: Detroit Belle Isle",
                 url: "https://youtu.be/GQ6SigoX5QA?t=1010"
             },
             {
@@ -198,6 +262,7 @@ const broadcasts = [
             },
             {
                 title: "R4: Bathurst",
+                alternateTitle: "Mount Panorama Circuit",
                 url: "https://youtu.be/EDxZkP4qbQM?t=888"
             },
             {
@@ -206,6 +271,7 @@ const broadcasts = [
             },
             {
                 title: "R6: Barcelona",
+                alternateTitle: "Circuit de Barcelona-Catalunya",
                 url: "https://youtu.be/NbtMgYusMgI?t=977"
             },
             {
