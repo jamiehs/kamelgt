@@ -104,7 +104,7 @@ const broadcasts = [
                 url: "https://youtu.be/A3djT18Sf1g?t=1123"
             },
             {
-                title: "R9: Monza",
+                title: "R9: Monza without first chicane",
                 alternateTitle: "Autodromo Nazionale Monza - GP without first chicane",
                 url: "https://youtu.be/wnRE8dKN_s0?t=1075"
             },
@@ -251,8 +251,8 @@ const broadcasts = [
         endDate: "2022-11-29",
         youTube: [
             {
-                title: "R1: Monza - Combined",
-                alternateTitle: "Autodromo Nazionale di Monza - Combined",
+                title: "R1: Monza - Combined without first chicane",
+                alternateTitle: "Autodromo Nazionale di Monza - Combined without first chicane",
                 url: "https://youtu.be/IBlwz3SltOw?t=1113"
             },
             {
@@ -408,8 +408,8 @@ const broadcasts = [
                 url: "https://youtu.be/QeZC9_JPJpA?t=884"
             },
             {
-                title: "R9: Monza",
-                alternateTitle: "Autodromo Nazionale di Monza",
+                title: "R9: Monza without first chicane",
+                alternateTitle: "Autodromo Nazionale di Monza - GP without first chicane",
                 url: "https://youtu.be/hAZ36kU50cM?t=1220"
             },
             {
