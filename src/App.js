@@ -60,7 +60,7 @@ class App extends React.Component {
     handleSearch(event) {
         this.setState({
             broadcastSearchQuery: event.target.value,
-            broadcastSearchResults: this.fuse.search(event.target.value),
+            broadcastSearchResults: this.fuse.search(event.target.value).reverse(),
         })
     }
 
