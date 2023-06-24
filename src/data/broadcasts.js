@@ -435,12 +435,12 @@ const broadcasts = [
             {
                 title: "R1: Nürburgring Combined - 24H",
                 alternateTitle: "Nurburgring Combined - 24H",
-                url: "https://youtu.be/CoYx_xkUnqw"
+                url: "https://youtu.be/CoYx_xkUnqw?t=878"
             },
             {
                 title: "R2: Aragón - Outer",
                 alternateTitle: "MotorLand Aragon - Outer",
-                url: ""
+                url: "https://youtu.be/c7K7zlwEr0w?t=875"
             },
             {
                 title: "R3: Phillip Island",
