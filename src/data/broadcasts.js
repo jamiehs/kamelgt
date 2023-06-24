@@ -369,9 +369,60 @@ const broadcasts = [
         endDate: "2023-08-29",
         youTube: [
             {
-                title: "R1: Nürburgring Combined",
-                alternateTitle: "Nurburgring Combined",
+                title: "R1: Nürburgring Combined - 24H",
+                alternateTitle: "Nurburgring Combined - 24H",
                 url: "https://youtu.be/CoYx_xkUnqw"
+            },
+            {
+                title: "R2: Aragón - Outer",
+                alternateTitle: "MotorLand Aragon - Outer",
+                url: ""
+            },
+            {
+                title: "R3: Phillip Island",
+                url: ""
+            },
+            {
+                title: "R4: Le Mans Historic",
+                alternateTitle: "Circuit des 24 Heures du Mans - Historic",
+                url: ""
+            },
+            {
+                title: "R5: Spa",
+                alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits",
+                url: ""
+            },
+            {
+                title: "R6: Homestead Miami",
+                alternateTitle: "Homestead Miami Speedway - Road Course B",
+                url: ""
+            },
+            {
+                title: "R7: CTMP 'Mosport'",
+                alternateTitle: "Canadian Tire Motorsport Park",
+                url: ""
+            },
+            {
+                title: "R8: Watkins Glen - Classic Boot",
+                alternateTitle: "Watkins Glen International - Classic Boot",
+                url: ""
+            },
+            {
+                title: "R9: Road Atlanta",
+                url: ""
+            },
+            {
+                title: "R10: Willow Springs",
+                url: ""
+            },
+            {
+                title: "R11: Red Bull Ring",
+                url: ""
+            },
+            {
+                title: "R12: Bathurst",
+                alternateTitle: "Mount Panorama Circuit",
+                url: ""
             },
         ]
     }
