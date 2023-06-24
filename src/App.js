@@ -44,6 +44,7 @@ class App extends React.Component {
             threshold: 0.2,
             distance: 200,
             minMatchCharLength: 1,
+            shouldSort: false,
         })
     }
     componentWillUnmount() {
