@@ -82,6 +82,10 @@
         font-size: 3.1vw;
         margin: 0;
         display: inline-block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
         
         @media (min-width: $small-width) {
             font-size: 2.3vw;
@@ -102,6 +106,7 @@
         overflow: hidden;
         box-shadow: 1px 1px 1px #666;
         max-width: 100%;
+        background-color: $always-black;
 
         
         &:after {
@@ -134,17 +139,17 @@
             position: relative;
             border: solid 1px $dark-bg;
 
-            @media (min-width: $large-width) {
-                &.jump-1 {
-                    // animation: videoJump1 75ms infinite;
-                }
-                &.jump-2 {
-                    // animation: videoJump2 70ms infinite;
-                }
-                &.jump-3 {
-                    // animation: videoJump3 67ms infinite;
-                }
-            }
+            // @media (min-width: $large-width) {
+            //     &.jump-1 {
+            //         animation: videoJump1 75ms infinite;
+            //     }
+            //     &.jump-2 {
+            //         animation: videoJump2 70ms infinite;
+            //     }
+            //     &.jump-3 {
+            //         animation: videoJump3 67ms infinite;
+            //     }
+            // }
 
 
             .glitch {
@@ -201,7 +206,6 @@
 
             .glitch {
                 opacity: 0.75;
-                // background-size: 103% 106%;
             }
         }
     }

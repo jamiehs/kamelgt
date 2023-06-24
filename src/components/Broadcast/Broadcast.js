@@ -28,18 +28,29 @@ class Broadcast extends React.Component {
         } = this.props
 
         return (
-            <div className="Broadcast">
-                <a href={url} target="_blank" rel="noreferrer">
-                    <h3>{title}</h3>
-                </a>
+            url ? (
+                <div className="Broadcast">
+                    <a className="no-icon" href={url} target="_blank" rel="noreferrer">
+                        <h3 title={title}>{title}</h3>
+                    </a>
                     <div className="yt-video">
-                <a className="no-icon" href={url} target="_blank" rel="noreferrer">
-                    <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(url)}/3.jpg)`}}>
-                        <div className={`glitch glitch-${this.state.glitchId}`}></div>
+                        <a className="no-icon" href={url} target="_blank" rel="noreferrer">
+                            <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(url)}/3.jpg)`}}>
+                                <div className={`glitch glitch-${this.state.glitchId}`}></div>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
+            ) : (
+                <div className="Broadcast">
+                    <h3 title={title}>{title}</h3>
+                    <div className="yt-video">
+                        <div className={`thumb jump-${this.state.videoGlitchId}`}>
+                            <div className={`glitch glitch-${this.state.glitchId}`}></div>
+                        </div>
                     </div>
-            </div>
+                </div>
+            )
         );
     }
 }

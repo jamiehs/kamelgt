@@ -333,7 +333,7 @@ class App extends React.Component {
                         broadcastSearchResults.length > 0 ? (
                             <div className="videos-grid">
                                 {broadcastSearchResults.map(result => {
-                                    return <Broadcast key={result.item.url} title={`${result.item.id} - ${result.item.title}`} url={result.item.url} />
+                                    return <Broadcast key={`${result.item.url}.${result.item.id}.${result.item.title}`} title={`${result.item.id} - ${result.item.title}`} url={result.item.url} />
                                 })}
                             </div>
                         ) : (
@@ -346,8 +346,8 @@ class App extends React.Component {
                                     <div key={season.id} className="videos-grid">
                                         {season.youTube.map(week => {
                                             const {url, title} = week
-                                            if(url && url !== '' && title && title !== '') {
-                                                return <Broadcast key={url} title={title} url={url} />
+                                            if(title && title !== '') {
+                                                return <Broadcast key={`${season.id}.${url}.${title}`} title={title} url={url} />
                                             } else {
                                                 return null // no valid URL or title
                                             }
