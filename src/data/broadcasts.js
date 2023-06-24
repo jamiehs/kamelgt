@@ -1,5 +1,66 @@
 const broadcasts = [
     {
+        id: "21S4",
+        label: "2021 Season 4",
+        startDate: "2021-09-14",
+        endDate: "2021-11-30",
+        youTube: [
+            {
+                title: "R1: Road America",
+                url: "https://youtu.be/wG_Vibek5JQ?t=1087"
+            },
+            {
+                title: "R2: Suzuka",
+                alternateTitle: "Circuit Zolder - Alternate",
+                url: "https://youtu.be/dwz_v-di004?t=1063"
+            },
+            {
+                title: "R3: VIR",
+                alternateTitle: "Virginia International Raceway",
+                url: "https://youtu.be/1YRHC-eZv8g?t=1006"
+            },
+            {
+                title: "R4: Long Beach",
+                url: "https://youtu.be/zSYrVvJN1Uo?t=1028"
+            },
+            {
+                title: "R5: Sebring",
+                url: "https://youtu.be/xHFpvV6JFR0?t=1040"
+            },
+            {
+                title: "R6: Phillip Island",
+                url: "https://youtu.be/DQSVQW8SY3A?t=1012"
+            },
+            {
+                title: "R7: Hungaroring",
+                url: "https://youtu.be/BDaXviKVozM?t=1073"
+            },
+            {
+                title: "R8: Summit Point",
+                url: "https://youtu.be/AKsKbJkKeJM?t=1015"
+            },
+            {
+                title: "R9: CTMP 'Mosport'",
+                alternateTitle: "Canadian Tire Motorsport Park",
+                url: "https://youtu.be/JZOB2_rFG7M?t=1141"
+            },
+            {
+                title: "R10: Spa",
+                alternateTitle: "Circuit de Spa-Francorchamps - Endurance",
+                url: "https://youtu.be/gHzTJDpov40?t=1081"
+            },
+            {
+                title: "R11: Red Bull Ring",
+                url: "https://youtu.be/XzPKb2U9W3E?t=1134"
+            },
+            {
+                title: "R12: Watkins Glen - Classic Boot",
+                alternateTitle: "Watkins Glen International - Classic Boot",
+                url: "https://youtu.be/Z1TfQZ3WcOA?t=1072"
+            },
+        ]
+    },
+    {
         id: "22S1",
         label: "2022 Season 1",
         startDate: "2021-12-14",
@@ -21,7 +82,7 @@ const broadcasts = [
             },
             {
                 title: "R4: Nürburgring Combined",
-                alternateTitle: "Nurburgring Combined 24H",
+                alternateTitle: "Nurburgring Combined - 24H",
                 url: "https://youtu.be/jGq82uRosIM?t=841"
             },
             {
@@ -75,6 +136,7 @@ const broadcasts = [
             },
             {
                 title: "R2: Homestead Miami",
+                alternateTitle: "Homestead Miami Speedway - Road Course B",
                 url: "https://www.youtube.com/watch?v=vhaQO7XM5c0"
             },
             {
@@ -130,6 +192,7 @@ const broadcasts = [
         youTube: [
             {
                 title: "R1: Le Mans",
+                alternateTitle: "Circuit des 24 Heures du Mans",
                 url: "https://youtu.be/8zgn6ACLQlw?t=1095"
             },
             {
@@ -137,8 +200,8 @@ const broadcasts = [
                 url: "https://youtu.be/5huzNPgmsJc?t=1043"
             },
             {
-                title: "R3: Watkins Glen",
-                alternateTitle: "Watkins Glen - Boot",
+                title: "R3: Watkins Glen - Boot",
+                alternateTitle: "Watkins Glen International - Boot",
                 url: "https://youtu.be/bncdRkxyUZI?t=1208"
             },
             {
@@ -150,7 +213,7 @@ const broadcasts = [
                 url: "https://youtu.be/hHPyFl15foI?t=1199"
             },
             {
-                title: "R6: Silverstone Historic GP",
+                title: "R6: Silverstone - Historic GP",
                 url: "https://youtu.be/ulo0uVTLQy4?t=1167"
             },
             {
@@ -158,8 +221,8 @@ const broadcasts = [
                 url: "https://youtu.be/O2G6NyzfsZ4?t=1167"
             },
             {
-                title: "R8: Nürburgring GP",
-                alternateTitle: "Nurburgring GP",
+                title: "R8: Nürburgring GP without arena",
+                alternateTitle: "Nurburgring GP without arena",
                 url: "https://youtu.be/ci4nn0qrgWk?t=1086"
             },
             {
@@ -188,8 +251,8 @@ const broadcasts = [
         endDate: "2022-11-29",
         youTube: [
             {
-                title: "R1: Monza Combined",
-                alternateTitle: "Autodromo Nazionale di Monza Combined",
+                title: "R1: Monza - Combined",
+                alternateTitle: "Autodromo Nazionale di Monza - Combined",
                 url: "https://youtu.be/IBlwz3SltOw?t=1113"
             },
             {
@@ -248,8 +311,8 @@ const broadcasts = [
         endDate: "2023-02-28",
         youTube: [
             {
-                title: "R1: Nürburgring Combined",
-                alternateTitle: "Nurburgring Combined",
+                title: "R1: Nürburgring Combined - 24H",
+                alternateTitle: "Nurburgring Combined - 24H",
                 url: "https://youtu.be/qnkOVXM99q0?=718"
             },
             {
@@ -280,6 +343,7 @@ const broadcasts = [
             },
             {
                 title: "R8: Le Mans Historic",
+                alternateTitle: "Circuit des 24 Heures du Mans - Historic",
                 url: "https://youtu.be/a4JHWiWrxwo?t=1024"
             },
             {
@@ -287,7 +351,7 @@ const broadcasts = [
                 url: "https://youtu.be/SA_9qOT8THo?t=1031"
             },
             {
-                title: "R10: Watkins Glen Classic",
+                title: "R10: Watkins Glen Classic Boot",
                 alternateTitle: "Watkins Glen - Classic Boot",
                 url: "https://youtu.be/qVbLZmG_VNY?t=877"
             },
