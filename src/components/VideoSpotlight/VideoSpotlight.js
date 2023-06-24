@@ -24,7 +24,7 @@ function VideoSpotlight(props) {
                             <a className="no-icon" href={youTubeUrl} target="_blank" rel="noreferrer">
                                 <div
                                     className="thumbnail"
-                                    style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(youTubeUrl)}/3.jpg)`}}
+                                    style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(youTubeUrl)}/hq3.jpg)`}}
                                 />
                             </a>
                         </div>

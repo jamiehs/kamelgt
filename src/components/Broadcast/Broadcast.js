@@ -35,7 +35,7 @@ class Broadcast extends React.Component {
                     </a>
                     <div className="yt-video">
                         <a className="no-icon" href={url} target="_blank" rel="noreferrer">
-                            <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(url)}/3.jpg)`}}>
+                            <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(url)}/hq3.jpg)`}}>
                                 <div className={`glitch glitch-${this.state.glitchId}`}></div>
                             </div>
                         </a>
