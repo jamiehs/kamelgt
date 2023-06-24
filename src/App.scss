@@ -248,7 +248,12 @@ body {
           border-radius: 5px;
           border: solid 1px transparent;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 0.85rem;
+          width: 100%;
+          @media (min-width: $small-width) {
+            font-size: 1rem;
+            width: auto;
+          }
       }
     }
 
