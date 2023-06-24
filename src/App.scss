@@ -220,18 +220,25 @@ body {
   }
 
   .broadcast {
-    .broadcast-season-selector {
+
+    .broadcast-season-selector,
+    .broadcast-searcher {
       margin-bottom: 1em;
+
+      h3 {
+        margin: 0;
+        margin-right: 0.66em;
+      }
 
       @media (min-width: $small-width) {
         display: flex;
         align-items: center;
       }
+    }
 
-
-      h3 {
-        margin: 0;
-        margin-right: 0.66em;
+    .broadcast-season-selector {
+      &[data-disabled="true"] {
+        opacity: 0.5;
       }
 
       select.broadcast-season {
@@ -245,6 +252,25 @@ body {
       }
     }
 
+    .broadcast-searcher {
+      input {
+        font-size: 1rem;
+        border-radius: $callout-border-radius;
+        border: solid 1px $brown;
+        padding: 0.25em;
+        width: 100%;
+
+        @media (min-width: $small-width) {
+          width: 15.6rem;
+        }
+      }
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 3.8rem 0;
+      font-size: 1.5rem;
+    }
     
     .videos-grid {
       display: grid;

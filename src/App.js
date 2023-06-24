@@ -1,5 +1,6 @@
 import './App.scss';
 import React from 'react';
+import Fuse from 'fuse.js';
 import Timeslot from './components/Timeslot/Timeslot.js';
 import Broadcast from './components/Broadcast/Broadcast.js';
 import Announcement from './components/Announcement/Announcement.js';
@@ -17,13 +18,33 @@ class App extends React.Component {
         super(props)
         this.state = {
             currentWeekData: getCurrentWeekData(seasonSetups),
-            broadcastsSeason: broadcasts[broadcasts.length-1].id
+            broadcastsSeason: broadcasts[broadcasts.length-1].id,
+            broadcastSearchQuery: null,
         }
     }
     componentDidMount() {
         this.interval = setInterval(() => this.setState({
             currentWeekData: getCurrentWeekData(seasonSetups)
         }), 1000);
+
+        this.flattenedBroadcasts = broadcasts.map((season) => {
+            return season.youTube.map((event) => {
+                return {
+                    id: season.id,
+                    label: season.label,
+                    title: event.title,
+                    alternateTitle: event.alternateTitle,
+                    url: event.url,
+                }
+            })
+        }).flat()
+
+        this.fuse = new Fuse(this.flattenedBroadcasts, {
+            keys: ['title', 'alternateTitle'],
+            threshold: 0.2,
+            distance: 200,
+            minMatchCharLength: 1,
+        })
     }
     componentWillUnmount() {
         clearInterval(this.interval);
@@ -36,8 +57,21 @@ class App extends React.Component {
         })
     }
 
+    handleSearch(event) {
+        this.setState({
+            broadcastSearchQuery: event.target.value,
+            broadcastSearchResults: this.fuse.search(event.target.value),
+        })
+    }
+
     render() {
         let currentWeek = this.state.currentWeekData
+        let {
+            broadcastSearchQuery,
+            broadcastSearchResults
+        } = this.state
+
+        const hasBroadcastSearchQuery = broadcastSearchQuery && broadcastSearchQuery !== ''
 
         return (
             <div className="App">
@@ -267,10 +301,10 @@ class App extends React.Component {
                 </div>
                 <div id="broadcasts" className="broadcast section">
                     <h2 className="title">Previous Broadcast Races</h2>
-                    
-                    <div className="broadcast-season-selector">
+                    <div className="broadcast-season-selector" data-disabled={hasBroadcastSearchQuery}>
                         <h3>Choose a season:</h3>
                         <select
+                            disabled={hasBroadcastSearchQuery}
                             className="broadcast-season"
                             defaultValue={this.state.broadcastsSeason}
                             onChange={(event) => this.handleBroadcastSeasonChange(event)}
@@ -286,24 +320,44 @@ class App extends React.Component {
                             ))}
                         </select>
                     </div>
-                    {broadcasts.map(season => {
-                        if(season && season.id === this.state.broadcastsSeason) {
-                            return (
-                                <div key={season.id} className="videos-grid">
-                                    {season.youTube.map(week => {
-                                        const {url, title} = week
-                                        if(url && url !== '' && title && title !== '') {
-                                            return <Broadcast key={url} title={title} url={url} />
-                                        } else {
-                                            return null // no valid URL or title
-                                        }
-                                    })}
-                                </div>
-                            )
-                        } else {
-                            return null // season is invalid or missing
-                        }
-                    })}
+
+                    <div className="broadcast-searcher">
+                        <h3>Search all broadcasts:</h3>
+                        <div className="search-controls">
+                            <input type="search" placeholder="lime rock park" onChange={(event) => {this.handleSearch(event)}} />
+                        </div>
+                    </div>
+
+                    {hasBroadcastSearchQuery ? (
+                        broadcastSearchResults.length > 0 ? (
+                            <div className="videos-grid">
+                                {broadcastSearchResults.map(result => {
+                                    return <Broadcast key={result.item.url} title={`${result.item.id} - ${result.item.title}`} url={result.item.url} />
+                                })}
+                            </div>
+                        ) : (
+                            <div className="no-results">No results</div>
+                        )
+                    ) : (
+                        broadcasts.map(season => {
+                            if(season && season.id === this.state.broadcastsSeason) {
+                                return (
+                                    <div key={season.id} className="videos-grid">
+                                        {season.youTube.map(week => {
+                                            const {url, title} = week
+                                            if(url && url !== '' && title && title !== '') {
+                                                return <Broadcast key={url} title={title} url={url} />
+                                            } else {
+                                                return null // no valid URL or title
+                                            }
+                                        })}
+                                    </div>
+                                )
+                            } else {
+                                return null // season is invalid or missing
+                            }
+                        })
+                    )}
                 </div>
                 <div id="shifting" className="audi-shifting section">
                     <h2 className="title">Taming the Audi <span className="hidden-xs">90 GTO</span> Gearbox</h2>

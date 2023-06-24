@@ -19,6 +19,7 @@ const broadcasts = [
             },
             {
                 title: "R4: Montreal",
+                alternateTitle: "Circuit Gilles Villeneuve",
                 url: "https://youtu.be/PyKE722KNoQ?t=837"
             },
             {
@@ -31,10 +32,12 @@ const broadcasts = [
             },
             {
                 title: "R7: Interlagos",
+                alternateTitle: "Autódromo José Carlos Pace",
                 url: "https://youtu.be/OpP7wrWOsyA?t=1055"
             },
             {
                 title: "R8: Spa",
+                alternateTitle: "Circuit de Spa-Francorchamps",
                 url: "https://youtu.be/4SdGFU0hk-c?t=120"
             },
             {
@@ -71,6 +74,7 @@ const broadcasts = [
             },
             {
                 title: "R3: Watkins Glen",
+                alternateTitle: "Watkins Glen - Boot",
                 url: "https://youtu.be/bncdRkxyUZI?t=1208"
             },
             {
@@ -90,7 +94,8 @@ const broadcasts = [
                 url: "https://youtu.be/O2G6NyzfsZ4?t=1167"
             },
             {
-                title: "R8: Nurburgring GP",
+                title: "R8: Nürburgring GP",
+                alternateTitle: "Nurburgring GP",
                 url: "https://youtu.be/ci4nn0qrgWk?t=1086"
             },
             {
@@ -99,6 +104,7 @@ const broadcasts = [
             },
             {
                 title: "R10: CTMP 'Mosport'",
+                alternateTitle: "Canadian Tire Motorsport Park",
                 url: "https://youtu.be/WbBzeqt_Pq4?t=1024"
             },
             {
@@ -119,6 +125,7 @@ const broadcasts = [
         youTube: [
             {
                 title: "R1: Monza Combined",
+                alternateTitle: "Autodromo Nazionale di Monza Combined",
                 url: "https://youtu.be/IBlwz3SltOw?t=1113"
             },
             {
@@ -147,10 +154,12 @@ const broadcasts = [
             },
             {
                 title: "R8: Spa",
+                alternateTitle: "Circuit de Spa-Francorchamps",
                 url: "https://youtu.be/3coWzmh3vMk?t=1014"
             },
             {
                 title: "R9: Imola",
+                alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari",
                 url: "https://youtu.be/dq0vS6DnknY?t=1148"
             },
             {
@@ -159,6 +168,7 @@ const broadcasts = [
             },
             {
                 title: "R11: VIR",
+                alternateTitle: "Virginia International Raceway",
                 url: "https://youtu.be/iJRGkebK6kM?t=993"
             },
             {
@@ -174,7 +184,8 @@ const broadcasts = [
         endDate: "2023-02-28",
         youTube: [
             {
-                title: "R1: Nurburgring Combined",
+                title: "R1: Nürburgring Combined",
+                alternateTitle: "Nurburgring Combined",
                 url: "https://youtu.be/qnkOVXM99q0?=718"
             },
             {
@@ -211,6 +222,7 @@ const broadcasts = [
             },
             {
                 title: "R10: Watkins Glen Classic",
+                alternateTitle: "Watkins Glen - Classic Boot",
                 url: "https://youtu.be/qVbLZmG_VNY?t=877"
             },
             {
@@ -239,10 +251,12 @@ const broadcasts = [
             },
             {
                 title: "R3: Montreal",
+                alternateTitle: "Circuit Gilles Villeneuve",
                 url: "https://youtu.be/MVY4NrQ6xwI?t=1342"
             },
             {
                 title: "R4: Nürburgring GP",
+                alternateTitle: "Nurburgring GP",
                 url: "https://youtu.be/5TYJjykBfb0?t=961"
             },
             {
@@ -251,10 +265,12 @@ const broadcasts = [
             },
             {
                 title: "R6: VIR",
+                alternateTitle: "Virginia International Raceway",
                 url: "https://youtu.be/z8xsIcXdvyw?t=970"
             },
             {
                 title: "R7: Interlagos",
+                alternateTitle: "Autódromo José Carlos Pace",
                 url: "https://youtu.be/FjyxKwoi9KY?t=983"
             },
             {
@@ -263,6 +279,7 @@ const broadcasts = [
             },
             {
                 title: "R9: Monza",
+                alternateTitle: "Autodromo Nazionale di Monza",
                 url: "https://youtu.be/hAZ36kU50cM?t=1220"
             },
             {
@@ -287,6 +304,7 @@ const broadcasts = [
         youTube: [
             {
                 title: "R1: Nürburgring Combined",
+                alternateTitle: "Nurburgring Combined",
                 url: "https://youtu.be/CoYx_xkUnqw"
             },
         ]
