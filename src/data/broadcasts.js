@@ -85,7 +85,7 @@ const broadcasts = [
                 url: "https://youtu.be/gRE0HnzSVxU?t=1064"
             },
             {
-                title: "R4: Nürburgring Combined",
+                title: "R4: Nürburgring Combined - 24H",
                 alternateTitle: "Nurburgring Combined - 24H",
                 url: "https://youtu.be/jGq82uRosIM?t=841"
             },
