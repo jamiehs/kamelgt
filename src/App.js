@@ -28,10 +28,12 @@ class App extends React.Component {
         }), 1000);
 
         this.flattenedBroadcasts = broadcasts.map((season) => {
-            return season.youTube.map((event) => {
+            return season.youTube.map((event, index) => {
+                const round = index + 1
                 return {
                     id: season.id,
                     label: season.label,
+                    round: round,
                     title: event.title,
                     alternateTitle: event.alternateTitle,
                     url: event.url,
@@ -333,7 +335,13 @@ class App extends React.Component {
                         broadcastSearchResults.length > 0 ? (
                             <div className="videos-grid">
                                 {broadcastSearchResults.map(result => {
-                                    return <Broadcast key={`${result.item.url}.${result.item.id}.${result.item.title}`} title={`${result.item.id} - ${result.item.title}`} url={result.item.url} />
+                                    return (
+                                        <Broadcast
+                                            key={`${result.item.url}.${result.item.id}.${result.item.title}`}
+                                            title={`${result.item.id} - R${result.item.round}: ${result.item.title}`}
+                                            url={result.item.url}
+                                        />
+                                    )
                                 })}
                             </div>
                         ) : (
@@ -344,10 +352,17 @@ class App extends React.Component {
                             if(season && season.id === this.state.broadcastsSeason) {
                                 return (
                                     <div key={season.id} className="videos-grid">
-                                        {season.youTube.map(week => {
+                                        {season.youTube.map((week, index) => {
+                                            const round = index + 1
                                             const {url, title} = week
                                             if(title && title !== '') {
-                                                return <Broadcast key={`${season.id}.${url}.${title}`} title={title} url={url} />
+                                                return (
+                                                    <Broadcast
+                                                        key={`${season.id}.${url}.${title}`}
+                                                        title={`R${round}: ${title}`}
+                                                        url={url}
+                                                    />
+                                                )
                                             } else {
                                                 return null // no valid URL or title
                                             }
