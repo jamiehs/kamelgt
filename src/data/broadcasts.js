@@ -82,7 +82,7 @@ const broadcasts = [
             },
             {
                 title: "COTA",
-                title: "Circuit of the Americas",
+                alternateTitle: "Circuit of the Americas",
                 url: "https://youtu.be/T08kTnTDG6I?t=1045"
             },
             {
