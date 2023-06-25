@@ -1,5 +1,187 @@
 const broadcasts = [
     {
+        id: "21S1",
+        label: "2021 Season 1",
+        startDate: "2020-12-15",
+        endDate: "2021-03-02",
+        youTube: [
+            {
+                title: "Le Mans",
+                alternateTitle: "Circuit des 24 Heures du Mans",
+                url: "https://youtu.be/N3a92hCdrgU?t=1007"
+            },
+            {
+                title: "Long Beach",
+                url: "https://youtu.be/FuuoW59lBFc?t=903"
+            },
+            {
+                title: "Donington Park",
+                url: "https://youtu.be/EscrCMzMztE?t=795"
+            },
+            {
+                title: "Suzuka",
+                url: "https://youtu.be/nMeaRIYCH7I?t=837"
+            },
+            {
+                title: "Monza without first chicane",
+                alternateTitle: "Autodromo Nazionale Monza - GP without first chicane",
+                url: "https://youtu.be/wFQ7zzE-SyY?t=879"
+            },
+            {
+                title: "Zolder",
+                alternateTitle: "Circuit Zolder",
+                url: "https://youtu.be/C3975KG1JN8?t=672"
+            },
+            {
+                title: "Sebring",
+                url: "https://youtu.be/d22fY273Q94?t=676"
+            },
+            {
+                title: "Detroit Belle Isle",
+                url: "https://youtu.be/RPC__My3ckc?t=716"
+            },
+            {
+                title: "Barcelona Historic",
+                alternateTitle: "Circuit de Barcelona-Catalunya - Historic",
+                url: "https://youtu.be/dkDVOSXntbI?t=692"
+            },
+            {
+                title: "Phillip Island",
+                url: "https://youtu.be/8qMi9IysdVQ?t=799"
+            },
+            {
+                title: "CTMP 'Mosport'",
+                alternateTitle: "Canadian Tire Motorsport Park",
+                url: "https://youtu.be/OoszG0BC35A?t=630"
+            },
+            {
+                title: "Nordschleife - Industriefahrten",
+                alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten",
+                url: "https://youtu.be/cVbrave5ytw?t=473"
+            },
+        ]
+    },
+    {
+        id: "21S2",
+        label: "2021 Season 2",
+        startDate: "2021-03-16",
+        endDate: "2021-06-01",
+        youTube: [
+            {
+                title: "Road America",
+                url: "https://youtu.be/DnIP5BLauMw?t=757"
+            },
+            {
+                title: "Okayama",
+                url: "https://youtu.be/d1tdobZ4XCY?t=812"
+            },
+            {
+                title: "Interlagos",
+                alternateTitle: "Autódromo José Carlos Pace",
+                url: "https://youtu.be/84BrJFF9MW8?t=750"
+            },
+            {
+                title: "COTA",
+                title: "Circuit of the Americas",
+                url: "https://youtu.be/T08kTnTDG6I?t=1045"
+            },
+            {
+                title: "Spa",
+                alternateTitle: "Circuit de Spa-Francorchamps - Endurance",
+                url: "https://youtu.be/GxvgP0sFyAA?t=1022"
+            },
+            {
+                title: "Indy - Road 2009",
+                alternateTitle: "Indianapolis Motor Speedway - Road 2009",
+                url: "https://youtu.be/gvJqqVCsChI?t=995"
+            },
+            {
+                title: "Twin Ring Motegi",
+                url: "https://youtu.be/J1A1M9BrLjY?t=911"
+            },
+            {
+                title: "Summit Point",
+                url: "https://youtu.be/TbOJqZUhY-U?t=885"
+            },
+            {
+                title: "Donington Park",
+                url: "https://youtu.be/68Ex20Maghg?t=728"
+            },
+            {
+                title: "Watkins Glen - Classic Boot",
+                alternateTitle: "Watkins Glen International - Classic Boot",
+                url: "https://youtu.be/uBxwHgQmWXw?t=891"
+            },
+            {
+                title: "Lime Rock Park - Classic",
+                url: "https://youtu.be/fCQIe68W84I?t=935"
+            },
+            {
+                title: "Road Atlanta",
+                url: "https://youtu.be/zb3SutQmlFQ?t=940"
+            },
+        ]
+    },
+    {
+        id: "21S3",
+        label: "2021 Season 3",
+        startDate: "2021-06-15",
+        endDate: "2021-08-31",
+        youTube: [
+            {
+                title: "Detroit Belle Isle",
+                url: "https://youtu.be/hh_hS92xkNc?t=1036"
+            },
+            {
+                title: "Daytona - NASCAR Road ",
+                url: "https://youtu.be/s04-PFAFAuM?t=1106"
+            },
+            {
+                title: "Brands Hatch",
+                url: "https://youtu.be/ioHcrCZ5aPI?t=1050"
+            },
+            {
+                title: "Zandvoort",
+                url: "https://youtu.be/0rhrMP1Yvgs?t=1005"
+            },
+            {
+                title: "Monza",
+                alternateTitle: "Autodromo Nazionale Monza",
+                url: "https://youtu.be/522VAxzffZU?t=1098"
+            },
+            {
+                title: "Silverstone - International",
+                url: "https://youtu.be/6caKtbus_hg?t=1074"
+            },
+            {
+                title: "Charlotte - Roval",
+                url: "https://youtu.be/4dbIhojc9c8?t=1219"
+            },
+            {
+                title: "Nürburgring GP",
+                url: "https://youtu.be/JZqw4bX5bOY?t=1100"
+            },
+            {
+                title: "Barber Motorsports Park",
+                url: "https://youtu.be/8VvFCRllj00?t=1082"
+            },
+            {
+                title: "Bathurst",
+                alternateTitle: "Mount Panorama Circuit",
+                url: "https://youtu.be/qcytES55iYg?t=1086"
+            },
+            {
+                title: "Oulton Park - Intl w/out Hislop",
+                url: "https://youtu.be/CRE872nvMY8?t=1150"
+            },
+            {
+                title: "Le Mans",
+                alternateTitle: "Circuit des 24 Heures du Mans",
+                url: "https://youtu.be/prDJOMQ6lsk?t=1125"
+            },
+        ]
+    },
+    {
         id: "21S4",
         label: "2021 Season 4",
         startDate: "2021-09-14",
@@ -11,7 +193,6 @@ const broadcasts = [
             },
             {
                 title: "Suzuka",
-                alternateTitle: "Circuit Zolder - Alternate",
                 url: "https://youtu.be/dwz_v-di004?t=1063"
             },
             {
@@ -175,7 +356,7 @@ const broadcasts = [
                 url: "https://youtu.be/4SdGFU0hk-c?t=120"
             },
             {
-                title: "Lime Rock Park",
+                title: "Lime Rock Park - West Bend Chicane",
                 url: "https://youtu.be/ESK2dBakSM8?t=989"
             },
             {
@@ -328,7 +509,8 @@ const broadcasts = [
                 url: "https://youtu.be/lPRCKZcIrxk?t=720"
             },
             {
-                title: "Indianapolis",
+                title: "Indy - Road",
+                alternateTitle: "Indianapolis Motor Speedway - Road",
                 url: "https://youtu.be/I-4EdrrgFtM?t=520"
             },
             {
