@@ -211,7 +211,7 @@ class App extends React.Component {
                         <dt>Do I need to pit?</dt>
                         <dd>
                             <p>
-                                Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long, or (rarely) a number of laps approximating 60 minutes; usually Le Mans, Monza Combined, or the Nordschleife.
+                                Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long, or (rarely) a number of laps approximating 40 or 60 minutes; usually Le Mans, Monza Combined, or the Nordschleife.
                             </p>
                         </dd>
 
