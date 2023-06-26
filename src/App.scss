@@ -72,6 +72,20 @@ ul, ol {
   }
 }
 
+.inverted-text {
+  color: $light-text;
+
+  a, a:link {
+    color: $light-text;
+  
+    &[target="_blank"] {
+      &::after {
+        background-color: $light-text;
+      }
+    }
+  }
+}
+
 .badge {
   background-color: $dark-bg;
   color: $light-text;
@@ -325,6 +339,7 @@ body {
       font-size: 1.2em;
       margin-left: -0.6em;
       margin-right: -0.6em;
+      border-radius: $border-radius;
   
       @media (min-width: $small-width) {
         font-size: 1.5em;
@@ -340,12 +355,28 @@ body {
     font-style: italic;
   }
   
+  .timeslots-container {
+    .timeslots-wrapper:last-child {
+      @media (min-width: $large-width) {
+        margin-bottom: 6em;
+      }
+    }
+  }
+
   .timeslots-wrapper {
     background-color: $dark-bg;
     overflow: hidden;
-  
-    @media (min-width: $large-width) {
-      margin-bottom: 6em;
+    
+    &.lighter {
+      background-color: lighten($dark-bg, 5%);
+    }
+    
+    @media (min-width: $small-width) {
+      .section {
+        h2.title {
+          padding-left: 0;
+        }
+      }
     }
   
     .notes {
@@ -353,10 +384,6 @@ body {
       margin-top: -0.66em;
       margin-bottom: 1em;
       
-      @media (min-width: $small-width) {
-        padding-left: 1rem;
-      }  
-  
       @media (min-width: $large-width) {
         font-size: 1em;
       }  
@@ -394,20 +421,6 @@ body {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         column-gap: 1em;
         row-gap: 1em;
-  
-        .Timeslot {
-          margin-top: 0;
-  
-          &:first-child {
-            margin-top: 0;
-          }
-        }  
-      }
-  
-      @media (min-width: $large-width) {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        column-gap: 1em;
   
         .Timeslot {
           margin-top: 0;

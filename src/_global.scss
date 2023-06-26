@@ -23,7 +23,8 @@ $always-black: #000;
 $light-bg: #fff;
 $dark-text: #333;
 
-$dark-bg: #424242;
+$dark-bg: #3c3c3c;
 $light-text: #fff;
 
-$callout-border-radius: 4px;
+$border-radius: 4px;
+$callout-border-radius: $border-radius;

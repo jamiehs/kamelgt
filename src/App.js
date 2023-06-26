@@ -117,78 +117,113 @@ class App extends React.Component {
                 >
                     Jouko Leskela and Ville Ruola battle for the GTO lead in the Kamel GT Series - side by side for a lap and a half!  Massive respect from everyone involved, including the faster GTP cars behind.
                 </VideoSpotlight>
-                <div id="timeslots" className="timeslots-wrapper">
-                    <div className="section">
-                        <header>
-                            <h2 className="title">
-                                Official Race Times
-                                {currentWeek && (
-                                    <span className="week-info">
-                                        Week {currentWeek.week}: {currentWeek.label}
-                                    </span>
+                <div className="timeslots-container">
+                    <div id="timeslots" className="timeslots-wrapper">
+                        <div className="section">
+                            <header>
+                                <h2 className="title">
+                                    Official Race Times
+                                    {currentWeek && (
+                                        <span className="week-info">
+                                            Week {currentWeek.week}: {currentWeek.label}
+                                        </span>
+                                    )}
+                                </h2>
+                                {currentWeek.notes && currentWeek.notes.length > 0 && (
+                                    <div className="notes">
+                                        {currentWeek.notes.map((note, i) => <div key={i} className="note badge light">{note}</div>)}
+                                    </div>
                                 )}
-                            </h2>
-                            {currentWeek.notes && currentWeek.notes.length > 0 && (
-                                <div className="notes">
-                                    {currentWeek.notes.map((note, i) => <div key={i} className="note badge light">{note}</div>)}
-                                </div>
-                            )}
-                        </header>
-                        <div className="timeslots">
-                            <Timeslot
-                                label="Midweek Madness"
-                                dayIndex={3}
-                                time="19:00"
-                                entries="48"
-                                gtoSof="2715"
-                                gtpSof="2578"
-                                guaranteed={true}
-                            >
-                                <p>
-                                    If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
-                                </p>
-                            </Timeslot>
-                            <Timeslot
-                                label="Midweek Americas"
-                                dayIndex={4}
-                                time="01:00"
-                                entries="32"
-                                gtoSof="2201"
-                                gtpSof="2165"
-                                guaranteed={true}
-                            >
-                                <p>
-                                    Wednesday race for the US time zones. Early evening on the west coast and late evening on the east&nbsp;coast.
-                                </p>
-                            </Timeslot>
-                            <Timeslot
-                                label="Friday Night Race"
-                                dayIndex={5}
-                                time="21:00"
-                                entries="49"
-                                gtoSof="2708"
-                                gtpSof="2491"
-                                guaranteed={true}
-                            >
-                                <p>
-                                    The big race that is not the broadcast race. If you want a full field to practice/compete in, this&nbsp;is&nbsp;it.
-                                </p>
-                            </Timeslot>
-                            <Timeslot
-                                label="Broadcast Race"
-                                dayIndex={6}
-                                time="17:00"
-                                entries="61"
-                                gtoSof="3281"
-                                gtpSof="2964"
-                                guaranteed={true}
-                            >
-                                <p>
-                                    <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
-                                </p>
-                            </Timeslot>
+                            </header>
+                            <div className="timeslots">
+                                <Timeslot
+                                    label="Midweek Madness"
+                                    dayIndex={3}
+                                    time="19:00"
+                                    entries="48"
+                                    gtoSof="2715"
+                                    gtpSof="2578"
+                                >
+                                    <p>
+                                        If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="Midweek Americas"
+                                    dayIndex={4}
+                                    time="01:00"
+                                    entries="32"
+                                    gtoSof="2201"
+                                    gtpSof="2165"
+                                >
+                                    <p>
+                                        Wednesday race for the US time zones. Early evening on the west coast and late evening on the east&nbsp;coast.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="Friday Night Race"
+                                    dayIndex={5}
+                                    time="21:00"
+                                    entries="49"
+                                    gtoSof="2708"
+                                    gtpSof="2491"
+                                >
+                                    <p>
+                                        The big race that is not the broadcast race. If you want a full field to practice/compete in, this&nbsp;is&nbsp;it.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="Broadcast Race"
+                                    dayIndex={6}
+                                    time="17:00"
+                                    entries="61"
+                                    gtoSof="3281"
+                                    gtpSof="2964"
+                                >
+                                    <p>
+                                        <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
+                                    </p>
+                                </Timeslot>
+                            </div>
+                            <div className="footnote">Drivers &amp; SOF data averaged from 2023 Season 2</div>
                         </div>
-                        <div className="footnote">Drivers &amp; SOF data averaged from 2023 Season 2</div>
+                    </div>
+                    <div id="proposed-timeslots" className="timeslots-wrapper lighter">
+                        <div className="section">
+                            <header className="inverted-text text-content">
+                                <h3>
+                                    Proposed Race Times - Not Guaranteed Yet
+                                </h3>
+                                <p>
+                                    Some racers can not always make the official races. We propose the following times as alternatives that <b>may not go official</b>, especially initially.
+                                </p>
+                                <p>
+                                    Just like in racing, momentum is key. If you want these proposed slots to be regular, you must show up and get others to show up as well. Join the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>, and help us plan times for the community.
+                                </p>
+                            </header>
+                            <div className="timeslots">
+                                <Timeslot
+                                    label="Pacific Americas"
+                                    dayIndex={5}
+                                    time="03:00"
+                                    regularity="Proposed"
+                                >
+                                    <p>
+                                        The US Pacific time zones can be difficult for some of the above official slots. This proposes the 03:00 GMT time slot as an alternative to the "Midweek Americas" official slot.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="Australia & New Zealand"
+                                    dayIndex={6}
+                                    time="09:00"
+                                    regularity="Proposed"
+                                >
+                                    <p>
+                                        This time-range was suggested in the VCR Discord server. It should be 5pm on the west coast, 7pm on the east coast and 9pm in NZ. Also late-morning for much of Europe. 
+                                    </p>
+                                </Timeslot>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="faq" className="faq section">

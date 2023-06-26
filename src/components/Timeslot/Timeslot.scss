@@ -4,7 +4,6 @@
     display: block;
     background-color: $timeslot-bg;
     padding: 0 1.3em;
-    border-top: solid 8px $timeslot-positive;
     overflow: hidden;
     border-radius: 4px;
 
@@ -24,13 +23,13 @@
         margin-left: -50%;
         margin-right: -50%;
         padding-left: 50%;
-        background: #d5e7ef;
+        background: #c2dfeb;
         line-height: 2.2em;
         font-size: 111%;
         border-bottom: solid 1px #bcd8e5;
         
         @media (min-width: $medium-width) {
-            font-size: 1.9vw;
+            font-size: 1.6vw;
         }
 
         @media (min-width: $large-width)  {
@@ -43,27 +42,27 @@
     .official-likelihood {
         font-size: 0.8em;
         display: block;
-        margin-top: 0.33em;
-        margin-bottom: 0.33em;
-        font-style: italic;
+        height: 0;
+        line-height: 0;
         
         @media (min-width: $medium-width) {
             text-align: center;
-            margin-top: -0.37em;
+        }
+
+        .badge {
+            font-size: 85%;
+            font-weight: 400;
+            background-color: lighten($dark-bg, 5%);
+            position: relative;
+            top: -0.75em;
+            line-height: 0.9;
         }
     }
 
-    &[data-guaranteed="true"] {
-        .official-likelihood {
-            .badge {
-                background-color: rgb(51, 132, 10);
-            }
-        }
-    }
-    
     .timeslot-date {
         font-size: 6vw;
         font-weight: 700;
+        margin-top: 0.33em;
 
         @media (min-width: $small-width)  {
             font-size: 3.05vw;
@@ -149,11 +148,6 @@
         @media (min-width: $large-width)  {
             font-size: 90%;
         }
-    }
-
-    &[data-guaranteed="false"] {
-        filter: saturate(15%);
-        background-color: rgb(255, 255, 255);
     }
 
 }

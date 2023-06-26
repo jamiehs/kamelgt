@@ -38,7 +38,7 @@ class Timeslot extends React.Component {
             gtoSof,
             gtpSof,
             children,
-            guaranteed,
+            regularity,
         } = this.props
     
         const tz = moment.tz.guess()
@@ -48,17 +48,15 @@ class Timeslot extends React.Component {
         const avgSof = Math.round((parseInt(gtoSof) + parseInt(gtpSof)) / 2)
 
         return (
-            <div className="Timeslot" data-guaranteed={guaranteed}>
+            <div className="Timeslot">
                 <h3 className="label">{label}</h3>
-                <div className="official-likelihood">
-                    <div className="badge">
-                        {guaranteed ? (
-                            'Always official'
-                        ) : (
-                            'Often official'
-                        )}
+                {regularity && (
+                    <div className="official-likelihood">
+                        <div className="badge">
+                            {regularity}
+                        </div>
                     </div>
-                </div>
+                )}
                 <div className="timeslot-date">
                     <div className="date-gmt">
                         <div className="date-label">GMT</div>
