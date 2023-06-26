@@ -204,7 +204,7 @@ class App extends React.Component {
                             <div className="timeslots">
                                 <Timeslot
                                     label="Pacific Americas"
-                                    dayIndex={5}
+                                    dayIndex={6}
                                     time="03:00"
                                     regularity="Proposed"
                                 >
