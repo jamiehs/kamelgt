@@ -89,8 +89,31 @@
         "label": "Circuit de Spa-Francorchamps",
         "week": 5,
         "weekStart": "2023-07-11",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "A90 - 22S4 - Spa - J Del Olmo - R.sto"
+            },
+            {
+                "file": "A90 - 22S4 - Spa - Y Gijsen - 221105 - R.sto"
+            },
+            {
+                "file": "javier_spa_2022s4_4_ascR.sto"
+            },
+            {
+                "file": "spa-22S4-r2.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "DWC_ZXT_21S4_Spa_wing3_R3.sto"
+            },
+            {
+                "file": "Lgo22S2_Spa_MH_Silverstone_Int_R_v1_R40.sto"
+            },
+            {
+                "file": "NGTP_SPA_Full_R_v2-2.sto"
+            }
+        ]
     },
     {
         "label": "Homestead Miami - Road B",
