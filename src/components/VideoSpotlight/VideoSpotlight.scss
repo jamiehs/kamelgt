@@ -15,6 +15,8 @@
         font-style: italic;
         font-weight: 400;
         font-size: 0.8rem;
+        text-wrap: balance;
+        -webkit-text-wrap: balance;
 
         @media (min-width: $medium-width) {
           padding-inline-start: 0.66em;
@@ -59,7 +61,7 @@
       
       h5 {
         margin: 0 0 0.5em;
-        orphans: 7;
+        text-wrap: balance;
       }
       
       p {

@@ -72,6 +72,10 @@ ul, ol {
   }
 }
 
+h2, h3 {
+  text-wrap: balance;
+}
+
 .inverted-text {
   color: $light-text;
 
@@ -337,9 +341,10 @@ body {
       background-color: $dark-bg;
       padding: 0.5em 0 .6em .5em;
       font-size: 1.2em;
-      margin-left: -0.6em;
-      margin-right: -0.6em;
+      margin-left: -0.5em;
+      margin-right: -0.5em;
       border-radius: $border-radius;
+      text-wrap: balance;
   
       @media (min-width: $small-width) {
         font-size: 1.5em;
