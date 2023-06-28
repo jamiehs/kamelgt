@@ -105,7 +105,7 @@ class App extends React.Component {
                                 We are proposing two additional time slots
                             </h3>
                             <p>
-                                These should mainly benefit Australia, New Zealand & Japan. See the <a href="#proposed-timeslots">proposed times below</a>!
+                                These should be good for US Pacific, Australia, New Zealand & Japan. See the <a href="#proposed-timeslots">proposed times below</a>!
                             </p>
                         </Announcement>
                     </div>
@@ -209,7 +209,7 @@ class App extends React.Component {
                                     regularity="Proposed"
                                 >
                                     <p>
-                                        The US Pacific time zones can be difficult for some of the above official slots. This proposes the 03:00 GMT time slot as an alternative to the "Midweek Americas" official slot.
+                                        The US Pacific time zones can be difficult for some existing slots. This proposes the 03:00 GMT time slot as an alternative to the established "Midweek Americas" slot. As a bonus, this is around noon on Saturday in Australia!
                                     </p>
                                 </Timeslot>
                                 <Timeslot
@@ -219,7 +219,7 @@ class App extends React.Component {
                                     regularity="Proposed"
                                 >
                                     <p>
-                                        This time-range was suggested in the VCR Discord server. It should be 5pm on the west coast, 7pm on the east coast and 9pm in NZ. Also late-morning for much of Europe. 
+                                        This time was suggested in the VCR Discord server. It should be 5pm on the west coast & 7pm on the east coast of Australia, and 9pm in New Zealand. This is also late-morning for much of Europe. 
                                     </p>
                                 </Timeslot>
                             </div>
