@@ -100,12 +100,12 @@ class App extends React.Component {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-06-06" expires="2023-06-12">
+                        <Announcement begins="2023-06-26" expires="2023-07-14">
                             <h3>
-                                It&rsquo;s Week 13! There are no regular Kamel&nbsp;GT races this week
+                                We are proposing two additional time slots
                             </h3>
                             <p>
-                                Regular races will resume on June 13th. Until then try not to get into too much trouble participating in the week&nbsp;13&nbsp;madness!
+                                These should mainly benefit Australia, New Zealand & Japan. See the <a href="#proposed-timeslots">proposed times below</a>!
                             </p>
                         </Announcement>
                     </div>
