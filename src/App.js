@@ -102,10 +102,10 @@ class App extends React.Component {
                     <div className="section">
                         <Announcement begins="2023-06-26" expires="2023-07-14">
                             <h3>
-                                We are proposing two additional time slots
+                                We have proposed two additional time slots
                             </h3>
                             <p>
-                                These should be good for US Pacific, Australia, New Zealand & Japan. See the <a href="#proposed-timeslots">proposed times below</a>!
+                                These are good for US Pacific, Australia, New Zealand & Japan. See the <a href="#proposed-timeslots">proposed times below</a>!
                             </p>
                         </Announcement>
                     </div>
