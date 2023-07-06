@@ -76,10 +76,19 @@
         ],
         "audi90gto": [
             {
-                "file": "le-mans-22S3-r1.sto"
+                "file": "A90_23S3_LeMansH_Y_Gijsen_Q.sto"
+            },
+            {
+                "file": "A90_23S3_LeMansH_Y_Gijsen_R.sto"
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "Le_Mans_Q1.7.sto"
+            },
+            {
+                "file": "Le_Mans_R1.7.sto"
+            },
             {
                 "file": "NGTP_LEMONS_R_ALEX.sto"
             }
@@ -119,15 +128,46 @@
         "label": "Homestead Miami - Road B",
         "week": 6,
         "weekStart": "2023-07-18",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "homestead-22-S2-r-03.sto"
+            },
+            {
+                "file": "homestead-22S2-r4.sto"
+            },
+            {
+                "file": "Miami2022S2b.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "Lgo22S2_HomesteadB_GP_Q21.sto"
+            },
+            {
+                "file": "Lgo22S2_HomesteadB_GP_R21.sto"
+            }
+        ]
     },
     {
         "label": "Canadian Tire Motorsports Park",
         "week": 7,
         "weekStart": "2023-07-25",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "mosport-21S4-r4.sto"
+            },
+            {
+                "file": "ctmp-22S3-q2.sto"
+            },
+            {
+                "file": "ctmp-22S3-r4.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "Lgo21S4_Mosport_MH_R_v1_R63.sto"
+            }
+        ]
     },
     {
         "label": "Watkins Glen - Classic Boot",
