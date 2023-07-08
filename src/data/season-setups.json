@@ -76,6 +76,12 @@
         ],
         "audi90gto": [
             {
+                "file": "GTO_LeMans_H_Q5.sto"
+            },
+            {
+                "file": "GTO_LeMans_H_R1.sto"
+            },
+            {
                 "file": "A90_23S3_LeMansH_Y_Gijsen_Q.sto"
             },
             {
@@ -83,6 +89,12 @@
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo23S3_LeMans_Hist_AG_Indy_2W8_Q10.sto"
+            },
+            {
+                "file": "Lgo23S3_LeMans_Hist_AG_Indy_2W8_R10.sto"
+            },
             {
                 "file": "Le_Mans_Q1.7.sto"
             },
