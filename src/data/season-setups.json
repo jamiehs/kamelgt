@@ -126,13 +126,18 @@
         ],
         "nissangtpzxt": [
             {
+                "file": "NGTP_SPA_Full_R_v2-3_Q.sto",
+                "comment": "22S4 Qualifying; From Ferran Grau in VCR Discord"
+            },
+            {
+                "file": "NGTP_SPA_Full_R_v2-4.sto",
+                "comment": "22S4 Race; From Ferran Grau in VCR Discord"
+            },
+            {
                 "file": "DWC_ZXT_21S4_Spa_wing3_R3.sto"
             },
             {
                 "file": "Lgo22S2_Spa_MH_Silverstone_Int_R_v1_R40.sto"
-            },
-            {
-                "file": "NGTP_SPA_Full_R_v2-2.sto"
             }
         ]
     },
