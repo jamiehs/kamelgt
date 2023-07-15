@@ -172,7 +172,7 @@ body {
     
     .header-section {
       margin: 0;
-      padding: 0.75em;
+      padding: 0.45em;
     
       @media (min-width: $small-width) {
         padding: 0;
@@ -192,15 +192,15 @@ body {
     }
     h1 {
       line-height: 1;
-      font-size: 8.3vw;
+      font-size: 5.3vw;
       margin-top: 0.4vw;
       margin-bottom: -0.2em;
       font-family: 'Dela Gothic One', sans-serif;
       color: $gold;
     }
     h2 {
-      font-size: 4.6vw;
-      margin-top: 3.1vw;
+      font-size: 3.2vw;
+      margin-top: 1.9vw;
       margin-bottom: 0.4vw;
       color: #fff;
     }
@@ -209,14 +209,14 @@ body {
       margin-bottom: 1em;
 
       h1 {
-        font-size: 38px;
+        font-size: 30px;
         margin-bottom: 0;
         margin-top: 0.6em;
       }
       h2 {
         margin-top: 0;
         margin-bottom: 1.5em;
-        font-size: 24px;
+        font-size: 16px;
       }
     }
   }
@@ -375,6 +375,11 @@ body {
     &.lighter {
       background-color: lighten($dark-bg, 5%);
     }
+
+    h2.title {
+      background-color: transparent;
+      border-radius: 0;
+    }
     
     @media (min-width: $small-width) {
       .section {
@@ -423,7 +428,7 @@ body {
       
       @media (min-width: $medium-width) {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 1em;
         row-gap: 1em;
   
@@ -434,6 +439,12 @@ body {
             margin-top: 0;
           }
         }  
+      }
+
+      @media (min-width: $large-width) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        column-gap: 1em;
+        row-gap: 1em;
       }
     }
   }

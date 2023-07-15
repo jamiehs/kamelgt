@@ -97,10 +97,33 @@ const getYouTubeId = (url) => {
     return matches[1]
 }
 
+const toLocaleStringIfNumber = (input) => {
+    if(isNaN(input)) {
+        return input
+    }
+
+    return Number(input).toLocaleString()
+}
+
+/**
+ * Number as K notation with one decimal
+ * 
+ * This is to replicate the Race Labs display of iRating as
+ * 2.2K for 2,280 etc.
+ * @param {integer} input 
+ * @returns string
+ */
+const numberAsK = (input) => {
+    return `${parseFloat(input / 1000).toFixed(1)}K`
+}
+
+
 
 export {
     getYouTubeId,
     nextRaceDay,
     getCurrentWeekData,
     localDateFromString,
+    toLocaleStringIfNumber,
+    numberAsK,
 }

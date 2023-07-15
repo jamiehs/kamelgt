@@ -12,9 +12,13 @@
     }
 
     @media (min-width: $large-width) {
-        padding: 0 1.3em;
+        padding: 0 .5em;
     }
 
+    .badge {
+        background-color: #3d606f;
+
+    }
 
     h3.label {
         margin: 0;
@@ -34,7 +38,7 @@
 
         @media (min-width: $large-width)  {
             text-align: center;
-            font-size: 126%;
+            font-size: 100%;
             padding-left: 0;
         }
     }
@@ -52,7 +56,6 @@
         .badge {
             font-size: 85%;
             font-weight: 400;
-            background-color: lighten($dark-bg, 5%);
             position: relative;
             top: -0.75em;
             line-height: 0.9;
@@ -74,7 +77,7 @@
         }
 
         @media (min-width: $large-width)  {
-            font-size: 1.1em;
+            font-size: .95em;
         }
 
         .date-gmt, .date-local {
@@ -125,15 +128,21 @@
         margin-bottom: 0.5em;
         font-size: 79%;
 
-        @media (min-width: $large-width)  {
+        @media (min-width: $medium-width)  {
             font-size: 100%;
+        }
+        
+        @media (min-width: $large-width)  {
+            .badge {
+                font-size: 70%;
+            }
         }
         
         display: flex;
         > div {
             flex: 8;
             &:first-child {
-                flex: 2;
+                flex: 1;
             }
         }
 
@@ -146,7 +155,7 @@
         font-size: 85%;
 
         @media (min-width: $large-width)  {
-            font-size: 90%;
+            font-size: 13px;
         }
     }
 

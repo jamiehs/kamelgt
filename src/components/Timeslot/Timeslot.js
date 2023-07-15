@@ -2,17 +2,17 @@ import './Timeslot.scss';
 import moment from 'moment-timezone';
 import React from 'react';
 
-import {nextRaceDay} from '../../helpers.js'
+import {nextRaceDay, numberAsK, toLocaleStringIfNumber} from '../../helpers.js'
 
 // prevents GMT race days from being localized or shifted inadvertantly
 const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
 
-const toLocaleStringIfNumber = (input) => {
-    if(isNaN(input)) {
-        return input
+const stripLeadingZeroIfAmericas = (timeString, timeZone) => {
+    if(timeZone.match(/america/i) && timeString.match(/(a|p)m$/i)) {
+        return timeString.replace(/^0/, '')
     }
 
-    return Number(input).toLocaleString()
+    return timeString
 }
 
 class Timeslot extends React.Component {
@@ -64,21 +64,21 @@ class Timeslot extends React.Component {
                     </div>
                     <div className="date-local">
                         <div className="date-label">{tz.replace('_', ' ')}</div>
-                        <div className="date-time">{nextRaceDayLocal} {nextRaceTimeLocal}</div>
+                        <div className="date-time">{nextRaceDayLocal} {stripLeadingZeroIfAmericas(nextRaceTimeLocal, tz)}</div>
                     </div>
                 </div>
                 <div className="timeslot-participation">
                     {entries && (
                         <div>
                             <div className="badge drivers">
-                                Drivers: {toLocaleStringIfNumber(entries)}
+                                Drivers ~{toLocaleStringIfNumber(entries)}
                             </div>
                         </div>
                     )}
                     {(gtoSof && gtpSof) ? (
                         <div>
                             <div className="badge sof">
-                                <abbr title="Strength of Field">SOF</abbr>: <span className="sof-combined" title={`GTP: ${gtpSof}, GTO: ${gtoSof}`}>{toLocaleStringIfNumber(avgSof)}</span>
+                                <abbr title="Strength of Field">SoF</abbr>: <span className="sof-combined" title={`GTP: ${gtpSof}, GTO: ${gtoSof}`}>{numberAsK(avgSof)}</span>
                             </div>
                         </div>
                     ) : null}
