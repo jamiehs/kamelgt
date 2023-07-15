@@ -227,14 +227,17 @@ class App extends React.Component {
                         <dt>Is this a league?</dt>
                         <dd>
                             <p>
-                                No. We run the official iRacing scheduled races 3 times per week and the Saturday race is broadcasted live on GSRC. Points are calculated for this broadcast race. 1st and 2nd splits are scored, and there are two cups: VCR Championship and VCR Junior (junior is &lt; 2800 iRating) See <code>#vcr-rules</code> and <code>#vcr-standings</code> in the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> for&nbsp;more&nbsp;info.</span> 
+                                No. We run the official iRacing scheduled races 3 times per week and the Saturday <em>17:00 GMT</em> race is broadcasted live on GSRC. Points are calculated for this broadcast race. 1st and 2nd splits are scored, and there are two cups: VCR Championship and VCR Junior (junior is &lt; 2800 iRating) See <code>#vcr-rules</code> and <code>#vcr-standings</code> in the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> for&nbsp;more&nbsp;info.</span> 
                             </p>
                         </dd>
 
                         <dt>Do I need to pit?</dt>
                         <dd>
                             <p>
-                                Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long, or (rarely) a number of laps approximating 40 or 60 minutes; usually Le Mans, Monza Combined, or the Nordschleife.
+                                Maybe. Two of the twelve races per season will require a pit stop; these are 60 minute races. The other 10 races are 40 minutes long. Depending on the track length a number of laps approximating 40 or 60 minutes may be substituted; usually Le Mans, Monza Combined, or the Nordschleife.
+                            </p>
+                            <p>
+                                Note that fuel in the Audi is limited to 85% (102L) to ensure that pit stops are necessary in the two "endurance rounds".
                             </p>
                         </dd>
 
