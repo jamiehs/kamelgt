@@ -490,9 +490,12 @@ class App extends React.Component {
                     <hr />
 
                     <p>Hopefully this information helps you avoid "a box full of neutrals".</p>
+                </div>
 
-
-
+                <div className="section">
+                    <p>
+                        Questions or comments? <a href="mailto:admin@kamelgt.com">Email the admin</a>.
+                    </p>
                 </div>
             </div>
         )
