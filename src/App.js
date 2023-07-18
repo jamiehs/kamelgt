@@ -11,7 +11,7 @@ import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
-import {getCurrentWeekData, localDateFromString, addDaysToDate} from './helpers.js';
+import {getCurrentWeekData, localDateFromString, addDaysToDate, dateTimeFromString} from './helpers.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -34,18 +34,18 @@ class App extends React.Component {
         // is the current season.
         let today = new Date()
         let numWeeks = 12
-        let firstDayOfSeason = new Date(broadcasts[broadcasts.length-1].startDate + ' 00:00:00 GMT-0000')
-        let lastDayOfSeason = new Date(broadcasts[broadcasts.length-1].endDate + ' 00:00:00 GMT-0000')
+        let firstDayOfSeason = dateTimeFromString(broadcasts[broadcasts.length-1].startDate, '17:00')
+        let lastDayOfSeason = dateTimeFromString(broadcasts[broadcasts.length-1].endDate, '17:00')
         
         // only calculate and populate if today is before last week start date + 6 days
         if(today < addDaysToDate(lastDayOfSeason, 6)) {
-            let firstBroadcastDate = addDaysToDate(firstDayOfSeason, 5)
+            let firstBroadcastDate = addDaysToDate(firstDayOfSeason, 4)
             let currentSeasonDates = [...Array(numWeeks).keys()].map(weekNo => addDaysToDate(firstBroadcastDate, weekNo * 7))
             this.setState({
                 currentSeasonDates
             })
         }
-
+        
         this.flattenedBroadcasts = broadcasts.map((season) => {
             return season.youTube.map((event, index) => {
                 const round = index + 1

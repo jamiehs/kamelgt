@@ -93,6 +93,25 @@ const localDateFromString = (dateString) => {
 }
 
 /**
+ * Date From String with Time
+ * @param {String} dateString date in format 'YYYY-MM-DD'
+ * @param {String} timeString time in GMT 24h format '17:00'
+ * @returns Date
+ */
+const dateTimeFromString = (dateString, timeString) => {
+    const dateStringParts = dateString.split('-')
+    const year = parseInt(dateStringParts[0], 10)
+    const month = parseInt(dateStringParts[1], 10)
+    const day = parseInt(dateStringParts[2], 10)
+
+    const timeStringParts = timeString.split(':')
+    const hour = parseInt(timeStringParts[0], 10)
+    const minute = parseInt(timeStringParts[1], 10)
+
+    return new Date(Date.UTC(year, month-1, day, hour, minute, 0));
+}
+
+/**
  * Add Days to Date
  * https://stackoverflow.com/a/19691491/24559
  * @param {Date} date input date
@@ -140,4 +159,5 @@ export {
     addDaysToDate,
     toLocaleStringIfNumber,
     numberAsK,
+    dateTimeFromString,
 }
