@@ -11,7 +11,7 @@ import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
-import {getCurrentWeekData, localDateFromString} from './helpers.js';
+import {getCurrentWeekData, localDateFromString, addDaysToDate} from './helpers.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -20,12 +20,31 @@ class App extends React.Component {
             currentWeekData: getCurrentWeekData(seasonSetups),
             broadcastsSeason: broadcasts[broadcasts.length-1].id,
             broadcastSearchQuery: null,
+            currentSeasonDates: [],
         }
     }
     componentDidMount() {
         this.interval = setInterval(() => this.setState({
             currentWeekData: getCurrentWeekData(seasonSetups)
         }), 1000);
+
+        // Try to guess the dates of the latest season
+        // warning; this is a little brittle at the moment
+        // as it assumes that the last element of `broadcasts`
+        // is the current season.
+        let today = new Date()
+        let numWeeks = 12
+        let firstDayOfSeason = new Date(broadcasts[broadcasts.length-1].startDate + ' 00:00:00 GMT-0000')
+        let lastDayOfSeason = new Date(broadcasts[broadcasts.length-1].endDate + ' 00:00:00 GMT-0000')
+        
+        // only calculate and populate if today is before last week start date + 6 days
+        if(today < addDaysToDate(lastDayOfSeason, 6)) {
+            let firstBroadcastDate = addDaysToDate(firstDayOfSeason, 5)
+            let currentSeasonDates = [...Array(numWeeks).keys()].map(weekNo => addDaysToDate(firstBroadcastDate, weekNo * 7))
+            this.setState({
+                currentSeasonDates
+            })
+        }
 
         this.flattenedBroadcasts = broadcasts.map((season) => {
             return season.youTube.map((event, index) => {
@@ -71,7 +90,8 @@ class App extends React.Component {
         let currentWeek = this.state.currentWeekData
         let {
             broadcastSearchQuery,
-            broadcastSearchResults
+            broadcastSearchResults,
+            currentSeasonDates,
         } = this.state
 
         const hasBroadcastSearchQuery = broadcastSearchQuery && broadcastSearchQuery !== ''
@@ -360,12 +380,13 @@ class App extends React.Component {
                     {hasBroadcastSearchQuery ? (
                         broadcastSearchResults.length > 0 ? (
                             <div className="videos-grid">
-                                {broadcastSearchResults.map(result => {
+                                {broadcastSearchResults.map((result, index) => {
                                     return (
                                         <Broadcast
                                             key={`${result.item.url}.${result.item.id}.${result.item.title}`}
                                             title={`${result.item.id} - R${result.item.round}: ${result.item.title}`}
                                             url={result.item.url}
+                                            date={currentSeasonDates[index]}
                                         />
                                     )
                                 })}
@@ -387,6 +408,7 @@ class App extends React.Component {
                                                         key={`${season.id}.${url}.${title}`}
                                                         title={`R${round}: ${title}`}
                                                         url={url}
+                                                        date={currentSeasonDates[index]}
                                                     />
                                                 )
                                             } else {

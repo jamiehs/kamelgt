@@ -99,6 +99,34 @@
             font-size: 100%;
         }
     }
+
+    .upcoming-date-wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+
+        .upcoming-date {
+            flex: 1;
+            display: block;
+            font-weight: 400;
+            font-size: 3vw;
+            color: $light-text;
+            opacity: 0.5;
+            font-family: monospace;
+
+            @media (min-width: $small-width) {
+                font-size: 2.5vw;
+            }
+
+            @media (min-width: $large-width) {
+                font-size: 22px;
+            }
+        }
+    }
     
     .yt-video {
         position: relative;

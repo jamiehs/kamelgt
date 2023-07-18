@@ -25,7 +25,14 @@ class Broadcast extends React.Component {
         let {
             title,
             url,
+            date,
         } = this.props
+
+        // format the date object nicely for the missing video
+        let dateString = null
+        if(date && date instanceof Date) {
+            dateString = date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
+        }
 
         return (
             url ? (
@@ -46,6 +53,9 @@ class Broadcast extends React.Component {
                     <h3 title={title}>{title}</h3>
                     <div className="yt-video">
                         <div className={`thumb jump-${this.state.videoGlitchId}`}>
+                            <div className="upcoming-date-wrapper">
+                                <span className="upcoming-date">{dateString}</span>
+                            </div>
                             <div className={`glitch glitch-${this.state.glitchId}`}></div>
                         </div>
                     </div>

@@ -92,6 +92,19 @@ const localDateFromString = (dateString) => {
     return event.toLocaleDateString(undefined, options)
 }
 
+/**
+ * Add Days to Date
+ * https://stackoverflow.com/a/19691491/24559
+ * @param {Date} date input date
+ * @param {integer} days number of days to add
+ * @returns Date
+ */
+const addDaysToDate = (date, days) => {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+}
+
 const getYouTubeId = (url) => {
     let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
     return matches[1]
@@ -124,6 +137,7 @@ export {
     nextRaceDay,
     getCurrentWeekData,
     localDateFromString,
+    addDaysToDate,
     toLocaleStringIfNumber,
     numberAsK,
 }
