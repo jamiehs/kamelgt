@@ -299,12 +299,12 @@ class App extends React.Component {
                         </li>
                         <li>
                             <p>
-                                <strong>Ten races per season are 40 minutes long</strong>; require no pitstop
+                                <strong>Ten races per season are 40 minute "sprint rounds"</strong>; require no pitstop
                             </p>
                         </li>
                         <li>
                             <p>
-                                <strong>Two races per season are ~60 minute "endurance" rounds</strong> that may require a pit stop and may be counted in laps
+                                <strong>Two races per season are 60 minute "endurance rounds"</strong>; these may require a pit stop
                             </p>
                         </li>
                         <li>
