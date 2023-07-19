@@ -71,7 +71,7 @@ class Timeslot extends React.Component {
                     {entries && (
                         <div>
                             <div className="badge drivers">
-                                Drivers ~{toLocaleStringIfNumber(entries)}
+                                Drivers: {toLocaleStringIfNumber(entries)}
                             </div>
                         </div>
                     )}
