@@ -147,16 +147,28 @@
         "weekStart": "2023-07-18",
         "audi90gto": [
             {
+                "file": "A90_23S3_Homestead_Y_Gijsen_Q.sto"
+            },
+            {
+                "file": "A90_23S3_Homestead_Y_Gijsen_R.sto"
+            },
+            {
+                "file": "homestead-23S3-r1.sto"
+            },
+            {
                 "file": "homestead-22-S2-r-03.sto"
-            },
-            {
-                "file": "homestead-22S2-r4.sto"
-            },
-            {
-                "file": "Miami2022S2b.sto"
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "DAYTONA_NGTP_Q_ALEX_Miami.sto"
+            },
+            {
+                "file": "DAYTONA_NGTP_R_ALEX_Miami.sto"
+            },
+            {
+                "file": "F122_NGTP_MiamiB_1-1.sto"
+            },
             {
                 "file": "Lgo22S2_HomesteadB_GP_Q21.sto"
             },
