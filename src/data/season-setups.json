@@ -202,15 +202,49 @@
         "label": "Watkins Glen - Classic Boot",
         "week": 8,
         "weekStart": "2023-08-01",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "Watkins_2022_S3_RACE_v1.sto"
+            },
+            {
+                "file": "watkinsintlboot_2022_S3_R.sto"
+            },
+            {
+                "file": "watkins-21S2-02.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "watkins-22S3-AG_WGI_5W2.sto"
+            },
+            {
+                "file": "Watkins_Glen_CB_R_v1.2.sto"
+            },
+            {
+                "file": "Watkins5W2v3.sto"
+            }
+        ]
     },
     {
         "label": "Road Atlanta",
         "week": 9,
         "weekStart": "2023-08-08",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "2022S4W12_Road_Atlanta_R1.sto"
+            },
+            {
+                "file": "KB 2022-S4 Road Atlanta.sto"
+            },
+            {
+                "file": "Road Atlanta-Y Gijsen-R-ih.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "NGTP_RoAtlanta_1-1.sto"
+            }
+        ]
     },
     {
         "label": "Willow Springs",
