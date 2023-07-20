@@ -29,6 +29,7 @@
   .clip {
     display: flex;
     max-width: 50rem;
+    margin-bottom: 1em;
 
     .thumbnail-wrapper {
       width: 75px;
@@ -42,7 +43,7 @@
 
       .thumbnail {
         height: 0;
-        border-radius: $callout-border-radius;
+        border-radius: var(--base-border-radius);
         overflow: hidden;
         padding-top: 56.25%;
         background-position: center;

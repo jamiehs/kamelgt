@@ -1,3 +1,88 @@
+:root {
+    --always-black: #000;
+    --base-border-radius: 4px;
+
+    // Start of light/standard theme
+    --background-1: #fff;
+    --background-9: #3c3c3c;
+    --text-0: #fff;
+    --text-1: #fff;
+    --text-3: #d7d7d7;
+    --text-9: #3c3c3c;
+
+    --positive-action: rgb(51 132 10);
+
+    --timeslots-bg: #3c3c3c;
+    --timeslots-header-text: #fff;
+    
+    --timeslots-text: var(--text-9);
+    --timeslots-badge-text: #fff;
+    --timeslot-date-bg: rgb(255 255 255 / 0.5);
+    --timeslot-1: #e2f3f3;
+    --timeslot-3: #bcd8e5;
+    --timeslot-4: #adcdcd;
+    --timeslot-7: #3d606f;
+
+    --link-color: #693b30;
+    --section-header-bg: #3c3c3c;
+    --section-header-text: #fff;
+    --highlight-bg: #f5f3e7;
+    --highlight-quote-bg: #f5f0e1;
+    --main-header-text: #f9c24d;
+    --main-header-bg: #2a2282;
+
+    --weird-accent-color: #693b30;
+
+    --video-thumb-vignette: rgb(195 158 103 / 0.3);
+    --video-thumb-text-overlay: #7b7b7b;
+
+    --car-first-class: #ffd65a;
+    --car-second-class: #33cfff;
+    --car-class-text: var(--text-9);
+
+    
+    // Start of dark theme
+    @media (prefers-color-scheme: dark) {
+        --background-1: #212121;
+        --background-9: #fff;
+        --text-0: #313131;
+        --text-1: #3c3c3c;
+        --text-3: #bdbdbd;
+        --text-9: #cdcdcd;
+
+        --positive-action: rgb(92 173 27);
+    
+        --timeslots-bg: #191919;
+        --timeslots-header-text: #cdcdcd;
+    
+        --timeslots-text: var(--text-9);;
+        --timeslots-badge-text: #d9d9d9;
+        --timeslot-date-bg: rgb(55 55 55 / 50%);
+        --timeslot-1: #262929;
+        --timeslot-3: #2f2f2f;
+        --timeslot-4: #1a1a1a;
+        --timeslot-7: #284755;
+    
+        --link-color: #4d99b9;
+        --section-header-bg: #1c1c1c;
+        --section-header-text: #cdcdcd;
+        --highlight-bg: #1c1c1c;
+        --highlight-quote-bg: #161616;
+        --main-header-text: #c79c3f;
+        --main-header-bg: #151239;
+    
+        --weird-accent-color: #373737;
+    
+        --video-thumb-vignette: rgb(18 23 57 / 30%);
+        --video-thumb-text-overlay: #777777;
+    
+        --car-first-class: rgb(255 214 90 / 85%);
+        --car-second-class: rgb(51 207 255 / 85%);
+        --car-class-text: var(--text-0);
+    }
+}
+
+
 // Breakpoints
 $large-width: 1140px;
 $medium-width: 760px;
@@ -5,26 +90,3 @@ $small-width: 421px;
 
 $section-max-width: 1100px;
 $text-content-max-width: 850px;
-
-$brown: #693b30;
-$blue: #2a2282;
-$gold: #f9c24d;
-$first-class: #ffd65a; 
-$second-class: #33cfff; 
-
-$positive-action: rgb(51, 132, 10);
-
-$timeslot-bg: rgb(226, 243, 243);
-$timeslot-bg-2: rgb(173, 205, 205);
-$timeslot-positive: $positive-action;
-
-$always-black: #000;
-
-$light-bg: #fff;
-$dark-text: #333;
-
-$dark-bg: #3c3c3c;
-$light-text: #fff;
-
-$border-radius: 4px;
-$callout-border-radius: $border-radius;

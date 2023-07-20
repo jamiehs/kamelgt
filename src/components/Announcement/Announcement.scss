@@ -2,10 +2,10 @@
 
 .Announcement {
     padding: 0.5em;
-    border: solid 2px $timeslot-bg-2;
-    background: $timeslot-bg;
+    border: solid 2px var(--timeslot-3);
+    background: var(--timeslot-1);
     line-height: 1.2em;
-    border-radius: $callout-border-radius;
+    border-radius: var(--base-border-radius);
     margin-bottom: 1em;
     font-size: 0.9em;
     

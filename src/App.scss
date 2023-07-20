@@ -20,7 +20,7 @@ p:first-child {
 }
 
 a, a:link {
-  color: $brown;
+  color: var(--link-color);
   font-weight: 700;
 
   &[target="_blank"] {
@@ -30,7 +30,7 @@ a, a:link {
       padding-left: 1em;
       margin-left: 0.05em;
       margin-bottom: 0.2em;
-      background-color: $brown;
+      background-color: var(--link-color);
       position: relative;
       top: 0.075em;
       mask-size: cover;
@@ -77,22 +77,22 @@ h2, h3 {
 }
 
 .inverted-text {
-  color: $light-text;
+  color: var(--text-1);
 
   a, a:link {
-    color: $light-text;
+    color: var(--text-1);
   
     &[target="_blank"] {
       &::after {
-        background-color: $light-text;
+        background-color: var(--text-1);
       }
     }
   }
 }
 
 .badge {
-  background-color: $dark-bg;
-  color: $light-text;
+  background-color: var(--background-9);
+  color: var(--text-1);
   display: inline-block;
   border-radius: 4px;
   padding: 0.25em 0.5em 0.33em 0.5em;
@@ -102,8 +102,8 @@ h2, h3 {
   margin-right: 0.5em;
 
   &.light {
-    background-color: $light-text;
-    color: $dark-bg;  
+    background-color: var(--text-1);
+    color: var(--background-9);  
   }
 
   @media (min-width: $small-width)  {
@@ -134,8 +134,8 @@ blockquote {
 
 .highlight {
   padding: 1em 1em 1em 1.5em;
-  background-color: rgb(245, 240, 225);
-  border-radius: $callout-border-radius;
+  background-color: var(--highlight-bg);
+  border-radius: var(--base-border-radius);
   
   @media (min-width: $small-width) {
     margin-left: 1em;
@@ -147,7 +147,7 @@ blockquote {
   
   blockquote {
     border-left: solid 4px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 0.698);
+    background-color: var(--highlight-quote-bg);
   }
 }
 
@@ -156,19 +156,19 @@ blockquote {
 // Global App Structure
 /////////////////////////////////////////////
 body {
-  background-color: $light-bg;
+  background-color: var(--background-1);
 }
 .App {
   min-height: 100vh;
   overflow: hidden;
   padding: 0;
   margin-bottom: 20vh;
-  color: $dark-text;
+  color: var(--text-9);
   
   .main-header {
     overflow: hidden;
-    background-color: $blue;
-    border-bottom: solid 4px $brown;
+    background-color: var(--main-header-bg);
+    border-bottom: solid 4px var(--weird-accent-color);
     
     .header-section {
       margin: 0;
@@ -196,13 +196,13 @@ body {
       margin-top: 0.4vw;
       margin-bottom: -0.2em;
       font-family: 'Dela Gothic One', sans-serif;
-      color: $gold;
+      color: var(--main-header-text);
     }
     h2 {
       font-size: 3.2vw;
       margin-top: 1.9vw;
       margin-bottom: 0.4vw;
-      color: #fff;
+      color: var(--text-3);
     }
 
     @media (min-width: $small-width) {
@@ -260,28 +260,41 @@ body {
       }
 
       select.broadcast-season {
-          background: $dark-bg;
-          color: $light-text;
-          padding: 0.3em;
-          border-radius: 5px;
-          border: solid 1px transparent;
-          font-weight: 600;
-          font-size: 0.85rem;
-          width: 100%;
-          @media (min-width: $small-width) {
-            font-size: 1rem;
-            width: auto;
-          }
+        background: var(--background-9);
+        @media (prefers-color-scheme: dark) {
+          color: var(--background-9);
+          background: var(--background-1);
+        }
+        color: var(--text-1);
+        padding: 0.3em;
+        border-radius: 5px;
+        border: solid 1px transparent;
+        font-weight: 600;
+        font-size: 0.85rem;
+        width: 100%;
+        @media (min-width: $small-width) {
+          font-size: 1rem;
+          width: auto;
+        }
       }
     }
 
     .broadcast-searcher {
       input {
         font-size: 1rem;
-        border-radius: $callout-border-radius;
-        border: solid 1px $brown;
+        border-radius: var(--base-border-radius);
+        border: solid 1px var(--weird-accent-color);
+        box-shadow: 0 0 0 1px transparent;
         padding: 0.25em;
         width: 100%;
+        color: var(--text-9);
+        background-color: var(--background-1);
+        transition: box-shadow 250ms ease;
+
+        &:focus-within {
+          outline: none;
+          box-shadow: 0 0 0 1px var(--background-9);
+        }
 
         @media (min-width: $small-width) {
           width: 15.6rem;
@@ -337,13 +350,13 @@ body {
   
     h2.title {
       font-weight: 700;
-      color: $light-text;
-      background-color: $dark-bg;
+      color: var(--section-header-text);
+      background-color: var(--section-header-bg);
       padding: 0.5em 0 .6em .5em;
       font-size: 1.2em;
       margin-left: -0.5em;
       margin-right: -0.5em;
-      border-radius: $border-radius;
+      border-radius: var(--base-border-radius);
       text-wrap: balance;
   
       @media (min-width: $small-width) {
@@ -369,14 +382,11 @@ body {
   }
 
   .timeslots-wrapper {
-    background-color: $dark-bg;
+    background-color: var(--timeslots-bg);
     overflow: hidden;
-    
-    &.lighter {
-      background-color: lighten($dark-bg, 5%);
-    }
 
     h2.title {
+      color: var(--timeslots-header-text);
       background-color: transparent;
       border-radius: 0;
     }
@@ -390,6 +400,7 @@ body {
     }
   
     .notes {
+      color: var(--timeslots-header-text);
       font-size: 0.8em;
       margin-top: -0.66em;
       margin-bottom: 1em;
@@ -406,13 +417,13 @@ body {
     }
   
     .footnote {
-      color: $light-text;
+      color: var(--timeslots-header-text);
     }
   
     .week-info {
       font-size: 70%;
       display: block;
-      color: $light-text;
+      color: var(--timeslots-header-text);
     }
   
     .timeslots {
@@ -475,7 +486,7 @@ body {
       svg {
         height: 1.3em;
         path {
-          stroke: $positive-action;
+          stroke: var(--positive-action);
         }
       }
     }

@@ -1,8 +1,9 @@
 @import '../../_global.scss';
 
 .Timeslot {
+    color: var(--timeslots-text);
     display: block;
-    background-color: $timeslot-bg;
+    background-color: var(--timeslot-1);
     padding: 0 1.3em;
     overflow: hidden;
     border-radius: 4px;
@@ -16,8 +17,8 @@
     }
 
     .badge {
-        background-color: #3d606f;
-
+        background-color: var(--timeslot-7);
+        color: var(--timeslots-badge-text);
     }
 
     h3.label {
@@ -27,10 +28,10 @@
         margin-left: -50%;
         margin-right: -50%;
         padding-left: 50%;
-        background: #c2dfeb;
+        background: var(--timeslot-3);
         line-height: 2.2em;
         font-size: 111%;
-        border-bottom: solid 1px #bcd8e5;
+        border-bottom: solid 1px var(--timeslot-4);
         
         @media (min-width: $medium-width) {
             font-size: 1.6vw;
@@ -102,10 +103,10 @@
             position: relative;
             top: 0.3em;
             left: -0.25em;
-            background-color: rgba(255,255,255,0.5);
+            background-color: var(--timeslot-date-bg);
             display: inline-block;
             border-radius: 1em;
-            padding: 0.15em .7em 0.5em .5em;
+            padding: 0.35em 0.7em 0.5em 0.5em;
             z-index: 5;
 
             @media (min-width: $small-width)  {

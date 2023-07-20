@@ -3,14 +3,14 @@
 .Setups {
     [data-class="first"],
     [data-class="second"] {
-        color: $dark-text;
+        color: var(--car-class-text);
         font-weight: 700;
     }
     [data-class="first"] {
-        background-color: $first-class;
+        background-color: var(--car-first-class);
     }
     [data-class="second"] {
-        background-color: $second-class;
+        background-color: var(--car-second-class);
     }
 
     .cars-grid {
