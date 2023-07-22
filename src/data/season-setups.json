@@ -161,6 +161,12 @@
         ],
         "nissangtpzxt": [
             {
+                "file": "Lgo23S3_HomesteadB_Q31.sto"
+            },
+            {
+                "file": "Lgo23S3_HomesteadB_R31.sto"
+            },
+            {
                 "file": "DAYTONA_NGTP_Q_ALEX_Miami.sto"
             },
             {
@@ -168,12 +174,6 @@
             },
             {
                 "file": "F122_NGTP_MiamiB_1-1.sto"
-            },
-            {
-                "file": "Lgo22S2_HomesteadB_GP_Q21.sto"
-            },
-            {
-                "file": "Lgo22S2_HomesteadB_GP_R21.sto"
             }
         ]
     },
