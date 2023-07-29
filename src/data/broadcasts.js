@@ -719,7 +719,7 @@ const broadcasts = [
             {
                 title: "CTMP 'Mosport'",
                 alternateTitle: "Canadian Tire Motorsport Park",
-                url: ""
+                url: "https://youtu.be/k7pWNNN05Pk?t=826"
             },
             {
                 title: "Watkins Glen - Classic Boot",
