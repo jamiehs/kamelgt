@@ -1,9 +1,13 @@
 {
   "short_name": "Kamel GT",
-  "name": "Kamel GT Info Site",
-  "icons": [],
+  "name": "Kamel GT Series Site",
+  "icons": [
+    { "src": "/icon.svg", "type": "image/svg+xml", "purpose": "maskable any", "sizes": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "purpose": "maskable any", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "purpose": "maskable any", "sizes": "512x512" }
+  ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0f0f58",
+  "background_color": "#0f0f58"
 }
