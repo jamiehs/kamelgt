@@ -724,7 +724,7 @@ const broadcasts = [
             {
                 title: "Watkins Glen - Classic Boot",
                 alternateTitle: "Watkins Glen International - Classic Boot",
-                url: ""
+                url: "https://youtu.be/WhbYz5Cxebk?t=1057"
             },
             {
                 title: "Road Atlanta",
