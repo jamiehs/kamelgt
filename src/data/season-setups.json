@@ -208,12 +208,16 @@
         ],
         "audi90gto": [
             {
+                "file": "WG23S3D.sto",
+                "comment": "Javier's Friday setup"
+            },
+            {
                 "file": "watkins-classic-boot-23S3-q.sto",
-                "comment": "qualifying setup is loose on laps 0 and 1"
+                "comment": "Jamie: qualifying setup is loose on laps 0 and 1"
             },
             {
                 "file": "watkins-classic-boot-23S3-r2.sto",
-                "comment": "fuel will be tight; add a click or two if you will be flat shifting!"
+                "comment": "Jamie: fuel will be tight; add a click or two if you will be flat shifting!"
             },
             {
                 "file": "Watkins_2022_S3_RACE_v1.sto"
@@ -226,6 +230,14 @@
             }
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo23S3_WG_Classic_Boot_R50.sto",
+                "comment": "Laust: based on my Spa set. It turned out to be too understeering to my taste"
+            },
+            {
+                "file": "Lgo23S1_WG_CBoot_MH_Silverstone_Int_Q60.sto",
+                "comment": "Laust: same as I used in the broadcast race the last time here"
+            },
             {
                 "file": "watkins-22S3-AG_WGI_5W2.sto"
             },
