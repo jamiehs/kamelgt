@@ -4,7 +4,7 @@ import React from 'react';
 
 import {nextRaceDay, numberAsK, toLocaleStringIfNumber} from '../../helpers.js'
 
-// prevents GMT race days from being localized or shifted inadvertantly
+// prevents GMT race days from being localized or shifted inadvertently
 const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
 
 const stripLeadingZeroIfAmericas = (timeString, timeZone) => {
