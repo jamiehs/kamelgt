@@ -202,7 +202,19 @@
         "label": "Watkins Glen - Classic Boot",
         "week": 8,
         "weekStart": "2023-08-01",
+        "notes": [
+            "Nissan will need to save fuel even though it is a 40 minute race!",
+            "Audi fuel will be tight if you flat shift; may need as much as 99L of fuel."
+        ],
         "audi90gto": [
+            {
+                "file": "watkins-classic-boot-23S3-q.sto",
+                "comment": "qualifying setup is loose on laps 0 and 1"
+            },
+            {
+                "file": "watkins-classic-boot-23S3-r2.sto",
+                "comment": "fuel will be tight; add a click or two if you will be flat shifting!"
+            },
             {
                 "file": "Watkins_2022_S3_RACE_v1.sto"
             },
