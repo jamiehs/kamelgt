@@ -7,12 +7,25 @@ import {nextRaceDay, numberAsK, toLocaleStringIfNumber} from '../../helpers.js'
 // prevents GMT race days from being localized or shifted inadvertently
 const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
 
+// If the time looks America-ish, we remove the leading zeros from
+// the local time string.
 const stripLeadingZeroIfAmericas = (timeString, timeZone) => {
     if(timeZone.match(/america/i) && timeString.match(/(a|p)m$/i)) {
         return timeString.replace(/^0/, '')
     }
-
     return timeString
+}
+
+// Wraps the emoji at the start of the string with a span
+// alternatively it simply returns the input if emoji is not present.
+const wrapEmojiAtStart = (input) => {
+    let pattern = new RegExp(/^(\p{Emoji})/ug)
+    let found = input.match(pattern)
+    let inputWithoutFirstChar = input.replace(pattern, '')
+    if(found && found.length) {
+        return [<span key={input} className="emoji">{found}</span>, inputWithoutFirstChar]
+    }
+    return input
 }
 
 class Timeslot extends React.Component {
@@ -49,7 +62,7 @@ class Timeslot extends React.Component {
 
         return (
             <div className="Timeslot">
-                <h3 className="label">{label}</h3>
+                <h3 className="label">{wrapEmojiAtStart(label)}</h3>
                 {regularity && (
                     <div className="official-likelihood">
                         <div className="badge">

@@ -32,6 +32,11 @@
         line-height: 2.2em;
         font-size: 111%;
         border-bottom: solid 1px var(--timeslot-4);
+        overflow: hidden;
+
+        .emoji {
+            text-shadow: 0 0 2.1em var(--always-white);
+        }
         
         @media (min-width: $medium-width) {
             font-size: 1.6vw;
