@@ -253,6 +253,9 @@
         "label": "Road Atlanta",
         "week": 9,
         "weekStart": "2023-08-08",
+        "notes": [
+            "60 minute endurance round; pit stop is required!"
+        ],
         "audi90gto": [
             {
                 "file": "2022S4W12_Road_Atlanta_R1.sto"
@@ -279,14 +282,32 @@
                 "file": "willow-springs-23S3-r1.sto"
             }
         ],
-        "nissangtpzxt": []
+        "nissangtpzxt": [
+            {
+
+            }
+        ]
     },
     {
         "label": "Red Bull Ring",
         "week": 11,
         "weekStart": "2023-08-22",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "redbull-ring-21S4-kb-r2.sto"
+            },
+            {
+                "file": "redbull-ring-21S4-r3.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "NGTP_RBR_Full_R_v1-5_Q.sto"
+            },
+            {
+                "file": "NGTP_RBR_Full_R_v1-5.sto"
+            }
+        ]
     },
     {
         "label": "Mount Panorama",
