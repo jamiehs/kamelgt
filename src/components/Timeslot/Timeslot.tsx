@@ -2,7 +2,7 @@ import './Timeslot.scss';
 import moment from 'moment-timezone';
 import React from 'react';
 
-import {nextRaceDay, numberAsK, toLocaleStringIfNumber} from '../../helpers.js'
+import {nextRaceDay, numberAsK, toLocaleStringIfNumber} from '../../helpers'
 
 // prevents GMT race days from being localized or shifted inadvertently
 const dayLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
@@ -18,7 +18,7 @@ const stripLeadingZeroIfAmericas = (timeString, timeZone) => {
 
 // Wraps the emoji at the start of the string with a span
 // alternatively it simply returns the input if emoji is not present.
-const wrapEmojiAtStart = (input) => {
+const wrapEmojiAtStart = (input: string) => {
     let pattern = new RegExp(/^(\p{Emoji})/ug)
     let found = input.match(pattern)
     let inputWithoutFirstChar = input.replace(pattern, '')
@@ -28,7 +28,23 @@ const wrapEmojiAtStart = (input) => {
     return input
 }
 
-class Timeslot extends React.Component {
+interface Timeslot {
+    interval: ReturnType<typeof setInterval>,
+}
+interface TimeslotProps {
+    label: string,
+    dayIndex: number,
+    time: string,
+    entries: number,
+    gtoSof: number,
+    gtpSof: number,
+    children: JSX.Element,
+    regularity: string,
+}
+interface TimeslotState {
+    timestamp: number,
+}
+class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
     constructor(props) {
         super(props)
         this.state = {
@@ -58,7 +74,7 @@ class Timeslot extends React.Component {
         const nextRaceDate = nextRaceDay(dayIndex, time)
         const nextRaceDayLocal = nextRaceDate.toLocaleDateString(undefined, { weekday: 'long' })
         const nextRaceTimeLocal = nextRaceDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
-        const avgSof = Math.round((parseInt(gtoSof) + parseInt(gtpSof)) / 2)
+        const avgSof = Math.round((gtoSof + gtpSof) / 2)
 
         return (
             <div className="Timeslot">

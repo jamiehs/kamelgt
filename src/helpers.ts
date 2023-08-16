@@ -7,17 +7,15 @@ import moment from 'moment-timezone'
  * @param {string} nowString eg: '2022-08-01 12:00' used for testing
  * @returns JavaScript date object
  */
-const nextRaceDay = (dayIndex, timeSlot, nowString = null) => {
-    let nowMoment = null
-    if(nowString === null) {
-        nowMoment = moment.tz('GMT')
-    } else {
+const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string|null = null) => {
+    let nowMoment = moment.tz('GMT')
+    if(nowString !== null) {
         nowMoment = moment.tz(nowString, 'GMT')
     }
 
     const today = nowMoment.isoWeekday();
-    const nowHour = parseInt(nowMoment.hour(), 10);
-    const nowMinute = parseInt(nowMoment.minute(), 10);
+    const nowHour = nowMoment.hour();
+    const nowMinute = nowMoment.minute();
     const raceHour = parseInt(timeSlot.split(':')[0], 10);
     const raceMinute = parseInt(timeSlot.split(':')[1], 10);
 
@@ -51,9 +49,17 @@ const nextRaceDay = (dayIndex, timeSlot, nowString = null) => {
  * @param {integer} rolloverDay 5 is after the broadcast; 7 is on Mon/Tues
  * @returns {object} a single week number, label & notes
  */
-const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
-    const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
-    var currentWeek = null
+interface SetupWeek {
+    label: string,
+    week: number,
+    weekStart: string,
+    notes: Array<string>
+}
+const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number = 5): object => {
+    const sortedRounds = seasonSetups.sort((a,b) => {
+        return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
+    });
+    var currentWeek = {}
     
     sortedRounds.some((round, i) => {
         let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
@@ -80,14 +86,14 @@ const getCurrentWeekData = (seasonSetups, rolloverDay = 5) => {
  * @param {string} dateString input date: 2023-03-28 
  * @returns {string} as a local date: 28. März 2023
  */
-const localDateFromString = (dateString) => {
+const localDateFromString = (dateString: string): string => {
     const dateStringParts = dateString.split('-')
     const year = parseInt(dateStringParts[0], 10)
     const month = parseInt(dateStringParts[1], 10)
     const day = parseInt(dateStringParts[2], 10)
 
-    const event = new Date(Date.UTC(year, month-1, day, 0, 0, 0));
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    const event: Date = new Date(Date.UTC(year, month-1, day, 0, 0, 0));
+    const options: object = { year: 'numeric', month: 'short', day: 'numeric' };
 
     return event.toLocaleDateString(undefined, options)
 }
@@ -98,7 +104,7 @@ const localDateFromString = (dateString) => {
  * @param {String} timeString time in GMT 24h format '17:00'
  * @returns Date
  */
-const dateTimeFromString = (dateString, timeString) => {
+const dateTimeFromString = (dateString: string, timeString: string): Date => {
     const dateStringParts = dateString.split('-')
     const year = parseInt(dateStringParts[0], 10)
     const month = parseInt(dateStringParts[1], 10)
@@ -118,22 +124,24 @@ const dateTimeFromString = (dateString, timeString) => {
  * @param {integer} days number of days to add
  * @returns Date
  */
-const addDaysToDate = (date, days) => {
+const addDaysToDate = (date: Date, days: number): Date => {
     var result = new Date(date);
     result.setDate(result.getDate() + days);
     return result;
 }
 
-const getYouTubeId = (url) => {
+const getYouTubeId = (url: string): string|null => {
     let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
-    return matches[1]
+    if(matches) {
+        return matches[1]
+    }
+    return null
 }
 
-const toLocaleStringIfNumber = (input) => {
+const toLocaleStringIfNumber = (input: any): string => {
     if(isNaN(input)) {
         return input
     }
-
     return Number(input).toLocaleString()
 }
 
@@ -145,8 +153,8 @@ const toLocaleStringIfNumber = (input) => {
  * @param {integer} input 
  * @returns string
  */
-const numberAsK = (input) => {
-    return `${parseFloat(input / 1000).toFixed(1)}K`
+const numberAsK = (input: number): string => {
+    return `${(input / 1000).toFixed(1)}K`
 }
 
 

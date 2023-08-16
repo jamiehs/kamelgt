@@ -1,9 +1,9 @@
 import './App.scss';
 import React from 'react';
 import Fuse from 'fuse.js';
-import Timeslot from './components/Timeslot/Timeslot.js';
-import Broadcast from './components/Broadcast/Broadcast.js';
-import Announcement from './components/Announcement/Announcement.js';
+import Timeslot from './components/Timeslot/Timeslot.tsx';
+import Broadcast from './components/Broadcast/Broadcast.tsx';
+import Announcement from './components/Announcement/Announcement.tsx';
 import VideoSpotlight from './components/VideoSpotlight/VideoSpotlight.js';
 import Setups from './components/Setups/Setups.js';
 import seasonSetups from './data/season-setups.json';
@@ -11,7 +11,7 @@ import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
-import {getCurrentWeekData, localDateFromString, addDaysToDate, dateTimeFromString} from './helpers.js';
+import {getCurrentWeekData, localDateFromString, addDaysToDate, dateTimeFromString} from './helpers';
 
 class App extends React.Component {
     constructor(props) {

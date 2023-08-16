@@ -1,3 +1,4 @@
+import React from 'react';
 import './Announcement.scss';
 
 function Announcement(props) {

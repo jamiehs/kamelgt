@@ -2,8 +2,19 @@ import './Broadcast.scss';
 import React from 'react';
 import { getYouTubeId } from '../../helpers';
 
-class Broadcast extends React.Component {
-    constructor(props) {
+interface BroadcastProps {
+    title: string,
+    url: string,
+    date: Date,
+}
+
+interface BroadcastState {
+    videoGlitchId: number,
+    glitchId: number,
+}
+
+class Broadcast extends React.Component<BroadcastProps, BroadcastState> {
+    constructor(props: BroadcastProps) {
         super(props)
         this.state = {
             videoGlitchId: 0,
@@ -17,7 +28,7 @@ class Broadcast extends React.Component {
         })
     }
 
-    randomGlitchId(variants = 5) {
+    randomGlitchId(variants: number = 5):number {
         return Math.ceil(Math.random() * variants)
     }
 
@@ -29,7 +40,7 @@ class Broadcast extends React.Component {
         } = this.props
 
         // format the date object nicely for the missing video
-        let dateString = null
+        let dateString = ''
         if(date && date instanceof Date) {
             dateString = date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
         }
