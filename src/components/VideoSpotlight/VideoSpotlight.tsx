@@ -1,7 +1,15 @@
+import React from 'react';
 import './VideoSpotlight.scss';
 import { getYouTubeId } from '../../helpers';
 
-function VideoSpotlight(props) {
+interface VideoSpotlightProps {
+    youTubeUrl: string
+    subheading: string
+    linkText: string
+    children: JSX.Element
+}
+
+function VideoSpotlight(props: VideoSpotlightProps) {
     let {
         youTubeUrl,
         subheading,

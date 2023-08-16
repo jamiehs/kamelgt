@@ -1,11 +1,11 @@
 import './App.scss';
 import React from 'react';
 import Fuse from 'fuse.js';
-import Timeslot from './components/Timeslot/Timeslot.tsx';
-import Broadcast from './components/Broadcast/Broadcast.tsx';
-import Announcement from './components/Announcement/Announcement.tsx';
-import VideoSpotlight from './components/VideoSpotlight/VideoSpotlight.js';
-import Setups from './components/Setups/Setups.js';
+import Timeslot from './components/Timeslot/Timeslot';
+import Broadcast from './components/Broadcast/Broadcast';
+import Announcement from './components/Announcement/Announcement';
+import VideoSpotlight from './components/VideoSpotlight/VideoSpotlight';
+import Setups from './components/Setups/Setups';
 import seasonSetups from './data/season-setups.json';
 import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';

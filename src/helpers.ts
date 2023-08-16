@@ -50,9 +50,9 @@ const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string|null 
  * @returns {object} a single week number, label & notes
  */
 interface SetupWeek {
-    label: string,
-    week: number,
-    weekStart: string,
+    label: string
+    week: number
+    weekStart: string
     notes: Array<string>
 }
 const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number = 5): object => {

@@ -1,28 +1,31 @@
+import React from 'react'
 import './Setups.scss'
 import {VCR_DISCORD_URL} from '../../data/constants'
 
-import seasonSetups from '../../data/season-setups.json';
-const sortedRounds = seasonSetups.sort((a,b) => {return new Date(a.weekStart) - new Date(b.weekStart)});
+import seasonSetups from '../../data/season-setups.json'
+const sortedRounds = seasonSetups.sort((a,b) => {
+    return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
+})
 
 function Setups(props) {
-    const {upcomingWeeks} = props;
-    var outputRoundsCount = 0;
+    const {upcomingWeeks} = props
+    var outputRoundsCount = 0
 
     return (
         <div className="Setups">
             <div className="rounds-grid">
                 {sortedRounds.map((round) => {
-                    let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
+                    let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00')
 
                     // +7 days is for Monday/Tuesday rollover
                     // +5 days is for the week to end after the broadcast
-                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
+                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5))
                     
                     let upcomingRound = weekEndGmt > new Date();
-                    const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0);
+                    const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0)
 
                     if(upcomingRound && outputRoundsCount < upcomingWeeks) {
-                        outputRoundsCount++;
+                        outputRoundsCount++
                         return (
                             <div className="round-container" key={round.label}>
                                 <h3><span className="week-prefix">Week {round.week}: </span>{round.label}</h3>

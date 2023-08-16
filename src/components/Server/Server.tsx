@@ -1,7 +1,14 @@
+import React from 'react';
 import './Server.scss';
-import discord from '../../images/Discord-Logo-Color.svg'
+import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 
-function Server(props) {
+
+interface ServerProps {
+    title: string
+    url: string
+    description: string
+}
+function Server(props: ServerProps) {
     let {
         title,
         url,
@@ -13,7 +20,7 @@ function Server(props) {
             <h3>{title}</h3>
             <div>{description}</div>
             <div className="discord-url">
-                <img src={discord} alt="" />
+                <DiscordIcon />
                 <a href={url} target="_blank" rel="noreferrer">{url}</a>
             </div>
         </div>

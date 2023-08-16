@@ -29,20 +29,20 @@ const wrapEmojiAtStart = (input: string) => {
 }
 
 interface Timeslot {
-    interval: ReturnType<typeof setInterval>,
+    interval: ReturnType<typeof setInterval>
 }
 interface TimeslotProps {
-    label: string,
-    dayIndex: number,
-    time: string,
-    entries: number,
-    gtoSof: number,
-    gtpSof: number,
-    children: JSX.Element,
-    regularity: string,
+    label: string
+    dayIndex: number
+    time: string
+    entries: number
+    gtoSof: number
+    gtpSof: number
+    children: JSX.Element
+    regularity: string
 }
 interface TimeslotState {
-    timestamp: number,
+    timestamp: number
 }
 class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
     constructor(props) {

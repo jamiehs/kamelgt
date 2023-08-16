@@ -3,9 +3,9 @@ import React from 'react';
 import { getYouTubeId } from '../../helpers';
 
 interface BroadcastProps {
-    title: string,
-    url: string,
-    date: Date,
+    title: string
+    url: string
+    date: Date
 }
 
 interface BroadcastState {
