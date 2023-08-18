@@ -7,12 +7,10 @@ interface BroadcastProps {
     url: string
     date: Date
 }
-
 interface BroadcastState {
     videoGlitchId: number,
     glitchId: number,
 }
-
 class Broadcast extends React.Component<BroadcastProps, BroadcastState> {
     constructor(props: BroadcastProps) {
         super(props)

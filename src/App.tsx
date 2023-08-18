@@ -13,14 +13,35 @@ import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
 import {getCurrentWeekData, localDateFromString, addDaysToDate, dateTimeFromString} from './helpers';
 
-class App extends React.Component {
+interface SingleBroadcast {
+    id: string
+    label: string
+    round: number
+    title: string
+    alternateTitle?: string
+    url: string
+}
+interface App {
+    interval: ReturnType<typeof setInterval>
+    flattenedBroadcasts: Array<SingleBroadcast>
+    fuse: Fuse<SingleBroadcast>
+}
+interface AppState {
+    currentWeekData: {}
+    broadcastsSeason: string
+    broadcastSearchQuery: string
+    currentSeasonDates: Array<Date>
+    broadcastSearchResults: Fuse.FuseResult<SingleBroadcast>[]
+}
+class App extends React.Component<null, AppState> {
     constructor(props) {
         super(props)
         this.state = {
             currentWeekData: getCurrentWeekData(seasonSetups),
             broadcastsSeason: broadcasts[broadcasts.length-1].id,
-            broadcastSearchQuery: null,
+            broadcastSearchQuery: '',
             currentSeasonDates: [],
+            broadcastSearchResults: [],
         }
     }
     componentDidMount() {
@@ -87,14 +108,14 @@ class App extends React.Component {
     }
 
     render() {
-        let currentWeek = this.state.currentWeekData
+        let currentWeek: CurrentWeek = this.state.currentWeekData
         let {
             broadcastSearchQuery,
             broadcastSearchResults,
             currentSeasonDates,
         } = this.state
 
-        const hasBroadcastSearchQuery = broadcastSearchQuery && broadcastSearchQuery !== ''
+        const hasBroadcastSearchQuery = Boolean(broadcastSearchQuery && broadcastSearchQuery !== '')
 
         return (
             <div className="App">
@@ -160,9 +181,9 @@ class App extends React.Component {
                                     label="Midweek Madness"
                                     dayIndex={3}
                                     time="19:00"
-                                    entries="56"
-                                    gtoSof="2975"
-                                    gtpSof="3197"
+                                    entries={56}
+                                    gtoSof={2975}
+                                    gtpSof={3197}
                                 >
                                     <p>
                                         If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
@@ -172,9 +193,9 @@ class App extends React.Component {
                                     label="Midweek Americas"
                                     dayIndex={4}
                                     time="01:00"
-                                    entries="31"
-                                    gtoSof="1947"
-                                    gtpSof="2098"
+                                    entries={31}
+                                    gtoSof={1947}
+                                    gtpSof={2098}
                                 >
                                     <p>
                                         Wednesday race for the US time zones. Early evening on the west coast and late evening on the east&nbsp;coast.
@@ -184,9 +205,9 @@ class App extends React.Component {
                                     label="Friday Night Race"
                                     dayIndex={5}
                                     time="21:00"
-                                    entries="41"
-                                    gtoSof="2379"
-                                    gtpSof="2158"
+                                    entries={41}
+                                    gtoSof={2379}
+                                    gtpSof={2158}
                                 >
                                     <p>
                                         The big race that is not the broadcast race. If you want a full field to practice/compete in, this&nbsp;is&nbsp;it.
@@ -196,9 +217,9 @@ class App extends React.Component {
                                     label="Pacific Americas"
                                     dayIndex={6}
                                     time="03:00"
-                                    entries="20"
-                                    gtoSof="2342"
-                                    gtpSof="1632"
+                                    entries={20}
+                                    gtoSof={2342}
+                                    gtpSof={1632}
                                 >
                                     <p>
                                         Uses the 03:00 GMT time slot as an alternative to the "Midweek Americas" slot. This is around noon on Saturday in Australia!
@@ -208,9 +229,9 @@ class App extends React.Component {
                                     label="🎥 Broadcast Race"
                                     dayIndex={6}
                                     time="17:00"
-                                    entries="68"
-                                    gtoSof="3017"
-                                    gtpSof="3635"
+                                    entries={68}
+                                    gtoSof={3017}
+                                    gtpSof={3635}
                                 >
                                     <p>
                                         <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
@@ -220,9 +241,9 @@ class App extends React.Component {
                                     label="Australia & NZ"
                                     dayIndex={0}
                                     time="09:00"
-                                    entries="10"
-                                    gtoSof="2265"
-                                    gtpSof="2507"
+                                    entries={10}
+                                    gtoSof={2265}
+                                    gtpSof={2507}
                                     regularity="new for 23S3"
                                 >
                                     <p>

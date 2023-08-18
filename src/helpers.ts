@@ -49,13 +49,7 @@ const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string|null 
  * @param {integer} rolloverDay 5 is after the broadcast; 7 is on Mon/Tues
  * @returns {object} a single week number, label & notes
  */
-interface SetupWeek {
-    label: string
-    week: number
-    weekStart: string
-    notes: Array<string>
-}
-const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number = 5): object => {
+const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number = 5): CurrentWeek => {
     const sortedRounds = seasonSetups.sort((a,b) => {
         return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
     });

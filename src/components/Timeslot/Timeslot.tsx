@@ -39,7 +39,7 @@ interface TimeslotProps {
     gtoSof: number
     gtpSof: number
     children: JSX.Element
-    regularity: string
+    regularity?: string
 }
 interface TimeslotState {
     timestamp: number
