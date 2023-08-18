@@ -34,7 +34,7 @@ function VideoSpotlight(props: VideoSpotlightProps) {
             <div className="section">
                 <header>
                     <h3>
-                        Kamel Clip Spotlight
+                        Video Clip Spotlight
                         <span>{subheading}</span>
                     </h3>
                 </header>
