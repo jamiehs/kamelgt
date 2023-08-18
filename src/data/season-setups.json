@@ -285,18 +285,26 @@
         "weekStart": "2023-08-15",
         "audi90gto": [
             {
-                "file": "willow-springs-23S3-r1.sto",
-                "comment": "Jamie: Getting faster, but there's more potential..."
+                "file": "A90_23S3_WillowSprings_Y_Gijsen_Q.sto"
+            },
+            {
+                "file": "A90_23S3_WillowSprings_Y_Gijsen_R.sto"
+            },
+            {
+                "file": "JDS-WillowSprings-Race.sto",
+                "comment": "Jack David Spickett: running a higher brake bias than usual due to the camber of the corners sucking the car in a fair amount; and check fuel before race but it is 32 laps of fuel in the tank (going off kapps overlay)"
             }
         ],
         "nissangtpzxt": [
             {
-                "file": "WillowSprings-Q.sto",
-                "comment": "Tim Reed: Still trying to figure out the track."
+                "file": "Lgo23S3_Big_Willow_Q60.sto"
             },
             {
-                "file": "WillowSprings-R.sto",
-                "comment": "Tim Reed: Still trying to figure out the track."
+                "file": "Lgo23S3_Big_Willow_R61.sto"
+            },
+            {
+                "file": "WillowSprings-R2-wing5.sto",
+                "comment": "Tim Reed: Less wing and less front camber. I like it a lot better than the one I posted earlier, just got to baby it in the hilly section."
             }
         ]
     },
