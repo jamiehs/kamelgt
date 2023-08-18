@@ -2,7 +2,6 @@ import React from 'react';
 import './Server.scss';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 
-
 interface ServerProps {
     title: string
     url: string

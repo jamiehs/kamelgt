@@ -7,7 +7,10 @@ const sortedRounds = seasonSetups.sort((a,b) => {
     return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
 })
 
-function Setups(props) {
+interface SetupsProps {
+    upcomingWeeks: number
+}
+function Setups(props: SetupsProps) {
     const {upcomingWeeks} = props
     var outputRoundsCount = 0
 

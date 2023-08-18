@@ -1,7 +1,13 @@
 import React from 'react';
 import './Announcement.scss';
 
-function Announcement(props) {
+interface AnnouncementProps {
+    begins: string
+    expires: string
+    children: React.ReactNode
+}
+
+function Announcement(props: AnnouncementProps) {
     let {
         begins,
         expires,
@@ -19,10 +25,8 @@ function Announcement(props) {
                 </div>
             </div>
         );
-    } else {
-        return null
     }
-
+    return null
 }
 
 export default Announcement;

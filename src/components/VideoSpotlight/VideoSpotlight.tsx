@@ -6,7 +6,7 @@ interface VideoSpotlightProps {
     youTubeUrl: string
     subheading: string
     linkText: string
-    children: JSX.Element|string
+    children: React.ReactNode
 }
 
 function VideoSpotlight(props: VideoSpotlightProps) {
