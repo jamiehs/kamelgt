@@ -6,6 +6,8 @@ interface VideoSpotlightProps {
     youTubeUrl: string
     subheading: string
     linkText: string
+    thumbnailSource?: string
+    thumbnailIndex?: number
     children: React.ReactNode
 }
 
@@ -14,8 +16,18 @@ function VideoSpotlight(props: VideoSpotlightProps) {
         youTubeUrl,
         subheading,
         linkText,
+        thumbnailSource,
+        thumbnailIndex = 3,
         children,
     } = props
+
+    let thumbnail = ''
+    if(youTubeUrl) {
+        thumbnail = `https://img.youtube.com/vi/${getYouTubeId(youTubeUrl)}/hq${thumbnailIndex}.jpg`
+    }
+    if(thumbnailSource) {
+        thumbnail = thumbnailSource
+    }
 
     return (
         <div id="video-spotlight">
@@ -32,7 +44,7 @@ function VideoSpotlight(props: VideoSpotlightProps) {
                             <a className="no-icon" href={youTubeUrl} target="_blank" rel="noreferrer">
                                 <div
                                     className="thumbnail"
-                                    style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(youTubeUrl)}/hq3.jpg)`}}
+                                    style={{backgroundImage: `url(${thumbnail})`}}
                                 />
                             </a>
                         </div>

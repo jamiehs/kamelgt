@@ -144,11 +144,12 @@ class App extends React.Component<null, AppState> {
                     </div>
                 </div>
                 <VideoSpotlight
-                    youTubeUrl="https://youtu.be/1Dd8jGkICr4"
-                    subheading="This one was posted by iRacing on their official YouTube channel!"
-                    linkText="iRacing Kamel GT - Epic GTO Battle for the Lead"
+                    youTubeUrl="https://youtu.be/WhbYz5Cxebk?t=3349"
+                    subheading="An amazing last few laps in the GTO class"
+                    linkText="GTOs Battle for 2nd in Class"
+                    thumbnailSource="/custom-thumbs/ian-gto-battle-watkins23s3.jpg"
                 >
-                    Jouko Leskela and Ville Ruola battle for the GTO lead in the Kamel GT Series - side by side for a lap and a half!  Massive respect from everyone involved, including the faster GTP cars behind.
+                    Doug Cloud, Ian Haycox, Robert Plumley, Ben Laughter, Theo Schleret and Timothy Vaughan battle in a display of close racing and position swapping.
                 </VideoSpotlight>
                 <div className="timeslots-container">
                     <div id="timeslots" className="timeslots-wrapper">
