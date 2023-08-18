@@ -13,14 +13,6 @@ import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
 import {getCurrentWeekData, localDateFromString, addDaysToDate, dateTimeFromString} from './helpers';
 
-interface SingleBroadcast {
-    id: string
-    label: string
-    round: number
-    title: string
-    alternateTitle?: string
-    url: string
-}
 interface App {
     interval: ReturnType<typeof setInterval>
     flattenedBroadcasts: Array<SingleBroadcast>

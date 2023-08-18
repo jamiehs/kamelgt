@@ -5,10 +5,20 @@ declare module '*.svg' {
     export default src;
 }
 
+interface SingleBroadcast {
+    id: string
+    label: string
+    round: number
+    title: string
+    alternateTitle?: string
+    url: string
+}
+
 interface CarSetup {
     file: string
     comment?: string
 }
+
 interface SetupWeek {
     label: string
     week: number
@@ -17,6 +27,7 @@ interface SetupWeek {
     audi90gto?: Array<CarSetup>
     nissangtpzxt?: Array<CarSetup>
 }
+
 interface CurrentWeek {
     week?: number
     label?: string
