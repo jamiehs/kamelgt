@@ -285,6 +285,13 @@
         "weekStart": "2023-08-15",
         "audi90gto": [
             {
+                "file": "maf_willow_q4.sto"
+            },
+            {
+                "file": "maf_willow_r4.sto",
+                "comment": "Mickey Friesen: feeling pretty good with this at the moment"
+            },
+            {
                 "file": "A90_23S3_WillowSprings_Y_Gijsen_Q.sto"
             },
             {
