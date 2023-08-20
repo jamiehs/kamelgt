@@ -732,7 +732,7 @@ const broadcasts = [
             },
             {
                 title: "Willow Springs",
-                url: ""
+                url: "https://youtu.be/xJob8d9IXho?t=1020"
             },
             {
                 title: "Red Bull Ring",
