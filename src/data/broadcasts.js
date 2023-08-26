@@ -1,3 +1,85 @@
+const BARCELONA = {
+    title: "Barcelona",
+    alternateTitle: "Circuit de Barcelona-Catalunya"
+}
+const BATHURST = {
+    title: "Bathurst",
+    alternateTitle: "Mount Panorama Circuit"
+}
+const BARCELONA_HISTORIC = {
+    title: "Barcelona Historic",
+    alternateTitle: "Circuit de Barcelona-Catalunya - Historic"
+}
+const DAYTONA = {
+    title: "Daytona"
+}
+const DAYTONA_NASCAR_ROAD = {
+    title: "Daytona - NASCAR Road"
+}
+const IMOLA = {
+    title: "Imola",
+    alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari"
+}
+const LE_MANS = {
+    title: "Le Mans",
+    alternateTitle: "Circuit des 24 Heures du Mans"
+}
+const LE_MANS_HISTORIC = {
+    title: "Le Mans Historic",
+    alternateTitle: "Circuit des 24 Heures du Mans - Historic"
+}
+const MID_OHIO = {
+    title: "Mid-Ohio"
+}
+const MID_OHIO_CHICANE = {
+    title: "Mid-Ohio - Chicane"
+}
+const MONZA_WITHOUT_FIRST_CHICANE = {
+    title: "Monza without first chicane",
+    alternateTitle: "Autodromo Nazionale Monza - GP without first chicane"
+}
+const MOSPORT = {
+    title: "CTMP 'Mosport'",
+    alternateTitle: "Canadian Tire Motorsport Park"
+}
+const NORDSCHLEIFE_INDUSTRIEFAHRTEN = {
+    title: "Nordschleife - Industriefahrten",
+    alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten"
+}
+const ROAD_AMERICA = {
+    title: "Road America"
+}
+const ROAD_ATLANTA = {
+    title: "Road Atlanta"
+}
+const SNETTERTON_200 = {
+    title: "Snetterton 200",
+    alternateTitle: "Snetterton Circuit - 200"
+}
+const SPA_CLASSIC_PITS = {
+    title: "Spa",
+    alternateTitle: "Circuit de Spa-Francorchamps - Classic Pits"
+}
+const SPA_ENDURANCE_PITS = {
+    title: "Spa",
+    alternateTitle: "Circuit de Spa-Francorchamps - Endurance Pits"
+}
+const SPA_GRAND_PRIX_PITS = {
+    title: "Spa",
+    alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits"
+}
+const WATKINS_GLEN_BOOT = {
+    title: "Watkins Glen - Boot",
+    alternateTitle: "Watkins Glen International - Boot"
+}
+const WATKINS_GLEN_CLASSIC_BOOT = {
+    title: "Watkins Glen - Classic Boot",
+    alternateTitle: "Watkins Glen International - Classic Boot"
+}
+const ZANDVOORT = {
+    title: "Zandvoort"
+}
+
 const broadcasts = [
     {
         id: "20S4",
@@ -6,43 +88,39 @@ const broadcasts = [
         endDate: "2020-12-01",
         youTube: [
             {
-                title: "Road America",
+                ...ROAD_AMERICA,
                 url: "https://youtu.be/4MuvZF3B2ys?t=1165"
             },
             {
-                title: "Imola",
-                alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari",
+                ...IMOLA,
                 url: "https://youtu.be/UQ-BgW7O9No?t=1112"
             },
             {
-                title: "Snetterton 200",
-                alternateTitle: "Snetterton Circuit - 200",
+                ...SNETTERTON_200,
                 url: "https://youtu.be/4LlKmFZYk1E?t=1112"
             },
             {
-                title: "Daytona - NASCAR Road ",
+                ...DAYTONA_NASCAR_ROAD,
                 url: "https://youtu.be/ZgcFz0msa6s?t=998"
             },
             {
-                title: "Watkins Glen - Classic Boot",
-                alternateTitle: "Watkins Glen International - Classic Boot",
+                ...WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/oLCKoT-BKvc?t=1041"
             },
             {
-                title: "Mid-Ohio - Chicane",
+                ...MID_OHIO_CHICANE,
                 url: "https://youtu.be/QMGmDzj1UoQ?t=1082"
             },
             {
-                title: "Zandvoort",
+                ...ZANDVOORT,
                 url: "https://youtu.be/-02T2V4JtHg?t=1073"
             },
             {
-                title: "Road Atlanta",
+                ...ROAD_ATLANTA,
                 url: "https://youtu.be/iB6iahxq4Fw?t=1131"
             },
             {
-                title: "Bathurst",
-                alternateTitle: "Mount Panorama Circuit",
+                ...BATHURST,
                 url: "https://youtu.be/rXh7Rjg5-G8?t=1060"
             },
             {
@@ -50,8 +128,7 @@ const broadcasts = [
                 url: "https://youtu.be/_w9yQpwt3Is?t=1021"
             },
             {
-                title: "Spa",
-                alternateTitle: "Circuit de Spa-Francorchamps - Endurance",
+                ...SPA_ENDURANCE_PITS,
                 url: "https://youtu.be/Le3DjFDDp2U?t=1097"
             },
             {
@@ -67,8 +144,7 @@ const broadcasts = [
         endDate: "2021-03-02",
         youTube: [
             {
-                title: "Le Mans",
-                alternateTitle: "Circuit des 24 Heures du Mans",
+                ...LE_MANS,
                 url: "https://youtu.be/N3a92hCdrgU?t=1007"
             },
             {
@@ -84,8 +160,7 @@ const broadcasts = [
                 url: "https://youtu.be/nMeaRIYCH7I?t=837"
             },
             {
-                title: "Monza without first chicane",
-                alternateTitle: "Autodromo Nazionale Monza - GP without first chicane",
+                ...MONZA_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/wFQ7zzE-SyY?t=879"
             },
             {
@@ -102,8 +177,7 @@ const broadcasts = [
                 url: "https://youtu.be/RPC__My3ckc?t=716"
             },
             {
-                title: "Barcelona Historic",
-                alternateTitle: "Circuit de Barcelona-Catalunya - Historic",
+                ...BARCELONA_HISTORIC,
                 url: "https://youtu.be/dkDVOSXntbI?t=692"
             },
             {
@@ -111,13 +185,11 @@ const broadcasts = [
                 url: "https://youtu.be/8qMi9IysdVQ?t=799"
             },
             {
-                title: "CTMP 'Mosport'",
-                alternateTitle: "Canadian Tire Motorsport Park",
+                ...MOSPORT,
                 url: "https://youtu.be/OoszG0BC35A?t=630"
             },
             {
-                title: "Nordschleife - Industriefahrten",
-                alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten",
+                ...NORDSCHLEIFE_INDUSTRIEFAHRTEN,
                 url: "https://youtu.be/cVbrave5ytw?t=473"
             },
         ]
@@ -129,7 +201,7 @@ const broadcasts = [
         endDate: "2021-06-01",
         youTube: [
             {
-                title: "Road America",
+                ...ROAD_AMERICA,
                 url: "https://youtu.be/DnIP5BLauMw?t=757"
             },
             {
@@ -147,8 +219,7 @@ const broadcasts = [
                 url: "https://youtu.be/T08kTnTDG6I?t=1045"
             },
             {
-                title: "Spa",
-                alternateTitle: "Circuit de Spa-Francorchamps - Endurance",
+                ...SPA_ENDURANCE_PITS,
                 url: "https://youtu.be/GxvgP0sFyAA?t=1022"
             },
             {
@@ -169,8 +240,7 @@ const broadcasts = [
                 url: "https://youtu.be/68Ex20Maghg?t=728"
             },
             {
-                title: "Watkins Glen - Classic Boot",
-                alternateTitle: "Watkins Glen International - Classic Boot",
+                ...WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/uBxwHgQmWXw?t=891"
             },
             {
@@ -178,7 +248,7 @@ const broadcasts = [
                 url: "https://youtu.be/fCQIe68W84I?t=935"
             },
             {
-                title: "Road Atlanta",
+                ...ROAD_ATLANTA,
                 url: "https://youtu.be/zb3SutQmlFQ?t=940"
             },
         ]
@@ -194,7 +264,7 @@ const broadcasts = [
                 url: "https://youtu.be/hh_hS92xkNc?t=1036"
             },
             {
-                title: "Daytona - NASCAR Road ",
+                ...DAYTONA_NASCAR_ROAD,
                 url: "https://youtu.be/s04-PFAFAuM?t=1106"
             },
             {
@@ -202,7 +272,7 @@ const broadcasts = [
                 url: "https://youtu.be/ioHcrCZ5aPI?t=1050"
             },
             {
-                title: "Zandvoort",
+                ...ZANDVOORT,
                 url: "https://youtu.be/0rhrMP1Yvgs?t=1005"
             },
             {
@@ -227,8 +297,7 @@ const broadcasts = [
                 url: "https://youtu.be/8VvFCRllj00?t=1082"
             },
             {
-                title: "Bathurst",
-                alternateTitle: "Mount Panorama Circuit",
+                ...BATHURST,
                 url: "https://youtu.be/qcytES55iYg?t=1086"
             },
             {
@@ -236,8 +305,7 @@ const broadcasts = [
                 url: "https://youtu.be/CRE872nvMY8?t=1150"
             },
             {
-                title: "Le Mans",
-                alternateTitle: "Circuit des 24 Heures du Mans",
+                ...LE_MANS,
                 url: "https://youtu.be/prDJOMQ6lsk?t=1125"
             },
         ]
@@ -249,7 +317,7 @@ const broadcasts = [
         endDate: "2021-11-30",
         youTube: [
             {
-                title: "Road America",
+                ...ROAD_AMERICA,
                 url: "https://youtu.be/wG_Vibek5JQ?t=1087"
             },
             {
@@ -282,13 +350,11 @@ const broadcasts = [
                 url: "https://youtu.be/AKsKbJkKeJM?t=1015"
             },
             {
-                title: "CTMP 'Mosport'",
-                alternateTitle: "Canadian Tire Motorsport Park",
+                ...MOSPORT,
                 url: "https://youtu.be/JZOB2_rFG7M?t=1141"
             },
             {
-                title: "Spa",
-                alternateTitle: "Circuit de Spa-Francorchamps - Endurance",
+                ...SPA_ENDURANCE_PITS,
                 url: "https://youtu.be/gHzTJDpov40?t=1081"
             },
             {
@@ -296,8 +362,7 @@ const broadcasts = [
                 url: "https://youtu.be/XzPKb2U9W3E?t=1134"
             },
             {
-                title: "Watkins Glen - Classic Boot",
-                alternateTitle: "Watkins Glen International - Classic Boot",
+                ...WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/Z1TfQZ3WcOA?t=1072"
             },
             {
@@ -322,8 +387,7 @@ const broadcasts = [
                 url: "https://youtu.be/CxbyHx9RX78?t=1084"
             },
             {
-                title: "Imola",
-                alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari",
+                ...IMOLA,
                 url: "https://youtu.be/gRE0HnzSVxU?t=1064"
             },
             {
@@ -332,12 +396,11 @@ const broadcasts = [
                 url: "https://youtu.be/jGq82uRosIM?t=841"
             },
             {
-                title: "Barcelona Historic",
-                alternateTitle: "Circuit de Barcelona-Catalunya - Historic",
+                ...BARCELONA_HISTORIC,
                 url: "https://youtu.be/HCl0HcQdjEo?t=1050"
             },
             {
-                title: "Mid-Ohio",
+                ...MID_OHIO,
                 url: "https://youtu.be/oBgYn342OQk?t=981"
             },
             {
@@ -355,8 +418,7 @@ const broadcasts = [
                 url: "https://youtu.be/wnRE8dKN_s0?t=1075"
             },
             {
-                title: "Snetterton 200",
-                alternateTitle: "Snetterton Circuit - 200",
+                ...SNETTERTON_200,
                 url: "https://youtu.be/ThlF-Y12yHs?t=1026"
             },
             {
@@ -364,11 +426,11 @@ const broadcasts = [
                 url: "https://youtu.be/Qlynwhq4E9M?t=1090"
             },
             {
-                title: "Bathurst",
-                alternateTitle: "Mount Panorama Circuit",
+                ...BATHURST,
                 url: "https://youtu.be/cz2aKmuQuaE?t=1050"
             },
             {
+                ...ROAD_AMERICA,
                 title: "DTRL Road America 500 km",
                 url: "https://youtu.be/CTrtDWDTx-I?t=1134"
             },
@@ -381,7 +443,7 @@ const broadcasts = [
         endDate: "2022-05-31",
         youTube: [
             {
-                title: "Road Atlanta",
+                ...ROAD_ATLANTA,
                 url: "https://youtu.be/bf1DsFC2Ku4?t=1209"
             },
             {
@@ -390,7 +452,7 @@ const broadcasts = [
                 url: "https://www.youtube.com/watch?v=vhaQO7XM5c0"
             },
             {
-                title: "Road America",
+                ...ROAD_AMERICA,
                 url: "https://youtu.be/IMvUGCCVOOk?t=224"
             },
             {
@@ -412,8 +474,7 @@ const broadcasts = [
                 url: "https://youtu.be/OpP7wrWOsyA?t=1055"
             },
             {
-                title: "Spa",
-                alternateTitle: "Circuit de Spa-Francorchamps",
+                ...SPA_CLASSIC_PITS,
                 url: "https://youtu.be/4SdGFU0hk-c?t=120"
             },
             {
@@ -429,7 +490,7 @@ const broadcasts = [
                 url: "https://youtu.be/02MoqXEu4a4?t=1082"
             },
             {
-                title: "Daytona",
+                ...DAYTONA,
                 url: "https://youtu.be/-JLYR7z6PNQ?t=1036"
             },
         ]
@@ -441,8 +502,7 @@ const broadcasts = [
         endDate: "2022-08-30",
         youTube: [
             {
-                title: "Le Mans",
-                alternateTitle: "Circuit des 24 Heures du Mans",
+                ...LE_MANS,
                 url: "https://youtu.be/8zgn6ACLQlw?t=1095"
             },
             {
@@ -450,8 +510,7 @@ const broadcasts = [
                 url: "https://youtu.be/5huzNPgmsJc?t=1043"
             },
             {
-                title: "Watkins Glen - Boot",
-                alternateTitle: "Watkins Glen International - Boot",
+                ...WATKINS_GLEN_BOOT,
                 url: "https://youtu.be/bncdRkxyUZI?t=1208"
             },
             {
@@ -480,8 +539,7 @@ const broadcasts = [
                 url: "https://youtu.be/lxJ72IILRY8?t=1049"
             },
             {
-                title: "CTMP 'Mosport'",
-                alternateTitle: "Canadian Tire Motorsport Park",
+                ...MOSPORT,
                 url: "https://youtu.be/WbBzeqt_Pq4?t=1024"
             },
             {
@@ -510,7 +568,7 @@ const broadcasts = [
                 url: "https://youtu.be/h1nc78hWwxI?t=1016"
             },
             {
-                title: "Road America",
+                ...ROAD_AMERICA,
                 url: "https://youtu.be/82kwglhoAw8?t=1063"
             },
             {
@@ -530,13 +588,11 @@ const broadcasts = [
                 url: "https://youtu.be/GQ6SigoX5QA?t=1010"
             },
             {
-                title: "Spa",
-                alternateTitle: "Circuit de Spa-Francorchamps",
+                ...SPA_CLASSIC_PITS,
                 url: "https://youtu.be/3coWzmh3vMk?t=1014"
             },
             {
-                title: "Imola",
-                alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari",
+                ...IMOLA,
                 url: "https://youtu.be/dq0vS6DnknY?t=1148"
             },
             {
@@ -549,7 +605,7 @@ const broadcasts = [
                 url: "https://youtu.be/iJRGkebK6kM?t=993"
             },
             {
-                title: "Road Atlanta",
+                ...ROAD_ATLANTA,
                 url: "https://youtu.be/WolhGM8Dfws?t=779"
             },
         ]
@@ -575,8 +631,7 @@ const broadcasts = [
                 url: "https://youtu.be/I-4EdrrgFtM?t=520"
             },
             {
-                title: "Bathurst",
-                alternateTitle: "Mount Panorama Circuit",
+                ...BATHURST,
                 url: "https://youtu.be/EDxZkP4qbQM?t=888"
             },
             {
@@ -584,17 +639,15 @@ const broadcasts = [
                 url: "https://youtu.be/Ep-hjQZpv34?t=772"
             },
             {
-                title: "Barcelona",
-                alternateTitle: "Circuit de Barcelona-Catalunya",
+                ...BARCELONA,
                 url: "https://youtu.be/NbtMgYusMgI?t=977"
             },
             {
-                title: "Mid-Ohio",
+                ...MID_OHIO,
                 url: "https://youtu.be/2QdLxTG8C94?t=546"
             },
             {
-                title: "Le Mans Historic",
-                alternateTitle: "Circuit des 24 Heures du Mans - Historic",
+                ...LE_MANS_HISTORIC,
                 url: "https://youtu.be/a4JHWiWrxwo?t=1024"
             },
             {
@@ -602,8 +655,7 @@ const broadcasts = [
                 url: "https://youtu.be/SA_9qOT8THo?t=1031"
             },
             {
-                title: "Watkins Glen Classic Boot",
-                alternateTitle: "Watkins Glen - Classic Boot",
+                ...WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/qVbLZmG_VNY?t=877"
             },
             {
@@ -611,7 +663,7 @@ const broadcasts = [
                 url: "https://youtu.be/tHUVKQzvyfI?t=981"
             },
             {
-                title: "Daytona",
+                ...DAYTONA,
                 url: "https://youtu.be/wzdzBU8c8zw?t=850"
             },
             {
@@ -645,6 +697,7 @@ const broadcasts = [
                 url: "https://youtu.be/5TYJjykBfb0?t=961"
             },
             {
+                ...ROAD_AMERICA,
                 title: "Road America 500 mi",
                 url: "https://youtu.be/xIKDpzoqDcY?t=610"
             },
@@ -702,13 +755,11 @@ const broadcasts = [
                 url: "https://youtu.be/G6fsCSzavRI?t=951"
             },
             {
-                title: "Le Mans Historic",
-                alternateTitle: "Circuit des 24 Heures du Mans - Historic",
+                ...LE_MANS_HISTORIC,
                 url: "https://youtu.be/ix6-TJJbDOI?t=936"
             },
             {
-                title: "Spa",
-                alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits",
+                ...SPA_GRAND_PRIX_PITS,
                 url: "https://youtu.be/Fkl1RuSThFc?t=968"
             },
             {
@@ -717,17 +768,15 @@ const broadcasts = [
                 url: "https://youtu.be/6jteLxpFYDI?t=987"
             },
             {
-                title: "CTMP 'Mosport'",
-                alternateTitle: "Canadian Tire Motorsport Park",
+                ...MOSPORT,
                 url: "https://youtu.be/k7pWNNN05Pk?t=826"
             },
             {
-                title: "Watkins Glen - Classic Boot",
-                alternateTitle: "Watkins Glen International - Classic Boot",
+                ...WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/WhbYz5Cxebk?t=1057"
             },
             {
-                title: "Road Atlanta",
+                ...ROAD_ATLANTA,
                 url: "https://youtu.be/pa3_F5dUtn8?t=835"
             },
             {
@@ -739,8 +788,7 @@ const broadcasts = [
                 url: "https://youtu.be/yX8tBAuHY4Q?t=902"
             },
             {
-                title: "Bathurst",
-                alternateTitle: "Mount Panorama Circuit",
+                ...BATHURST,
                 url: ""
             },
         ]
