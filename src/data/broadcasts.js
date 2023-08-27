@@ -1,234 +1,4 @@
-const ARAGON_OUTER = {
-    title: "Aragón - Outer",
-    alternateTitle: "MotorLand Aragon - Outer"
-}
-const BARBER = {
-    title: "Barber Motorsports Park"
-}
-const BARCELONA = {
-    title: "Barcelona",
-    alternateTitle: "Circuit de Barcelona-Catalunya"
-}
-const BATHURST = {
-    title: "Bathurst",
-    alternateTitle: "Mount Panorama Circuit"
-}
-const BARCELONA_HISTORIC = {
-    title: "Barcelona Historic",
-    alternateTitle: "Circuit de Barcelona-Catalunya - Historic"
-}
-const BELLE_ISLE = {
-    title: "Detroit Belle Isle"
-}
-const BRANDS_HATCH = {
-    title: "Brands Hatch"
-}
-const CHARLOTTE_ROVAL = {
-    title: "Charlotte - Roval"
-}
-const COTA = {
-    title: "COTA",
-    alternateTitle: "Circuit of the Americas"
-}
-const DAYTONA = {
-    title: "Daytona"
-}
-const DAYTONA_NASCAR_ROAD = {
-    title: "Daytona - NASCAR Road"
-}
-const DONINGTON_PARK = {
-    title: "Donington Park"
-}
-const FUJI_NO_CHICANE = {
-    title: "Fuji - No Chicane"
-}
-const HOCKENHEIM_GP = {
-    title: "Hockenheim GP",
-    alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix"
-}
-const HOMESTEAD_MIAMI_ROAD_B = {
-    title: "Homestead Miami",
-    alternateTitle: "Homestead Miami Speedway - Road Course B"
-}
-const HUNGARORING = {
-    title: "Hungaroring"
-}
-const IMOLA = {
-    title: "Imola",
-    alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari"
-}
-const INDY_ROAD_2009 = {
-    title: "Indy - Road 2009",
-    alternateTitle: "Indianapolis Motor Speedway - Road 2009"
-}
-const INDY_ROAD = {
-    title: "Indy - Road",
-    alternateTitle: "Indianapolis Motor Speedway - Road"
-}
-const INTERLAGOS = {
-    title: "Interlagos",
-    alternateTitle: "Autódromo José Carlos Pace"
-}
-const JEREZ = {
-    title: "Jerez"
-}
-const LAGUNA_SECA = {
-    title: "Laguna Seca"
-}
-const LE_MANS = {
-    title: "Le Mans",
-    alternateTitle: "Circuit des 24 Heures du Mans"
-}
-const LE_MANS_HISTORIC = {
-    title: "Le Mans Historic",
-    alternateTitle: "Circuit des 24 Heures du Mans - Historic"
-}
-const LIME_ROCK_CLASSIC = {
-    title: "Lime Rock Park - Classic"
-}
-const LIME_ROCK_WEST_BEND = {
-    title: "Lime Rock Park - West Bend Chicane"
-}
-const LONG_BEACH = {
-    title: "Long Beach"
-}
-const MAGNY_COURS = {
-    title: "Magny-Cours"
-}
-const MID_OHIO = {
-    title: "Mid-Ohio"
-}
-const MID_OHIO_CHICANE = {
-    title: "Mid-Ohio - Chicane"
-}
-const MONTREAL = {
-    title: "Montreal",
-    alternateTitle: "Circuit Gilles Villeneuve"
-}
-const MONZA = {
-    title: "Monza",
-    alternateTitle: "Autodromo Nazionale Monza"
-}
-const MONZA_WITHOUT_FIRST_CHICANE = {
-    title: "Monza without first chicane",
-    alternateTitle: "Autodromo Nazionale Monza - GP without first chicane"
-}
-const MONZA_COMBINED_WITHOUT_FIRST_CHICANE = {
-    title: "Monza - Combined without first chicane",
-    alternateTitle: "Autodromo Nazionale di Monza - Combined without first chicane"
-}
-const MOSPORT = {
-    title: "CTMP 'Mosport'",
-    alternateTitle: "Canadian Tire Motorsport Park"
-}
-const NORDSCHLEIFE_INDUSTRIEFAHRTEN = {
-    title: "Nordschleife - Industriefahrten",
-    alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten"
-}
-const NURBURGRING_COMBINED_24H = {
-    title: "Nürburgring Combined - 24H",
-    alternateTitle: "Nurburgring Combined - 24H"
-}
-const NURBURGRING_GP = {
-    title: "Nürburgring GP",
-    alternateTitle: "Nurburgring GP"
-}
-const NURBURGRING_GP_WITHOUT_ARENA = {
-    title: "Nürburgring GP without arena",
-    alternateTitle: "Nurburgring GP without arena"
-}
-const OKAYAMA = {
-    title: "Okayama"
-}
-const ORAN_PARK = {
-    title: "Oran Park"
-}
-const OSCHERSLEBEN = {
-    title: "Oschersleben"
-}
-const OULTON_PARK_INTL_WOUT_HISLOP = {
-    title: "Oulton Park - Intl w/out Hislop"
-}
-const PHILLIP_ISLAND = {
-    title: "Phillip Island"
-}
-const PHOENIX_2008_OVAL = {
-    title: "Phoenix Oval",
-    alternateTitle: "Phoenix Raceway 2008 - Oval"
-}
-const RED_BULL_RING = {
-    title: "Red Bull Ring"
-}
-const ROAD_AMERICA = {
-    title: "Road America"
-}
-const ROAD_ATLANTA = {
-    title: "Road Atlanta"
-}
-const SEBRING = {
-    title: "Sebring"
-}
-const SILVERSTONE_INTERNATIONAL = {
-    title: "Silverstone - International"
-}
-const SILVERSTONE_2008_HISTORICAL_GP = {
-    title: "Silverstone 2008 - Historical Grand Prix"
-}
-const SNETTERTON_200 = {
-    title: "Snetterton 200",
-    alternateTitle: "Snetterton Circuit - 200"
-}
-const SONOMA = {
-    title: "Sonoma"
-}
-const SPA_CLASSIC_PITS = {
-    title: "Spa",
-    alternateTitle: "Circuit de Spa-Francorchamps - Classic Pits"
-}
-const SPA_ENDURANCE_PITS = {
-    title: "Spa",
-    alternateTitle: "Circuit de Spa-Francorchamps - Endurance Pits"
-}
-const SPA_GRAND_PRIX_PITS = {
-    title: "Spa",
-    alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits"
-}
-const SUMMIT_POINT = {
-    title: "Summit Point"
-}
-const SUZUKA = {
-    title: "Suzuka"
-}
-const TWIN_RING_MOTEGI = {
-    title: "Twin Ring Motegi"
-}
-const VIR = {
-    title: "VIR",
-    alternateTitle: "Virginia International Raceway"
-}
-const WATKINS_GLEN_BOOT = {
-    title: "Watkins Glen - Boot",
-    alternateTitle: "Watkins Glen International - Boot"
-}
-const WATKINS_GLEN_CLASSIC_BOOT = {
-    title: "Watkins Glen - Classic Boot",
-    alternateTitle: "Watkins Glen International - Classic Boot"
-}
-const WILLOW_SPRINGS = {
-    title: "Willow Springs"
-}
-const ZANDVOORT = {
-    title: "Zandvoort"
-}
-const ZOLDER = {
-    title: "Zolder",
-    alternateTitle: "Circuit Zolder"
-}
-const ZOLDER_ALTERNATE = {
-    title: "Zolder Alternate",
-    alternateTitle: "Circuit Zolder - Alternate"
-}
-
+import * as tracks from './track-names.js'; 
 const broadcasts = [
     {
         id: "20S4",
@@ -237,51 +7,51 @@ const broadcasts = [
         endDate: "2020-12-01",
         youTube: [
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 url: "https://youtu.be/4MuvZF3B2ys?t=1165"
             },
             {
-                ...IMOLA,
+                ...tracks.IMOLA,
                 url: "https://youtu.be/UQ-BgW7O9No?t=1112"
             },
             {
-                ...SNETTERTON_200,
+                ...tracks.SNETTERTON_200,
                 url: "https://youtu.be/4LlKmFZYk1E?t=1112"
             },
             {
-                ...DAYTONA_NASCAR_ROAD,
+                ...tracks.DAYTONA_NASCAR_ROAD,
                 url: "https://youtu.be/ZgcFz0msa6s?t=998"
             },
             {
-                ...WATKINS_GLEN_CLASSIC_BOOT,
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/oLCKoT-BKvc?t=1041"
             },
             {
-                ...MID_OHIO_CHICANE,
+                ...tracks.MID_OHIO_CHICANE,
                 url: "https://youtu.be/QMGmDzj1UoQ?t=1082"
             },
             {
-                ...ZANDVOORT,
+                ...tracks.ZANDVOORT,
                 url: "https://youtu.be/-02T2V4JtHg?t=1073"
             },
             {
-                ...ROAD_ATLANTA,
+                ...tracks.ROAD_ATLANTA,
                 url: "https://youtu.be/iB6iahxq4Fw?t=1131"
             },
             {
-                ...BATHURST,
+                ...tracks.BATHURST,
                 url: "https://youtu.be/rXh7Rjg5-G8?t=1060"
             },
             {
-                ...SUMMIT_POINT,
+                ...tracks.SUMMIT_POINT,
                 url: "https://youtu.be/_w9yQpwt3Is?t=1021"
             },
             {
-                ...SPA_ENDURANCE_PITS,
+                ...tracks.SPA_ENDURANCE_PITS,
                 url: "https://youtu.be/Le3DjFDDp2U?t=1097"
             },
             {
-                ...SILVERSTONE_2008_HISTORICAL_GP,
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
                 url: "https://youtu.be/X0ymZ4unBJc?t=1042"
             },
         ]
@@ -293,51 +63,51 @@ const broadcasts = [
         endDate: "2021-03-02",
         youTube: [
             {
-                ...LE_MANS,
+                ...tracks.LE_MANS,
                 url: "https://youtu.be/N3a92hCdrgU?t=1007"
             },
             {
-                ...LONG_BEACH,
+                ...tracks.LONG_BEACH,
                 url: "https://youtu.be/FuuoW59lBFc?t=903"
             },
             {
-                ...DONINGTON_PARK,
+                ...tracks.DONINGTON_PARK,
                 url: "https://youtu.be/EscrCMzMztE?t=795"
             },
             {
-                ...SUZUKA,
+                ...tracks.SUZUKA,
                 url: "https://youtu.be/nMeaRIYCH7I?t=837"
             },
             {
-                ...MONZA_WITHOUT_FIRST_CHICANE,
+                ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/wFQ7zzE-SyY?t=879"
             },
             {
-                ...ZOLDER,
+                ...tracks.ZOLDER,
                 url: "https://youtu.be/C3975KG1JN8?t=672"
             },
             {
-                ...SEBRING,
+                ...tracks.SEBRING,
                 url: "https://youtu.be/d22fY273Q94?t=676"
             },
             {
-                ...BELLE_ISLE,
+                ...tracks.BELLE_ISLE,
                 url: "https://youtu.be/RPC__My3ckc?t=716"
             },
             {
-                ...BARCELONA_HISTORIC,
+                ...tracks.BARCELONA_HISTORIC,
                 url: "https://youtu.be/dkDVOSXntbI?t=692"
             },
             {
-                ...PHILLIP_ISLAND,
+                ...tracks.PHILLIP_ISLAND,
                 url: "https://youtu.be/8qMi9IysdVQ?t=799"
             },
             {
-                ...MOSPORT,
+                ...tracks.MOSPORT,
                 url: "https://youtu.be/OoszG0BC35A?t=630"
             },
             {
-                ...NORDSCHLEIFE_INDUSTRIEFAHRTEN,
+                ...tracks.NORDSCHLEIFE_INDUSTRIEFAHRTEN,
                 url: "https://youtu.be/cVbrave5ytw?t=473"
             },
         ]
@@ -349,51 +119,51 @@ const broadcasts = [
         endDate: "2021-06-01",
         youTube: [
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 url: "https://youtu.be/DnIP5BLauMw?t=757"
             },
             {
-                ...OKAYAMA,
+                ...tracks.OKAYAMA,
                 url: "https://youtu.be/d1tdobZ4XCY?t=812"
             },
             {
-                ...INTERLAGOS,
+                ...tracks.INTERLAGOS,
                 url: "https://youtu.be/84BrJFF9MW8?t=750"
             },
             {
-                ...COTA,
+                ...tracks.COTA,
                 url: "https://youtu.be/T08kTnTDG6I?t=1045"
             },
             {
-                ...SPA_ENDURANCE_PITS,
+                ...tracks.SPA_ENDURANCE_PITS,
                 url: "https://youtu.be/GxvgP0sFyAA?t=1022"
             },
             {
-                ...INDY_ROAD_2009,
+                ...tracks.INDY_ROAD_2009,
                 url: "https://youtu.be/gvJqqVCsChI?t=995"
             },
             {
-                ...TWIN_RING_MOTEGI,
+                ...tracks.TWIN_RING_MOTEGI,
                 url: "https://youtu.be/J1A1M9BrLjY?t=911"
             },
             {
-                ...SUMMIT_POINT,
+                ...tracks.SUMMIT_POINT,
                 url: "https://youtu.be/TbOJqZUhY-U?t=885"
             },
             {
-                ...DONINGTON_PARK,
+                ...tracks.DONINGTON_PARK,
                 url: "https://youtu.be/68Ex20Maghg?t=728"
             },
             {
-                ...WATKINS_GLEN_CLASSIC_BOOT,
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/uBxwHgQmWXw?t=891"
             },
             {
-                ...LIME_ROCK_CLASSIC,
+                ...tracks.LIME_ROCK_CLASSIC,
                 url: "https://youtu.be/fCQIe68W84I?t=935"
             },
             {
-                ...ROAD_ATLANTA,
+                ...tracks.ROAD_ATLANTA,
                 url: "https://youtu.be/zb3SutQmlFQ?t=940"
             },
         ]
@@ -405,51 +175,51 @@ const broadcasts = [
         endDate: "2021-08-31",
         youTube: [
             {
-                ...BELLE_ISLE,
+                ...tracks.BELLE_ISLE,
                 url: "https://youtu.be/hh_hS92xkNc?t=1036"
             },
             {
-                ...DAYTONA_NASCAR_ROAD,
+                ...tracks.DAYTONA_NASCAR_ROAD,
                 url: "https://youtu.be/s04-PFAFAuM?t=1106"
             },
             {
-                ...BRANDS_HATCH,
+                ...tracks.BRANDS_HATCH,
                 url: "https://youtu.be/ioHcrCZ5aPI?t=1050"
             },
             {
-                ...ZANDVOORT,
+                ...tracks.ZANDVOORT,
                 url: "https://youtu.be/0rhrMP1Yvgs?t=1005"
             },
             {
-                ...MONZA,
+                ...tracks.MONZA,
                 url: "https://youtu.be/522VAxzffZU?t=1098"
             },
             {
-                ...SILVERSTONE_INTERNATIONAL,
+                ...tracks.SILVERSTONE_INTERNATIONAL,
                 url: "https://youtu.be/6caKtbus_hg?t=1074"
             },
             {
-                ...CHARLOTTE_ROVAL,
+                ...tracks.CHARLOTTE_ROVAL,
                 url: "https://youtu.be/4dbIhojc9c8?t=1219"
             },
             {
-                ...NURBURGRING_GP,
+                ...tracks.NURBURGRING_GP,
                 url: "https://youtu.be/JZqw4bX5bOY?t=1100"
             },
             {
-                ...BARBER,
+                ...tracks.BARBER,
                 url: "https://youtu.be/8VvFCRllj00?t=1082"
             },
             {
-                ...BATHURST,
+                ...tracks.BATHURST,
                 url: "https://youtu.be/qcytES55iYg?t=1086"
             },
             {
-                ...OULTON_PARK_INTL_WOUT_HISLOP,
+                ...tracks.OULTON_PARK_INTL_WOUT_HISLOP,
                 url: "https://youtu.be/CRE872nvMY8?t=1150"
             },
             {
-                ...LE_MANS,
+                ...tracks.LE_MANS,
                 url: "https://youtu.be/prDJOMQ6lsk?t=1125"
             },
         ]
@@ -461,55 +231,55 @@ const broadcasts = [
         endDate: "2021-11-30",
         youTube: [
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 url: "https://youtu.be/wG_Vibek5JQ?t=1087"
             },
             {
-                ...SUZUKA,
+                ...tracks.SUZUKA,
                 url: "https://youtu.be/dwz_v-di004?t=1063"
             },
             {
-                ...VIR,
+                ...tracks.VIR,
                 url: "https://youtu.be/1YRHC-eZv8g?t=1006"
             },
             {
-                ...LONG_BEACH,
+                ...tracks.LONG_BEACH,
                 url: "https://youtu.be/zSYrVvJN1Uo?t=1028"
             },
             {
-                ...SEBRING,
+                ...tracks.SEBRING,
                 url: "https://youtu.be/xHFpvV6JFR0?t=1040"
             },
             {
-                ...PHILLIP_ISLAND,
+                ...tracks.PHILLIP_ISLAND,
                 url: "https://youtu.be/DQSVQW8SY3A?t=1012"
             },
             {
-                ...HUNGARORING,
+                ...tracks.HUNGARORING,
                 url: "https://youtu.be/BDaXviKVozM?t=1073"
             },
             {
-                ...SUMMIT_POINT,
+                ...tracks.SUMMIT_POINT,
                 url: "https://youtu.be/AKsKbJkKeJM?t=1015"
             },
             {
-                ...MOSPORT,
+                ...tracks.MOSPORT,
                 url: "https://youtu.be/JZOB2_rFG7M?t=1141"
             },
             {
-                ...SPA_ENDURANCE_PITS,
+                ...tracks.SPA_ENDURANCE_PITS,
                 url: "https://youtu.be/gHzTJDpov40?t=1081"
             },
             {
-                ...RED_BULL_RING,
+                ...tracks.RED_BULL_RING,
                 url: "https://youtu.be/XzPKb2U9W3E?t=1134"
             },
             {
-                ...WATKINS_GLEN_CLASSIC_BOOT,
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/Z1TfQZ3WcOA?t=1072"
             },
             {
-                ...PHOENIX_2008_OVAL,
+                ...tracks.PHOENIX_2008_OVAL,
                 url: "https://youtu.be/3bZlueI7RXE?t=1053"
             },
         ]
@@ -521,55 +291,55 @@ const broadcasts = [
         endDate: "2022-03-01",
         youTube: [
             {
-                ...BELLE_ISLE,
+                ...tracks.BELLE_ISLE,
                 url: "https://youtu.be/O11sQZRlLfI?t=1060"
             },
             {
-                ...ZOLDER_ALTERNATE,
+                ...tracks.ZOLDER_ALTERNATE,
                 url: "https://youtu.be/CxbyHx9RX78?t=1084"
             },
             {
-                ...IMOLA,
+                ...tracks.IMOLA,
                 url: "https://youtu.be/gRE0HnzSVxU?t=1064"
             },
             {
-                ...NURBURGRING_COMBINED_24H,
+                ...tracks.NURBURGRING_COMBINED_24H,
                 url: "https://youtu.be/jGq82uRosIM?t=841"
             },
             {
-                ...BARCELONA_HISTORIC,
+                ...tracks.BARCELONA_HISTORIC,
                 url: "https://youtu.be/HCl0HcQdjEo?t=1050"
             },
             {
-                ...MID_OHIO,
+                ...tracks.MID_OHIO,
                 url: "https://youtu.be/oBgYn342OQk?t=981"
             },
             {
-                ...HOCKENHEIM_GP,
+                ...tracks.HOCKENHEIM_GP,
                 url: "https://youtu.be/flJveQil82s?t=1098"
             },
             {
-                ...OKAYAMA,
+                ...tracks.OKAYAMA,
                 url: "https://youtu.be/A3djT18Sf1g?t=1123"
             },
             {
-                ...MONZA_WITHOUT_FIRST_CHICANE,
+                ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/wnRE8dKN_s0?t=1075"
             },
             {
-                ...SNETTERTON_200,
+                ...tracks.SNETTERTON_200,
                 url: "https://youtu.be/ThlF-Y12yHs?t=1026"
             },
             {
-                ...TWIN_RING_MOTEGI,
+                ...tracks.TWIN_RING_MOTEGI,
                 url: "https://youtu.be/Qlynwhq4E9M?t=1090"
             },
             {
-                ...BATHURST,
+                ...tracks.BATHURST,
                 url: "https://youtu.be/cz2aKmuQuaE?t=1050"
             },
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 title: "DTRL Road America 500 km",
                 url: "https://youtu.be/CTrtDWDTx-I?t=1134"
             },
@@ -582,51 +352,51 @@ const broadcasts = [
         endDate: "2022-05-31",
         youTube: [
             {
-                ...ROAD_ATLANTA,
+                ...tracks.ROAD_ATLANTA,
                 url: "https://youtu.be/bf1DsFC2Ku4?t=1209"
             },
             {
-                ...HOMESTEAD_MIAMI_ROAD_B,
+                ...tracks.HOMESTEAD_MIAMI_ROAD_B,
                 url: "https://youtu.be/vhaQO7XM5c0?t=52"
             },
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 url: "https://youtu.be/IMvUGCCVOOk?t=224"
             },
             {
-                ...MONTREAL,
+                ...tracks.MONTREAL,
                 url: "https://youtu.be/PyKE722KNoQ?t=837"
             },
             {
-                ...LAGUNA_SECA,
+                ...tracks.LAGUNA_SECA,
                 url: "https://youtu.be/QL2Mh7MLgKI?t=899"
             },
             {
-                ...DONINGTON_PARK,
+                ...tracks.DONINGTON_PARK,
                 url: "https://youtu.be/7GL9hvhdUV8?t=981"
             },
             {
-                ...INTERLAGOS,
+                ...tracks.INTERLAGOS,
                 url: "https://youtu.be/OpP7wrWOsyA?t=1055"
             },
             {
-                ...SPA_CLASSIC_PITS,
+                ...tracks.SPA_CLASSIC_PITS,
                 url: "https://youtu.be/4SdGFU0hk-c?t=120"
             },
             {
-                ...LIME_ROCK_WEST_BEND,
+                ...tracks.LIME_ROCK_WEST_BEND,
                 url: "https://youtu.be/ESK2dBakSM8?t=989"
             },
             {
-                ...SUZUKA,
+                ...tracks.SUZUKA,
                 url: "https://youtu.be/kY5vPGWsiXo?t=1074"
             },
             {
-                ...ORAN_PARK,
+                ...tracks.ORAN_PARK,
                 url: "https://youtu.be/02MoqXEu4a4?t=1082"
             },
             {
-                ...DAYTONA,
+                ...tracks.DAYTONA,
                 url: "https://youtu.be/-JLYR7z6PNQ?t=1036"
             },
         ]
@@ -638,51 +408,51 @@ const broadcasts = [
         endDate: "2022-08-30",
         youTube: [
             {
-                ...LE_MANS,
+                ...tracks.LE_MANS,
                 url: "https://youtu.be/8zgn6ACLQlw?t=1095"
             },
             {
-                ...FUJI_NO_CHICANE,
+                ...tracks.FUJI_NO_CHICANE,
                 url: "https://youtu.be/5huzNPgmsJc?t=1043"
             },
             {
-                ...WATKINS_GLEN_BOOT,
+                ...tracks.WATKINS_GLEN_BOOT,
                 url: "https://youtu.be/bncdRkxyUZI?t=1208"
             },
             {
-                ...BRANDS_HATCH,
+                ...tracks.BRANDS_HATCH,
                 url: "https://youtu.be/Ydq0wDq0GBY?t=1191"
             },
             {
-                ...SEBRING,
+                ...tracks.SEBRING,
                 url: "https://youtu.be/hHPyFl15foI?t=1199"
             },
             {
-                ...SILVERSTONE_2008_HISTORICAL_GP,
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
                 url: "https://youtu.be/ulo0uVTLQy4?t=1167"
             },
             {
-                ...PHILLIP_ISLAND,
+                ...tracks.PHILLIP_ISLAND,
                 url: "https://youtu.be/O2G6NyzfsZ4?t=1167"
             },
             {
-                ...NURBURGRING_GP_WITHOUT_ARENA,
+                ...tracks.NURBURGRING_GP_WITHOUT_ARENA,
                 url: "https://youtu.be/ci4nn0qrgWk?t=1086"
             },
             {
-                ...CHARLOTTE_ROVAL,
+                ...tracks.CHARLOTTE_ROVAL,
                 url: "https://youtu.be/lxJ72IILRY8?t=1049"
             },
             {
-                ...MOSPORT,
+                ...tracks.MOSPORT,
                 url: "https://youtu.be/WbBzeqt_Pq4?t=1024"
             },
             {
-                ...SONOMA,
+                ...tracks.SONOMA,
                 url: "https://youtu.be/UQX4hLHHtIo?t=983"
             },
             {
-                ...LONG_BEACH,
+                ...tracks.LONG_BEACH,
                 url: "https://youtu.be/TYR0gs6-ZUU?t=977"
             },
         ]
@@ -694,51 +464,51 @@ const broadcasts = [
         endDate: "2022-11-29",
         youTube: [
             {
-                ...MONZA_COMBINED_WITHOUT_FIRST_CHICANE,
+                ...tracks.MONZA_COMBINED_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/IBlwz3SltOw?t=1113"
             },
             {
-                ...OSCHERSLEBEN,
+                ...tracks.OSCHERSLEBEN,
                 url: "https://youtu.be/h1nc78hWwxI?t=1016"
             },
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 url: "https://youtu.be/82kwglhoAw8?t=1063"
             },
             {
-                ...FUJI_NO_CHICANE,
+                ...tracks.FUJI_NO_CHICANE,
                 url: "https://youtu.be/LE-AysOjutY?t=1119"
             },
             {
-                ...RED_BULL_RING,
+                ...tracks.RED_BULL_RING,
                 url: "https://youtu.be/WtxOacSwKKs?t=947"
             },
             {
-                ...SUMMIT_POINT,
+                ...tracks.SUMMIT_POINT,
                 url: "https://youtu.be/cfEwnRCsa-A?t=932"
             },
             {
-                ...BELLE_ISLE,
+                ...tracks.BELLE_ISLE,
                 url: "https://youtu.be/GQ6SigoX5QA?t=1010"
             },
             {
-                ...SPA_CLASSIC_PITS,
+                ...tracks.SPA_CLASSIC_PITS,
                 url: "https://youtu.be/3coWzmh3vMk?t=1014"
             },
             {
-                ...IMOLA,
+                ...tracks.IMOLA,
                 url: "https://youtu.be/dq0vS6DnknY?t=1148"
             },
             {
-                ...OKAYAMA,
+                ...tracks.OKAYAMA,
                 url: "https://youtu.be/Wq2WVFKiP1w?t=1057"
             },
             {
-                ...VIR,
+                ...tracks.VIR,
                 url: "https://youtu.be/iJRGkebK6kM?t=993"
             },
             {
-                ...ROAD_ATLANTA,
+                ...tracks.ROAD_ATLANTA,
                 url: "https://youtu.be/WolhGM8Dfws?t=779"
             },
         ]
@@ -750,55 +520,55 @@ const broadcasts = [
         endDate: "2023-02-28",
         youTube: [
             {
-                ...NURBURGRING_COMBINED_24H,
+                ...tracks.NURBURGRING_COMBINED_24H,
                 url: "https://youtu.be/qnkOVXM99q0?=718"
             },
             {
-                ...MAGNY_COURS,
+                ...tracks.MAGNY_COURS,
                 url: "https://youtu.be/lPRCKZcIrxk?t=720"
             },
             {
-                ...INDY_ROAD,
+                ...tracks.INDY_ROAD,
                 url: "https://youtu.be/I-4EdrrgFtM?t=520"
             },
             {
-                ...BATHURST,
+                ...tracks.BATHURST,
                 url: "https://youtu.be/EDxZkP4qbQM?t=888"
             },
             {
-                ...HOCKENHEIM_GP,
+                ...tracks.HOCKENHEIM_GP,
                 url: "https://youtu.be/Ep-hjQZpv34?t=772"
             },
             {
-                ...BARCELONA,
+                ...tracks.BARCELONA,
                 url: "https://youtu.be/NbtMgYusMgI?t=977"
             },
             {
-                ...MID_OHIO,
+                ...tracks.MID_OHIO,
                 url: "https://youtu.be/2QdLxTG8C94?t=546"
             },
             {
-                ...LE_MANS_HISTORIC,
+                ...tracks.LE_MANS_HISTORIC,
                 url: "https://youtu.be/a4JHWiWrxwo?t=1024"
             },
             {
-                ...SUZUKA,
+                ...tracks.SUZUKA,
                 url: "https://youtu.be/SA_9qOT8THo?t=1031"
             },
             {
-                ...WATKINS_GLEN_CLASSIC_BOOT,
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/qVbLZmG_VNY?t=877"
             },
             {
-                ...TWIN_RING_MOTEGI,
+                ...tracks.TWIN_RING_MOTEGI,
                 url: "https://youtu.be/tHUVKQzvyfI?t=981"
             },
             {
-                ...DAYTONA,
+                ...tracks.DAYTONA,
                 url: "https://youtu.be/wzdzBU8c8zw?t=850"
             },
             {
-                ...LIME_ROCK_CLASSIC,
+                ...tracks.LIME_ROCK_CLASSIC,
                 title: "GP of Connecticut - Lime Rock Park",
                 url: "https://youtu.be/bjfqphjy9k0?t=1246"
             },
@@ -811,53 +581,53 @@ const broadcasts = [
         endDate: "2023-05-30",
         youTube: [
             {
-                ...SEBRING,
+                ...tracks.SEBRING,
                 url: "https://youtu.be/AE2VmQ_0ZK0?t=635"
             },
             {
-                ...JEREZ,
+                ...tracks.JEREZ,
                 url: "https://youtu.be/6gQrAfswvMc?t=986"
             },
             {
-                ...MONTREAL,
+                ...tracks.MONTREAL,
                 url: "https://youtu.be/MVY4NrQ6xwI?t=1342"
             },
             {
-                ...NURBURGRING_GP,
+                ...tracks.NURBURGRING_GP,
                 url: "https://youtu.be/5TYJjykBfb0?t=961"
             },
             {
-                ...ROAD_AMERICA,
+                ...tracks.ROAD_AMERICA,
                 title: "Road America 500 mi",
                 url: "https://youtu.be/xIKDpzoqDcY?t=610"
             },
             {
-                ...VIR,
+                ...tracks.VIR,
                 url: "https://youtu.be/z8xsIcXdvyw?t=970"
             },
             {
-                ...INTERLAGOS,
+                ...tracks.INTERLAGOS,
                 url: "https://youtu.be/FjyxKwoi9KY?t=983"
             },
             {
-                ...LONG_BEACH,
+                ...tracks.LONG_BEACH,
                 url: "https://youtu.be/QeZC9_JPJpA?t=884"
             },
             {
-                ...MONZA_WITHOUT_FIRST_CHICANE,
+                ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/hAZ36kU50cM?t=1220"
             },
             {
-                ...FUJI_NO_CHICANE,
+                ...tracks.FUJI_NO_CHICANE,
                 url: "https://youtu.be/kHkBhxhajg0?t=802"
             },
             {
 
-                ...SILVERSTONE_2008_HISTORICAL_GP,
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
                 url: "https://youtu.be/aaEZUxBVBSQ?t=1229"
             },
             {
-                ...BELLE_ISLE,
+                ...tracks.BELLE_ISLE,
                 url: "https://youtu.be/eGP8_JxQfO0?t=1069"
             },
         ]
@@ -869,51 +639,51 @@ const broadcasts = [
         endDate: "2023-08-29",
         youTube: [
             {
-                ...NURBURGRING_COMBINED_24H,
+                ...tracks.NURBURGRING_COMBINED_24H,
                 url: "https://youtu.be/CoYx_xkUnqw?t=878"
             },
             {
-                ...ARAGON_OUTER,
+                ...tracks.ARAGON_OUTER,
                 url: "https://youtu.be/c7K7zlwEr0w?t=875"
             },
             {
-                ...PHILLIP_ISLAND,
+                ...tracks.PHILLIP_ISLAND,
                 url: "https://youtu.be/G6fsCSzavRI?t=951"
             },
             {
-                ...LE_MANS_HISTORIC,
+                ...tracks.LE_MANS_HISTORIC,
                 url: "https://youtu.be/ix6-TJJbDOI?t=936"
             },
             {
-                ...SPA_GRAND_PRIX_PITS,
+                ...tracks.SPA_GRAND_PRIX_PITS,
                 url: "https://youtu.be/Fkl1RuSThFc?t=968"
             },
             {
-                ...HOMESTEAD_MIAMI_ROAD_B,
+                ...tracks.HOMESTEAD_MIAMI_ROAD_B,
                 url: "https://youtu.be/6jteLxpFYDI?t=987"
             },
             {
-                ...MOSPORT,
+                ...tracks.MOSPORT,
                 url: "https://youtu.be/k7pWNNN05Pk?t=826"
             },
             {
-                ...WATKINS_GLEN_CLASSIC_BOOT,
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
                 url: "https://youtu.be/WhbYz5Cxebk?t=1057"
             },
             {
-                ...ROAD_ATLANTA,
+                ...tracks.ROAD_ATLANTA,
                 url: "https://youtu.be/pa3_F5dUtn8?t=835"
             },
             {
-                ...WILLOW_SPRINGS,
+                ...tracks.WILLOW_SPRINGS,
                 url: "https://youtu.be/xJob8d9IXho?t=1020"
             },
             {
-                ...RED_BULL_RING,
+                ...tracks.RED_BULL_RING,
                 url: "https://youtu.be/yX8tBAuHY4Q?t=902"
             },
             {
-                ...BATHURST,
+                ...tracks.BATHURST,
                 url: ""
             },
         ]
