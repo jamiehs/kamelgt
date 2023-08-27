@@ -7,7 +7,7 @@ export const BARBER = {
 }
 export const BARCELONA = {
     title: "Barcelona",
-    alternateTitle: "Circuit de Barcelona-Catalunya"
+    alternateTitle: "Circuit de Barcelona-Catalunya - Grand Prix"
 }
 export const BATHURST = {
     title: "Bathurst",
@@ -32,6 +32,9 @@ export const COTA = {
 }
 export const DAYTONA = {
     title: "Daytona"
+}
+export const DAYTONA_2007_ROAD = {
+    title: "Daytona 2007 - Road"
 }
 export const DAYTONA_NASCAR_ROAD = {
     title: "Daytona - NASCAR Road"
@@ -85,6 +88,9 @@ export const LE_MANS_HISTORIC = {
 }
 export const LIME_ROCK_CLASSIC = {
     title: "Lime Rock Park - Classic"
+}
+export const LIME_ROCK_GP = {
+    title: "Lime Rock Park - GP"
 }
 export const LIME_ROCK_WEST_BEND = {
     title: "Lime Rock Park - West Bend Chicane"
@@ -180,6 +186,9 @@ export const SNETTERTON_200 = {
 }
 export const SONOMA = {
     title: "Sonoma"
+}
+export const SONOMA_CUP = {
+    title: "Sonoma - Cup"
 }
 export const SPA_CLASSIC_PITS = {
     title: "Spa",

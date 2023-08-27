@@ -1,6 +1,122 @@
 import * as tracks from './track-names.js'; 
 const broadcasts = [
     {
+        id: "20S2",
+        label: "2020 Season 2",
+        startDate: "2020-03-10",
+        endDate: "2020-05-26",
+        youTube: [
+            {
+                ...tracks.SEBRING,
+                url: "https://youtu.be/7PBTy4mlNp0?t=846"
+            },
+            {
+                ...tracks.MONTREAL,
+                url: "https://youtu.be/sfSPZPk-QL0?t=696"
+            },
+            {
+                ...tracks.CHARLOTTE_ROVAL,
+                url: "https://youtu.be/rWfHfjOTz3E?t=945"
+            },
+            {
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+                url: "https://youtu.be/esiPM24kJuQ?t=855"
+            },
+            {
+                ...tracks.MOSPORT,
+                url: "https://youtu.be/wiMwXrA2maI?t=904"
+            },
+            {
+                ...tracks.LAGUNA_SECA,
+                url: "https://youtu.be/4YW4PpqstQw?t=858"
+            },
+            {
+                ...tracks.VIR,
+                url: "https://youtu.be/Uzw3Y-uQIZs?t=852"
+            },
+            {
+                ...tracks.BELLE_ISLE,
+                url: "https://youtu.be/kA7PlkJlqUc?t=996"
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: "https://youtu.be/v-35hn7JIik?t=906"
+            },
+            {
+                ...tracks.DAYTONA_2007_ROAD,
+                url: "https://youtu.be/z5RQvDNEpH4?t=859"
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: "https://youtu.be/pQbiSN30mho?t=895"
+            },
+            {
+                ...tracks.SUMMIT_POINT,
+                url: "https://youtu.be/uMYpT0WlCK0?t=1005"
+            },
+        ]
+    },
+    {
+        id: "20S3",
+        label: "2020 Season 3",
+        startDate: "2020-06-09",
+        endDate: "2020-09-01",
+        youTube: [
+            {
+                ...tracks.MONZA,
+                url: "https://youtu.be/GjO9aKnKMTI?t=928"
+            },
+            {
+                ...tracks.LIME_ROCK_GP,
+                url: "https://youtu.be/UYqGGY-wXbA?t=871"
+            },
+            {
+                ...tracks.BARBER,
+                url: "https://youtu.be/pOzuDjRKaP8?t=941"
+            },
+            {
+                ...tracks.TWIN_RING_MOTEGI,
+                url: "https://youtu.be/lIN6PtP2xQs?t=947"
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: "https://youtu.be/Xj9ve52hgpE?t=804"
+            },
+            {
+                ...tracks.OKAYAMA,
+                url: "https://youtu.be/G2eMDQSJK24?t=971"
+            },
+            {
+                ...tracks.COTA,
+                url: "https://youtu.be/PqPd-ax9iMA?t=873"
+            },
+            {
+                ...tracks.NURBURGRING_GP,
+                url: "https://youtu.be/NkEfVkta3oo?t=917"
+            },
+            {
+                ...tracks.LE_MANS,
+                url: "https://youtu.be/Rcj8f6UQ9XQ?t=975"
+            },
+            {
+                ...tracks.BARCELONA,
+                url: "https://youtu.be/gSzrFEIa2Cw?t=1036"
+            },
+            {
+                ...tracks.INDY_ROAD_2009,
+                url: "https://youtu.be/Inx7S_Ry5jQ?t=943"
+            },
+            {
+                ...tracks.BELLE_ISLE,
+                url: "https://youtu.be/9GIxDImcb_g?t=941"
+            },
+            {
+                ...tracks.SONOMA_CUP,
+                url: "https://youtu.be/IxJ-IMKppRE?t=942"
+            },
+        ]
+    },
+    {
         id: "20S4",
         label: "2020 Season 4",
         startDate: "2020-09-15",
