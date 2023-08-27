@@ -1,3 +1,10 @@
+const ARAGON_OUTER = {
+    title: "Aragón - Outer",
+    alternateTitle: "MotorLand Aragon - Outer"
+}
+const BARBER = {
+    title: "Barber Motorsports Park"
+}
 const BARCELONA = {
     title: "Barcelona",
     alternateTitle: "Circuit de Barcelona-Catalunya"
@@ -10,15 +17,63 @@ const BARCELONA_HISTORIC = {
     title: "Barcelona Historic",
     alternateTitle: "Circuit de Barcelona-Catalunya - Historic"
 }
+const BELLE_ISLE = {
+    title: "Detroit Belle Isle"
+}
+const BRANDS_HATCH = {
+    title: "Brands Hatch"
+}
+const CHARLOTTE_ROVAL = {
+    title: "Charlotte - Roval"
+}
+const COTA = {
+    title: "COTA",
+    alternateTitle: "Circuit of the Americas"
+}
 const DAYTONA = {
     title: "Daytona"
 }
 const DAYTONA_NASCAR_ROAD = {
     title: "Daytona - NASCAR Road"
 }
+const DONINGTON_PARK = {
+    title: "Donington Park"
+}
+const FUJI_NO_CHICANE = {
+    title: "Fuji - No Chicane"
+}
+const HOCKENHEIM_GP = {
+    title: "Hockenheim GP",
+    alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix"
+}
+const HOMESTEAD_MIAMI_ROAD_B = {
+    title: "Homestead Miami",
+    alternateTitle: "Homestead Miami Speedway - Road Course B"
+}
+const HUNGARORING = {
+    title: "Hungaroring"
+}
 const IMOLA = {
     title: "Imola",
     alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari"
+}
+const INDY_ROAD_2009 = {
+    title: "Indy - Road 2009",
+    alternateTitle: "Indianapolis Motor Speedway - Road 2009"
+}
+const INDY_ROAD = {
+    title: "Indy - Road",
+    alternateTitle: "Indianapolis Motor Speedway - Road"
+}
+const INTERLAGOS = {
+    title: "Interlagos",
+    alternateTitle: "Autódromo José Carlos Pace"
+}
+const JEREZ = {
+    title: "Jerez"
+}
+const LAGUNA_SECA = {
+    title: "Laguna Seca"
 }
 const LE_MANS = {
     title: "Le Mans",
@@ -28,15 +83,39 @@ const LE_MANS_HISTORIC = {
     title: "Le Mans Historic",
     alternateTitle: "Circuit des 24 Heures du Mans - Historic"
 }
+const LIME_ROCK_CLASSIC = {
+    title: "Lime Rock Park - Classic"
+}
+const LIME_ROCK_WEST_BEND = {
+    title: "Lime Rock Park - West Bend Chicane"
+}
+const LONG_BEACH = {
+    title: "Long Beach"
+}
+const MAGNY_COURS = {
+    title: "Magny-Cours"
+}
 const MID_OHIO = {
     title: "Mid-Ohio"
 }
 const MID_OHIO_CHICANE = {
     title: "Mid-Ohio - Chicane"
 }
+const MONTREAL = {
+    title: "Montreal",
+    alternateTitle: "Circuit Gilles Villeneuve"
+}
+const MONZA = {
+    title: "Monza",
+    alternateTitle: "Autodromo Nazionale Monza"
+}
 const MONZA_WITHOUT_FIRST_CHICANE = {
     title: "Monza without first chicane",
     alternateTitle: "Autodromo Nazionale Monza - GP without first chicane"
+}
+const MONZA_COMBINED_WITHOUT_FIRST_CHICANE = {
+    title: "Monza - Combined without first chicane",
+    alternateTitle: "Autodromo Nazionale di Monza - Combined without first chicane"
 }
 const MOSPORT = {
     title: "CTMP 'Mosport'",
@@ -46,15 +125,61 @@ const NORDSCHLEIFE_INDUSTRIEFAHRTEN = {
     title: "Nordschleife - Industriefahrten",
     alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten"
 }
+const NURBURGRING_COMBINED_24H = {
+    title: "Nürburgring Combined - 24H",
+    alternateTitle: "Nurburgring Combined - 24H"
+}
+const NURBURGRING_GP = {
+    title: "Nürburgring GP",
+    alternateTitle: "Nurburgring GP"
+}
+const NURBURGRING_GP_WITHOUT_ARENA = {
+    title: "Nürburgring GP without arena",
+    alternateTitle: "Nurburgring GP without arena"
+}
+const OKAYAMA = {
+    title: "Okayama"
+}
+const ORAN_PARK = {
+    title: "Oran Park"
+}
+const OSCHERSLEBEN = {
+    title: "Oschersleben"
+}
+const OULTON_PARK_INTL_WOUT_HISLOP = {
+    title: "Oulton Park - Intl w/out Hislop"
+}
+const PHILLIP_ISLAND = {
+    title: "Phillip Island"
+}
+const PHOENIX_2008_OVAL = {
+    title: "Phoenix Oval",
+    alternateTitle: "Phoenix Raceway 2008 - Oval"
+}
+const RED_BULL_RING = {
+    title: "Red Bull Ring"
+}
 const ROAD_AMERICA = {
     title: "Road America"
 }
 const ROAD_ATLANTA = {
     title: "Road Atlanta"
 }
+const SEBRING = {
+    title: "Sebring"
+}
+const SILVERSTONE_INTERNATIONAL = {
+    title: "Silverstone - International"
+}
+const SILVERSTONE_2008_HISTORICAL_GP = {
+    title: "Silverstone 2008 - Historical Grand Prix"
+}
 const SNETTERTON_200 = {
     title: "Snetterton 200",
     alternateTitle: "Snetterton Circuit - 200"
+}
+const SONOMA = {
+    title: "Sonoma"
 }
 const SPA_CLASSIC_PITS = {
     title: "Spa",
@@ -68,6 +193,19 @@ const SPA_GRAND_PRIX_PITS = {
     title: "Spa",
     alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits"
 }
+const SUMMIT_POINT = {
+    title: "Summit Point"
+}
+const SUZUKA = {
+    title: "Suzuka"
+}
+const TWIN_RING_MOTEGI = {
+    title: "Twin Ring Motegi"
+}
+const VIR = {
+    title: "VIR",
+    alternateTitle: "Virginia International Raceway"
+}
 const WATKINS_GLEN_BOOT = {
     title: "Watkins Glen - Boot",
     alternateTitle: "Watkins Glen International - Boot"
@@ -76,8 +214,19 @@ const WATKINS_GLEN_CLASSIC_BOOT = {
     title: "Watkins Glen - Classic Boot",
     alternateTitle: "Watkins Glen International - Classic Boot"
 }
+const WILLOW_SPRINGS = {
+    title: "Willow Springs"
+}
 const ZANDVOORT = {
     title: "Zandvoort"
+}
+const ZOLDER = {
+    title: "Zolder",
+    alternateTitle: "Circuit Zolder"
+}
+const ZOLDER_ALTERNATE = {
+    title: "Zolder Alternate",
+    alternateTitle: "Circuit Zolder - Alternate"
 }
 
 const broadcasts = [
@@ -124,7 +273,7 @@ const broadcasts = [
                 url: "https://youtu.be/rXh7Rjg5-G8?t=1060"
             },
             {
-                title: "Summit Point",
+                ...SUMMIT_POINT,
                 url: "https://youtu.be/_w9yQpwt3Is?t=1021"
             },
             {
@@ -132,7 +281,7 @@ const broadcasts = [
                 url: "https://youtu.be/Le3DjFDDp2U?t=1097"
             },
             {
-                title: "Silverstone 2008 - Historical",
+                ...SILVERSTONE_2008_HISTORICAL_GP,
                 url: "https://youtu.be/X0ymZ4unBJc?t=1042"
             },
         ]
@@ -148,15 +297,15 @@ const broadcasts = [
                 url: "https://youtu.be/N3a92hCdrgU?t=1007"
             },
             {
-                title: "Long Beach",
+                ...LONG_BEACH,
                 url: "https://youtu.be/FuuoW59lBFc?t=903"
             },
             {
-                title: "Donington Park",
+                ...DONINGTON_PARK,
                 url: "https://youtu.be/EscrCMzMztE?t=795"
             },
             {
-                title: "Suzuka",
+                ...SUZUKA,
                 url: "https://youtu.be/nMeaRIYCH7I?t=837"
             },
             {
@@ -164,16 +313,15 @@ const broadcasts = [
                 url: "https://youtu.be/wFQ7zzE-SyY?t=879"
             },
             {
-                title: "Zolder",
-                alternateTitle: "Circuit Zolder",
+                ...ZOLDER,
                 url: "https://youtu.be/C3975KG1JN8?t=672"
             },
             {
-                title: "Sebring",
+                ...SEBRING,
                 url: "https://youtu.be/d22fY273Q94?t=676"
             },
             {
-                title: "Detroit Belle Isle",
+                ...BELLE_ISLE,
                 url: "https://youtu.be/RPC__My3ckc?t=716"
             },
             {
@@ -181,7 +329,7 @@ const broadcasts = [
                 url: "https://youtu.be/dkDVOSXntbI?t=692"
             },
             {
-                title: "Phillip Island",
+                ...PHILLIP_ISLAND,
                 url: "https://youtu.be/8qMi9IysdVQ?t=799"
             },
             {
@@ -205,17 +353,15 @@ const broadcasts = [
                 url: "https://youtu.be/DnIP5BLauMw?t=757"
             },
             {
-                title: "Okayama",
+                ...OKAYAMA,
                 url: "https://youtu.be/d1tdobZ4XCY?t=812"
             },
             {
-                title: "Interlagos",
-                alternateTitle: "Autódromo José Carlos Pace",
+                ...INTERLAGOS,
                 url: "https://youtu.be/84BrJFF9MW8?t=750"
             },
             {
-                title: "COTA",
-                alternateTitle: "Circuit of the Americas",
+                ...COTA,
                 url: "https://youtu.be/T08kTnTDG6I?t=1045"
             },
             {
@@ -223,20 +369,19 @@ const broadcasts = [
                 url: "https://youtu.be/GxvgP0sFyAA?t=1022"
             },
             {
-                title: "Indy - Road 2009",
-                alternateTitle: "Indianapolis Motor Speedway - Road 2009",
+                ...INDY_ROAD_2009,
                 url: "https://youtu.be/gvJqqVCsChI?t=995"
             },
             {
-                title: "Twin Ring Motegi",
+                ...TWIN_RING_MOTEGI,
                 url: "https://youtu.be/J1A1M9BrLjY?t=911"
             },
             {
-                title: "Summit Point",
+                ...SUMMIT_POINT,
                 url: "https://youtu.be/TbOJqZUhY-U?t=885"
             },
             {
-                title: "Donington Park",
+                ...DONINGTON_PARK,
                 url: "https://youtu.be/68Ex20Maghg?t=728"
             },
             {
@@ -244,7 +389,7 @@ const broadcasts = [
                 url: "https://youtu.be/uBxwHgQmWXw?t=891"
             },
             {
-                title: "Lime Rock Park - Classic",
+                ...LIME_ROCK_CLASSIC,
                 url: "https://youtu.be/fCQIe68W84I?t=935"
             },
             {
@@ -260,7 +405,7 @@ const broadcasts = [
         endDate: "2021-08-31",
         youTube: [
             {
-                title: "Detroit Belle Isle",
+                ...BELLE_ISLE,
                 url: "https://youtu.be/hh_hS92xkNc?t=1036"
             },
             {
@@ -268,7 +413,7 @@ const broadcasts = [
                 url: "https://youtu.be/s04-PFAFAuM?t=1106"
             },
             {
-                title: "Brands Hatch",
+                ...BRANDS_HATCH,
                 url: "https://youtu.be/ioHcrCZ5aPI?t=1050"
             },
             {
@@ -276,24 +421,23 @@ const broadcasts = [
                 url: "https://youtu.be/0rhrMP1Yvgs?t=1005"
             },
             {
-                title: "Monza",
-                alternateTitle: "Autodromo Nazionale Monza",
+                ...MONZA,
                 url: "https://youtu.be/522VAxzffZU?t=1098"
             },
             {
-                title: "Silverstone - International",
+                ...SILVERSTONE_INTERNATIONAL,
                 url: "https://youtu.be/6caKtbus_hg?t=1074"
             },
             {
-                title: "Charlotte - Roval",
+                ...CHARLOTTE_ROVAL,
                 url: "https://youtu.be/4dbIhojc9c8?t=1219"
             },
             {
-                title: "Nürburgring GP",
+                ...NURBURGRING_GP,
                 url: "https://youtu.be/JZqw4bX5bOY?t=1100"
             },
             {
-                title: "Barber Motorsports Park",
+                ...BARBER,
                 url: "https://youtu.be/8VvFCRllj00?t=1082"
             },
             {
@@ -301,7 +445,7 @@ const broadcasts = [
                 url: "https://youtu.be/qcytES55iYg?t=1086"
             },
             {
-                title: "Oulton Park - Intl w/out Hislop",
+                ...OULTON_PARK_INTL_WOUT_HISLOP,
                 url: "https://youtu.be/CRE872nvMY8?t=1150"
             },
             {
@@ -321,32 +465,31 @@ const broadcasts = [
                 url: "https://youtu.be/wG_Vibek5JQ?t=1087"
             },
             {
-                title: "Suzuka",
+                ...SUZUKA,
                 url: "https://youtu.be/dwz_v-di004?t=1063"
             },
             {
-                title: "VIR",
-                alternateTitle: "Virginia International Raceway",
+                ...VIR,
                 url: "https://youtu.be/1YRHC-eZv8g?t=1006"
             },
             {
-                title: "Long Beach",
+                ...LONG_BEACH,
                 url: "https://youtu.be/zSYrVvJN1Uo?t=1028"
             },
             {
-                title: "Sebring",
+                ...SEBRING,
                 url: "https://youtu.be/xHFpvV6JFR0?t=1040"
             },
             {
-                title: "Phillip Island",
+                ...PHILLIP_ISLAND,
                 url: "https://youtu.be/DQSVQW8SY3A?t=1012"
             },
             {
-                title: "Hungaroring",
+                ...HUNGARORING,
                 url: "https://youtu.be/BDaXviKVozM?t=1073"
             },
             {
-                title: "Summit Point",
+                ...SUMMIT_POINT,
                 url: "https://youtu.be/AKsKbJkKeJM?t=1015"
             },
             {
@@ -358,7 +501,7 @@ const broadcasts = [
                 url: "https://youtu.be/gHzTJDpov40?t=1081"
             },
             {
-                title: "Red Bull Ring",
+                ...RED_BULL_RING,
                 url: "https://youtu.be/XzPKb2U9W3E?t=1134"
             },
             {
@@ -366,7 +509,7 @@ const broadcasts = [
                 url: "https://youtu.be/Z1TfQZ3WcOA?t=1072"
             },
             {
-                title: "Phoenix Oval",
+                ...PHOENIX_2008_OVAL,
                 url: "https://youtu.be/3bZlueI7RXE?t=1053"
             },
         ]
@@ -378,12 +521,11 @@ const broadcasts = [
         endDate: "2022-03-01",
         youTube: [
             {
-                title: "Detroit Belle Isle",
+                ...BELLE_ISLE,
                 url: "https://youtu.be/O11sQZRlLfI?t=1060"
             },
             {
-                title: "Zolder Alternate",
-                alternateTitle: "Circuit Zolder - Alternate",
+                ...ZOLDER_ALTERNATE,
                 url: "https://youtu.be/CxbyHx9RX78?t=1084"
             },
             {
@@ -391,8 +533,7 @@ const broadcasts = [
                 url: "https://youtu.be/gRE0HnzSVxU?t=1064"
             },
             {
-                title: "Nürburgring Combined - 24H",
-                alternateTitle: "Nurburgring Combined - 24H",
+                ...NURBURGRING_COMBINED_24H,
                 url: "https://youtu.be/jGq82uRosIM?t=841"
             },
             {
@@ -404,17 +545,15 @@ const broadcasts = [
                 url: "https://youtu.be/oBgYn342OQk?t=981"
             },
             {
-                title: "Hockenheim GP",
-                alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix",
+                ...HOCKENHEIM_GP,
                 url: "https://youtu.be/flJveQil82s?t=1098"
             },
             {
-                title: "Okayama",
+                ...OKAYAMA,
                 url: "https://youtu.be/A3djT18Sf1g?t=1123"
             },
             {
-                title: "Monza without first chicane",
-                alternateTitle: "Autodromo Nazionale Monza - GP without first chicane",
+                ...MONZA_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/wnRE8dKN_s0?t=1075"
             },
             {
@@ -422,7 +561,7 @@ const broadcasts = [
                 url: "https://youtu.be/ThlF-Y12yHs?t=1026"
             },
             {
-                title: "Twin Ring Motegi",
+                ...TWIN_RING_MOTEGI,
                 url: "https://youtu.be/Qlynwhq4E9M?t=1090"
             },
             {
@@ -447,30 +586,27 @@ const broadcasts = [
                 url: "https://youtu.be/bf1DsFC2Ku4?t=1209"
             },
             {
-                title: "Homestead Miami",
-                alternateTitle: "Homestead Miami Speedway - Road Course B",
-                url: "https://www.youtube.com/watch?v=vhaQO7XM5c0"
+                ...HOMESTEAD_MIAMI_ROAD_B,
+                url: "https://youtu.be/vhaQO7XM5c0?t=52"
             },
             {
                 ...ROAD_AMERICA,
                 url: "https://youtu.be/IMvUGCCVOOk?t=224"
             },
             {
-                title: "Montreal",
-                alternateTitle: "Circuit Gilles Villeneuve",
+                ...MONTREAL,
                 url: "https://youtu.be/PyKE722KNoQ?t=837"
             },
             {
-                title: "Laguna Seca",
+                ...LAGUNA_SECA,
                 url: "https://youtu.be/QL2Mh7MLgKI?t=899"
             },
             {
-                title: "Donington Park",
+                ...DONINGTON_PARK,
                 url: "https://youtu.be/7GL9hvhdUV8?t=981"
             },
             {
-                title: "Interlagos",
-                alternateTitle: "Autódromo José Carlos Pace",
+                ...INTERLAGOS,
                 url: "https://youtu.be/OpP7wrWOsyA?t=1055"
             },
             {
@@ -478,15 +614,15 @@ const broadcasts = [
                 url: "https://youtu.be/4SdGFU0hk-c?t=120"
             },
             {
-                title: "Lime Rock Park - West Bend Chicane",
+                ...LIME_ROCK_WEST_BEND,
                 url: "https://youtu.be/ESK2dBakSM8?t=989"
             },
             {
-                title: "Suzuka",
+                ...SUZUKA,
                 url: "https://youtu.be/kY5vPGWsiXo?t=1074"
             },
             {
-                title: "Oran Park",
+                ...ORAN_PARK,
                 url: "https://youtu.be/02MoqXEu4a4?t=1082"
             },
             {
@@ -506,7 +642,7 @@ const broadcasts = [
                 url: "https://youtu.be/8zgn6ACLQlw?t=1095"
             },
             {
-                title: "Fuji",
+                ...FUJI_NO_CHICANE,
                 url: "https://youtu.be/5huzNPgmsJc?t=1043"
             },
             {
@@ -514,28 +650,27 @@ const broadcasts = [
                 url: "https://youtu.be/bncdRkxyUZI?t=1208"
             },
             {
-                title: "Brands Hatch",
+                ...BRANDS_HATCH,
                 url: "https://youtu.be/Ydq0wDq0GBY?t=1191"
             },
             {
-                title: "Sebring",
+                ...SEBRING,
                 url: "https://youtu.be/hHPyFl15foI?t=1199"
             },
             {
-                title: "Silverstone - Historic GP",
+                ...SILVERSTONE_2008_HISTORICAL_GP,
                 url: "https://youtu.be/ulo0uVTLQy4?t=1167"
             },
             {
-                title: "Phillip Island",
+                ...PHILLIP_ISLAND,
                 url: "https://youtu.be/O2G6NyzfsZ4?t=1167"
             },
             {
-                title: "Nürburgring GP without arena",
-                alternateTitle: "Nurburgring GP without arena",
+                ...NURBURGRING_GP_WITHOUT_ARENA,
                 url: "https://youtu.be/ci4nn0qrgWk?t=1086"
             },
             {
-                title: "Charlotte Roval",
+                ...CHARLOTTE_ROVAL,
                 url: "https://youtu.be/lxJ72IILRY8?t=1049"
             },
             {
@@ -543,11 +678,11 @@ const broadcasts = [
                 url: "https://youtu.be/WbBzeqt_Pq4?t=1024"
             },
             {
-                title: "Sonoma",
+                ...SONOMA,
                 url: "https://youtu.be/UQX4hLHHtIo?t=983"
             },
             {
-                title: "Long Beach",
+                ...LONG_BEACH,
                 url: "https://youtu.be/TYR0gs6-ZUU?t=977"
             },
         ]
@@ -559,12 +694,11 @@ const broadcasts = [
         endDate: "2022-11-29",
         youTube: [
             {
-                title: "Monza - Combined without first chicane",
-                alternateTitle: "Autodromo Nazionale di Monza - Combined without first chicane",
+                ...MONZA_COMBINED_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/IBlwz3SltOw?t=1113"
             },
             {
-                title: "Oschersleben",
+                ...OSCHERSLEBEN,
                 url: "https://youtu.be/h1nc78hWwxI?t=1016"
             },
             {
@@ -572,19 +706,19 @@ const broadcasts = [
                 url: "https://youtu.be/82kwglhoAw8?t=1063"
             },
             {
-                title: "Fuji",
+                ...FUJI_NO_CHICANE,
                 url: "https://youtu.be/LE-AysOjutY?t=1119"
             },
             {
-                title: "Red Bull Ring",
+                ...RED_BULL_RING,
                 url: "https://youtu.be/WtxOacSwKKs?t=947"
             },
             {
-                title: "Summit Point",
+                ...SUMMIT_POINT,
                 url: "https://youtu.be/cfEwnRCsa-A?t=932"
             },
             {
-                title: "Detroit Belle Isle",
+                ...BELLE_ISLE,
                 url: "https://youtu.be/GQ6SigoX5QA?t=1010"
             },
             {
@@ -596,12 +730,11 @@ const broadcasts = [
                 url: "https://youtu.be/dq0vS6DnknY?t=1148"
             },
             {
-                title: "Okayama",
+                ...OKAYAMA,
                 url: "https://youtu.be/Wq2WVFKiP1w?t=1057"
             },
             {
-                title: "VIR",
-                alternateTitle: "Virginia International Raceway",
+                ...VIR,
                 url: "https://youtu.be/iJRGkebK6kM?t=993"
             },
             {
@@ -617,17 +750,15 @@ const broadcasts = [
         endDate: "2023-02-28",
         youTube: [
             {
-                title: "Nürburgring Combined - 24H",
-                alternateTitle: "Nurburgring Combined - 24H",
+                ...NURBURGRING_COMBINED_24H,
                 url: "https://youtu.be/qnkOVXM99q0?=718"
             },
             {
-                title: "Magny-Cours",
+                ...MAGNY_COURS,
                 url: "https://youtu.be/lPRCKZcIrxk?t=720"
             },
             {
-                title: "Indy - Road",
-                alternateTitle: "Indianapolis Motor Speedway - Road",
+                ...INDY_ROAD,
                 url: "https://youtu.be/I-4EdrrgFtM?t=520"
             },
             {
@@ -635,7 +766,7 @@ const broadcasts = [
                 url: "https://youtu.be/EDxZkP4qbQM?t=888"
             },
             {
-                title: "Hockenheim",
+                ...HOCKENHEIM_GP,
                 url: "https://youtu.be/Ep-hjQZpv34?t=772"
             },
             {
@@ -651,7 +782,7 @@ const broadcasts = [
                 url: "https://youtu.be/a4JHWiWrxwo?t=1024"
             },
             {
-                title: "Suzuka",
+                ...SUZUKA,
                 url: "https://youtu.be/SA_9qOT8THo?t=1031"
             },
             {
@@ -659,7 +790,7 @@ const broadcasts = [
                 url: "https://youtu.be/qVbLZmG_VNY?t=877"
             },
             {
-                title: "Twin Ring Motegi",
+                ...TWIN_RING_MOTEGI,
                 url: "https://youtu.be/tHUVKQzvyfI?t=981"
             },
             {
@@ -667,6 +798,7 @@ const broadcasts = [
                 url: "https://youtu.be/wzdzBU8c8zw?t=850"
             },
             {
+                ...LIME_ROCK_CLASSIC,
                 title: "GP of Connecticut - Lime Rock Park",
                 url: "https://youtu.be/bjfqphjy9k0?t=1246"
             },
@@ -679,21 +811,19 @@ const broadcasts = [
         endDate: "2023-05-30",
         youTube: [
             {
-                title: "Sebring",
+                ...SEBRING,
                 url: "https://youtu.be/AE2VmQ_0ZK0?t=635"
             },
             {
-                title: "Jerez",
+                ...JEREZ,
                 url: "https://youtu.be/6gQrAfswvMc?t=986"
             },
             {
-                title: "Montreal",
-                alternateTitle: "Circuit Gilles Villeneuve",
+                ...MONTREAL,
                 url: "https://youtu.be/MVY4NrQ6xwI?t=1342"
             },
             {
-                title: "Nürburgring GP",
-                alternateTitle: "Nurburgring GP",
+                ...NURBURGRING_GP,
                 url: "https://youtu.be/5TYJjykBfb0?t=961"
             },
             {
@@ -702,34 +832,32 @@ const broadcasts = [
                 url: "https://youtu.be/xIKDpzoqDcY?t=610"
             },
             {
-                title: "VIR",
-                alternateTitle: "Virginia International Raceway",
+                ...VIR,
                 url: "https://youtu.be/z8xsIcXdvyw?t=970"
             },
             {
-                title: "Interlagos",
-                alternateTitle: "Autódromo José Carlos Pace",
+                ...INTERLAGOS,
                 url: "https://youtu.be/FjyxKwoi9KY?t=983"
             },
             {
-                title: "Long Beach",
+                ...LONG_BEACH,
                 url: "https://youtu.be/QeZC9_JPJpA?t=884"
             },
             {
-                title: "Monza without first chicane",
-                alternateTitle: "Autodromo Nazionale di Monza - GP without first chicane",
+                ...MONZA_WITHOUT_FIRST_CHICANE,
                 url: "https://youtu.be/hAZ36kU50cM?t=1220"
             },
             {
-                title: "Fuji",
+                ...FUJI_NO_CHICANE,
                 url: "https://youtu.be/kHkBhxhajg0?t=802"
             },
             {
-                title: "Silverstone 2008",
+
+                ...SILVERSTONE_2008_HISTORICAL_GP,
                 url: "https://youtu.be/aaEZUxBVBSQ?t=1229"
             },
             {
-                title: "Detroit Belle Isle",
+                ...BELLE_ISLE,
                 url: "https://youtu.be/eGP8_JxQfO0?t=1069"
             },
         ]
@@ -741,17 +869,15 @@ const broadcasts = [
         endDate: "2023-08-29",
         youTube: [
             {
-                title: "Nürburgring Combined - 24H",
-                alternateTitle: "Nurburgring Combined - 24H",
+                ...NURBURGRING_COMBINED_24H,
                 url: "https://youtu.be/CoYx_xkUnqw?t=878"
             },
             {
-                title: "Aragón - Outer",
-                alternateTitle: "MotorLand Aragon - Outer",
+                ...ARAGON_OUTER,
                 url: "https://youtu.be/c7K7zlwEr0w?t=875"
             },
             {
-                title: "Phillip Island",
+                ...PHILLIP_ISLAND,
                 url: "https://youtu.be/G6fsCSzavRI?t=951"
             },
             {
@@ -763,8 +889,7 @@ const broadcasts = [
                 url: "https://youtu.be/Fkl1RuSThFc?t=968"
             },
             {
-                title: "Homestead Miami",
-                alternateTitle: "Homestead Miami Speedway - Road Course B",
+                ...HOMESTEAD_MIAMI_ROAD_B,
                 url: "https://youtu.be/6jteLxpFYDI?t=987"
             },
             {
@@ -780,11 +905,11 @@ const broadcasts = [
                 url: "https://youtu.be/pa3_F5dUtn8?t=835"
             },
             {
-                title: "Willow Springs",
+                ...WILLOW_SPRINGS,
                 url: "https://youtu.be/xJob8d9IXho?t=1020"
             },
             {
-                title: "Red Bull Ring",
+                ...RED_BULL_RING,
                 url: "https://youtu.be/yX8tBAuHY4Q?t=902"
             },
             {
