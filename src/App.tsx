@@ -237,7 +237,7 @@ class App extends React.Component<null, AppState> {
                                     entries={10}
                                     gtoSof={2265}
                                     gtpSof={2507}
-                                    regularity="new for 23S3"
+                                    regularity="new since 23S3"
                                 >
                                     <p>
                                         5pm in the west & 7pm in the east of Australia; 9pm in New Zealand. This is also late-morning for much of Europe. 
