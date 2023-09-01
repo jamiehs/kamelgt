@@ -340,7 +340,36 @@
         "label": "Mount Panorama",
         "week": 12,
         "weekStart": "2023-08-29",
-        "audi90gto": [],
-        "nissangtpzxt": []
+        "audi90gto": [
+            {
+                "file": "A90_23S3_Bathurst_Y_Gijsen_Q.sto"
+            },
+            {
+                "file": "A90_23S3_Bathurst_Y_Gijsen_R.sto"
+            },
+            {
+                "file": "maf_bathurst_q4.sto"
+            },
+            {
+                "file": "maf_bathurst_r4.sto"
+            }
+        ],
+        "nissangtpzxt": [
+            {
+                "file": "NGTP_Bathurst_1-8.sto"
+            },
+            {
+                "file": "NGTP_BATH_Q_ALEX_FRI.sto"
+            },
+            {
+                "file": "NGTP_BATH_R_ALEX_FRI.sto"
+            },
+            {
+                "file": "bathurst_Safety_DanceQUALY.sto"
+            },
+            {
+                "file": "bathurst_Point_And_Click_AdventureV.8.sto"
+            }
+        ]
     }
 ]
