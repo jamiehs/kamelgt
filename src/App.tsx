@@ -133,12 +133,12 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-06-26" expires="2023-07-14">
+                        <Announcement begins="2023-09-03" expires="2023-09-09">
                             <h3>
-                                We have proposed two additional time slots
+                                It's week 13! What are you doing here?
                             </h3>
                             <p>
-                                These are good for US Pacific, Australia, New Zealand & Japan. See the <a href="#proposed-timeslots">proposed times below</a>!
+                                There are no official races this week... In the mean time, you should look at <a href="https://cdn.discordapp.com/attachments/455180408074665994/1147590178328817795/afbeelding.png" target="_blank" rel="noreferrer">the Kamel GT 2023 Season 4 preliminary schedule</a>. We think Zandvoort (rescan) will replace Hungaroring; Jerez returns!; Daytona NASCAR Road makes an appearance, and even Sonoma shows up!
                             </p>
                         </Announcement>
                     </div>
