@@ -1,375 +1,118 @@
 [
     {
-        "label": "Nürburgring Combined - Gesamtstrecke 24h",
+        "label": "Suzuka",
         "week": 1,
-        "weekStart": "2023-06-13",
-        "notes": [
-            "6 laps (~40 minute race); Nissans won't lap the Audis",
-            "Audis need a full tank, and may need to save a little fuel",
-            "Qualifying is detached, you need to qualify separately"
-        ],
+        "weekStart": "2023-09-12",
         "audi90gto": [
-            {
-                "file": "nords-23S1-r1.sto"
-            },
-            {
-                "file": "nords-23S1-JdelOlmo-r1.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Nords_R1.sto"
-            },
-            {
-                "file": "MH_Nordschleife_R_v1.1.sto"
-            },
-            {
-                "file": "NGTP_N24H_Full_R_v1-5.sto"
-            }
         ]
     },
     {
-        "label": "MotorLand Aragón - Outer",
+        "label": "Hockenheimring - Outer",
         "week": 2,
-        "weekStart": "2023-06-20",
+        "weekStart": "2023-09-19",
+        "notes": [
+            "60 minute endurance round",
+            "Pit stop required"
+        ],
         "audi90gto": [
-            {
-                "file": "aragon-23S3-r2.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "BL_Aragon_Outer_R51.sto"
-            }
         ]
     },
     {
-        "label": "Phillip Island Circuit",
+        "label": "Zandvoort",
         "week": 3,
-        "weekStart": "2023-06-27",
+        "weekStart": "2023-09-26",
         "audi90gto": [
-            {
-                "file": "phillip-island-22S3-Phil3.1.1.sto"
-            },
-            {
-                "file": "phillip-island-22S3-r1.sto"
-            },
-            {
-                "file": "phillip-island-22S3-Y_Gijsen-220727-R.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "phillip-island-22S3_1-1.sto"
-            },
-            {
-                "file": "phillip-island-22S3_wing7_R6.sto"
-            }
         ]
     },
     {
-        "label": "Le Mans - Historic",
+        "label": "Sebring",
         "week": 4,
-        "weekStart": "2023-07-04",
-        "notes": [
-            "18 laps (~60 minute race); pit stop required"
-        ],
+        "weekStart": "2023-10-03",
         "audi90gto": [
-            {
-                "file": "GTO_LeMans_H_Q5.sto"
-            },
-            {
-                "file": "GTO_LeMans_H_R1.sto"
-            },
-            {
-                "file": "A90_23S3_LeMansH_Y_Gijsen_Q.sto"
-            },
-            {
-                "file": "A90_23S3_LeMansH_Y_Gijsen_R.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo23S3_LeMans_Hist_AG_Indy_2W8_Q10.sto"
-            },
-            {
-                "file": "Lgo23S3_LeMans_Hist_AG_Indy_2W8_R10.sto"
-            },
-            {
-                "file": "Le_Mans_Q1.7.sto"
-            },
-            {
-                "file": "Le_Mans_R1.7.sto"
-            },
-            {
-                "file": "NGTP_LEMONS_R_ALEX.sto"
-            }
         ]
     },
     {
-        "label": "Circuit de Spa-Francorchamps",
+        "label": "Sonoma - Cup",
         "week": 5,
-        "weekStart": "2023-07-11",
+        "weekStart": "2023-10-10",
         "audi90gto": [
-            {
-                "file": "A90 - 22S4 - Spa - J Del Olmo - R.sto"
-            },
-            {
-                "file": "A90 - 22S4 - Spa - Y Gijsen - 221105 - R.sto"
-            },
-            {
-                "file": "javier_spa_2022s4_4_ascR.sto"
-            },
-            {
-                "file": "spa-22S4-r2.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "NGTP_SPA_Full_R_v2-3_Q.sto",
-                "comment": "22S4 Qualifying; From Ferran Grau in VCR Discord"
-            },
-            {
-                "file": "NGTP_SPA_Full_R_v2-4.sto",
-                "comment": "22S4 Race; From Ferran Grau in VCR Discord"
-            },
-            {
-                "file": "DWC_ZXT_21S4_Spa_wing3_R3.sto"
-            },
-            {
-                "file": "Lgo22S2_Spa_MH_Silverstone_Int_R_v1_R40.sto"
-            }
         ]
     },
     {
-        "label": "Homestead Miami - Road B",
+        "label": "Charlotte - Roval",
         "week": 6,
-        "weekStart": "2023-07-18",
+        "weekStart": "2023-10-17",
         "audi90gto": [
-            {
-                "file": "A90_23S3_Homestead_Y_Gijsen_Q.sto"
-            },
-            {
-                "file": "A90_23S3_Homestead_Y_Gijsen_R.sto"
-            },
-            {
-                "file": "homestead-23S3-r1.sto"
-            },
-            {
-                "file": "homestead-22-S2-r-03.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo23S3_HomesteadB_Q31.sto"
-            },
-            {
-                "file": "Lgo23S3_HomesteadB_R31.sto"
-            },
-            {
-                "file": "DAYTONA_NGTP_Q_ALEX_Miami.sto"
-            },
-            {
-                "file": "DAYTONA_NGTP_R_ALEX_Miami.sto"
-            },
-            {
-                "file": "F122_NGTP_MiamiB_1-1.sto"
-            }
         ]
     },
     {
-        "label": "Canadian Tire Motorsports Park",
+        "label": "Road America",
         "week": 7,
-        "weekStart": "2023-07-25",
+        "weekStart": "2023-10-24",
+        "notes": [
+            "60 minute endurance round",
+            "Pit stop required"
+        ],
         "audi90gto": [
-            {
-                "file": "mosport-21S4-r4.sto"
-            },
-            {
-                "file": "ctmp-22S3-q2.sto"
-            },
-            {
-                "file": "ctmp-22S3-r4.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo21S4_Mosport_MH_R_v1_R63.sto"
-            }
         ]
     },
     {
-        "label": "Watkins Glen - Classic Boot",
+        "label": "Imola",
         "week": 8,
-        "weekStart": "2023-08-01",
-        "notes": [
-            "Nissan will need to save fuel even though it is a 40 minute race!",
-            "Audi fuel will be tight if you flat shift; may need as much as 99L of fuel."
-        ],
+        "weekStart": "2023-10-31",
         "audi90gto": [
-            {
-                "file": "WG23S3D.sto",
-                "comment": "Javier's Friday setup"
-            },
-            {
-                "file": "watkins-classic-boot-23S3-q.sto",
-                "comment": "Jamie: qualifying setup is loose on laps 0 and 1"
-            },
-            {
-                "file": "watkins-classic-boot-23S3-r2.sto",
-                "comment": "Jamie: fuel will be tight; add a click or two if you will be flat shifting!"
-            },
-            {
-                "file": "Watkins_2022_S3_RACE_v1.sto"
-            },
-            {
-                "file": "watkinsintlboot_2022_S3_R.sto"
-            },
-            {
-                "file": "watkins-21S2-02.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo23S3_WG_Classic_Boot_R50.sto",
-                "comment": "Laust: based on my Spa set. It turned out to be too understeering to my taste"
-            },
-            {
-                "file": "Lgo23S1_WG_CBoot_MH_Silverstone_Int_Q60.sto",
-                "comment": "Laust: same as I used in the broadcast race the last time here"
-            },
-            {
-                "file": "watkins-22S3-AG_WGI_5W2.sto"
-            },
-            {
-                "file": "Watkins_Glen_CB_R_v1.2.sto"
-            },
-            {
-                "file": "Watkins5W2v3.sto"
-            }
         ]
     },
     {
-        "label": "Road Atlanta",
+        "label": "Jerez - Moto",
         "week": 9,
-        "weekStart": "2023-08-08",
-        "notes": [
-            "60 minute endurance round; pit stop is required!"
-        ],
+        "weekStart": "2023-11-07",
         "audi90gto": [
-            {
-                "file": "2022S4W12_Road_Atlanta_R1.sto"
-            },
-            {
-                "file": "KB 2022-S4 Road Atlanta.sto"
-            },
-            {
-                "file": "Road Atlanta-Y Gijsen-R-ih.sto"
-            },
-            {
-                "file": "road-atlanta-23S3-r1.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "NGTP_RoAtlanta_1-1.sto"
-            },
-            {
-                "file": "BL_Road_ATL_Q61.1.sto"
-            }
         ]
     },
     {
-        "label": "Willow Springs",
+        "label": "Twin Ring Motegi",
         "week": 10,
-        "weekStart": "2023-08-15",
+        "weekStart": "2023-11-14",
         "audi90gto": [
-            {
-                "file": "maf_willow_q4.sto"
-            },
-            {
-                "file": "maf_willow_r4.sto",
-                "comment": "Mickey Friesen: feeling pretty good with this at the moment"
-            },
-            {
-                "file": "A90_23S3_WillowSprings_Y_Gijsen_Q.sto"
-            },
-            {
-                "file": "A90_23S3_WillowSprings_Y_Gijsen_R.sto"
-            },
-            {
-                "file": "JDS-WillowSprings-Race.sto",
-                "comment": "Jack David Spickett: running a higher brake bias than usual due to the camber of the corners sucking the car in a fair amount; and check fuel before race but it is 32 laps of fuel in the tank (going off kapps overlay)"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo23S3_Big_Willow_Q60.sto"
-            },
-            {
-                "file": "Lgo23S3_Big_Willow_R61.sto"
-            },
-            {
-                "file": "WillowSprings-R2-wing5.sto",
-                "comment": "Tim Reed: Less wing and less front camber. I like it a lot better than the one I posted earlier, just got to baby it in the hilly section."
-            }
         ]
     },
     {
-        "label": "Red Bull Ring",
+        "label": "Daytona - NASCAR Road",
         "week": 11,
-        "weekStart": "2023-08-22",
+        "weekStart": "2023-11-21",
         "audi90gto": [
-            {
-                "file": "redbull-ring-21S4-kb-r2.sto"
-            },
-            {
-                "file": "redbull-ring-21S4-r3.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "NGTP_RBR_Full_R_v1-5_Q.sto"
-            },
-            {
-                "file": "NGTP_RBR_Full_R_v1-5.sto"
-            }
         ]
     },
     {
-        "label": "Mount Panorama",
+        "label": "Long Beach",
         "week": 12,
-        "weekStart": "2023-08-29",
+        "weekStart": "2023-11-28",
         "audi90gto": [
-            {
-                "file": "A90_23S3_Bathurst_Y_Gijsen_Q.sto"
-            },
-            {
-                "file": "A90_23S3_Bathurst_Y_Gijsen_R.sto"
-            },
-            {
-                "file": "maf_bathurst_q4.sto"
-            },
-            {
-                "file": "maf_bathurst_r4.sto"
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "NGTP_Bathurst_1-8.sto"
-            },
-            {
-                "file": "NGTP_BATH_Q_ALEX_FRI.sto"
-            },
-            {
-                "file": "NGTP_BATH_R_ALEX_FRI.sto"
-            },
-            {
-                "file": "bathurst_Safety_DanceQUALY.sto"
-            },
-            {
-                "file": "bathurst_Point_And_Click_AdventureV.8.sto"
-            }
         ]
     }
 ]
