@@ -363,7 +363,7 @@ class App extends React.Component<null, AppState> {
                     </div>
                 </div>
                 <div id="broadcasts" className="broadcast section">
-                    <h2 className="title">Previous Broadcast Races</h2>
+                    <h2 className="title">Broadcast Races</h2>
                     <div className="broadcast-season-selector" data-disabled={hasBroadcastSearchQuery}>
                         <h3>Choose a season:</h3>
                         <select
