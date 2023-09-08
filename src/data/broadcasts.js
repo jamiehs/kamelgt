@@ -802,6 +802,62 @@ const broadcasts = [
                 url: "https://youtu.be/JOoXaASvpjI?t=865"
             },
         ]
+    },
+    {
+        id: "23S4",
+        label: "2023 Season 4",
+        startDate: "2023-09-12",
+        endDate: "2023-11-28",
+        youTube: [
+            {
+                ...tracks.SUZUKA,
+                url: ""
+            },
+            {
+                ...tracks.HOCKENHEIM_OUTER,
+                url: ""
+            },
+            {
+                ...tracks.ZANDVOORT,
+                url: ""
+            },
+            {
+                ...tracks.SEBRING,
+                url: ""
+            },
+            {
+                ...tracks.SONOMA_CUP,
+                url: ""
+            },
+            {
+                ...tracks.CHARLOTTE_ROVAL,
+                url: ""
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: ""
+            },
+            {
+                ...tracks.IMOLA,
+                url: ""
+            },
+            {
+                ...tracks.JEREZ_MOTO,
+                url: ""
+            },
+            {
+                ...tracks.TWIN_RING_MOTEGI,
+                url: ""
+            },
+            {
+                ...tracks.DAYTONA_NASCAR_ROAD,
+                url: ""
+            },
+            {
+                ...tracks.LONG_BEACH,
+                url: ""
+            },
+        ]
     }
 ]
 
