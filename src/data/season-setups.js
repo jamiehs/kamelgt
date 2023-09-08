@@ -1,11 +1,23 @@
-[
+const seasonSetups = [
     {
         "label": "Suzuka",
         "week": 1,
         "weekStart": "2023-09-12",
         "audi90gto": [
+            {
+                "file": "suzuka-23s1-arturas-saturday.sto"
+            },
+            {
+                "file": "suzuka-23S1-Javier-r2.sto"
+            }
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S2_Suzuka_GP_MH_Hungaroring_R_v1_Q81.sto"
+            },
+            {
+                "file": "Lgo22S2_Suzuka_GP_MH_Hungaroring_R_v1_R80.sto"
+            }
         ]
     },
     {
@@ -17,8 +29,14 @@
             "Pit stop required"
         ],
         "audi90gto": [
+            {
+                "file": "hockenheim-outer-21S2-r1.sto"
+            }
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo23S1_HockGP_MH_Silverstone_Int_R61.sto"
+            }
         ]
     },
     {
@@ -26,8 +44,17 @@
         "week": 3,
         "weekStart": "2023-09-26",
         "audi90gto": [
+            {
+                "file": "Zandvoort_S3_2021_1.3_34oC_RACE.sto"
+            },
+            {
+                "file": "zandvoort-21S3-r4.sto"
+            }
         ],
         "nissangtpzxt": [
+            {
+                "file": ""
+            }
         ]
     },
     {
@@ -95,6 +122,12 @@
         "audi90gto": [
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S1_Motegi_MH_Silverstone_Int_R_v1_Q63.sto"
+            },
+            {
+                "file": "Lgo22S1_Motegi_MH_Silverstone_Int_R_v1_R63.sto"
+            }
         ]
     },
     {
@@ -116,3 +149,5 @@
         ]
     }
 ]
+
+export default seasonSetups
