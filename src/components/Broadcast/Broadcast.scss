@@ -84,6 +84,8 @@
         bottom: 0;
         width: 100%;
         text-align: center;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.6);
 
         .upcoming-date {
             flex: 1;
