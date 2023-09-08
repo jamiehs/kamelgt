@@ -64,7 +64,7 @@ const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number 
         
         currentWeek = {
             week: round.week,
-            label: round.label,
+            label: round.title,
             notes: round.notes,
         }
 

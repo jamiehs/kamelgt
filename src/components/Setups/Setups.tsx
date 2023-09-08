@@ -30,8 +30,8 @@ function Setups(props: SetupsProps) {
                     if(upcomingRound && outputRoundsCount < upcomingWeeks) {
                         outputRoundsCount++
                         return (
-                            <div className="round-container" key={round.label}>
-                                <h3><span className="week-prefix">Week {round.week}: </span>{round.label}</h3>
+                            <div className="round-container" key={round.title}>
+                                <h3><span className="week-prefix">Week {round.week}: </span>{round.title}</h3>
                                 {setupsExist ? (
                                     <div className="cars-grid">
                                         {round.nissangtpzxt.length > 0 && (

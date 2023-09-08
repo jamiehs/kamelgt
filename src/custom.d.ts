@@ -20,7 +20,7 @@ interface CarSetup {
 }
 
 interface SetupWeek {
-    label: string
+    title: string
     week: number
     weekStart: string
     notes?: Array<string>

@@ -1,6 +1,7 @@
+import * as tracks from './track-names.js'; 
 const seasonSetups = [
     {
-        "label": "Suzuka",
+        ...tracks.SUZUKA,
         "week": 1,
         "weekStart": "2023-09-12",
         "audi90gto": [
@@ -21,7 +22,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Hockenheimring - Outer",
+        ...tracks.HOCKENHEIM_OUTER,
         "week": 2,
         "weekStart": "2023-09-19",
         "notes": [
@@ -40,7 +41,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Zandvoort",
+        ...tracks.ZANDVOORT,
         "week": 3,
         "weekStart": "2023-09-26",
         "audi90gto": [
@@ -58,7 +59,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Sebring",
+        ...tracks.SEBRING,
         "week": 4,
         "weekStart": "2023-10-03",
         "audi90gto": [
@@ -67,7 +68,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Sonoma - Cup",
+        ...tracks.SONOMA_CUP,
         "week": 5,
         "weekStart": "2023-10-10",
         "audi90gto": [
@@ -76,7 +77,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Charlotte - Roval",
+        ...tracks.CHARLOTTE_ROVAL,
         "week": 6,
         "weekStart": "2023-10-17",
         "audi90gto": [
@@ -85,7 +86,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Road America",
+        ...tracks.ROAD_AMERICA,
         "week": 7,
         "weekStart": "2023-10-24",
         "notes": [
@@ -98,7 +99,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Imola",
+        ...tracks.IMOLA,
         "week": 8,
         "weekStart": "2023-10-31",
         "audi90gto": [
@@ -107,7 +108,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Jerez - Moto",
+        ...tracks.JEREZ_MOTO,
         "week": 9,
         "weekStart": "2023-11-07",
         "audi90gto": [
@@ -116,7 +117,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Twin Ring Motegi",
+        ...tracks.TWIN_RING_MOTEGI,
         "week": 10,
         "weekStart": "2023-11-14",
         "audi90gto": [
@@ -131,7 +132,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Daytona - NASCAR Road",
+        ...tracks.DAYTONA_NASCAR_ROAD,
         "week": 11,
         "weekStart": "2023-11-21",
         "audi90gto": [
@@ -140,7 +141,7 @@ const seasonSetups = [
         ]
     },
     {
-        "label": "Long Beach",
+        ...tracks.LONG_BEACH,
         "week": 12,
         "weekStart": "2023-11-28",
         "audi90gto": [
