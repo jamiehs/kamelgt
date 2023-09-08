@@ -49,6 +49,10 @@ export const HOCKENHEIM_GP = {
     title: "Hockenheim GP",
     alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix"
 }
+export const HOCKENHEIM_OUTER = {
+    title: "Hockenheim - Outer",
+    alternateTitle: "Hockenheimring Baden-Württemberg - Outer"
+}
 export const HOMESTEAD_MIAMI_ROAD_B = {
     title: "Homestead Miami",
     alternateTitle: "Homestead Miami Speedway - Road Course B"
@@ -73,7 +77,12 @@ export const INTERLAGOS = {
     alternateTitle: "Autódromo José Carlos Pace"
 }
 export const JEREZ = {
-    title: "Jerez"
+    title: "Jerez",
+    alternateTitle: "Circuito de Jerez - Ángel Nieto"
+}
+export const JEREZ_MOTO = {
+    title: "Jerez - Moto",
+    alternateTitle: "Circuito de Jerez - Ángel Nieto - Moto"
 }
 export const LAGUNA_SECA = {
     title: "Laguna Seca"
