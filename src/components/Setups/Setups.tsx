@@ -2,7 +2,7 @@ import React from 'react'
 import './Setups.scss'
 import {VCR_DISCORD_URL} from '../../data/constants'
 
-import seasonSetups from '../../data/season-setups.json'
+import seasonSetups from '../../data/season-setups'
 const sortedRounds = seasonSetups.sort((a,b) => {
     return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
 })

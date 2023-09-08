@@ -6,7 +6,7 @@ import Broadcast from './components/Broadcast/Broadcast';
 import Announcement from './components/Announcement/Announcement';
 import VideoSpotlight from './components/VideoSpotlight/VideoSpotlight';
 import Setups from './components/Setups/Setups';
-import seasonSetups from './data/season-setups.json';
+import seasonSetups from './data/season-setups';
 import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
