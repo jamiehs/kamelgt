@@ -217,6 +217,10 @@ export const SUMMIT_POINT = {
 export const SUZUKA = {
     title: "Suzuka"
 }
+export const TSUKUBA = {
+    title: "Tsukuba",
+    alternateTitle: "Tsukuba Circuit"
+}
 export const TWIN_RING_MOTEGI = {
     title: "Twin Ring Motegi"
 }

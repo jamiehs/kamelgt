@@ -801,6 +801,11 @@ const broadcasts = [
                 ...tracks.BATHURST,
                 url: "https://youtu.be/JOoXaASvpjI?t=865"
             },
+            {
+                ...tracks.TSUKUBA,
+                title: "Tsukuba Week 13 Khaos",
+                url: "https://youtu.be/meFAx9cR6R4?t=402"
+            },
         ]
     },
     {

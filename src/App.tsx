@@ -11,7 +11,13 @@ import broadcasts from './data/broadcasts';
 import {VCR_DISCORD_URL} from './data/constants';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
-import {getCurrentWeekData, localDateFromString, addDaysToDate, dateTimeFromString} from './helpers';
+import {
+    getCurrentWeekData,
+    localDateFromString,
+    addDaysToDate,
+    dateTimeFromString,
+    getCurrentBroadcastSeason
+} from './helpers';
 
 interface App {
     interval: ReturnType<typeof setInterval>
@@ -25,12 +31,13 @@ interface AppState {
     currentSeasonDates: Array<Date>
     broadcastSearchResults: Fuse.FuseResult<SingleBroadcast>[]
 }
+
 class App extends React.Component<null, AppState> {
     constructor(props) {
         super(props)
         this.state = {
             currentWeekData: getCurrentWeekData(seasonSetups),
-            broadcastsSeason: broadcasts[broadcasts.length-1].id,
+            broadcastsSeason: getCurrentBroadcastSeason(broadcasts).id,
             broadcastSearchQuery: '',
             currentSeasonDates: [],
             broadcastSearchResults: [],

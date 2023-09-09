@@ -76,6 +76,17 @@ const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number 
 }
 
 /**
+ * Get Current Broadcast Season
+ * @param broadcasts array of broadcast seasons
+ * @returns {object} a single season of broadcasts
+ */
+const getCurrentBroadcastSeason = (broadcasts) => {
+    return broadcasts.slice().reverse().find((season) => {
+        return season.startDate < new Date().toISOString().substring(0, 10)
+    })
+}
+
+/**
  * Local Date From String
  * @param {string} dateString input date: 2023-03-28 
  * @returns {string} as a local date: 28. März 2023
@@ -162,4 +173,5 @@ export {
     toLocaleStringIfNumber,
     numberAsK,
     dateTimeFromString,
+    getCurrentBroadcastSeason,
 }
