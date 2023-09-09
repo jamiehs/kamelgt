@@ -16,7 +16,8 @@ import {
     localDateFromString,
     addDaysToDate,
     dateTimeFromString,
-    getCurrentBroadcastSeason
+    getCurrentBroadcastSeason,
+    addDaysToDateString
 } from './helpers';
 
 interface App {
@@ -379,15 +380,18 @@ class App extends React.Component<null, AppState> {
                             defaultValue={this.state.broadcastsSeason}
                             onChange={(event) => this.handleBroadcastSeasonChange(event)}
                         >
-                            {broadcasts.slice().reverse().map(season => (
-                                <option key={season.id} value={season.id}>
-                                    {season.id}
-                                    {`: `}
-                                    {localDateFromString(season.startDate)}
-                                    &#8201;&ndash;&#8201;
-                                    {localDateFromString(season.endDate)}
-                                </option>
-                            ))}
+                            {broadcasts.slice().reverse().map(season => {
+                                // season.endDate is actually the start date of the
+                                // last week of the season. To get the end of week 13,
+                                // we must add 7 days for week 12 and 7 more for week 13
+                                let startDate = localDateFromString(season.startDate)
+                                let endDate = localDateFromString(addDaysToDateString(season.endDate, 14))
+                                return (
+                                    <option key={season.id} value={season.id}>
+                                        {season.id}{`: `}{startDate}&#8201;&ndash;&#8201;{endDate}
+                                    </option>
+                                )
+                            })}
                         </select>
                     </div>
 

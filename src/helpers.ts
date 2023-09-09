@@ -135,6 +135,21 @@ const addDaysToDate = (date: Date, days: number): Date => {
     return result;
 }
 
+/**
+ * Add Days to Date String
+ * Given an ISO style date, add a positive number of
+ * days and return the same format
+ * @param dateString date in format 'YYYY-MM-DD'
+ * @param days integer of days to add
+ * @returns date in format 'YYYY-MM-DD' with days added
+ */
+const addDaysToDateString = (dateString: string, days: number): string => {
+    const date = dateTimeFromString(dateString, '00:00')
+    const newDate = addDaysToDate(date, days)
+
+    return newDate.toISOString().substring(0, 10)
+}
+
 const getYouTubeId = (url: string): string|null => {
     let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
     if(matches) {
@@ -174,4 +189,5 @@ export {
     numberAsK,
     dateTimeFromString,
     getCurrentBroadcastSeason,
+    addDaysToDateString,
 }
