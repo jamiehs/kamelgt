@@ -816,7 +816,7 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.SUZUKA,
-                url: ""
+                url: "https://youtu.be/Ccfi1_SryrI?t=959"
             },
             {
                 ...tracks.HOCKENHEIM_OUTER,
