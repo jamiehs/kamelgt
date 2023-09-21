@@ -31,13 +31,40 @@ const seasonSetups = [
         ],
         "audi90gto": [
             {
-                "file": "hockenheim-outer-21S2-r1.sto"
-            }
+                "file": "maf_hockenheim_23s4_r2.sto",
+            },
+            {
+                "file": "maf_hockenheim_23s4_q2.sto",
+            },
+            {
+                "file": "iB_HockOut_23s4_r1.sto",
+            },
+            {
+                "file": "iB_HockOut_23s4_Q1.sto",
+            },
+            {
+                "file": "23_S1_Hockenheim_1.0_Race.sto",
+            },
+            {
+                "file": "hockenheim-outer-21S2-r1.sto",
+            },
         ],
         "nissangtpzxt": [
             {
-                "file": "Lgo23S1_HockGP_MH_Silverstone_Int_R61.sto"
-            }
+                "file": "Lgo23S4_Hockenheim_Outer_Q51.sto",
+            },
+            {
+                "file": "Lgo23S4_Hockenheim_Outer_R51.sto",
+            },
+            {
+                "file": "Lgo22S1HockGPMHSilverstoneIntRv1QOLMQualy.sto",
+            },
+            {
+                "file": "Lgo22S1HockGPMHSilverstoneIntRv1QOLMRace.sto",
+            },
+            {
+                "file": "Lgo23S1_HockGP_MH_Silverstone_Int_R61.sto",
+            },
         ]
     },
     {
@@ -50,12 +77,18 @@ const seasonSetups = [
             },
             {
                 "file": "zandvoort-21S3-r4.sto"
-            }
+            },
         ],
         "nissangtpzxt": [
             {
-                "file": ""
-            }
+                "file": "ZX-T_-_21S3_Zandvoort_-_Y_Gijsen_-_R_-_210707.sto"
+            },
+            {
+                "file": "DWC_ZXT_Zandvoort_Q2.sto"
+            },
+            {
+                "file": "DWC_ZXT_Zandvoort_R2.sto"
+            },
         ]
     },
     {
@@ -63,8 +96,26 @@ const seasonSetups = [
         "week": 4,
         "weekStart": "2023-10-03",
         "audi90gto": [
+            {
+                "file": "A90_23S2_Sebring_Y_Gijsen_R.sto"
+            },
+            {
+                "file": "JdelOlmoAudiSebring23S2.sto"
+            },
+            {
+                "file": "Sebring_Kheireddine_22s3.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "DWC_Sebring_R3.sto"
+            },
+            {
+                "file": "F122_NGTP_Sebring_1-2.sto"
+            },
+            {
+                "file": "GTP-Sebring-SW-R.sto"
+            },
         ]
     },
     {
@@ -72,8 +123,26 @@ const seasonSetups = [
         "week": 5,
         "weekStart": "2023-10-10",
         "audi90gto": [
+            {
+                "file": "sonoma-22S3-2.3.sto"
+            },
+            {
+                "file": "sonoma-22S3-r1.sto"
+            },
+            {
+                "file": "sonoma-22S3-Yoeri_Gijsen_-_220824_-_R.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_Q66.sto"
+            },
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R61.sto"
+            },
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R66.sto"
+            },
         ]
     },
     {
@@ -81,8 +150,17 @@ const seasonSetups = [
         "week": 6,
         "weekStart": "2023-10-17",
         "audi90gto": [
+            {
+                "file": "charlotte-roval-22S3_Marc_1.1.sto"
+            },
+            {
+                "file": "charlotte-roval-22S3-r1.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "charlotte-roval-22S3-Lgo_AG_WGI_6W1_R62.sto"
+            },
         ]
     },
     {
@@ -94,8 +172,38 @@ const seasonSetups = [
             "Pit stop required"
         ],
         "audi90gto": [
+            {
+                "file": "A90 - 22S4 - RoadAmerica - J Del Olmo - R.sto"
+            },
+            {
+                "file": "A90 - 22S4 - RoadAmerica - M Ollé - R.sto"
+            },
+            {
+                "file": "road-america-22S4-r2.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S4_Road_America_MH_Int_R_Q40.sto"
+            },
+            {
+                "file": "Lgo22S4_Road_America_MH_Int_R_R50.sto"
+            },
+            {
+                "file": "Lgo22S4_Road_America_MH_Int_R_R60.sto"
+            },
+            {
+                "file": "Lgo22S2_RoadAm_MH_Silverstone_Int_R_v1_Q60.sto"
+            },
+            {
+                "file": "road_america_22s4_Full_R_v1-4.sto"
+            },
+            {
+                "file": "roadamerica-4Rw5.sto"
+            },
+            {
+                "file": "roadamerica-Q3w5.sto"
+            },
         ]
     },
     {
