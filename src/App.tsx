@@ -248,7 +248,7 @@ class App extends React.Component<null, AppState> {
                                     regularity="new since 23S3"
                                 >
                                     <p>
-                                        3pm in the west & 5pm in the east of Australia; 8pm in New Zealand. This is also late-morning for much of Europe. 
+                                        3pm in the west & 5pm in the east of Australia; 8pm in New Zealand. This is also morning for much of Europe. 
                                     </p>
                                 </Timeslot>
                             </div>

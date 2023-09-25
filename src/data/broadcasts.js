@@ -820,7 +820,7 @@ const broadcasts = [
             },
             {
                 ...tracks.HOCKENHEIM_OUTER,
-                url: ""
+                url: "https://youtu.be/2x8cC45-UPI?t=611"
             },
             {
                 ...tracks.ZANDVOORT,
