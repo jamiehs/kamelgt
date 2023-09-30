@@ -824,7 +824,7 @@ const broadcasts = [
             },
             {
                 ...tracks.ZANDVOORT,
-                url: ""
+                url: "https://youtu.be/P3pPGGxA2kM?t=743"
             },
             {
                 ...tracks.SEBRING,
