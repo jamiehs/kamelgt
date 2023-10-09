@@ -124,6 +124,12 @@ const seasonSetups = [
         "weekStart": "2023-10-10",
         "audi90gto": [
             {
+                "file": "sonoma-23S4-r1.sto"
+            },
+            {
+                "file": "maf_sonoma_23s4_q1.sto"
+            },
+            {
                 "file": "sonoma-22S3-2.3.sto"
             },
             {
