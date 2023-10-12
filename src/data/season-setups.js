@@ -124,10 +124,13 @@ const seasonSetups = [
         "weekStart": "2023-10-10",
         "audi90gto": [
             {
-                "file": "sonoma-23S4-r1.sto"
+                "file": "maf_sonoma_23s4_r1.sto"
             },
             {
-                "file": "maf_sonoma_23s4_q1.sto"
+                "file": "maf_sonoma_23s4_q1a.sto"
+            },
+            {
+                "file": "sonoma-23S4-r1.sto"
             },
             {
                 "file": "sonoma-22S3-2.3.sto"
@@ -141,13 +144,25 @@ const seasonSetups = [
         ],
         "nissangtpzxt": [
             {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_Q66.sto"
+                "file": "GTP_Sonoma_JdelOlmoQ.sto",
             },
             {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R61.sto"
+                "file": "GTP_Sonoma_JdelOlmoR.sto",
+                "comment": "From Javier: the only thing I've adjusted is the fuel and first gear. In qualy I have only changed the camber a little and lowered the rear wing a point."
             },
             {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R66.sto"
+                "file": "Lgo23S4_Sonoma_Cup_Q70.sto",
+            },
+            {
+                "file": "Lgo23S4_Sonoma_Cup_R71.sto",
+                "comment": "From Laust: My Wednesday sets - enjoy. Be careful not to stress tires too much, otherwise it becomes quite difficult to drive."
+            },
+            {
+                "file": "sonomaQh.sto",
+            },
+            {
+                "file": "sonomaR.sto",
+                "comment": "From Tim: stay off the curbs and be mindful of that bump in the downhill lefthander.  Gentle with the throttle.  But it cuts the essess like it's on rails. Just slight lifts needed between the two hairpins"
             },
         ]
     },
