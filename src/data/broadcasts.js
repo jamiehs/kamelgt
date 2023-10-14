@@ -832,7 +832,7 @@ const broadcasts = [
             },
             {
                 ...tracks.SONOMA_CUP,
-                url: ""
+                url: "https://youtu.be/2NxAvNbQnxQ?t=884"
             },
             {
                 ...tracks.CHARLOTTE_ROVAL,
