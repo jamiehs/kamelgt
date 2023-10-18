@@ -172,6 +172,12 @@ const seasonSetups = [
         "weekStart": "2023-10-17",
         "audi90gto": [
             {
+                "file": "maf_charlotte_23s4_r2b.sto"
+            },
+            {
+                "file": "maf_charlotte_23s4_q2b.sto"
+            },
+            {
                 "file": "charlotte-roval-22S3_Marc_1.1.sto"
             },
             {
@@ -179,6 +185,19 @@ const seasonSetups = [
             },
         ],
         "nissangtpzxt": [
+            {
+                "file": "F122_NGTP_Charlotte_1-4.sto"
+            },
+            {
+                "file": "F122_NGTP_Charlotte_1-4_Q.sto"
+            },
+            {
+                "file": "GTP_Charlotte_JdelOlmoR.sto"
+            },
+            {
+                "file": "rovalo_RGtpQ.sto",
+                "comment": "qualifying setup!"
+            },
             {
                 "file": "charlotte-roval-22S3-Lgo_AG_WGI_6W1_R62.sto"
             },
