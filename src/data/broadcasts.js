@@ -836,7 +836,7 @@ const broadcasts = [
             },
             {
                 ...tracks.CHARLOTTE_ROVAL,
-                url: ""
+                url: "https://youtu.be/HqWW684edas?t=912"
             },
             {
                 ...tracks.ROAD_AMERICA,
