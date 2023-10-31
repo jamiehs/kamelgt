@@ -251,8 +251,23 @@ const seasonSetups = [
         "week": 8,
         "weekStart": "2023-10-31",
         "audi90gto": [
+            {
+                "file": "maf_imola_23s4_q1a.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "maf_imola_23s4_q1b.sto",
+                "comment": "Qualifying setup"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S4_MH_Imola_R_v1.3_Q61.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "Lgo22S4_MH_Imola_R_v1.3_R62.sto",
+            },
         ]
     },
     {
