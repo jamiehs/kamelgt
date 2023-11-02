@@ -252,21 +252,50 @@ const seasonSetups = [
         "weekStart": "2023-10-31",
         "audi90gto": [
             {
-                "file": "maf_imola_23s4_q1a.sto",
-                "comment": "Qualifying setup"
+                "file": "23S4_iB_Imola_R2.sto",
+                "comment": "From Ian Brasfield: Set for 101-104F/39-41C"
+            },
+            {
+                "file": "imola-23S4-r1.sto",
+                "comment": "From Jamie: Based on Jouko's set from 22S1"
+            },
+            {
+                "file": "A90_23S4_Imola_Y_Gijsen_R.sto",
+                "comment": "From Yoeri: 3rd and 4th will hit the limiter. Don't worry about that."
+            },
+            {
+                "file": "A90_23S4_Imola_Y_Gijsen_Q.sto",
+                "comment": "From Yoeri - Qualifying setup"
+            },
+            {
+                "file": "maf_imola_23s4_r1b.sto",
+                "comment": "From Mickey"
             },
             {
                 "file": "maf_imola_23s4_q1b.sto",
-                "comment": "Qualifying setup"
+                "comment": "From Mickey - Qualifying setup"
             },
         ],
         "nissangtpzxt": [
             {
-                "file": "Lgo22S4_MH_Imola_R_v1.3_Q61.sto",
-                "comment": "Qualifying setup"
+                "file": "Lgo23S4_Imola_GP_R61.sto",
+                "comment": "From Laust: My Wednesday sets for Imola"
+            },
+            {
+                "file": "Lgo23S4_Imola_GP_Q60.sto",
+                "comment": "From Laust - Qualifying setup"
+            },
+            {
+                "file": "GTP_Imola_JdelOlmoR.sto",
+                "comment": "From Javier"
             },
             {
                 "file": "Lgo22S4_MH_Imola_R_v1.3_R62.sto",
+                "comment": "From Laust (22S4)"
+            },
+            {
+                "file": "Lgo22S4_MH_Imola_R_v1.3_Q61.sto",
+                "comment": "From Laust - Qualifying setup (22S4)"
             },
         ]
     },
@@ -275,8 +304,23 @@ const seasonSetups = [
         "week": 9,
         "weekStart": "2023-11-07",
         "audi90gto": [
+            {
+                "file": "DWC_23S2_Jerez_R2.sto",
+            },
+            {
+                "file": "JdelOlmoAudiJerez23S2RACE.sto",
+            },
+            {
+                "file": "jerez-23S2-r1.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "F122_NGTP_Jerez_1-3.sto",
+            },
+            {
+                "file": "NGTP_JEREZ_R_ALEX.sto",
+            },
         ]
     },
     {
@@ -284,6 +328,17 @@ const seasonSetups = [
         "week": 10,
         "weekStart": "2023-11-14",
         "audi90gto": [
+            {
+                "file": "motegi-23S1-r2.sto",
+                "comment": "From Jouko"
+            },
+            {
+                "file": "motegi-22S1-JL-q.sto",
+                "comment": "From Jouko - Qualifying setup"
+            },
+            {
+                "file": "motegi-23S1-r2.sto"
+            },
         ],
         "nissangtpzxt": [
             {
@@ -291,7 +346,7 @@ const seasonSetups = [
             },
             {
                 "file": "Lgo22S1_Motegi_MH_Silverstone_Int_R_v1_R63.sto"
-            }
+            },
         ]
     },
     {
