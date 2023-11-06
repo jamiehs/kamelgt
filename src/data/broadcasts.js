@@ -701,7 +701,7 @@ const broadcasts = [
                 url: "https://youtu.be/AE2VmQ_0ZK0?t=635"
             },
             {
-                ...tracks.JEREZ,
+                ...tracks.JEREZ_MOTO,
                 url: "https://youtu.be/6gQrAfswvMc?t=986"
             },
             {
