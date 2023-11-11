@@ -848,7 +848,7 @@ const broadcasts = [
             },
             {
                 ...tracks.JEREZ_MOTO,
-                url: ""
+                url: "https://youtu.be/v3oV2QL2jO4?t=600"
             },
             {
                 ...tracks.TWIN_RING_MOTEGI,
