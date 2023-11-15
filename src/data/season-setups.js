@@ -354,8 +354,20 @@ const seasonSetups = [
         "week": 11,
         "weekStart": "2023-11-21",
         "audi90gto": [
+            {
+                "file": "DWC_23S1_Daytona_R2.sto",
+            },
+            {
+                "file": "KB_2022-S2_Daytona_Road_R-ih.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S2_Daytona_RC_AG_Indy_2W8_R10race.sto",
+            },
+            {
+                "file": "Lgo23S1_Daytona_RC_AG_Indy_2W8_R10.sto",
+            },
         ]
     },
     {
@@ -363,8 +375,23 @@ const seasonSetups = [
         "week": 12,
         "weekStart": "2023-11-28",
         "audi90gto": [
+            {
+                "file": "andrius_sl_long_beach.sto",
+            },
+            {
+                "file": "Long Beach DT22 S3 R1.sto",
+            },
+            {
+                "file": "andrius_sl_long_beach.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S3_Long_Beach_MH_Hungaroring_R81.sto",
+            },
+            {
+                "file": "NGTP_LongBeach_1-2.sto",
+            },
         ]
     }
 ]
