@@ -4,7 +4,6 @@ import Fuse from 'fuse.js';
 import Timeslot from './components/Timeslot/Timeslot';
 import Broadcast from './components/Broadcast/Broadcast';
 import Announcement from './components/Announcement/Announcement';
-import VideoSpotlight from './components/VideoSpotlight/VideoSpotlight';
 import Setups from './components/Setups/Setups';
 import seasonSetups from './data/season-setups';
 import broadcasts from './data/broadcasts';
@@ -151,14 +150,6 @@ class App extends React.Component<null, AppState> {
                         </Announcement>
                     </div>
                 </div>
-                <VideoSpotlight
-                    youTubeUrl="https://youtu.be/WhbYz5Cxebk?t=3349"
-                    subheading="An amazing last few laps in the GTO class"
-                    linkText="GTOs Battle for 2nd in Class"
-                    thumbnailSource="/custom-thumbs/ian-gto-battle-watkins23s3.jpg"
-                >
-                    Doug Cloud, Ian Haycox, Robert Plumley, Ben Laughter, Theo Schleret and Timothy Vaughan battle in a display of close racing and position swapping.
-                </VideoSpotlight>
                 <div className="timeslots-container">
                     <div id="timeslots" className="timeslots-wrapper">
                         <div className="section">
