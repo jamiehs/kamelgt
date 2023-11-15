@@ -140,12 +140,12 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-09-03" expires="2023-09-09">
+                        <Announcement begins="2023-12-03" expires="2023-12-11">
                             <h3>
                                 It's week 13! What are you doing here?
                             </h3>
                             <p>
-                                There are no official races this week... In the mean time, you should look at <a href="https://cdn.discordapp.com/attachments/455180408074665994/1147590178328817795/afbeelding.png" target="_blank" rel="noreferrer">the Kamel GT 2023 Season 4 preliminary schedule</a>. We think Zandvoort (rescan) will replace Hungaroring; Jerez returns!; Daytona NASCAR Road makes an appearance, and even Sonoma shows up!
+                                There are no official races this week; maybe try out the HPD ARX 01c as it makes its return to the GT Challenge? Maybe you want to see <a href="/images/2024s1-preliminary-schedule.png" target="_blank" rel="noreferrer">the preliminary 2024S1 Kamel GT schedule</a>?
                             </p>
                         </Announcement>
                     </div>
