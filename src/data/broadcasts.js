@@ -852,7 +852,7 @@ const broadcasts = [
             },
             {
                 ...tracks.TWIN_RING_MOTEGI,
-                url: ""
+                url: "https://youtu.be/pvRKibIT84g?t=733"
             },
             {
                 ...tracks.DAYTONA_NASCAR_ROAD,
