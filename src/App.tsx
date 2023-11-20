@@ -218,7 +218,7 @@ class App extends React.Component<null, AppState> {
                                     </p>
                                 </Timeslot>
                                 <Timeslot
-                                    label="🎥 Broadcast Race"
+                                    label="📺 Broadcast Race"
                                     dayIndex={6}
                                     time="17:00"
                                     entries={68}
