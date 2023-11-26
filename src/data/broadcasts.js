@@ -856,7 +856,7 @@ const broadcasts = [
             },
             {
                 ...tracks.DAYTONA_NASCAR_ROAD,
-                url: ""
+                url: "https://youtu.be/ZyEw8seXcNA?t=856"
             },
             {
                 ...tracks.LONG_BEACH,
