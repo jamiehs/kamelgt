@@ -860,7 +860,7 @@ const broadcasts = [
             },
             {
                 ...tracks.LONG_BEACH,
-                url: ""
+                url: "https://youtu.be/ynpkiUKqZdc?t=503"
             },
         ]
     }
