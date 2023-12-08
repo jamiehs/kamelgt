@@ -1,6 +1,6 @@
 {
-  "short_name": "Kamel GT",
-  "name": "Kamel GT Series Site",
+  "short_name": "IMSA Vintage",
+  "name": "IMSA Vintage Series Site",
   "icons": [
     { "src": "/favicon.svg", "type": "image/svg+xml", "purpose": "maskable", "sizes": "any" },
     { "src": "/icon-192.png", "type": "image/png", "purpose": "maskable", "sizes": "192x192" },

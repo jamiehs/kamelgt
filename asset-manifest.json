@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.797a65a5.css",
-    "main.js": "/static/js/main.e6ad8983.js",
+    "main.css": "/static/css/main.2e75ca17.css",
+    "main.js": "/static/js/main.e3584b01.js",
     "static/js/787.9c05a8ca.chunk.js": "/static/js/787.9c05a8ca.chunk.js",
     "static/media/vhs1.jpg": "/static/media/vhs1.58fbbab030060216a13c.jpg",
     "static/media/vhs2.jpg": "/static/media/vhs2.24a2bcf4fc7ea5bee141.jpg",
+    "static/media/imsa-vintage-logo.png": "/static/media/imsa-vintage-logo.e61b669807fe696afd45.png",
     "static/media/vhs4.jpg": "/static/media/vhs4.3a42339c1102c8288d25.jpg",
     "static/media/vhs5.jpg": "/static/media/vhs5.6db3125c22aabdf65b4b.jpg",
     "static/media/vhs3.jpg": "/static/media/vhs3.c1a95bab3950b3008ed8.jpg",
@@ -12,12 +13,12 @@
     "index.html": "/index.html",
     "static/media/icons8-external-link.svg": "/static/media/icons8-external-link.0444b680df639e282f8c.svg",
     "static/media/download-setup.svg": "/static/media/download-setup.8117dd17cf05e3250a4b153d03d5a654.svg",
-    "main.797a65a5.css.map": "/static/css/main.797a65a5.css.map",
-    "main.e6ad8983.js.map": "/static/js/main.e6ad8983.js.map",
+    "main.2e75ca17.css.map": "/static/css/main.2e75ca17.css.map",
+    "main.e3584b01.js.map": "/static/js/main.e3584b01.js.map",
     "787.9c05a8ca.chunk.js.map": "/static/js/787.9c05a8ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.797a65a5.css",
-    "static/js/main.e6ad8983.js"
+    "static/css/main.2e75ca17.css",
+    "static/js/main.e3584b01.js"
   ]
 }
