@@ -1,399 +1,146 @@
 import * as tracks from './track-names.js'; 
 const seasonSetups = [
     {
-        ...tracks.SUZUKA,
+        ...tracks.VIR,
         "week": 1,
-        "weekStart": "2023-09-12",
+        "weekStart": "2023-12-12",
         "audi90gto": [
             {
-                "file": "suzuka-23s1-arturas-saturday.sto"
+                "file": "A90 - 22S4 - VIR - J Del Olmo - R.sto"
             },
             {
-                "file": "suzuka-23S1-Javier-r2.sto"
-            }
+                "file": "vir-23S2-r1.sto"
+            },
+            {
+                "file": "A90_23S3_VIR_Y_Gijsen_R20.sto"
+            },
         ],
         "nissangtpzxt": [
             {
-                "file": "Lgo22S2_Suzuka_GP_MH_Hungaroring_R_v1_Q81.sto"
+                "file": "F122_NGTP_VIR_v1-4.sto"
             },
             {
-                "file": "Lgo22S2_Suzuka_GP_MH_Hungaroring_R_v1_R80.sto"
-            }
+                "file": "NGTP_VIR_Full_R_v1-5.sto"
+            },
         ]
     },
     {
-        ...tracks.HOCKENHEIM_OUTER,
+        ...tracks.MONTREAL,
         "week": 2,
-        "weekStart": "2023-09-19",
-        "notes": [
-            "60 minute endurance round",
-            "Pit stop required"
-        ],
+        "weekStart": "2023-12-19",
         "audi90gto": [
             {
-                "file": "maf_hockenheim_23s4_r2.sto",
+                "file": "Montreal_23_v1.sto"
             },
             {
-                "file": "maf_hockenheim_23s4_q2.sto",
-            },
-            {
-                "file": "iB_HockOut_23s4_r1.sto",
-            },
-            {
-                "file": "iB_HockOut_23s4_Q1.sto",
-            },
-            {
-                "file": "23_S1_Hockenheim_1.0_Race.sto",
-            },
-            {
-                "file": "hockenheim-outer-21S2-r1.sto",
+                "file": "KB_Montreal_23_v1.sto"
             },
         ],
         "nissangtpzxt": [
             {
-                "file": "Lgo23S4_Hockenheim_Outer_Q51.sto",
+                "file": "F122_NGTP_Montreal_1-3.sto"
             },
             {
-                "file": "Lgo23S4_Hockenheim_Outer_R51.sto",
-            },
-            {
-                "file": "Lgo22S1HockGPMHSilverstoneIntRv1QOLMQualy.sto",
-            },
-            {
-                "file": "Lgo22S1HockGPMHSilverstoneIntRv1QOLMRace.sto",
-            },
-            {
-                "file": "Lgo23S1_HockGP_MH_Silverstone_Int_R61.sto",
+                "file": "asg-montreal-r.sto"
             },
         ]
     },
     {
-        ...tracks.ZANDVOORT,
+        ...tracks.MUGELLO,
         "week": 3,
-        "weekStart": "2023-09-26",
+        "weekStart": "2023-12-26",
         "audi90gto": [
-            {
-                "file": "Zandvoort_S3_2021_1.3_34oC_RACE.sto"
-            },
-            {
-                "file": "zandvoort-21S3-r4.sto"
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "ZX-T_-_21S3_Zandvoort_-_Y_Gijsen_-_R_-_210707.sto"
-            },
-            {
-                "file": "DWC_ZXT_Zandvoort_Q2.sto"
-            },
-            {
-                "file": "DWC_ZXT_Zandvoort_R2.sto"
-            },
         ]
     },
     {
-        ...tracks.SEBRING,
+        ...tracks.LE_MANS,
         "week": 4,
-        "weekStart": "2023-10-03",
+        "weekStart": "2023-01-02",
         "audi90gto": [
             {
-                "file": "A90_23S2_Sebring_Y_Gijsen_R.sto"
-            },
-            {
-                "file": "JdelOlmoAudiSebring23S2.sto"
-            },
-            {
-                "file": "Sebring_Kheireddine_22s3.sto"
+                "file": "le-mans-22S3-r1.sto"
             },
         ],
         "nissangtpzxt": [
             {
-                "file": "DWC_Sebring_R3.sto"
-            },
-            {
-                "file": "F122_NGTP_Sebring_1-2.sto"
-            },
-            {
-                "file": "GTP-Sebring-SW-R.sto"
+                "file": "Le_Mans_R1.7.sto"
             },
         ]
     },
     {
-        ...tracks.SONOMA_CUP,
+        ...tracks.BARBER,
         "week": 5,
-        "weekStart": "2023-10-10",
+        "weekStart": "2023-01-09",
         "audi90gto": [
-            {
-                "file": "maf_sonoma_23s4_r1.sto"
-            },
-            {
-                "file": "maf_sonoma_23s4_q1a.sto"
-            },
-            {
-                "file": "sonoma-23S4-r1.sto"
-            },
-            {
-                "file": "sonoma-22S3-2.3.sto"
-            },
-            {
-                "file": "sonoma-22S3-r1.sto"
-            },
-            {
-                "file": "sonoma-22S3-Yoeri_Gijsen_-_220824_-_R.sto"
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "GTP_Sonoma_JdelOlmoQ.sto",
-            },
-            {
-                "file": "GTP_Sonoma_JdelOlmoR.sto",
-                "comment": "From Javier: the only thing I've adjusted is the fuel and first gear. In qualy I have only changed the camber a little and lowered the rear wing a point."
-            },
-            {
-                "file": "Lgo23S4_Sonoma_Cup_Q70.sto",
-            },
-            {
-                "file": "Lgo23S4_Sonoma_Cup_R71.sto",
-                "comment": "From Laust: My Wednesday sets - enjoy. Be careful not to stress tires too much, otherwise it becomes quite difficult to drive."
-            },
-            {
-                "file": "sonomaQh.sto",
-            },
-            {
-                "file": "sonomaR.sto",
-                "comment": "From Tim: stay off the curbs and be mindful of that bump in the downhill lefthander.  Gentle with the throttle.  But it cuts the essess like it's on rails. Just slight lifts needed between the two hairpins"
-            },
-        ]
-    },
-    {
-        ...tracks.CHARLOTTE_ROVAL,
-        "week": 6,
-        "weekStart": "2023-10-17",
-        "audi90gto": [
-            {
-                "file": "maf_charlotte_23s4_r2b.sto"
-            },
-            {
-                "file": "maf_charlotte_23s4_q2b.sto"
-            },
-            {
-                "file": "charlotte-roval-22S3_Marc_1.1.sto"
-            },
-            {
-                "file": "charlotte-roval-22S3-r1.sto"
-            },
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "F122_NGTP_Charlotte_1-4.sto"
-            },
-            {
-                "file": "F122_NGTP_Charlotte_1-4_Q.sto"
-            },
-            {
-                "file": "GTP_Charlotte_JdelOlmoR.sto"
-            },
-            {
-                "file": "rovalo_RGtpQ.sto",
-                "comment": "qualifying setup!"
-            },
-            {
-                "file": "charlotte-roval-22S3-Lgo_AG_WGI_6W1_R62.sto"
-            },
-        ]
-    },
-    {
-        ...tracks.ROAD_AMERICA,
-        "week": 7,
-        "weekStart": "2023-10-24",
-        "notes": [
-            "60 minute endurance round",
-            "Pit stop required"
-        ],
-        "audi90gto": [
-            {
-                "file": "A90 - 22S4 - RoadAmerica - J Del Olmo - R.sto"
-            },
-            {
-                "file": "A90 - 22S4 - RoadAmerica - M Ollé - R.sto"
-            },
-            {
-                "file": "road-america-22S4-r2.sto"
-            },
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "Lgo22S4_Road_America_MH_Int_R_Q40.sto"
-            },
-            {
-                "file": "Lgo22S4_Road_America_MH_Int_R_R50.sto"
-            },
-            {
-                "file": "Lgo22S4_Road_America_MH_Int_R_R60.sto"
-            },
-            {
-                "file": "Lgo22S2_RoadAm_MH_Silverstone_Int_R_v1_Q60.sto"
-            },
-            {
-                "file": "road_america_22s4_Full_R_v1-4.sto"
-            },
-            {
-                "file": "roadamerica-4Rw5.sto"
-            },
-            {
-                "file": "roadamerica-Q3w5.sto"
-            },
         ]
     },
     {
         ...tracks.IMOLA,
+        "week": 6,
+        "weekStart": "2023-01-16",
+        "audi90gto": [
+        ],
+        "nissangtpzxt": [
+        ]
+    },
+    {
+        ...tracks.NURBURGRING_GP_BES_WEC,
+        "week": 7,
+        "weekStart": "2023-01-23",
+        "audi90gto": [
+        ],
+        "nissangtpzxt": [
+        ]
+    },
+    {
+        ...tracks.OKAYAMA,
         "week": 8,
-        "weekStart": "2023-10-31",
+        "weekStart": "2023-01-30",
         "audi90gto": [
-            {
-                "file": "23S4_iB_Imola_R2.sto",
-                "comment": "From Ian Brasfield: Set for 101-104F/39-41C"
-            },
-            {
-                "file": "imola-23S4-r1.sto",
-                "comment": "From Jamie: Based on Jouko's set from 22S1"
-            },
-            {
-                "file": "A90_23S4_Imola_Y_Gijsen_R.sto",
-                "comment": "From Yoeri: 3rd and 4th will hit the limiter. Don't worry about that."
-            },
-            {
-                "file": "A90_23S4_Imola_Y_Gijsen_Q.sto",
-                "comment": "From Yoeri - Qualifying setup"
-            },
-            {
-                "file": "maf_imola_23s4_r1b.sto",
-                "comment": "From Mickey"
-            },
-            {
-                "file": "maf_imola_23s4_q1b.sto",
-                "comment": "From Mickey - Qualifying setup"
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo23S4_Imola_GP_R61.sto",
-                "comment": "From Laust: My Wednesday sets for Imola"
-            },
-            {
-                "file": "Lgo23S4_Imola_GP_Q60.sto",
-                "comment": "From Laust - Qualifying setup"
-            },
-            {
-                "file": "GTP_Imola_JdelOlmoR.sto",
-                "comment": "From Javier"
-            },
-            {
-                "file": "Lgo22S4_MH_Imola_R_v1.3_R62.sto",
-                "comment": "From Laust (22S4)"
-            },
-            {
-                "file": "Lgo22S4_MH_Imola_R_v1.3_Q61.sto",
-                "comment": "From Laust - Qualifying setup (22S4)"
-            },
         ]
     },
     {
-        ...tracks.JEREZ_MOTO,
+        ...tracks.ARAGON_OUTER,
         "week": 9,
-        "weekStart": "2023-11-07",
+        "weekStart": "2023-02-06",
         "audi90gto": [
-            {
-                "file": "DWC_23S2_Jerez_R2.sto",
-            },
-            {
-                "file": "JdelOlmoAudiJerez23S2RACE.sto",
-            },
-            {
-                "file": "jerez-23S2-r1.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "F122_NGTP_Jerez_1-3.sto",
-            },
-            {
-                "file": "NGTP_JEREZ_R_ALEX.sto",
-            },
         ]
     },
     {
-        ...tracks.TWIN_RING_MOTEGI,
+        ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
         "week": 10,
-        "weekStart": "2023-11-14",
+        "weekStart": "2023-02-13",
         "audi90gto": [
-            {
-                "file": "motegi-23S1-r2.sto",
-                "comment": "From Jouko"
-            },
-            {
-                "file": "motegi-22S1-JL-q.sto",
-                "comment": "From Jouko - Qualifying setup"
-            },
-            {
-                "file": "motegi-23S1-r2.sto"
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo22S1_Motegi_MH_Silverstone_Int_R_v1_Q63.sto"
-            },
-            {
-                "file": "Lgo22S1_Motegi_MH_Silverstone_Int_R_v1_R63.sto"
-            },
         ]
     },
     {
-        ...tracks.DAYTONA_NASCAR_ROAD,
+        ...tracks.FUJI_NO_CHICANE,
         "week": 11,
-        "weekStart": "2023-11-21",
+        "weekStart": "2023-02-20",
         "audi90gto": [
-            {
-                "file": "DWC_23S1_Daytona_R2.sto",
-            },
-            {
-                "file": "KB_2022-S2_Daytona_Road_R-ih.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo22S2_Daytona_RC_AG_Indy_2W8_R10race.sto",
-            },
-            {
-                "file": "Lgo23S1_Daytona_RC_AG_Indy_2W8_R10.sto",
-            },
         ]
     },
     {
-        ...tracks.LONG_BEACH,
+        ...tracks.WATKINS_GLEN_CLASSIC,
         "week": 12,
-        "weekStart": "2023-11-28",
+        "weekStart": "2023-02-27",
         "audi90gto": [
-            {
-                "file": "andrius_sl_long_beach.sto",
-            },
-            {
-                "file": "Long Beach DT22 S3 R1.sto",
-            },
-            {
-                "file": "andrius_sl_long_beach.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo22S3_Long_Beach_MH_Hungaroring_R81.sto",
-            },
-            {
-                "file": "NGTP_LongBeach_1-2.sto",
-            },
         ]
-    }
+    },
 ]
 
 export default seasonSetups
