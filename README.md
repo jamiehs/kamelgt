@@ -1,6 +1,6 @@
-# Kamel GT
+# IMSA Vintage Series/Kamel GT
 
-This site is the official website of the Kamel GT community at the [VCR Discord server](https://discord.gg/6arPQbNMbt). We race the "low-participation" iRacing series by the same name and the purpose of this site is to reduce friction for newcomers to the series. This site hosts the community organized race times, car setups, tips, tricks, and past broadcasts.
+This site is the official website of the iRacing _IMSA Vintage Series_/_Kamel GT Championship_ community at the [VCR Discord server](https://discord.gg/6arPQbNMbt). We race the "low-participation" iRacing series by the same name and the purpose of this site is to reduce friction for newcomers to the series. This site hosts the community organized race times, car setups, tips, tricks, and past broadcasts.
 
 ## Development Info
 

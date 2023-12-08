@@ -120,15 +120,18 @@ class App extends React.Component<null, AppState> {
             <div className="App">
                 <header className="main-header">
                     <div className="header-section">
-                        <h1>Kamel GT Championship</h1>
-                        <h2>Nissan GTP ZX-T &amp; Audi 90 GTO</h2>
+                        <div className="logo"></div>
+                        <div className="header-text">
+                            <h1>IMSA Vintage Series</h1>
+                            <h2>Nissan GTP ZX-T &amp; Audi 90 GTO</h2>
+                        </div>
                     </div>
                 </header>
 
                 <div className="intro section">
                     <div className="intro-copy">
                         <p>
-                            Kamel GT is a &ldquo;low participation series&rdquo;. There is great racing in this series but you will need to show up at specific times. The time slots below are the most popular ones; if you want a time slot that isn&rsquo;t here, you will need to start the discussion and get people to&nbsp;show&nbsp;up.
+                            The IMSA Vintage Series (formerly Kamel GT) is a &ldquo;low participation series&rdquo; in iRacing. There is great racing in this series but you will need to show up at the specific times listed on this page. For other series see: <a target="_blank" rel="noreferrer" href="https://whenrace.com">https://whenrace.com</a>
                         </p>
                         <span className="discord inline-callout intro-callout">
                             <DiscordIcon /><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">Discord Server</a>
@@ -140,12 +143,12 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-12-03" expires="2023-12-11">
+                        <Announcement begins="2023-12-06" expires="2024-01-01">
                             <h3>
-                                It's week 13! What are you doing here?
+                                The <em>Kamel GT Championship</em> is now the <em>IMSA Vintage Series</em>!
                             </h3>
                             <p>
-                                There are no official races this week; maybe try out the HPD ARX 01c as it makes its return to the GT Challenge? Maybe you want to see <a href="/images/2024s1-preliminary-schedule.png" target="_blank" rel="noreferrer">the preliminary 2024S1 Kamel GT schedule</a>?
+                                Nothing else about the series has changed. iRacing has simply changed the name of the official series in iRacing&rsquo;s UI and systems to <b>IMSA&nbsp;Vintage&nbsp;Series</b>
                             </p>
                         </Announcement>
                     </div>
@@ -501,7 +504,7 @@ class App extends React.Component<null, AppState> {
                     </ul>
 
                     <p>
-                        Dave Cam on YouTube created <a href="https://www.youtube.com/watch?v=uTBmMDmNMUk" target="_blank" rel="noreferrer">a great video where he benchmarks the different clutch assists</a> in iRacing. tl;dw: anything other than 'None' or 'Anti-Stall Clutch' will make you a bit slower. Keep in mind that as a beginner in Kamel, survival is the goal, not speed!
+                        Dave Cam on YouTube created <a href="https://www.youtube.com/watch?v=uTBmMDmNMUk" target="_blank" rel="noreferrer">a great video where he benchmarks the different clutch assists</a> in iRacing. tl;dw: anything other than 'None' or 'Anti-Stall Clutch' will make you a bit slower. Keep in mind that as a beginner in this series, survival is the goal, not speed!
                     </p>
 
                     <h3>Upshifting</h3>

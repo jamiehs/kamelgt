@@ -169,10 +169,23 @@ body {
     overflow: hidden;
     background-color: var(--main-header-bg);
     border-bottom: solid 4px var(--weird-accent-color);
+
+    .logo {
+      width: 100px;
+      height: 50px;
+      overflow: hidden;
+      background-image: url('../public/images/imsa-vintage-logo.png');
+      background-size: cover;
+      margin-right: 12px;
+      flex: 0 0 100px;
+      image-rendering: crisp-edges;
+    }
     
     .header-section {
       margin: 0;
       padding: 0.45em;
+      display: flex;
+      align-items: center;
     
       @media (min-width: $small-width) {
         padding: 0;
@@ -192,7 +205,7 @@ body {
     }
     h1 {
       line-height: 1;
-      font-size: 5.3vw;
+      font-size: 4.6vw;
       margin-top: 0.4vw;
       margin-bottom: -0.2em;
       font-family: 'Dela Gothic One', sans-serif;
@@ -209,9 +222,9 @@ body {
       margin-bottom: 1em;
 
       h1 {
-        font-size: 30px;
-        margin-bottom: 0;
-        margin-top: 0.6em;
+        font-size: 20px;
+        margin-bottom: 0.2em;
+        margin-top: 1.2em;
       }
       h2 {
         margin-top: 0;
