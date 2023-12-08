@@ -136,6 +136,10 @@ export const MOSPORT = {
     title: "CTMP 'Mosport'",
     alternateTitle: "Canadian Tire Motorsport Park"
 }
+export const MUGELLO = {
+    title: "Mugello",
+    alternateTitle: "Autodromo Internazionale del Mugello - Grand Prix"
+}
 export const NORDSCHLEIFE_INDUSTRIEFAHRTEN = {
     title: "Nordschleife - Industriefahrten",
     alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten"
@@ -147,6 +151,10 @@ export const NURBURGRING_COMBINED_24H = {
 export const NURBURGRING_GP = {
     title: "Nürburgring GP",
     alternateTitle: "Nurburgring GP"
+}
+export const NURBURGRING_GP_BES_WEC = {
+    title: "Nürburgring GP BES/WEC",
+    alternateTitle: "Nurburgring GP BES/WEC"
 }
 export const NURBURGRING_GP_WITHOUT_ARENA = {
     title: "Nürburgring GP without arena",
@@ -231,6 +239,10 @@ export const VIR = {
 export const WATKINS_GLEN_BOOT = {
     title: "Watkins Glen - Boot",
     alternateTitle: "Watkins Glen International - Boot"
+}
+export const WATKINS_GLEN_CLASSIC = {
+    title: "Watkins Glen - Classic",
+    alternateTitle: "Watkins Glen International - Classic"
 }
 export const WATKINS_GLEN_CLASSIC_BOOT = {
     title: "Watkins Glen - Classic Boot",

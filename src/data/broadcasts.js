@@ -862,6 +862,67 @@ const broadcasts = [
                 ...tracks.LONG_BEACH,
                 url: "https://youtu.be/ynpkiUKqZdc?t=503"
             },
+            {
+                ...tracks.MUGELLO,
+                title: "The KameLotus Grand Prix of 79 at Mugello",
+                url: ""
+            },
+        ]
+    },
+    {
+        id: "24S1",
+        label: "2024 Season 1",
+        startDate: "2023-12-12",
+        endDate: "2024-02-27",
+        youTube: [
+            {
+                ...tracks.VIR,
+                url: ""
+            },
+            {
+                ...tracks.MONTREAL,
+                url: ""
+            },
+            {
+                ...tracks.MUGELLO,
+                url: ""
+            },
+            {
+                ...tracks.LE_MANS,
+                url: ""
+            },
+            {
+                ...tracks.BARBER,
+                url: ""
+            },
+            {
+                ...tracks.IMOLA,
+                url: ""
+            },
+            {
+                ...tracks.NURBURGRING_GP_BES_WEC,
+                url: ""
+            },
+            {
+                ...tracks.OKAYAMA,
+                url: ""
+            },
+            {
+                ...tracks.ARAGON_OUTER,
+                url: ""
+            },
+            {
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+                url: ""
+            },
+            {
+                ...tracks.FUJI_NO_CHICANE,
+                url: ""
+            },
+            {
+                ...tracks.WATKINS_GLEN_CLASSIC,
+                url: ""
+            },
         ]
     }
 ]
