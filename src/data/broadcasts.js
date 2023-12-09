@@ -709,7 +709,7 @@ const broadcasts = [
                 url: "https://youtu.be/MVY4NrQ6xwI?t=1342"
             },
             {
-                ...tracks.NURBURGRING_GP,
+                ...tracks.NURBURGRING_GP_BES_WEC,
                 url: "https://youtu.be/5TYJjykBfb0?t=961"
             },
             {
