@@ -2,7 +2,6 @@ import * as tracks from './track-names.js';
 const seasonSetups = [
     {
         ...tracks.VIR,
-        "week": 1,
         "weekStart": "2023-12-12",
         "audi90gto": [
             {
@@ -26,7 +25,6 @@ const seasonSetups = [
     },
     {
         ...tracks.MONTREAL,
-        "week": 2,
         "weekStart": "2023-12-19",
         "audi90gto": [
             {
@@ -47,7 +45,6 @@ const seasonSetups = [
     },
     {
         ...tracks.MUGELLO,
-        "week": 3,
         "weekStart": "2023-12-26",
         "audi90gto": [
             {
@@ -65,7 +62,6 @@ const seasonSetups = [
     },
     {
         ...tracks.LE_MANS,
-        "week": 4,
         "weekStart": "2024-01-02",
         "audi90gto": [
             {
@@ -80,7 +76,6 @@ const seasonSetups = [
     },
     {
         ...tracks.BARBER,
-        "week": 5,
         "weekStart": "2024-01-09",
         "audi90gto": [
             {
@@ -100,7 +95,6 @@ const seasonSetups = [
     },
     {
         ...tracks.IMOLA,
-        "week": 6,
         "weekStart": "2024-01-16",
         "audi90gto": [
         ],
@@ -109,7 +103,6 @@ const seasonSetups = [
     },
     {
         ...tracks.NURBURGRING_GP_BES_WEC,
-        "week": 7,
         "weekStart": "2024-01-23",
         "audi90gto": [
         ],
@@ -118,7 +111,6 @@ const seasonSetups = [
     },
     {
         ...tracks.OKAYAMA,
-        "week": 8,
         "weekStart": "2024-01-30",
         "audi90gto": [
         ],
@@ -127,7 +119,6 @@ const seasonSetups = [
     },
     {
         ...tracks.ARAGON_OUTER,
-        "week": 9,
         "weekStart": "2024-02-06",
         "audi90gto": [
         ],
@@ -136,7 +127,6 @@ const seasonSetups = [
     },
     {
         ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
-        "week": 10,
         "weekStart": "2024-02-13",
         "audi90gto": [
         ],
@@ -145,7 +135,6 @@ const seasonSetups = [
     },
     {
         ...tracks.FUJI_NO_CHICANE,
-        "week": 11,
         "weekStart": "2024-02-20",
         "audi90gto": [
         ],
@@ -154,7 +143,6 @@ const seasonSetups = [
     },
     {
         ...tracks.WATKINS_GLEN_CLASSIC,
-        "week": 12,
         "weekStart": "2024-02-27",
         "audi90gto": [
         ],

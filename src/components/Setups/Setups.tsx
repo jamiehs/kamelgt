@@ -17,8 +17,9 @@ function Setups(props: SetupsProps) {
     return (
         <div className="Setups">
             <div className="rounds-grid">
-                {sortedRounds.map((round) => {
+                {sortedRounds.map((round, index) => {
                     let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00')
+                    let weekNumber = index + 1
 
                     // +7 days is for Monday/Tuesday rollover
                     // +5 days is for the week to end after the broadcast
@@ -31,7 +32,7 @@ function Setups(props: SetupsProps) {
                         outputRoundsCount++
                         return (
                             <div className="round-container" key={round.title}>
-                                <h3><span className="week-prefix">Week {round.week}: </span>{round.title}</h3>
+                                <h3><span className="week-prefix">Week {weekNumber}: </span>{round.title}</h3>
                                 {setupsExist ? (
                                     <div className="cars-grid">
                                         {round.nissangtpzxt.length > 0 && (
