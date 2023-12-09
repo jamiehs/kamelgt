@@ -50,14 +50,23 @@ const seasonSetups = [
         "week": 3,
         "weekStart": "2023-12-26",
         "audi90gto": [
+            {
+                "file": "maf_mugello_23s4_r1.sto"
+            },
+            {
+                "file": "maf_mugello_23s4_q1.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "GTP_Mugello_JdelOlmoR.sto"
+            },
         ]
     },
     {
         ...tracks.LE_MANS,
         "week": 4,
-        "weekStart": "2023-01-02",
+        "weekStart": "2024-01-02",
         "audi90gto": [
             {
                 "file": "le-mans-22S3-r1.sto"
@@ -72,16 +81,27 @@ const seasonSetups = [
     {
         ...tracks.BARBER,
         "week": 5,
-        "weekStart": "2023-01-09",
+        "weekStart": "2024-01-09",
         "audi90gto": [
+            {
+                "file": "barber-21S3-q.sto"
+            },
+            {
+                "file": "barber-21S3-r4.sto"
+            },
+
         ],
         "nissangtpzxt": [
+            {
+                "file": "MH_Barber_R_v1.sto",
+                "comment": "Quite old; possible it may fail tech"
+            },
         ]
     },
     {
         ...tracks.IMOLA,
         "week": 6,
-        "weekStart": "2023-01-16",
+        "weekStart": "2024-01-16",
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -90,7 +110,7 @@ const seasonSetups = [
     {
         ...tracks.NURBURGRING_GP_BES_WEC,
         "week": 7,
-        "weekStart": "2023-01-23",
+        "weekStart": "2024-01-23",
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -99,7 +119,7 @@ const seasonSetups = [
     {
         ...tracks.OKAYAMA,
         "week": 8,
-        "weekStart": "2023-01-30",
+        "weekStart": "2024-01-30",
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -108,7 +128,7 @@ const seasonSetups = [
     {
         ...tracks.ARAGON_OUTER,
         "week": 9,
-        "weekStart": "2023-02-06",
+        "weekStart": "2024-02-06",
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -117,7 +137,7 @@ const seasonSetups = [
     {
         ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
         "week": 10,
-        "weekStart": "2023-02-13",
+        "weekStart": "2024-02-13",
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -126,7 +146,7 @@ const seasonSetups = [
     {
         ...tracks.FUJI_NO_CHICANE,
         "week": 11,
-        "weekStart": "2023-02-20",
+        "weekStart": "2024-02-20",
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -135,7 +155,7 @@ const seasonSetups = [
     {
         ...tracks.WATKINS_GLEN_CLASSIC,
         "week": 12,
-        "weekStart": "2023-02-27",
+        "weekStart": "2024-02-27",
         "audi90gto": [
         ],
         "nissangtpzxt": [
