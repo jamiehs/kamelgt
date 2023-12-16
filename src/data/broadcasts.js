@@ -877,7 +877,7 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.VIR,
-                url: ""
+                url: "https://youtu.be/lBgm2RtJR4w?t=895"
             },
             {
                 ...tracks.MONTREAL,
