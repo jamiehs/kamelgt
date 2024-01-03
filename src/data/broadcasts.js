@@ -885,7 +885,7 @@ const broadcasts = [
             },
             {
                 ...tracks.MUGELLO,
-                url: ""
+                url: "https://youtu.be/3Ub3_VMoecg?t=480"
             },
             {
                 ...tracks.LE_MANS,
