@@ -93,7 +93,12 @@ const seasonSetups = [
             {
                 "file": "maf_barber_24s1_r2.sto"
             },
-
+            {
+                "file": "barber-24S1-q.sto"
+            },
+            {
+                "file": "barber-24S1-r3.sto"
+            },
         ],
         "nissangtpzxt": [
             {
