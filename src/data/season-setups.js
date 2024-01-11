@@ -79,17 +79,34 @@ const seasonSetups = [
         "weekStart": "2024-01-09",
         "audi90gto": [
             {
-                "file": "barber-21S3-q.sto"
+                "file": "A90_Barber_24S1_Y_Gijsen_R2.sto"
             },
             {
-                "file": "barber-21S3-r4.sto"
+                "file": "Barber_BR-GTO_24s1_Q_v3.sto"
+            },
+            {
+                "file": "Barber_BR-GTO_24s1_race_v3.sto"
+            },
+            {
+                "file": "maf_barber_24s1_q2.sto"
+            },
+            {
+                "file": "maf_barber_24s1_r2.sto"
             },
 
         ],
         "nissangtpzxt": [
             {
-                "file": "MH_Barber_R_v1.sto",
-                "comment": "Quite old; possible it may fail tech"
+                "file": "BL_Barber_Q7.4.sto",
+            },
+            {
+                "file": "BL_Barber_R7.4.sto",
+            },
+            {
+                "file": "Lgo24S1_Barber_Full_Q70.sto",
+            },
+            {
+                "file": "Lgo24S1_Barber_Full_R70.sto",
             },
         ]
     },
