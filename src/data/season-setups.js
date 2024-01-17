@@ -63,6 +63,10 @@ const seasonSetups = [
     {
         ...tracks.LE_MANS,
         "weekStart": "2024-01-02",
+        "notes": [
+            "~60 minute endurance round (18 laps)",
+            "Pit stop required"
+        ],
         "audi90gto": [
             {
                 "file": "le-mans-22S3-r1.sto"
@@ -186,6 +190,10 @@ const seasonSetups = [
     {
         ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
         "weekStart": "2024-02-13",
+        "notes": [
+            "60 minute endurance round",
+            "Pit stop required"
+        ],
         "audi90gto": [
         ],
         "nissangtpzxt": [

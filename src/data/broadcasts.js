@@ -893,7 +893,7 @@ const broadcasts = [
             },
             {
                 ...tracks.BARBER,
-                url: ""
+                url: "https://youtu.be/gvAvNWGV62g?t=757"
             },
             {
                 ...tracks.IMOLA,

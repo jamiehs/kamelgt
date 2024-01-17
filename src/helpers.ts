@@ -63,7 +63,7 @@ const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number 
         let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + rolloverDay));
         
         currentWeek = {
-            week: round.week,
+            week: i+1,
             label: round.title,
             notes: round.notes,
         }
