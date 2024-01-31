@@ -901,7 +901,7 @@ const broadcasts = [
             },
             {
                 ...tracks.NURBURGRING_GP_BES_WEC,
-                url: ""
+                url: "https://youtu.be/n2IO6qliGh4?t=925"
             },
             {
                 ...tracks.OKAYAMA,
