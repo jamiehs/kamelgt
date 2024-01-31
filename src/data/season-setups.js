@@ -175,16 +175,49 @@ const seasonSetups = [
         ...tracks.OKAYAMA,
         "weekStart": "2024-01-30",
         "audi90gto": [
+            {
+                "file": "maf_okayama_24s1_q2.sto"
+            },
+            {
+                "file": "maf_okayama_24s1_r2.sto"
+            },
+            {
+                "file": "Okayama_BR-GTO_race_v1.2.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "GTP_Okayama_JdelOlmoR.sto"
+            },
+            {
+                "file": "NGTP_Okayama_1-8.sto"
+            },
         ]
     },
     {
         ...tracks.ARAGON_OUTER,
         "weekStart": "2024-02-06",
         "audi90gto": [
+            {
+                "file": "A90_23S3_Aragon_Y_Gijsen_R.sto"
+            },
+            {
+                "file": "aragon-23S3-r3.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "BL_Aragon_Outer_R51.sto"
+            },
+            {
+                "file": "Lgo23S3_Aragon_Outer_Q51.sto"
+            },
+            {
+                "file": "Lgo23S3_Aragon_Outer_R51.sto"
+            },
+            {
+                "file": "Lgo23S3_Aragon_Outer_R612.sto"
+            },
         ]
     },
     {
