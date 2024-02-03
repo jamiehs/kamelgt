@@ -905,7 +905,7 @@ const broadcasts = [
             },
             {
                 ...tracks.OKAYAMA,
-                url: ""
+                url: "https://youtu.be/BJ9A9SStJoI?t=864"
             },
             {
                 ...tracks.ARAGON_OUTER,
