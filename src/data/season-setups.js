@@ -228,24 +228,84 @@ const seasonSetups = [
             "Pit stop required"
         ],
         "audi90gto": [
+            {
+                "file": "KB_2022-S3_Silverstone_Historic_R_v2.sto"
+            },
+            {
+                "file": "A90_-_22S3_-_Silverstone_H_-_Y_Gijsen_-_220719_-_R.sto"
+            },
+            {
+                "file": "silverstone-2008-historic-22S3-r1.sto"
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S1_HockGP_MH_Silverstone_Int_R_v1_Q61.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "Lgo22S1_HockGP_MH_Silverstone_Int_R_v1_R61.sto",
+                "comment": "Race setup"
+            },
         ]
     },
     {
         ...tracks.FUJI_NO_CHICANE,
         "weekStart": "2024-02-20",
         "audi90gto": [
+            {
+                "file": "Fuji_S3_2022_1.2_Race.sto",
+            },
+            {
+                "file": "A90 - 22S4 - Fuji - J Del Olmo - R.sto",
+            },
+            {
+                "file": "A90 - 22S4 - Fuji - Y Gijsen - 221005 - Q.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "A90 - 22S4 - Fuji - Y Gijsen - 221005 - R.sto",
+                "comment": "Race setup"
+            },
+            {
+                "file": "fuji-22-S3-r-01.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "fuji-22S3-r-NGTP_Fuji_1-3.sto",
+            },
+            {
+                "file": "Lgo22S3_Fuji_NoCh_R41.sto",
+            },
         ]
     },
     {
         ...tracks.WATKINS_GLEN_CLASSIC,
         "weekStart": "2024-02-27",
+        "notes": [
+            "We have not raced this layout recently or ever. Setups are for Classic Boot!"
+        ],
         "audi90gto": [
+            {
+                "file": "watkins-classic-boot-23S3-q.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "watkins-classic-boot-23S3-r2.sto",
+                "comment": "Race setup"
+            },
+            {
+                "file": "watkinsintlboot_2022_S3_R.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Watkins_Glen_CB_R_v1.2.sto",
+            },
+            {
+                "file": "watkins-22S3-AG_WGI_5W2.sto",
+            },
         ]
     },
 ]
