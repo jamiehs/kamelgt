@@ -909,11 +909,11 @@ const broadcasts = [
             },
             {
                 ...tracks.ARAGON_OUTER,
-                url: ""
+                url: "https://youtu.be/CBItRrGPhwI?t=1106"
             },
             {
                 ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
-                url: ""
+                url: "https://youtu.be/WX80R3aO7Cw?t=1038"
             },
             {
                 ...tracks.FUJI_NO_CHICANE,
