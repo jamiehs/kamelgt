@@ -2,6 +2,10 @@ export const ARAGON_OUTER = {
     title: "Aragón - Outer",
     alternateTitle: "MotorLand Aragon - Outer"
 }
+export const ALGARVE = {
+    title: "Algarve International Circuit - Grand Prix",
+    alternateTitle: "Portimão Circuit - Grand Prix"
+}
 export const BARBER = {
     title: "Barber Motorsports Park"
 }
@@ -116,6 +120,9 @@ export const MID_OHIO = {
 export const MID_OHIO_CHICANE = {
     title: "Mid-Ohio - Chicane"
 }
+export const MISANO = {
+    title: "Misano World Circuit Marco Simoncelli - Grand Prix"
+}
 export const MONTREAL = {
     title: "Montreal",
     alternateTitle: "Circuit Gilles Villeneuve"
@@ -147,6 +154,10 @@ export const NORDSCHLEIFE_INDUSTRIEFAHRTEN = {
 export const NURBURGRING_COMBINED_24H = {
     title: "Nürburgring Combined - 24H",
     alternateTitle: "Nurburgring Combined - 24H"
+}
+export const NURBURGRING_COMBINED_GESAMTSTRECKE_VLN = {
+    title: "Nürburgring Combined - Gesamtstrecke VLN",
+    alternateTitle: "Nurburgring Combined - Gesamtstrecke VLN"
 }
 export const NURBURGRING_GP = {
     title: "Nürburgring GP",
@@ -206,6 +217,9 @@ export const SONOMA = {
 }
 export const SONOMA_CUP = {
     title: "Sonoma - Cup"
+}
+export const SONOMA_NASCAR_LONG = {
+    title: "Sonoma - NASCAR Long"
 }
 export const SPA_CLASSIC_PITS = {
     title: "Spa",
