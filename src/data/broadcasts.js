@@ -917,11 +917,11 @@ const broadcasts = [
             },
             {
                 ...tracks.FUJI_NO_CHICANE,
-                url: ""
+                url: "https://youtu.be/NAUvB5ibR0A?t=1136"
             },
             {
                 ...tracks.WATKINS_GLEN_CLASSIC,
-                url: ""
+                url: "https://youtu.be/vRJUkEMfRws?t=987"
             },
         ]
     }
