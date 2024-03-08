@@ -64,7 +64,7 @@ function Setups(props: SetupsProps) {
                                     </div>
                                 ) : (
                                     <div className="no-setups">
-                                        There are no recent setups for this track in the archive yet. Check the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server's</a> <code>#audi-setups</code> & <code>#nissan-setups</code> channels.
+                                        Check the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server's</a> <code>#audi-setups</code> & <code>#nissan-setups</code> channels.
                                     </div>
                                 )}
                             </div>
