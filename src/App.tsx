@@ -187,7 +187,7 @@ class App extends React.Component<null, AppState> {
                                 <Timeslot
                                     label="Midweek Americas"
                                     dayIndex={4}
-                                    time="03:00"
+                                    time="01:00"
                                     entries={31}
                                     gtoSof={1947}
                                     gtpSof={2098}
