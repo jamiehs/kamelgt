@@ -924,6 +924,62 @@ const broadcasts = [
                 url: "https://youtu.be/vRJUkEMfRws?t=987"
             },
         ]
+    },
+    {
+        id: "24S2",
+        label: "2024 Season 2",
+        startDate: "2024-03-12",
+        endDate: "2024-05-28",
+        youTube: [
+            {
+                ...tracks.BATHURST,
+                url: "https://youtu.be/FlFicL9um-w?t=975"
+            },
+            {
+                ...tracks.COTA,
+                url: ""
+            },
+            {
+                ...tracks.ALGARVE,
+                url: ""
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: ""
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: ""
+            },
+            {
+                ...tracks.SONOMA_NASCAR_LONG,
+                url: ""
+            },
+            {
+                ...tracks.NURBURGRING_COMBINED_GESAMTSTRECKE_VLN,
+                url: ""
+            },
+            {
+                ...tracks.INTERLAGOS,
+                url: ""
+            },
+            {
+                ...tracks.MISANO,
+                url: ""
+            },
+            {
+                ...tracks.MONZA,
+                url: ""
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: ""
+            },
+            {
+                ...tracks.BELLE_ISLE,
+                url: ""
+            },
+        ]
     }
 ]
 
