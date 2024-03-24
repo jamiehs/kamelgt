@@ -937,7 +937,7 @@ const broadcasts = [
             },
             {
                 ...tracks.COTA,
-                url: ""
+                url: "https://youtu.be/JRYTBwxr-3Y?t=1083"
             },
             {
                 ...tracks.ALGARVE,
