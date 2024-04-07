@@ -941,11 +941,11 @@ const broadcasts = [
             },
             {
                 ...tracks.ALGARVE,
-                url: ""
+                url: "https://youtu.be/PeKg_y8U2ik?t=1061"
             },
             {
                 ...tracks.SPA_CLASSIC_PITS,
-                url: ""
+                url: "https://youtu.be/4pdpq_IMvOQ?t=973"
             },
             {
                 ...tracks.ROAD_AMERICA,
