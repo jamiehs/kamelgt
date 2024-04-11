@@ -43,8 +43,29 @@ const seasonSetups = [
         ],
         "weekStart": "2024-04-09",
         "audi90gto": [
+            {
+                "file": "A90_RoadAmerica_24S2_Y_Gijsen_R60.sto",
+            },
+            {
+                "file": "maf_roadam_24s2_q2.sto",
+            },
+            {
+                "file": "maf_roadam_24s2_r3.sto",
+            },
+            {
+                "file": "maf_RA500_24s2_R.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "GTP_RoadAmerica_JdelOlmoR.sto",
+            },
+            {
+                "file": "SDC_23S2_GTP_RAMERICA_QUALYv0.85.sto",
+            },
+            {
+                "file": "SDC_23S2_GTP_RAMERICA_RACEv0.85.sto",
+            },
         ]
     },
     {

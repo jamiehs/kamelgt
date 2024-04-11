@@ -143,12 +143,15 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2023-12-06" expires="2024-01-01">
+                        <Announcement begins="2024-04-07" expires="2024-04-14">
                             <h3>
-                                The <em>Kamel GT Championship</em> is now the <em>IMSA Vintage Series</em>!
+                                This week is the Road America 500!
                             </h3>
                             <p>
-                                Nothing else about the series has changed. iRacing has simply changed the name of the official series in iRacing&rsquo;s UI and systems to <b>IMSA&nbsp;Vintage&nbsp;Series</b>
+                                The 16:00 GMT timeslot (top split) will be broadcast by GSRC. Check the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server (#ra500 channel)</a></span> for more details.
+                            </p>
+                            <p>
+                                <a href="#setups">A few setups for the Audi & Nissan</a> are posted below.
                             </p>
                         </Announcement>
                     </div>
@@ -221,15 +224,14 @@ class App extends React.Component<null, AppState> {
                                     </p>
                                 </Timeslot>
                                 <Timeslot
-                                    label="📺 Broadcast Race"
+                                    label="Road America 500"
                                     dayIndex={6}
-                                    time="17:00"
-                                    entries={68}
-                                    gtoSof={3017}
-                                    gtpSof={3635}
+                                    time="16:00"
+                                    highlight
+                                    regularity="Special Event"
                                 >
                                     <p>
-                                        <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
+                                        <b>Only for this week!</b> 500 miles of Road America in the 1989 "Kamel GT" cars!
                                     </p>
                                 </Timeslot>
                                 <Timeslot
@@ -239,7 +241,7 @@ class App extends React.Component<null, AppState> {
                                     entries={10}
                                     gtoSof={2265}
                                     gtpSof={2507}
-                                    regularity="new since 23S3"
+                                    regularity="New Since 23S3"
                                 >
                                     <p>
                                         3pm in the west & 5pm in the east of Australia; 8pm in New Zealand. This is also morning for much of Europe. 

@@ -35,11 +35,12 @@ interface TimeslotProps {
     label: string
     dayIndex: number
     time: string
-    entries: number
-    gtoSof: number
-    gtpSof: number
+    entries?: number
+    gtoSof?: number
+    gtpSof?: number
     children: JSX.Element
     regularity?: string
+    highlight?: boolean
 }
 interface TimeslotState {
     timestamp: number
@@ -68,6 +69,7 @@ class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
             gtpSof,
             children,
             regularity,
+            highlight,
         } = this.props
     
         const tz = moment.tz.guess()
@@ -77,7 +79,7 @@ class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
         const avgSof = Math.round((gtoSof + gtpSof) / 2)
 
         return (
-            <div className="Timeslot">
+            <div className="Timeslot" data-highlight={highlight}>
                 <h3 className="label">{wrapEmojiAtStart(label)}</h3>
                 {regularity && (
                     <div className="official-likelihood">

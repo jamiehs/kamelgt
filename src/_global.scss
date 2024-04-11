@@ -10,6 +10,7 @@
     --text-1: #fff;
     --text-3: #d7d7d7;
     --text-9: #3c3c3c;
+    --highlight-glow: #e8de53;
 
     --positive-action: rgb(51 132 10);
     --shadow-callout: rgb(120 104 238);
@@ -23,7 +24,10 @@
     --timeslot-1: #e2f3f3;
     --timeslot-3: #bcd8e5;
     --timeslot-4: #adcdcd;
+    --timeslot-6: #507a8d;
     --timeslot-7: #3d606f;
+    --timeslot-highlight-header: var(--timeslot-6);
+    --timeslot-highlight-header-text: var(--timeslots-header-text);
 
     --link-color: #693b30;
     --section-header-bg: #3c3c3c;
@@ -51,6 +55,7 @@
         --text-1: #3c3c3c;
         --text-3: #bdbdbd;
         --text-9: #cdcdcd;
+        --highlight-glow: #5eb5a9;
 
         --positive-action: rgb(92 173 27);
         --shadow-callout: rgb(120 104 238);
@@ -64,7 +69,10 @@
         --timeslot-1: #262929;
         --timeslot-3: #2f2f2f;
         --timeslot-4: #1a1a1a;
+        --timeslot-6: #335867;
         --timeslot-7: #284755;
+        --timeslot-highlight-header: var(--timeslot-6);
+        --timeslot-highlight-header-text: var(--timeslots-header-text);
     
         --link-color: #4d99b9;
         --section-header-bg: #1c1c1c;

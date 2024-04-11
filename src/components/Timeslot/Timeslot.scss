@@ -4,9 +4,19 @@
     color: var(--timeslots-text);
     display: block;
     background-color: var(--timeslot-1);
+    position: relative;
     padding: 0 1.3em;
     overflow: hidden;
     border-radius: 4px;
+
+    &[data-highlight="true"] {
+        z-index: 50;
+        box-shadow: var(--highlight-glow) 0 0 3em, var(--highlight-glow) 0 0 0 1px;
+        h3.label {
+            background: var(--timeslot-highlight-header);
+            color: var(--timeslot-highlight-header-text);
+        }
+    }
 
     @media (min-width: $medium-width) {
         padding: 0 .66em;
