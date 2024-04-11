@@ -714,7 +714,7 @@ const broadcasts = [
             },
             {
                 ...tracks.ROAD_AMERICA,
-                title: "Road America 500 mi",
+                title: "Road America 500",
                 url: "https://youtu.be/xIKDpzoqDcY?t=610"
             },
             {
@@ -949,6 +949,7 @@ const broadcasts = [
             },
             {
                 ...tracks.ROAD_AMERICA,
+                title: "Road America 500",
                 url: ""
             },
             {
