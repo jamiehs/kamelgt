@@ -148,7 +148,7 @@ class App extends React.Component<null, AppState> {
                                 This week is the Road America 500!
                             </h3>
                             <p>
-                                The 16:00 GMT timeslot (top split) will be broadcast by GSRC. Check the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server (#ra500 channel)</a></span> for more details.
+                                The 16:00 GMT timeslot (top split) will be broadcast by GSRC. Check the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server (#ra500 channel)</a></span> for more details. You can also check <a href="https://forums.iracing.com/discussion/59686/2024-road-america-500-powered-by-simucube#latest" target="_blank" rel="noreferrer">the RA500 iRacing Forum post</a> for official info.
                             </p>
                             <p>
                                 <a href="#setups">A few setups for the Audi & Nissan</a> are posted below.
