@@ -224,14 +224,15 @@ class App extends React.Component<null, AppState> {
                                     </p>
                                 </Timeslot>
                                 <Timeslot
-                                    label="Road America 500"
+                                    label="📺 Broadcast Race"
                                     dayIndex={6}
-                                    time="16:00"
-                                    highlight
-                                    regularity="Special Event"
+                                    time="17:00"
+                                    entries={68}
+                                    gtoSof={3017}
+                                    gtpSof={3635}
                                 >
                                     <p>
-                                        <b>Only for this week!</b> 500 miles of Road America in the 1989 "Kamel GT" cars!
+                                        <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
                                     </p>
                                 </Timeslot>
                                 <Timeslot
