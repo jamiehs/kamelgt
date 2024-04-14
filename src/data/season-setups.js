@@ -72,16 +72,77 @@ const seasonSetups = [
         ...tracks.SONOMA_NASCAR_LONG,
         "weekStart": "2024-04-16",
         "audi90gto": [
+            {
+                "file": "maf_sonoma_23s4_q1.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "maf_sonoma_23s4_q1a.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "maf_sonoma_23s4_r1.sto",
+            },
+            {
+                "file": "sonoma-22S3-Yoeri_Gijsen_-_220824_-_R.sto",
+            },
+            {
+                "file": "sonoma-23S4-r1.sto",
+            },
+            {
+                "file": "sonoma-22S3-2.3.sto",
+            },
+            {
+                "file": "sonoma-22S3-r1.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "GTP_Sonoma_JdelOlmoQ.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "GTP_Sonoma_JdelOlmoR.sto",
+            },
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_Q66.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R61.sto",
+            },
+            {
+                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R66.sto",
+            },
+            {
+                "file": "Lgo23S4_Sonoma_Cup_Q70.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo23S4_Sonoma_Cup_R71.sto",
+            },
         ]
     },
     {
         ...tracks.NURBURGRING_COMBINED_GESAMTSTRECKE_VLN,
         "weekStart": "2024-04-23",
         "audi90gto": [
+            {
+                "file": "A90_23S3_Nordschleife24h_Y_Gijsen_Q.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "A90_23S3_Nordschleife24h_Y_Gijsen_R.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo23S1_Nords_Combined_24h_Q64.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo23S1_Nords_Combined_24h_R64.sto",
+            },
         ]
     },
     {
