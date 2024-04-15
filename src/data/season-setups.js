@@ -149,8 +149,21 @@ const seasonSetups = [
         ...tracks.INTERLAGOS,
         "weekStart": "2024-04-30",
         "audi90gto": [
+            {
+                "file": "A90_23S2_Interlagos_Y_Gijsen_R.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "F122_NGTP_Interlagos_1-4.sto",
+            },
+            {
+                "file": "Lgo22S2_Interlagos_MH_Silverstone_Int_R_Q63.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo22S2_Interlagos_MH_Silverstone_Int_R_R63.sto",
+            },
         ]
     },
     {
@@ -169,24 +182,84 @@ const seasonSetups = [
         ],
         "weekStart": "2024-05-14",
         "audi90gto": [
+            {
+                "file": "A90_23S2_Monza_Y_Gijsen_Q3.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "A90_23S2_Monza_Y_Gijsen_R3.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S1_MH_Monza_R_v1.1_Q10.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo23S2_MH_Monza_R_v1.1_R10.sto",
+            },
         ]
     },
     {
         ...tracks.ROAD_ATLANTA,
         "weekStart": "2024-05-21",
         "audi90gto": [
+            {
+                "file": "KB 2022-S4 Road Atlanta.sto",
+            },
+            {
+                "file": "2022S4W12_Road_Atlanta_R1.sto",
+            },
+            {
+                "file": "A90 - 22S4 - RoadAtlanta - K Bouafia - R.sto",
+            },
+            {
+                "file": "A90 - 22S4 - RoadAtlanta - Y Gijsen - 221129 - Q.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "A90 - 22S4 - RoadAtlanta - Y Gijsen - 221129 - R.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S4_Road_Atlanta_MH_Silverstone_Int_Q61.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo22S4_Road_Atlanta_MH_Silverstone_Int_R61.sto",
+            },
+            {
+                "file": "NGTP_RoAtlanta_1-1.sto",
+            },
         ]
     },
     {
         ...tracks.BELLE_ISLE,
         "weekStart": "2024-05-28",
         "audi90gto": [
+            {
+                "file": "A90_23S2_Detroit_Y_Gijsen_Q.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "A90_23S2_Detroit_Y_Gijsen_R.sto",
+            },
+            {
+                "file": "JdelOlmoBelleIsle22S4C.sto",
+            },
+            {
+                "file": "KB_2022-S4_Belle_Isle_R.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo22S4_Detroit_Q85.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo23S2_Detroit_R80.sto",
+            },
         ]
     },
 ]
