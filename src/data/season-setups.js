@@ -73,18 +73,21 @@ const seasonSetups = [
         "weekStart": "2024-04-16",
         "audi90gto": [
             {
-                "file": "maf_sonoma_23s4_q1.sto",
+                "file": "maf_sonoma_24s2_q4.sto",
                 "comment": "qualifying setup",
             },
             {
-                "file": "maf_sonoma_23s4_q1a.sto",
+                "file": "maf_sonoma_24s2_r4.sto",
+            },
+            {
+                "file": "A90_Sonoma_24S2_Y_Gijsen_Q.sto",
                 "comment": "qualifying setup",
             },
             {
-                "file": "maf_sonoma_23s4_r1.sto",
+                "file": "A90_Sonoma_24S2_Y_Gijsen_R.sto",
             },
             {
-                "file": "sonoma-22S3-Yoeri_Gijsen_-_220824_-_R.sto",
+                "file": "A90_Sliumba_24S2_sonoma_R1.sto",
             },
             {
                 "file": "sonoma-23S4-r1.sto",
@@ -97,6 +100,9 @@ const seasonSetups = [
             },
         ],
         "nissangtpzxt": [
+            {
+                "file": "SONOMA_NGTP_R_ALEX.sto",
+            },
             {
                 "file": "GTP_Sonoma_JdelOlmoQ.sto",
                 "comment": "qualifying setup",
