@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
       - name: Checkout
@@ -33,7 +33,7 @@ jobs:
           zip -rj build/nissangtpzxt-setups.zip public/setups/nissangtpzxt/*
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
         with:
           branch: gh-pages
           folder: build
