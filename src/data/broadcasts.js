@@ -954,7 +954,7 @@ const broadcasts = [
             },
             {
                 ...tracks.SONOMA_NASCAR_LONG,
-                url: ""
+                url: "https://youtu.be/Y9L4ubKFXWw?t=881"
             },
             {
                 ...tracks.NURBURGRING_COMBINED_GESAMTSTRECKE_VLN,
