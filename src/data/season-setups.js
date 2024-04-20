@@ -73,11 +73,11 @@ const seasonSetups = [
         "weekStart": "2024-04-16",
         "audi90gto": [
             {
-                "file": "maf_sonoma_24s2_q4.sto",
+                "file": "maf_sonoma_24s2_q5.sto",
                 "comment": "qualifying setup",
             },
             {
-                "file": "maf_sonoma_24s2_r4.sto",
+                "file": "maf_sonoma_24s2_r5.sto",
             },
             {
                 "file": "A90_Sonoma_24S2_Y_Gijsen_Q.sto",
@@ -115,10 +115,11 @@ const seasonSetups = [
                 "comment": "qualifying setup",
             },
             {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R61.sto",
+                "file": "public/setups/nissangtpzxt/Lgo24S2_Sonoma_Cup_Q70.sto",
+                "comment": "qualifying setup",
             },
             {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_R66.sto",
+                "file": "public/setups/nissangtpzxt/Lgo24S2_Sonoma_Cup_R70.sto",
             },
             {
                 "file": "Lgo23S4_Sonoma_Cup_Q70.sto",
