@@ -5,16 +5,19 @@
 
     // Start of light/standard theme
     --background-1: #fff;
+    --background-2: #dedede;
+    --background-3: #b6b6b6;
     --background-9: #3c3c3c;
     --text-0: #fff;
     --text-1: #fff;
     --text-3: #d7d7d7;
     --text-9: #3c3c3c;
+    --text-10: #202020;
     --highlight-glow: #e8de53;
-
+    
     --positive-action: rgb(51 132 10);
     --shadow-callout: rgb(120 104 238);
-
+    
     --timeslots-bg: #3c3c3c;
     --timeslots-header-text: #fff;
     
@@ -28,7 +31,7 @@
     --timeslot-7: #3d606f;
     --timeslot-highlight-header: var(--timeslot-6);
     --timeslot-highlight-header-text: var(--timeslots-header-text);
-
+    
     --link-color: #693b30;
     --section-header-bg: #3c3c3c;
     --section-header-text: #fff;
@@ -36,27 +39,30 @@
     --highlight-quote-bg: #f5f0e1;
     --main-header-text: #dbdbdb;
     --main-header-bg: #0b0b37;
-
+    
     --weird-accent-color: #693b30;
-
+    
     --video-thumb-vignette: rgb(195 158 103 / 0.3);
     --video-thumb-text-overlay: #7b7b7b;
-
+    
     --car-first-class: #ffd65a;
     --car-second-class: #33cfff;
     --car-class-text: var(--text-9);
-
+    
     
     // Start of dark theme
     @media (prefers-color-scheme: dark) {
         --background-1: #212121;
+        --background-2: #292929;    
+        --background-3: #3a3a3a;
         --background-9: #fff;
         --text-0: #313131;
         --text-1: #3c3c3c;
         --text-3: #bdbdbd;
         --text-9: #cdcdcd;
+        --text-10: #e9e9e9;
         --highlight-glow: #5eb5a9;
-
+        
         --positive-action: rgb(92 173 27);
         --shadow-callout: rgb(120 104 238);
     
@@ -82,7 +88,7 @@
         --main-header-text: #dbdbdb;
         --main-header-bg: #0b0b37;
     
-        --weird-accent-color: #373737;
+        --weird-accent-color: #346b82;;
     
         --video-thumb-vignette: rgb(18 23 57 / 30%);
         --video-thumb-text-overlay: #777777;

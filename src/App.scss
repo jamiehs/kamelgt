@@ -272,17 +272,17 @@ body {
       }
 
       select.broadcast-season {
-        background: var(--background-9);
+        // background: var(--background-2);
+        color: var(--text-10);
         @media (prefers-color-scheme: dark) {
           color: var(--background-9);
-          background: var(--background-1);
+          background: var(--always-black);
         }
-        color: var(--text-1);
         padding: 0.3em;
         border-radius: 5px;
-        border: solid 1px transparent;
+        border: solid 1px var(--weird-accent-color);
         font-weight: 600;
-        font-size: 0.85rem;
+        font-size: 1.2rem;
         width: 100%;
         @media (min-width: $small-width) {
           font-size: 1rem;
@@ -294,10 +294,11 @@ body {
     .broadcast-searcher {
       input {
         font-size: 1rem;
+        line-height: 1.1;
         border-radius: var(--base-border-radius);
         border: solid 1px var(--weird-accent-color);
         box-shadow: 0 0 0 1px transparent;
-        padding: 0.25em;
+        padding: 0.6em 0.8em;
         width: 100%;
         color: var(--text-9);
         background-color: var(--background-1);
