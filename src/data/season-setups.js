@@ -135,6 +135,12 @@ const seasonSetups = [
         "weekStart": "2024-04-23",
         "audi90gto": [
             {
+                "file": "maf_nords_24s2_r1.sto",
+            },
+            {
+                "file": "nords-24S2-r1.sto",
+            },
+            {
                 "file": "A90_23S3_Nordschleife24h_Y_Gijsen_Q.sto",
                 "comment": "qualifying setup",
             },
