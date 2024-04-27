@@ -958,7 +958,7 @@ const broadcasts = [
             },
             {
                 ...tracks.NURBURGRING_COMBINED_GESAMTSTRECKE_VLN,
-                url: ""
+                url: "https://youtu.be/l2QODB71rC8?t=1099"
             },
             {
                 ...tracks.INTERLAGOS,
