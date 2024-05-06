@@ -14,10 +14,18 @@
     }
 
     .cars-grid {
+        font-size: 80%;
         @media (min-width: $medium-width) {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             column-gap: 2em;
+        }
+
+        .setup-row {
+            background-color: var(--background-2);
+            padding: 1em;
+            padding-bottom: 1.2em;
+            border-radius: var(--base-border-radius);
         }
     }
 
@@ -58,6 +66,7 @@
             a {
                 display: block;
                 margin-right: 0.5em;
+                margin-top: 0;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;

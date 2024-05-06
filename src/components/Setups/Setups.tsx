@@ -40,7 +40,7 @@ function Setups(props: SetupsProps) {
                                                 <span className="car badge" data-class="first">Nissan GTP</span>
                                                 <ul>
                                                     {round.nissangtpzxt.map(setup => (
-                                                        <li key={setup.file}>
+                                                        <li key={setup.file} className="setup-row">
                                                             <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
                                                             <span className="comment">{setup.comment}</span>
                                                         </li>
@@ -53,7 +53,7 @@ function Setups(props: SetupsProps) {
                                                 <span className="car badge" data-class="second">Audi GTO</span>
                                                 <ul>
                                                     {round.audi90gto.map(setup => (
-                                                        <li key={setup.file}>
+                                                        <li key={setup.file} className="setup-row">
                                                             <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
                                                             <span className="comment">{setup.comment}</span>
                                                         </li>
