@@ -115,11 +115,11 @@ const seasonSetups = [
                 "comment": "qualifying setup",
             },
             {
-                "file": "public/setups/nissangtpzxt/Lgo24S2_Sonoma_Cup_Q70.sto",
+                "file": "Lgo24S2_Sonoma_Cup_Q70.sto",
                 "comment": "qualifying setup",
             },
             {
-                "file": "public/setups/nissangtpzxt/Lgo24S2_Sonoma_Cup_R70.sto",
+                "file": "Lgo24S2_Sonoma_Cup_R70.sto",
             },
             {
                 "file": "Lgo23S4_Sonoma_Cup_Q70.sto",
@@ -183,8 +183,36 @@ const seasonSetups = [
         ...tracks.MISANO,
         "weekStart": "2024-05-07",
         "audi90gto": [
+            {
+                "file": "maf_misano_24s2_q3.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "maf_misano_24s2_r3.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "Lgo24S2_Misano_GP_Q70.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Lgo24S2_Misano_GP_R70.sto",
+            },
+            {
+                "file": "F122_NGTP_Misano_1-3_Q.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "F122_NGTP_Misano_1-3.sto",
+            },
+            {
+                "file": "GTP_Misano_JdelOlmoR.sto",
+            },
+            {
+                "file": "GTP_Misano.sto",
+            },
+
         ]
     },
     {
