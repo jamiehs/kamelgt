@@ -230,6 +230,12 @@ const seasonSetups = [
             {
                 "file": "A90_23S2_Monza_Y_Gijsen_R3.sto",
             },
+            {
+                "file": "maf_monzacomb_24s2_q1.sto",
+            },
+            {
+                "file": "maf_monzacomb_24s2_r1.sto",
+            }
         ],
         "nissangtpzxt": [
             {
@@ -238,6 +244,23 @@ const seasonSetups = [
             },
             {
                 "file": "Lgo23S2_MH_Monza_R_v1.1_R10.sto",
+            },
+            {
+                "file": "Speeeeeeeeeeeed_V3Q.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "Speeeeeeeeeeeed_V3.sto",
+            },
+            {
+                "file": "NissanGTP_Monza_combnochicane_raceOS.sto",
+            },
+            {
+                "file": "F122_NGTP_Monza_1-2B_Q.sto",
+                "comment": "qualifying setup",
+            },
+            {
+                "file": "F122_NGTP_Monza_1-2B.sto",
             },
         ]
     },
