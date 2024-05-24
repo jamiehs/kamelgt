@@ -276,7 +276,7 @@ body {
         color: var(--text-10);
         @media (prefers-color-scheme: dark) {
           color: var(--background-9);
-          background: var(--always-black);
+          background: rgb(var(--always-black));
         }
         padding: 0.3em;
         border-radius: 5px;

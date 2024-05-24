@@ -110,8 +110,33 @@
         border-radius: 6px;
         overflow: hidden;
         max-width: 100%;
-        background-color: var(--always-black);
+        background-color: rgb(var(--always-black));
 
+        .thumb-text {
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            > span {
+                background-color: rgba(var(--always-white), 0.6);
+                color: rgb(var(--always-black));
+                font-size: 1.42em;
+                font-weight: 700;
+                line-height: 0.9;
+                display: block;
+                width: 100%;
+                white-space: normal;
+                padding: 0.33em 0;
+                letter-spacing: 0.02em;
+            }
+        }
         
         &:after {
             content: '';
@@ -141,6 +166,11 @@
             background-position: center;
             background-size: cover;
             position: relative;
+
+            &.no-url {
+                filter: saturate(45%) hue-rotate(-10deg) contrast(120%);
+                transition: filter 300ms ease;    
+            }
 
             .glitch {
                 position: absolute;
@@ -190,7 +220,7 @@
         }
 
         &:hover {
-            a {
+            a, .no-url {
                 filter: saturate(90%) hue-rotate(-2deg) contrast(100%);
             }
 

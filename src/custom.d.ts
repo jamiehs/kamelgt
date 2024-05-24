@@ -10,6 +10,8 @@ interface SingleBroadcast {
     label: string
     round: number
     title: string
+    thumbText?: string
+    thumb?: string
     alternateTitle?: string
     url: string
 }

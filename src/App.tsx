@@ -74,6 +74,7 @@ class App extends React.Component<null, AppState> {
                     label: season.label,
                     round: round,
                     title: event.title,
+                    thumbText: event.thumbText,
                     alternateTitle: event.alternateTitle,
                     url: event.url,
                 }
@@ -407,6 +408,8 @@ class App extends React.Component<null, AppState> {
                                         <Broadcast
                                             key={`${result.item.url}.${result.item.id}.${result.item.title}`}
                                             title={`${result.item.id} - R${result.item.round}: ${result.item.title}`}
+                                            thumbText={result.item.thumbText}
+                                            thumb={result.item.thumb}
                                             url={result.item.url}
                                             date={currentSeasonDates[index]}
                                         />
@@ -423,12 +426,14 @@ class App extends React.Component<null, AppState> {
                                     <div key={season.id} className="videos-grid">
                                         {season.youTube.map((week, index) => {
                                             const round = index + 1
-                                            const {url, title} = week
+                                            const {url, title, thumbText, thumb} = week
                                             if(title && title !== '') {
                                                 return (
                                                     <Broadcast
                                                         key={`${season.id}.${url}.${title}`}
                                                         title={`R${round}: ${title}`}
+                                                        thumbText={thumbText}
+                                                        thumb={thumb}
                                                         url={url}
                                                         date={currentSeasonDates[index]}
                                                     />

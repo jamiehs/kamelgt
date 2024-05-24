@@ -3,7 +3,9 @@ import React from 'react';
 import { getYouTubeId } from '../../helpers';
 
 interface BroadcastProps {
-    title: string
+    title: string,
+    thumbText?: string,
+    thumb?: string,
     url: string
     date: Date
 }
@@ -33,6 +35,8 @@ class Broadcast extends React.Component<BroadcastProps, BroadcastState> {
     render() {
         let {
             title,
+            thumbText,
+            thumb,
             url,
             date,
         } = this.props
@@ -43,6 +47,11 @@ class Broadcast extends React.Component<BroadcastProps, BroadcastState> {
             dateString = date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
         }
 
+        let thumbailImage = url ? `https://img.youtube.com/vi/${getYouTubeId(url)}/hq3.jpg` : '';
+        if(thumb) {
+            thumbailImage = thumb;
+        }
+
         return (
             url ? (
                 <div className="Broadcast">
@@ -51,7 +60,12 @@ class Broadcast extends React.Component<BroadcastProps, BroadcastState> {
                     </a>
                     <div className="yt-video">
                         <a className="no-icon" href={url} target="_blank" rel="noreferrer">
-                            <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(url)}/hq3.jpg)`}}>
+                            {thumbText && (
+                                <span className="thumb-text">
+                                    <span>{thumbText}</span>
+                                </span>
+                            )}
+                            <div className={`thumb jump-${this.state.videoGlitchId}`} style={{backgroundImage: `url(${thumbailImage})`}}>
                                 <div className={`glitch glitch-${this.state.glitchId}`}></div>
                             </div>
                         </a>
@@ -61,10 +75,16 @@ class Broadcast extends React.Component<BroadcastProps, BroadcastState> {
                 <div className="Broadcast">
                     <h3 title={title}>{title}</h3>
                     <div className="yt-video">
-                        <div className={`thumb jump-${this.state.videoGlitchId}`}>
-                            <div className="upcoming-date-wrapper">
-                                <span className="upcoming-date">{dateString}</span>
-                            </div>
+                        <div style={{backgroundImage: `url(${thumbailImage})`}} className={`thumb jump-${this.state.videoGlitchId} ${thumbailImage.length ? 'no-url' : ''}`}>
+                            {thumbText ? (
+                                <span className="thumb-text">
+                                    <span>{thumbText}</span>
+                                </span>
+                            ) : (
+                                <div className="upcoming-date-wrapper">
+                                    <span className="upcoming-date">{dateString}</span>
+                                </div>
+                            )}
                             <div className={`glitch glitch-${this.state.glitchId}`}></div>
                         </div>
                     </div>

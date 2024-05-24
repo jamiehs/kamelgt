@@ -970,7 +970,8 @@ const broadcasts = [
             },
             {
                 ...tracks.MONZA,
-                url: ""
+                thumbText: "Cursed Event: No Broadcast",
+                thumb: "/custom-thumbs/24s2-cursed-monza-combined.jpg",
             },
             {
                 ...tracks.ROAD_ATLANTA,
