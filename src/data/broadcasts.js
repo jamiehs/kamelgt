@@ -979,7 +979,7 @@ const broadcasts = [
             },
             {
                 ...tracks.BELLE_ISLE,
-                url: ""
+                url: "https://youtu.be/TEFYkU3bdOM?t=941"
             },
         ]
     }
