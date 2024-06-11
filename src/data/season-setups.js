@@ -4,8 +4,32 @@ const seasonSetups = [
         ...tracks.SEBRING,
         "weekStart": "2024-06-11",
         "audi90gto": [
+            {
+                "file": "23s2-tuupola-sebring-r4.sto",
+                "comment": "Mika: Fuel is not checked yet (editor's note: most drivers feel 96L is safe this week). I changed to stiffer suspension after testing Javiers setup and my car started to stop properly. Still easy to drive…"
+            },
+            {
+                "file": "A90_23S2_Sebring_Y_Gijsen_R.sto",
+                "comment": "Yoeri: Tested it at 26C, 50% rubber; still need to work out fuel"
+            },
+            {
+                "file": "JdelOlmoAudiSebring23S2.sto",
+                "comment": "Javier: You have to adjust fuel it is with a full tank"
+            }
         ],
         "nissangtpzxt": [
+            {
+                "file": "GTP-Sebring-SW-R.sto",
+                "comment": "Sören: First time trying to make a set for the Nissan"
+            },
+            {
+                "file": "Lgo23S2_Sebring_Intl_MH_Hungaroring_R71.sto",
+                "comment": "From Laust; race setup"
+            },
+            {
+                "file": "F122_NGTP_Sebring_1-2.sto",
+                "comment": "From Ferran"
+            }
         ]
     },
     {
@@ -34,6 +58,10 @@ const seasonSetups = [
     },
     {
         ...tracks.WILLOW_SPRINGS,
+        "notes": [
+            "60 minute endurance round",
+            "Pit stop may be required"
+        ],
         "weekStart": "2024-07-09",
         "audi90gto": [
         ],
@@ -50,6 +78,9 @@ const seasonSetups = [
     },
     {
         ...tracks.LE_MANS_HISTORIC,
+        "notes": [
+            "11 laps for the GTP class"
+        ],
         "weekStart": "2024-07-23",
         "audi90gto": [
         ],
@@ -58,6 +89,10 @@ const seasonSetups = [
     },
     {
         ...tracks.PHILLIP_ISLAND,
+        "notes": [
+            "60 minute endurance round",
+            "Pit stop may be required"
+        ],
         "weekStart": "2024-07-30",
         "audi90gto": [
         ],
