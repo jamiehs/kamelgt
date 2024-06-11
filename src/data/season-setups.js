@@ -1,329 +1,99 @@
 import * as tracks from './track-names.js'; 
 const seasonSetups = [
     {
-        ...tracks.BATHURST,
-        "notes": [
-            "Surviving is the goal; stay out of the walls"
-        ],
-        "weekStart": "2024-03-12",
+        ...tracks.SEBRING,
+        "weekStart": "2024-06-11",
         "audi90gto": [
         ],
         "nissangtpzxt": [
         ]
     },
     {
-        ...tracks.COTA,
-        "weekStart": "2024-03-19",
+        ...tracks.OULTON_PARK_INTL_NO_CHICANES,
+        "weekStart": "2024-06-18",
         "audi90gto": [
         ],
         "nissangtpzxt": [
         ]
     },
     {
-        ...tracks.ALGARVE,
-        "weekStart": "2024-03-26",
+        ...tracks.HUNGARORING,
+        "weekStart": "2024-06-25",
         "audi90gto": [
         ],
         "nissangtpzxt": [
         ]
     },
     {
-        ...tracks.SPA_CLASSIC_PITS,
-        "weekStart": "2024-04-02",
+        ...tracks.CANADIAN_TIRE_MOSPORT_CTMP,
+        "weekStart": "2024-07-02",
         "audi90gto": [
         ],
         "nissangtpzxt": [
         ]
     },
     {
-        ...tracks.ROAD_AMERICA,
-        "notes": [
-            "60 minute endurance round",
-            "Pit stop required",
-        ],
-        "weekStart": "2024-04-09",
+        ...tracks.WILLOW_SPRINGS,
+        "weekStart": "2024-07-09",
         "audi90gto": [
-            {
-                "file": "A90_RoadAmerica_24S2_Y_Gijsen_R60.sto",
-            },
-            {
-                "file": "maf_roadam_24s2_q2.sto",
-            },
-            {
-                "file": "maf_roadam_24s2_r3.sto",
-            },
-            {
-                "file": "maf_RA500_24s2_R.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "GTP_RoadAmerica_JdelOlmoR.sto",
-            },
-            {
-                "file": "SDC_23S2_GTP_RAMERICA_QUALYv0.85.sto",
-            },
-            {
-                "file": "SDC_23S2_GTP_RAMERICA_RACEv0.85.sto",
-            },
         ]
     },
     {
-        ...tracks.SONOMA_NASCAR_LONG,
-        "weekStart": "2024-04-16",
+        ...tracks.LONG_BEACH,
+        "weekStart": "2024-07-16",
         "audi90gto": [
-            {
-                "file": "maf_sonoma_24s2_q5.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "maf_sonoma_24s2_r5.sto",
-            },
-            {
-                "file": "A90_Sonoma_24S2_Y_Gijsen_Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "A90_Sonoma_24S2_Y_Gijsen_R.sto",
-            },
-            {
-                "file": "A90_Sliumba_24S2_sonoma_R1.sto",
-            },
-            {
-                "file": "sonoma-23S4-r1.sto",
-            },
-            {
-                "file": "sonoma-22S3-2.3.sto",
-            },
-            {
-                "file": "sonoma-22S3-r1.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "SONOMA_NGTP_R_ALEX.sto",
-            },
-            {
-                "file": "GTP_Sonoma_JdelOlmoQ.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "GTP_Sonoma_JdelOlmoR.sto",
-            },
-            {
-                "file": "Lgo22S3_Sonoma_Long_MH_Int_R_Q66.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo24S2_Sonoma_Cup_Q70.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo24S2_Sonoma_Cup_R70.sto",
-            },
-            {
-                "file": "Lgo23S4_Sonoma_Cup_Q70.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo23S4_Sonoma_Cup_R71.sto",
-            },
         ]
     },
     {
-        ...tracks.NURBURGRING_COMBINED_GESAMTSTRECKE_VLN,
-        "weekStart": "2024-04-23",
+        ...tracks.LE_MANS_HISTORIC,
+        "weekStart": "2024-07-23",
         "audi90gto": [
-            {
-                "file": "maf_nords_24s2_r1.sto",
-            },
-            {
-                "file": "nords-24S2-r1.sto",
-            },
-            {
-                "file": "A90_23S3_Nordschleife24h_Y_Gijsen_Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "A90_23S3_Nordschleife24h_Y_Gijsen_R.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo23S1_Nords_Combined_24h_Q64.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo23S1_Nords_Combined_24h_R64.sto",
-            },
         ]
     },
     {
-        ...tracks.INTERLAGOS,
-        "weekStart": "2024-04-30",
+        ...tracks.PHILLIP_ISLAND,
+        "weekStart": "2024-07-30",
         "audi90gto": [
-            {
-                "file": "A90_23S2_Interlagos_Y_Gijsen_R.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "F122_NGTP_Interlagos_1-4.sto",
-            },
-            {
-                "file": "Lgo22S2_Interlagos_MH_Silverstone_Int_R_Q63.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo22S2_Interlagos_MH_Silverstone_Int_R_R63.sto",
-            },
         ]
     },
     {
-        ...tracks.MISANO,
-        "weekStart": "2024-05-07",
+        ...tracks.SNETTERTON_200,
+        "weekStart": "2024-08-06",
         "audi90gto": [
-            {
-                "file": "maf_misano_24s2_q3.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "maf_misano_24s2_r3.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo24S2_Misano_GP_Q70.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo24S2_Misano_GP_R70.sto",
-            },
-            {
-                "file": "F122_NGTP_Misano_1-3_Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "F122_NGTP_Misano_1-3.sto",
-            },
-            {
-                "file": "GTP_Misano_JdelOlmoR.sto",
-            },
-            {
-                "file": "GTP_Misano.sto",
-            },
-
         ]
     },
     {
-        ...tracks.MONZA,
-        "notes": [
-            "Endurance round - 18 laps (~60 minutes)",
-            "Pit stop required",
-        ],
-        "weekStart": "2024-05-14",
+        ...tracks.TWIN_RING_MOTEGI,
+        "weekStart": "2024-08-13",
         "audi90gto": [
-            {
-                "file": "A90_23S2_Monza_Y_Gijsen_Q3.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "A90_23S2_Monza_Y_Gijsen_R3.sto",
-            },
-            {
-                "file": "maf_monzacomb_24s2_q1.sto",
-            },
-            {
-                "file": "maf_monzacomb_24s2_r1.sto",
-            }
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo22S1_MH_Monza_R_v1.1_Q10.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo23S2_MH_Monza_R_v1.1_R10.sto",
-            },
-            {
-                "file": "Speeeeeeeeeeeed_V3Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Speeeeeeeeeeeed_V3.sto",
-            },
-            {
-                "file": "NissanGTP_Monza_combnochicane_raceOS.sto",
-            },
-            {
-                "file": "F122_NGTP_Monza_1-2B_Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "F122_NGTP_Monza_1-2B.sto",
-            },
         ]
     },
     {
-        ...tracks.ROAD_ATLANTA,
-        "weekStart": "2024-05-21",
+        ...tracks.SUZUKA,
+        "weekStart": "2024-08-20",
         "audi90gto": [
-            {
-                "file": "KB 2022-S4 Road Atlanta.sto",
-            },
-            {
-                "file": "2022S4W12_Road_Atlanta_R1.sto",
-            },
-            {
-                "file": "A90 - 22S4 - RoadAtlanta - K Bouafia - R.sto",
-            },
-            {
-                "file": "A90 - 22S4 - RoadAtlanta - Y Gijsen - 221129 - Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "A90 - 22S4 - RoadAtlanta - Y Gijsen - 221129 - R.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo22S4_Road_Atlanta_MH_Silverstone_Int_Q61.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo22S4_Road_Atlanta_MH_Silverstone_Int_R61.sto",
-            },
-            {
-                "file": "NGTP_RoAtlanta_1-1.sto",
-            },
         ]
     },
     {
-        ...tracks.BELLE_ISLE,
-        "weekStart": "2024-05-28",
+        ...tracks.HOMESTEAD_MIAMI_ROAD_A,
+        "weekStart": "2024-08-27",
         "audi90gto": [
-            {
-                "file": "A90_23S2_Detroit_Y_Gijsen_Q.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "A90_23S2_Detroit_Y_Gijsen_R.sto",
-            },
-            {
-                "file": "JdelOlmoBelleIsle22S4C.sto",
-            },
-            {
-                "file": "KB_2022-S4_Belle_Isle_R.sto",
-            },
         ],
         "nissangtpzxt": [
-            {
-                "file": "Lgo22S4_Detroit_Q85.sto",
-                "comment": "qualifying setup",
-            },
-            {
-                "file": "Lgo23S2_Detroit_R80.sto",
-            },
         ]
     },
 ]

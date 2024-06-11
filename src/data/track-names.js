@@ -27,6 +27,9 @@ export const BELLE_ISLE = {
 export const BRANDS_HATCH = {
     title: "Brands Hatch"
 }
+export const CANADIAN_TIRE_MOSPORT_CTMP = {
+    title: "Canadian Tire Motorsports Park"
+}
 export const CHARLOTTE_ROVAL = {
     title: "Charlotte - Roval"
 }
@@ -57,8 +60,12 @@ export const HOCKENHEIM_OUTER = {
     title: "Hockenheim - Outer",
     alternateTitle: "Hockenheimring Baden-Württemberg - Outer"
 }
+export const HOMESTEAD_MIAMI_ROAD_A = {
+    title: "Homestead Miami - Road A",
+    alternateTitle: "Homestead Miami Speedway - Road Course A"
+}
 export const HOMESTEAD_MIAMI_ROAD_B = {
-    title: "Homestead Miami",
+    title: "Homestead Miami - Road B",
     alternateTitle: "Homestead Miami Speedway - Road Course B"
 }
 export const HUNGARORING = {
@@ -183,6 +190,9 @@ export const OSCHERSLEBEN = {
 export const OULTON_PARK_INTL_WOUT_HISLOP = {
     title: "Oulton Park - Intl w/out Hislop"
 }
+export const OULTON_PARK_INTL_NO_CHICANES = {
+    title: "Oulton Park - Intl w/no Chicanes"
+}
 export const PHILLIP_ISLAND = {
     title: "Phillip Island"
 }
@@ -244,7 +254,8 @@ export const TSUKUBA = {
     alternateTitle: "Tsukuba Circuit"
 }
 export const TWIN_RING_MOTEGI = {
-    title: "Twin Ring Motegi"
+    title: "Mobility Resort Motegi",
+    alternateTitle: "Twin Ring Motegi"
 }
 export const VIR = {
     title: "VIR",
