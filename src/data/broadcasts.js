@@ -982,6 +982,63 @@ const broadcasts = [
                 url: "https://youtu.be/TEFYkU3bdOM?t=941"
             },
         ]
+    },
+    {
+        id: "24S3",
+        label: "2024 Season 3",
+        startDate: "2024-06-11",
+        endDate: "2024-08-27",
+        youTube: [
+            {
+                ...tracks.SEBRING,
+                url: "https://youtu.be/OwMx5dPETbo?t=1201"
+            },
+            {
+                ...tracks.OULTON_PARK_INTL_NO_CHICANES,
+                url: "https://youtu.be/B6tUfBSH4nM?t=1033"
+            },
+            {
+                ...tracks.HUNGARORING,
+                url: ""
+            },
+            {
+                ...tracks.CANADIAN_TIRE_MOSPORT_CTMP,
+                url: ""
+            },
+            {
+                ...tracks.WILLOW_SPRINGS,
+                title: "Road America 500",
+                url: ""
+            },
+            {
+                ...tracks.LONG_BEACH,
+                url: ""
+            },
+            {
+                ...tracks.LE_MANS_HISTORIC,
+                url: ""
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: ""
+            },
+            {
+                ...tracks.SNETTERTON_200,
+                url: ""
+            },
+            {
+                ...tracks.TWIN_RING_MOTEGI,
+                url: ""
+            },
+            {
+                ...tracks.SUZUKA,
+                url: ""
+            },
+            {
+                ...tracks.HOMESTEAD_MIAMI_ROAD_A,
+                url: ""
+            },
+        ]
     }
 ]
 
