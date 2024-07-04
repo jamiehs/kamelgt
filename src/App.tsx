@@ -177,12 +177,28 @@ class App extends React.Component<null, AppState> {
                             </header>
                             <div className="timeslots">
                                 <Timeslot
+                                    label="Early Bird Special"
+                                    dayIndex={2}
+                                    time="1:00"
+                                >
+                                    <p>
+                                        US friendly time slot. If you have been practicing over the weekend, maybe you can grab a podium! 
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="School Night"
+                                    dayIndex={2}
+                                    time="19:00"
+                                >
+                                    <p>
+                                        The same time slot as Midweek Madness, but a day earlier.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
                                     label="Midweek Madness"
                                     dayIndex={3}
                                     time="19:00"
-                                    entries={56}
-                                    gtoSof={2975}
-                                    gtpSof={3197}
+                                    regularity="High Participation"
                                 >
                                     <p>
                                         If you can race at this time, you will find entrants from beginner to veteran. Field size can vary greatly by&nbsp;track.
@@ -192,21 +208,25 @@ class App extends React.Component<null, AppState> {
                                     label="Midweek Americas"
                                     dayIndex={4}
                                     time="01:00"
-                                    entries={31}
-                                    gtoSof={1947}
-                                    gtpSof={2098}
                                 >
                                     <p>
                                         Wednesday race for the US time zones. Early evening on the west coast and late evening on the east&nbsp;coast.
                                     </p>
                                 </Timeslot>
                                 <Timeslot
+                                    label="More Madness"
+                                    dayIndex={4}
+                                    time="019:00"
+                                >
+                                    <p>
+                                        In case you missed the Midweek Madness race, and this time works well for you.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
                                     label="Friday Night Race"
                                     dayIndex={5}
                                     time="21:00"
-                                    entries={41}
-                                    gtoSof={2379}
-                                    gtpSof={2158}
+                                    regularity="High Participation"
                                 >
                                     <p>
                                         The big race that is not the broadcast race. If you want a full field to practice/compete in, this&nbsp;is&nbsp;it.
@@ -216,9 +236,6 @@ class App extends React.Component<null, AppState> {
                                     label="Pacific Americas"
                                     dayIndex={6}
                                     time="03:00"
-                                    entries={20}
-                                    gtoSof={2342}
-                                    gtpSof={1632}
                                 >
                                     <p>
                                         Uses the 03:00 GMT time slot as an alternative to the "Midweek Americas" slot. This is around noon on Saturday in Australia!
@@ -228,29 +245,49 @@ class App extends React.Component<null, AppState> {
                                     label="📺 Broadcast Race"
                                     dayIndex={6}
                                     time="17:00"
-                                    entries={68}
-                                    gtoSof={3017}
-                                    gtpSof={3635}
+                                    regularity="Highest Participation"
                                 >
                                     <p>
                                         <b>Our weekly broadcast race.</b> This will usually have the most participants and may split. <a href="https://www.youtube.com/user/GSRCBroadcasting/videos" target="_blank" rel="noreferrer">Broadcasted live&nbsp;on&nbsp;GSRC</a>
                                     </p>
                                 </Timeslot>
                                 <Timeslot
-                                    label="Australia & NZ"
-                                    dayIndex={0}
-                                    time="07:00"
-                                    entries={10}
-                                    gtoSof={2265}
-                                    gtpSof={2507}
-                                    regularity="New Since 23S3"
+                                    label="2nd Chance"
+                                    dayIndex={7}
+                                    time="01:00"
                                 >
                                     <p>
-                                        3pm in the west & 5pm in the east of Australia; 8pm in New Zealand. This is also morning for much of Europe. 
+                                        If your broadcast race in the US did not go well and you'd like to try again, this time slot may work for you.
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="Last Call EU"
+                                    dayIndex={7}
+                                    time="019:00"
+                                >
+                                    <p>
+                                        It's Sunday evening in Europe and there's no better time for a race, right?
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="Last Call US"
+                                    dayIndex={1}
+                                    time="01:00"
+                                >
+                                    <p>
+                                        It's Sunday evening in the US and it's the best time to podium while the fast Europeans are asleep!
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
+                                    label="TGIM"
+                                    dayIndex={1}
+                                    time="019:00"
+                                >
+                                    <p>
+                                        Probably your last chance to get a race in before the schedule flips over to the next track.
                                     </p>
                                 </Timeslot>
                             </div>
-                            <div className="footnote">Drivers &amp; SoF numbers averaged from 2023 Season 3 data</div>
                         </div>
                     </div>
                 </div>
