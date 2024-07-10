@@ -999,15 +999,14 @@ const broadcasts = [
             },
             {
                 ...tracks.HUNGARORING,
-                url: ""
+                url: "https://youtu.be/fARLsB8DLZU?t=1092"
             },
             {
                 ...tracks.CANADIAN_TIRE_MOSPORT_CTMP,
-                url: ""
+                url: "https://youtu.be/-2S2AB_SpRg?t=1139"
             },
             {
                 ...tracks.WILLOW_SPRINGS,
-                title: "Road America 500",
                 url: ""
             },
             {
