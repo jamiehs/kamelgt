@@ -1007,11 +1007,11 @@ const broadcasts = [
             },
             {
                 ...tracks.WILLOW_SPRINGS,
-                url: ""
+                url: "https://youtu.be/ZrjUNBKlm1Q?t=1015"
             },
             {
                 ...tracks.LONG_BEACH,
-                url: ""
+                url: "https://youtu.be/r3AwDlexIuY?t=879"
             },
             {
                 ...tracks.LE_MANS_HISTORIC,
