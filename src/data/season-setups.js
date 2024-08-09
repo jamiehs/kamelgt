@@ -131,16 +131,58 @@ const seasonSetups = [
         ...tracks.TWIN_RING_MOTEGI,
         "weekStart": "2024-08-13",
         "audi90gto": [
+            {
+                "file": "motegi-22S1-JL-q.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "motegi-22S1-JL-r2.sto",
+            },
+            {
+                "file": "A90_Motegi_23S4_Y_Gijsen_Q.sto",
+            },
+            {
+                "file": "A90_Motegi_23S4_Y_Gijsen_R.sto",
+            },
+            {
+                "file": "motegi-23S1-r2.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "MOTEGI_NGTP_Q_ALEX_2.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "MOTEGI_NGTP_R_ALEX_2.sto",
+            },
         ]
     },
     {
         ...tracks.SUZUKA,
         "weekStart": "2024-08-20",
         "audi90gto": [
+            {
+                "file": "A90_Suzuka_23S4_Y_Gijsen_Q.sto",
+            },
+            {
+                "file": "A90_Suzuka_23S4_Y_Gijsen_R.sto",
+            },
+            {
+                "file": "suzuka-23s1-arturas-saturday.sto",
+            },
+            {
+                "file": "suzuka-23S1-Javier-r2.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "NGTP_SUZU_Q_ALEX WED.sto",
+                "comment": "Qusuzualifying setup"
+            },
+            {
+                "file": "NGTP_SUZU_R_ALEX WED.sto",
+            },
         ]
     },
     {
