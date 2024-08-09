@@ -102,9 +102,29 @@ const seasonSetups = [
     {
         ...tracks.SNETTERTON_200,
         "weekStart": "2024-08-06",
+        "notes": [
+            "Emmo’s favourite track!",
+        ],
         "audi90gto": [
+            {
+                "file": "maf_snet_24s3_r2.sto",
+            },
         ],
         "nissangtpzxt": [
+            {
+                "file": "BL_Snetteron_200_Q78.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "BL_Snetteron_200_R78.sto",
+            },
+            {
+                "file": "JW-Snetterton-Quali-V2.sto",
+                "comment": "Qualifying setup"
+            },
+            {
+                "file": "JW-Snetterton-Race-V2.sto",
+            },
         ]
     },
     {
