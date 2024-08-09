@@ -1015,11 +1015,11 @@ const broadcasts = [
             },
             {
                 ...tracks.LE_MANS_HISTORIC,
-                url: ""
+                url: "https://youtu.be/CChkb-3cXhE?t=1148"
             },
             {
                 ...tracks.PHILLIP_ISLAND,
-                url: ""
+                url: "https://youtu.be/OHZ_tFDlPSQ?t=1165"
             },
             {
                 ...tracks.SNETTERTON_200,
