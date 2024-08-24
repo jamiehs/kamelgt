@@ -1027,11 +1027,11 @@ const broadcasts = [
             },
             {
                 ...tracks.TWIN_RING_MOTEGI,
-                url: ""
+                url: "https://youtu.be/zZvDRK39xAQ?t=1126"
             },
             {
                 ...tracks.SUZUKA,
-                url: ""
+                url: "https://youtu.be/6W_3RMVS09A?t=670"
             },
             {
                 ...tracks.HOMESTEAD_MIAMI_ROAD_A,
