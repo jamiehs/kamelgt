@@ -53,7 +53,7 @@ class App extends React.Component<null, AppState> {
         // as it assumes that the last element of `broadcasts`
         // is the current season.
         let today = new Date()
-        let numWeeks = 12
+        let numWeeks = broadcasts.length
         let firstDayOfSeason = dateTimeFromString(broadcasts[broadcasts.length-1].startDate, '17:00')
         let lastDayOfSeason = dateTimeFromString(broadcasts[broadcasts.length-1].endDate, '17:00')
         
