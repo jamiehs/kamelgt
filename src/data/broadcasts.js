@@ -1038,6 +1038,66 @@ const broadcasts = [
                 url: "https://youtu.be/YvteBbSVISc?t=1164"
             },
         ]
+    },
+    {
+        id: "24S4",
+        label: "2024 Season 4",
+        startDate: "2024-09-10",
+        endDate: "2024-12-03",
+        youTube: [
+            {
+                ...tracks.NURBURGRING_COMBINED_24H,
+                url: "https://youtu.be/q4hKMDB23kg?t=1019"
+            },
+            {
+                ...tracks.LAGUNA_SECA,
+                url: ""
+            },
+            {
+                ...tracks.MID_OHIO,
+                url: ""
+            },
+            {
+                ...tracks.DAYTONA_ROAD,
+                url: ""
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: ""
+            },
+            {
+                ...tracks.RED_BULL_RING,
+                url: ""
+            },
+            {
+                ...tracks.ZOLDER,
+                url: ""
+            },
+            {
+                ...tracks.JEREZ_MOTO,
+                url: ""
+            },
+            {
+                ...tracks.SACHSENRING,
+                url: ""
+            },
+            {
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+                url: ""
+            },
+            {
+                ...tracks.VIR,
+                url: ""
+            },
+            {
+                ...tracks.SEBRING,
+                url: ""
+            },
+            {
+                ...tracks.DONINGTON_PARK,
+                url: ""
+            },
+        ]
     }
 ]
 

@@ -339,7 +339,7 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="setups" className="setups section">
                     <h2 className="title">Setups</h2>
-                    <Setups upcomingWeeks={3} />
+                    <Setups upcomingWeeks={20} />
                 </div>
                 <div className="format section">
                     <h2 className="title">Race Format</h2>

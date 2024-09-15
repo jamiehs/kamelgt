@@ -33,6 +33,11 @@ function Setups(props: SetupsProps) {
                         return (
                             <div className="round-container" key={round.title}>
                                 <h3><span className="week-prefix">Week {weekNumber}: </span>{round.title}</h3>
+                                {round.notes && round.notes.length > 0 && (
+                                    <div className="notes">
+                                        {round.notes.map((note, i) => <div key={i} className="note badge light">{note}</div>)}
+                                    </div>
+                                )}
                                 {setupsExist ? (
                                     <div className="cars-grid">
                                         {round.nissangtpzxt.length > 0 && (

@@ -40,6 +40,9 @@ export const COTA = {
 export const DAYTONA = {
     title: "Daytona"
 }
+export const DAYTONA_ROAD = {
+    title: "Daytona - Road"
+}
 export const DAYTONA_2007_ROAD = {
     title: "Daytona 2007 - Road"
 }
@@ -208,6 +211,9 @@ export const ROAD_AMERICA = {
 }
 export const ROAD_ATLANTA = {
     title: "Road Atlanta"
+}
+export const SACHSENRING = {
+    title: "Sachsenring"
 }
 export const SEBRING = {
     title: "Sebring"
