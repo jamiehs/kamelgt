@@ -1051,7 +1051,7 @@ const broadcasts = [
             },
             {
                 ...tracks.LAGUNA_SECA,
-                url: ""
+                url: "https://youtu.be/yNXNx8NheJ8?t=1111"
             },
             {
                 ...tracks.MID_OHIO,
