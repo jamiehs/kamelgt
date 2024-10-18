@@ -1059,11 +1059,11 @@ const broadcasts = [
             },
             {
                 ...tracks.DAYTONA_ROAD,
-                url: ""
+                url: "https://youtu.be/aCOZemMznCo?t=976"
             },
             {
                 ...tracks.ROAD_AMERICA,
-                url: ""
+                url: "https://youtu.be/8r2RQAoKtgA?t=1161"
             },
             {
                 ...tracks.RED_BULL_RING,
