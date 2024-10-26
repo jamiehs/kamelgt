@@ -1067,11 +1067,11 @@ const broadcasts = [
             },
             {
                 ...tracks.RED_BULL_RING,
-                url: ""
+                url: "https://youtu.be/dJHoGLr2reQ?t=1003"
             },
             {
                 ...tracks.ZOLDER,
-                url: ""
+                url: "https://youtu.be/tsJ76Lezmr8?t=1015"
             },
             {
                 ...tracks.JEREZ_MOTO,
