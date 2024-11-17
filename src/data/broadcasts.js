@@ -1075,15 +1075,15 @@ const broadcasts = [
             },
             {
                 ...tracks.JEREZ_MOTO,
-                url: ""
+                url: "https://youtu.be/9Izc0dEQRzU?t=1210"
             },
             {
                 ...tracks.SACHSENRING,
-                url: ""
+                url: "https://youtu.be/W3czMUxR34E?t=1107"
             },
             {
                 ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
-                url: ""
+                url: "https://youtu.be/bb0jtJcYfUw?t=1070"
             },
             {
                 ...tracks.VIR,
