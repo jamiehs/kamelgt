@@ -7,6 +7,7 @@ import Announcement from './components/Announcement/Announcement';
 import Setups from './components/Setups/Setups';
 import seasonSetups from './data/season-setups';
 import broadcasts from './data/broadcasts';
+import moment from 'moment';
 import {VCR_DISCORD_URL} from './data/constants';
 import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
 import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
@@ -189,7 +190,7 @@ class App extends React.Component<null, AppState> {
                                 <Timeslot
                                     label="Midweek Americas"
                                     dayIndex={4}
-                                    time="01:00"
+                                    time={moment().tz("America/New_York").isDST() ? "01:00" : "03:00"}
                                     regularity="Steady Participation"
                                 >
                                     <p>
