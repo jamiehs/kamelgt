@@ -1087,11 +1087,11 @@ const broadcasts = [
             },
             {
                 ...tracks.VIR,
-                url: ""
+                url: "https://youtu.be/u-QmuiGq4KQ?t=974"
             },
             {
                 ...tracks.SEBRING,
-                url: ""
+                url: "https://youtu.be/56FG9cViAAU?t=1155"
             },
             {
                 ...tracks.DONINGTON_PARK,
