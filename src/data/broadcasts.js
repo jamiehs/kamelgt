@@ -1098,6 +1098,62 @@ const broadcasts = [
                 url: "https://youtu.be/eM4Jt6KKteM?t=1166"
             },
         ]
+    },
+    {
+        id: "25S1",
+        label: "2025 Season 1",
+        startDate: "2024-12-17",
+        endDate: "2025-03-04",
+        youTube: [
+            {
+                ...tracks.MUGELLO,
+                url: ""
+            },
+            {
+                ...tracks.ARAGON_MOTORCYCLE_GP,
+                url: ""
+            },
+            {
+                ...tracks.NAVARRA,
+                url: ""
+            },
+            {
+                ...tracks.HOCKENHEIM_GP,
+                url: ""
+            },
+            {
+                ...tracks.MOSPORT,
+                url: ""
+            },
+            {
+                ...tracks.ALGARVE,
+                url: ""
+            },
+            {
+                ...tracks.LIME_ROCK_CLASSIC,
+                url: ""
+            },
+            {
+                ...tracks.BRANDS_HATCH,
+                url: ""
+            },
+            {
+                ...tracks.SILVERSTONE_GP,
+                url: ""
+            },
+            {
+                ...tracks.FUJI_NO_CHICANE,
+                url: ""
+            },
+            {
+                ...tracks.OSCHERSLEBEN,
+                url: ""
+            },
+            {
+                ...tracks.SONOMA_NASCAR_LONG,
+                url: ""
+            }
+        ]
     }
 ]
 
