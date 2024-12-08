@@ -2,6 +2,10 @@ export const ARAGON_OUTER = {
     title: "Aragón - Outer",
     alternateTitle: "MotorLand Aragon - Outer"
 }
+export const ARAGON_MOTORCYCLE_GP = {
+    title: "Aragón - Motorcycle Grand Prix",
+    alternateTitle: "MotorLand Aragon - Motorcycle Grand Prix"
+}
 export const ALGARVE = {
     title: "Algarve International Circuit - Grand Prix",
     alternateTitle: "Portimão Circuit - Grand Prix"
@@ -157,6 +161,9 @@ export const MUGELLO = {
     title: "Mugello",
     alternateTitle: "Autodromo Internazionale del Mugello - Grand Prix"
 }
+export const NAVARRA = {
+    title: "Circuito de Navarra",
+}
 export const NORDSCHLEIFE_INDUSTRIEFAHRTEN = {
     title: "Nordschleife - Industriefahrten",
     alternateTitle: "Nurburgring Nürburgring Nordschleife - Industriefahrten"
@@ -217,6 +224,9 @@ export const SACHSENRING = {
 }
 export const SEBRING = {
     title: "Sebring"
+}
+export const SILVERSTONE_GP = {
+    title: "Silverstone - Grand Prix"
 }
 export const SILVERSTONE_INTERNATIONAL = {
     title: "Silverstone - International"

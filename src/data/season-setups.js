@@ -1,288 +1,262 @@
-import * as tracks from './track-names.js'; 
+import * as tracks from './track-names.js';
+
+const seasonShortName = "25S1"
 const seasonSetups = [
     {
-        ...tracks.NURBURGRING_COMBINED_24H,
-        "weekStart": "2024-09-10",
+        ...tracks.MUGELLO,
+        "weekStart": "2024-12-17",
+        "audi90gto": [
+            {
+                file: "maf_mugello_23s4_q1.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "maf_mugello_23s4_r1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "mugello/asg-mugello-q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mugello/asg-mugello-r.sto",
+            },
+            {
+                file: "mugello/F122_NGTP_Mugello_1-7_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mugello/F122_NGTP_Mugello_1-7.sto",
+            },
+            {
+                file: "mugello/GTP_Mugello_JdelOlmoR2.sto",
+            },
+            {
+                file: "mugello/Lgo24S1_Mugello_Q60.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mugello/Lgo24S1_Mugello_R61.sto",
+            },
+            {
+                file: "mugello/Lgo24S1_Mugello_R61_gear_changes_v2.sto",
+            },
+        ]
+    },
+    {
+        ...tracks.ARAGON_MOTORCYCLE_GP,
+        "weekStart": "2024-12-24",
+        "audi90gto": [
+        ],
+        "nissangtpzxt": [
+            {
+                file: "aragon/Lgo23S3_Aragon_Outer_Q51.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "aragon/Lgo23S3_Aragon_Outer_R51.sto",
+            },
+            {
+                file: "aragon/Lgo23S3_Aragon_Outer_R612.sto",
+            },
+        ]
+    },
+    {
+        ...tracks.NAVARRA,
+        "weekStart": "2024-12-31",
         "audi90gto": [
         ],
         "nissangtpzxt": [
         ]
     },
     {
-        ...tracks.LAGUNA_SECA,
-        "weekStart": "2024-09-17",
+        ...tracks.HOCKENHEIM_GP,
+        "weekStart": "2025-01-07",
         "audi90gto": [
         ],
         "nissangtpzxt": [
+            {
+                file: "hockenheimring/Lgo22S1_HockGP_MH_Silverstone_Int_R_v1_Q61.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "hockenheimring/Lgo22S1_HockGP_MH_Silverstone_Int_R_v1_R61.sto",
+            },
         ]
     },
     {
-        ...tracks.MID_OHIO,
-        "weekStart": "2024-09-24",
+        ...tracks.MOSPORT,
+        "weekStart": "2025-01-14",
         "notes": [
             "60 minute endurance round",
             "Pit stop may be required"
         ],
         "audi90gto": [
-            {
-                "file": "maf_midohio_24s4_q0.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "maf_midohio_24s4_r0.sto",
-            },
-            {
-                "file": "Mid-Ohio30c.sto",
-            },
         ],
         "nissangtpzxt": [
             {
-                "file": "GTP_MidOhio_JdelOlmoR.sto",
+                file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_Q64.sto",
+                comment: "Qualifying setup"
             },
             {
-                "file": "Mid-Ohio30c.sto",
+                file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_R63.sto",
             },
         ]
     },
     {
-        ...tracks.DAYTONA_ROAD,
-        "weekStart": "2024-10-01",
-        "audi90gto": [
-            {
-                "file": "A90_DaytonaN_23S4_Y_Gijsen_Q.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "A90_DaytonaN_23S4_Y_Gijsen_R.sto",
-            },
-            {
-                "file": "DWC_23S1_Daytona_R2.sto",
-            },
+        ...tracks.ALGARVE,
+        "weekStart": "2025-01-21",
+        "audi90gto": [            
         ],
         "nissangtpzxt": [
             {
-                "file": "NGTP_DaytonaRC_1-4.sto",
+                file: "algarve/Lgo24S2_Algarve_Q72.sto",
+                comment: "Qualifying setup"
             },
             {
-                "file": "Lgo23S1_Daytona_RC_AG_Indy_2W8_Q10.sto",
-                "comment": "Qualifying Setup",
+                file: "algarve/Lgo24S2_Algarve_R72.sto",
             },
             {
-                "file": "Lgo23S1_Daytona_RC_AG_Indy_2W8_R10.sto",
+                file: "algarve/rgeada_portimao_q.sto",
             },
             {
-                "file": "",
+                file: "algarve/rgeada_portimao_r.sto",
+            },
+            {
+                file: "algarve/qualy_algarve.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "algarve/GTP_Algarve_JdelOlmoR.sto",
             },
         ]
     },
     {
-        ...tracks.ROAD_AMERICA,
-        "weekStart": "2024-10-08",
-        "audi90gto": [
-            {
-                "file": "A90_RoadAmerica_23S2_Y_Gijsen_Q.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "A90_RoadAmerica_23S2_Y_Gijsen_R.sto",
-            },
-            {
-                "file": "maf_road_america_23s4_q1.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "maf_road_america_23s4_r1.sto",
-            },
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "Lgo23S4_Road_America_Q60.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "Lgo23S4_Road_America_R60.sto",
-            },
-            {
-                "file": "GTP_Road_America_JdelOlmoQ2.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "GTP_Road_America_JdelOlmoR2.sto",
-            },
-        ]
-    },
-    {
-        ...tracks.RED_BULL_RING,
-        "weekStart": "2024-10-15",
-        "audi90gto": [
-            {
-                "file": "A90_RedBullRing_23S3_Y_Gijsen_Q.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "A90_RedBullRing_23S3_Y_Gijsen_R.sto",
-            },
-        ],
-        "nissangtpzxt": [
-        ]
-    },
-    {
-        ...tracks.ZOLDER,
-        "weekStart": "2024-10-22",
+        ...tracks.LIME_ROCK_CLASSIC,
+        "weekStart": "2025-01-28",
         "audi90gto": [
         ],
         "nissangtpzxt": [
-        ]
-    },
-    {
-        ...tracks.JEREZ_MOTO,
-        "weekStart": "2024-10-29",
-        "audi90gto": [
             {
-                "file": "A90_Jerez_23S4_Y_Gijsen_Q.sto",
-                "comment": "Qualifying Setup",
+                file: "lime-rock-park/Lgo22S2_LRP_West_R_v1_Q81.sto",
+                comment: "Qualifying setup"
             },
             {
-                "file": "A90_Jerez_23S4_Y_Gijsen_R.sto",
-            },
-            {
-                "file": "JdelOlmoAudiJerez23S2.sto",
-            },
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "NGTP_JEREZ_R_ALEX.sto",
+                file: "lime-rock-park/Lgo22S2_LRP_West_R_v1_R81.sto",
             },
         ]
     },
     {
-        ...tracks.SACHSENRING,
-        "weekStart": "2024-11-05",
+        ...tracks.BRANDS_HATCH,
+        "weekStart": "2025-02-04",
         "audi90gto": [
         ],
         "nissangtpzxt": [
+            {
+                file: "brands-hatch/Lgo22S3_Brands_Hatch_GP_6W1_Q62.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "brands-hatch/Lgo22S3_Brands_Hatch_GP_6W1_R62.sto",
+            },
         ]
     },
     {
-        ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
-        "weekStart": "2024-11-12",
+        ...tracks.SILVERSTONE_GP,
+        "weekStart": "2025-02-11",
+        "audi90gto": [
+        ],
+        "nissangtpzxt": [
+            {
+                file: "silverstone/SILVERSTONEC_NGTP_Q_ALEX.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "silverstone/SILVERSTONEC_NGTP_R_ALEX.sto",
+            },
+            {
+                file: "silverstone/Lgo24S1_Silverstone_Hist_R60.sto",
+            },
+            {
+                file: "silverstone/NGTP_SilverstoneH_1-2.sto",
+            },
+        ]
+    },
+    {
+        ...tracks.FUJI_NO_CHICANE,
+        "weekStart": "2025-02-18",
+        "audi90gto": [
+        ],
+        "nissangtpzxt": [
+            {
+                file: "fuji/F122_NGTP_Fuji_1-4_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "fuji/F122_NGTP_Fuji_1-4.sto",
+            },
+            {
+                file: "fuji/GTP_Fuji_No_Chicane_JdelOlmoR.sto",
+            },
+            {
+                file: "fuji/Lgo24S1_Fuji_NoCh_Q61.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "fuji/Lgo24S1_Fuji_NoCh_R60.sto",
+            },
+        ]
+    },
+    {
+        ...tracks.OSCHERSLEBEN,
+        "weekStart": "2025-02-25",
         "notes": [
             "60 minute endurance round",
             "Pit stop may be required"
         ],
         "audi90gto": [
-            {
-                "file": "maf_watkins_24s1_q2.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "maf_watkins_24s1_r2.sto",
-            },
-            {
-                "file": "A90_WatkinsGlenCl_24S1_Y_Gijsen_Q.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "A90_WatkinsGlenCl_24S1_Y_Gijsen_R.sto",
-            },
-            {
-                "file": "A90_WatkinsGlenCB_21S2_Y_Gijsen_Q.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "A90_WatkinsGlenCB_21S2_Y_Gijsen_R.sto",
-            },
         ],
         "nissangtpzxt": [
             {
-                "file": "watkins-22S3-AG_WGI_5W2.sto",
+                file: "oschersleben/Lgo22S4_Oschersleben_Q81.sto",
+                comment: "Qualifying setup"
             },
             {
-                "file": "Watkins_Glen_CB_R_v1.2.sto",
-            },
-            {
-                "file": "Watkins5W2v3.sto",
+                file: "oschersleben/Lgo22S4_Oschersleben_R82.sto",
             },
         ]
     },
     {
-        ...tracks.VIR,
-        "weekStart": "2024-11-19",
-        "audi90gto": [
-            {
-                "file": "A90_23S3_VIR_Y_Gijsen_R20.sto",
-            },
-            {
-                "file": "A90_VIR_24S1_Y_Gijsen_Q2.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "A90_VIR_24S1_Y_Gijsen_R2.sto",
-            },
-            {
-                "file": "vir-23S2-r1.sto",
-            },
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "F122_NGTP_VIR_v1-4.sto",
-            },
-            {
-                "file": "NGTP_VIR_Full_R_v1-5.sto",
-            },
-        ]
-    },
-    {
-        ...tracks.SEBRING,
-        "weekStart": "2024-11-26",
-        "audi90gto": [
-            {
-                "file": "JdelOlmoAudiSebring23S2.sto",
-            },
-            {
-                "file": "maf_sebring_23s4_q3.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "maf_sebring_23s4_r3.sto",
-            },
-            {
-                "file": "Sebring_Franco_22s3_RACE.sto",
-            },
-            {
-                "file": "Sebring_Kheireddine_22s3.sto",
-            },
-            {
-                "file": "sebring-21S4-r3.sto",
-            },
-        ],
-        "nissangtpzxt": [
-            {
-                "file": "DWC_Sebring_R3.sto",
-            },
-            {
-                "file": "F122_NGTP_Sebring_1-2.sto",
-            },
-            {
-                "file": "GTP-Sebring-SW-R.sto",
-            },
-            {
-                "file": "Lgo23S2_Sebring_Intl_MH_Hungaroring_Q70.sto",
-                "comment": "Qualifying Setup",
-            },
-            {
-                "file": "Lgo23S2_Sebring_Intl_MH_Hungaroring_R71.sto",
-            },
-        ]
-    },
-    {
-        ...tracks.DONINGTON_PARK,
-        "weekStart": "2024-12-03",
+        ...tracks.SONOMA_NASCAR_LONG,
+        "weekStart": "2025-03-04",
         "audi90gto": [
         ],
         "nissangtpzxt": [
+            {
+                file: "sonoma/F122_NGTP_Sonoma_1-4_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "sonoma/F122_NGTP_Sonoma_1-4.sto",
+            },
+            {
+                file: "sonoma/Lgo24S2_Sonoma_Cup_Q70.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "sonoma/Lgo24S2_Sonoma_Cup_R70.sto",
+            },
+            {
+                file: "sonoma/SONOMA_NGTP_R_ALEX.sto",
+            },
         ]
     },
 ]
 
+
 export default seasonSetups
+export {
+    seasonSetups,
+    seasonShortName,
+}
