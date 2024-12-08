@@ -149,6 +149,9 @@ class App extends React.Component<null, AppState> {
                                 It's Week 14! (Week 13 but a leap season)
                             </h3>
                             <p>
+                                There are no more official races for IMSA Vintage until after Week 14. 
+                            </p>
+                            <p>
                                 Go race some <a href="https://www.iracing.com/iracing-development-update-november-2024/" target="_blank" rel="noreferrer">new Aussie Supercars or the BMW M2</a>, and <a href="https://www.youtube.com/watch?v=BiRp8RlUYa0" target="_blank" rel="noreferrer">scatter gravel all over the track</a> in <a href="https://www.youtube.com/watch?v=tTHVAFWY0BY" target="_blank" rel="noreferrer">the NSX GT3!</a>
                             </p>
                             <p>Not sure what Week 13/14 is all about?</p>
