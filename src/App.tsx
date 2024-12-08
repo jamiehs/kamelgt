@@ -148,7 +148,7 @@ class App extends React.Component<null, AppState> {
                         <Announcement begins="2024-12-08" expires="2024-12-15">
                             <h3>
                                 It's Week 14! (Week 13 but a leap season)
-                            </h3>https://www.iracing.com/iracing-2024-season-4-week-14-schedule-released/
+                            </h3>
                             <p>
                                 Go race some <a href="https://www.iracing.com/iracing-development-update-november-2024/" target="_blank" rel="noreferrer">new Aussie Supercars or the BMW M2</a>, and <a href="https://www.youtube.com/watch?v=BiRp8RlUYa0" target="_blank" rel="noreferrer">scatter gravel all over the track</a> in <a href="https://www.youtube.com/watch?v=tTHVAFWY0BY" target="_blank" rel="noreferrer">the NSX GT3!</a>
                             </p>
