@@ -7,11 +7,25 @@ const seasonSetups = [
         "weekStart": "2024-12-17",
         "audi90gto": [
             {
-                file: "maf_mugello_23s4_q1.sto",
+                file: "mugello/maf_mugello_23s4_q1.sto",
                 comment: "Qualifying setup"
             },
             {
-                file: "maf_mugello_23s4_r1.sto",
+                file: "mugello/maf_mugello_23s4_r1.sto",
+            },
+            {
+                file: "mugello/A90_24S1_Mugello_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mugello/A90_24S1_Mugello_Y_Gijsen_R.sto",
+            },
+            {
+                file: "mugello/Mugello_BR-GTO_v3.1_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mugello/Mugello_BR-GTO_v3_race.sto",
             },
         ],
         "nissangtpzxt": [
@@ -47,7 +61,31 @@ const seasonSetups = [
     {
         ...tracks.ARAGON_MOTORCYCLE_GP,
         "weekStart": "2024-12-24",
+        "notes": [
+            "First time at this layout, setups are for 'Outer'"
+        ],
         "audi90gto": [
+            {
+                file: "aragon/A90_AragonO_24S1_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "aragon/A90_AragonO_24S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "aragon/Aragon_BR-GTO_24s1_Q_v1.5.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "aragon/Aragon_BR-GTO_24s1_race_v1.5.sto",
+            },
+            {
+                file: "aragon/maf_aragon_23s4_q0.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "aragon/maf_aragon_23s4_r1.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -65,6 +103,9 @@ const seasonSetups = [
     {
         ...tracks.NAVARRA,
         "weekStart": "2024-12-31",
+        "notes": [
+            "First time at this track, check Discord for developing setups"
+        ],
         "audi90gto": [
         ],
         "nissangtpzxt": [
@@ -74,6 +115,21 @@ const seasonSetups = [
         ...tracks.HOCKENHEIM_GP,
         "weekStart": "2025-01-07",
         "audi90gto": [
+            {
+                file: "hockenheimring/23_S1_Hockenheim_1.0_Race.sto",
+            },
+            {
+                file: "hockenheimring/A90_23S1_Hockenheim_Y_Gijsen_R.sto",
+            },
+            {
+                file: "hockenheimring/hockenheim-23S1-r1.sto",
+            },
+            {
+                file: "hockenheimring/KB_2023-S1_Hockenheim-v2.sto",
+            },
+            {
+                file: "hockenheimring/JdelOlmoAudiHocken23S1C.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -93,6 +149,18 @@ const seasonSetups = [
             "Pit stop may be required"
         ],
         "audi90gto": [
+            {
+                file: "ctmp/ctmp-22S3-Marc-r1.sto",
+            },
+            {
+                file: "ctmp/ctmp-22S3-q2.sto",
+            },
+            {
+                file: "ctmp/ctmp-22S3-r1.sto",
+            },
+            {
+                file: "ctmp/ctmp-22S3-r4.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -108,6 +176,27 @@ const seasonSetups = [
         ...tracks.ALGARVE,
         "weekStart": "2025-01-21",
         "audi90gto": [            
+            {
+                file: "algarve/A90_Portimao_24S2_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "algarve/A90_Portimao_24S2_Y_Gijsen_R.sto",
+            },
+            {
+                file: "algarve/A90_Sliumba_24S2_portimao_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "algarve/A90_Sliumba_24S2_portimao_R.sto",
+            },
+            {
+                file: "algarve/maf_port_24s2_q2.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "algarve/maf_port_24s2_r2.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -216,6 +305,21 @@ const seasonSetups = [
             "Pit stop may be required"
         ],
         "audi90gto": [
+            {
+                file: "oschersleben/oschersleben-22s4-d_cloud-r.sto",
+            },
+            {
+                file: "oschersleben/oschersleben-22s4-e_gaudin-r.sto",
+            },
+            {
+                file: "oschersleben/oschersleben-22s4-j_del_olmo-r.sto",
+            },
+            {
+                file: "oschersleben/oschersleben-22s4-j_hamel-smith-r.sto",
+            },
+            {
+                file: "oschersleben/oschersleben-22s4-m_ollé-r.sto",
+            },
         ],
         "nissangtpzxt": [
             {
