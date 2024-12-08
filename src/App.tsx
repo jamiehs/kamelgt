@@ -5,7 +5,7 @@ import Timeslot from './components/Timeslot/Timeslot';
 import Broadcast from './components/Broadcast/Broadcast';
 import Announcement from './components/Announcement/Announcement';
 import Setups from './components/Setups/Setups';
-import seasonSetups from './data/season-setups';
+import {seasonSetups, seasonShortName} from './data/season-setups';
 import broadcasts from './data/broadcasts';
 import moment from 'moment';
 import {VCR_DISCORD_URL} from './data/constants';
@@ -117,7 +117,6 @@ class App extends React.Component<null, AppState> {
         } = this.state
 
         const hasBroadcastSearchQuery = Boolean(broadcastSearchQuery && broadcastSearchQuery !== '')
-
         return (
             <div className="App">
                 <header className="main-header">
@@ -281,7 +280,7 @@ class App extends React.Component<null, AppState> {
                     </dl>
                 </div>
                 <div id="setups" className="setups section">
-                    <h2 className="title">Setups</h2>
+                    <h2 className="title">Setups for {seasonShortName}</h2>
                     <Setups upcomingWeeks={3} />
                 </div>
                 <div className="format section">

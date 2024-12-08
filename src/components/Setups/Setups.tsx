@@ -14,6 +14,11 @@ function Setups(props: SetupsProps) {
     const {upcomingWeeks} = props
     var outputRoundsCount = 0
 
+    // Remove folder path and leading slash from raw filepath
+    function cleanSetupName(filename) {
+        return filename.replace(/^[^/]+\//, '')
+    }
+
     return (
         <div className="Setups">
             <div className="rounds-grid">
@@ -46,7 +51,7 @@ function Setups(props: SetupsProps) {
                                                 <ul>
                                                     {round.nissangtpzxt.map(setup => (
                                                         <li key={setup.file} className="setup-row">
-                                                            <a href={`/setups/nissangtpzxt/${setup.file}`}>{setup.file}</a>
+                                                            <a href={`/setups/nissangtpzxt/${setup.file}`}>{cleanSetupName(setup.file)}</a>
                                                             <span className="comment">{setup.comment}</span>
                                                         </li>
                                                     ))}
@@ -59,7 +64,7 @@ function Setups(props: SetupsProps) {
                                                 <ul>
                                                     {round.audi90gto.map(setup => (
                                                         <li key={setup.file} className="setup-row">
-                                                            <a href={`/setups/audi90gto/${setup.file}`}>{setup.file}</a>
+                                                            <a href={`/setups/audi90gto/${setup.file}`}>{cleanSetupName(setup.file)}</a>
                                                             <span className="comment">{setup.comment}</span>
                                                         </li>
                                                     ))}
