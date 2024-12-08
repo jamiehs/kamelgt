@@ -145,16 +145,19 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2024-04-07" expires="2024-04-14">
+                        <Announcement begins="2024-12-08" expires="2024-12-15">
                             <h3>
-                                This week is the Road America 500!
-                            </h3>
+                                It's Week 14! (Week 13 but a leap season)
+                            </h3>https://www.iracing.com/iracing-2024-season-4-week-14-schedule-released/
                             <p>
-                                The 16:00 GMT timeslot (top split) will be broadcast by GSRC. Check the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server (#ra500 channel)</a></span> for more details. You can also check <a href="https://forums.iracing.com/discussion/59686/2024-road-america-500-powered-by-simucube/p1" target="_blank" rel="noreferrer">the RA500 iRacing Forum post</a> for official info.
+                                Go race some <a href="https://www.iracing.com/iracing-development-update-november-2024/" target="_blank" rel="noreferrer">new Aussie Supercars or the BMW M2</a>, and <a href="https://www.youtube.com/watch?v=BiRp8RlUYa0" target="_blank" rel="noreferrer">scatter gravel all over the track</a> in <a href="https://www.youtube.com/watch?v=tTHVAFWY0BY" target="_blank" rel="noreferrer">the NSX GT3!</a>
                             </p>
-                            <p>
-                                <a href="#setups">A few setups for the Audi & Nissan</a> are posted below.
-                            </p>
+                            <p>Not sure what Week 13/14 is all about?</p>
+                            <ul>
+                                <li><a href="https://www.iracing.com/iracing-2024-season-4-week-14-schedule-released/" target="_blank" rel="noreferrer">Official iRacing post on Week 13/14</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=4KgY8Br4MXo" target="_blank" rel="noreferrer">Emree talks about what we can expect to see in the new build</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=y6d4C_aierg" target="_blank" rel="noreferrer">Matt Malone explains week 13</a></li>
+                            </ul>
                         </Announcement>
                     </div>
                 </div>
