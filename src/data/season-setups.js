@@ -225,6 +225,13 @@ const seasonSetups = [
         ...tracks.LIME_ROCK_CLASSIC,
         "weekStart": "2025-01-28",
         "audi90gto": [
+            {
+                file: "lime-rock-park/A90_LimeRockC_21S2_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "lime-rock-park/A90_LimeRockC_21S2_Y_Gijsen_R.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -240,6 +247,22 @@ const seasonSetups = [
         ...tracks.BRANDS_HATCH,
         "weekStart": "2025-02-04",
         "audi90gto": [
+            {
+                file: "brands-hatch/A90_Brands_22S3_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "brands-hatch/A90_Brands_22S3_Y_Gijsen_R.sto",
+            },
+            {
+                file: "brands-hatch/brands-21S3-r2.sto",
+            },
+            {
+                file: "brands-hatch/brands-hatch-21S3_MarcOlle_2.2_Race.sto",
+            },
+            {
+                file: "brands-hatch/brands-hatch-21S3_Marti.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -254,7 +277,17 @@ const seasonSetups = [
     {
         ...tracks.SILVERSTONE_GP,
         "weekStart": "2025-02-11",
+        "notes": [
+            "We have not raced this version and layout in over 4 years, if ever!",
+        ],
         "audi90gto": [
+            {
+                file: "silverstone/A90_Silverstone08H_23S2_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "silverstone/A90_Silverstone08H_23S2_Y_Gijsen_R.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -276,6 +309,29 @@ const seasonSetups = [
         ...tracks.FUJI_NO_CHICANE,
         "weekStart": "2025-02-18",
         "audi90gto": [
+            {
+                file: "fuji/andrius_sl_fuji_24S1_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "fuji/andrius_sl_fuji_24S1_R.sto",
+            },
+            {
+                file: "fuji/A90 - 22S4 - Fuji - Y Gijsen - 221005 - Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "fuji/A90 - 22S4 - Fuji - Y Gijsen - 221005 - R.sto",
+            },
+            {
+                file: "fuji/A90 - 22S4 - Fuji - J Del Olmo - R.sto",
+            },
+            {
+                file: "fuji/fuji-22-S3-r-01.sto",
+            },
+            {
+                file: "fuji/KB_2022-S3_Fuji_R.sto",
+            },
         ],
         "nissangtpzxt": [
             {
@@ -335,6 +391,23 @@ const seasonSetups = [
         ...tracks.SONOMA_NASCAR_LONG,
         "weekStart": "2025-03-04",
         "audi90gto": [
+            {
+                file: "sonoma/A90_Sonoma_24S2_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "sonoma/A90_Sonoma_24S2_Y_Gijsen_R.sto",
+            },
+            {
+                file: "sonoma/maf_sonoma_24s2_q5.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "sonoma/maf_sonoma_24s2_r5.sto",
+            },
+            {
+                file: "sonoma/Sonoma.sto",
+            },
         ],
         "nissangtpzxt": [
             {
