@@ -145,7 +145,7 @@ const seasonSetups = [
         ...tracks.MOSPORT,
         "weekStart": "2025-01-14",
         "notes": [
-            "60 minute endurance round",
+            "70 minute endurance round",
             "Pit stop may be required"
         ],
         "audi90gto": [
