@@ -1107,43 +1107,43 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.MUGELLO,
-                url: ""
+                url: "https://youtu.be/PNp8wG8iO-U?t=1063"
             },
             {
                 ...tracks.ARAGON_MOTORCYCLE_GP,
-                url: ""
+                url: "https://youtu.be/Dn3nSfRC7c8?t=992"
             },
             {
                 ...tracks.NAVARRA,
-                url: ""
+                url: "https://youtu.be/c9GkB45BJEQ?t=1136"
             },
             {
                 ...tracks.HOCKENHEIM_GP,
-                url: ""
+                url: "https://youtu.be/YZqQsTzIeuo?t=1106"
             },
             {
                 ...tracks.MOSPORT,
-                url: ""
+                url: "https://youtu.be/6CaZVF0nC5c?t=1124"
             },
             {
                 ...tracks.ALGARVE,
-                url: ""
+                url: "https://youtu.be/4UfbvicKkZE?t=1189"
             },
             {
                 ...tracks.LIME_ROCK_CLASSIC,
-                url: ""
+                url: "https://youtu.be/GzFgCtOsuXU?t=1098"
             },
             {
                 ...tracks.BRANDS_HATCH,
-                url: ""
+                url: "https://youtu.be/CfdkZfdc1rg?t=1129"
             },
             {
                 ...tracks.SILVERSTONE_GP,
-                url: ""
+                url: "https://youtu.be/_4-91Q58ZAA?t=1122"
             },
             {
                 ...tracks.FUJI_NO_CHICANE,
-                url: ""
+                url: "https://youtu.be/fAseeQRSM8U?t=966"
             },
             {
                 ...tracks.OSCHERSLEBEN,
