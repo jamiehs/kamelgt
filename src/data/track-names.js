@@ -265,6 +265,9 @@ export const SUMMIT_POINT = {
 export const SUZUKA = {
     title: "Suzuka"
 }
+export const THRUXTON = {
+    title: "Thruxton Circuit"
+}
 export const TSUKUBA = {
     title: "Tsukuba",
     alternateTitle: "Tsukuba Circuit"
