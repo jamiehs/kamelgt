@@ -1147,10 +1147,66 @@ const broadcasts = [
             },
             {
                 ...tracks.OSCHERSLEBEN,
-                url: ""
+                url: "https://youtu.be/TXZkv1M9-Gw?t=1038"
             },
             {
                 ...tracks.SONOMA_NASCAR_LONG,
+                url: "https://youtu.be/lVh0MWruTQQ?t=984"
+            }
+        ]
+    },
+    {
+        id: "25S2",
+        label: "2025 Season 2",
+        startDate: "2024-03-18",
+        endDate: "2025-06-03",
+        youTube: [
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: ""
+            },
+            {
+                ...tracks.WILLOW_SPRINGS,
+                url: ""
+            },
+            {
+                ...tracks.THRUXTON,
+                url: ""
+            },
+            {
+                ...tracks.BATHURST,
+                url: ""
+            },
+            {
+                ...tracks.LONG_BEACH,
+                url: ""
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: ""
+            },
+            {
+                ...tracks.INDY_ROAD,
+                url: ""
+            },
+            {
+                ...tracks.SUMMIT_POINT,
+                url: ""
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: ""
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: ""
+            },
+            {
+                ...tracks.ZANDVOORT,
+                url: ""
+            },
+            {
+                ...tracks.LE_MANS_HISTORIC,
                 url: ""
             }
         ]
