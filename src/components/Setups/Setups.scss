@@ -82,7 +82,11 @@
         }
 
         .notes {
-            margin-bottom: 0.33em;
+            margin-bottom: 0.17em;
+
+            .note {
+                margin-bottom: 0.15em;
+            }
         }
     }
 
