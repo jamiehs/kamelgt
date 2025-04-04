@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tunnel": "npx localtunnel --subdomain kamelgt --port 3000"
+    "tunnel": "npx localtunnel --subdomain kamelgt --port 3000",
+    "cleanup": "find . -name \"*.Identifier\" -type f -delete"
   },
   "eslintConfig": {
     "extends": [
