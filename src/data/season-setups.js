@@ -287,16 +287,43 @@ const seasonSetups = [
     {
         ...tracks.INDY_ROAD,
         "weekStart": "2025-04-29",
+        "notes": [
+            "It has been over 2 years since our last visit!"
+        ],
         "audi90gto": [
             {
-                file: "",
-                comment: ""
+                file: "indy-road/A90_Indy09_21S2_Y_Gijsen_R.sto",
+            },
+            {
+                file: "indy-road/A90_Indy09_21S2_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "indy-road/JdelOlmoIndi23S1E.sto",
+            },
+            {
+                file: "indy-road/Indy_Road_1.1.sto",
+            },
+            {
+                file: "indy-road/Indy_a6_90l.sto",
+            },
+            {
+                file: "indy-road/23S1_Indy-road_R.sto",
             },
         ],
         "nissangtpzxt": [
             {
-                file: "",
-                comment: ""
+                file: "indy-road/Lgo23S1_Indy_RC_MH_Silverstone_Int_R_R62.sto",
+            },
+            {
+                file: "indy-road/Lgo23S1_Indy_RC_MH_Silverstone_Int_R_Q62.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "indy-road/NGTP_Indianapolis22_1-5.sto",
+            },
+            {
+                file: "indy-road/asg-indy-rNGTP_1-5.sto",
             },
         ]
     },
