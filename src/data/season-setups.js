@@ -81,6 +81,39 @@ const seasonSetups = [
         "notes": [
             "This is IMSA Vintage’s first visit to Thruxton"
         ],
+        "audi90gto": [
+            {
+                file: "thruxton/A90_Thruxton_25S2_Y_Gijsen_R.sto",
+            },
+            {
+                file: "thruxton/A90_Thruxton_25S2_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "thruxton/maf_thruxton_25s2_r3.sto",
+            },
+            {
+                file: "thruxton/maf_thruxton_25s2_q3.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "thruxton/DWC_25S2_Thruxton_R3.sto",
+            },
+            {
+                file: "thruxton/Thruxton27c.sto",
+                comment: "From audriusv"
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "thruxton/Thruxton27c.sto",
+                comment: "From audriusv"
+            },
+            {
+                file: "thruxton/Lgo25S2_Thruxton_R60.sto",
+                comment: "From Laust"
+            },
+        ]
     },
     {
         ...tracks.BATHURST,
