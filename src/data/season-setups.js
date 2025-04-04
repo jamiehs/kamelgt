@@ -269,23 +269,18 @@ const seasonSetups = [
             },
             {
                 file: "road-america/GTP_RoadAmerica_JdelOlmoR.sto",
-                comment: ""
             },
             {
                 file: "road-america/Lgo20S3_Road_America_high_downforce_R77.sto",
-                comment: ""
             },
             {
                 file: "road-america/road_america_22s4_Full_R_v1-4.sto",
-                comment: ""
             },
             {
                 file: "road-america/SDC_23S2_GTP_RAMERICA_RACEv0.86.sto",
-                comment: ""
             },
             {
                 file: "road-america/SDC_23S2_GTP_RAMERICA_QUALYv0.85.sto",
-                comment: ""
             },
         ]
     },
