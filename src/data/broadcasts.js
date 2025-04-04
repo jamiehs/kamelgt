@@ -1163,11 +1163,13 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.ROAD_ATLANTA,
-                url: ""
+                url: "https://youtu.be/8TFsn87BhA4?t=868",
+                splits: 2,
             },
             {
                 ...tracks.WILLOW_SPRINGS,
-                url: ""
+                url: "https://youtu.be/sxuu4KGa2Y4?t=1019",
+                splits: 1,
             },
             {
                 ...tracks.THRUXTON,
