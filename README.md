@@ -39,7 +39,7 @@ In `App.tsx` the timeslots are defined as follows:
 
 ### Data Sources
 
-The main two data sources of the project are the `season-setups.js` and `broadcasts.js` files. They both depend on the `track-names.js` files and these track names are spread into the broadcasts for titling, and the `alternateTitle` property is used for easier searching; a user can search for either "Nürburgring" or "Nurburgring" and they will both yield results, for example.
+The main two data sources of the project are the `season-setups.js` and `broadcasts.js` files. They both depend on the `track-data.js` files and these track names are spread into the broadcasts for titling, and the `alternateTitle` property is used for easier searching; a user can search for either "Nürburgring" or "Nurburgring" and they will both yield results, for example.
 
 
 #### Season Setups
