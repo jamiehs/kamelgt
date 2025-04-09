@@ -354,18 +354,6 @@ export const ROAD_AMERICA = {
     setups: {
         "audi90gto": [
             {
-                file: "road-america/maf_RA500_24s2_R.sto",
-                comment: "RA500 setup"
-            },
-            {
-                file: "road-america/RA500_2023_1.2_120L_RACE_1.sto",
-                comment: "RA500 setup"
-            },
-            {
-                file: "road-america/A90_RoadAmerica_24S2_Y_Gijsen_R500.sto",
-                comment: "RA500 setup"
-            },
-            {
                 file: "road-america/A90_RoadAmerica_23S2_Y_Gijsen_R.sto",
             },
             {
@@ -382,18 +370,6 @@ export const ROAD_AMERICA = {
         ],
         "nissangtpzxt": [
             {
-                file: "road-america/F122_NGTP_RA500_1-7.sto",
-                comment: "RA500 setup"
-            },
-            {
-                file: "road-america/F122_NGTP_RA500_1-7_Q.sto",
-                comment: "RA500 Qualifying setup"
-            },
-            {
-                file: "road-america/SDC_24s2_GTP_R500_R1.1.2.sto",
-                comment: "RA500 setup"
-            },
-            {
                 file: "road-america/GTP_RoadAmerica_JdelOlmoR.sto",
             },
             {
@@ -408,6 +384,41 @@ export const ROAD_AMERICA = {
             {
                 file: "road-america/SDC_23S2_GTP_RAMERICA_QUALYv0.85.sto",
             },
+        ]
+    }
+}
+export const ROAD_AMERICA_500 = {
+    title: "Road America 500",
+    setups: {
+        "audi90gto": [
+            {
+                file: "road-america/maf_RA500_24s2_R.sto",
+                comment: "RA500 setup"
+            },
+            {
+                file: "road-america/RA500_2023_1.2_120L_RACE_1.sto",
+                comment: "RA500 setup"
+            },
+            {
+                file: "road-america/A90_RoadAmerica_24S2_Y_Gijsen_R500.sto",
+                comment: "RA500 setup"
+            },
+            ...ROAD_AMERICA.setups.audi90gto
+        ],
+        "nissangtpzxt": [
+            {
+                file: "road-america/F122_NGTP_RA500_1-7.sto",
+                comment: "RA500 setup"
+            },
+            {
+                file: "road-america/F122_NGTP_RA500_1-7_Q.sto",
+                comment: "RA500 Qualifying setup"
+            },
+            {
+                file: "road-america/SDC_24s2_GTP_R500_R1.1.2.sto",
+                comment: "RA500 setup"
+            },
+            ...ROAD_AMERICA.setups.nissangtpzxt
         ]
     }
 }

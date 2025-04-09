@@ -30,10 +30,11 @@ const seasonSetups = [
         "weekStart": "2025-04-15",
     },
     {
-        ...tracks.ROAD_AMERICA,
+        ...tracks.ROAD_AMERICA_500,
         "weekStart": "2025-04-22",
         "notes": [
-            "Road America 500 (special event week)"
+            "Road America 500 (special event week)",
+            "Road America (40 min) during the week, and the Road America 500 race on the weekend (4 time slots)"
         ],
     },
     {
