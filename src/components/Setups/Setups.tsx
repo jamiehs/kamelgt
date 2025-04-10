@@ -3,6 +3,7 @@ import './Setups.scss'
 import {VCR_DISCORD_URL} from '../../data/constants'
 
 import seasonSetups from '../../data/season-setups'
+import trackData from '../../data/track-data'
 const sortedRounds = seasonSetups.sort((a,b) => {
     return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
 })
@@ -19,6 +20,8 @@ function Setups(props: SetupsProps) {
         return filename.replace(/^[^/]+\//, '')
     }
 
+    console.log(trackData)
+
     return (
         <div className="Setups">
             <div className="rounds-grid">
@@ -31,7 +34,7 @@ function Setups(props: SetupsProps) {
                     let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5))
                     
                     let upcomingRound = weekEndGmt > new Date();
-                    const setupsExist = (round.audi90gto && round.audi90gto.length > 0) || (round.nissangtpzxt && round.nissangtpzxt.length > 0)
+                    const setupsExist = (round.setups?.audi90gto && round.setups?.audi90gto.length > 0) || (round.setups?.nissangtpzxt && round.setups?.nissangtpzxt.length > 0)
 
                     if(upcomingRound && outputRoundsCount < upcomingWeeks) {
                         outputRoundsCount++
@@ -45,11 +48,11 @@ function Setups(props: SetupsProps) {
                                 )}
                                 {setupsExist ? (
                                     <div className="cars-grid">
-                                        {round.nissangtpzxt.length > 0 && (
+                                        {round.setups?.nissangtpzxt.length > 0 && (
                                             <div>
                                                 <span className="car badge" data-class="first">Nissan GTP</span>
                                                 <ul>
-                                                    {round.nissangtpzxt.map(setup => (
+                                                    {round.setups?.nissangtpzxt.map(setup => (
                                                         <li key={setup.file} className="setup-row">
                                                             <a href={`/setups/nissangtpzxt/${setup.file}`}>{cleanSetupName(setup.file)}</a>
                                                             <span className="comment">{setup.comment}</span>
@@ -58,11 +61,11 @@ function Setups(props: SetupsProps) {
                                                 </ul>
                                             </div>
                                         )}
-                                        {round.audi90gto.length > 0 && (
+                                        {round.setups?.audi90gto.length > 0 && (
                                             <div>
                                                 <span className="car badge" data-class="second">Audi GTO</span>
                                                 <ul>
-                                                    {round.audi90gto.map(setup => (
+                                                    {round.setups?.audi90gto.map(setup => (
                                                         <li key={setup.file} className="setup-row">
                                                             <a href={`/setups/audi90gto/${setup.file}`}>{cleanSetupName(setup.file)}</a>
                                                             <span className="comment">{setup.comment}</span>
