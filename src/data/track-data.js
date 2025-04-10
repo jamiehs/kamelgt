@@ -23,6 +23,13 @@ export const BATHURST = {
     setups: {
         "audi90gto": [
             {
+                file: "bathurst/Bathurst60min.sto",
+                comment: "From audriusv",
+            },
+            {
+                file: "bathurst/MH_Bathurst_R_v1.sto",
+            },
+            {
                 file: "bathurst/23S1_Buthurt_R.sto",
             },
             {
@@ -47,6 +54,20 @@ export const BATHURST = {
             },
         ],
         "nissangtpzxt": [
+            {
+                file: "bathurst/Bathurst60min.sto",
+                comment: "From audriusv",
+            },
+            {
+                file: "bathurst/F122_NGTP_Bathurst_1-9.sto",
+            },
+            {
+                file: "bathurst/NGTP_BATH_Q_ALEX_FRI.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "bathurst/NGTP_BATH_R_ALEX_FRI.sto",
+            },
             {
                 file: "bathurst/BL_Bathurst_R8-2.sto",
             },

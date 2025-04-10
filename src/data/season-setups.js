@@ -41,7 +41,7 @@ const seasonSetups = [
         ...tracks.INDY_ROAD,
         "weekStart": "2025-04-29",
         "notes": [
-            "It has been over 2 years since our last visit!"
+            "It has been over 2 years since our last visit to Indianapolis Motor Speedway!"
         ],
     },
     {
