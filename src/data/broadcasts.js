@@ -1173,23 +1173,23 @@ const broadcasts = [
             },
             {
                 ...tracks.THRUXTON,
-                url: ""
+                url: "https://youtu.be/i9xscc3vjFI?t=491"
             },
             {
                 ...tracks.BATHURST,
-                url: ""
+                url: "https://youtu.be/90AHnc8HX5E?t=502"
             },
             {
                 ...tracks.LONG_BEACH,
-                url: ""
+                url: "https://youtu.be/g-r5Xwx6SHI?t=491"
             },
             {
                 ...tracks.ROAD_AMERICA,
-                url: ""
+                url: "https://youtu.be/payYYy-VpsE?t=946"
             },
             {
                 ...tracks.INDY_ROAD,
-                url: ""
+                url: "https://youtu.be/Gcm9chTmqGc?t=548"
             },
             {
                 ...tracks.SUMMIT_POINT,
