@@ -221,7 +221,34 @@ export const LE_MANS = {
 }
 export const LE_MANS_HISTORIC = {
     title: "Le Mans Historic",
-    alternateTitle: "Circuit des 24 Heures du Mans - Historic"
+    alternateTitle: "Circuit des 24 Heures du Mans - Historic",
+    setups: {
+        "audi90gto": [
+            {
+                file: "lemans/A90_23S3_LeMansH_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "lemans/A90_23S3_LeMansH_Y_Gijsen_R.sto",
+            },
+            {
+                file: "lemans/GTO_LeMans_H_Q5.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "lemans/GTO_LeMans_H_R1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "lemans/Lgo23S3_LeMans_Hist_AG_Indy_2W8_Q10.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "lemans/Lgo23S3_LeMans_Hist_AG_Indy_2W8_R10.sto",
+            },
+        ]
+    }
 }
 export const LIME_ROCK_CLASSIC = {
     title: "Lime Rock Park - Classic"
@@ -361,7 +388,48 @@ export const OULTON_PARK_INTL_NO_CHICANES = {
     title: "Oulton Park - Intl w/no Chicanes"
 }
 export const PHILLIP_ISLAND = {
-    title: "Phillip Island"
+    title: "Phillip Island",
+    setups: {
+        "audi90gto": [
+            {
+                file: "phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_R.sto",
+            },
+            {
+                file: "phillip-island/phillip-island-22S3-Phil3.1.1.sto",
+            },
+            {
+                file: "phillip-island/phillip-island-22S3-r1.sto",
+            },
+            {
+                file: "phillip-island/phillip-island-22S3-Y_Gijsen-220727-R.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "phillip-island/Lgo22S3_Phillip_Island_AG_WGI_6W1_Q62.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "phillip-island/Lgo22S3_Phillip_Island_AG_WGI_6W1_R62 v3.sto",
+            },
+            {
+                file: "phillip-island/LH_Phillip_Island_R.sto",
+            },
+            {
+                file: "phillip-island/phillip-island-22S3_1-1.sto",
+            },
+            {
+                file: "phillip-island/phillip-island-22S3_wing7_R6.sto",
+            },
+            {
+                file: "phillip-island/phillip-island-22S3-Lgo_AG_WGI_6W1_R62.sto",
+            },
+        ]
+    }
 }
 export const PHOENIX_2008_OVAL = {
     title: "Phoenix Oval",
@@ -503,15 +571,67 @@ export const SONOMA_NASCAR_LONG = {
 }
 export const SPA_CLASSIC_PITS = {
     title: "Spa",
-    alternateTitle: "Circuit de Spa-Francorchamps - Classic Pits"
+    alternateTitle: "Circuit de Spa-Francorchamps - Classic Pits",
+    setups: {
+        "audi90gto": [
+            {
+                file: "spa/A90_Sliumba_24S2_spa_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "spa/A90_Sliumba_24S2_spa_R2.sto",
+            },
+            {
+                file: "spa/maf_spa_r3.sto",
+            },
+            {
+                file: "spa/javier_spa_2022s4_4_ascR.sto",
+            },
+            {
+                file: "spa/A90_23S3_Spa_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "spa/A90_23S3_Spa_Y_Gijsen_R.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "spa/F122_NGTP_Spa_1-2_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "spa/F122_NGTP_Spa_1-2.sto",
+            },
+            {
+                file: "spa/GTP_Spa_JdelOlmoR.sto",
+            },
+            {
+                file: "spa/Lgo24S2_Spa_Q50.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "spa/Lgo24S2_Spa_R50.sto",
+            },
+            {
+                file: "spa/rgeada_spa_q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "spa/rgeada_spa_r.sto",
+            },
+        ]
+    }
 }
 export const SPA_ENDURANCE_PITS = {
     title: "Spa",
-    alternateTitle: "Circuit de Spa-Francorchamps - Endurance Pits"
+    alternateTitle: "Circuit de Spa-Francorchamps - Endurance Pits",
+    setups: {...SPA_CLASSIC_PITS.setups}
 }
 export const SPA_GRAND_PRIX_PITS = {
     title: "Spa",
-    alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits"
+    alternateTitle: "Circuit de Spa-Francorchamps - Grand Prix Pits",
+    setups: {...SPA_CLASSIC_PITS.setups}
 }
 export const SUMMIT_POINT = {
     title: "Summit Point",
@@ -625,7 +745,47 @@ export const WILLOW_SPRINGS = {
     title: "Willow Springs"
 }
 export const ZANDVOORT = {
-    title: "Zandvoort"
+    title: "Zandvoort",
+    setups: {
+        "audi90gto": [
+            {
+                file: "zandvoort/A90_Zandvoort_23S4_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "zandvoort/A90_Zandvoort_23S4_Y_Gijsen_R.sto",
+            },
+            {
+                file: "zandvoort/Zandvoort_S3_2021_1.3_34oC_RACE.sto",
+            },
+            {
+                file: "zandvoort/zandvoort-21S3-r4.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "zandvoort/GTP_ZandvoortJdelOlmoQ.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "zandvoort/GTP_ZandvoortJdelOlmo.sto",
+            },
+            {
+                file: "zandvoort/Lgo23S4_Zandvoort_GP_Q62.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "zandvoort/Lgo23S4_Zandvoort_GP_R53.sto",
+            },
+            {
+                file: "zandvoort/ZAND_NGTP_Q_ALEX.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "zandvoort/ZAND_NGTP_R_ALEX.sto",
+            },
+        ]
+    }
 }
 export const ZOLDER = {
     title: "Zolder",
