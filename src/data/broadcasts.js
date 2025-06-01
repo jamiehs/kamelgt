@@ -1193,19 +1193,19 @@ const broadcasts = [
             },
             {
                 ...tracks.SUMMIT_POINT,
-                url: ""
+                url: "https://youtu.be/0h3VqBPY3fo?t=866"
             },
             {
                 ...tracks.SPA_CLASSIC_PITS,
-                url: ""
+                url: "https://youtu.be/4pdpq_IMvOQ?t=609"
             },
             {
                 ...tracks.PHILLIP_ISLAND,
-                url: ""
+                url: "https://youtu.be/uqPVCPktOqs?t=933"
             },
             {
                 ...tracks.ZANDVOORT,
-                url: ""
+                url: "https://youtu.be/0u6WH7lclbo?t=1051"
             },
             {
                 ...tracks.LE_MANS_HISTORIC,
