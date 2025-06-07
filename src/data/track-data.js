@@ -232,6 +232,13 @@ export const LE_MANS_HISTORIC = {
                 file: "lemans/A90_23S3_LeMansH_Y_Gijsen_R.sto",
             },
             {
+                file: "lemans/A90_kb_lemans_q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "lemans/A90_kb_lemans_r.sto",
+            },
+            {
                 file: "lemans/GTO_LeMans_H_Q5.sto",
                 comment: "Qualifying setup"
             },
