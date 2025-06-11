@@ -102,9 +102,6 @@ export const BELLE_ISLE = {
 export const BRANDS_HATCH = {
     title: "Brands Hatch"
 }
-export const CANADIAN_TIRE_MOSPORT_CTMP = {
-    title: "Canadian Tire Motorsports Park"
-}
 export const CHARLOTTE_ROVAL = {
     title: "Charlotte - Roval"
 }
@@ -140,11 +137,65 @@ export const HOCKENHEIM_OUTER = {
 }
 export const HOMESTEAD_MIAMI_ROAD_A = {
     title: "Homestead Miami - Road A",
-    alternateTitle: "Homestead Miami Speedway - Road Course A"
+    alternateTitle: "Homestead Miami Speedway - Road Course A",
+    setups: {
+        "audi90gto": [
+            {
+                file: "miami-homestead/A90_23S3_Homestead_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "miami-homestead/A90_23S3_Homestead_Y_Gijsen_R.sto",
+            },
+            {
+                file: "miami-homestead/homestead-22-S2-r-03.sto",
+            },
+            {
+                file: "miami-homestead/homestead-22S2-q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "miami-homestead/homestead-22S2-r4.sto",
+            },
+            {
+                file: "miami-homestead/homestead-23S3-r1.sto",
+            },
+            {
+                file: "miami-homestead/Miami2022S2b.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "miami-homestead/BL_HomesteadA_Q.2.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "miami-homestead/BL_HomesteadA_R.2.sto",
+            },
+            {
+                file: "miami-homestead/F122_NGTP_MiamiA_1-3_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "miami-homestead/F122_NGTP_MiamiA_1-3.sto",
+            },
+            {
+                file: "miami-homestead/F122_NGTP_MiamiA_1-5_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "miami-homestead/F122_NGTP_MiamiA_1-5.sto",
+            },
+            {
+                file: "miami-homestead/Lgo23S3_HomesteadB_R31.sto",
+            },
+        ]
+    }
 }
 export const HOMESTEAD_MIAMI_ROAD_B = {
     title: "Homestead Miami - Road B",
-    alternateTitle: "Homestead Miami Speedway - Road Course B"
+    alternateTitle: "Homestead Miami Speedway - Road Course B",
+    setups: HOMESTEAD_MIAMI_ROAD_A.setups
 }
 export const HUNGARORING = {
     title: "Hungaroring"
@@ -320,7 +371,50 @@ export const MAGNY_COURS = {
     title: "Magny-Cours"
 }
 export const MID_OHIO = {
-    title: "Mid-Ohio"
+    title: "Mid-Ohio",
+    setups: {
+        "audi90gto": [
+            {
+                file: "mid-ohio/A90_MidOhio_23S1_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mid-ohio/A90_MidOhio_23S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "mid-ohio/maf_midohio_24s4_q0.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mid-ohio/maf_midohio_24s4_r0.sto",
+            },
+            {
+                file: "mid-ohio/mid-ohio-22S1-r3.sto",
+            },
+            {
+                file: "mid-ohio/Mid-Ohio30c.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "mid-ohio/GTP_MidOhio_JdelOlmoR.sto",
+            },
+            {
+                file: "mid-ohio/Mid-Ohio30c Q v2.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mid-ohio/Mid-Ohio30c v3.sto",
+            },
+            {
+                file: "mid-ohio/NGTP_OHIO_Q_ALEX WED.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "mid-ohio/NGTP_OHIO_R_ALEX WED.sto",
+            },
+        ]
+    }
 }
 export const MID_OHIO_CHICANE = {
     title: "Mid-Ohio - Chicane"
@@ -345,8 +439,38 @@ export const MONZA_COMBINED_WITHOUT_FIRST_CHICANE = {
     alternateTitle: "Autodromo Nazionale di Monza - Combined without first chicane"
 }
 export const MOSPORT = {
-    title: "CTMP 'Mosport'",
-    alternateTitle: "Canadian Tire Motorsport Park"
+    title: "Canadian Tire Motorsport Park",
+    alternateTitle: "CTMP 'Mosport'",
+    setups: {
+        "audi90gto": [
+            {
+                file: "ctmp/A90_Mosport_ 23S3_Y_Gijsen_Q.sto",
+            },
+            {
+                file: "ctmp/A90_Mosport_ 23S3_Y_Gijsen_R.sto",
+            },
+            {
+                file: "ctmp/ctmp-22S3-Marc-r1.sto",
+            },
+            {
+                file: "ctmp/ctmp-22S3-q2.sto",
+            },
+            {
+                file: "ctmp/ctmp-22S3-r4.sto",
+            },
+            {
+                file: "ctmp/mosport-21S4-r4.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_Q64.sto",
+            },
+            {
+                file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_R63.sto",
+            },
+        ]
+    }
 }
 export const MUGELLO = {
     title: "Mugello",
@@ -369,15 +493,69 @@ export const NURBURGRING_COMBINED_GESAMTSTRECKE_VLN = {
 }
 export const NURBURGRING_GP = {
     title: "Nürburgring GP",
-    alternateTitle: "Nurburgring GP"
+    alternateTitle: "Nurburgring GP",
+    setups: {
+        "audi90gto": [
+            {
+                file: "nurburgring-gp/A90_NurbGP_24S1_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "nurburgring-gp/A90_NurbGP_24S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "nurburgring-gp/maf_nurbgp_24s1_q1.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "nurburgring-gp/maf_nurbgp_24s1_r1.sto",
+            },
+            {
+                file: "nurburgring-gp/NurbGP_BR-GTO_Q_v1.2.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "nurburgring-gp/NurbGP_BR-GTO_race_v1.2.sto",
+            },
+            {
+                file: "nurburgring-gp/nurburgring-gp-22S3_andreas.sto",
+            },
+            {
+                file: "nurburgring-gp/nurburgring-gp-22S3_JavierNurg4.1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "nurburgring-gp/nurburgring-gp-22S3_Ferran_1-2.sto",
+            },
+            {
+                file: "nurburgring-gp/nurburgring-gp-22S3_MH_R_v1.1.sto",
+            },
+            {
+                file: "nurburgring-gp/Lgo24S1_Nur_BES_WEC_Q70.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "nurburgring-gp/Lgo24S1_Nur_BES_WEC_R70.sto",
+            },
+            {
+                file: "nurburgring-gp/GTP_Nurb_JdelOlmoR.sto",
+            },
+            {
+                file: "nurburgring-gp/GTP_Nurb_JdelOlmoRNascar.sto",
+            },
+        ]
+    }
 }
 export const NURBURGRING_GP_BES_WEC = {
     title: "Nürburgring GP BES/WEC",
-    alternateTitle: "Nurburgring GP BES/WEC"
+    alternateTitle: "Nurburgring GP BES/WEC",
+    setups: NURBURGRING_GP.setups,
 }
 export const NURBURGRING_GP_WITHOUT_ARENA = {
     title: "Nürburgring GP without arena",
-    alternateTitle: "Nurburgring GP without arena"
+    alternateTitle: "Nurburgring GP without arena",
+    setups: NURBURGRING_GP.setups,
 }
 export const OKAYAMA = {
     title: "Okayama"
@@ -437,6 +615,12 @@ export const PHILLIP_ISLAND = {
             },
         ]
     }
+}
+export const PORTLAND = {
+    title: "Portland International Raceway"
+}
+export const PORTLAND_NO_CHICANE = {
+    title: "Portland International Raceway - No Chicane"
 }
 export const PHOENIX_2008_OVAL = {
     title: "Phoenix Oval",
@@ -684,7 +868,54 @@ export const SUMMIT_POINT = {
     }
 }
 export const SUZUKA = {
-    title: "Suzuka"
+    title: "Suzuka",
+    setups: {
+        "audi90gto": [
+            {
+                file: "suzuka/A90_Suzuka_23S4_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "suzuka/A90_Suzuka_23S4_Y_Gijsen_R.sto",
+            },
+            {
+                file: "suzuka/suzuka-23s1-arturas-saturday.sto",
+            },
+            {
+                file: "suzuka/suzuka-23S1-Javier-r2.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "suzuka/BL_Suzuka_Q7.1.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "suzuka/BL_Suzuka_R7.1.sto",
+            },
+            {
+                file: "suzuka/F122_NGTP_Suzuka_1-3_Q.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "suzuka/F122_NGTP_Suzuka_1-3.sto",
+            },
+            {
+                file: "suzuka/JW-Suzuka-Quali-V3.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "suzuka/JW-Suzuka-Race-V3.sto",
+            },
+            {
+                file: "suzuka/NGTP_SUZU_Q_ALEX WED.sto",
+                comment: "Qualifying setup"
+            },
+            {
+                file: "suzuka/NGTP_SUZU_R_ALEX WED.sto",
+            },
+        ]
+    }
 }
 export const THRUXTON = {
     title: "Thruxton Circuit",
@@ -813,7 +1044,6 @@ const trackData = {
     BARCELONA_HISTORIC,
     BELLE_ISLE,
     BRANDS_HATCH,
-    CANADIAN_TIRE_MOSPORT_CTMP,
     CHARLOTTE_ROVAL,
     COTA,
     DAYTONA,
@@ -863,6 +1093,8 @@ const trackData = {
     OULTON_PARK_INTL_WOUT_HISLOP,
     OULTON_PARK_INTL_NO_CHICANES,
     PHILLIP_ISLAND,
+    PORTLAND,
+    PORTLAND_NO_CHICANE,
     PHOENIX_2008_OVAL,
     RED_BULL_RING,
     ROAD_AMERICA,

@@ -3,73 +3,63 @@ import * as tracks from './track-data.js';
 const seasonShortName = "25S2"
 const seasonSetups = [
     {
-        ...tracks.ROAD_ATLANTA,
-        "weekStart": "2025-03-18",
+        ...tracks.NURBURGRING_GP_BES_WEC,
+        "weekStart": "2025-06-17",
     },
     {
-        ...tracks.WILLOW_SPRINGS,
-        "weekStart": "2025-03-25",
+        ...tracks.MID_OHIO,
+        "weekStart": "2025-06-24",
     },
     {
-        ...tracks.THRUXTON,
-        "weekStart": "2025-04-01",
+        ...tracks.PORTLAND_NO_CHICANE,
+        "weekStart": "2025-07-01",
         "notes": [
-            "This is IMSA Vintage’s first visit to Thruxton"
-        ],
+            "This is our first visit to Portland!"
+        ]
     },
     {
-        ...tracks.BATHURST,
-        "weekStart": "2025-04-08",
-        "notes": [
-            "60 mintue endurance round",
-            "Fuel stop likely required"
-        ],
-    },
-    {
-        ...tracks.LONG_BEACH,
-        "weekStart": "2025-04-15",
-    },
-    {
-        ...tracks.ROAD_AMERICA_500,
-        "weekStart": "2025-04-22",
-        "notes": [
-            "Road America 500 (special event week)",
-            "Road America (40 min) during the week, and the Road America 500 race on the weekend (4 time slots)"
-        ],
-    },
-    {
-        ...tracks.INDY_ROAD,
-        "weekStart": "2025-04-29",
-        "notes": [
-            "It has been over 2 years since our last visit to Indianapolis Motor Speedway!"
-        ],
-    },
-    {
-        ...tracks.SUMMIT_POINT,
-        "weekStart": "2025-05-06",
-    },
-    {
-        ...tracks.SPA_CLASSIC_PITS,
-        "weekStart": "2025-05-13",
-    },
-    {
-        ...tracks.PHILLIP_ISLAND,
-        "weekStart": "2025-05-20",
+        ...tracks.SUZUKA,
+        "weekStart": "2025-07-08",
         "notes": [
             "60 mintue endurance round",
-            "Fuel stop likely required"
+            "Fuel stop required"
         ],
     },
     {
-        ...tracks.ZANDVOORT,
-        "weekStart": "2025-05-27",
+        ...tracks.HOMESTEAD_MIAMI_ROAD_B,
+        "weekStart": "2025-07-15",
     },
     {
-        ...tracks.LE_MANS_HISTORIC,
-        "weekStart": "2025-06-03",
+        ...tracks.MOSPORT,
+        "weekStart": "2025-07-22",
+    },
+    {
+        ...tracks.MAGNY_COURS,
+        "weekStart": "2025-07-29",
+    },
+    {
+        ...tracks.CHARLOTTE_ROVAL,
+        "weekStart": "2025-08-05",
+    },
+    {
+        ...tracks.DAYTONA_ROAD,
+        "weekStart": "2025-08-12",
         "notes": [
-            "Race duration is 11 laps"
+            "60 mintue endurance round",
+            "Fuel stop required"
         ],
+    },
+    {
+        ...tracks.LAGUNA_SECA,
+        "weekStart": "2025-08-19",
+    },
+    {
+        ...tracks.MONTREAL,
+        "weekStart": "2025-08-26",
+    },
+    {
+        ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+        "weekStart": "2025-09-02",
     },
 ]
 

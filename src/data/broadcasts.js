@@ -1002,7 +1002,7 @@ const broadcasts = [
                 url: "https://youtu.be/fARLsB8DLZU?t=1092"
             },
             {
-                ...tracks.CANADIAN_TIRE_MOSPORT_CTMP,
+                ...tracks.MOSPORT,
                 url: "https://youtu.be/-2S2AB_SpRg?t=1139"
             },
             {
@@ -1210,6 +1210,64 @@ const broadcasts = [
             {
                 ...tracks.LE_MANS_HISTORIC,
                 url: "https://youtu.be/JIQWifmdIRg?t=685"
+            }
+        ]
+    },
+    {
+        id: "25S3",
+        label: "2025 Season 3",
+        startDate: "2025-06-17",
+        endDate: "2025-09-02",
+        youTube: [
+            {
+                ...tracks.NURBURGRING_GP_BES_WEC,
+                url: "",
+                splits: 2,
+            },
+            {
+                ...tracks.MID_OHIO,
+                url: "",
+                splits: 1,
+            },
+            {
+                ...tracks.PORTLAND_NO_CHICANE,
+                url: ""
+            },
+            {
+                ...tracks.SUZUKA,
+                url: ""
+            },
+            {
+                ...tracks.HOMESTEAD_MIAMI_ROAD_B,
+                url: ""
+            },
+            {
+                ...tracks.MOSPORT,
+                url: ""
+            },
+            {
+                ...tracks.MAGNY_COURS,
+                url: ""
+            },
+            {
+                ...tracks.CHARLOTTE_ROVAL,
+                url: ""
+            },
+            {
+                ...tracks.DAYTONA_ROAD,
+                url: ""
+            },
+            {
+                ...tracks.LAGUNA_SECA,
+                url: ""
+            },
+            {
+                ...tracks.MONTREAL,
+                url: ""
+            },
+            {
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+                url: ""
             }
         ]
     }
