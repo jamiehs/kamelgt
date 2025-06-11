@@ -445,6 +445,7 @@ export const MOSPORT = {
         "audi90gto": [
             {
                 file: "ctmp/A90_Mosport_ 23S3_Y_Gijsen_Q.sto",
+                comment: "Qualifying setup"
             },
             {
                 file: "ctmp/A90_Mosport_ 23S3_Y_Gijsen_R.sto",
@@ -454,6 +455,7 @@ export const MOSPORT = {
             },
             {
                 file: "ctmp/ctmp-22S3-q2.sto",
+                comment: "Qualifying setup"
             },
             {
                 file: "ctmp/ctmp-22S3-r4.sto",
@@ -465,6 +467,7 @@ export const MOSPORT = {
         "nissangtpzxt": [
             {
                 file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_Q64.sto",
+                comment: "Qualifying setup"
             },
             {
                 file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_R63.sto",
