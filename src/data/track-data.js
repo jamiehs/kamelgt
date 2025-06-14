@@ -1,3 +1,5 @@
+const QUAL = "Qualifying setup";
+
 export const ARAGON_OUTER = {
     title: "Aragón - Outer",
     alternateTitle: "MotorLand Aragon - Outer"
@@ -40,7 +42,7 @@ export const BATHURST = {
             },
             {
                 file: "bathurst/A90_23S3_Bathurst_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "bathurst/JdelOlmoMountParonama23S1D.sto",
@@ -50,7 +52,7 @@ export const BATHURST = {
             },
             {
                 file: "bathurst/maf_bathurst_24s2_q0.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
         ],
         "nissangtpzxt": [
@@ -63,7 +65,7 @@ export const BATHURST = {
             },
             {
                 file: "bathurst/NGTP_BATH_Q_ALEX_FRI.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "bathurst/NGTP_BATH_R_ALEX_FRI.sto",
@@ -73,21 +75,21 @@ export const BATHURST = {
             },
             {
                 file: "bathurst/BL_Bathurst_Q8-2.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "bathurst/jlo_bathurst_r.sto",
             },
             {
                 file: "bathurst/jlo_bathurst_q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "bathurst/Lgo24S2_Bathurst_R51.sto",
             },
             {
                 file: "bathurst/Lgo24S2_Bathurst_Q60.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
         ]
     }
@@ -103,23 +105,113 @@ export const BRANDS_HATCH = {
     title: "Brands Hatch"
 }
 export const CHARLOTTE_ROVAL = {
-    title: "Charlotte - Roval"
+    title: "Charlotte - Roval",
+    setups: {
+        "audi90gto": [
+            {
+                file: "charlotte/maf_charlotte_23s4_q2b.sto",
+                comment: QUAL
+            },
+            {
+                file: "charlotte/maf_charlotte_23s4_r2b.sto",
+            },
+            {
+                file: "charlotte/A90_Charlotte_22S3_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "charlotte/A90_Charlotte_22S3_Y_Gijsen_R.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "charlotte/Charlotte_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "charlotte/BL_Charlotte_Roval_Q6.sto",
+                comment: QUAL
+            },
+            {
+                file: "charlotte/BL_Charlotte_Roval_R6.sto",
+            },
+            {
+                file: "charlotte/F122_NGTP_Charlotte_1-4_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "charlotte/F122_NGTP_Charlotte_1-4.sto",
+            },
+            {
+                file: "charlotte/GTP_Charlotte_JdelOlmoR.sto",
+            },
+            {
+                file: "charlotte/Lgo23S4_Charlotte_Roval_Q70.sto",
+                comment: QUAL
+            },
+            {
+                file: "charlotte/Lgo23S4_Charlotte_Roval_R70.sto",
+            },
+            {
+                file: "charlotte/rovalo_FRC_hamilR1.2.sto",
+            },
+        ]
+    }
 }
 export const COTA = {
     title: "COTA",
     alternateTitle: "Circuit of the Americas"
 }
 export const DAYTONA = {
-    title: "Daytona"
+    title: "Daytona",
+    setups: {
+        "audi90gto": [
+            {
+                file: "daytona/A90_DaytonaRC_23S1_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "daytona/A90_DaytonaRC_23S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "daytona/DWC_23S1_Daytona_R2.sto",
+            },
+            {
+                file: "daytona/KB_2022-S2_Daytona_Road_R-ih.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "daytona/F122_NGTP_DaytonaRC_1-8_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "daytona/F122_NGTP_DaytonaRC_1-8.sto",
+            },
+            {
+                file: "daytona/GTP_Daytona_JdelOlmoR.sto",
+            },
+            {
+                file: "daytona/SDC_24s4_GTP_Daytona_Q1.0.1.sto",
+                comment: QUAL
+            },
+            {
+                file: "daytona/SDC_24s4_GTP_Daytona_R1.0.1.sto",
+            },
+        ]
+    }
 }
 export const DAYTONA_ROAD = {
-    title: "Daytona - Road"
+    title: "Daytona - Road",
+    setups: DAYTONA.setups
 }
 export const DAYTONA_2007_ROAD = {
-    title: "Daytona 2007 - Road"
+    title: "Daytona 2007 - Road",
+    setups: DAYTONA.setups
 }
 export const DAYTONA_NASCAR_ROAD = {
-    title: "Daytona - NASCAR Road"
+    title: "Daytona - NASCAR Road",
+    setups: DAYTONA.setups
 }
 export const DONINGTON_PARK = {
     title: "Donington Park"
@@ -142,7 +234,7 @@ export const HOMESTEAD_MIAMI_ROAD_A = {
         "audi90gto": [
             {
                 file: "miami-homestead/A90_23S3_Homestead_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "miami-homestead/A90_23S3_Homestead_Y_Gijsen_R.sto",
@@ -152,7 +244,7 @@ export const HOMESTEAD_MIAMI_ROAD_A = {
             },
             {
                 file: "miami-homestead/homestead-22S2-q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "miami-homestead/homestead-22S2-r4.sto",
@@ -167,21 +259,21 @@ export const HOMESTEAD_MIAMI_ROAD_A = {
         "nissangtpzxt": [
             {
                 file: "miami-homestead/BL_HomesteadA_Q.2.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "miami-homestead/BL_HomesteadA_R.2.sto",
             },
             {
                 file: "miami-homestead/F122_NGTP_MiamiA_1-3_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "miami-homestead/F122_NGTP_MiamiA_1-3.sto",
             },
             {
                 file: "miami-homestead/F122_NGTP_MiamiA_1-5_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "miami-homestead/F122_NGTP_MiamiA_1-5.sto",
@@ -214,7 +306,7 @@ export const INDY_ROAD = {
             },
             {
                 file: "indy-road/A90_Indy09_21S2_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "indy-road/JdelOlmoIndi23S1E.sto",
@@ -235,7 +327,7 @@ export const INDY_ROAD = {
             },
             {
                 file: "indy-road/Lgo23S1_Indy_RC_MH_Silverstone_Int_R_Q62.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "indy-road/NGTP_Indianapolis22_1-5.sto",
@@ -264,7 +356,35 @@ export const JEREZ_MOTO = {
     alternateTitle: "Circuito de Jerez - Ángel Nieto - Moto"
 }
 export const LAGUNA_SECA = {
-    title: "Laguna Seca"
+    title: "Laguna Seca",
+    setups: {
+        "audi90gto": [
+            {
+                file: "laguna-seca/KB_2022-S2_Laguna_seca_Race.sto",
+            },
+            {
+                file: "laguna-seca/laguna.sto",
+            },
+            {
+                file: "laguna-seca/maf_laguna_24s4_q1.sto",
+                comment: QUAL
+            },
+            {
+                file: "laguna-seca/maf_laguna_24s4_r1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "laguna-seca/GTP_LagunaSeca_JdelOlmoR.sto",
+            },
+            {
+                file: "laguna-seca/Laguna33c.sto",
+            },
+            {
+                file: "laguna-seca/LagunaSeca_Race_V1.sto",
+            },
+        ]
+    }
 }
 export const LE_MANS = {
     title: "Le Mans",
@@ -277,21 +397,21 @@ export const LE_MANS_HISTORIC = {
         "audi90gto": [
             {
                 file: "lemans/A90_23S3_LeMansH_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "lemans/A90_23S3_LeMansH_Y_Gijsen_R.sto",
             },
             {
                 file: "lemans/A90_kb_lemans_q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "lemans/A90_kb_lemans_r.sto",
             },
             {
                 file: "lemans/GTO_LeMans_H_Q5.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "lemans/GTO_LeMans_H_R1.sto",
@@ -300,7 +420,7 @@ export const LE_MANS_HISTORIC = {
         "nissangtpzxt": [
             {
                 file: "lemans/Lgo23S3_LeMans_Hist_AG_Indy_2W8_Q10.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "lemans/Lgo23S3_LeMans_Hist_AG_Indy_2W8_R10.sto",
@@ -326,7 +446,7 @@ export const LONG_BEACH = {
             },
             {
                 file: "long-beach/A90_23S4_LongBeach_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "long-beach/andrius_sl_long_beach.sto",
@@ -336,7 +456,7 @@ export const LONG_BEACH = {
             },
             {
                 file: "long-beach/maf_longbeach_23s4_q0.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
         ],
         "nissangtpzxt": [
@@ -345,21 +465,21 @@ export const LONG_BEACH = {
             },
             {
                 file: "long-beach/DWC_ZXT_21S4_long beach-_Q1.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "long-beach/LONGBITCH_NGTP_R_ALEX.sto",
             },
             {
                 file: "long-beach/LONGBITCH_NGTP_Q_ALEX.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "long-beach/F122_NGTP_LongBeach_1-5.sto",
             },
             {
                 file: "long-beach/F122_NGTP_LongBeach_1-5_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "long-beach/GTP_LongBeach_JdelOlmoR24S3.sto",
@@ -368,7 +488,43 @@ export const LONG_BEACH = {
     }
 }
 export const MAGNY_COURS = {
-    title: "Magny-Cours"
+    title: "Magny-Cours",
+    setups: {
+        "audi90gto": [
+            {
+                file: "magny-cours/A90_23S1_Magny_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "magny-cours/A90_23S1_Magny_Y_Gijsen_R.sto",
+            },
+            {
+                file: "magny-cours/A90_23S1_magnycours_andreas_Rtues.sto",
+            },
+            {
+                file: "magny-cours/JdelOlmoMagnyCourse23S1C.sto",
+            },
+            {
+                file: "magny-cours/KB_2023-S1_Magny_Cours.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "magny-cours/Lgo23S1_Magny-Cours_Q63.sto",
+                comment: QUAL
+            },
+            {
+                file: "magny-cours/Lgo23S1_Magny-Cours_R63.sto",
+            },
+            {
+                file: "magny-cours/NGTP_MagnyCours_1-6_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "magny-cours/NGTP_MagnyCours_1-6.sto",
+            },
+        ]
+    }
 }
 export const MID_OHIO = {
     title: "Mid-Ohio",
@@ -376,14 +532,14 @@ export const MID_OHIO = {
         "audi90gto": [
             {
                 file: "mid-ohio/A90_MidOhio_23S1_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "mid-ohio/A90_MidOhio_23S1_Y_Gijsen_R.sto",
             },
             {
                 file: "mid-ohio/maf_midohio_24s4_q0.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "mid-ohio/maf_midohio_24s4_r0.sto",
@@ -401,14 +557,14 @@ export const MID_OHIO = {
             },
             {
                 file: "mid-ohio/Mid-Ohio30c Q v2.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "mid-ohio/Mid-Ohio30c v3.sto",
             },
             {
                 file: "mid-ohio/NGTP_OHIO_Q_ALEX WED.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "mid-ohio/NGTP_OHIO_R_ALEX WED.sto",
@@ -424,7 +580,56 @@ export const MISANO = {
 }
 export const MONTREAL = {
     title: "Montreal",
-    alternateTitle: "Circuit Gilles Villeneuve"
+    alternateTitle: "Circuit Gilles Villeneuve",
+    setups: {
+        "audi90gto": [
+            {
+                file: "montreal/A90_Montreal_24S1_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "montreal/A90_Montreal_24S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "montreal/JdelOlmoAudiVilleneuve23S2.sto",
+            },
+            {
+                file: "montreal/KB_Montreal_23_v1.sto",
+            },
+            {
+                file: "montreal/maf_montreal_24s1_q1.sto",
+                comment: QUAL
+            },
+            {
+                file: "montreal/maf_montreal_24s1_r1.sto",
+            },
+            {
+                file: "montreal/Montreal_BR-GTO_v2-race.sto",
+            },
+            {
+                file: "montreal/Montreal_23_v1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "montreal/F122_NGTP_Montreal_1-3_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "montreal/F122_NGTP_Montreal_1-3.sto",
+            },
+            {
+                file: "montreal/GTP_Gilles_JdelOlmoR2.sto",
+            },
+            {
+                file: "montreal/Lgo24S1_Montreal_Q50.sto",
+                comment: QUAL
+            },
+            {
+                file: "montreal/Lgo24S1_Montreal_R50.sto",
+            },
+        ]
+    }
 }
 export const MONZA = {
     title: "Monza",
@@ -445,7 +650,7 @@ export const MOSPORT = {
         "audi90gto": [
             {
                 file: "ctmp/A90_Mosport_ 23S3_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "ctmp/A90_Mosport_ 23S3_Y_Gijsen_R.sto",
@@ -455,7 +660,7 @@ export const MOSPORT = {
             },
             {
                 file: "ctmp/ctmp-22S3-q2.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "ctmp/ctmp-22S3-r4.sto",
@@ -467,7 +672,7 @@ export const MOSPORT = {
         "nissangtpzxt": [
             {
                 file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_Q64.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_R63.sto",
@@ -501,21 +706,21 @@ export const NURBURGRING_GP = {
         "audi90gto": [
             {
                 file: "nurburgring-gp/A90_NurbGP_24S1_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "nurburgring-gp/A90_NurbGP_24S1_Y_Gijsen_R.sto",
             },
             {
                 file: "nurburgring-gp/maf_nurbgp_24s1_q1.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "nurburgring-gp/maf_nurbgp_24s1_r1.sto",
             },
             {
                 file: "nurburgring-gp/NurbGP_BR-GTO_Q_v1.2.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "nurburgring-gp/NurbGP_BR-GTO_race_v1.2.sto",
@@ -536,7 +741,7 @@ export const NURBURGRING_GP = {
             },
             {
                 file: "nurburgring-gp/Lgo24S1_Nur_BES_WEC_Q70.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "nurburgring-gp/Lgo24S1_Nur_BES_WEC_R70.sto",
@@ -581,7 +786,7 @@ export const PHILLIP_ISLAND = {
         "audi90gto": [
             {
                 file: "phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_R.sto",
@@ -599,7 +804,7 @@ export const PHILLIP_ISLAND = {
         "nissangtpzxt": [
             {
                 file: "phillip-island/Lgo22S3_Phillip_Island_AG_WGI_6W1_Q62.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "phillip-island/Lgo22S3_Phillip_Island_AG_WGI_6W1_R62 v3.sto",
@@ -641,14 +846,14 @@ export const ROAD_AMERICA = {
             },
             {
                 file: "road-america/A90_RoadAmerica_23S2_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "road-america/maf_road_america_23s4_r1.sto",
             },
             {
                 file: "road-america/maf_road_america_23s4_q1.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
         ],
         "nissangtpzxt": [
@@ -714,7 +919,7 @@ export const ROAD_ATLANTA = {
             },
             {
                 file: "road-atlanta/A90_RoadAtlanta_23S3__Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "road-atlanta/A90 - 22S4 - RoadAtlanta - K Bouafia - R.sto",
@@ -730,7 +935,7 @@ export const ROAD_ATLANTA = {
             },
             {
                 file: "road-atlanta/Lgo22S4_Road_Atlanta_MH_Silverstone_Int_Q61.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
         ]
     }
@@ -770,7 +975,7 @@ export const SPA_CLASSIC_PITS = {
         "audi90gto": [
             {
                 file: "spa/A90_Sliumba_24S2_spa_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "spa/A90_Sliumba_24S2_spa_R2.sto",
@@ -783,7 +988,7 @@ export const SPA_CLASSIC_PITS = {
             },
             {
                 file: "spa/A90_23S3_Spa_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "spa/A90_23S3_Spa_Y_Gijsen_R.sto",
@@ -792,7 +997,7 @@ export const SPA_CLASSIC_PITS = {
         "nissangtpzxt": [
             {
                 file: "spa/F122_NGTP_Spa_1-2_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "spa/F122_NGTP_Spa_1-2.sto",
@@ -802,14 +1007,14 @@ export const SPA_CLASSIC_PITS = {
             },
             {
                 file: "spa/Lgo24S2_Spa_Q50.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "spa/Lgo24S2_Spa_R50.sto",
             },
             {
                 file: "spa/rgeada_spa_q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "spa/rgeada_spa_r.sto",
@@ -839,14 +1044,14 @@ export const SUMMIT_POINT = {
             },
             {
                 file: "summit-point/A90_SummitPoint_21S2_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "summit-point/A90_SummitPoint_21S2_Y_Gijsen_R.sto",
             },
             {
                 file: "summit-point/summit-21S4-q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "summit-point/summit-21S4-r2.sto",
@@ -855,14 +1060,14 @@ export const SUMMIT_POINT = {
         "nissangtpzxt": [
             {
                 file: "summit-point/asg-summit-q-NGTP_R_v1-4.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "summit-point/asg-summit-r-NGTP_R_v1-4.sto",
             },
             {
                 file: "summit-point/Lgo22S4_Summit_Q80.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "summit-point/Lgo22S4_Summit_R81.sto",
@@ -876,7 +1081,7 @@ export const SUZUKA = {
         "audi90gto": [
             {
                 file: "suzuka/A90_Suzuka_23S4_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "suzuka/A90_Suzuka_23S4_Y_Gijsen_R.sto",
@@ -891,28 +1096,28 @@ export const SUZUKA = {
         "nissangtpzxt": [
             {
                 file: "suzuka/BL_Suzuka_Q7.1.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "suzuka/BL_Suzuka_R7.1.sto",
             },
             {
                 file: "suzuka/F122_NGTP_Suzuka_1-3_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "suzuka/F122_NGTP_Suzuka_1-3.sto",
             },
             {
                 file: "suzuka/JW-Suzuka-Quali-V3.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "suzuka/JW-Suzuka-Race-V3.sto",
             },
             {
                 file: "suzuka/NGTP_SUZU_Q_ALEX WED.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "suzuka/NGTP_SUZU_R_ALEX WED.sto",
@@ -929,14 +1134,14 @@ export const THRUXTON = {
             },
             {
                 file: "thruxton/A90_Thruxton_25S2_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "thruxton/maf_thruxton_25s2_r3.sto",
             },
             {
                 file: "thruxton/maf_thruxton_25s2_q3.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "thruxton/DWC_25S2_Thruxton_R3.sto",
@@ -972,15 +1177,74 @@ export const VIR = {
 }
 export const WATKINS_GLEN_BOOT = {
     title: "Watkins Glen - Boot",
-    alternateTitle: "Watkins Glen International - Boot"
+    alternateTitle: "Watkins Glen International - Boot",
+    setups: {
+        "audi90gto": [
+            {
+                file: "watkins-glen/maf_watkins_24s4_q1.sto",
+                comment: QUAL
+            },
+            {
+                file: "watkins-glen/maf_watkins_24s4_r1.sto",
+            },
+            {
+                file: "watkins-glen/Watkins32c.sto",
+            },
+            {
+                file: "watkins-glen/WatkinsClassicBoot_BR-GTO_Q_v1.0.sto",
+                comment: QUAL
+            },
+            {
+                file: "watkins-glen/WatkinsClassicBoot_BR-GTO_60min_v1.1.sto",
+            },
+            {
+                file: "public/setups/audi90gto/watkins-glen/watkins-classic-boot-23S3-q.sto",
+                comment: QUAL
+            },
+            {
+                file: "public/setups/audi90gto/watkins-glen/watkins-classic-boot-23S3-r2.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "watkins-glen/GTP_WGB_JdelOlmoR.sto",
+            },
+            {
+                file: "watkins-glen/Lgo24S4_WG_Classic_Boot_Q52.sto",
+                comment: QUAL
+            },
+            {
+                file: "watkins-glen/Lgo24S4_WG_Classic_Boot_R52.sto",
+            },
+            {
+                file: "watkins-glen/Watkins_Glen_CB_R_v1.2.sto",
+            },
+            {
+                file: "watkins-glen/watkins-22S3-AG_WGI_5W2.sto",
+            },
+            {
+                file: "watkins-glen/Watkins5W2v3.sto",
+            },
+            {
+                file: "watkins-glen/Watkins32c.sto",
+            },
+        ]
+    }
 }
 export const WATKINS_GLEN_CLASSIC = {
     title: "Watkins Glen - Classic",
-    alternateTitle: "Watkins Glen International - Classic"
+    alternateTitle: "Watkins Glen International - Classic",
+    setups: WATKINS_GLEN_BOOT.setups
 }
 export const WATKINS_GLEN_CLASSIC_BOOT = {
     title: "Watkins Glen - Classic Boot",
-    alternateTitle: "Watkins Glen International - Classic Boot"
+    alternateTitle: "Watkins Glen International - Classic Boot",
+    setups: WATKINS_GLEN_BOOT.setups
+}
+export const WATKINS_GLEN_CUP = {
+    title: "Watkins Glen - Cup",
+    alternateTitle: "Watkins Glen International - Cup",
+    setups: WATKINS_GLEN_BOOT.setups
 }
 export const WILLOW_SPRINGS = {
     title: "Willow Springs"
@@ -991,7 +1255,7 @@ export const ZANDVOORT = {
         "audi90gto": [
             {
                 file: "zandvoort/A90_Zandvoort_23S4_Y_Gijsen_Q.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "zandvoort/A90_Zandvoort_23S4_Y_Gijsen_R.sto",
@@ -1006,21 +1270,21 @@ export const ZANDVOORT = {
         "nissangtpzxt": [
             {
                 file: "zandvoort/GTP_ZandvoortJdelOlmoQ.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "zandvoort/GTP_ZandvoortJdelOlmo.sto",
             },
             {
                 file: "zandvoort/Lgo23S4_Zandvoort_GP_Q62.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "zandvoort/Lgo23S4_Zandvoort_GP_R53.sto",
             },
             {
                 file: "zandvoort/ZAND_NGTP_Q_ALEX.sto",
-                comment: "Qualifying setup"
+                comment: QUAL
             },
             {
                 file: "zandvoort/ZAND_NGTP_R_ALEX.sto",

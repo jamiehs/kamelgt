@@ -1,6 +1,6 @@
 import * as tracks from './track-data.js';
 
-const seasonShortName = "25S2"
+const seasonShortName = "25S3"
 const seasonSetups = [
     {
         ...tracks.NURBURGRING_GP_BES_WEC,
