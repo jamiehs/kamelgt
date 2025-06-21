@@ -1221,13 +1221,11 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.NURBURGRING_GP_BES_WEC,
-                url: "",
-                splits: 2,
+                url: "https://youtu.be/jq33ApV7xys?t=429",
             },
             {
                 ...tracks.MID_OHIO,
                 url: "",
-                splits: 1,
             },
             {
                 ...tracks.PORTLAND_NO_CHICANE,
