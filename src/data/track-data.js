@@ -825,10 +825,44 @@ export const PHILLIP_ISLAND = {
     }
 }
 export const PORTLAND = {
-    title: "Portland International Raceway"
+    title: "Portland International Raceway",
+    setups: {
+        "audi90gto": [
+            {
+                file: "portland/A90_Portland_25S3_Y_Gijsen_R.sto",
+            },
+            {
+                file: "portland/maf_portland_25s3_q1.sto",
+                comment: QUAL
+            },
+            {
+                file: "portland/maf_portland_25s3_r1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "portland/JW-Portland-Quali-V1.sto",
+                comment: QUAL
+            },
+            {
+                file: "portland/JW-Portland-Race-V1.sto",
+            },
+            {
+                file: "portland/portland v3.sto",
+            },
+            {
+                file: "portland/portland v5 jw q.sto",
+                comment: QUAL
+            },
+            {
+                file: "portland/portland v5 jw.sto",
+            },
+        ]
+    }
 }
 export const PORTLAND_NO_CHICANE = {
-    title: "Portland International Raceway - No Chicane"
+    title: "Portland International Raceway - No Chicane",
+    setups: PORTLAND.setups
 }
 export const PHOENIX_2008_OVAL = {
     title: "Phoenix Oval",
@@ -1198,11 +1232,11 @@ export const WATKINS_GLEN_BOOT = {
                 file: "watkins-glen/WatkinsClassicBoot_BR-GTO_60min_v1.1.sto",
             },
             {
-                file: "public/setups/audi90gto/watkins-glen/watkins-classic-boot-23S3-q.sto",
+                file: "watkins-glen/watkins-classic-boot-23S3-q.sto",
                 comment: QUAL
             },
             {
-                file: "public/setups/audi90gto/watkins-glen/watkins-classic-boot-23S3-r2.sto",
+                file: "watkins-glen/watkins-classic-boot-23S3-r2.sto",
             },
         ],
         "nissangtpzxt": [
