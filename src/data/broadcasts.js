@@ -1225,11 +1225,11 @@ const broadcasts = [
             },
             {
                 ...tracks.MID_OHIO,
-                url: "",
+                url: "https://youtu.be/uxOzcighKOs?t=543",
             },
             {
                 ...tracks.PORTLAND_NO_CHICANE,
-                url: ""
+                url: "https://youtu.be/pS6ZJ4g9v1A?t=580"
             },
             {
                 ...tracks.SUZUKA,
