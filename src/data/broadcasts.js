@@ -1233,7 +1233,7 @@ const broadcasts = [
             },
             {
                 ...tracks.SUZUKA,
-                url: ""
+                url: "https://youtu.be/Xs9F3u6s3q0?t=959"
             },
             {
                 ...tracks.HOMESTEAD_MIAMI_ROAD_B,
