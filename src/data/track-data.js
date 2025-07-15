@@ -258,6 +258,9 @@ export const HOMESTEAD_MIAMI_ROAD_A = {
         ],
         "nissangtpzxt": [
             {
+                file: "miami-homestead/MATT_MALONE_SETUP-for-Matt-ONLY_R.sto",
+            },
+            {
                 file: "miami-homestead/BL_HomesteadA_Q.2.sto",
                 comment: QUAL
             },
