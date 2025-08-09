@@ -1237,19 +1237,19 @@ const broadcasts = [
             },
             {
                 ...tracks.HOMESTEAD_MIAMI_ROAD_B,
-                url: ""
+                url: "https://youtu.be/xeEJuDVkm_s?t=714"
             },
             {
                 ...tracks.MOSPORT,
-                url: ""
+                url: "https://youtu.be/H6kr0ZjaFfE?t=724"
             },
             {
                 ...tracks.MAGNY_COURS,
-                url: ""
+                url: "https://youtu.be/RCjs_Wcnr9k?t=695"
             },
             {
                 ...tracks.CHARLOTTE_ROVAL,
-                url: ""
+                url: "https://youtu.be/l_U9mpG7inE?t=658"
             },
             {
                 ...tracks.DAYTONA_ROAD,
