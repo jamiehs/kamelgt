@@ -1253,7 +1253,7 @@ const broadcasts = [
             },
             {
                 ...tracks.DAYTONA_ROAD,
-                url: ""
+                url: "https://youtu.be/ViMNOQpBFfg?t=1014"
             },
             {
                 ...tracks.LAGUNA_SECA,
