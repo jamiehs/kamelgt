@@ -1257,15 +1257,15 @@ const broadcasts = [
             },
             {
                 ...tracks.LAGUNA_SECA,
-                url: ""
+                url: "https://youtu.be/HZuO71krrJc?t=876"
             },
             {
                 ...tracks.MONTREAL,
-                url: ""
+                url: "https://youtu.be/2DK72mH6Bb8?t=286"
             },
             {
                 ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
-                url: ""
+                url: "https://youtu.be/OpGZwd_BZ6Y?t=543"
             }
         ]
     }
