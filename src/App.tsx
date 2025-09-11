@@ -183,6 +183,16 @@ class App extends React.Component<null, AppState> {
                             </header>
                             <div className="timeslots">
                                 <Timeslot
+                                    label="Tuesday Night Race"
+                                    dayIndex={2}
+                                    time="19:00"
+                                    regularity="Steady Participation"
+                                    >
+                                    <p>
+                                        The community's newest time slot; get some early practice in!
+                                    </p>
+                                </Timeslot>
+                                <Timeslot
                                     label="Midweek Madness"
                                     dayIndex={3}
                                     time="19:00"
