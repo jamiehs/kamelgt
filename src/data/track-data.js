@@ -17,7 +17,42 @@ export const BARBER = {
 }
 export const BARCELONA = {
     title: "Barcelona",
-    alternateTitle: "Circuit de Barcelona-Catalunya - Grand Prix"
+    alternateTitle: "Circuit de Barcelona-Catalunya - Grand Prix",
+    setups: {
+        "audi90gto": [
+            {
+                file: "",
+            },
+            {
+                file: "",
+            },
+            {
+                file: "",
+            },
+            {
+                file: "",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "",
+            },
+            {
+                file: "",
+            },
+            {
+                file: "",
+            },
+            {
+                file: "",
+            },
+        ]
+    }
+}
+export const BARCELONA_HISTORIC = {
+    title: "Barcelona Historic",
+    alternateTitle: "Circuit de Barcelona-Catalunya - Historic",
+    setups: BARCELONA.setups,
 }
 export const BATHURST = {
     title: "Bathurst",
@@ -93,10 +128,6 @@ export const BATHURST = {
             },
         ]
     }
-}
-export const BARCELONA_HISTORIC = {
-    title: "Barcelona Historic",
-    alternateTitle: "Circuit de Barcelona-Catalunya - Historic"
 }
 export const BELLE_ISLE = {
     title: "Detroit Belle Isle"
@@ -352,11 +383,64 @@ export const INTERLAGOS = {
 }
 export const JEREZ = {
     title: "Jerez",
-    alternateTitle: "Circuito de Jerez - Ángel Nieto"
+    alternateTitle: "Circuito de Jerez - Ángel Nieto",
+    setups: {
+        "audi90gto": [
+            {
+                file: "jerez/A90_Jerez_23S4_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "jerez/A90_Jerez_23S4_Y_Gijsen_R.sto",
+            },
+            {
+                file: "jerez/DWC_23S2_Jerez_R2.sto",
+            },
+            {
+                file: "jerez/IH-Jerez.sto",
+            },
+            {
+                file: "jerez/A90_23S1w13_jerez_andreas.sto",
+            },
+            {
+                file: "jerez/JdelOlmoAudiJerez23S2RACE.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "jerez/GTP_Jerez_JdelOlmoR.sto",
+            },
+            {
+                file: "jerez/JEREZ_NGTP_Q_ALEX_HDF.sto",
+                comment: QUAL
+            },
+            {
+                file: "jerez/JEREZ_NGTP_R_ALEX_HDF.sto",
+            },
+            {
+                file: "jerez/JEREZ_NGTP_R_ALEX_HDF2 V2.sto",
+            },
+            {
+                file: "jerez/JW-Jerez-Quali-V1.sto",
+                comment: QUAL
+            },
+            {
+                file: "jerez/JW-Jerez-Race-V1.sto",
+            },
+            {
+                file: "jerez/Lgo24S4_Jerez_Q91.sto",
+                comment: QUAL
+            },
+            {
+                file: "jerez/Lgo24S4_Jerez_R80.sto",
+            },
+        ]
+    }
 }
 export const JEREZ_MOTO = {
     title: "Jerez - Moto",
-    alternateTitle: "Circuito de Jerez - Ángel Nieto - Moto"
+    alternateTitle: "Circuito de Jerez - Ángel Nieto - Moto",
+    setups: JEREZ.setups,
 }
 export const LAGUNA_SECA = {
     title: "Laguna Seca",
@@ -685,7 +769,58 @@ export const MOSPORT = {
 }
 export const MUGELLO = {
     title: "Mugello",
-    alternateTitle: "Autodromo Internazionale del Mugello - Grand Prix"
+    alternateTitle: "Autodromo Internazionale del Mugello - Grand Prix",
+    setups: {
+        "audi90gto": [
+            {
+                file: "mugello/A90_Mugello_24S1_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "mugello/A90_Mugello_24S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "mugello/maf_mugello_23s4_q1.sto",
+                comment: QUAL
+            },
+            {
+                file: "mugello/maf_mugello_23s4_r1.sto",
+            },
+            {
+                file: "mugello/Mugello_BR-GTO_v3_race.sto",
+            },
+            {
+                file: "mugello/Mugello_BR-GTO_v3.1_Q.sto",
+                comment: QUAL
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "mugello/asg-mugello-q.sto",
+                comment: QUAL
+            },
+            {
+                file: "mugello/asg-mugello-r.sto",
+            },
+            {
+                file: "mugello/F122_NGTP_Mugello_1-7_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "mugello/F122_NGTP_Mugello_1-7.sto",
+            },
+            {
+                file: "mugello/GTP_Mugello_JdelOlmoR2.sto",
+            },
+            {
+                file: "mugello/Lgo24S1_Mugello_Q60.sto",
+                comment: QUAL
+            },
+            {
+                file: "mugello/Lgo24S1_Mugello_R61_gear_changes_v2.sto",
+            },
+        ]
+    }
 }
 export const NAVARRA = {
     title: "Circuito de Navarra",
@@ -981,7 +1116,46 @@ export const SACHSENRING = {
     title: "Sachsenring"
 }
 export const SEBRING = {
-    title: "Sebring"
+    title: "Sebring",
+    setups: {
+        "audi90gto": [
+            {
+                file: "sebring/maf_sebring_23s4_q3.sto",
+                comment: QUAL
+            },
+            {
+                file: "sebring/maf_sebring_23s4_r3.sto",
+            },
+            {
+                file: "sebring/Sebring_Kheireddine_22s3.sto",
+            },
+            {
+                file: "sebring/A90_Sebring_23S2_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "sebring/A90_Sebring_23S2_Y_Gijsen_R.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "sebring/Lgo24S4_Sebring_Q71.sto",
+                comment: QUAL
+            },
+            {
+                file: "sebring/Lgo24S4_Sebring_R71.sto",
+            },
+            {
+                file: "sebring/sebring-21S1_Havdal_R_v1.1.sto",
+            },
+            {
+                file: "sebring/Sebring_Ferran_22s3_1-4.sto",
+            },
+            {
+                file: "sebring/NGTP_Sebring_1-EGedit.sto",
+            },
+        ]
+    }
 }
 export const SILVERSTONE_GP = {
     title: "Silverstone - Grand Prix"
@@ -1354,8 +1528,8 @@ const trackData = {
     ALGARVE,
     BARBER,
     BARCELONA,
-    BATHURST,
     BARCELONA_HISTORIC,
+    BATHURST,
     BELLE_ISLE,
     BRANDS_HATCH,
     CHARLOTTE_ROVAL,
