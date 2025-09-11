@@ -1162,6 +1162,16 @@ export const SUZUKA = {
         ]
     }
 }
+export const THE_BEND_GT_CIRCUIT = {
+    title: "The Bend",
+    alternateTitle: "Shell V-Power Motorsport Park at The Bend - GT Circuit",
+    setups: {
+        "audi90gto": [
+        ],
+        "nissangtpzxt": [
+        ]
+    }
+}
 export const THRUXTON = {
     title: "Thruxton Circuit",
     setups: {
@@ -1417,6 +1427,7 @@ const trackData = {
     SPA_GRAND_PRIX_PITS,
     SUMMIT_POINT,
     SUZUKA,
+    THE_BEND_GT_CIRCUIT,
     THRUXTON,
     TSUKUBA,
     TWIN_RING_MOTEGI,

@@ -1268,6 +1268,62 @@ const broadcasts = [
                 url: "https://youtu.be/OpGZwd_BZ6Y?t=543"
             }
         ]
+    },
+    {
+        id: "25S4",
+        label: "2025 Season 4",
+        startDate: "2025-09-16",
+        endDate: "2025-12-02",
+        youTube: [
+            {
+                ...tracks.SEBRING,
+                url: ""
+            },
+            {
+                ...tracks.MUGELLO,
+                url: ""
+            },
+            {
+                ...tracks.THE_BEND_GT_CIRCUIT,
+                url: ""
+            },
+            {
+                ...tracks.JEREZ_MOTO,
+                url: ""
+            },
+            {
+                ...tracks.ARAGON_OUTER,
+                url: ""
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: ""
+            },
+            {
+                ...tracks.BARCELONA_HISTORIC,
+                url: ""
+            },
+            {
+                ...tracks.BARBER,
+                url: ""
+            },
+            {
+                ...tracks.VIR,
+                url: ""
+            },
+            {
+                ...tracks.HOCKENHEIM_GP,
+                url: ""
+            },
+            {
+                ...tracks.OKAYAMA,
+                url: ""
+            },
+            {
+                ...tracks.ALGARVE,
+                url: ""
+            }
+        ]
     }
 ]
 
