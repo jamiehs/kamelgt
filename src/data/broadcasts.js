@@ -1277,19 +1277,19 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.SEBRING,
-                url: ""
+                url: "https://youtu.be/EVnVa7QS41s?t=890"
             },
             {
                 ...tracks.MUGELLO,
-                url: ""
+                url: "https://youtu.be/vbAXPeQuJss?t=953"
             },
             {
                 ...tracks.THE_BEND_GT_CIRCUIT,
-                url: ""
+                url: "https://youtu.be/qvU86UiZRL0?t=1021"
             },
             {
                 ...tracks.JEREZ_MOTO,
-                url: ""
+                url: "https://youtu.be/hY1dzjVg8eM?t=1129"
             },
             {
                 ...tracks.ARAGON_OUTER,
