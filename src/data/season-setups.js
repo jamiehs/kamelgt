@@ -36,6 +36,9 @@ const seasonSetups = [
     {
         ...tracks.BARCELONA_HISTORIC,
         "weekStart": "2025-10-28",
+        "notes": [
+            "We have not visited Barcelona since 23S1"
+        ]
     },
     {
         ...tracks.BARBER,

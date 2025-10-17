@@ -2,11 +2,56 @@ const QUAL = "Qualifying setup";
 
 export const ARAGON_OUTER = {
     title: "Aragón - Outer",
-    alternateTitle: "MotorLand Aragon - Outer"
+    alternateTitle: "MotorLand Aragon - Outer",
+    setups: {
+        "audi90gto": [
+            {
+                file: "aragon/maf_aragon_24s1_q0.sto",
+                comment: QUAL
+            },
+            {
+                file: "aragon/maf_aragon_24s1_r1.sto",
+            },
+            {
+                file: "aragon/Motorland23S32.2.sto",
+            },
+            {
+                file: "aragon/AragonOuter-q.sto",
+                comment: QUAL
+            },
+            {
+                file: "aragon/AragonOuter22c.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "aragon/JW-Aragon-Quali-V3.sto",
+                comment: QUAL
+            },
+            {
+                file: "aragon/JW-Aragon-Race-V3.sto",
+            },
+            {
+                file: "aragon/F122_NGTP_MotorlandOuter_1-5_Q2.sto",
+                comment: QUAL
+            },
+            {
+                file: "aragon/F122_NGTP_MotorlandOuter_1-5.sto",
+            },
+            {
+                file: "aragon/Lgo25S4_Aragon_Outer_Q51.sto",
+                comment: QUAL
+            },
+            {
+                file: "aragon/Lgo25S4_Aragon_Outer_R51.sto",
+            },
+        ]
+    }
 }
 export const ARAGON_MOTORCYCLE_GP = {
     title: "Aragón - Motorcycle Grand Prix",
-    alternateTitle: "MotorLand Aragon - Motorcycle Grand Prix"
+    alternateTitle: "MotorLand Aragon - Motorcycle Grand Prix",
+    setups: ARAGON_OUTER.setups,
 }
 export const ALGARVE = {
     title: "Algarve International Circuit - Grand Prix",
@@ -21,30 +66,20 @@ export const BARCELONA = {
     setups: {
         "audi90gto": [
             {
-                file: "",
+                file: "barcelona/A90_BarcelonaH_23S1_Y_Gijsen_Q.sto",
+                comment: QUAL
             },
             {
-                file: "",
-            },
-            {
-                file: "",
-            },
-            {
-                file: "",
+                file: "barcelona/A90_BarcelonaH_23S1_Y_Gijsen_R.sto",
             },
         ],
         "nissangtpzxt": [
             {
-                file: "",
+                file: "barcelona/Lgo23S1_BarcelonaHist_MH_Silverstone_Int_Q60.sto",
+                comment: QUAL
             },
             {
-                file: "",
-            },
-            {
-                file: "",
-            },
-            {
-                file: "",
+                file: "barcelona/Lgo23S1_BarcelonaHist_MH_Silverstone_Int_R60.sto",
             },
         ]
     }
@@ -1043,6 +1078,7 @@ export const ROAD_AMERICA = {
             },
             {
                 file: "road-america/SDC_23S2_GTP_RAMERICA_QUALYv0.85.sto",
+                comment: QUAL
             },
         ]
     }
