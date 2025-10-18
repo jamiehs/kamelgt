@@ -55,10 +55,95 @@ export const ARAGON_MOTORCYCLE_GP = {
 }
 export const ALGARVE = {
     title: "Algarve International Circuit - Grand Prix",
-    alternateTitle: "Portimão Circuit - Grand Prix"
+    alternateTitle: "Portimão Circuit - Grand Prix",
+    setups: {
+        "audi90gto": [
+            {
+                file: "algarve/maf_port_24s2_q2.sto",
+                comment: QUAL
+            },
+            {
+                file: "algarve/maf_port_24s2_r2.sto",
+            },
+            {
+                file: "algarve/A90_Sliumba_24S2_portimao_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "algarve/A90_Sliumba_24S2_portimao_R.sto",
+            },
+            {
+                file: "algarve/A90_Portimao_24S2_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "algarve/A90_Portimao_24S2_Y_Gijsen_R.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "algarve/GTP_Algarve_JdelOlmoR.sto",
+            },
+            {
+                file: "algarve/Lgo24S2_Algarve_Q72.sto",
+                comment: QUAL
+            },
+            {
+                file: "algarve/Lgo24S2_Algarve_R72.sto",
+            },
+            {
+                file: "algarve/rgeada_portimao_q.sto",
+                comment: QUAL
+            },
+            {
+                file: "algarve/rgeada_portimao_r.sto",
+            },
+        ]
+    }
 }
 export const BARBER = {
-    title: "Barber Motorsports Park"
+    title: "Barber Motorsports Park",
+    setups: {
+        "audi90gto": [
+            {
+                file: "barber/maf_barber_24s1_q2.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/maf_barber_24s1_r2.sto",
+            },
+            {
+                file: "barber/Barber_BR-GTO_24s1_Q_v3.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/Barber_BR-GTO_24s1_race_v3.sto",
+            },
+            {
+                file: "barber/barber-24S1-q.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/barber-24S1-r3.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "barber/BL_Barber_Q7.4.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/BL_Barber_R7.4.sto",
+            },
+            {
+                file: "barber/Lgo24S1_Barber_Full_Q70.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/Lgo24S1_Barber_Full_R70.sto",
+            },
+        ]
+    }
 }
 export const BARCELONA = {
     title: "Barcelona",
@@ -287,11 +372,59 @@ export const FUJI_NO_CHICANE = {
 }
 export const HOCKENHEIM_GP = {
     title: "Hockenheim GP",
-    alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix"
+    alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix",
+    setups: {
+        "audi90gto": [
+            {
+                file: "hockenheimring/Hockenheim21c.sto",
+            },
+            {
+                file: "hockenheimring/maf_hockenheim_25s1_q0.sto",
+                comment: QUAL
+            },
+            {
+                file: "hockenheimring/maf_hockenheim_25s1_r0.sto",
+            },
+            {
+                file: "hockenheimring/A90_Hockenheim_23S4_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "hockenheimring/A90_Hockenheim_23S4_Y_Gijsen_R.sto",
+            },
+            {
+                file: "hockenheimring/iB_HockOut_23s4_Q1.sto",
+                comment: QUAL
+            },
+            {
+                file: "hockenheimring/iB_HockOut_23s4_r1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "hockenheimring/Hockenheim21c.sto",
+            },
+            {
+                file: "hockenheimring/Lgo25S1_Hockenheim_GP_Q80.sto",
+                comment: QUAL
+            },
+            {
+                file: "hockenheimring/Lgo25S1_Hockenheim_GP_R81.sto",
+            },
+            {
+                file: "hockenheimring/NGTP_Hockenheim_1-6_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "hockenheimring/NGTP_Hockenheim_1-6.sto",
+            },
+        ]
+    }
 }
 export const HOCKENHEIM_OUTER = {
     title: "Hockenheim - Outer",
-    alternateTitle: "Hockenheimring Baden-Württemberg - Outer"
+    alternateTitle: "Hockenheimring Baden-Württemberg - Outer",
+    setups: HOCKENHEIM_GP.setups,
 }
 export const HOMESTEAD_MIAMI_ROAD_A = {
     title: "Homestead Miami - Road A",
@@ -939,7 +1072,49 @@ export const NURBURGRING_GP_WITHOUT_ARENA = {
     setups: NURBURGRING_GP.setups,
 }
 export const OKAYAMA = {
-    title: "Okayama"
+    title: "Okayama",
+    setups: {
+        "audi90gto": [
+            {
+                file: "okayama/Okayama_BR-GTO_race_v1.2.sto",
+            },
+            {
+                file: "okayama/A90_Okayama_24S1_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "okayama/A90_Okayama_24S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "okayama/maf_okayama_24s1_q2.sto",
+                comment: QUAL
+            },
+            {
+                file: "okayama/maf_okayama_24s1_r2.sto",
+            },
+            {
+                file: "okayama/A90 - 22S4 - Okayama - J Del Olmo - R.sto",
+            },
+            {
+                file: "okayama/A90 - 22S4 - Okayama - J Leskela - Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "okayama/A90 - 22S4 - Okayama - J Leskela - R2.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "okayama/GTP_Okayama_JdelOlmoR.sto",
+            },
+            {
+                file: "okayama/NGTP_Okayama_1-8.sto",
+            },
+            {
+                file: "okayama/SDC_Lgo21S2_Okayama_GP_R93.sto",
+            },
+        ]
+    }
 }
 export const ORAN_PARK = {
     title: "Oran Park"
@@ -1430,7 +1605,54 @@ export const TWIN_RING_MOTEGI = {
 }
 export const VIR = {
     title: "VIR",
-    alternateTitle: "Virginia International Raceway"
+    alternateTitle: "Virginia International Raceway",
+    setups: {
+        "audi90gto": [
+            {
+                file: "barber/Barber_BR-GTO_24s1_Q_v3.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/Barber_BR-GTO_24s1_race_v3.sto",
+            },
+            {
+                file: "barber/barber-24S1-q.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/barber-24S1-r3.sto",
+            },
+            {
+                file: "barber/maf_barber_24s1_q2.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/maf_barber_24s1_r2.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "vir/Lgo24S4_VIR_Full_Q60.sto",
+                comment: QUAL
+            },
+            {
+                file: "vir/Lgo24S4_VIR_Full_R61.sto",
+            },
+            {
+                file: "vir/F122_NGTP_VIR_v1-5B_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "vir/F122_NGTP_VIR_v1-5B.sto",
+            },
+            {
+                file: "vir/GTP_VirginiaFull_JdelOlmoR.sto",
+            },
+            {
+                file: "vir/Vir32c.sto",
+            },
+        ]
+    }
 }
 export const WATKINS_GLEN_BOOT = {
     title: "Watkins Glen - Boot",
