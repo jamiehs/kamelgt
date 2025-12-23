@@ -1293,34 +1293,90 @@ const broadcasts = [
             },
             {
                 ...tracks.ARAGON_OUTER,
-                url: ""
+                url: "https://youtu.be/ACVessCAOxU?t=523"
             },
             {
                 ...tracks.ROAD_AMERICA,
-                url: ""
+                url: "https://youtu.be/SUajHLcrnO4?t=533"
             },
             {
                 ...tracks.BARCELONA_HISTORIC,
-                url: ""
+                url: "https://youtu.be/pLFrYaTaDp8?t=544"
             },
             {
                 ...tracks.BARBER,
-                url: ""
+                url: "https://youtu.be/N8ui-N_6Tzk?t=528"
             },
             {
                 ...tracks.VIR,
-                url: ""
+                url: "https://youtu.be/Xo3peibo3ak?t=534"
             },
             {
                 ...tracks.HOCKENHEIM_GP,
-                url: ""
+                url: "https://youtu.be/K_79nzx0QUI?t=452"
             },
             {
                 ...tracks.OKAYAMA,
-                url: ""
+                url: "https://youtu.be/JS2iNMFoGbc?t=496"
             },
             {
                 ...tracks.ALGARVE,
+                url: "https://youtu.be/wmymLzTU9fg?t=562"
+            }
+        ]
+    },
+    {
+        id: "26S1",
+        label: "2026 Season 1",
+        startDate: "2025-12-16",
+        endDate: "2026-03-03",
+        youTube: [
+            {
+                ...tracks.NURBURGRING_COMBINED_24H,
+                url: "https://youtu.be/5KDqj2i0D0M?t=327"
+            },
+            {
+                ...tracks.INTERLAGOS,
+                url: ""
+            },
+            {
+                ...tracks.MEXICO_NATIONAL_HISTORIC,
+                url: ""
+            },
+            {
+                ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
+                url: ""
+            },
+            {
+                ...tracks.ORAN_PARK,
+                url: ""
+            },
+            {
+                ...tracks.LE_MANS,
+                url: ""
+            },
+            {
+                ...tracks.POCONO_RACEWAY_2009_INTERNATIONAL,
+                url: ""
+            },
+            {
+                ...tracks.RED_BULL_RING,
+                url: ""
+            },
+            {
+                ...tracks.HUNGARORING,
+                url: ""
+            },
+            {
+                ...tracks.FUJI_NO_CHICANE,
+                url: ""
+            },
+            {
+                ...tracks.IMOLA,
+                url: ""
+            },
+            {
+                ...tracks.SONOMA_CUP_LONG,
                 url: ""
             }
         ]

@@ -1,68 +1,62 @@
 import * as tracks from './track-data.js';
 
-const seasonShortName = "25S4"
+const seasonShortName = "26S1"
 const seasonSetups = [
     {
-        ...tracks.SEBRING,
-        "weekStart": "2025-09-16",
+        ...tracks.NURBURGRING_COMBINED_24H,
+        "weekStart": "2025-12-16",
     },
     {
-        ...tracks.MUGELLO,
-        "weekStart": "2025-09-23",
+        ...tracks.INTERLAGOS,
+        "weekStart": "2025-12-23",
     },
     {
-        ...tracks.THE_BEND_GT_CIRCUIT,
-        "weekStart": "2025-09-30",
-        "notes": [
-            "This is our first visit to The Bend!"
-        ]
+        ...tracks.MEXICO_NATIONAL_HISTORIC,
+        "weekStart": "2025-12-30",
     },
     {
-        ...tracks.JEREZ_MOTO,
-        "weekStart": "2025-10-07",
+        ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
+        "weekStart": "2026-01-06",
     },
     {
-        ...tracks.ARAGON_OUTER,
-        "weekStart": "2025-10-14",
+        ...tracks.ORAN_PARK,
+        "weekStart": "2026-01-13",
     },
     {
-        ...tracks.ROAD_AMERICA,
-        "weekStart": "2025-10-21",
+        ...tracks.LE_MANS,
+        "weekStart": "2026-01-20",
         "notes": [
             "60 mintue endurance round",
             "Fuel stop required"
         ],
     },
     {
-        ...tracks.BARCELONA_HISTORIC,
-        "weekStart": "2025-10-28",
-        "notes": [
-            "We have not visited Barcelona since 23S1"
-        ]
+        ...tracks.POCONO_RACEWAY_2009_INTERNATIONAL,
+        "weekStart": "2026-01-27",
     },
     {
-        ...tracks.BARBER,
-        "weekStart": "2025-11-04",
+        ...tracks.RED_BULL_RING,
+        "weekStart": "2026-02-03",
     },
     {
-        ...tracks.VIR,
-        "weekStart": "2025-11-11",
+        ...tracks.HUNGARORING,
+        "weekStart": "2026-02-10",
     },
     {
-        ...tracks.HOCKENHEIM_GP,
-        "weekStart": "2025-11-18",
+        ...tracks.FUJI_NO_CHICANE,
+        "weekStart": "2026-02-17",
         "notes": [
             "60 mintue endurance round",
             "Fuel stop required"
         ],
     },
     {
-        ...tracks.OKAYAMA,
-        "weekStart": "2025-11-25",
+        ...tracks.IMOLA,
+        "weekStart": "2026-02-24",
     },
     {
-        ...tracks.ALGARVE,
-        "weekStart": "2025-12-02",
+        ...tracks.SONOMA_CUP_LONG,
+        "weekStart": "2026-03-03",
     },
 ]
 

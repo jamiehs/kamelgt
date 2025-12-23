@@ -277,7 +277,7 @@ class App extends React.Component<null, AppState> {
                         <dd>
                             <ul>
                                 <li>
-                                    The section below on this page should have a list of setups, or links to dowload archives of setups for&nbsp;each&nbsp;car.
+                                    The section below on this page should have links to dowload archives of setups for&nbsp;each&nbsp;car.
                                 </li>
                                 <li>
                                     The <code>#audi-setups</code> and <code>#nissan-setups</code> channels on the <span className="inline-discord-callout"><a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> are active and new setups are typically posted multiple times per week.</span>
@@ -294,7 +294,7 @@ class App extends React.Component<null, AppState> {
                 </div>
                 <div id="setups" className="setups section">
                     <h2 className="title">Setups for {seasonShortName}</h2>
-                    <Setups upcomingWeeks={3} />
+                    <Setups upcomingWeeks={0} />
                 </div>
                 <div className="format section">
                     <h2 className="title">Race Format</h2>

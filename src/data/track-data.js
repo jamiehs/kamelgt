@@ -781,6 +781,12 @@ export const MAGNY_COURS = {
         ]
     }
 }
+export const MEXICO = {
+    title: "Autódromo Hermanos Rodríguez",
+}
+export const MEXICO_NATIONAL_HISTORIC = {
+    title: "Autódromo Hermanos Rodríguez - National Historic",
+}
 export const MID_OHIO = {
     title: "Mid-Ohio",
     setups: {
@@ -1172,6 +1178,9 @@ export const PHILLIP_ISLAND = {
         ]
     }
 }
+export const POCONO_RACEWAY_2009_INTERNATIONAL = {
+    title: "Pocono Raceway - 2009 - International",
+}
 export const PORTLAND = {
     title: "Portland International Raceway",
     setups: {
@@ -1386,6 +1395,9 @@ export const SONOMA = {
 }
 export const SONOMA_CUP = {
     title: "Sonoma - Cup"
+}
+export const SONOMA_CUP_LONG = {
+    title: "Sonoma - Cup Long"
 }
 export const SONOMA_NASCAR_LONG = {
     title: "Sonoma - NASCAR Long"
@@ -1817,6 +1829,8 @@ const trackData = {
     LIME_ROCK_WEST_BEND,
     LONG_BEACH,
     MAGNY_COURS,
+    MEXICO,
+    MEXICO_NATIONAL_HISTORIC,
     MID_OHIO,
     MID_OHIO_CHICANE,
     MISANO,
@@ -1839,6 +1853,7 @@ const trackData = {
     OULTON_PARK_INTL_WOUT_HISLOP,
     OULTON_PARK_INTL_NO_CHICANES,
     PHILLIP_ISLAND,
+    POCONO_RACEWAY_2009_INTERNATIONAL,
     PORTLAND,
     PORTLAND_NO_CHICANE,
     PHOENIX_2008_OVAL,
@@ -1853,6 +1868,7 @@ const trackData = {
     SNETTERTON_200,
     SONOMA,
     SONOMA_CUP,
+    SONOMA_CUP_LONG,
     SONOMA_NASCAR_LONG,
     SPA_CLASSIC_PITS,
     SPA_ENDURANCE_PITS,
