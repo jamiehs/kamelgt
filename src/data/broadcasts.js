@@ -1337,47 +1337,47 @@ const broadcasts = [
             },
             {
                 ...tracks.INTERLAGOS,
-                url: ""
+                url: "https://youtu.be/0jM6OvtPcmo?t=589"
             },
             {
                 ...tracks.MEXICO_NATIONAL_HISTORIC,
-                url: ""
+                url: "https://youtu.be/ZpGraKKrX_w?t=1063"
             },
             {
                 ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
-                url: ""
+                url: "https://youtu.be/McnFIcWNN1o?t=749"
             },
             {
                 ...tracks.ORAN_PARK,
-                url: ""
+                url: "https://youtu.be/xvsSIuC382E?t=499"
             },
             {
                 ...tracks.LE_MANS,
-                url: ""
+                url: "https://youtu.be/4OU2YaLiz5A?t=583"
             },
             {
                 ...tracks.POCONO_RACEWAY_2009_INTERNATIONAL,
-                url: ""
+                url: "https://youtu.be/JUpbwgnRmoM?t=512"
             },
             {
                 ...tracks.RED_BULL_RING,
-                url: ""
+                url: "https://youtu.be/05I-OflD4wQ?t=581"
             },
             {
                 ...tracks.HUNGARORING,
-                url: ""
+                url: "https://youtu.be/A0Inj8vHfFY?t=623"
             },
             {
                 ...tracks.FUJI_NO_CHICANE,
-                url: ""
+                url: "https://youtu.be/kYitEFikc30?t=705"
             },
             {
                 ...tracks.IMOLA,
-                url: ""
+                url: "https://youtu.be/UsTQ_wWgNDI?t=517"
             },
             {
                 ...tracks.SONOMA_CUP_LONG,
-                url: ""
+                url: "https://youtu.be/XAjJDDjugO0?t=531"
             }
         ]
     }
