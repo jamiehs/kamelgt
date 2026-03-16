@@ -1380,6 +1380,62 @@ const broadcasts = [
                 url: "https://youtu.be/XAjJDDjugO0?t=531"
             }
         ]
+    },
+    {
+        id: "26S2",
+        label: "2026 Season 2",
+        startDate: "2025-03-17",
+        endDate: "2026-06-02",
+        youTube: [
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: ""
+            },
+            {
+                ...tracks.TWIN_RING_MOTEGI,
+                url: ""
+            },
+            {
+                ...tracks.ADELAIDE_STREET_CIRCUIT,
+                url: ""
+            },
+            {
+                ...tracks.LAGUNA_SECA,
+                url: ""
+            },
+            {
+                ...tracks.DONINGTON_PARK,
+                url: ""
+            },
+            {
+                ...tracks.COTA,
+                url: ""
+            },
+            {
+                ...tracks.MIAMI_INTERNATIONAL_AUTODROME,
+                url: ""
+            },
+            {
+                ...tracks.BATHURST,
+                url: ""
+            },
+            {
+                ...tracks.LIME_ROCK_CLASSIC,
+                url: ""
+            },
+            {
+                ...tracks.LONG_BEACH,
+                url: ""
+            },
+            {
+                ...tracks.MISANO,
+                url: ""
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: ""
+            }
+        ]
     }
 ]
 

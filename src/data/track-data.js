@@ -1,5 +1,8 @@
 const QUAL = "Qualifying setup";
 
+export const ADELAIDE_STREET_CIRCUIT = {
+    title: "Adelaide Street Circuit",
+}
 export const ARAGON_OUTER = {
     title: "Aragón - Outer",
     alternateTitle: "MotorLand Aragon - Outer",
@@ -786,6 +789,9 @@ export const MEXICO = {
 }
 export const MEXICO_NATIONAL_HISTORIC = {
     title: "Autódromo Hermanos Rodríguez - National Historic",
+}
+export const MIAMI_INTERNATIONAL_AUTODROME = {
+    title: "Miami International Autodrome - Grand Prix",
 }
 export const MID_OHIO = {
     title: "Mid-Ohio",
@@ -1793,6 +1799,7 @@ export const ZOLDER_ALTERNATE = {
 }
 
 const trackData = {
+    ADELAIDE_STREET_CIRCUIT,
     ARAGON_OUTER,
     ARAGON_MOTORCYCLE_GP,
     ALGARVE,
@@ -1831,6 +1838,7 @@ const trackData = {
     MAGNY_COURS,
     MEXICO,
     MEXICO_NATIONAL_HISTORIC,
+    MIAMI_INTERNATIONAL_AUTODROME,
     MID_OHIO,
     MID_OHIO_CHICANE,
     MISANO,

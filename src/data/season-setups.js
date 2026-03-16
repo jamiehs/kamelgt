@@ -1,62 +1,62 @@
 import * as tracks from './track-data.js';
 
-const seasonShortName = "26S1"
+const seasonShortName = "26S2"
 const seasonSetups = [
     {
-        ...tracks.NURBURGRING_COMBINED_24H,
-        "weekStart": "2025-12-16",
+        ...tracks.ROAD_ATLANTA,
+        "weekStart": "2026-03-17",
     },
     {
-        ...tracks.INTERLAGOS,
-        "weekStart": "2025-12-23",
+        ...tracks.TWIN_RING_MOTEGI,
+        "weekStart": "2026-03-24",
     },
     {
-        ...tracks.MEXICO_NATIONAL_HISTORIC,
-        "weekStart": "2025-12-30",
+        ...tracks.ADELAIDE_STREET_CIRCUIT,
+        "weekStart": "2026-03-31",
     },
     {
-        ...tracks.MONZA_WITHOUT_FIRST_CHICANE,
-        "weekStart": "2026-01-06",
-    },
-    {
-        ...tracks.ORAN_PARK,
-        "weekStart": "2026-01-13",
-    },
-    {
-        ...tracks.LE_MANS,
-        "weekStart": "2026-01-20",
+        ...tracks.LAGUNA_SECA,
+        "weekStart": "2026-04-07",
         "notes": [
             "60 mintue endurance round",
             "Fuel stop required"
         ],
     },
     {
-        ...tracks.POCONO_RACEWAY_2009_INTERNATIONAL,
-        "weekStart": "2026-01-27",
+        ...tracks.DONINGTON_PARK,
+        "weekStart": "2026-04-14",
     },
     {
-        ...tracks.RED_BULL_RING,
-        "weekStart": "2026-02-03",
+        ...tracks.COTA,
+        "weekStart": "2026-04-21",
     },
     {
-        ...tracks.HUNGARORING,
-        "weekStart": "2026-02-10",
+        ...tracks.MIAMI_INTERNATIONAL_AUTODROME,
+        "weekStart": "2026-04-28",
     },
     {
-        ...tracks.FUJI_NO_CHICANE,
-        "weekStart": "2026-02-17",
+        ...tracks.BATHURST,
+        "weekStart": "2026-05-05",
+    },
+    {
+        ...tracks.LIME_ROCK_CLASSIC,
+        "weekStart": "2026-05-12",
+    },
+    {
+        ...tracks.LONG_BEACH,
+        "weekStart": "2026-05-19",
         "notes": [
-            "60 mintue endurance round",
+            "70 mintue endurance round",
             "Fuel stop required"
         ],
     },
     {
-        ...tracks.IMOLA,
-        "weekStart": "2026-02-24",
+        ...tracks.MISANO,
+        "weekStart": "2026-05-26",
     },
     {
-        ...tracks.SONOMA_CUP_LONG,
-        "weekStart": "2026-03-03",
+        ...tracks.SPA_CLASSIC_PITS,
+        "weekStart": "2026-06-02",
     },
 ]
 
