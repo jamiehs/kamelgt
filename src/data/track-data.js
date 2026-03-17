@@ -863,7 +863,15 @@ export const ROAD_ATLANTA = {
                 file: "road-atlanta/A90 - 22S4 - RoadAtlanta - J Del Olmo - R.sto",
             },
         ],
-        "nissangtpzxt": [],
+        "nissangtpzxt": [
+            {
+                file: "road-atlanta/F122_NZXT_RoadAtlanta_1-6_Q.sto",
+                comment: QUAL,
+            },
+            {
+                file: "road-atlanta/F122_NZXT_RoadAtlanta_1-6_R.sto",
+            },
+        ],
     }
 }
 export const SACHSENRING = {
