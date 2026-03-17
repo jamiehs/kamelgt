@@ -48,7 +48,7 @@ function Setups(props: SetupsProps) {
                                 )}
                                 {setupsExist ? (
                                     <div className="cars-grid">
-                                        {round.setups?.nissangtpzxt.length > 0 && (
+                                        {round.setups?.nissangtpzxt.length > 0 ? (
                                             <div>
                                                 <span className="car badge" data-class="first">Nissan GTP</span>
                                                 <ul>
@@ -59,6 +59,16 @@ function Setups(props: SetupsProps) {
                                                         </li>
                                                     ))}
                                                 </ul>
+                                            </div>
+                                        ) : (
+                                            <div>
+                                                <span className="car badge" data-class="first">Nissan GTP</span>
+                                                <p>
+                                                    Due to a variety of vehicle updates for the Nissan GTP ZXT, setups from 2026 Season 1 and older no longer work.
+                                                </p>
+                                                <p>
+                                                    Check the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> in the <code><a href="https://discord.com/channels/454770815108513814/741775806967185420" target="_blank" rel="noreferrer">#nissan-setups</a></code> channel for the latest sets.
+                                                </p>
                                             </div>
                                         )}
                                         {round.setups?.audi90gto.length > 0 && (

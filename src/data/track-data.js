@@ -26,29 +26,7 @@ export const ARAGON_OUTER = {
                 file: "aragon/AragonOuter22c.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "aragon/JW-Aragon-Quali-V3.sto",
-                comment: QUAL
-            },
-            {
-                file: "aragon/JW-Aragon-Race-V3.sto",
-            },
-            {
-                file: "aragon/F122_NGTP_MotorlandOuter_1-5_Q2.sto",
-                comment: QUAL
-            },
-            {
-                file: "aragon/F122_NGTP_MotorlandOuter_1-5.sto",
-            },
-            {
-                file: "aragon/Lgo25S4_Aragon_Outer_Q51.sto",
-                comment: QUAL
-            },
-            {
-                file: "aragon/Lgo25S4_Aragon_Outer_R51.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const ARAGON_MOTORCYCLE_GP = {
@@ -83,25 +61,7 @@ export const ALGARVE = {
                 file: "algarve/A90_Portimao_24S2_Y_Gijsen_R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "algarve/GTP_Algarve_JdelOlmoR.sto",
-            },
-            {
-                file: "algarve/Lgo24S2_Algarve_Q72.sto",
-                comment: QUAL
-            },
-            {
-                file: "algarve/Lgo24S2_Algarve_R72.sto",
-            },
-            {
-                file: "algarve/rgeada_portimao_q.sto",
-                comment: QUAL
-            },
-            {
-                file: "algarve/rgeada_portimao_r.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const BARBER = {
@@ -130,22 +90,7 @@ export const BARBER = {
                 file: "barber/barber-24S1-r3.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "barber/BL_Barber_Q7.4.sto",
-                comment: QUAL
-            },
-            {
-                file: "barber/BL_Barber_R7.4.sto",
-            },
-            {
-                file: "barber/Lgo24S1_Barber_Full_Q70.sto",
-                comment: QUAL
-            },
-            {
-                file: "barber/Lgo24S1_Barber_Full_R70.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const BARCELONA = {
@@ -161,15 +106,7 @@ export const BARCELONA = {
                 file: "barcelona/A90_BarcelonaH_23S1_Y_Gijsen_R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "barcelona/Lgo23S1_BarcelonaHist_MH_Silverstone_Int_Q60.sto",
-                comment: QUAL
-            },
-            {
-                file: "barcelona/Lgo23S1_BarcelonaHist_MH_Silverstone_Int_R60.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const BARCELONA_HISTORIC = {
@@ -213,43 +150,7 @@ export const BATHURST = {
                 comment: QUAL
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "bathurst/Bathurst60min.sto",
-                comment: "From audriusv",
-            },
-            {
-                file: "bathurst/F122_NGTP_Bathurst_1-9.sto",
-            },
-            {
-                file: "bathurst/NGTP_BATH_Q_ALEX_FRI.sto",
-                comment: QUAL
-            },
-            {
-                file: "bathurst/NGTP_BATH_R_ALEX_FRI.sto",
-            },
-            {
-                file: "bathurst/BL_Bathurst_R8-2.sto",
-            },
-            {
-                file: "bathurst/BL_Bathurst_Q8-2.sto",
-                comment: QUAL
-            },
-            {
-                file: "bathurst/jlo_bathurst_r.sto",
-            },
-            {
-                file: "bathurst/jlo_bathurst_q.sto",
-                comment: QUAL
-            },
-            {
-                file: "bathurst/Lgo24S2_Bathurst_R51.sto",
-            },
-            {
-                file: "bathurst/Lgo24S2_Bathurst_Q60.sto",
-                comment: QUAL
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const BELLE_ISLE = {
@@ -277,39 +178,7 @@ export const CHARLOTTE_ROVAL = {
                 file: "charlotte/A90_Charlotte_22S3_Y_Gijsen_R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "charlotte/Charlotte_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "charlotte/BL_Charlotte_Roval_Q6.sto",
-                comment: QUAL
-            },
-            {
-                file: "charlotte/BL_Charlotte_Roval_R6.sto",
-            },
-            {
-                file: "charlotte/F122_NGTP_Charlotte_1-4_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "charlotte/F122_NGTP_Charlotte_1-4.sto",
-            },
-            {
-                file: "charlotte/GTP_Charlotte_JdelOlmoR.sto",
-            },
-            {
-                file: "charlotte/Lgo23S4_Charlotte_Roval_Q70.sto",
-                comment: QUAL
-            },
-            {
-                file: "charlotte/Lgo23S4_Charlotte_Roval_R70.sto",
-            },
-            {
-                file: "charlotte/rovalo_FRC_hamilR1.2.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const COTA = {
@@ -334,25 +203,7 @@ export const DAYTONA = {
                 file: "daytona/KB_2022-S2_Daytona_Road_R-ih.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "daytona/F122_NGTP_DaytonaRC_1-8_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "daytona/F122_NGTP_DaytonaRC_1-8.sto",
-            },
-            {
-                file: "daytona/GTP_Daytona_JdelOlmoR.sto",
-            },
-            {
-                file: "daytona/SDC_24s4_GTP_Daytona_Q1.0.1.sto",
-                comment: QUAL
-            },
-            {
-                file: "daytona/SDC_24s4_GTP_Daytona_R1.0.1.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const DAYTONA_ROAD = {
@@ -403,25 +254,7 @@ export const HOCKENHEIM_GP = {
                 file: "hockenheimring/iB_HockOut_23s4_r1.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "hockenheimring/Hockenheim21c.sto",
-            },
-            {
-                file: "hockenheimring/Lgo25S1_Hockenheim_GP_Q80.sto",
-                comment: QUAL
-            },
-            {
-                file: "hockenheimring/Lgo25S1_Hockenheim_GP_R81.sto",
-            },
-            {
-                file: "hockenheimring/NGTP_Hockenheim_1-6_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "hockenheimring/NGTP_Hockenheim_1-6.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const HOCKENHEIM_OUTER = {
@@ -458,35 +291,7 @@ export const HOMESTEAD_MIAMI_ROAD_A = {
                 file: "miami-homestead/Miami2022S2b.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "miami-homestead/MATT_MALONE_SETUP-for-Matt-ONLY_R.sto",
-            },
-            {
-                file: "miami-homestead/BL_HomesteadA_Q.2.sto",
-                comment: QUAL
-            },
-            {
-                file: "miami-homestead/BL_HomesteadA_R.2.sto",
-            },
-            {
-                file: "miami-homestead/F122_NGTP_MiamiA_1-3_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "miami-homestead/F122_NGTP_MiamiA_1-3.sto",
-            },
-            {
-                file: "miami-homestead/F122_NGTP_MiamiA_1-5_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "miami-homestead/F122_NGTP_MiamiA_1-5.sto",
-            },
-            {
-                file: "miami-homestead/Lgo23S3_HomesteadB_R31.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const HOMESTEAD_MIAMI_ROAD_B = {
@@ -526,21 +331,7 @@ export const INDY_ROAD = {
                 file: "indy-road/23S1_Indy-road_R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "indy-road/Lgo23S1_Indy_RC_MH_Silverstone_Int_R_R62.sto",
-            },
-            {
-                file: "indy-road/Lgo23S1_Indy_RC_MH_Silverstone_Int_R_Q62.sto",
-                comment: QUAL
-            },
-            {
-                file: "indy-road/NGTP_Indianapolis22_1-5.sto",
-            },
-            {
-                file: "indy-road/asg-indy-rNGTP_1-5.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const INDY_ROAD_2009 = {
@@ -577,35 +368,7 @@ export const JEREZ = {
                 file: "jerez/JdelOlmoAudiJerez23S2RACE.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "jerez/GTP_Jerez_JdelOlmoR.sto",
-            },
-            {
-                file: "jerez/JEREZ_NGTP_Q_ALEX_HDF.sto",
-                comment: QUAL
-            },
-            {
-                file: "jerez/JEREZ_NGTP_R_ALEX_HDF.sto",
-            },
-            {
-                file: "jerez/JEREZ_NGTP_R_ALEX_HDF2 V2.sto",
-            },
-            {
-                file: "jerez/JW-Jerez-Quali-V1.sto",
-                comment: QUAL
-            },
-            {
-                file: "jerez/JW-Jerez-Race-V1.sto",
-            },
-            {
-                file: "jerez/Lgo24S4_Jerez_Q91.sto",
-                comment: QUAL
-            },
-            {
-                file: "jerez/Lgo24S4_Jerez_R80.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const JEREZ_MOTO = {
@@ -631,17 +394,7 @@ export const LAGUNA_SECA = {
                 file: "laguna-seca/maf_laguna_24s4_r1.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "laguna-seca/GTP_LagunaSeca_JdelOlmoR.sto",
-            },
-            {
-                file: "laguna-seca/Laguna33c.sto",
-            },
-            {
-                file: "laguna-seca/LagunaSeca_Race_V1.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const LE_MANS = {
@@ -675,15 +428,7 @@ export const LE_MANS_HISTORIC = {
                 file: "lemans/GTO_LeMans_H_R1.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "lemans/Lgo23S3_LeMans_Hist_AG_Indy_2W8_Q10.sto",
-                comment: QUAL
-            },
-            {
-                file: "lemans/Lgo23S3_LeMans_Hist_AG_Indy_2W8_R10.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const LIME_ROCK_CLASSIC = {
@@ -717,32 +462,7 @@ export const LONG_BEACH = {
                 comment: QUAL
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "long-beach/DWC_ZXT_21S4_long beach-_R1.sto",
-            },
-            {
-                file: "long-beach/DWC_ZXT_21S4_long beach-_Q1.sto",
-                comment: QUAL
-            },
-            {
-                file: "long-beach/LONGBITCH_NGTP_R_ALEX.sto",
-            },
-            {
-                file: "long-beach/LONGBITCH_NGTP_Q_ALEX.sto",
-                comment: QUAL
-            },
-            {
-                file: "long-beach/F122_NGTP_LongBeach_1-5.sto",
-            },
-            {
-                file: "long-beach/F122_NGTP_LongBeach_1-5_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "long-beach/GTP_LongBeach_JdelOlmoR24S3.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const MAGNY_COURS = {
@@ -766,22 +486,7 @@ export const MAGNY_COURS = {
                 file: "magny-cours/KB_2023-S1_Magny_Cours.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "magny-cours/Lgo23S1_Magny-Cours_Q63.sto",
-                comment: QUAL
-            },
-            {
-                file: "magny-cours/Lgo23S1_Magny-Cours_R63.sto",
-            },
-            {
-                file: "magny-cours/NGTP_MagnyCours_1-6_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "magny-cours/NGTP_MagnyCours_1-6.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const MEXICO = {
@@ -818,25 +523,7 @@ export const MID_OHIO = {
                 file: "mid-ohio/Mid-Ohio30c.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "mid-ohio/GTP_MidOhio_JdelOlmoR.sto",
-            },
-            {
-                file: "mid-ohio/Mid-Ohio30c Q v2.sto",
-                comment: QUAL
-            },
-            {
-                file: "mid-ohio/Mid-Ohio30c v3.sto",
-            },
-            {
-                file: "mid-ohio/NGTP_OHIO_Q_ALEX WED.sto",
-                comment: QUAL
-            },
-            {
-                file: "mid-ohio/NGTP_OHIO_R_ALEX WED.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const MID_OHIO_CHICANE = {
@@ -877,25 +564,7 @@ export const MONTREAL = {
                 file: "montreal/Montreal_23_v1.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "montreal/F122_NGTP_Montreal_1-3_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "montreal/F122_NGTP_Montreal_1-3.sto",
-            },
-            {
-                file: "montreal/GTP_Gilles_JdelOlmoR2.sto",
-            },
-            {
-                file: "montreal/Lgo24S1_Montreal_Q50.sto",
-                comment: QUAL
-            },
-            {
-                file: "montreal/Lgo24S1_Montreal_R50.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const MONZA = {
@@ -936,15 +605,7 @@ export const MOSPORT = {
                 file: "ctmp/mosport-21S4-r4.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_Q64.sto",
-                comment: QUAL
-            },
-            {
-                file: "ctmp/Lgo21S4_Mosport_MH_Silverstone_Int_R_v1_R63.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const MUGELLO = {
@@ -974,32 +635,7 @@ export const MUGELLO = {
                 comment: QUAL
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "mugello/asg-mugello-q.sto",
-                comment: QUAL
-            },
-            {
-                file: "mugello/asg-mugello-r.sto",
-            },
-            {
-                file: "mugello/F122_NGTP_Mugello_1-7_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "mugello/F122_NGTP_Mugello_1-7.sto",
-            },
-            {
-                file: "mugello/GTP_Mugello_JdelOlmoR2.sto",
-            },
-            {
-                file: "mugello/Lgo24S1_Mugello_Q60.sto",
-                comment: QUAL
-            },
-            {
-                file: "mugello/Lgo24S1_Mugello_R61_gear_changes_v2.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const NAVARRA = {
@@ -1050,27 +686,7 @@ export const NURBURGRING_GP = {
                 file: "nurburgring-gp/nurburgring-gp-22S3_JavierNurg4.1.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "nurburgring-gp/nurburgring-gp-22S3_Ferran_1-2.sto",
-            },
-            {
-                file: "nurburgring-gp/nurburgring-gp-22S3_MH_R_v1.1.sto",
-            },
-            {
-                file: "nurburgring-gp/Lgo24S1_Nur_BES_WEC_Q70.sto",
-                comment: QUAL
-            },
-            {
-                file: "nurburgring-gp/Lgo24S1_Nur_BES_WEC_R70.sto",
-            },
-            {
-                file: "nurburgring-gp/GTP_Nurb_JdelOlmoR.sto",
-            },
-            {
-                file: "nurburgring-gp/GTP_Nurb_JdelOlmoRNascar.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const NURBURGRING_GP_BES_WEC = {
@@ -1115,17 +731,7 @@ export const OKAYAMA = {
                 file: "okayama/A90 - 22S4 - Okayama - J Leskela - R2.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "okayama/GTP_Okayama_JdelOlmoR.sto",
-            },
-            {
-                file: "okayama/NGTP_Okayama_1-8.sto",
-            },
-            {
-                file: "okayama/SDC_Lgo21S2_Okayama_GP_R93.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const ORAN_PARK = {
@@ -1161,27 +767,7 @@ export const PHILLIP_ISLAND = {
                 file: "phillip-island/phillip-island-22S3-Y_Gijsen-220727-R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "phillip-island/Lgo22S3_Phillip_Island_AG_WGI_6W1_Q62.sto",
-                comment: QUAL
-            },
-            {
-                file: "phillip-island/Lgo22S3_Phillip_Island_AG_WGI_6W1_R62 v3.sto",
-            },
-            {
-                file: "phillip-island/LH_Phillip_Island_R.sto",
-            },
-            {
-                file: "phillip-island/phillip-island-22S3_1-1.sto",
-            },
-            {
-                file: "phillip-island/phillip-island-22S3_wing7_R6.sto",
-            },
-            {
-                file: "phillip-island/phillip-island-22S3-Lgo_AG_WGI_6W1_R62.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const POCONO_RACEWAY_2009_INTERNATIONAL = {
@@ -1202,25 +788,7 @@ export const PORTLAND = {
                 file: "portland/maf_portland_25s3_r1.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "portland/JW-Portland-Quali-V1.sto",
-                comment: QUAL
-            },
-            {
-                file: "portland/JW-Portland-Race-V1.sto",
-            },
-            {
-                file: "portland/portland v3.sto",
-            },
-            {
-                file: "portland/portland v5 jw q.sto",
-                comment: QUAL
-            },
-            {
-                file: "portland/portland v5 jw.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const PORTLAND_NO_CHICANE = {
@@ -1253,24 +821,7 @@ export const ROAD_AMERICA = {
                 comment: QUAL
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "road-america/GTP_RoadAmerica_JdelOlmoR.sto",
-            },
-            {
-                file: "road-america/Lgo20S3_Road_America_high_downforce_R77.sto",
-            },
-            {
-                file: "road-america/road_america_22s4_Full_R_v1-4.sto",
-            },
-            {
-                file: "road-america/SDC_23S2_GTP_RAMERICA_RACEv0.86.sto",
-            },
-            {
-                file: "road-america/SDC_23S2_GTP_RAMERICA_QUALYv0.85.sto",
-                comment: QUAL
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const ROAD_AMERICA_500 = {
@@ -1291,21 +842,7 @@ export const ROAD_AMERICA_500 = {
             },
             ...ROAD_AMERICA.setups.audi90gto
         ],
-        "nissangtpzxt": [
-            {
-                file: "road-america/F122_NGTP_RA500_1-7.sto",
-                comment: "RA500 setup"
-            },
-            {
-                file: "road-america/F122_NGTP_RA500_1-7_Q.sto",
-                comment: "RA500 Qualifying setup"
-            },
-            {
-                file: "road-america/SDC_24s2_GTP_R500_R1.1.2.sto",
-                comment: "RA500 setup"
-            },
-            ...ROAD_AMERICA.setups.nissangtpzxt
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const ROAD_ATLANTA = {
@@ -1326,16 +863,7 @@ export const ROAD_ATLANTA = {
                 file: "road-atlanta/A90 - 22S4 - RoadAtlanta - J Del Olmo - R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "road-atlanta/Lgo22S4_Road_Atlanta_MH_Silverstone_Int_R61.sto",
-                comment: ""
-            },
-            {
-                file: "road-atlanta/Lgo22S4_Road_Atlanta_MH_Silverstone_Int_Q61.sto",
-                comment: QUAL
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const SACHSENRING = {
@@ -1363,24 +891,7 @@ export const SEBRING = {
                 file: "sebring/A90_Sebring_23S2_Y_Gijsen_R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "sebring/Lgo24S4_Sebring_Q71.sto",
-                comment: QUAL
-            },
-            {
-                file: "sebring/Lgo24S4_Sebring_R71.sto",
-            },
-            {
-                file: "sebring/sebring-21S1_Havdal_R_v1.1.sto",
-            },
-            {
-                file: "sebring/Sebring_Ferran_22s3_1-4.sto",
-            },
-            {
-                file: "sebring/NGTP_Sebring_1-EGedit.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const SILVERSTONE_GP = {
@@ -1434,32 +945,7 @@ export const SPA_CLASSIC_PITS = {
                 file: "spa/A90_23S3_Spa_Y_Gijsen_R.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "spa/F122_NGTP_Spa_1-2_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "spa/F122_NGTP_Spa_1-2.sto",
-            },
-            {
-                file: "spa/GTP_Spa_JdelOlmoR.sto",
-            },
-            {
-                file: "spa/Lgo24S2_Spa_Q50.sto",
-                comment: QUAL
-            },
-            {
-                file: "spa/Lgo24S2_Spa_R50.sto",
-            },
-            {
-                file: "spa/rgeada_spa_q.sto",
-                comment: QUAL
-            },
-            {
-                file: "spa/rgeada_spa_r.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const SPA_ENDURANCE_PITS = {
@@ -1497,22 +983,7 @@ export const SUMMIT_POINT = {
                 file: "summit-point/summit-21S4-r2.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "summit-point/asg-summit-q-NGTP_R_v1-4.sto",
-                comment: QUAL
-            },
-            {
-                file: "summit-point/asg-summit-r-NGTP_R_v1-4.sto",
-            },
-            {
-                file: "summit-point/Lgo22S4_Summit_Q80.sto",
-                comment: QUAL
-            },
-            {
-                file: "summit-point/Lgo22S4_Summit_R81.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const SUZUKA = {
@@ -1533,36 +1004,7 @@ export const SUZUKA = {
                 file: "suzuka/suzuka-23S1-Javier-r2.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "suzuka/BL_Suzuka_Q7.1.sto",
-                comment: QUAL
-            },
-            {
-                file: "suzuka/BL_Suzuka_R7.1.sto",
-            },
-            {
-                file: "suzuka/F122_NGTP_Suzuka_1-3_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "suzuka/F122_NGTP_Suzuka_1-3.sto",
-            },
-            {
-                file: "suzuka/JW-Suzuka-Quali-V3.sto",
-                comment: QUAL
-            },
-            {
-                file: "suzuka/JW-Suzuka-Race-V3.sto",
-            },
-            {
-                file: "suzuka/NGTP_SUZU_Q_ALEX WED.sto",
-                comment: QUAL
-            },
-            {
-                file: "suzuka/NGTP_SUZU_R_ALEX WED.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const THE_BEND_GT_CIRCUIT = {
@@ -1571,8 +1013,7 @@ export const THE_BEND_GT_CIRCUIT = {
     setups: {
         "audi90gto": [
         ],
-        "nissangtpzxt": [
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const THRUXTON = {
@@ -1601,16 +1042,7 @@ export const THRUXTON = {
                 comment: "From audriusv"
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "thruxton/Thruxton27c.sto",
-                comment: "From audriusv"
-            },
-            {
-                file: "thruxton/Lgo25S2_Thruxton_R60.sto",
-                comment: "From Laust"
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const TSUKUBA = {
@@ -1648,28 +1080,7 @@ export const VIR = {
                 file: "barber/maf_barber_24s1_r2.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "vir/Lgo24S4_VIR_Full_Q60.sto",
-                comment: QUAL
-            },
-            {
-                file: "vir/Lgo24S4_VIR_Full_R61.sto",
-            },
-            {
-                file: "vir/F122_NGTP_VIR_v1-5B_Q.sto",
-                comment: QUAL
-            },
-            {
-                file: "vir/F122_NGTP_VIR_v1-5B.sto",
-            },
-            {
-                file: "vir/GTP_VirginiaFull_JdelOlmoR.sto",
-            },
-            {
-                file: "vir/Vir32c.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const WATKINS_GLEN_BOOT = {
@@ -1702,30 +1113,7 @@ export const WATKINS_GLEN_BOOT = {
                 file: "watkins-glen/watkins-classic-boot-23S3-r2.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "watkins-glen/GTP_WGB_JdelOlmoR.sto",
-            },
-            {
-                file: "watkins-glen/Lgo24S4_WG_Classic_Boot_Q52.sto",
-                comment: QUAL
-            },
-            {
-                file: "watkins-glen/Lgo24S4_WG_Classic_Boot_R52.sto",
-            },
-            {
-                file: "watkins-glen/Watkins_Glen_CB_R_v1.2.sto",
-            },
-            {
-                file: "watkins-glen/watkins-22S3-AG_WGI_5W2.sto",
-            },
-            {
-                file: "watkins-glen/Watkins5W2v3.sto",
-            },
-            {
-                file: "watkins-glen/Watkins32c.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const WATKINS_GLEN_CLASSIC = {
@@ -1764,29 +1152,7 @@ export const ZANDVOORT = {
                 file: "zandvoort/zandvoort-21S3-r4.sto",
             },
         ],
-        "nissangtpzxt": [
-            {
-                file: "zandvoort/GTP_ZandvoortJdelOlmoQ.sto",
-                comment: QUAL
-            },
-            {
-                file: "zandvoort/GTP_ZandvoortJdelOlmo.sto",
-            },
-            {
-                file: "zandvoort/Lgo23S4_Zandvoort_GP_Q62.sto",
-                comment: QUAL
-            },
-            {
-                file: "zandvoort/Lgo23S4_Zandvoort_GP_R53.sto",
-            },
-            {
-                file: "zandvoort/ZAND_NGTP_Q_ALEX.sto",
-                comment: QUAL
-            },
-            {
-                file: "zandvoort/ZAND_NGTP_R_ALEX.sto",
-            },
-        ]
+        "nissangtpzxt": [],
     }
 }
 export const ZOLDER = {
