@@ -9,8 +9,8 @@ import {seasonSetups, seasonShortName} from './data/season-setups';
 import broadcasts from './data/broadcasts';
 import moment from 'moment';
 import {VCR_DISCORD_URL} from './data/constants';
-import { ReactComponent as DiscordIcon } from './images/Discord-Logo-Color.svg';
-import { ReactComponent as DownloadSetupIcon } from './images/download-setup.svg';
+import DiscordIcon from './images/Discord-Logo-Color.svg?react';
+import DownloadSetupIcon from './images/download-setup.svg?react';
 import {
     getCurrentWeekData,
     localDateFromString,

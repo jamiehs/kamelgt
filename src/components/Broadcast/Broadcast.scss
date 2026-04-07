@@ -185,33 +185,33 @@
                 transition: opacity 300ms ease;
 
                 &.glitch-1 {
-                    background-image: url(../../../public/vhs1.jpg);
+                    background-image: url(../../../vhs1.jpg);
                     @media (min-width: $large-width) {
                         // animation: shimmer1 75ms infinite;
                     }
                 }
                 &.glitch-2 {
-                    background-image: url(../../../public/vhs2.jpg);
+                    background-image: url(../../../vhs2.jpg);
                     @media (min-width: $large-width) {
                         // animation: shimmer2 70ms infinite;
                     }
                 }
                 &.glitch-3 {
-                    background-image: url(../../../public/vhs3.jpg);
+                    background-image: url(../../../vhs3.jpg);
                     @media (min-width: $large-width) {
                         // animation: shimmer3 67ms infinite;
                     }
                     opacity: 0.4;
                 }
                 &.glitch-4 {
-                    background-image: url(../../../public/vhs4.jpg);
+                    background-image: url(../../../vhs4.jpg);
                     @media (min-width: $large-width) {
                         // animation: shimmer4 80ms infinite;
                     }
                     opacity: 0.5;
                 }
                 &.glitch-5 {
-                    background-image: url(../../../public/vhs5.jpg);
+                    background-image: url(../../../vhs5.jpg);
                     @media (min-width: $large-width) {
                         // animation: shimmer5 88ms infinite;
                     }
