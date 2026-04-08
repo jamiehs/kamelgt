@@ -1389,15 +1389,15 @@ const broadcasts = [
         youTube: [
             {
                 ...tracks.ROAD_ATLANTA,
-                url: ""
+                url: "https://youtu.be/pEGJBOWY1bQ?t=365"
             },
             {
                 ...tracks.TWIN_RING_MOTEGI,
-                url: ""
+                url: "https://youtu.be/ItBNyzGz854?t=355"
             },
             {
                 ...tracks.ADELAIDE_STREET_CIRCUIT,
-                url: ""
+                url: "https://youtu.be/D9sCb451ptI?t=334"
             },
             {
                 ...tracks.LAGUNA_SECA,
