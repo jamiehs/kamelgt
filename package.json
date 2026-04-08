@@ -32,6 +32,8 @@
     "deploy": "gh-pages -d build",
     "start": "vite",
     "build": "vite build",
+    "serve": "vite build && npm run zipsetups && vite preview",
+    "zipsetups": "bash scripts/zipsetups.sh",
     "test": "vitest",
     "tunnel": "npx localtunnel --subdomain kamelgt --port 3000",
     "cleanup": "find . -name \"*.Identifier\" -type f -delete"
