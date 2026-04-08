@@ -2,6 +2,25 @@ const QUAL = "Qualifying setup";
 
 export const ADELAIDE_STREET_CIRCUIT = {
     title: "Adelaide Street Circuit",
+    setups: {
+        "audi90gto": [
+            {
+                file: "adelaide/26s2-Adelaide21c.sto",
+            },
+            {
+                file: "adelaide/dwc_26S2_Adelaide_21C_R4b.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "adelaide/Lgo26S2_Adelaide_Q82.sto",
+                comment: QUAL
+            },
+            {
+                file: "adelaide/Lgo26S2_Adelaide_R82.sto",
+            },
+        ]
+    }
 }
 export const ARAGON_OUTER = {
     title: "Aragón - Outer",
@@ -219,7 +238,37 @@ export const DAYTONA_NASCAR_ROAD = {
     setups: DAYTONA.setups
 }
 export const DONINGTON_PARK = {
-    title: "Donington Park"
+    title: "Donington Park",
+    setups: {
+        // "audi90gto": [
+        //     {
+        //         file: "",
+        //     },
+        //     {
+        //         file: "",
+        //     },
+        //     {
+        //         file: "",
+        //     },
+        //     {
+        //         file: "",
+        //     },
+        // ],
+        // "nissangtpzxt": [
+        //     {
+        //         file: "",
+        //     },
+        //     {
+        //         file: "",
+        //     },
+        //     {
+        //         file: "",
+        //     },
+        //     {
+        //         file: "",
+        //     },
+        // ]
+    }
 }
 export const FUJI_NO_CHICANE = {
     title: "Fuji - No Chicane"
@@ -381,10 +430,10 @@ export const LAGUNA_SECA = {
     setups: {
         "audi90gto": [
             {
-                file: "laguna-seca/KB_2022-S2_Laguna_seca_Race.sto",
+                file: "laguna-seca/26s2-LagunaSeca500.sto",
             },
             {
-                file: "laguna-seca/laguna.sto",
+                file: "laguna-seca/KB_2022-S2_Laguna_seca_Race.sto",
             },
             {
                 file: "laguna-seca/maf_laguna_24s4_q1.sto",
@@ -394,7 +443,15 @@ export const LAGUNA_SECA = {
                 file: "laguna-seca/maf_laguna_24s4_r1.sto",
             },
         ],
-        "nissangtpzxt": [],
+        "nissangtpzxt": [
+            {
+                file: "laguna-seca/F122_NZXT_LagunaSeca_1-5_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "laguna-seca/F122_NZXT_LagunaSeca_1-5_R.sto",
+            },
+        ],
     }
 }
 export const LE_MANS = {
@@ -1059,7 +1116,36 @@ export const TSUKUBA = {
 }
 export const TWIN_RING_MOTEGI = {
     title: "Mobility Resort Motegi",
-    alternateTitle: "Twin Ring Motegi"
+    alternateTitle: "Twin Ring Motegi",
+    setups: {
+        "audi90gto": [
+            {
+                file: "motegi/26s2-Motegi20c_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "motegi/26s2-Motegi20c.sto",
+            },
+            {
+                file: "motegi/maf_motegi_26s2_r0.1.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "motegi/2026S2 Motegi 3.1.sto",
+            },
+            {
+                file: "motegi/Lgo26S2_Motegi_GP_Q80.sto",
+                comment: QUAL
+            },
+            {
+                file: "motegi/Lgo26S2_Motegi_GP_R80.sto",
+            },
+            {
+                file: "motegi/SDC_26s1_ZXT_TwinRing_R1.0.0.sto",
+            },
+        ]
+    }
 }
 export const VIR = {
     title: "VIR",
