@@ -27,6 +27,8 @@ declare module 'car-driver' {
     exhaustOffset?: number
     exhaustRadius?: number
     exhaustInterval?: number
+    exhaustAngle?: number
+    exhaustInset?: number
     grip?: number
     orbitDetection?: boolean
     proximityBoost?: boolean

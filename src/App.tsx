@@ -1,5 +1,6 @@
 import './App.scss';
 import React from 'react';
+import { initCarScene } from './carScene';
 import Fuse from 'fuse.js';
 import Timeslot from './components/Timeslot/Timeslot';
 import Broadcast from './components/Broadcast/Broadcast';
@@ -24,6 +25,7 @@ interface App {
     interval: ReturnType<typeof setInterval>
     flattenedBroadcasts: Array<SingleBroadcast>
     fuse: Fuse<SingleBroadcast>
+    destroyCarScene: (() => void) | null
 }
 interface AppState {
     currentWeekData: {}
@@ -45,6 +47,8 @@ class App extends React.Component<null, AppState> {
         }
     }
     componentDidMount() {
+        this.destroyCarScene = initCarScene()
+
         this.interval = setInterval(() => this.setState({
             currentWeekData: getCurrentWeekData(seasonSetups)
         }), 1000);
@@ -92,6 +96,7 @@ class App extends React.Component<null, AppState> {
     }
     componentWillUnmount() {
         clearInterval(this.interval);
+        this.destroyCarScene?.()
     }
 
     handleBroadcastSeasonChange(event) {
@@ -296,7 +301,7 @@ class App extends React.Component<null, AppState> {
                     <h2 className="title">Setups for {seasonShortName}</h2>
                     <Setups upcomingWeeks={3} />
                 </div>
-                <div className="format section">
+                <div id="format" className="format section">
                     <h2 className="title">Race Format</h2>
                     <ul className="text-content">
                         <li>
@@ -326,7 +331,7 @@ class App extends React.Component<null, AppState> {
                         </li>
                     </ul>
                 </div>
-                <div className="tips section">
+                <div id="tips" className="tips section">
                     <h2 className="title">Race Tips</h2>
                     <div className="text-content">
                         <h3>For GTP Drivers:</h3>

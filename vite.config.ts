@@ -1,12 +1,18 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
+import path from 'path'
 
 export default defineConfig({
   plugins: [
     react(),
     svgr(),
   ],
+  resolve: {
+    alias: {
+      'car-driver': path.resolve(__dirname, '../car-driver/src/index.js'),
+    },
+  },
   build: {
     outDir: 'build',
   },

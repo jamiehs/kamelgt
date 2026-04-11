@@ -101,6 +101,7 @@ export function initCarScene(): () => void {
     exhaustPosition: 'right' as const,
     exhaustOffset: 0.38,
     exhaustRadius: 5,
+    exhaustAngle: 145,
   }
 
   // Audi 90 GTO #01
@@ -119,6 +120,7 @@ export function initCarScene(): () => void {
     color: 'rgb(214, 214, 214)',
     twitchiness: 0.1,
     acceleration: 200,
+    aggression: 0.7,
     brakes: 0.7,
     sprite: '/images/a9037.png',
   })
@@ -140,7 +142,9 @@ export function initCarScene(): () => void {
     slipScale: 1.5,
     exhaustPosition: 'rear',
     exhaustOffset: 0.6,
-    exhaustRadius: 4,
+    exhaustInterval: 0.7,
+    exhaustInset: 14,
+    exhaustRadius: 4.8,
     shadowCornerRadius: 1,
     sprite: '/images/zxt.png',
   })
