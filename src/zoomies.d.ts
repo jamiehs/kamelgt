@@ -1,4 +1,4 @@
-declare module 'car-driver' {
+declare module 'zoomies' {
   export interface CarOptions {
     x?: number
     y?: number

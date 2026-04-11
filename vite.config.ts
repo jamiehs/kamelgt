@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'car-driver': path.resolve(__dirname, '../car-driver/src/index.js'),
+      'zoomies': path.resolve(__dirname, '../zoomies/src/index.js'),
     },
   },
   build: {

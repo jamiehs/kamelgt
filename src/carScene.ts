@@ -1,4 +1,4 @@
-import { CarDriver } from 'car-driver'
+import { CarDriver } from '@jamiehs/zoomies'
 
 // How far into the margin the cars target (0 = page edge, 1 = content edge).
 const MARGIN_INSET = 0.85
@@ -19,10 +19,10 @@ type SectionConfig = {
 
 // Art direction per section.
 const SECTION_CONFIGS: Record<string, SectionConfig> = {
-  timeslots:  { side: 'random', anchor: 'top'    },
+  timeslots:  { side: 'right',  anchor: 'top'    },
   faq:        { side: 'right',  anchor: 'center' },
   setups:     { side: 'random', anchor: 'bottom' },
-  format:     { side: 'right',  anchor: 'center' },
+  format:     { side: 'random', anchor: 'center' },
   tips:       { side: 'right',  anchor: 'center' },
   broadcasts: { side: 'right',  anchor: 'top'    },
   shifting:   { side: 'right',  anchor: 'center' },
@@ -220,7 +220,7 @@ export function initCarScene(): () => void {
 
   window.addEventListener('scroll', onScroll, { passive: true })
 
-  // Ctrl+Shift+Space toggles the car-driver debug overlay + section highlight
+  // Ctrl+Shift+Space toggles the zoomies debug overlay + section highlight
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.ctrlKey && e.shiftKey && e.code === 'Space') {
       e.preventDefault()
