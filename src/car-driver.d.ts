@@ -40,6 +40,7 @@ declare module 'car-driver' {
     clickTarget?: Element | Document | null
     carOptions?: CarOptions
     debug?: boolean
+    driverChange?: boolean
     skidOpacity?: number
     shadow?: boolean
     shadowOpacity?: number

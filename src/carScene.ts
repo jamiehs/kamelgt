@@ -83,6 +83,7 @@ export function initCarScene(): () => void {
     shadowOpacity: 0.5,
     shadowOffsetX: 4,
     shadowOffsetY: 6,
+    driverChange: true,
   })
 
   // All cars spawn off-screen upper-right so they race onto the page on load
