@@ -20,8 +20,6 @@ function Setups(props: SetupsProps) {
         return filename.replace(/^[^/]+\//, '')
     }
 
-    console.log(trackData)
-
     return (
         <div className="Setups">
             <div className="rounds-grid">
