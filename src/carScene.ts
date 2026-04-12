@@ -72,7 +72,7 @@ interface CarTypeConfig {
 
 const AUDI_90_GTO: CarTypeConfig = {
   label: 'Audi 90 GTO',
-  count: [1, 2],
+  count: [1, 3],
   sprites: A90_SPRITES,
   fixed: {
     height: 32,
@@ -97,7 +97,7 @@ const AUDI_90_GTO: CarTypeConfig = {
 
 const NISSAN_GTP_ZXT: CarTypeConfig = {
   label: 'Nissan GTP ZX-T',
-  count: [1, 2],
+  count: [2, 3],
   sprites: ZXT_SPRITES,
   fixed: {
     height: 32,
