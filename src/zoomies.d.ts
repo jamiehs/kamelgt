@@ -1,4 +1,4 @@
-declare module 'zoomies' {
+declare module '@jamiehs/zoomies' {
   export interface CarOptions {
     x?: number
     y?: number
@@ -61,6 +61,7 @@ declare module 'zoomies' {
   export class CarDriver {
     cars: Car[]
     debug: boolean
+    _scatterMult: number
     skidOpacity: number
     shadow: boolean
     shadowOpacity: number

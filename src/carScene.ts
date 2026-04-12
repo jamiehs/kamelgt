@@ -1,5 +1,187 @@
 import { CarDriver } from '@jamiehs/zoomies'
 
+// --- Sprite pools ---
+
+const SPRITE_DIR = '/images/zoomies-cars/sharp'
+
+const A90_SPRITES = Array.from({ length: 27 }, (_, i) =>
+  `${SPRITE_DIR}/a90${String(i + 1).padStart(2, '0')}.png`
+)
+
+const ZXT_SPRITES = Array.from({ length: 14 }, (_, i) =>
+  `${SPRITE_DIR}/zxt${String(i + 1).padStart(2, '0')}.png`
+)
+
+// --- Car factory types ---
+
+interface CarRanges {
+  maxSpeed?:         [number, number]
+  acceleration?:     [number, number]
+  brakes?:           [number, number]
+  brakeDecel?:       [number, number]
+  grip?:             [number, number]
+  twitchiness?:      [number, number]
+  aggression?:       [number, number]
+  driveBias?:        [number, number]
+  slipScale?:        [number, number]
+  slipStiffness?:    [number, number]
+  slipDamping?:      [number, number]
+  maxSteering?:      [number, number]
+  steeringRate?:     [number, number]
+  skidThreshold?:    [number, number]
+  arrivalRadius?:    [number, number]
+  exhaustOffset?:    [number, number]
+  exhaustRadius?:    [number, number]
+  exhaustInterval?:  [number, number]
+  exhaustAngle?:     [number, number]
+  exhaustInset?:     [number, number]
+}
+
+interface CarTypeConfig {
+  /** Random number of cars to spawn, inclusive. */
+  count: [number, number]
+  sprites: string[]
+  /** Fixed options applied to every car of this type. */
+  fixed: {
+    color?: string
+    height?: number
+    wheelbase?: number
+    tireWidth?: number
+    maxSpeed?: number
+    maxSteering?: number
+    steeringRate?: number
+    driveBias?: number
+    slipScale?: number
+    exhaustPosition?: 'left' | 'right' | 'bothSides' | 'rear' | null
+    exhaustOffset?: number
+    exhaustRadius?: number
+    exhaustInterval?: number
+    exhaustAngle?: number
+    exhaustInset?: number
+    shadowCornerRadius?: number
+    orbitDetection?: boolean
+    proximityBoost?: boolean
+  }
+  /** Name shown in console debug output. */
+  label?: string
+  /** Per-car scalar values sampled uniformly from [min, max]. */
+  ranges?: CarRanges
+}
+
+// --- Car type definitions ---
+
+const AUDI_90_GTO: CarTypeConfig = {
+  label: 'Audi 90 GTO',
+  count: [2, 3],
+  sprites: A90_SPRITES,
+  fixed: {
+    height: 32,
+    wheelbase: 44,
+    color: 'rgb(201, 176, 32)',
+    maxSteering: 20,
+    steeringRate: 200,
+    driveBias: 0.6,
+    tireWidth: 7,
+    exhaustPosition: 'right',
+    exhaustOffset: 0.38,
+    exhaustRadius: 5,
+    exhaustAngle: 145,
+  },
+  ranges: {
+    acceleration:  [80, 100],
+    brakes:        [0.5,  0.8],
+    grip:          [0.5,  0.7],
+    twitchiness:   [0,    0.1],
+    aggression:    [0.3,    0.5],
+  },
+}
+
+const NISSAN_GTP_ZXT: CarTypeConfig = {
+  label: 'Nissan GTP ZX-T',
+  count: [2, 5],
+  sprites: ZXT_SPRITES,
+  fixed: {
+    height: 32,
+    wheelbase: 48,
+    color: '#0000ff',
+    maxSpeed: 550,
+    maxSteering: 22,
+    steeringRate: 200,
+    driveBias: 1,
+    tireWidth: 6,
+    slipScale: 1.2,
+    exhaustPosition: 'rear',
+    exhaustOffset: 0.6,
+    exhaustInterval: 0.7,
+    exhaustInset: 14,
+    exhaustRadius: 4.6,
+    shadowCornerRadius: 1,
+  },
+  ranges: {
+    acceleration:  [100,  120],
+    brakes:        [0.7,  1.0],
+    grip:          [0.6,  0.9],
+    twitchiness:   [0.2,  0.5],
+  },
+}
+
+// --- Factory helpers ---
+
+function randInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function randFloat(min: number, max: number): number {
+  return Math.random() * (max - min) + min
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
+function pickUnique<T>(pool: T[], n: number): T[] {
+  return shuffle([...pool]).slice(0, n)
+}
+
+// Base arrival distance for the closest car, and gap between each subsequent car.
+// arrivalRadius must exceed the min turning radius (~46px); 80px is a safe floor.
+const ARRIVAL_BASE    = 80
+const ARRIVAL_SPACING = 30
+
+function spawnCarType(
+  driver: CarDriver,
+  config: CarTypeConfig,
+  spawnX: number,
+  spawnY: number,
+  radii: number[],
+): void {
+  const sprites = pickUnique(config.sprites, radii.length)
+
+  for (let i = 0; i < radii.length; i++) {
+    const ranged: Record<string, number> = {}
+    if (config.ranges) {
+      for (const [key, range] of Object.entries(config.ranges)) {
+        if (range) ranged[key] = randFloat(range[0], range[1])
+      }
+    }
+
+    driver.addCar({
+      x: spawnX,
+      y: spawnY,
+      ...config.fixed,
+      ...ranged,
+      arrivalRadius: radii[i],
+      sprite: sprites[i],
+    })
+  }
+}
+
+// --- Scene setup ---
+
 // How far into the margin the cars target (0 = page edge, 1 = content edge).
 const MARGIN_INSET = 0.85
 
@@ -79,76 +261,29 @@ export function initCarScene(): () => void {
     clickTarget: null,
     skidOpacity: 0.04,
     shadow: true,
-    shadowBlur: 5,
+    shadowBlur: 2,
     shadowOpacity: 0.5,
-    shadowOffsetX: 4,
-    shadowOffsetY: 6,
+    shadowOffsetX: 2,
+    shadowOffsetY: 4,
     driverChange: true,
   })
+  // TODO: remove once arrival/scatter radii are tuned in the zoomies library
+  driver._scatterMult = 1.5
 
   // All cars spawn off-screen upper-right so they race onto the page on load
   const spawnX = window.innerWidth * 1.5
   const spawnY = 0
 
-  // Shared Audi 90 GTO base config
-  const audiBase = {
-    x: spawnX, y: spawnY,
-    height: 32,
-    wheelbase: 44,
-    maxSteering: 20,
-    steeringRate: 200,
-    driveBias: 0.6,
-    tireWidth: 7,
-    exhaustPosition: 'right' as const,
-    exhaustOffset: 0.38,
-    exhaustRadius: 5,
-    exhaustAngle: 145,
-  }
+  // Pre-pick counts so arrival radii can be distributed across the full fleet
+  const audiCount   = randInt(AUDI_90_GTO.count[0],    AUDI_90_GTO.count[1])
+  const nissanCount = randInt(NISSAN_GTP_ZXT.count[0], NISSAN_GTP_ZXT.count[1])
+  const totalCount  = audiCount + nissanCount
 
-  // Audi 90 GTO #01
-  driver.addCar({
-    ...audiBase,
-    color: 'rgb(201, 176, 32)',
-    twitchiness: 0.2,
-    acceleration: 190,
-    brakes: 0.5,
-    sprite: '/images/a901.png',
-  })
-  
-  // Audi 90 GTO #37
-  driver.addCar({
-    ...audiBase,
-    color: 'rgb(214, 214, 214)',
-    twitchiness: 0.1,
-    acceleration: 200,
-    aggression: 0.7,
-    brakes: 0.7,
-    sprite: '/images/a9037.png',
-  })
+  // Shuffle radii so parking slots are mixed between car types
+  const allRadii = shuffle(Array.from({ length: totalCount }, (_, i) => ARRIVAL_BASE + i * ARRIVAL_SPACING))
 
-  // Nissan GTP ZX-T
-  driver.addCar({
-    x: spawnX, y: spawnY,
-    color: '#0000ff',
-    height: 32,
-    wheelbase: 48,
-    maxSpeed: 550,
-    acceleration: 100,
-    maxSteering: 22,
-    twitchiness: 0.6,
-    brakes: 0.76,
-    steeringRate: 200,
-    driveBias: 1,
-    tireWidth: 6,
-    slipScale: 1.5,
-    exhaustPosition: 'rear',
-    exhaustOffset: 0.6,
-    exhaustInterval: 0.7,
-    exhaustInset: 14,
-    exhaustRadius: 4.8,
-    shadowCornerRadius: 1,
-    sprite: '/images/zxt.png',
-  })
+  spawnCarType(driver, AUDI_90_GTO,    spawnX, spawnY, allRadii.slice(0, audiCount))
+  spawnCarType(driver, NISSAN_GTP_ZXT, spawnX, spawnY, allRadii.slice(audiCount))
 
   // Pick the last section whose top has crossed 30% down the viewport —
   // i.e. the highest rect.top that is still ≤ triggerLine. This lets the
