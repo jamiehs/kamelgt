@@ -1401,7 +1401,7 @@ const broadcasts = [
             },
             {
                 ...tracks.LAGUNA_SECA,
-                url: ""
+                url: "https://youtu.be/kwNY1sM2vQY?t=358"
             },
             {
                 ...tracks.DONINGTON_PARK,
