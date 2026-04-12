@@ -259,6 +259,7 @@ export function initCarScene(): () => void {
     clickTarget: null,
     skidOpacity: 0.04,
     shadow: true,
+    shadowBlur: 2,
     shadowOpacity: 0.5,
     shadowOffsetX: 2,
     shadowOffsetY: 4,

@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@jamiehs/zoomies": "^0.4.0",
+    "@jamiehs/zoomies": "^0.6.0",
     "fuse.js": "^6.6.2",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
