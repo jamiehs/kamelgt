@@ -252,19 +252,6 @@ function waypointForSection(el: Element): { x: number; y: number } {
   return { x: marginX(config.side), y }
 }
 
-/**
- * Returns the shadow blur radius appropriate for this device.
- * Low-power devices (detected via RAM and CPU core count) get sharp shadows (0)
- * to avoid the GPU cost of a full-viewport blur filter each frame.
- */
-function shadowBlurBudget(): number {
-  const mem = (navigator as any).deviceMemory as number | undefined
-  const cores = navigator.hardwareConcurrency ?? 4
-  const isLowPower = (mem !== undefined && mem <= 1)
-                  || (cores <= 4 && navigator.maxTouchPoints > 0)
-  return isLowPower ? 0 : 2
-}
-
 export function initCarScene(): () => void {
   const driver = new CarDriver({
     count: 0,
@@ -272,7 +259,6 @@ export function initCarScene(): () => void {
     clickTarget: null,
     skidOpacity: 0.04,
     shadow: true,
-    shadowBlur: shadowBlurBudget(),
     shadowOpacity: 0.5,
     shadowOffsetX: 2,
     shadowOffsetY: 4,
