@@ -72,7 +72,7 @@ interface CarTypeConfig {
 
 const AUDI_90_GTO: CarTypeConfig = {
   label: 'Audi 90 GTO',
-  count: [2, 3],
+  count: [2, 5],
   sprites: A90_SPRITES,
   fixed: {
     height: 32,
@@ -91,7 +91,6 @@ const AUDI_90_GTO: CarTypeConfig = {
     acceleration:  [80, 100],
     brakes:        [0.5,  0.8],
     grip:          [0.5,  0.7],
-    twitchiness:   [0,    0.1],
     aggression:    [0.3,    0.5],
   },
 }
@@ -121,7 +120,6 @@ const NISSAN_GTP_ZXT: CarTypeConfig = {
     acceleration:  [100,  120],
     brakes:        [0.7,  1.0],
     grip:          [0.6,  0.9],
-    twitchiness:   [0.2,  0.5],
   },
 }
 
@@ -267,8 +265,6 @@ export function initCarScene(): () => void {
     shadowOffsetY: 4,
     driverChange: true,
   })
-  // TODO: remove once arrival/scatter radii are tuned in the zoomies library
-  driver._scatterMult = 1.5
 
   // All cars spawn off-screen upper-right so they race onto the page on load
   const spawnX = window.innerWidth * 1.5
