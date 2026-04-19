@@ -37,6 +37,7 @@
     "zipsetups": "bash scripts/zipsetups.sh",
     "test": "vitest",
     "tunnel": "npx localtunnel --subdomain kamelgt --port 3000",
-    "cleanup": "find . -name \"*.Identifier\" -type f -delete"
+    "cleanup": "find . -name \"*.Identifier\" -type f -delete",
+    "sync-setups": "node scripts/sync-setups.mjs"
   }
 }
