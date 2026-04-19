@@ -87,4 +87,48 @@ function appendNewExport(content, exportName, title, trackFolder, entries) {
   return content + block;
 }
 
-export { findCarArrayBounds, formatEntry, insertEntries, removeEntry, appendNewExport };
+// Adds a full setups block to an existing export that has none.
+// entries: { [car]: Array<{ filename, isQual }> }
+// Inserts before the export's closing brace using brace-counting.
+function addSetupsToExport(content, exportName, trackFolder, entries) {
+  const exportMarker = `export const ${exportName} = {`;
+  const exportStart = content.indexOf(exportMarker);
+  if (exportStart === -1) throw new Error(`Export ${exportName} not found`);
+
+  // Find the closing } of the export using brace counting
+  let depth = 1;
+  let i = exportStart + exportMarker.length;
+  while (i < content.length && depth > 0) {
+    if (content[i] === '{') depth++;
+    else if (content[i] === '}') depth--;
+    i++;
+  }
+  const closingBrace = i - 1;
+
+  const cars = ['audi90gto', 'nissangtpzxt'];
+  let setupsBlock = `,\n    setups: {\n`;
+  for (const car of cars) {
+    const carEntries = entries[car] ?? [];
+    setupsBlock += `        "${car}": [\n`;
+    for (const { filename, isQual } of carEntries) {
+      setupsBlock += formatEntry(trackFolder, filename, isQual);
+    }
+    setupsBlock += `        ],\n`;
+  }
+  setupsBlock += `    }`;
+
+  return content.slice(0, closingBrace) + setupsBlock + content.slice(closingBrace);
+}
+
+// Returns true if the export already has an active (non-commented) setups key.
+function hasSetupsBlock(content, exportName) {
+  const exportMarker = `export const ${exportName} = {`;
+  const exportStart = content.indexOf(exportMarker);
+  if (exportStart === -1) return false;
+  const nextExport = content.indexOf('export const ', exportStart + exportMarker.length);
+  const exportEnd = nextExport === -1 ? content.length : nextExport;
+  const block = content.slice(exportStart, exportEnd);
+  return /(?<!\/\/\s*)setups\s*:/.test(block);
+}
+
+export { findCarArrayBounds, formatEntry, insertEntries, removeEntry, appendNewExport, addSetupsToExport, hasSetupsBlock };

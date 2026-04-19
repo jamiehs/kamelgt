@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
 import { createInterface } from 'readline';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -6,7 +6,7 @@ import path from 'path';
 import { discoverNewSetups } from './lib/git-discover.mjs';
 import { buildFolderMap, findExportByFolderPrefix } from './lib/track-map.mjs';
 import { pairSetups, seasonSortKey } from './lib/parse-filename.mjs';
-import { formatEntry, insertEntries, removeEntry, appendNewExport } from './lib/write-track-data.mjs';
+import { formatEntry, insertEntries, removeEntry, appendNewExport, addSetupsToExport, hasSetupsBlock } from './lib/write-track-data.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -88,16 +88,41 @@ async function handleNewTrack(car, track, pairs, content) {
   return appendNewExport(content, exportName, title, track, entries);
 }
 
-// --- Main ---
+// --- Discovery ---
 
-const newSetups = discoverNewSetups(PROJECT_ROOT);
-
-if (newSetups.length === 0) {
-  console.log('No new setup files found. (All .sto files in public/setups/ are already tracked by git.)');
-  process.exit(0);
+function scanTrackFolder(track) {
+  const found = [];
+  for (const car of CARS) {
+    const dir = path.join(PROJECT_ROOT, 'public/setups', car, track);
+    let files;
+    try { files = readdirSync(dir); } catch { continue; }
+    for (const filename of files) {
+      if (filename.endsWith('.sto')) found.push({ car, track, filename });
+    }
+  }
+  return found;
 }
 
-console.log(`Found ${newSetups.length} new setup file(s).`);
+// --- Main ---
+
+const targetTrack = process.argv[2];
+let newSetups;
+
+if (targetTrack) {
+  newSetups = scanTrackFolder(targetTrack);
+  if (newSetups.length === 0) {
+    console.log(`No .sto files found in public/setups/*/${targetTrack}/`);
+    process.exit(0);
+  }
+  console.log(`Seeding mode: found ${newSetups.length} file(s) in "${targetTrack}"`);
+} else {
+  newSetups = discoverNewSetups(PROJECT_ROOT);
+  if (newSetups.length === 0) {
+    console.log('No new setup files found. (All .sto files in public/setups/ are already tracked by git.)');
+    process.exit(0);
+  }
+  console.log(`Found ${newSetups.length} new setup file(s).`);
+}
 
 const trackDataContent = readFileSync(TRACK_DATA_PATH, 'utf8');
 const { folderToExport, sharedExports, allExports } = buildFolderMap(trackDataContent);
@@ -114,7 +139,7 @@ for (const setup of newSetups) {
 let currentContent = trackDataContent;
 let anyChanges = false;
 
-for (const [key, setups] of groups) {
+for (const [key, rawSetups] of groups) {
   const [car, track] = key.split('|');
   const exportName = folderToExport.get(track);
 
@@ -122,7 +147,7 @@ for (const [key, setups] of groups) {
   const resolvedExport = exportName || findExportByFolderPrefix(track, allExports, sharedExports);
 
   if (!resolvedExport) {
-    const pairs = pairSetups(setups);
+    const pairs = pairSetups(rawSetups);
     currentContent = await handleNewTrack(car, track, pairs, currentContent);
     anyChanges = true;
     continue;
@@ -137,8 +162,20 @@ for (const [key, setups] of groups) {
     continue;
   }
 
-  const pairs = pairSetups(setups);
   const existing = trackData[resolvedExport]?.setups?.[car] ?? [];
+
+  // In seeding mode, exclude files already registered so we don't add duplicates
+  const existingFilenames = new Set(existing.map(e => e.file.split('/').pop()));
+  const setups = targetTrack
+    ? rawSetups.filter(s => !existingFilenames.has(s.filename))
+    : rawSetups;
+
+  if (setups.length === 0) {
+    console.log(`\n${car} / ${track} — all files already registered, skipping.`);
+    continue;
+  }
+
+  const pairs = pairSetups(setups);
   const newCount = pairs.reduce((n, p) => n + (p.qual ? 1 : 0) + (p.race ? 1 : 0), 0);
   const total = existing.length + newCount;
 
@@ -176,7 +213,18 @@ for (const [key, setups] of groups) {
     currentContent = insertEntries(currentContent, resolvedExport, car, entries);
     anyChanges = true;
   } catch {
-    console.log(`  ⚠  Could not find active "${car}" array in ${resolvedExport} — arrays may be commented out. Add manually.`);
+    if (!hasSetupsBlock(currentContent, resolvedExport)) {
+      // Export exists but has no setups key — add one (e.g. COTA stub entries)
+      const entriesMap = Object.fromEntries(CARS.map(c => [c, []]));
+      for (const pair of pairs) {
+        if (pair.qual) entriesMap[car].push({ filename: pair.qual, isQual: true });
+        if (pair.race) entriesMap[car].push({ filename: pair.race, isQual: false });
+      }
+      currentContent = addSetupsToExport(currentContent, resolvedExport, track, entriesMap);
+      anyChanges = true;
+    } else {
+      console.log(`  ⚠  Could not insert into "${car}" array in ${resolvedExport} — arrays may be commented out. Add manually.`);
+    }
   }
 }
 

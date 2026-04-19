@@ -3,6 +3,7 @@
   "homepage": "https://kamelgt.com",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@jamiehs/zoomies": "^0.6.0",
     "fuse.js": "^6.6.2",
