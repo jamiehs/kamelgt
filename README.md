@@ -47,6 +47,36 @@ The main two data sources of the project are the `season-setups.js` and `broadca
 The `season-setups.js` file is a simple data structure of the races for the current season only, as some basic round info and two arrays of setups for the cars. Optionally&mdash;these may include an array of notes (long race, you'll need to pit, etc.)
 
 
+#### Adding Setups
+
+Car setups are shared by racers on the VCR Discord each week. After downloading them, drop the `.sto` files into the correct folder:
+
+```
+public/setups/<car>/<track>/
+```
+
+Where `<car>` is `audi90gto` or `nissangtpzxt`, and `<track>` is the kebab-case track folder name (e.g. `summit-point`, `laguna-seca`).
+
+Then run:
+
+```bash
+npm run sync-setups
+```
+
+This detects new untracked files via git, parses filenames for qualifying/race type and sibling pairing, shows a preview, and surgically inserts the entries into `track-data.js`. Qualifying setups always appear above their race sibling. You confirm per track before anything is written.
+
+**Pruning:** when a car/track combo would exceed 4 setups, the script flags older ones for removal and offers three options: skip, accept suggestions, or review interactively. "Alien" setups (JDelOlmo, Andrius temperature-specific setups) are worth keeping regardless of age — use interactive mode and say no to those.
+
+**Seeding an existing track with no setups yet:** If a track already exists in `track-data.js` as a stub (title only, no setups block) and you have old setups on disk for it, use:
+
+```bash
+npm run sync-setups <track>
+```
+
+For example, `npm run sync-setups cota` will scan all `.sto` files in `public/setups/*/cota/`, skip any already registered, and add the rest. This is also useful for backporting setups from a prior season.
+
+**After running the script:** review with `git diff src/data/track-data.js`, then commit the setup files and the track-data change together.
+
 #### Broadcasts
 
 We host a searchable list of broadcasts going back several years where each `Broadcast` item is linked to YouTube and automatically sources the thumbnail for that video. This is a feature that no one asked for, but has proven to be useful for asking questions like "how often do we race at Suzuka" or "when last have we done an alternate layout at Mid-Ohio?" This file may ultimately become a good source of other historic data if we keep adding broadcasts and detail to it.
