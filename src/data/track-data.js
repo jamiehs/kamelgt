@@ -139,13 +139,6 @@ export const BATHURST = {
     setups: {
         "audi90gto": [
             {
-                file: "bathurst/Bathurst60min.sto",
-                comment: "From audriusv",
-            },
-            {
-                file: "bathurst/MH_Bathurst_R_v1.sto",
-            },
-            {
                 file: "bathurst/23S1_Buthurt_R.sto",
             },
             {
@@ -161,14 +154,21 @@ export const BATHURST = {
             {
                 file: "bathurst/JdelOlmoMountParonama23S1D.sto",
             },
-            {
-                file: "bathurst/maf_bathurst_24s2_r0.sto",
-            },
-            {
-                file: "bathurst/maf_bathurst_24s2_q0.sto",
+                    {
+                file: "bathurst/A90_Bathurst_23S3_Y_Gijsen_Q.sto",
                 comment: QUAL
             },
-        ],
+            {
+                file: "bathurst/A90_Bathurst_23S3_Y_Gijsen_R.sto",
+            },
+            {
+                file: "bathurst/maf_bathurst_q4.sto",
+                comment: QUAL
+            },
+            {
+                file: "bathurst/maf_bathurst_r4.sto",
+            },
+],
         "nissangtpzxt": [],
     }
 }
@@ -203,7 +203,23 @@ export const CHARLOTTE_ROVAL = {
 export const COTA = {
     title: "COTA",
     alternateTitle: "Circuit of the Americas"
-}
+,
+    setups: {
+        "audi90gto": [
+            {
+                file: "cota/A90_COTA_21S2_Y_Gijsen_R.sto",
+            },
+            {
+                file: "cota/maf_cota_q3.sto",
+                comment: QUAL
+            },
+            {
+                file: "cota/maf_cota_r3.sto",
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }}
 export const DAYTONA = {
     title: "Daytona",
     setups: {
@@ -240,34 +256,30 @@ export const DAYTONA_NASCAR_ROAD = {
 export const DONINGTON_PARK = {
     title: "Donington Park",
     setups: {
-        // "audi90gto": [
-        //     {
-        //         file: "",
-        //     },
-        //     {
-        //         file: "",
-        //     },
-        //     {
-        //         file: "",
-        //     },
-        //     {
-        //         file: "",
-        //     },
-        // ],
-        // "nissangtpzxt": [
-        //     {
-        //         file: "",
-        //     },
-        //     {
-        //         file: "",
-        //     },
-        //     {
-        //         file: "",
-        //     },
-        //     {
-        //         file: "",
-        //     },
-        // ]
+        "audi90gto": [
+            {
+                file: "donington/26s2-Donington30c.sto",
+            },
+            {
+                file: "donington/maf_donington_26s2_r2.sto",
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: "donington/2026S2 Donington National 2q.sto",
+                comment: QUAL
+            },
+            {
+                file: "donington/2026S2 Donington National 2.sto",
+            },
+            {
+                file: "donington/Lgo26S2_Donington_Nat_Q03.sto",
+                comment: QUAL
+            },
+            {
+                file: "donington/Lgo26S2_Donington_Nat_R03.sto",
+            },
+        ],
     }
 }
 export const FUJI_NO_CHICANE = {
