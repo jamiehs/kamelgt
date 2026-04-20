@@ -44,11 +44,19 @@ function extractSeason(filename) {
 }
 
 // Returns the alphabetic author prefix from a filename, e.g. "Lgo" from "Lgo26S2_..."
-// Returns null if the first token is purely numeric or has no leading letters.
+// Handles both prefix-first ("Lgo26S2_...") and season-first ("26s2_Lgo_...") conventions.
 function extractAuthor(filename) {
-  const first = tokenize(filename)[0] ?? '';
-  const match = first.match(/^([A-Za-z]+)/);
-  return match ? match[1].toLowerCase() : null;
+  const tokens = tokenize(filename);
+  // First pass: look for letters embedded directly before a season pattern (e.g. "Lgo26S2")
+  for (const t of tokens) {
+    const embedded = t.match(/^([A-Za-z]{2,5})\d{2}[sS]\d/);
+    if (embedded) return embedded[1].toLowerCase();
+  }
+  // Second pass: first short (2-4 char) purely-alphabetic token — likely initials
+  for (const t of tokens) {
+    if (/^[A-Za-z]{2,4}$/.test(t)) return t.toLowerCase();
+  }
+  return null;
 }
 
 // Returns a loose pairing key: "<author>|<year><season>" — used as a fallback

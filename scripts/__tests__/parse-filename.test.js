@@ -106,13 +106,16 @@ describe('pairSetups', () => {
 });
 
 describe('extractAuthor', () => {
-  it('extracts author prefix from prefixed filename', () => {
+  it('extracts author prefix embedded before season token', () => {
     expect(extractAuthor('Lgo26S2_Donington_Q00.sto')).toBe('lgo');
   });
-  it('extracts author prefix from lowercase prefix', () => {
+  it('extracts author when season comes first', () => {
+    expect(extractAuthor('26s2_Lgo_Donington_Q00.sto')).toBe('lgo');
+  });
+  it('extracts author from lowercase prefix', () => {
     expect(extractAuthor('maf_summit_26s2_r1.sto')).toBe('maf');
   });
-  it('returns null for filename with no leading letters before a digit', () => {
+  it('returns null when no short alphabetic token exists', () => {
     expect(extractAuthor('26s2-Donington30c.sto')).toBeNull();
   });
 });
