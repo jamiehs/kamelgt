@@ -2,6 +2,13 @@
 import { describe, it, expect } from 'vitest';
 import { detectType, getStem, pairSetups, extractAuthor, looseKey } from '../lib/parse-filename.mjs';
 
+// Mirrors the author dedup key used in fetch-setups.mjs.
+// Kept here so changes to the key shape break a test rather than silently misbehaving.
+function authorKey(authorId, folderName, car, filename) {
+  const { type } = detectType(filename);
+  return `${authorId}|${folderName}|${car}|${type}`;
+}
+
 describe('detectType', () => {
   it('detects qual from exact Q token', () => {
     expect(detectType('A90_Fuji_Y_Gijsen_Q.sto')).toMatchObject({ type: 'qual', ambiguous: false });
@@ -152,5 +159,27 @@ describe('pairSetups loose matching', () => {
     // Different authors — should not be paired; each appears independently
     expect(pairs).toHaveLength(2);
     expect(pairs.find(p => p.qual && p.race)).toBeUndefined();
+  });
+});
+
+describe('author dedup key', () => {
+  it('qual and race from the same author produce different keys', () => {
+    const qual = authorKey('user-123', 'barber', 'audi90gto', 'maf_barber_26s2_q1.sto');
+    const race = authorKey('user-123', 'barber', 'audi90gto', 'maf_barber_26s2_r1.sto');
+    expect(qual).not.toBe(race);
+    expect(qual).toContain('qual');
+    expect(race).toContain('race');
+  });
+
+  it('two race files from the same author produce the same key (dedup triggers)', () => {
+    const a = authorKey('user-123', 'barber', 'audi90gto', 'maf_barber_26s2_r1.sto');
+    const b = authorKey('user-123', 'barber', 'audi90gto', 'maf_barber_26s2_r2.sto');
+    expect(a).toBe(b);
+  });
+
+  it('same type from different authors produce different keys', () => {
+    const lgo = authorKey('user-lgo', 'barber', 'audi90gto', 'lgo_barber_26s2_r1.sto');
+    const maf = authorKey('user-maf', 'barber', 'audi90gto', 'maf_barber_26s2_r1.sto');
+    expect(lgo).not.toBe(maf);
   });
 });

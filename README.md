@@ -47,60 +47,13 @@ The main two data sources of the project are the `season-setups.js` and `broadca
 The `season-setups.js` file is a simple data structure of the races for the current season only, as some basic round info and two arrays of setups for the cars. Optionally&mdash;these may include an array of notes (long race, you'll need to pit, etc.)
 
 
-#### Fetching Setups from Discord
+#### Setup Scripts
 
-Run this on Tuesday (or whenever you want to pick up what the community posted):
+Two scripts manage car setups — see **[docs/setup-scripts.md](docs/setup-scripts.md)** for full documentation.
 
-```bash
-npm run fetch-setups
-```
+`npm run fetch-setups` downloads `.sto` attachments from `#audi-setups` and `#nissan-setups`, fuzzy-matches each file to the correct track folder, and chains into `sync-setups` automatically. Run it on Tuesday after race day.
 
-This downloads all `.sto` attachments from `#audi-setups` and `#nissan-setups` posted in the last 7 days, fuzzy-matches each filename to the correct track folder, then automatically runs `sync-setups` to wire everything into `track-data.js`.
-
-**Override the lookback window:**
-```bash
-npm run fetch-setups -- --days=14
-```
-
-**Backfill setups for a specific track:**
-```bash
-npm run fetch-setups barber
-```
-Searches up to 2 years of history in both channels and downloads only barber-matched files.
-
-**Track name resolution** works without exact spelling — "panorama" resolves to Bathurst, "americas" to COTA, "rodriguez" to Mexico. If a file can't be resolved automatically, the script asks interactively. Press enter to skip.
-
-**Requires:** a `.env` file at the project root. Copy `.env.example` and fill in your Discord bot token and channel IDs (see `.env.example` for setup instructions).
-
-#### Adding Setups
-
-Car setups are shared by racers on the VCR Discord each week. After downloading them, drop the `.sto` files into the correct folder:
-
-```
-public/setups/<car>/<track>/
-```
-
-Where `<car>` is `audi90gto` or `nissangtpzxt`, and `<track>` is the kebab-case track folder name (e.g. `summit-point`, `laguna-seca`).
-
-Then run:
-
-```bash
-npm run sync-setups
-```
-
-This detects new untracked files via git, parses filenames for qualifying/race type and sibling pairing, shows a preview, and surgically inserts the entries into `track-data.js`. Qualifying setups always appear above their race sibling. You confirm per track before anything is written.
-
-**Pruning:** when a car/track combo would exceed 4 setups, the script flags older ones for removal and offers three options: skip, accept suggestions, or review interactively. "Alien" setups (JDelOlmo, Andrius temperature-specific setups) are worth keeping regardless of age — use interactive mode and say no to those.
-
-**Seeding an existing track with no setups yet:** If a track already exists in `track-data.js` as a stub (title only, no setups block) and you have old setups on disk for it, use:
-
-```bash
-npm run sync-setups <track>
-```
-
-For example, `npm run sync-setups cota` will scan all `.sto` files in `public/setups/*/cota/`, skip any already registered, and add the rest. This is also useful for backporting setups from a prior season.
-
-**After running the script:** review with `git diff src/data/track-data.js`, then commit the setup files and the track-data change together.
+`npm run sync-setups` registers files that are already on disk into `track-data.js`. Detects new untracked files via git, pairs qual/race siblings, shows a preview, and prompts for confirmation before writing anything.
 
 #### Broadcasts
 

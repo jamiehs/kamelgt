@@ -1,5 +1,4 @@
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
-import { createInterface } from 'readline';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -8,6 +7,7 @@ import { readMeta } from './lib/meta.mjs';
 import { buildFolderMap, findExportByFolderPrefix } from './lib/track-map.mjs';
 import { pairSetups, seasonSortKey, getStem, detectType, looseKey } from './lib/parse-filename.mjs';
 import { formatEntry, insertEntries, removeEntry, appendNewExport, addSetupsToExport, hasSetupsBlock } from './lib/write-track-data.mjs';
+import { prompt } from './lib/prompt.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -15,14 +15,12 @@ const TRACK_DATA_PATH = path.join(PROJECT_ROOT, 'src/data/track-data.js');
 const CARS = ['audi90gto', 'nissangtpzxt'];
 const MAX_SETUPS = 4;
 
-function prompt(question) {
-  const rl = createInterface({ input: process.stdin, output: process.stdout });
-  return new Promise(resolve => rl.question(question, answer => { rl.close(); resolve(answer.trim()); }));
-}
+const filenameFromPath = p => p.split('/').pop();
+const isQual = e => e.comment === 'Qualifying setup';
 
 function printPreview(car, track, pairs, existing, suggested) {
   const newRaceCount = pairs.reduce((n, p) => n + (p.race ? 1 : 0), 0);
-  const existingRaceCount = existing.filter(e => e.comment !== 'Qualifying setup').length;
+  const existingRaceCount = existing.filter(e => !isQual(e)).length;
   const total = existingRaceCount + newRaceCount;
   const pruneNote = total > MAX_SETUPS ? `  ⚠  ${total} race setups after additions (max ${MAX_SETUPS} suggested)` : '';
   console.log(`\n${car} / ${track}${pruneNote}`);
@@ -39,9 +37,8 @@ function printPreview(car, track, pairs, existing, suggested) {
   }
 
   for (const entry of existing) {
-    const filename = entry.file.split('/').pop();
-    const isQual = entry.comment === 'Qualifying setup';
-    const qualTag = isQual ? ' [QUAL]' : '';
+    const filename = filenameFromPath(entry.file);
+    const qualTag = isQual(entry) ? ' [QUAL]' : '';
     const isSuggested = suggested.includes(filename);
     console.log(`  ${isSuggested ? 'REMOVE?' : 'KEEP:  '} ${filename}${qualTag}`);
   }
@@ -58,7 +55,6 @@ async function getPruningDecision(existing, suggested) {
   const choice = (await prompt('  Choice [s/a/i]: ')).toLowerCase();
 
   if (choice === 'a') {
-    // Only auto-remove entries with detectable seasons; never remove no-season entries
     return suggested.filter(f => seasonSortKey(f) !== Infinity);
   }
 
@@ -167,7 +163,7 @@ for (const [key, rawSetups] of groups) {
   const existing = trackData[resolvedExport]?.setups?.[car] ?? [];
 
   // In seeding mode, exclude files already registered so we don't add duplicates
-  const existingFilenames = new Set(existing.map(e => e.file.split('/').pop()));
+  const existingFilenames = new Set(existing.map(e => filenameFromPath(e.file)));
   const setups = targetTrack
     ? rawSetups.filter(s => !existingFilenames.has(s.filename))
     : rawSetups;
@@ -185,22 +181,24 @@ for (const [key, rawSetups] of groups) {
 
   const allPairs = pairSetups(setupsWithMeta);
 
+  const existingRace = existing.filter(e => !isQual(e));
+
   // Reject orphaned qualifying setups — a qual with no race sibling is not useful.
   // A qual is only truly orphaned if no matching race exists in existing entries either.
   const orphanedQuals = allPairs.filter(p => {
     if (!p.qual || p.race) return false;
     const qualStem = getStem(p.qual);
     const qualLooseKey = looseKey(p.qual);
-    return !existing.some(e => {
-      const f = e.file.split('/').pop();
-      if (e.comment === 'Qualifying setup') return false;
+    return !existingRace.some(e => {
+      const f = filenameFromPath(e.file);
       return getStem(f) === qualStem || (qualLooseKey && looseKey(f) === qualLooseKey);
     });
   });
   for (const p of orphanedQuals) {
     console.log(`\n  ⚠  Skipping orphaned qualifying setup (no matching race found): ${p.qual}`);
   }
-  const pairs = allPairs.filter(p => p.race || (p.qual && !orphanedQuals.find(o => o.qual === p.qual)));
+  const orphanedQualFiles = new Set(orphanedQuals.map(p => p.qual));
+  const pairs = allPairs.filter(p => p.race || (p.qual && !orphanedQualFiles.has(p.qual)));
 
   if (pairs.length === 0 && orphanedQuals.length > 0) {
     console.log(`  No race setups to add.`);
@@ -208,17 +206,15 @@ for (const [key, rawSetups] of groups) {
   }
 
   // Budget counts race setups only; qualifying setups are free
-  const newRaceCount = pairs.reduce((n, p) => n + 1, 0);
-  const existingRaceCount = existing.filter(e => e.comment !== 'Qualifying setup').length;
-  const total = existingRaceCount + newRaceCount;
+  const newRaceCount = pairs.reduce((n, p) => n + (p.race ? 1 : 0), 0);
+  const total = existingRace.length + newRaceCount;
 
   // Build pruning suggestions from race setups only, oldest season first
   let suggested = [];
   if (total > MAX_SETUPS) {
     const toFlag = total - MAX_SETUPS;
-    const existingRace = existing.filter(e => e.comment !== 'Qualifying setup');
     const sorted = [...existingRace]
-      .map(e => ({ filename: e.file.split('/').pop(), sortKey: seasonSortKey(e.file.split('/').pop()) }))
+      .map(e => ({ filename: filenameFromPath(e.file), sortKey: seasonSortKey(filenameFromPath(e.file)) }))
       .sort((a, b) => a.sortKey - b.sortKey);
     suggested = sorted.slice(0, toFlag).map(e => e.filename);
   }
@@ -236,11 +232,10 @@ for (const [key, rawSetups] of groups) {
   for (const filename of toRemove) {
     const filePath = existing.find(e => e.file.endsWith('/' + filename))?.file;
     if (filePath) currentContent = removeEntry(currentContent, filePath);
-    // Also remove the paired qualifying setup if one exists
     const raceStem = getStem(filename);
     const pairedQual = existing.find(e => {
-      const f = e.file.split('/').pop();
-      return detectType(f) === 'qual' && getStem(f) === raceStem;
+      const f = filenameFromPath(e.file);
+      return detectType(f).type === 'qual' && getStem(f) === raceStem;
     });
     if (pairedQual) currentContent = removeEntry(currentContent, pairedQual.file);
   }

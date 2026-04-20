@@ -102,8 +102,8 @@ function pairSetups(files) {
 
   // Second pass: loose match by (author prefix + season) for unpaired quals/races
   const unparedQuals = quals.filter(q => !usedQuals.has(q.filename));
-  const usedRaces = new Set(pairs.filter(p => p.race && p.qual).map(p => p.race));
-  const unpairedRaces = races.filter(r => !usedRaces.has(r.filename) && pairs.find(p => p.race === r.filename && !p.qual));
+  const soloRaceFiles = new Set(pairs.filter(p => p.race && !p.qual).map(p => p.race));
+  const unpairedRaces = races.filter(r => soloRaceFiles.has(r.filename));
 
   for (const qual of unparedQuals) {
     const qKey = qual._looseKey;

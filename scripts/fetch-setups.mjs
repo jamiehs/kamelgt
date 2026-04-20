@@ -1,6 +1,5 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { execSync } from 'child_process';
-import { createInterface } from 'readline';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -8,6 +7,7 @@ import { fetchSetupAttachments, downloadFile } from './lib/discord-fetch.mjs';
 import { buildTrackIndex } from './lib/track-index.mjs';
 import { detectType } from './lib/parse-filename.mjs';
 import { writeMeta } from './lib/meta.mjs';
+import { prompt } from './lib/prompt.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -52,15 +52,6 @@ const CHANNELS = [
   { id: NISSAN_CHANNEL_ID, car: 'nissangtpzxt', name: '#nissan-setups' },
 ];
 
-// --- Prompt helper with tab completion over track folder names ---
-function promptWithCompletion(question, completions) {
-  const completer = line => {
-    const hits = completions.filter(c => c.startsWith(line));
-    return [hits.length ? hits : completions, line];
-  };
-  const rl = createInterface({ input: process.stdin, output: process.stdout, completer });
-  return new Promise(resolve => rl.question(question, answer => { rl.close(); resolve(answer.trim()); }));
-}
 
 // --- Main ---
 console.log('Building track index...');
@@ -114,13 +105,14 @@ for (const channel of CHANNELS) {
       resolved = trackIndex.resolve(attachment.messageContent);
     }
 
-    // Stage 3: interactive
+    // Stage 3: interactive (skipped in track-specific mode — only auto-matched files are wanted)
     if (!resolved) {
+      if (targetTrack) continue;
       console.log(`\n  ? ${attachment.filename}`);
       if (attachment.messageContent) {
         console.log(`    Message: "${attachment.messageContent.slice(0, 120)}"`);
       }
-      const answer = await promptWithCompletion('    Enter track folder name (or press enter to skip): ', trackIndex.folderNames);
+      const answer = await prompt('    Enter track folder name (or press enter to skip): ', trackIndex.folderNames);
       if (!answer) {
         console.log('    Skipped.');
         continue;
@@ -133,7 +125,7 @@ for (const channel of CHANNELS) {
     if (targetTrack && resolved.folderName !== targetTrack.folderName) continue;
 
     // Author dedup: skip older uploads from the same person for the same track+car+type
-    const type = detectType(attachment.filename);
+    const { type } = detectType(attachment.filename);
     const authorKey = `${attachment.authorId}|${resolved.folderName}|${channel.car}|${type}`;
     if (seenByAuthor.has(authorKey)) {
       console.log(`  ~ ${resolved.folderName}/${attachment.filename} (older upload by ${attachment.authorName}, skipped)`);

@@ -53,8 +53,9 @@ async function buildTrackIndex() {
     folderNames,
     // Returns { exportName, folderName } or null.
     resolve(text) {
-      if (!text?.trim() || text.trim().length < 2) return null;
-      const results = fuse.search(text.trim());
+      const t = text?.trim();
+      if (!t || t.length < 2) return null;
+      const results = fuse.search(t);
       return results.length > 0 ? results[0].item : null;
     },
   };
