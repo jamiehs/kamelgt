@@ -87,8 +87,16 @@ for (const channel of CHANNELS) {
   }
 
   for (const attachment of attachments) {
-    // Stage 1: filename match
-    let resolved = trackIndex.resolve(attachment.filename);
+    // Stage 1: filename match — try each token individually, take first hit
+    const filenameTokens = attachment.filename
+      .replace(/\.[^.]+$/, '')        // strip extension
+      .split(/[_\-. ]+/)
+      .filter(t => t.length >= 4 && !/^\d+$/.test(t)); // skip short/pure-numeric tokens
+    let resolved = null;
+    for (const token of filenameTokens) {
+      resolved = trackIndex.resolve(token);
+      if (resolved) break;
+    }
 
     // Stage 2: message text match
     if (!resolved && attachment.messageContent) {

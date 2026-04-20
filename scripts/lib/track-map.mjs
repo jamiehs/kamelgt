@@ -1,9 +1,10 @@
-// Returns { folderToExport: Map<string, string>, sharedExports: Set<string>, allExports: string[] }
-// Builds a reverse map from track folder names to export constant names by
-// scanning file paths already present in the track-data.js source text.
-// Falls back to prefix-matching export names for tracks with no active file entries (e.g. commented-out arrays).
+// Returns { folderToExport, exportToFolder, sharedExports, allExports }
+// folderToExport: first export that owns each folder (used by sync-setups for insertion)
+// exportToFolder: each export's own folder, derived from its own file references
+//   — multiple exports can share the same folder (e.g. ROAD_AMERICA and ROAD_AMERICA_500)
 function buildFolderMap(fileContent) {
   const folderToExport = new Map();
+  const exportToFolder = new Map();
   const sharedExports = new Set();
   const allExports = [];
 
@@ -22,18 +23,21 @@ function buildFolderMap(fileContent) {
       continue;
     }
 
-    // Find the first active (non-commented) file: "folder/..." pattern within the next ~3000 chars
-    const chunk = fileContent.slice(blockStart, blockStart + 3000);
+    // Find the first active (non-commented) file: "folder/..." pattern within this export's block
+    const nextExportIdx = fileContent.indexOf('export const ', blockStart);
+    const blockEnd = nextExportIdx === -1 ? fileContent.length : nextExportIdx;
+    const chunk = fileContent.slice(blockStart, blockEnd);
     const fileMatch = chunk.match(/(?<!\/\/\s*)file:\s*["']([^/"']+)\//);
     if (fileMatch) {
       const folder = fileMatch[1];
+      exportToFolder.set(exportName, folder);
       if (!folderToExport.has(folder)) {
         folderToExport.set(folder, exportName);
       }
     }
   }
 
-  return { folderToExport, sharedExports, allExports };
+  return { folderToExport, exportToFolder, sharedExports, allExports };
 }
 
 // Fallback: given a folder name like "donington", find the one export whose

@@ -24,3 +24,5 @@ yarn-error.log*
 
 .vscode
 *.Identifier
+.env
+docs/superpowers/

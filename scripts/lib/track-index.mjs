@@ -25,13 +25,7 @@ function buildSearchText(exportName, title, alternateTitle) {
 async function buildTrackIndex() {
   const trackData = await import(TRACK_DATA_PATH);
   const fileContent = readFileSync(TRACK_DATA_PATH, 'utf8');
-  const { folderToExport } = buildFolderMap(fileContent);
-
-  // Reverse map: exportName → folderName
-  const exportToFolder = new Map();
-  for (const [folder, exportName] of folderToExport) {
-    if (!exportToFolder.has(exportName)) exportToFolder.set(exportName, folder);
-  }
+  const { exportToFolder } = buildFolderMap(fileContent);
 
   const entries = [];
   for (const [exportName, value] of Object.entries(trackData)) {
