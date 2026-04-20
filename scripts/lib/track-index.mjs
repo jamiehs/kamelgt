@@ -47,7 +47,10 @@ async function buildTrackIndex() {
     ignoreLocation: true,
   });
 
+  const folderNames = entries.map(e => e.folderName).sort();
+
   return {
+    folderNames,
     // Returns { exportName, folderName } or null.
     resolve(text) {
       if (!text?.trim() || text.trim().length < 2) return null;

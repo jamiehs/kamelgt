@@ -50,9 +50,13 @@ const CHANNELS = [
   { id: NISSAN_CHANNEL_ID, car: 'nissangtpzxt', name: '#nissan-setups' },
 ];
 
-// --- Prompt helper ---
-function prompt(question) {
-  const rl = createInterface({ input: process.stdin, output: process.stdout });
+// --- Prompt helper with tab completion over track folder names ---
+function promptWithCompletion(question, completions) {
+  const completer = line => {
+    const hits = completions.filter(c => c.startsWith(line));
+    return [hits.length ? hits : completions, line];
+  };
+  const rl = createInterface({ input: process.stdin, output: process.stdout, completer });
   return new Promise(resolve => rl.question(question, answer => { rl.close(); resolve(answer.trim()); }));
 }
 
@@ -109,7 +113,7 @@ for (const channel of CHANNELS) {
       if (attachment.messageContent) {
         console.log(`    Message: "${attachment.messageContent.slice(0, 120)}"`);
       }
-      const answer = await prompt('    Enter track folder name (or press enter to skip): ');
+      const answer = await promptWithCompletion('    Enter track folder name (or press enter to skip): ', trackIndex.folderNames);
       if (!answer) {
         console.log('    Skipped.');
         continue;
