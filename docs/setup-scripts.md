@@ -45,7 +45,7 @@ Each downloaded `.sto` file gets a companion `.sto.meta.json` written alongside 
 
 ### Nissan physics cutoff
 
-iRacing changed the Nissan GT-P physics in the 2026 S2 release (2026-03-14). Setups posted before that date don't pass tech or perform correctly with the current model. The script automatically skips any Nissan attachment older than that date with a `⚠` log line.
+iRacing changed the Nissan GT-P physics in the 2026 S2 release (2026-03-10). Setups posted before that date don't pass tech or perform correctly with the current model. The script automatically skips any Nissan attachment older than that date with a `⚠` log line.
 
 ### What to watch out for
 
