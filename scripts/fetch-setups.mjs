@@ -47,6 +47,9 @@ const days = daysFlag ? parseInt(daysFlag.split('=')[1], 10) : 7;
 const lookbackDays = trackArg ? 365 * 2 : days;
 const afterDate = new Date(Date.now() - lookbackDays * 24 * 60 * 60 * 1000);
 
+// iRacing 2026 S2 changed Nissan physics on 2026-03-14; older setups don't pass tech or perform correctly.
+const NISSAN_PHYSICS_CUTOFF = new Date('2026-03-14T00:00:00Z');
+
 const CHANNELS = [
   { id: AUDI_CHANNEL_ID, car: 'audi90gto', name: '#audi-setups' },
   { id: NISSAN_CHANNEL_ID, car: 'nissangtpzxt', name: '#nissan-setups' },
@@ -89,6 +92,11 @@ for (const channel of CHANNELS) {
   }
 
   for (const attachment of attachments) {
+    if (channel.car === 'nissangtpzxt' && new Date(attachment.timestamp) < NISSAN_PHYSICS_CUTOFF) {
+      console.log(`  ⚠  Skipping ${attachment.filename} — pre-26s2 Nissan setup, incompatible with current physics`);
+      continue;
+    }
+
     // Stage 1: filename match — try each token individually, take first hit
     const filenameTokens = attachment.filename
       .replace(/\.[^.]+$/, '')        // strip extension

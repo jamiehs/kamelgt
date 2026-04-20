@@ -43,6 +43,10 @@ Discord is fetched newest-first. If the same person uploads a setup for the same
 
 Each downloaded `.sto` file gets a companion `.sto.meta.json` written alongside it (gitignored). This records the Discord author ID, display name, timestamp, and message ID. The sync script reads these sidecars to use the exact Discord author ID when pairing qual and race setups, rather than relying on filename inference.
 
+### Nissan physics cutoff
+
+iRacing changed the Nissan GT-P physics in the 2026 S2 release (2026-03-14). Setups posted before that date don't pass tech or perform correctly with the current model. The script automatically skips any Nissan attachment older than that date with a `⚠` log line.
+
 ### What to watch out for
 
 - **Skipped files:** if a file is skipped interactively (or the track can't be inferred), it won't be downloaded. You can re-run `npm run fetch-setups <track>` to try again with a specific track target, or download manually and use `sync-setups`.
