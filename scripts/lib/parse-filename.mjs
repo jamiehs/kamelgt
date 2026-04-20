@@ -43,6 +43,23 @@ function extractSeason(filename) {
   return { year: 2000 + parseInt(match[1]), season: parseInt(match[2]) };
 }
 
+// Returns the alphabetic author prefix from a filename, e.g. "Lgo" from "Lgo26S2_..."
+// Returns null if the first token is purely numeric or has no leading letters.
+function extractAuthor(filename) {
+  const first = tokenize(filename)[0] ?? '';
+  const match = first.match(/^([A-Za-z]+)/);
+  return match ? match[1].toLowerCase() : null;
+}
+
+// Returns a loose pairing key: "<author>|<year><season>" — used as a fallback
+// when exact stem matching fails. Both must be non-null to be useful.
+function looseKey(filename) {
+  const author = extractAuthor(filename);
+  const season = extractSeason(filename);
+  if (!author || !season) return null;
+  return `${author}|${season.year}s${season.season}`;
+}
+
 function seasonSortKey(filename) {
   const s = extractSeason(filename);
   return s ? s.year * 10 + s.season : Infinity;
@@ -73,13 +90,28 @@ function pairSetups(files) {
     }
   }
 
-  for (const qual of quals) {
-    if (!usedQuals.has(qual.filename)) {
-      pairs.push({ qual: qual.filename, race: null, ambiguous: qual.ambiguous });
+  // Second pass: loose match by (author prefix + season) for unpaired quals/races
+  const unparedQuals = quals.filter(q => !usedQuals.has(q.filename));
+  const usedRaces = new Set(pairs.filter(p => p.race && p.qual).map(p => p.race));
+  const unpairedRaces = races.filter(r => !usedRaces.has(r.filename) && pairs.find(p => p.race === r.filename && !p.qual));
+
+  for (const qual of unparedQuals) {
+    const qKey = looseKey(qual.filename);
+    if (qKey) {
+      const match = unpairedRaces.find(r => looseKey(r.filename) === qKey);
+      if (match) {
+        // Replace the race's solo entry with a paired entry
+        const idx = pairs.findIndex(p => p.race === match.filename && !p.qual);
+        pairs[idx] = { qual: qual.filename, race: match.filename, ambiguous: match.ambiguous || qual.ambiguous };
+        usedQuals.add(qual.filename);
+        unpairedRaces.splice(unpairedRaces.indexOf(match), 1);
+        continue;
+      }
     }
+    pairs.push({ qual: qual.filename, race: null, ambiguous: qual.ambiguous });
   }
 
   return pairs;
 }
 
-export { detectType, getStem, pairSetups, extractSeason, seasonSortKey, tokenize };
+export { detectType, getStem, pairSetups, extractSeason, seasonSortKey, tokenize, extractAuthor, looseKey };

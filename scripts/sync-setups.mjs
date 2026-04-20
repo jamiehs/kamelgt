@@ -5,7 +5,7 @@ import path from 'path';
 
 import { discoverNewSetups } from './lib/git-discover.mjs';
 import { buildFolderMap, findExportByFolderPrefix } from './lib/track-map.mjs';
-import { pairSetups, seasonSortKey, getStem, detectType } from './lib/parse-filename.mjs';
+import { pairSetups, seasonSortKey, getStem, detectType, looseKey } from './lib/parse-filename.mjs';
 import { formatEntry, insertEntries, removeEntry, appendNewExport, addSetupsToExport, hasSetupsBlock } from './lib/write-track-data.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -178,12 +178,22 @@ for (const [key, rawSetups] of groups) {
 
   const allPairs = pairSetups(setups);
 
-  // Reject orphaned qualifying setups — a qual with no race sibling is not useful
-  const orphanedQuals = allPairs.filter(p => p.qual && !p.race);
+  // Reject orphaned qualifying setups — a qual with no race sibling is not useful.
+  // A qual is only truly orphaned if no matching race exists in existing entries either.
+  const orphanedQuals = allPairs.filter(p => {
+    if (!p.qual || p.race) return false;
+    const qualStem = getStem(p.qual);
+    const qualLooseKey = looseKey(p.qual);
+    return !existing.some(e => {
+      const f = e.file.split('/').pop();
+      if (e.comment === 'Qualifying setup') return false;
+      return getStem(f) === qualStem || (qualLooseKey && looseKey(f) === qualLooseKey);
+    });
+  });
   for (const p of orphanedQuals) {
-    console.log(`\n  ⚠  Skipping orphaned qualifying setup (no matching race): ${p.qual}`);
+    console.log(`\n  ⚠  Skipping orphaned qualifying setup (no matching race found): ${p.qual}`);
   }
-  const pairs = allPairs.filter(p => p.race);
+  const pairs = allPairs.filter(p => p.race || (p.qual && !orphanedQuals.find(o => o.qual === p.qual)));
 
   if (pairs.length === 0 && orphanedQuals.length > 0) {
     console.log(`  No race setups to add.`);

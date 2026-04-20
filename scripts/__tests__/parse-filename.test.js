@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest';
-import { detectType, getStem, pairSetups } from '../lib/parse-filename.mjs';
+import { detectType, getStem, pairSetups, extractAuthor, looseKey } from '../lib/parse-filename.mjs';
 
 describe('detectType', () => {
   it('detects qual from exact Q token', () => {
@@ -102,5 +102,39 @@ describe('pairSetups', () => {
     expect(pairs).toHaveLength(2);
     const adelaidePair = pairs.find(p => p.qual?.includes('Adelaide'));
     expect(adelaidePair?.race).toContain('Adelaide');
+  });
+});
+
+describe('extractAuthor', () => {
+  it('extracts author prefix from prefixed filename', () => {
+    expect(extractAuthor('Lgo26S2_Donington_Q00.sto')).toBe('lgo');
+  });
+  it('extracts author prefix from lowercase prefix', () => {
+    expect(extractAuthor('maf_summit_26s2_r1.sto')).toBe('maf');
+  });
+  it('returns null for filename with no leading letters before a digit', () => {
+    expect(extractAuthor('26s2-Donington30c.sto')).toBeNull();
+  });
+});
+
+describe('looseKey', () => {
+  it('returns author|season key for prefixed filename', () => {
+    expect(looseKey('Lgo26S2_Donington_Q00.sto')).toBe('lgo|2026s2');
+  });
+  it('returns null when no season is detectable', () => {
+    expect(looseKey('A90_Fuji_Q.sto')).toBeNull();
+  });
+});
+
+describe('pairSetups loose matching', () => {
+  it('pairs qual and race by author+season when stems differ', () => {
+    const files = [
+      { filename: 'Lgo26S2_Donington_Q00.sto' },
+      { filename: 'Lgo26S2_Donington_R01.sto' },
+    ];
+    const pairs = pairSetups(files);
+    expect(pairs).toHaveLength(1);
+    expect(pairs[0].qual).toContain('Q00');
+    expect(pairs[0].race).toContain('R01');
   });
 });
