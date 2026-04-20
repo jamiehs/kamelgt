@@ -168,27 +168,17 @@ export const BATHURST = {
     setups: {
         "audi90gto": [
             {
-                file: "bathurst/23S1_Buthurt_R.sto",
-            },
-            {
                 file: "bathurst/a_sliumba_24S2_bathurst_R2.sto",
-            },
-            {
-                file: "bathurst/A90_23S3_Bathurst_Y_Gijsen_R.sto",
             },
             {
                 file: "bathurst/A90_23S3_Bathurst_Y_Gijsen_Q.sto",
                 comment: QUAL
             },
             {
-                file: "bathurst/JdelOlmoMountParonama23S1D.sto",
-            },
-                    {
-                file: "bathurst/A90_Bathurst_23S3_Y_Gijsen_Q.sto",
-                comment: QUAL
+                file: "bathurst/A90_23S3_Bathurst_Y_Gijsen_R.sto",
             },
             {
-                file: "bathurst/A90_Bathurst_23S3_Y_Gijsen_R.sto",
+                file: "bathurst/JdelOlmoMountParonama23S1D.sto",
             },
             {
                 file: "bathurst/maf_bathurst_q4.sto",
