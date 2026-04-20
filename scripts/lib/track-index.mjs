@@ -55,6 +55,19 @@ async function buildTrackIndex() {
     resolve(text) {
       const t = text?.trim();
       if (!t || t.length < 2) return null;
+
+      // Exact-substring pass: does the query contain a known folder name?
+      // Handles filenames like "JdelOlmoImola22S4D" where the track name
+      // is embedded without a separator.
+      const queryNorm = normalize(t).replace(/[^a-z0-9]/g, '');
+      const subMatch = entries
+        .filter(e => {
+          const fNorm = normalize(e.folderName).replace(/[^a-z0-9]/g, '');
+          return fNorm.length >= 4 && queryNorm.includes(fNorm);
+        })
+        .sort((a, b) => b.folderName.length - a.folderName.length)[0];
+      if (subMatch) return subMatch;
+
       const results = fuse.search(t);
       return results.length > 0 ? results[0].item : null;
     },

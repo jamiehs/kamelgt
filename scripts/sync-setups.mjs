@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, renameSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -72,15 +72,34 @@ async function getPruningDecision(existing, suggested) {
 
 async function handleNewTrack(car, track, pairs, content) {
   console.log(`\nNew track detected in public/setups/${car}/${track}/`);
-  const title = await prompt('  Enter track title: ');
-  const exportName = title.toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_+|_+$/g, '');
-  console.log(`  → Creating export ${exportName}`);
-  console.log(`  → Remember to add it to season-setups.js manually`);
+  const existing = await prompt('  Enter existing export name to link (or press enter to create new): ');
+
+  let exportName, title;
+  if (existing) {
+    exportName = existing.trim();
+    title = null;
+    console.log(`  → Linking to existing export ${exportName}`);
+  } else {
+    title = await prompt('  Enter track title: ');
+    exportName = title.toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+    console.log(`  → Creating export ${exportName}`);
+    console.log(`  → Remember to add it to season-setups.js manually`);
+  }
 
   const entries = Object.fromEntries(CARS.map(c => [c, []]));
   for (const pair of pairs) {
     if (pair.qual) entries[car].push({ filename: pair.qual, isQual: true });
     if (pair.race) entries[car].push({ filename: pair.race, isQual: false });
+  }
+
+  if (title === null) {
+    // Link to existing export: insert entries using the actual folder on disk
+    const entryStrings = [];
+    for (const pair of pairs) {
+      if (pair.qual) entryStrings.push(formatEntry(track, pair.qual, true));
+      if (pair.race) entryStrings.push(formatEntry(track, pair.race, false));
+    }
+    return insertEntries(content, exportName, car, entryStrings);
   }
 
   return appendNewExport(content, exportName, title, track, entries);
@@ -145,9 +164,29 @@ for (const [key, rawSetups] of groups) {
 
   // Try prefix-fallback for tracks whose arrays are commented out (e.g. DONINGTON_PARK with no active files).
   // exportHint is passed by fetch-setups and is authoritative for disconnected folder/export names.
-  const resolvedExport = exportName
-    || findExportByFolderPrefix(track, allExports, sharedExports)
-    || exportHint;
+  let resolvedExport = exportName;
+  let resolvedTrack = track; // folder name used in file paths (may differ from track if renamed)
+  if (!resolvedExport) {
+    const prefixMatch = findExportByFolderPrefix(track, allExports, sharedExports);
+    if (prefixMatch) {
+      console.log(`\nℹ  Matched "${track}" → ${prefixMatch} (no active file entries found, matched by name)`);
+      const expOverride = await prompt(`  Export name (press enter to accept "${prefixMatch}"): `);
+      resolvedExport = expOverride.trim()
+        ? expOverride.trim().toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_+|_+$/g, '')
+        : prefixMatch;
+      const folderOverride = await prompt(`  Folder name (press enter to use "${track}"): `);
+      if (folderOverride.trim() && folderOverride.trim() !== track) {
+        resolvedTrack = folderOverride.trim().toLowerCase();
+        for (const c of CARS) {
+          const oldDir = path.join(PROJECT_ROOT, 'public/setups', c, track);
+          const newDir = path.join(PROJECT_ROOT, 'public/setups', c, resolvedTrack);
+          try { renameSync(oldDir, newDir); console.log(`  → Renamed ${c}/${track} → ${resolvedTrack}`); } catch { /* dir may not exist for this car */ }
+        }
+      }
+    } else {
+      resolvedExport = exportHint ?? null;
+    }
+  }
 
   if (!resolvedExport) {
     const pairs = pairSetups(rawSetups);
@@ -156,12 +195,8 @@ for (const [key, rawSetups] of groups) {
     continue;
   }
 
-  if (resolvedExport !== exportName) {
-    console.log(`\nℹ  Matched "${track}" → ${resolvedExport} (no active file entries found, matched by name)`);
-  }
-
   if (sharedExports.has(resolvedExport)) {
-    console.log(`\n⚠  ${resolvedExport} shares setups with another track — skipping ${car}/${track}. Add manually.`);
+    console.log(`\n⚠  ${resolvedExport} shares setups with another track — skipping ${car}/${resolvedTrack}. Add manually.`);
     continue;
   }
 
@@ -174,13 +209,13 @@ for (const [key, rawSetups] of groups) {
     : rawSetups;
 
   if (setups.length === 0) {
-    console.log(`\n${car} / ${track} — all files already registered, skipping.`);
+    console.log(`\n${car} / ${resolvedTrack} — all files already registered, skipping.`);
     continue;
   }
 
   // Enrich each setup with authorId from its sidecar if available
   const setupsWithMeta = setups.map(s => {
-    const meta = readMeta(path.join(PROJECT_ROOT, 'public/setups', car, track, s.filename));
+    const meta = readMeta(path.join(PROJECT_ROOT, 'public/setups', car, resolvedTrack, s.filename));
     return meta ? { ...s, authorId: meta.authorId } : s;
   });
 
@@ -224,14 +259,31 @@ for (const [key, rawSetups] of groups) {
     suggested = sorted.slice(0, toFlag).map(e => e.filename);
   }
 
-  printPreview(car, track, pairs, existing, suggested);
+  printPreview(car, resolvedTrack, pairs, existing, suggested);
 
   const toRemove = await getPruningDecision(existing, suggested);
 
-  const confirm = (await prompt('\n  Apply changes? [y/n] ')).toLowerCase();
-  if (confirm !== 'y') {
+  const confirm = (await prompt('\n  Apply changes? [y/n/i] ')).toLowerCase();
+  if (confirm !== 'y' && confirm !== 'i') {
     console.log('  Skipped.');
     continue;
+  }
+
+  let approvedPairs = pairs;
+  if (confirm === 'i') {
+    approvedPairs = [];
+    for (const pair of pairs) {
+      const label = [
+        pair.qual && `${pair.qual}${pair.ambiguous ? ' [AMBIGUOUS]' : ' [QUAL]'}`,
+        pair.race && `${pair.race}${pair.ambiguous ? ' [AMBIGUOUS]' : ''}`,
+      ].filter(Boolean).join(' + ');
+      const answer = (await prompt(`    Add ${label}? [y/n] `)).toLowerCase();
+      if (answer === 'y') approvedPairs.push(pair);
+    }
+    if (approvedPairs.length === 0) {
+      console.log('  Nothing approved, skipping.');
+      continue;
+    }
   }
 
   for (const filename of toRemove) {
@@ -246,9 +298,9 @@ for (const [key, rawSetups] of groups) {
   }
 
   const entries = [];
-  for (const pair of pairs) {
-    if (pair.qual) entries.push(formatEntry(track, pair.qual, true));
-    if (pair.race) entries.push(formatEntry(track, pair.race, false));
+  for (const pair of approvedPairs) {
+    if (pair.qual) entries.push(formatEntry(resolvedTrack, pair.qual, true));
+    if (pair.race) entries.push(formatEntry(resolvedTrack, pair.race, false));
   }
   try {
     currentContent = insertEntries(currentContent, resolvedExport, car, entries);
@@ -261,7 +313,7 @@ for (const [key, rawSetups] of groups) {
         if (pair.qual) entriesMap[car].push({ filename: pair.qual, isQual: true });
         if (pair.race) entriesMap[car].push({ filename: pair.race, isQual: false });
       }
-      currentContent = addSetupsToExport(currentContent, resolvedExport, track, entriesMap);
+      currentContent = addSetupsToExport(currentContent, resolvedExport, resolvedTrack, entriesMap);
       anyChanges = true;
     } else {
       console.log(`  ⚠  Could not insert into "${car}" array in ${resolvedExport} — arrays may be commented out. Add manually.`);

@@ -136,7 +136,10 @@ for (const channel of CHANNELS) {
         continue;
       }
       // Try to resolve the typed text; fall back to using it as a literal folder name
-      resolved = trackIndex.resolve(answer) ?? { folderName: answer, exportName: null };
+      // Use the user's literal input as folderName — they're choosing where to put it.
+      // Keep exportName from resolution if available, but don't let it override the folder.
+      const resolvedByName = trackIndex.resolve(answer);
+      resolved = { folderName: answer, exportName: resolvedByName?.exportName ?? null };
     }
 
     // In track-specific mode, only download files for the target track
