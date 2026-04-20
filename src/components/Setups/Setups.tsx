@@ -8,11 +8,11 @@ const sortedRounds = seasonSetups.sort((a,b) => {
     return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
 })
 
-interface SetupsProps {
-    upcomingWeeks: number
-}
-function Setups(props: SetupsProps) {
-    const {upcomingWeeks} = props
+const isDev = process.env.NODE_ENV === 'development';
+const PROD_WEEKS = 3;
+
+function Setups() {
+    const upcomingWeeks = isDev ? 13 : PROD_WEEKS;
     var outputRoundsCount = 0
 
     // Remove folder path and leading slash from raw filepath
@@ -30,14 +30,19 @@ function Setups(props: SetupsProps) {
                     // +7 days is for Monday/Tuesday rollover
                     // +5 days is for the week to end after the broadcast
                     let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5))
-                    
+
                     let upcomingRound = weekEndGmt > new Date();
                     const setupsExist = (round.setups?.audi90gto && round.setups?.audi90gto.length > 0) || (round.setups?.nissangtpzxt && round.setups?.nissangtpzxt.length > 0)
 
-                    if(upcomingRound && outputRoundsCount < upcomingWeeks) {
-                        outputRoundsCount++
-                        return (
-                            <div className="round-container" key={round.title}>
+                    const isPast = !upcomingRound;
+                    if (isPast && !isDev) return null;
+                    if (upcomingRound && outputRoundsCount >= upcomingWeeks) return null;
+
+                    const isDevOnly = isDev && (isPast || outputRoundsCount >= PROD_WEEKS);
+                    if (upcomingRound) outputRoundsCount++;
+
+                    return (
+                            <div className={`round-container${isDevOnly ? ' dev-only' : ''}`} key={round.title}>
                                 <h3><span className="week-prefix">Week {weekNumber}: </span>{round.title}</h3>
                                 {round.notes && round.notes.length > 0 && (
                                     <div className="notes">
@@ -90,8 +95,6 @@ function Setups(props: SetupsProps) {
                                 )}
                             </div>
                         )
-                    }
-                    return null;
                 })}
             </div>
             <div className="download-zips text-content">
