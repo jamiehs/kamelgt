@@ -11,7 +11,12 @@ function classifyToken(token) {
 }
 
 function tokenize(filename) {
-  return filename.replace(/\.sto$/i, '').split(/[_\-. ]+/).filter(Boolean);
+  return filename
+    .replace(/\.sto$/i, '')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')        // camelCase: donington→Donington
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')  // acronym boundary: DWCBarber→DWC Barber
+    .split(/[_\-. ]+/)
+    .filter(Boolean);
 }
 
 // Returns { type: 'qual'|'race', tokenIndex: number, ambiguous: boolean }
