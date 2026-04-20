@@ -12,6 +12,15 @@ interface SingleBroadcast {
     url: string;
 }
 
+interface TrackEntry {
+    title: string;
+    alternateTitle?: string;
+    setups?: {
+        audi90gto: CarSetup[];
+        nissangtpzxt: CarSetup[];
+    };
+}
+
 interface CarSetup {
     file: string;
     comment?: string;

@@ -1,7 +1,7 @@
 import * as tracks from './track-data.js';
 
 const seasonShortName = '26S2';
-const seasonSetups = [
+const seasonSetups: SetupWeek[] = [
     {
         ...tracks.ROAD_ATLANTA,
         weekStart: '2026-03-17',

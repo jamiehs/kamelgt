@@ -1,5 +1,5 @@
 import * as tracks from './track-data.js';
-const broadcasts = [
+const broadcasts: any[] = [
     {
         id: '20S2',
         label: '2020 Season 2',
