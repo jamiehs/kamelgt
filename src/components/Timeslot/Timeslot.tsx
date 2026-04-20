@@ -9,7 +9,7 @@ const dayLabels = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frid
 
 // If the time looks America-ish, we remove the leading zeros from
 // the local time string.
-const stripLeadingZeroIfAmericas = (timeString, timeZone) => {
+const stripLeadingZeroIfAmericas = (timeString: string, timeZone: string) => {
     if (timeZone.match(/america/i) && timeString.match(/(a|p)m$/i)) {
         return timeString.replace(/^0/, '');
     }
@@ -51,7 +51,7 @@ interface TimeslotState {
     timestamp: number;
 }
 class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
-    constructor(props) {
+    constructor(props: TimeslotProps) {
         super(props);
         this.state = {
             timestamp: Date.now(),
@@ -75,7 +75,7 @@ class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
             hour: '2-digit',
             minute: '2-digit',
         });
-        const avgSof = Math.round((gtoSof + gtpSof) / 2);
+        const avgSof = Math.round(((gtoSof ?? 0) + (gtpSof ?? 0)) / 2);
 
         return (
             <div className="Timeslot" data-highlight={highlight}>

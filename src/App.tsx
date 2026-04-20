@@ -35,8 +35,8 @@ interface AppState {
     broadcastSearchResults: Fuse.FuseResult<SingleBroadcast>[];
 }
 
-class App extends React.Component<null, AppState> {
-    constructor(props) {
+class App extends React.Component<object, AppState> {
+    constructor(props: object) {
         super(props);
         this.state = {
             currentWeekData: getCurrentWeekData(seasonSetups),
@@ -85,7 +85,7 @@ class App extends React.Component<null, AppState> {
 
         this.flattenedBroadcasts = broadcasts
             .map((season) => {
-                return season.youTube.map((event, index) => {
+                return season.youTube.map((event: any, index: number) => {
                     const round = index + 1;
                     return {
                         id: season.id,
@@ -113,14 +113,14 @@ class App extends React.Component<null, AppState> {
         this.destroyCarScene?.();
     }
 
-    handleBroadcastSeasonChange(event) {
+    handleBroadcastSeasonChange(event: React.ChangeEvent<HTMLSelectElement>) {
         const selectedSeason = event.target.value;
         this.setState({
             broadcastsSeason: selectedSeason,
         });
     }
 
-    handleSearch(event) {
+    handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
         this.setState({
             broadcastSearchQuery: event.target.value,
             broadcastSearchResults: this.fuse.search(event.target.value).reverse(),
@@ -608,7 +608,7 @@ class App extends React.Component<null, AppState> {
                             if (season && season.id === this.state.broadcastsSeason) {
                                 return (
                                     <div key={season.id} className="videos-grid">
-                                        {season.youTube.map((week, index) => {
+                                        {season.youTube.map((week: any, index: number) => {
                                             const round = index + 1;
                                             const { url, title, thumbText, thumb } = week;
                                             if (title && title !== '') {

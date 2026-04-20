@@ -19,11 +19,13 @@ interface CarSetup {
 
 interface SetupWeek {
     title: string;
-    week: number;
     weekStart: string;
-    notes?: Array<string>;
-    audi90gto?: Array<CarSetup>;
-    nissangtpzxt?: Array<CarSetup>;
+    alternateTitle?: string;
+    notes?: string[];
+    setups?: {
+        audi90gto: CarSetup[];
+        nissangtpzxt: CarSetup[];
+    };
 }
 
 interface CurrentWeek {

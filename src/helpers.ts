@@ -77,7 +77,7 @@ const getCurrentWeekData = (
  * @param broadcasts array of broadcast seasons
  * @returns {object} a single season of broadcasts
  */
-const getCurrentBroadcastSeason = (broadcasts) => {
+const getCurrentBroadcastSeason = (broadcasts: any[]) => {
     return broadcasts
         .slice()
         .reverse()

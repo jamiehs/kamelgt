@@ -2,8 +2,7 @@ import React from 'react';
 import './Setups.scss';
 import { VCR_DISCORD_URL } from '../../data/constants';
 
-import seasonSetups from '../../data/season-setups';
-import trackData from '../../data/track-data';
+import { seasonSetups } from '../../data/season-setups';
 const sortedRounds = seasonSetups.sort((a, b) => {
     return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf();
 });
@@ -16,7 +15,7 @@ function Setups() {
     var outputRoundsCount = 0;
 
     // Remove folder path and leading slash from raw filepath
-    function cleanSetupName(filename) {
+    function cleanSetupName(filename: string) {
         return filename.replace(/^[^/]+\//, '');
     }
 
@@ -63,7 +62,7 @@ function Setups() {
                             )}
                             {setupsExist ? (
                                 <div className="cars-grid">
-                                    {round.setups?.nissangtpzxt.length > 0 ? (
+                                    {(round.setups?.nissangtpzxt?.length ?? 0) > 0 ? (
                                         <div>
                                             <span className="car badge" data-class="first">
                                                 Nissan GTP
@@ -116,7 +115,7 @@ function Setups() {
                                             </p>
                                         </div>
                                     )}
-                                    {round.setups?.audi90gto.length > 0 && (
+                                    {(round.setups?.audi90gto?.length ?? 0) > 0 && (
                                         <div>
                                             <span className="car badge" data-class="second">
                                                 Audi GTO
