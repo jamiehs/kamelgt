@@ -47,7 +47,7 @@ async function buildTrackIndex() {
     ignoreLocation: true,
   });
 
-  const folderNames = entries.map(e => e.folderName).sort();
+  const folderNames = [...new Set(entries.map(e => e.folderName))].sort();
 
   return {
     folderNames,
