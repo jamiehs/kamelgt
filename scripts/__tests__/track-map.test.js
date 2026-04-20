@@ -16,6 +16,24 @@ export const SUMMIT_POINT = {
         "nissangtpzxt": [],
     }
 }
+export const ROAD_AMERICA = {
+    title: "Road America",
+    setups: {
+        "audi90gto": [
+            { file: "road-america/maf_RA_25s2_R.sto" },
+        ],
+        "nissangtpzxt": [],
+    }
+}
+export const ROAD_AMERICA_500 = {
+    title: "Road America 500",
+    setups: {
+        "audi90gto": [
+            { file: "road-america/maf_RA500_24s2_R.sto" },
+        ],
+        "nissangtpzxt": [],
+    }
+}
 export const ARAGON_OUTER = {
     title: "Aragón - Outer",
     setups: {
@@ -58,5 +76,15 @@ describe('buildFolderMap', () => {
   it('first export wins when folder appears in multiple exports', () => {
     const { folderToExport } = buildFolderMap(SAMPLE);
     expect(folderToExport.get('aragon')).toBe('ARAGON_OUTER');
+  });
+  it('exportToFolder maps each export to its own folder directly', () => {
+    const { exportToFolder } = buildFolderMap(SAMPLE);
+    expect(exportToFolder.get('ROAD_AMERICA')).toBe('road-america');
+    expect(exportToFolder.get('ROAD_AMERICA_500')).toBe('road-america');
+  });
+  it('exportToFolder is independent of insertion order', () => {
+    const { exportToFolder } = buildFolderMap(SAMPLE);
+    // Both base and variant resolve to the same folder regardless of which came first
+    expect(exportToFolder.get('ROAD_AMERICA')).toBe(exportToFolder.get('ROAD_AMERICA_500'));
   });
 });

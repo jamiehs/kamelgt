@@ -130,14 +130,27 @@ describe('looseKey', () => {
 });
 
 describe('pairSetups loose matching', () => {
-  it('pairs qual and race by author+season when stems differ', () => {
+  it('pairs by author+season when stems genuinely differ (sidecar authorId)', () => {
+    // Q file has version 00, R file has version 01 — stems don't match exactly.
+    // Both carry the same authorId from their sidecar metadata.
     const files = [
-      { filename: 'Lgo26S2_Donington_Q00.sto' },
-      { filename: 'Lgo26S2_Donington_R01.sto' },
+      { filename: 'Lgo26S2_Donington_Nat_Q00.sto', authorId: 'user-lgo' },
+      { filename: 'Lgo26S2_Donington_R01.sto', authorId: 'user-lgo' },
     ];
     const pairs = pairSetups(files);
     expect(pairs).toHaveLength(1);
     expect(pairs[0].qual).toContain('Q00');
     expect(pairs[0].race).toContain('R01');
+  });
+
+  it('does not loose-pair files from different authors in the same season', () => {
+    const files = [
+      { filename: 'Lgo26S2_Donington_Q00.sto', authorId: 'user-lgo' },
+      { filename: 'maf_26S2_Donington_R01.sto', authorId: 'user-maf' },
+    ];
+    const pairs = pairSetups(files);
+    // Different authors — should not be paired; each appears independently
+    expect(pairs).toHaveLength(2);
+    expect(pairs.find(p => p.qual && p.race)).toBeUndefined();
   });
 });
