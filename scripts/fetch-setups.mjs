@@ -7,6 +7,7 @@ import path from 'path';
 import { fetchSetupAttachments, downloadFile } from './lib/discord-fetch.mjs';
 import { buildTrackIndex } from './lib/track-index.mjs';
 import { detectType } from './lib/parse-filename.mjs';
+import { writeMeta } from './lib/meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -152,6 +153,12 @@ for (const channel of CHANNELS) {
       mkdirSync(destDir, { recursive: true });
       const buffer = await downloadFile(attachment.url);
       writeFileSync(destPath, buffer);
+      writeMeta(destPath, {
+        authorId: attachment.authorId,
+        authorName: attachment.authorName,
+        timestamp: attachment.timestamp,
+        messageId: attachment.messageId,
+      });
       console.log(`  ✓ ${resolved.folderName}/${attachment.filename}`);
       totalDownloaded++;
     } catch (err) {

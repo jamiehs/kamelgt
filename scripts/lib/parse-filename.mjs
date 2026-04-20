@@ -60,9 +60,10 @@ function extractAuthor(filename) {
 }
 
 // Returns a loose pairing key: "<author>|<year><season>" — used as a fallback
-// when exact stem matching fails. Both must be non-null to be useful.
-function looseKey(filename) {
-  const author = extractAuthor(filename);
+// when exact stem matching fails. Prefers explicit authorId (from sidecar metadata)
+// over the heuristic extractAuthor, which infers from the filename.
+function looseKey(filename, authorId) {
+  const author = authorId ?? extractAuthor(filename);
   const season = extractSeason(filename);
   if (!author || !season) return null;
   return `${author}|${season.year}s${season.season}`;
@@ -81,6 +82,7 @@ function pairSetups(files) {
     ...f,
     ...detectType(f.filename),
     stem: getStem(f.filename),
+    _looseKey: looseKey(f.filename, f.authorId ?? null),
   }));
 
   const quals = parsed.filter(f => f.type === 'qual');
@@ -104,9 +106,9 @@ function pairSetups(files) {
   const unpairedRaces = races.filter(r => !usedRaces.has(r.filename) && pairs.find(p => p.race === r.filename && !p.qual));
 
   for (const qual of unparedQuals) {
-    const qKey = looseKey(qual.filename);
+    const qKey = qual._looseKey;
     if (qKey) {
-      const match = unpairedRaces.find(r => looseKey(r.filename) === qKey);
+      const match = unpairedRaces.find(r => r._looseKey === qKey);
       if (match) {
         // Replace the race's solo entry with a paired entry
         const idx = pairs.findIndex(p => p.race === match.filename && !p.qual);

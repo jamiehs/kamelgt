@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 import { discoverNewSetups } from './lib/git-discover.mjs';
+import { readMeta } from './lib/meta.mjs';
 import { buildFolderMap, findExportByFolderPrefix } from './lib/track-map.mjs';
 import { pairSetups, seasonSortKey, getStem, detectType, looseKey } from './lib/parse-filename.mjs';
 import { formatEntry, insertEntries, removeEntry, appendNewExport, addSetupsToExport, hasSetupsBlock } from './lib/write-track-data.mjs';
@@ -176,7 +177,13 @@ for (const [key, rawSetups] of groups) {
     continue;
   }
 
-  const allPairs = pairSetups(setups);
+  // Enrich each setup with authorId from its sidecar if available
+  const setupsWithMeta = setups.map(s => {
+    const meta = readMeta(path.join(PROJECT_ROOT, 'public/setups', car, track, s.filename));
+    return meta ? { ...s, authorId: meta.authorId } : s;
+  });
+
+  const allPairs = pairSetups(setupsWithMeta);
 
   // Reject orphaned qualifying setups — a qual with no race sibling is not useful.
   // A qual is only truly orphaned if no matching race exists in existing entries either.
