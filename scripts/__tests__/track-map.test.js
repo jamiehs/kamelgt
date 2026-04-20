@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest';
-import { buildFolderMap } from '../lib/track-map.mjs';
+import { buildFolderMap, findExportByFolderPrefix } from '../lib/track-map.mjs';
 
 const SAMPLE = `const QUAL = "Qualifying setup";
 
@@ -52,6 +52,17 @@ export const ARAGON_MOTORCYCLE_GP = {
 export const BRANDS_HATCH = {
     title: "Brands Hatch"
 }
+export const LIME_ROCK = {
+    title: "Lime Rock Park - GP"
+}
+export const LIME_ROCK_CLASSIC = {
+    title: "Lime Rock Park - Classic",
+    setups: LIME_ROCK.setups,
+}
+export const LIME_ROCK_WEST_BEND = {
+    title: "Lime Rock Park - West Bend Chicane",
+    setups: LIME_ROCK.setups,
+}
 `;
 
 describe('buildFolderMap', () => {
@@ -68,6 +79,15 @@ describe('buildFolderMap', () => {
   it('does not map exports with no file entries', () => {
     const { folderToExport } = buildFolderMap(SAMPLE);
     expect(folderToExport.has('brands-hatch')).toBe(false);
+  });
+  it('does not flag a stub export as shared because a sibling uses its setups', () => {
+    // LIME_ROCK has no setups — LIME_ROCK_CLASSIC references LIME_ROCK.setups.
+    // A 300-char lookahead from LIME_ROCK bleeds into LIME_ROCK_CLASSIC and falsely
+    // detects a shared-setups pattern. The block must be bounded to the export itself.
+    const { sharedExports } = buildFolderMap(SAMPLE);
+    expect(sharedExports.has('LIME_ROCK')).toBe(false);
+    expect(sharedExports.has('LIME_ROCK_CLASSIC')).toBe(true);
+    expect(sharedExports.has('LIME_ROCK_WEST_BEND')).toBe(true);
   });
   it('does not register shared-setups exports as folder owners', () => {
     const { folderToExport } = buildFolderMap(SAMPLE);
@@ -86,5 +106,23 @@ describe('buildFolderMap', () => {
     const { exportToFolder } = buildFolderMap(SAMPLE);
     // Both base and variant resolve to the same folder regardless of which came first
     expect(exportToFolder.get('ROAD_AMERICA')).toBe(exportToFolder.get('ROAD_AMERICA_500'));
+  });
+});
+
+describe('findExportByFolderPrefix', () => {
+  const allExports = ['SONOMA', 'SONOMA_CUP', 'SONOMA_CUP_LONG', 'DONINGTON_PARK', 'TWIN_RING_MOTEGI'];
+  const sharedExports = new Set();
+
+  it('returns exact match when folder name equals an export name', () => {
+    expect(findExportByFolderPrefix('sonoma', allExports, sharedExports)).toBe('SONOMA');
+  });
+  it('returns unique prefix match when no exact match exists', () => {
+    expect(findExportByFolderPrefix('donington', allExports, sharedExports)).toBe('DONINGTON_PARK');
+  });
+  it('returns null when multiple exports share a prefix and no exact match', () => {
+    expect(findExportByFolderPrefix('sonoma-cup', allExports, sharedExports)).toBe('SONOMA_CUP');
+  });
+  it('returns null when folder has no prefix relationship to any export', () => {
+    expect(findExportByFolderPrefix('motegi', allExports, sharedExports)).toBeNull();
   });
 });

@@ -103,7 +103,9 @@ function scanTrackFolder(track) {
 
 // --- Main ---
 
-const targetTrack = process.argv[2];
+const argv = process.argv.slice(2);
+const targetTrack = argv.find(a => !a.startsWith('--')) ?? null;
+const exportHint = argv.find(a => a.startsWith('--export='))?.split('=')[1] ?? null;
 let newSetups;
 
 if (targetTrack) {
@@ -141,8 +143,11 @@ for (const [key, rawSetups] of groups) {
   const [car, track] = key.split('|');
   const exportName = folderToExport.get(track);
 
-  // Try prefix-fallback for tracks whose arrays are commented out (e.g. DONINGTON_PARK with no active files)
-  const resolvedExport = exportName || findExportByFolderPrefix(track, allExports, sharedExports);
+  // Try prefix-fallback for tracks whose arrays are commented out (e.g. DONINGTON_PARK with no active files).
+  // exportHint is passed by fetch-setups and is authoritative for disconnected folder/export names.
+  const resolvedExport = exportName
+    || findExportByFolderPrefix(track, allExports, sharedExports)
+    || exportHint;
 
   if (!resolvedExport) {
     const pairs = pairSetups(rawSetups);

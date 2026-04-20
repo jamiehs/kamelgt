@@ -99,9 +99,11 @@ for (const channel of CHANNELS) {
     continue;
   }
 
+  let nissanSkipped = 0;
+
   for (const attachment of attachments) {
     if (channel.car === 'nissangtpzxt' && new Date(attachment.timestamp) < NISSAN_PHYSICS_CUTOFF) {
-      console.log(`  ⚠  Skipping ${attachment.filename} — pre-26s2 Nissan setup, incompatible with current physics`);
+      nissanSkipped++;
       continue;
     }
 
@@ -173,17 +175,24 @@ for (const channel of CHANNELS) {
       console.error(`  ✗ Failed to download ${attachment.filename}: ${err.message}`);
     }
   }
+
+  if (nissanSkipped > 0) {
+    console.log(`  ⚠  Skipped ${nissanSkipped} pre-26s2 Nissan setup${nissanSkipped === 1 ? '' : 's'} (incompatible with current physics)`);
+  }
 }
 
-if (totalDownloaded === 0) {
-  console.log('\nNo new files downloaded. Nothing to sync.');
-  process.exit(0);
+if (totalDownloaded > 0) {
+  console.log(`\nDownloaded ${totalDownloaded} file(s).`);
+} else {
+  console.log('\nNo new files downloaded.');
 }
 
-console.log(`\nDownloaded ${totalDownloaded} file(s). Running sync-setups...`);
+console.log('Running sync-setups...');
 
-const syncArg = targetTrack ? targetTrack.folderName : '';
+const syncArgs = targetTrack
+  ? `${targetTrack.folderName} --export=${targetTrack.exportName}`
+  : '';
 execSync(
-  `node ${JSON.stringify(path.join(__dirname, 'sync-setups.mjs'))} ${syncArg}`.trim(),
+  `node ${JSON.stringify(path.join(__dirname, 'sync-setups.mjs'))} ${syncArgs}`.trim(),
   { cwd: PROJECT_ROOT, stdio: 'inherit' }
 );

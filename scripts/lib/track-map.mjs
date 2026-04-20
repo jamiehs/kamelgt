@@ -16,17 +16,19 @@ function buildFolderMap(fileContent) {
     allExports.push(exportName);
     const blockStart = match.index + match[0].length;
 
+    // Bound to this export's block — stops at the next export const to avoid bleeding
+    // into a sibling export's content (e.g. LIME_ROCK's lookahead reaching LIME_ROCK_CLASSIC).
+    const nextExportIdx = fileContent.indexOf('export const ', blockStart);
+    const blockEnd = nextExportIdx === -1 ? fileContent.length : nextExportIdx;
+    const chunk = fileContent.slice(blockStart, blockEnd);
+
     // Detect shared-setups reference (e.g. setups: ARAGON_OUTER.setups)
-    const lookahead = fileContent.slice(blockStart, blockStart + 300);
-    if (/setups:\s+\w+\.setups/.test(lookahead)) {
+    if (/setups:\s+\w+\.setups/.test(chunk)) {
       sharedExports.add(exportName);
       continue;
     }
 
     // Find the first active (non-commented) file: "folder/..." pattern within this export's block
-    const nextExportIdx = fileContent.indexOf('export const ', blockStart);
-    const blockEnd = nextExportIdx === -1 ? fileContent.length : nextExportIdx;
-    const chunk = fileContent.slice(blockStart, blockEnd);
     const fileMatch = chunk.match(/(?<!\/\/\s*)file:\s*["']([^/"']+)\//);
     if (fileMatch) {
       const folder = fileMatch[1];
@@ -42,11 +44,13 @@ function buildFolderMap(fileContent) {
 
 // Fallback: given a folder name like "donington", find the one export whose
 // name starts with the folder uppercased (e.g. DONINGTON_PARK).
-// Returns the export name if exactly one match, otherwise null.
+// Prefers exact match so "sonoma" resolves to SONOMA even when SONOMA_CUP also exists.
 function findExportByFolderPrefix(folder, allExports, sharedExports) {
   const prefix = folder.toUpperCase().replace(/-/g, '_');
-  const matches = allExports.filter(name => !sharedExports.has(name) && name.startsWith(prefix));
-  return matches.length === 1 ? matches[0] : null;
+  const candidates = allExports.filter(name => !sharedExports.has(name) && name.startsWith(prefix));
+  const exact = candidates.find(name => name === prefix);
+  if (exact) return exact;
+  return candidates.length === 1 ? candidates[0] : null;
 }
 
 export { buildFolderMap, findExportByFolderPrefix };

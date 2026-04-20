@@ -108,6 +108,25 @@ export const BARBER = {
             {
                 file: "barber/barber-24S1-r3.sto",
             },
+                    {
+                file: "barber/A90_Barber_24S1_Y_Gijsen_R.sto",
+            },
+            {
+                file: "barber/A90_Barber_24S1_Y_Gijsen_R2.sto",
+            },
+            {
+                file: "barber/Barber26c.sto",
+            },
+            {
+                file: "barber/DWC_25S4_Barber_R2.sto",
+            },
+            {
+                file: "barber/barber-21S3-q.sto",
+                comment: QUAL
+            },
+            {
+                file: "barber/barber-21S3-r4.sto",
+            },
         ],
         "nissangtpzxt": [],
     }
@@ -500,14 +519,28 @@ export const LE_MANS_HISTORIC = {
         "nissangtpzxt": [],
     }
 }
+export const LIME_ROCK = {
+    title: "Lime Rock Park - GP",
+    setups: {
+        "audi90gto": [
+            {
+                file: "lime-rock/A90_LimeRockC_21S2_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "lime-rock/A90_LimeRockC_21S2_Y_Gijsen_R.sto",
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }}
 export const LIME_ROCK_CLASSIC = {
-    title: "Lime Rock Park - Classic"
-}
-export const LIME_ROCK_GP = {
-    title: "Lime Rock Park - GP"
+    title: "Lime Rock Park - Classic",
+    setups: LIME_ROCK.setups,
 }
 export const LIME_ROCK_WEST_BEND = {
-    title: "Lime Rock Park - West Bend Chicane"
+    title: "Lime Rock Park - West Bend Chicane",
+    setups: LIME_ROCK.setups,
 }
 export const LONG_BEACH = {
     title: "Long Beach",
@@ -600,7 +633,27 @@ export const MID_OHIO_CHICANE = {
 }
 export const MISANO = {
     title: "Misano World Circuit Marco Simoncelli - Grand Prix"
-}
+,
+    setups: {
+        "audi90gto": [
+            {
+                file: "misano/A90_Misano_24S2_Y_Gijsen_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "misano/A90_Misano_24S2_Y_Gijsen_R.sto",
+            },
+            {
+                file: "misano/maf_misano_24s2_q3.sto",
+                comment: QUAL
+            },
+            {
+                file: "misano/maf_misano_24s2_r3.sto",
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }}
 export const MONTREAL = {
     title: "Montreal",
     alternateTitle: "Circuit Gilles Villeneuve",
@@ -1304,7 +1357,7 @@ const trackData = {
     LE_MANS,
     LE_MANS_HISTORIC,
     LIME_ROCK_CLASSIC,
-    LIME_ROCK_GP,
+    LIME_ROCK,
     LIME_ROCK_WEST_BEND,
     LONG_BEACH,
     MAGNY_COURS,
