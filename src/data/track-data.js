@@ -19,7 +19,17 @@ export const ADELAIDE_STREET_CIRCUIT = {
             {
                 file: "adelaide/Lgo26S2_Adelaide_R82.sto",
             },
-        ]
+                    {
+                file: "adelaide/2026S2_Adelaide_3.sto",
+            },
+            {
+                file: "adelaide/F122_NZXT_Adelaide_1-5_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "adelaide/F122_NZXT_Adelaide_1-5.sto",
+            },
+]
     }
 }
 export const ARAGON_OUTER = {
@@ -303,7 +313,16 @@ export const DONINGTON_PARK = {
 }
 export const FUJI_NO_CHICANE = {
     title: "Fuji - No Chicane"
-}
+,
+    setups: {
+        "audi90gto": [
+            {
+                file: "fuji/JdelOlmoFujie22S4_26S1A.sto",
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }}
 export const HOCKENHEIM_GP = {
     title: "Hockenheim GP",
     alternateTitle: "Hockenheimring Baden-Württemberg - Grand Prix",
@@ -385,7 +404,26 @@ export const HUNGARORING = {
 export const IMOLA = {
     title: "Imola",
     alternateTitle: "Autodromo Internazionale Enzo e Dino Ferrari"
-}
+,
+    setups: {
+        "audi90gto": [
+            {
+                file: "imola/Imola22c.sto",
+            },
+            {
+                file: "imola/JdelOlmoImola22S4D.sto",
+            },
+            {
+                file: "imola/maf_imola_24s1_q0.sto",
+                comment: QUAL
+            },
+            {
+                file: "imola/maf_imola_24s1_r0p.sto",
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }}
 export const INDY_ROAD = {
     title: "Indy - Road",
     alternateTitle: "Indianapolis Motor Speedway - Road",
@@ -482,7 +520,17 @@ export const LAGUNA_SECA = {
             {
                 file: "laguna-seca/F122_NZXT_LagunaSeca_1-5_R.sto",
             },
-        ],
+                    {
+                file: "laguna-seca/2026S2_Laguna_Dry_2q.sto",
+            },
+            {
+                file: "laguna-seca/Lgo26S2_Laguna_Seca_Q04.sto",
+                comment: QUAL
+            },
+            {
+                file: "laguna-seca/Lgo26S2_Laguna_Seca_R04.sto",
+            },
+],
     }
 }
 export const LE_MANS = {
@@ -757,7 +805,10 @@ export const MUGELLO = {
                 comment: QUAL
             },
         ],
-        "nissangtpzxt": [],
+        "nissangtpzxt": [            {
+                file: "mugello/F122_NZXT_Mugello_1-6asgmod.sto",
+            },
+],
     }
 }
 export const NAVARRA = {
@@ -984,7 +1035,14 @@ export const ROAD_ATLANTA = {
             {
                 file: "road-atlanta/A90 - 22S4 - RoadAtlanta - J Del Olmo - R.sto",
             },
-        ],
+                    {
+                file: "road-atlanta/26s2-RoadAtlanta26c_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "road-atlanta/26s2-RoadAtlanta26c.sto",
+            },
+],
         "nissangtpzxt": [
             {
                 file: "road-atlanta/F122_NZXT_RoadAtlanta_1-6_Q.sto",
@@ -993,7 +1051,20 @@ export const ROAD_ATLANTA = {
             {
                 file: "road-atlanta/F122_NZXT_RoadAtlanta_1-6_R.sto",
             },
-        ],
+                    {
+                file: "road-atlanta/2026S2_RAtlanta_5.sto",
+            },
+            {
+                file: "road-atlanta/F122_NZXT_RoadAtlanta_1-6_Q_asgmod.sto",
+                comment: QUAL
+            },
+            {
+                file: "road-atlanta/F122_NZXT_RoadAtlanta_1-6_R_asgmod.sto",
+            },
+            {
+                file: "road-atlanta/roadatlantaR2b.sto",
+            },
+],
     }
 }
 export const SACHSENRING = {
@@ -1011,17 +1082,32 @@ export const SEBRING = {
                 file: "sebring/maf_sebring_23s4_r3.sto",
             },
             {
-                file: "sebring/Sebring_Kheireddine_22s3.sto",
-            },
-            {
                 file: "sebring/A90_Sebring_23S2_Y_Gijsen_Q.sto",
                 comment: QUAL
             },
             {
                 file: "sebring/A90_Sebring_23S2_Y_Gijsen_R.sto",
             },
-        ],
-        "nissangtpzxt": [],
+                    {
+                file: "sebring/DWC_26S2W13_Sebring_R1wet.sto",
+            },
+            {
+                file: "sebring/sebringtest.sto",
+            },
+],
+        "nissangtpzxt": [            {
+                file: "sebring/F122_NZXT_Sebring_1-6.sto",
+            },
+            {
+                file: "sebring/F122_NZXT_Sebring_1-7asgmod.sto",
+            },
+            {
+                file: "sebring/JW-Sebring-Race-V3-262.sto",
+            },
+            {
+                file: "sebring/Sebring34c_R2.sto",
+            },
+],
     }
 }
 export const SILVERSTONE_GP = {
@@ -1039,7 +1125,26 @@ export const SNETTERTON_200 = {
 }
 export const SONOMA = {
     title: "Sonoma"
-}
+,
+    setups: {
+        "audi90gto": [
+            {
+                file: "sonoma/JdelOlmoAudiSonoma_26S1C.sto",
+            },
+            {
+                file: "sonoma/Sonoma22c.sto",
+            },
+            {
+                file: "sonoma/maf_sonoma_26s1_q0.sto",
+                comment: QUAL
+            },
+            {
+                file: "sonoma/maf_sonoma_26s1_r0.sto",
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }}
 export const SONOMA_CUP = {
     title: "Sonoma - Cup"
 }
@@ -1194,7 +1299,10 @@ export const TWIN_RING_MOTEGI = {
             {
                 file: "motegi/maf_motegi_26s2_r0.1.sto",
             },
-        ],
+                    {
+                file: "motegi/dwc_26S2_Motegi_20C_R1.sto",
+            },
+],
         "nissangtpzxt": [
             {
                 file: "motegi/2026S2 Motegi 3.1.sto",
@@ -1208,6 +1316,19 @@ export const TWIN_RING_MOTEGI = {
             },
             {
                 file: "motegi/SDC_26s1_ZXT_TwinRing_R1.0.0.sto",
+            },
+                    {
+                file: "motegi/2026S2_Motegi_3.1.sto",
+            },
+            {
+                file: "motegi/26S2-McPlane-Motegi-Test-R1.sto",
+            },
+            {
+                file: "motegi/F122_NZXT_Motegi_1-7_Q.sto",
+                comment: QUAL
+            },
+            {
+                file: "motegi/F122_NZXT_Motegi_1-7.sto",
             },
         ]
     }
