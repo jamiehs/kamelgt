@@ -5,7 +5,7 @@ import path from 'path';
 
 import { discoverNewSetups } from './lib/git-discover.mjs';
 import { buildFolderMap, findExportByFolderPrefix } from './lib/track-map.mjs';
-import { pairSetups, seasonSortKey } from './lib/parse-filename.mjs';
+import { pairSetups, seasonSortKey, getStem, detectType } from './lib/parse-filename.mjs';
 import { formatEntry, insertEntries, removeEntry, appendNewExport, addSetupsToExport, hasSetupsBlock } from './lib/write-track-data.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -20,9 +20,10 @@ function prompt(question) {
 }
 
 function printPreview(car, track, pairs, existing, suggested) {
-  const newCount = pairs.reduce((n, p) => n + (p.qual ? 1 : 0) + (p.race ? 1 : 0), 0);
-  const total = existing.length + newCount;
-  const pruneNote = total > MAX_SETUPS ? `  ⚠  ${total} setups after additions (max ${MAX_SETUPS} suggested)` : '';
+  const newRaceCount = pairs.reduce((n, p) => n + (p.race ? 1 : 0), 0);
+  const existingRaceCount = existing.filter(e => e.comment !== 'Qualifying setup').length;
+  const total = existingRaceCount + newRaceCount;
+  const pruneNote = total > MAX_SETUPS ? `  ⚠  ${total} race setups after additions (max ${MAX_SETUPS} suggested)` : '';
   console.log(`\n${car} / ${track}${pruneNote}`);
 
   for (const pair of pairs) {
@@ -175,15 +176,31 @@ for (const [key, rawSetups] of groups) {
     continue;
   }
 
-  const pairs = pairSetups(setups);
-  const newCount = pairs.reduce((n, p) => n + (p.qual ? 1 : 0) + (p.race ? 1 : 0), 0);
-  const total = existing.length + newCount;
+  const allPairs = pairSetups(setups);
 
-  // Build pruning suggestions: oldest season first, then no-season entries
+  // Reject orphaned qualifying setups — a qual with no race sibling is not useful
+  const orphanedQuals = allPairs.filter(p => p.qual && !p.race);
+  for (const p of orphanedQuals) {
+    console.log(`\n  ⚠  Skipping orphaned qualifying setup (no matching race): ${p.qual}`);
+  }
+  const pairs = allPairs.filter(p => p.race);
+
+  if (pairs.length === 0 && orphanedQuals.length > 0) {
+    console.log(`  No race setups to add.`);
+    continue;
+  }
+
+  // Budget counts race setups only; qualifying setups are free
+  const newRaceCount = pairs.reduce((n, p) => n + 1, 0);
+  const existingRaceCount = existing.filter(e => e.comment !== 'Qualifying setup').length;
+  const total = existingRaceCount + newRaceCount;
+
+  // Build pruning suggestions from race setups only, oldest season first
   let suggested = [];
   if (total > MAX_SETUPS) {
     const toFlag = total - MAX_SETUPS;
-    const sorted = [...existing]
+    const existingRace = existing.filter(e => e.comment !== 'Qualifying setup');
+    const sorted = [...existingRace]
       .map(e => ({ filename: e.file.split('/').pop(), sortKey: seasonSortKey(e.file.split('/').pop()) }))
       .sort((a, b) => a.sortKey - b.sortKey);
     suggested = sorted.slice(0, toFlag).map(e => e.filename);
@@ -202,6 +219,13 @@ for (const [key, rawSetups] of groups) {
   for (const filename of toRemove) {
     const filePath = existing.find(e => e.file.endsWith('/' + filename))?.file;
     if (filePath) currentContent = removeEntry(currentContent, filePath);
+    // Also remove the paired qualifying setup if one exists
+    const raceStem = getStem(filename);
+    const pairedQual = existing.find(e => {
+      const f = e.file.split('/').pop();
+      return detectType(f) === 'qual' && getStem(f) === raceStem;
+    });
+    if (pairedQual) currentContent = removeEntry(currentContent, pairedQual.file);
   }
 
   const entries = [];

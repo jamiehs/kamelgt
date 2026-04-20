@@ -6,6 +6,7 @@ import path from 'path';
 
 import { fetchSetupAttachments, downloadFile } from './lib/discord-fetch.mjs';
 import { buildTrackIndex } from './lib/track-index.mjs';
+import { detectType } from './lib/parse-filename.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -79,6 +80,11 @@ if (trackArg) {
 
 let totalDownloaded = 0;
 
+// Tracks the newest seen (authorId, folder, car, type) combo to deduplicate
+// repeat uploads from the same person for the same track+type within the window.
+// Discord returns newest-first, so the first occurrence is always the one to keep.
+const seenByAuthor = new Set();
+
 for (const channel of CHANNELS) {
   console.log(`\nFetching ${channel.name}...`);
 
@@ -124,6 +130,15 @@ for (const channel of CHANNELS) {
 
     // In track-specific mode, only download files for the target track
     if (targetTrack && resolved.folderName !== targetTrack.folderName) continue;
+
+    // Author dedup: skip older uploads from the same person for the same track+car+type
+    const type = detectType(attachment.filename);
+    const authorKey = `${attachment.authorId}|${resolved.folderName}|${channel.car}|${type}`;
+    if (seenByAuthor.has(authorKey)) {
+      console.log(`  ~ ${resolved.folderName}/${attachment.filename} (older upload by ${attachment.authorName}, skipped)`);
+      continue;
+    }
+    seenByAuthor.add(authorKey);
 
     const destDir = path.join(PROJECT_ROOT, 'public', 'setups', channel.car, resolved.folderName);
     const destPath = path.join(destDir, attachment.filename);

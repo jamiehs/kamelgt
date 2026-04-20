@@ -55,6 +55,8 @@ async function fetchSetupAttachments(channelId, token, afterDate) {
             url: attachment.url,
             messageContent: (message.content ?? '').slice(0, 500),
             timestamp: message.timestamp,
+            authorId: message.author.id,
+            authorName: message.author.global_name ?? message.author.username,
           });
         }
       }
