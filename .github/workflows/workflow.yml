@@ -1,39 +1,39 @@
 name: Github Pages Deploy
 
 on:
-  push:
-    branches:
-      - "master"
+    push:
+        branches:
+            - 'master'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
+        strategy:
+            matrix:
+                node-version: [20.x]
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.1
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4.1.1
 
-      - name: Install and build
-        run: |
-          npm ci
-          npm run build
+            - name: Install and build
+              run: |
+                  npm ci
+                  npm run build
 
-      - name: Zip Audi Setups
-        run: |
-          rm -rf build/audi90gto-setups.zip
-          cd public/setups/audi90gto && find . -type f | zip ../../../build/audi90gto-setups.zip -@ && cd ../../../
+            - name: Zip Audi Setups
+              run: |
+                  rm -rf build/audi90gto-setups.zip
+                  cd public/setups/audi90gto && find . -type f | zip ../../../build/audi90gto-setups.zip -@ && cd ../../../
 
-      - name: Zip Nissan Setups
-        run: |
-          rm -rf build/nissangtpzxt-setups.zip
-          cd public/setups/nissangtpzxt && find . -type f | zip ../../../build/nissangtpzxt-setups.zip -@ && cd ../../../
+            - name: Zip Nissan Setups
+              run: |
+                  rm -rf build/nissangtpzxt-setups.zip
+                  cd public/setups/nissangtpzxt && find . -type f | zip ../../../build/nissangtpzxt-setups.zip -@ && cd ../../../
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
-        with:
-          branch: gh-pages
-          folder: build
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@v4.6.0
+              with:
+                  branch: gh-pages
+                  folder: build

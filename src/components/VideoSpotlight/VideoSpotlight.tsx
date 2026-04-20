@@ -3,30 +3,23 @@ import './VideoSpotlight.scss';
 import { getYouTubeId } from '../../helpers';
 
 interface VideoSpotlightProps {
-    youTubeUrl: string
-    subheading: string
-    linkText: string
-    thumbnailSource?: string
-    thumbnailIndex?: number
-    children: React.ReactNode
+    youTubeUrl: string;
+    subheading: string;
+    linkText: string;
+    thumbnailSource?: string;
+    thumbnailIndex?: number;
+    children: React.ReactNode;
 }
 
 function VideoSpotlight(props: VideoSpotlightProps) {
-    let {
-        youTubeUrl,
-        subheading,
-        linkText,
-        thumbnailSource,
-        thumbnailIndex = 3,
-        children,
-    } = props
+    let { youTubeUrl, subheading, linkText, thumbnailSource, thumbnailIndex = 3, children } = props;
 
-    let thumbnail = ''
-    if(youTubeUrl) {
-        thumbnail = `https://img.youtube.com/vi/${getYouTubeId(youTubeUrl)}/hq${thumbnailIndex}.jpg`
+    let thumbnail = '';
+    if (youTubeUrl) {
+        thumbnail = `https://img.youtube.com/vi/${getYouTubeId(youTubeUrl)}/hq${thumbnailIndex}.jpg`;
     }
-    if(thumbnailSource) {
-        thumbnail = thumbnailSource
+    if (thumbnailSource) {
+        thumbnail = thumbnailSource;
     }
 
     return (
@@ -41,25 +34,31 @@ function VideoSpotlight(props: VideoSpotlightProps) {
                 <div className="clip">
                     {youTubeUrl && (
                         <div className="thumbnail-wrapper">
-                            <a className="no-icon" href={youTubeUrl} target="_blank" rel="noreferrer">
+                            <a
+                                className="no-icon"
+                                href={youTubeUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 <div
                                     className="thumbnail"
-                                    style={{backgroundImage: `url(${thumbnail})`}}
+                                    style={{ backgroundImage: `url(${thumbnail})` }}
                                 />
                             </a>
                         </div>
                     )}
                     <div className="description">
                         {linkText && youTubeUrl && (
-                            <a className="no-icon" href={youTubeUrl} target="_blank" rel="noreferrer">
+                            <a
+                                className="no-icon"
+                                href={youTubeUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 <h5>{linkText}</h5>
                             </a>
                         )}
-                        {children && (
-                            <p>
-                                {children}
-                            </p>
-                        )}
+                        {children && <p>{children}</p>}
                     </div>
                 </div>
             </div>

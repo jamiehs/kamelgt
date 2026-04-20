@@ -1,4 +1,4 @@
-import moment from 'moment-timezone'
+import moment from 'moment-timezone';
 
 /**
  * Next Race Day
@@ -7,10 +7,10 @@ import moment from 'moment-timezone'
  * @param {string} nowString eg: '2022-08-01 12:00' used for testing
  * @returns JavaScript date object
  */
-const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string|null = null) => {
-    let nowMoment = moment.tz('GMT')
-    if(nowString !== null) {
-        nowMoment = moment.tz(nowString, 'GMT')
+const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string | null = null) => {
+    let nowMoment = moment.tz('GMT');
+    if (nowString !== null) {
+        nowMoment = moment.tz(nowString, 'GMT');
     }
 
     const today = nowMoment.isoWeekday();
@@ -19,29 +19,23 @@ const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string|null 
     const raceHour = parseInt(timeSlot.split(':')[0], 10);
     const raceMinute = parseInt(timeSlot.split(':')[1], 10);
 
-    let momentObj = nowMoment
+    let momentObj = nowMoment;
 
-    if(today < dayIndex) {
+    if (today < dayIndex) {
         // race is upcoming
-    } else if(today === dayIndex) {
+    } else if (today === dayIndex) {
         // race is today, still upcoming
-        if(nowHour > raceHour && nowMinute > raceMinute) {
+        if (nowHour > raceHour && nowMinute > raceMinute) {
             // race was today
-            momentObj = nowMoment.add(1, 'weeks')
+            momentObj = nowMoment.add(1, 'weeks');
         }
     } else {
         // race has passed
-        momentObj = nowMoment.add(1, 'weeks')
+        momentObj = nowMoment.add(1, 'weeks');
     }
 
-    return momentObj
-        .isoWeekday(dayIndex)
-        .hour(raceHour)
-        .minute(raceMinute)
-        .second(0)
-        .toDate()
-}
-
+    return momentObj.isoWeekday(dayIndex).hour(raceHour).minute(raceMinute).second(0).toDate();
+};
 
 /**
  * Get Current Week Data
@@ -49,31 +43,34 @@ const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string|null 
  * @param {integer} rolloverDay 5 is after the broadcast; 7 is on Mon/Tues
  * @returns {object} a single week number, label & notes
  */
-const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number = 5): CurrentWeek => {
-    const sortedRounds = seasonSetups.sort((a,b) => {
-        return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
+const getCurrentWeekData = (
+    seasonSetups: Array<SetupWeek>,
+    rolloverDay: number = 5,
+): CurrentWeek => {
+    const sortedRounds = seasonSetups.sort((a, b) => {
+        return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf();
     });
-    var currentWeek = {}
-    
+    var currentWeek = {};
+
     sortedRounds.some((round, i) => {
         let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
 
         // rolloverDay +7 days is for Monday/Tuesday rollover
         // rolloverDay +5 days is for the week to end after the broadcast
         let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + rolloverDay));
-        
+
         currentWeek = {
-            week: i+1,
+            week: i + 1,
             label: round.title,
             notes: round.notes,
-        }
+        };
 
         // Stop if this week is not over
         return weekEndGmt > new Date();
-    })
+    });
 
-    return currentWeek
-}
+    return currentWeek;
+};
 
 /**
  * Get Current Broadcast Season
@@ -81,27 +78,30 @@ const getCurrentWeekData = (seasonSetups: Array<SetupWeek>, rolloverDay: number 
  * @returns {object} a single season of broadcasts
  */
 const getCurrentBroadcastSeason = (broadcasts) => {
-    return broadcasts.slice().reverse().find((season) => {
-        return season.startDate < new Date().toISOString().substring(0, 10)
-    })
-}
+    return broadcasts
+        .slice()
+        .reverse()
+        .find((season) => {
+            return season.startDate < new Date().toISOString().substring(0, 10);
+        });
+};
 
 /**
  * Local Date From String
- * @param {string} dateString input date: 2023-03-28 
+ * @param {string} dateString input date: 2023-03-28
  * @returns {string} as a local date: 28. März 2023
  */
 const localDateFromString = (dateString: string): string => {
-    const dateStringParts = dateString.split('-')
-    const year = parseInt(dateStringParts[0], 10)
-    const month = parseInt(dateStringParts[1], 10)
-    const day = parseInt(dateStringParts[2], 10)
+    const dateStringParts = dateString.split('-');
+    const year = parseInt(dateStringParts[0], 10);
+    const month = parseInt(dateStringParts[1], 10);
+    const day = parseInt(dateStringParts[2], 10);
 
-    const event: Date = new Date(Date.UTC(year, month-1, day, 0, 0, 0));
+    const event: Date = new Date(Date.UTC(year, month - 1, day, 0, 0, 0));
     const options: object = { year: 'numeric', month: 'short', day: 'numeric' };
 
-    return event.toLocaleDateString(undefined, options)
-}
+    return event.toLocaleDateString(undefined, options);
+};
 
 /**
  * Date From String with Time
@@ -110,17 +110,17 @@ const localDateFromString = (dateString: string): string => {
  * @returns Date
  */
 const dateTimeFromString = (dateString: string, timeString: string): Date => {
-    const dateStringParts = dateString.split('-')
-    const year = parseInt(dateStringParts[0], 10)
-    const month = parseInt(dateStringParts[1], 10)
-    const day = parseInt(dateStringParts[2], 10)
+    const dateStringParts = dateString.split('-');
+    const year = parseInt(dateStringParts[0], 10);
+    const month = parseInt(dateStringParts[1], 10);
+    const day = parseInt(dateStringParts[2], 10);
 
-    const timeStringParts = timeString.split(':')
-    const hour = parseInt(timeStringParts[0], 10)
-    const minute = parseInt(timeStringParts[1], 10)
+    const timeStringParts = timeString.split(':');
+    const hour = parseInt(timeStringParts[0], 10);
+    const minute = parseInt(timeStringParts[1], 10);
 
-    return new Date(Date.UTC(year, month-1, day, hour, minute, 0));
-}
+    return new Date(Date.UTC(year, month - 1, day, hour, minute, 0));
+};
 
 /**
  * Add Days to Date
@@ -133,7 +133,7 @@ const addDaysToDate = (date: Date, days: number): Date => {
     var result = new Date(date);
     result.setDate(result.getDate() + days);
     return result;
-}
+};
 
 /**
  * Add Days to Date String
@@ -144,40 +144,38 @@ const addDaysToDate = (date: Date, days: number): Date => {
  * @returns date in format 'YYYY-MM-DD' with days added
  */
 const addDaysToDateString = (dateString: string, days: number): string => {
-    const date = dateTimeFromString(dateString, '00:00')
-    const newDate = addDaysToDate(date, days)
+    const date = dateTimeFromString(dateString, '00:00');
+    const newDate = addDaysToDate(date, days);
 
-    return newDate.toISOString().substring(0, 10)
-}
+    return newDate.toISOString().substring(0, 10);
+};
 
-const getYouTubeId = (url: string): string|null => {
-    let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/)
-    if(matches) {
-        return matches[1]
+const getYouTubeId = (url: string): string | null => {
+    let matches = url.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
+    if (matches) {
+        return matches[1];
     }
-    return null
-}
+    return null;
+};
 
 const toLocaleStringIfNumber = (input: any): string => {
-    if(isNaN(input)) {
-        return input
+    if (isNaN(input)) {
+        return input;
     }
-    return Number(input).toLocaleString()
-}
+    return Number(input).toLocaleString();
+};
 
 /**
  * Number as K notation with one decimal
- * 
+ *
  * This is to replicate the Race Labs display of iRating as
  * 2.2K for 2,280 etc.
- * @param {integer} input 
+ * @param {integer} input
  * @returns string
  */
 const numberAsK = (input: number): string => {
-    return `${(input / 1000).toFixed(1)}K`
-}
-
-
+    return `${(input / 1000).toFixed(1)}K`;
+};
 
 export {
     getYouTubeId,
@@ -190,4 +188,4 @@ export {
     dateTimeFromString,
     getCurrentBroadcastSeason,
     addDaysToDateString,
-}
+};

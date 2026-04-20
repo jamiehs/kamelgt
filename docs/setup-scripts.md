@@ -13,14 +13,17 @@ npm run fetch-setups
 This downloads all `.sto` attachments from `#audi-setups` and `#nissan-setups` posted in the last 7 days, places them in the correct `public/setups/<car>/<track>/` folder, then automatically chains into `sync-setups` to register everything in `track-data.js`.
 
 **Override the lookback window:**
+
 ```bash
 npm run fetch-setups -- --days=14
 ```
 
 **Backfill setups for a specific track:**
+
 ```bash
 npm run fetch-setups barber
 ```
+
 Scans up to 2 years of history in both channels and downloads only files that auto-resolve to that track. Files that can't be matched automatically are silently skipped — the interactive prompt is suppressed in this mode to avoid noise from the large history window.
 
 **Requires:** a `.env` file at the project root. Copy `.env.example` and fill in your Discord bot token and channel IDs. See `.env.example` for instructions on creating a bot with the Message Content Intent enabled.

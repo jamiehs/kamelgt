@@ -1,6 +1,6 @@
 :root {
-    --always-white: 255,255,255;
-    --always-black: 0,0,0;
+    --always-white: 255, 255, 255;
+    --always-black: 0, 0, 0;
     --base-border-radius: 4px;
 
     // Start of light/standard theme
@@ -14,13 +14,13 @@
     --text-9: #3c3c3c;
     --text-10: #202020;
     --highlight-glow: #e8de53;
-    
+
     --positive-action: rgb(51 132 10);
     --shadow-callout: rgb(120 104 238);
-    
+
     --timeslots-bg: #3c3c3c;
     --timeslots-header-text: #fff;
-    
+
     --timeslots-text: var(--text-9);
     --timeslots-badge-text: #fff;
     --timeslot-date-bg: rgb(255 255 255 / 0.5);
@@ -31,7 +31,7 @@
     --timeslot-7: #3d606f;
     --timeslot-highlight-header: var(--timeslot-6);
     --timeslot-highlight-header-text: var(--timeslots-header-text);
-    
+
     --link-color: #693b30;
     --section-header-bg: #3c3c3c;
     --section-header-text: #fff;
@@ -39,21 +39,20 @@
     --highlight-quote-bg: #f5f0e1;
     --main-header-text: #dbdbdb;
     --main-header-bg: #0b0b37;
-    
+
     --weird-accent-color: #693b30;
-    
+
     --video-thumb-vignette: rgb(195 158 103 / 0.3);
     --video-thumb-text-overlay: #7b7b7b;
-    
+
     --car-first-class: #ffd65a;
     --car-second-class: #33cfff;
     --car-class-text: var(--text-9);
-    
-    
+
     // Start of dark theme
     @media (prefers-color-scheme: dark) {
         --background-1: #212121;
-        --background-2: #292929;    
+        --background-2: #292929;
         --background-3: #3a3a3a;
         --background-9: #fff;
         --text-0: #313131;
@@ -62,14 +61,14 @@
         --text-9: #cdcdcd;
         --text-10: #e9e9e9;
         --highlight-glow: #5eb5a9;
-        
+
         --positive-action: rgb(92 173 27);
         --shadow-callout: rgb(120 104 238);
-    
+
         --timeslots-bg: #191919;
         --timeslots-header-text: #cdcdcd;
-    
-        --timeslots-text: var(--text-9);;
+
+        --timeslots-text: var(--text-9);
         --timeslots-badge-text: #d9d9d9;
         --timeslot-date-bg: rgb(55 55 55 / 50%);
         --timeslot-1: #262929;
@@ -79,7 +78,7 @@
         --timeslot-7: #284755;
         --timeslot-highlight-header: var(--timeslot-6);
         --timeslot-highlight-header-text: var(--timeslots-header-text);
-    
+
         --link-color: #4d99b9;
         --section-header-bg: #1c1c1c;
         --section-header-text: #cdcdcd;
@@ -87,18 +86,17 @@
         --highlight-quote-bg: #161616;
         --main-header-text: #dbdbdb;
         --main-header-bg: #0b0b37;
-    
-        --weird-accent-color: #346b82;;
-    
+
+        --weird-accent-color: #346b82;
+
         --video-thumb-vignette: rgb(18 23 57 / 30%);
         --video-thumb-text-overlay: #777777;
-    
+
         --car-first-class: rgb(255 214 90 / 85%);
         --car-second-class: rgb(51 207 255 / 85%);
         --car-class-text: var(--text-0);
     }
 }
-
 
 // Breakpoints
 $large-width: 1140px;

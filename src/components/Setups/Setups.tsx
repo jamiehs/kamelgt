@@ -1,38 +1,40 @@
-import React from 'react'
-import './Setups.scss'
-import {VCR_DISCORD_URL} from '../../data/constants'
+import React from 'react';
+import './Setups.scss';
+import { VCR_DISCORD_URL } from '../../data/constants';
 
-import seasonSetups from '../../data/season-setups'
-import trackData from '../../data/track-data'
-const sortedRounds = seasonSetups.sort((a,b) => {
-    return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf()
-})
+import seasonSetups from '../../data/season-setups';
+import trackData from '../../data/track-data';
+const sortedRounds = seasonSetups.sort((a, b) => {
+    return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf();
+});
 
 const isDev = process.env.NODE_ENV === 'development';
 const PROD_WEEKS = 3;
 
 function Setups() {
     const upcomingWeeks = isDev ? 13 : PROD_WEEKS;
-    var outputRoundsCount = 0
+    var outputRoundsCount = 0;
 
     // Remove folder path and leading slash from raw filepath
     function cleanSetupName(filename) {
-        return filename.replace(/^[^/]+\//, '')
+        return filename.replace(/^[^/]+\//, '');
     }
 
     return (
         <div className="Setups">
             <div className="rounds-grid">
                 {sortedRounds.map((round, index) => {
-                    let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00')
-                    let weekNumber = index + 1
+                    let weekStartGmt = new Date(round.weekStart + 'T00:00+00:00');
+                    let weekNumber = index + 1;
 
                     // +7 days is for Monday/Tuesday rollover
                     // +5 days is for the week to end after the broadcast
-                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5))
+                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
 
                     let upcomingRound = weekEndGmt > new Date();
-                    const setupsExist = (round.setups?.audi90gto && round.setups?.audi90gto.length > 0) || (round.setups?.nissangtpzxt && round.setups?.nissangtpzxt.length > 0)
+                    const setupsExist =
+                        (round.setups?.audi90gto && round.setups?.audi90gto.length > 0) ||
+                        (round.setups?.nissangtpzxt && round.setups?.nissangtpzxt.length > 0);
 
                     const isPast = !upcomingRound;
                     if (isPast && !isDev) return null;
@@ -42,59 +44,110 @@ function Setups() {
                     if (upcomingRound) outputRoundsCount++;
 
                     return (
-                            <div className={`round-container${isDevOnly ? ' dev-only' : ''}`} key={round.title}>
-                                <h3><span className="week-prefix">Week {weekNumber}: </span>{round.title}</h3>
-                                {round.notes && round.notes.length > 0 && (
-                                    <div className="notes">
-                                        {round.notes.map((note, i) => <div key={i} className="note badge light">{note}</div>)}
-                                    </div>
-                                )}
-                                {setupsExist ? (
-                                    <div className="cars-grid">
-                                        {round.setups?.nissangtpzxt.length > 0 ? (
-                                            <div>
-                                                <span className="car badge" data-class="first">Nissan GTP</span>
-                                                <ul>
-                                                    {round.setups?.nissangtpzxt.map(setup => (
-                                                        <li key={setup.file} className="setup-row">
-                                                            <a href={`/setups/nissangtpzxt/${setup.file}`}>{cleanSetupName(setup.file)}</a>
-                                                            <span className="comment">{setup.comment}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        ) : (
-                                            <div>
-                                                <span className="car badge" data-class="first">Nissan GTP</span>
-                                                <p>
-                                                    Due to a variety of vehicle updates for the Nissan GTP ZXT, setups from 2026 Season 1 and older no longer work.
-                                                </p>
-                                                <p>
-                                                    Check the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server</a> in the <code><a href="https://discord.com/channels/454770815108513814/741775806967185420" target="_blank" rel="noreferrer">#nissan-setups</a></code> channel for the latest sets.
-                                                </p>
-                                            </div>
-                                        )}
-                                        {round.setups?.audi90gto.length > 0 && (
-                                            <div>
-                                                <span className="car badge" data-class="second">Audi GTO</span>
-                                                <ul>
-                                                    {round.setups?.audi90gto.map(setup => (
-                                                        <li key={setup.file} className="setup-row">
-                                                            <a href={`/setups/audi90gto/${setup.file}`}>{cleanSetupName(setup.file)}</a>
-                                                            <span className="comment">{setup.comment}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <div className="no-setups">
-                                        Check the <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">VCR Discord Server's</a> <code>#audi-setups</code> & <code>#nissan-setups</code> channels.
-                                    </div>
-                                )}
-                            </div>
-                        )
+                        <div
+                            className={`round-container${isDevOnly ? ' dev-only' : ''}`}
+                            key={round.title}
+                        >
+                            <h3>
+                                <span className="week-prefix">Week {weekNumber}: </span>
+                                {round.title}
+                            </h3>
+                            {round.notes && round.notes.length > 0 && (
+                                <div className="notes">
+                                    {round.notes.map((note, i) => (
+                                        <div key={i} className="note badge light">
+                                            {note}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {setupsExist ? (
+                                <div className="cars-grid">
+                                    {round.setups?.nissangtpzxt.length > 0 ? (
+                                        <div>
+                                            <span className="car badge" data-class="first">
+                                                Nissan GTP
+                                            </span>
+                                            <ul>
+                                                {round.setups?.nissangtpzxt.map((setup) => (
+                                                    <li key={setup.file} className="setup-row">
+                                                        <a
+                                                            href={`/setups/nissangtpzxt/${setup.file}`}
+                                                        >
+                                                            {cleanSetupName(setup.file)}
+                                                        </a>
+                                                        <span className="comment">
+                                                            {setup.comment}
+                                                        </span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ) : (
+                                        <div>
+                                            <span className="car badge" data-class="first">
+                                                Nissan GTP
+                                            </span>
+                                            <p>
+                                                Due to a variety of vehicle updates for the Nissan
+                                                GTP ZXT, setups from 2026 Season 1 and older no
+                                                longer work.
+                                            </p>
+                                            <p>
+                                                Check the{' '}
+                                                <a
+                                                    href={VCR_DISCORD_URL}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    VCR Discord Server
+                                                </a>{' '}
+                                                in the{' '}
+                                                <code>
+                                                    <a
+                                                        href="https://discord.com/channels/454770815108513814/741775806967185420"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        #nissan-setups
+                                                    </a>
+                                                </code>{' '}
+                                                channel for the latest sets.
+                                            </p>
+                                        </div>
+                                    )}
+                                    {round.setups?.audi90gto.length > 0 && (
+                                        <div>
+                                            <span className="car badge" data-class="second">
+                                                Audi GTO
+                                            </span>
+                                            <ul>
+                                                {round.setups?.audi90gto.map((setup) => (
+                                                    <li key={setup.file} className="setup-row">
+                                                        <a href={`/setups/audi90gto/${setup.file}`}>
+                                                            {cleanSetupName(setup.file)}
+                                                        </a>
+                                                        <span className="comment">
+                                                            {setup.comment}
+                                                        </span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+                            ) : (
+                                <div className="no-setups">
+                                    Check the{' '}
+                                    <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">
+                                        VCR Discord Server's
+                                    </a>{' '}
+                                    <code>#audi-setups</code> & <code>#nissan-setups</code>{' '}
+                                    channels.
+                                </div>
+                            )}
+                        </div>
+                    );
                 })}
             </div>
             <div className="download-zips text-content">
@@ -108,7 +161,13 @@ function Setups() {
                     </li>
                 </ul>
                 <p>
-                    For the latest and greatest setups, along with discussion about wing angles, rake, camber, roll-bars, and tire pressures, check out the <code>#nissan-setups</code> and <code>#audi-setups</code> channels in <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">the VCR Discord</a>.
+                    For the latest and greatest setups, along with discussion about wing angles,
+                    rake, camber, roll-bars, and tire pressures, check out the{' '}
+                    <code>#nissan-setups</code> and <code>#audi-setups</code> channels in{' '}
+                    <a href={VCR_DISCORD_URL} target="_blank" rel="noreferrer">
+                        the VCR Discord
+                    </a>
+                    .
                 </p>
             </div>
         </div>

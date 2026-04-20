@@ -9,9 +9,11 @@
     overflow: hidden;
     border-radius: 4px;
 
-    &[data-highlight="true"] {
+    &[data-highlight='true'] {
         z-index: 50;
-        box-shadow: var(--highlight-glow) 0 0 3em, var(--highlight-glow) 0 0 0 1px;
+        box-shadow:
+            var(--highlight-glow) 0 0 3em,
+            var(--highlight-glow) 0 0 0 1px;
         h3.label {
             background: var(--timeslot-highlight-header);
             color: var(--timeslot-highlight-header-text);
@@ -19,11 +21,11 @@
     }
 
     @media (min-width: $medium-width) {
-        padding: 0 .66em;
+        padding: 0 0.66em;
     }
 
     @media (min-width: $large-width) {
-        padding: 0 .5em;
+        padding: 0 0.5em;
     }
 
     .badge {
@@ -47,12 +49,12 @@
         .emoji {
             text-shadow: 0 0 0.7em var(--shadow-callout);
         }
-        
+
         @media (min-width: $medium-width) {
             font-size: 1.6vw;
         }
 
-        @media (min-width: $large-width)  {
+        @media (min-width: $large-width) {
             text-align: center;
             font-size: 100%;
             padding-left: 0;
@@ -64,7 +66,7 @@
         display: block;
         height: 0;
         line-height: 0;
-        
+
         @media (min-width: $medium-width) {
             text-align: center;
         }
@@ -83,26 +85,27 @@
         font-weight: 700;
         margin-top: 1.2em;
 
-        @media (min-width: $small-width)  {
+        @media (min-width: $small-width) {
             font-size: 3.05vw;
             white-space: nowrap;
         }
 
-        @media (min-width: $medium-width)  {
+        @media (min-width: $medium-width) {
             font-size: 1.75vw;
         }
 
-        @media (min-width: $large-width)  {
-            font-size: .95em;
+        @media (min-width: $large-width) {
+            font-size: 0.95em;
         }
 
-        .date-gmt, .date-local {
+        .date-gmt,
+        .date-local {
             line-height: 1;
             margin-bottom: 0.15em;
             margin-top: -0.33em;
 
-            @media (min-width: $large-width)  {
-                margin-bottom: .5em;
+            @media (min-width: $large-width) {
+                margin-bottom: 0.5em;
             }
         }
 
@@ -124,11 +127,11 @@
             padding: 0.35em 0.7em 0.5em 0.5em;
             z-index: 5;
 
-            @media (min-width: $small-width)  {
+            @media (min-width: $small-width) {
                 font-size: 0.73em;
             }
 
-            @media (min-width: $large-width)  {
+            @media (min-width: $large-width) {
                 font-size: 0.63em;
             }
         }
@@ -136,7 +139,6 @@
             position: relative;
             z-index: 10;
         }
-
     }
 
     .timeslot-participation {
@@ -144,16 +146,16 @@
         margin-bottom: 0.5em;
         font-size: 79%;
 
-        @media (min-width: $medium-width)  {
+        @media (min-width: $medium-width) {
             font-size: 100%;
         }
-        
-        @media (min-width: $large-width)  {
+
+        @media (min-width: $large-width) {
             .badge {
                 font-size: 70%;
             }
         }
-        
+
         display: flex;
         > div {
             flex: 8;
@@ -170,9 +172,8 @@
     .timeslot-info {
         font-size: 85%;
 
-        @media (min-width: $large-width)  {
+        @media (min-width: $large-width) {
             font-size: 13px;
         }
     }
-
 }

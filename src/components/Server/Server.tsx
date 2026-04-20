@@ -3,16 +3,12 @@ import './Server.scss';
 import DiscordIcon from '../../images/Discord-Logo-Color.svg?react';
 
 interface ServerProps {
-    title: string
-    url: string
-    description: string
+    title: string;
+    url: string;
+    description: string;
 }
 function Server(props: ServerProps) {
-    let {
-        title,
-        url,
-        description,
-    } = props
+    let { title, url, description } = props;
 
     return (
         <div className="Server">
@@ -20,7 +16,9 @@ function Server(props: ServerProps) {
             <div>{description}</div>
             <div className="discord-url">
                 <DiscordIcon />
-                <a href={url} target="_blank" rel="noreferrer">{url}</a>
+                <a href={url} target="_blank" rel="noreferrer">
+                    {url}
+                </a>
             </div>
         </div>
     );

@@ -8,8 +8,8 @@
     border-radius: var(--base-border-radius);
     margin-bottom: 1em;
     font-size: 0.9em;
-    
-    @media (min-width: $small-width)  {
+
+    @media (min-width: $small-width) {
         font-size: 1em;
     }
 
@@ -20,8 +20,8 @@
     h3 {
         margin: 0;
         font-size: 0.95rem;
-        
-        @media (min-width: $small-width)  {
+
+        @media (min-width: $small-width) {
             font-size: 1rem;
         }
     }
