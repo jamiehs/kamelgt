@@ -41,6 +41,14 @@ const { DISCORD_BOT_TOKEN, AUDI_CHANNEL_ID, NISSAN_CHANNEL_ID } = process.env;
 
 // --- Args ---
 const args = process.argv.slice(2);
+
+if (args.includes('--completions')) {
+  const { buildTrackIndex } = await import('./lib/track-index.mjs');
+  const index = await buildTrackIndex();
+  console.log(index.folderNames.join('\n'));
+  process.exit(0);
+}
+
 const trackArg = args.find(a => !a.startsWith('--')) ?? null;
 const daysFlag = args.find(a => a.startsWith('--days='));
 const days = daysFlag ? parseInt(daysFlag.split('=')[1], 10) : 7;
