@@ -12,6 +12,7 @@ import moment from 'moment';
 import { VCR_DISCORD_URL } from './data/constants';
 import DiscordIcon from './images/Discord-Logo-Color.svg?react';
 import DownloadSetupIcon from './images/download-setup.svg?react';
+import now from './now';
 import {
     getCurrentWeekData,
     localDateFromString,
@@ -61,7 +62,7 @@ class App extends React.Component<object, AppState> {
         // warning; this is a little brittle at the moment
         // as it assumes that the last element of `broadcasts`
         // is the current season.
-        let today = new Date();
+        let today = now();
         let numWeeks = broadcasts.length;
         let firstDayOfSeason = dateTimeFromString(
             broadcasts[broadcasts.length - 1].startDate,
@@ -286,7 +287,7 @@ class App extends React.Component<object, AppState> {
                                     label="Midweek Americas"
                                     dayIndex={4}
                                     time={
-                                        moment().tz('America/New_York').isDST() ? '01:00' : '03:00'
+                                        moment(now()).tz('America/New_York').isDST() ? '01:00' : '03:00'
                                     }
                                     regularity="Steady Participation"
                                 >

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Announcement.scss';
+import now from '../../now';
 
 interface AnnouncementProps {
     begins: string;
@@ -10,8 +11,8 @@ interface AnnouncementProps {
 function Announcement(props: AnnouncementProps) {
     let { begins, expires, children } = props;
 
-    const beginsCondition = begins ? new Date(begins) < new Date() : true;
-    const endsCondition = expires ? new Date(expires) > new Date() : true;
+    const beginsCondition = begins ? new Date(begins) < now() : true;
+    const endsCondition = expires ? new Date(expires) > now() : true;
 
     if (beginsCondition && endsCondition) {
         return (

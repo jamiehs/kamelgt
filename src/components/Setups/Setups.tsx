@@ -1,6 +1,7 @@
 import React from 'react';
 import './Setups.scss';
 import { VCR_DISCORD_URL } from '../../data/constants';
+import now from '../../now';
 
 import { seasonSetups } from '../../data/season-setups';
 const sortedRounds = seasonSetups.sort((a, b) => {
@@ -30,7 +31,7 @@ function Setups() {
                     // +5 days is for the week to end after the broadcast
                     let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
 
-                    let upcomingRound = weekEndGmt > new Date();
+                    let upcomingRound = weekEndGmt > now();
                     const setupsExist =
                         (round.setups?.audi90gto && round.setups?.audi90gto.length > 0) ||
                         (round.setups?.nissangtpzxt && round.setups?.nissangtpzxt.length > 0);

@@ -1,4 +1,5 @@
 import moment from 'moment-timezone';
+import now from './now';
 
 /**
  * Next Race Day
@@ -8,10 +9,7 @@ import moment from 'moment-timezone';
  * @returns JavaScript date object
  */
 const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string | null = null) => {
-    let nowMoment = moment.tz('GMT');
-    if (nowString !== null) {
-        nowMoment = moment.tz(nowString, 'GMT');
-    }
+    let nowMoment = nowString !== null ? moment.tz(nowString, 'GMT') : moment.tz(now(), 'GMT');
 
     const today = nowMoment.isoWeekday();
     const nowHour = nowMoment.hour();
@@ -59,14 +57,15 @@ const getCurrentWeekData = (
         // rolloverDay +5 days is for the week to end after the broadcast
         let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + rolloverDay));
 
-        currentWeek = {
-            week: i + 1,
-            label: round.title,
-            notes: round.notes,
-        };
-
-        // Stop if this week is not over
-        return weekEndGmt > new Date();
+        if (weekEndGmt > now()) {
+            currentWeek = {
+                week: i + 1,
+                label: round.title,
+                notes: round.notes,
+            };
+            return true;
+        }
+        return false;
     });
 
     return currentWeek;
@@ -82,7 +81,7 @@ const getCurrentBroadcastSeason = (broadcasts: any[]) => {
         .slice()
         .reverse()
         .find((season) => {
-            return season.startDate < new Date().toISOString().substring(0, 10);
+            return season.startDate < now().toISOString().substring(0, 10);
         });
 };
 
