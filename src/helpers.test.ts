@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { getCurrentWeekData } from './helpers';
+import { getCurrentWeekData, getSeasonTag } from './helpers';
 
 // A minimal two-week season for clarity:
 // Week 1: Road Atlanta  — 2026-03-17 → ends 2026-03-22 (weekStart + 5 days)
@@ -78,5 +78,33 @@ describe('getCurrentWeekData', () => {
         vi.setSystemTime(new Date('2026-04-08T12:00:00Z'));
         const result = getCurrentWeekData(seasonWithNotes);
         expect(result.notes).toEqual(['60 minute endurance round', 'Fuel stop required']);
+    });
+});
+
+describe('getSeasonTag', () => {
+    const cases: [string, string][] = [
+        // prior years
+        ['2024-12-17T00:00:00Z', '25S1'],
+        ['2025-03-18T00:00:00Z', '25S2'],
+        ['2025-06-17T00:00:00Z', '25S3'],
+        ['2025-09-16T00:00:00Z', '25S4'],
+        // current year
+        ['2025-12-16T00:00:00Z', '26S1'],
+        ['2026-03-17T00:00:00Z', '26S2'],
+        ['2026-06-16T00:00:00Z', '26S3'],
+        ['2026-09-15T00:00:00Z', '26S4'],
+        // future years
+        ['2026-12-15T00:00:00Z', '27S1'],
+        ['2027-03-16T00:00:00Z', '27S2'],
+        ['2027-06-15T00:00:00Z', '27S3'],
+        ['2027-09-14T00:00:00Z', '27S4'],
+        // century rollover
+        ['2099-12-16T00:00:00Z', '00S1'],
+    ];
+
+    cases.forEach(([date, expected]) => {
+        it(`${date} → ${expected}`, () => {
+            expect(getSeasonTag(new Date(date))).toBe(expected);
+        });
     });
 });

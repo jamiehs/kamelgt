@@ -12,7 +12,7 @@ const firstWeekDate = new Date(
     seasonSetups.slice().sort((a, b) => a.weekStart.localeCompare(b.weekStart))[0].weekStart +
         'T00:00+00:00',
 );
-const seasonTag = `${firstWeekDate.getUTCFullYear() % 100}S${Math.ceil((firstWeekDate.getUTCMonth() + 1) / 3)}`;
+const seasonTag = getSeasonTag(firstWeekDate);
 import broadcasts from './data/broadcasts';
 import moment from 'moment';
 import { VCR_DISCORD_URL } from './data/constants';
@@ -26,6 +26,7 @@ import {
     dateTimeFromString,
     getCurrentBroadcastSeason,
     addDaysToDateString,
+    getSeasonTag,
 } from './helpers';
 
 interface App {

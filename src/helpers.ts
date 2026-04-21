@@ -187,6 +187,15 @@ const numberAsK = (input: number): string => {
     return `${(input / 1000).toFixed(1)}K`;
 };
 
+const getSeasonTag = (firstWeekDate: Date): string => {
+    const month = firstWeekDate.getUTCMonth() + 1;
+    const year = firstWeekDate.getUTCFullYear();
+    if (month === 12) {
+        return `${String((year + 1) % 100).padStart(2, '0')}S1`;
+    }
+    return `${String(year % 100).padStart(2, '0')}S${Math.ceil(month / 3) + 1}`;
+};
+
 export {
     getYouTubeId,
     nextRaceDay,
@@ -195,6 +204,7 @@ export {
     addDaysToDate,
     toLocaleStringIfNumber,
     numberAsK,
+    getSeasonTag,
     dateTimeFromString,
     getCurrentBroadcastSeason,
     addDaysToDateString,
