@@ -10,9 +10,10 @@ const sortedRounds = seasonSetups.sort((a, b) => {
 
 const isDev = process.env.NODE_ENV === 'development';
 const PROD_WEEKS = 3;
+const showAllSetups =
+    isDev && new URLSearchParams(window.location.search).has('all_setups');
 
 function Setups() {
-    const upcomingWeeks = isDev ? 13 : PROD_WEEKS;
     var outputRoundsCount = 0;
 
     // Remove folder path and leading slash from raw filepath
@@ -29,7 +30,7 @@ function Setups() {
 
                     // +7 days is for Monday/Tuesday rollover
                     // +5 days is for the week to end after the broadcast
-                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 5));
+                    let weekEndGmt = new Date(weekStartGmt.setDate(weekStartGmt.getDate() + 7));
 
                     let upcomingRound = weekEndGmt > now();
                     const setupsExist =
@@ -37,15 +38,15 @@ function Setups() {
                         (round.setups?.nissangtpzxt && round.setups?.nissangtpzxt.length > 0);
 
                     const isPast = !upcomingRound;
-                    if (isPast && !isDev) return null;
-                    if (upcomingRound && outputRoundsCount >= upcomingWeeks) return null;
+                    if (isPast && !showAllSetups) return null;
+                    if (upcomingRound && outputRoundsCount >= (showAllSetups ? 13 : PROD_WEEKS))
+                        return null;
 
-                    const isDevOnly = isDev && (isPast || outputRoundsCount >= PROD_WEEKS);
                     if (upcomingRound) outputRoundsCount++;
 
                     return (
                         <div
-                            className={`round-container${isDevOnly ? ' dev-only' : ''}`}
+                            className="round-container"
                             key={round.title}
                         >
                             <h3>

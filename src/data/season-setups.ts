@@ -1,6 +1,5 @@
 import * as tracks from './track-data.js';
 
-const seasonShortName = '26S2';
 const seasonSetups: SetupWeek[] = [
     {
         ...tracks.ROAD_ATLANTA,
@@ -17,7 +16,7 @@ const seasonSetups: SetupWeek[] = [
     {
         ...tracks.LAGUNA_SECA,
         weekStart: '2026-04-07',
-        notes: ['60 mintue endurance round', 'Fuel stop required'],
+        notes: ['60 minute endurance round', 'Fuel stop required'],
     },
     {
         ...tracks.DONINGTON_PARK,
@@ -42,7 +41,7 @@ const seasonSetups: SetupWeek[] = [
     {
         ...tracks.LONG_BEACH,
         weekStart: '2026-05-19',
-        notes: ['70 mintue endurance round', 'Fuel stop required'],
+        notes: ['70 minute endurance round', 'Fuel stop required'],
     },
     {
         ...tracks.MISANO,
@@ -55,4 +54,4 @@ const seasonSetups: SetupWeek[] = [
 ];
 
 export default seasonSetups;
-export { seasonSetups, seasonShortName };
+export { seasonSetups };

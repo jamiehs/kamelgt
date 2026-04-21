@@ -6,7 +6,13 @@ import Timeslot from './components/Timeslot/Timeslot';
 import Broadcast from './components/Broadcast/Broadcast';
 import Announcement from './components/Announcement/Announcement';
 import Setups from './components/Setups/Setups';
-import { seasonSetups, seasonShortName } from './data/season-setups';
+import { seasonSetups } from './data/season-setups';
+
+const firstWeekDate = new Date(
+    seasonSetups.slice().sort((a, b) => a.weekStart.localeCompare(b.weekStart))[0].weekStart +
+        'T00:00+00:00',
+);
+const seasonTag = `${firstWeekDate.getUTCFullYear() % 100}S${Math.ceil((firstWeekDate.getUTCMonth() + 1) / 3)}`;
 import broadcasts from './data/broadcasts';
 import moment from 'moment';
 import { VCR_DISCORD_URL } from './data/constants';
@@ -32,7 +38,7 @@ interface AppState {
     currentWeekData: {};
     broadcastsSeason: string;
     broadcastSearchQuery: string;
-    currentSeasonDates: Array<Date>;
+
     broadcastSearchResults: Fuse.FuseResult<SingleBroadcast>[];
 }
 
@@ -43,7 +49,6 @@ class App extends React.Component<object, AppState> {
             currentWeekData: getCurrentWeekData(seasonSetups),
             broadcastsSeason: getCurrentBroadcastSeason(broadcasts).id,
             broadcastSearchQuery: '',
-            currentSeasonDates: [],
             broadcastSearchResults: [],
         };
     }
@@ -57,32 +62,6 @@ class App extends React.Component<object, AppState> {
                 }),
             1000,
         );
-
-        // Try to guess the dates of the latest season
-        // warning; this is a little brittle at the moment
-        // as it assumes that the last element of `broadcasts`
-        // is the current season.
-        let today = now();
-        let numWeeks = broadcasts.length;
-        let firstDayOfSeason = dateTimeFromString(
-            broadcasts[broadcasts.length - 1].startDate,
-            '17:00',
-        );
-        let lastDayOfSeason = dateTimeFromString(
-            broadcasts[broadcasts.length - 1].endDate,
-            '17:00',
-        );
-
-        // only calculate and populate if today is before last week start date + 6 days
-        if (today < addDaysToDate(lastDayOfSeason, 6)) {
-            let firstBroadcastDate = addDaysToDate(firstDayOfSeason, 4);
-            let currentSeasonDates = [...Array(numWeeks).keys()].map((weekNo) =>
-                addDaysToDate(firstBroadcastDate, weekNo * 7),
-            );
-            this.setState({
-                currentSeasonDates,
-            });
-        }
 
         this.flattenedBroadcasts = broadcasts
             .map((season) => {
@@ -130,7 +109,7 @@ class App extends React.Component<object, AppState> {
 
     render() {
         let currentWeek: CurrentWeek = this.state.currentWeekData;
-        let { broadcastSearchQuery, broadcastSearchResults, currentSeasonDates } = this.state;
+        let { broadcastSearchQuery, broadcastSearchResults } = this.state;
 
         const hasBroadcastSearchQuery = Boolean(
             broadcastSearchQuery && broadcastSearchQuery !== '',
@@ -172,69 +151,21 @@ class App extends React.Component<object, AppState> {
                 </div>
                 <div id="announcements">
                     <div className="section">
-                        <Announcement begins="2024-12-08" expires="2024-12-15">
-                            <h3>It's Week 14! (Week 13 but a leap season)</h3>
-                            <p>
-                                There are no more official races for IMSA Vintage until after Week
-                                14.
-                            </p>
-                            <p>
-                                Go race some{' '}
-                                <a
-                                    href="https://www.iracing.com/iracing-development-update-november-2024/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    new Aussie Supercars or the BMW M2
-                                </a>
-                                , and{' '}
-                                <a
-                                    href="https://www.youtube.com/watch?v=BiRp8RlUYa0"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    scatter gravel all over the track
-                                </a>{' '}
-                                in{' '}
-                                <a
-                                    href="https://www.youtube.com/watch?v=tTHVAFWY0BY"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    the NSX GT3!
-                                </a>
-                            </p>
-                            <p>Not sure what Week 13/14 is all about?</p>
-                            <ul>
-                                <li>
+                        {currentWeek.isTestingWeek && (
+                            <Announcement>
+                                <h3>It's Week 13!</h3>
+                                <p>
+                                    Not sure what Week 13 is all about?{' '}
                                     <a
-                                        href="https://www.iracing.com/iracing-2024-season-4-week-14-schedule-released/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Official iRacing post on Week 13/14
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.youtube.com/watch?v=4KgY8Br4MXo"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Emree talks about what we can expect to see in the new build
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.youtube.com/watch?v=y6d4C_aierg"
+                                        href="https://youtu.be/y6d4C_aierg?t=16"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
                                         Matt Malone explains week 13
                                     </a>
-                                </li>
-                            </ul>
-                        </Announcement>
+                                </p>
+                            </Announcement>
+                        )}
                     </div>
                 </div>
                 <div className="timeslots-container">
@@ -243,11 +174,15 @@ class App extends React.Component<object, AppState> {
                             <header>
                                 <h2 className="title">
                                     Official Race Times
-                                    {currentWeek && (
+                                    {currentWeek.week !== undefined ? (
                                         <span className="week-info">
                                             Week {currentWeek.week}: {currentWeek.label}
                                         </span>
-                                    )}
+                                    ) : currentWeek.isTestingWeek ? (
+                                        <span className="week-info">
+                                            Week {seasonSetups.length + 1} (Testing)
+                                        </span>
+                                    ) : null}
                                 </h2>
                                 {currentWeek.notes && currentWeek.notes.length > 0 && (
                                     <div className="notes">
@@ -287,7 +222,9 @@ class App extends React.Component<object, AppState> {
                                     label="Midweek Americas"
                                     dayIndex={4}
                                     time={
-                                        moment(now()).tz('America/New_York').isDST() ? '01:00' : '03:00'
+                                        moment(now()).tz('America/New_York').isDST()
+                                            ? '01:00'
+                                            : '03:00'
                                     }
                                     regularity="Steady Participation"
                                 >
@@ -434,7 +371,9 @@ class App extends React.Component<object, AppState> {
                     </dl>
                 </div>
                 <div id="setups" className="setups section">
-                    <h2 className="title">Setups for {seasonShortName}</h2>
+                    <h2 className="title">
+                        Setups{currentWeek.week !== undefined && ` for ${seasonTag}`}
+                    </h2>
                     <Setups />
                 </div>
                 <div id="format" className="format section">
@@ -588,7 +527,16 @@ class App extends React.Component<object, AppState> {
                     {hasBroadcastSearchQuery ? (
                         broadcastSearchResults.length > 0 ? (
                             <div className="videos-grid">
-                                {broadcastSearchResults.map((result, index) => {
+                                {broadcastSearchResults.map((result) => {
+                                    const seasonData = broadcasts.find(
+                                        (s) => s.id === result.item.id,
+                                    );
+                                    const raceDate = seasonData
+                                        ? addDaysToDate(
+                                              dateTimeFromString(seasonData.startDate, '17:00'),
+                                              4 + (result.item.round - 1) * 7,
+                                          )
+                                        : undefined;
                                     return (
                                         <Broadcast
                                             key={`${result.item.url}.${result.item.id}.${result.item.title}`}
@@ -596,7 +544,7 @@ class App extends React.Component<object, AppState> {
                                             thumbText={result.item.thumbText}
                                             thumb={result.item.thumb}
                                             url={result.item.url}
-                                            date={currentSeasonDates[index]}
+                                            date={raceDate}
                                         />
                                     );
                                 })}
@@ -612,20 +560,20 @@ class App extends React.Component<object, AppState> {
                                         {season.youTube.map((week: any, index: number) => {
                                             const round = index + 1;
                                             const { url, title, thumbText, thumb } = week;
-                                            if (title && title !== '') {
-                                                return (
-                                                    <Broadcast
-                                                        key={`${season.id}.${url}.${title}`}
-                                                        title={`R${round}: ${title}`}
-                                                        thumbText={thumbText}
-                                                        thumb={thumb}
-                                                        url={url}
-                                                        date={currentSeasonDates[index]}
-                                                    />
-                                                );
-                                            } else {
-                                                return null; // no valid URL or title
-                                            }
+                                            const raceDate = addDaysToDate(
+                                                dateTimeFromString(season.startDate, '17:00'),
+                                                4 + index * 7,
+                                            );
+                                            return (
+                                                <Broadcast
+                                                    key={`${season.id}.R${round}.${title}`}
+                                                    title={`R${round}: ${title}`}
+                                                    thumbText={thumbText}
+                                                    thumb={thumb}
+                                                    url={url}
+                                                    date={raceDate}
+                                                />
+                                            );
                                         })}
                                     </div>
                                 );

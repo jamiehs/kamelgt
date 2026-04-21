@@ -42,13 +42,16 @@ describe('getCurrentWeekData', () => {
         expect(result.label).toBe('Spa');
     });
 
-    it('returns empty object during week 13 (all rounds over)', () => {
-        // After the last week ends (2026-06-07), no active week exists.
-        // The season is over — week 13 is iRacing's testing/deployment week.
-        vi.setSystemTime(new Date('2026-06-10T12:00:00Z'));
+    it('returns isTestingWeek during the testing window (last weekStart + 7 + 7 days)', () => {
+        // Last week ends 2026-06-09 (Tuesday); testing window ends 2026-06-16.
+        vi.setSystemTime(new Date('2026-06-12T12:00:00Z'));
         const result = getCurrentWeekData(TEST_SEASON);
-        // BUG: currently returns { week: 2, label: 'Spa', notes: undefined }
-        // because the loop runs to completion and leaves currentWeek set to the last round.
+        expect(result).toEqual({ isTestingWeek: true });
+    });
+
+    it('returns empty object after the testing window closes', () => {
+        vi.setSystemTime(new Date('2026-06-17T12:00:00Z'));
+        const result = getCurrentWeekData(TEST_SEASON);
         expect(result).toEqual({});
     });
 

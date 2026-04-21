@@ -1384,7 +1384,7 @@ const broadcasts: any[] = [
     {
         id: '26S2',
         label: '2026 Season 2',
-        startDate: '2025-03-17',
+        startDate: '2026-03-17',
         endDate: '2026-06-02',
         youTube: [
             {

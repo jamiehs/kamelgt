@@ -7,7 +7,7 @@ interface BroadcastProps {
     thumbText?: string;
     thumb?: string;
     url: string;
-    date: Date;
+    date?: Date;
 }
 interface BroadcastState {
     videoGlitchId: number;

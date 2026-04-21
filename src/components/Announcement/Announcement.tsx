@@ -3,8 +3,8 @@ import './Announcement.scss';
 import now from '../../now';
 
 interface AnnouncementProps {
-    begins: string;
-    expires: string;
+    begins?: string;
+    expires?: string;
     children: React.ReactNode;
 }
 

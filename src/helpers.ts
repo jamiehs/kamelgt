@@ -43,7 +43,7 @@ const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string | nul
  */
 const getCurrentWeekData = (
     seasonSetups: Array<SetupWeek>,
-    rolloverDay: number = 5,
+    rolloverDay: number = 7,
 ): CurrentWeek => {
     const sortedRounds = seasonSetups.sort((a, b) => {
         return new Date(a.weekStart).valueOf() - new Date(b.weekStart).valueOf();
@@ -67,6 +67,17 @@ const getCurrentWeekData = (
         }
         return false;
     });
+
+    if (!('week' in currentWeek)) {
+        const lastRound = sortedRounds[sortedRounds.length - 1];
+        const lastWeekStart = new Date(lastRound.weekStart + 'T00:00+00:00');
+        const testingWeekEnd = new Date(
+            lastWeekStart.setDate(lastWeekStart.getDate() + rolloverDay + 7),
+        );
+        if (now() < testingWeekEnd) {
+            currentWeek = { isTestingWeek: true };
+        }
+    }
 
     return currentWeek;
 };

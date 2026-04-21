@@ -41,4 +41,5 @@ interface CurrentWeek {
     week?: number;
     label?: string;
     notes?: Array<string>;
+    isTestingWeek?: boolean;
 }
