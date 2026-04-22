@@ -11,8 +11,14 @@ function findCarArrayBounds(content, exportName, carName) {
     const exportEnd = nextExport === -1 ? content.length : nextExport;
     const exportBlock = content.slice(exportStart, exportEnd);
 
-    const carMarker = `"${carName}": [`;
-    const carLocalIdx = exportBlock.indexOf(carMarker);
+    const carMarkerQuoted = `"${carName}": [`;
+    const carMarkerUnquoted = `${carName}: [`;
+    let carLocalIdx = exportBlock.indexOf(carMarkerQuoted);
+    let carMarker = carMarkerQuoted;
+    if (carLocalIdx === -1) {
+        carLocalIdx = exportBlock.indexOf(carMarkerUnquoted);
+        carMarker = carMarkerUnquoted;
+    }
     if (carLocalIdx === -1) return null;
 
     const bracketOpen = exportStart + carLocalIdx + carMarker.length - 1;
