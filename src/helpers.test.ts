@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { getCurrentWeekData, getSeasonTag } from './helpers';
+import { getCurrentWeekData, getSeasonTag, isEasternDST } from './helpers';
 
 // A minimal two-week season for clarity:
 // Week 1: Road Atlanta  — 2026-03-17 → ends 2026-03-22 (weekStart + 5 days)
@@ -78,6 +78,30 @@ describe('getCurrentWeekData', () => {
         vi.setSystemTime(new Date('2026-04-08T12:00:00Z'));
         const result = getCurrentWeekData(seasonWithNotes);
         expect(result.notes).toEqual(['60 minute endurance round', 'Fuel stop required']);
+    });
+});
+
+describe('isEasternDST', () => {
+    it('returns true during Eastern Daylight Time (summer)', () => {
+        expect(isEasternDST(new Date('2022-07-01T12:00:00Z'))).toBe(true);
+    });
+
+    it('returns false during Eastern Standard Time (winter)', () => {
+        expect(isEasternDST(new Date('2022-01-01T12:00:00Z'))).toBe(false);
+    });
+
+    it('returns false in December', () => {
+        expect(isEasternDST(new Date('2022-12-15T12:00:00Z'))).toBe(false);
+    });
+
+    it('returns true in late March after DST begins', () => {
+        // US DST starts second Sunday of March — in 2022 that is March 13
+        expect(isEasternDST(new Date('2022-03-20T12:00:00Z'))).toBe(true);
+    });
+
+    it('returns false in early November after DST ends', () => {
+        // US DST ends first Sunday of November — in 2022 that is Nov 6
+        expect(isEasternDST(new Date('2022-11-10T12:00:00Z'))).toBe(false);
     });
 });
 

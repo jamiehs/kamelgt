@@ -1,38 +1,61 @@
-import moment from 'moment-timezone';
 import now from './now';
+
+// ISO weekday: 1=Mon … 7=Sun  (getUTCDay returns 0=Sun … 6=Sat)
+const toIsoWeekday = (d: Date): number => d.getUTCDay() || 7;
+
+// Parses 'YYYY-MM-DD HH:MM' as UTC without constructing from a string (avoids timezone-mock issues)
+const parseGMTString = (s: string): Date => {
+    const [datePart, timePart] = s.split(' ');
+    const [year, month, day] = datePart.split('-').map(Number);
+    const [hour, minute] = timePart.split(':').map(Number);
+    return new Date(Date.UTC(year, month - 1, day, hour, minute, 0));
+};
 
 /**
  * Next Race Day
- * @param {integer} dayIndex 0 is Sunday and 6 is Saturday
+ * @param {integer} dayIndex ISO weekday: 1=Mon … 7=Sun (2=Tue, 3=Wed, …, 6=Sat)
  * @param {string} timeSlot eg: '17:00' a timeslot token
- * @param {string} nowString eg: '2022-08-01 12:00' used for testing
+ * @param {string} nowString eg: '2022-08-01 12:00' used for testing (treated as GMT)
  * @returns JavaScript date object
  */
 const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string | null = null) => {
-    let nowMoment = nowString !== null ? moment.tz(nowString, 'GMT') : moment.tz(now(), 'GMT');
+    const nowDate = nowString !== null ? parseGMTString(nowString) : now();
 
-    const today = nowMoment.isoWeekday();
-    const nowHour = nowMoment.hour();
-    const nowMinute = nowMoment.minute();
+    const today = toIsoWeekday(nowDate);
+    const nowHour = nowDate.getUTCHours();
+    const nowMinute = nowDate.getUTCMinutes();
     const raceHour = parseInt(timeSlot.split(':')[0], 10);
     const raceMinute = parseInt(timeSlot.split(':')[1], 10);
 
-    let momentObj = nowMoment;
+    const baseDate = new Date(nowDate);
 
-    if (today < dayIndex) {
-        // race is upcoming
-    } else if (today === dayIndex) {
+    if (today === dayIndex) {
         // race is today, still upcoming
         if (nowHour > raceHour && nowMinute > raceMinute) {
             // race was today
-            momentObj = nowMoment.add(1, 'weeks');
+            baseDate.setUTCDate(baseDate.getUTCDate() + 7);
         }
-    } else {
+    } else if (today > dayIndex) {
         // race has passed
-        momentObj = nowMoment.add(1, 'weeks');
+        baseDate.setUTCDate(baseDate.getUTCDate() + 7);
     }
+    // else: race is upcoming this week
 
-    return momentObj.isoWeekday(dayIndex).hour(raceHour).minute(raceMinute).second(0).toDate();
+    // set to the target ISO weekday and time within the (possibly advanced) week
+    const diff = dayIndex - toIsoWeekday(baseDate);
+    baseDate.setUTCDate(baseDate.getUTCDate() + diff);
+    baseDate.setUTCHours(raceHour, raceMinute, 0, 0);
+
+    return baseDate;
+};
+
+const isEasternDST = (date: Date): boolean => {
+    return new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        timeZoneName: 'short',
+    })
+        .format(date)
+        .includes('EDT');
 };
 
 /**
@@ -208,4 +231,5 @@ export {
     dateTimeFromString,
     getCurrentBroadcastSeason,
     addDaysToDateString,
+    isEasternDST,
 };

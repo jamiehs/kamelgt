@@ -14,7 +14,6 @@ const firstWeekDate = new Date(
 );
 const seasonTag = getSeasonTag(firstWeekDate);
 import broadcasts from './data/broadcasts';
-import moment from 'moment';
 import { VCR_DISCORD_URL } from './data/constants';
 import DiscordIcon from './images/Discord-Logo-Color.svg?react';
 import DownloadSetupIcon from './images/download-setup.svg?react';
@@ -27,6 +26,7 @@ import {
     getCurrentBroadcastSeason,
     addDaysToDateString,
     getSeasonTag,
+    isEasternDST,
 } from './helpers';
 
 interface App {
@@ -222,11 +222,7 @@ class App extends React.Component<object, AppState> {
                                 <Timeslot
                                     label="Midweek Americas"
                                     dayIndex={4}
-                                    time={
-                                        moment(now()).tz('America/New_York').isDST()
-                                            ? '01:00'
-                                            : '03:00'
-                                    }
+                                    time={isEasternDST(now()) ? '01:00' : '03:00'}
                                     regularity="Steady Participation"
                                 >
                                     <p>

@@ -1,5 +1,4 @@
 import './Timeslot.scss';
-import moment from 'moment-timezone';
 import React from 'react';
 
 import { nextRaceDay, numberAsK, toLocaleStringIfNumber } from '../../helpers';
@@ -68,7 +67,7 @@ class Timeslot extends React.Component<TimeslotProps, TimeslotState> {
         let { label, dayIndex, time, entries, gtoSof, gtpSof, children, regularity, highlight } =
             this.props;
 
-        const tz = moment.tz.guess();
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
         const nextRaceDate = nextRaceDay(dayIndex, time);
         const nextRaceDayLocal = nextRaceDate.toLocaleDateString(undefined, { weekday: 'long' });
         const nextRaceTimeLocal = nextRaceDate.toLocaleTimeString([], {
