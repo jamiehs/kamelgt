@@ -129,7 +129,7 @@ for (const channel of CHANNELS) {
                 break;
             }
             if (hits.length > 1 && candidates.length === 0) {
-                candidates = hits;
+                candidates = hits; // first multi-match token wins; Stage 2 can still override via message
             }
         }
 
