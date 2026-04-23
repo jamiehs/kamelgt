@@ -43,12 +43,14 @@ function formatEntry(trackFolder, filename, isQual) {
     return entry;
 }
 
-// Inserts formatted entry strings before the closing ] of the car array.
+// Inserts formatted entry strings at the start of the car array (prepend).
 function insertEntries(content, exportName, carName, entries) {
     const bounds = findCarArrayBounds(content, exportName, carName);
     if (!bounds) throw new Error(`Could not locate "${carName}" array in ${exportName}`);
     const toInsert = entries.join('');
-    return content.slice(0, bounds.end) + toInsert + content.slice(bounds.end);
+    // Insert right after '[', skipping an immediate newline so entries stay on their own lines.
+    const insertAt = content[bounds.start + 1] === '\n' ? bounds.start + 2 : bounds.start + 1;
+    return content.slice(0, insertAt) + toInsert + content.slice(insertAt);
 }
 
 // Removes the entry block containing filePath (e.g. "summit-point/foo.sto").

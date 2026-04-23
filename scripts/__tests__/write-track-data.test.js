@@ -80,6 +80,12 @@ describe('insertEntries', () => {
         expect(result).toContain('new_R.sto');
         expect(result).toContain('existing_R.sto');
     });
+    it('prepends new entry before existing entries', () => {
+        const result = insertEntries(SAMPLE, 'SUMMIT_POINT', 'audi90gto', [
+            formatEntry('summit-point', 'new_R.sto', false),
+        ]);
+        expect(result.indexOf('new_R.sto')).toBeLessThan(result.indexOf('existing_R.sto'));
+    });
     it('inserts qual before race when given as ordered pair', () => {
         const result = insertEntries(SAMPLE, 'SUMMIT_POINT', 'audi90gto', [
             formatEntry('summit-point', 'new_Q.sto', true),

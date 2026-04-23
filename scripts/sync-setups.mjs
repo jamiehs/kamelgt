@@ -238,11 +238,8 @@ for (const [key, rawSetups] of groups) {
 
     const existing = trackData[resolvedExport]?.setups?.[car] ?? [];
 
-    // In seeding mode, exclude files already registered so we don't add duplicates
     const existingFilenames = new Set(existing.map((e) => filenameFromPath(e.file)));
-    const setups = targetTrack
-        ? rawSetups.filter((s) => !existingFilenames.has(s.filename))
-        : rawSetups;
+    const setups = rawSetups.filter((s) => !existingFilenames.has(s.filename));
 
     if (setups.length === 0) {
         console.log(`\n${car} / ${resolvedTrack} — all files already registered, skipping.`);
