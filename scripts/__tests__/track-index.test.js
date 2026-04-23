@@ -63,4 +63,42 @@ describe('buildTrackIndex', () => {
         const result = index.resolve('imola');
         expect(result?.folderName).toBeTruthy();
     });
+
+    it('resolve("miami") returns miami-international-autodrome', () => {
+        expect(index.resolve('miami')?.folderName).toBe('miami-international-autodrome');
+    });
+
+    it('resolve("homestead") returns miami-homestead', () => {
+        expect(index.resolve('homestead')?.folderName).toBe('miami-homestead');
+    });
+
+    it('resolve("mia") returns miami-international-autodrome', () => {
+        expect(index.resolve('mia')?.folderName).toBe('miami-international-autodrome');
+    });
+});
+
+describe('resolveAll', () => {
+    it('resolveAll("miami") returns both miami tracks', () => {
+        const results = index.resolveAll('miami');
+        const folders = results.map((r) => r.folderName);
+        expect(folders).toContain('miami-homestead');
+        expect(folders).toContain('miami-international-autodrome');
+    });
+
+    it('resolveAll("homestead") returns only miami-homestead', () => {
+        const results = index.resolveAll('homestead');
+        expect(results).toHaveLength(1);
+        expect(results[0].folderName).toBe('miami-homestead');
+    });
+
+    it('resolveAll returns empty array for gibberish', () => {
+        expect(index.resolveAll('xyzqwerty123')).toEqual([]);
+    });
+
+    it('resolveAll returns single-element array for exact-substring match', () => {
+        // 'barbermotorsportspark' contains 'barber' — exact-substring pass fires
+        const results = index.resolveAll('barbermotorsportspark');
+        expect(results).toHaveLength(1);
+        expect(results[0].folderName).toBe('barber');
+    });
 });
