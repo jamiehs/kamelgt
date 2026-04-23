@@ -42,4 +42,10 @@ describe('pickBySchedule', () => {
         const result = pickBySchedule(candidates, '2026-01-01T12:00:00Z', SCHEDULE);
         expect(result).toBeNull();
     });
+
+    it('resolves when timestamp is past the last scheduled week', () => {
+        // Only BATHURST remains in the slice; neither candidate matches it, so null.
+        const result = pickBySchedule(candidates, '2026-06-01T12:00:00Z', SCHEDULE);
+        expect(result).toBeNull();
+    });
 });

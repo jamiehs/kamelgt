@@ -13,9 +13,15 @@ function buildSchedule() {
     while ((m = re.exec(content)) !== null) {
         schedule.push({ exportName: m[1], weekStart: m[2] });
     }
+    if (schedule.length === 0) {
+        throw new Error(
+            `buildSchedule: no entries parsed from ${SEASON_SETUPS_PATH} — check file format`,
+        );
+    }
     return schedule.sort((a, b) => a.weekStart.localeCompare(b.weekStart));
 }
 
+// timestamp: ISO 8601 string. Returns null if no candidate matches the two-week window.
 function pickBySchedule(candidates, timestamp, schedule) {
     const date = new Date(timestamp);
     // Last schedule entry whose weekStart is on or before the attachment date
