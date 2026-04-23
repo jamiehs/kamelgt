@@ -660,6 +660,19 @@ export const MID_OHIO = {
     setups: {
         audi90gto: [
             {
+                file: 'mid-ohio/A90_MidOhio_25S3_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'mid-ohio/JdelOlmoAudiMidOhio23S1d_25S3.sto',
+            },
+            {
+                file: 'mid-ohio/maf_midohio_24s4_q1.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'mid-ohio/maf_midohio_24s4_r1.sto',
+            },
+            {
                 file: 'mid-ohio/A90_MidOhio_23S1_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
@@ -672,9 +685,6 @@ export const MID_OHIO = {
             },
             {
                 file: 'mid-ohio/maf_midohio_24s4_r0.sto',
-            },
-            {
-                file: 'mid-ohio/mid-ohio-22S1-r3.sto',
             },
             {
                 file: 'mid-ohio/Mid-Ohio30c.sto',
