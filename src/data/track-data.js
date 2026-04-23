@@ -369,21 +369,27 @@ export const HOMESTEAD_MIAMI_ROAD_A = {
     setups: {
         audi90gto: [
             {
-                file: 'miami-homestead/A90_23S3_Homestead_Y_Gijsen_Q.sto',
+                file: 'miami-homestead/A90_HomesteadA_24S3_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'miami-homestead/A90_Homestead_23S3_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
             {
-                file: 'miami-homestead/A90_23S3_Homestead_Y_Gijsen_R.sto',
+                file: 'miami-homestead/A90_Homestead_23S3_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'miami-homestead/HOMESTEAD_50c.sto',
+            },
+            {
+                file: 'miami-homestead/maf_homesteadb_25s3_q3.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'miami-homestead/maf_homesteadb_25s3_r3.sto',
             },
             {
                 file: 'miami-homestead/homestead-22-S2-r-03.sto',
-            },
-            {
-                file: 'miami-homestead/homestead-22S2-q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'miami-homestead/homestead-22S2-r4.sto',
             },
             {
                 file: 'miami-homestead/homestead-23S3-r1.sto',
