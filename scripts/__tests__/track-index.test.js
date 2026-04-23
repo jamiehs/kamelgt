@@ -95,6 +95,14 @@ describe('resolveAll', () => {
         expect(index.resolveAll('xyzqwerty123')).toEqual([]);
     });
 
+    it('resolveAll returns empty array for null', () => {
+        expect(index.resolveAll(null)).toEqual([]);
+    });
+
+    it('resolveAll returns empty array for empty string', () => {
+        expect(index.resolveAll('')).toEqual([]);
+    });
+
     it('resolveAll returns single-element array for exact-substring match', () => {
         // 'barbermotorsportspark' contains 'barber' — exact-substring pass fires
         const results = index.resolveAll('barbermotorsportspark');

@@ -74,26 +74,6 @@ async function buildTrackIndex() {
 
     return {
         folderNames,
-        // Returns { exportName, folderName } or null.
-        resolve(text) {
-            const t = text?.trim();
-            if (!t || t.length < 2) return null;
-
-            // Exact-substring pass: does the query contain a known folder name?
-            // Handles filenames like "JdelOlmoImola22S4D" where the track name
-            // is embedded without a separator.
-            const queryNorm = normalize(t).replace(/[^a-z0-9]/g, '');
-            const subMatch = entries
-                .filter((e) => {
-                    const fNorm = normalize(e.folderName).replace(/[^a-z0-9]/g, '');
-                    return fNorm.length >= 4 && queryNorm.includes(fNorm);
-                })
-                .sort((a, b) => b.folderName.length - a.folderName.length)[0];
-            if (subMatch) return subMatch;
-
-            const results = fuse.search(t);
-            return results.length > 0 ? results[0].item : null;
-        },
         // Returns all { exportName, folderName } candidates, deduped by folderName.
         // Exact-substring pass still returns [singleMatch] (unambiguous by definition).
         resolveAll(text) {
@@ -119,6 +99,10 @@ async function buildTrackIndex() {
                 }
             }
             return [...byFolder.values()].map((v) => v.item);
+        },
+        // Returns { exportName, folderName } or null.
+        resolve(text) {
+            return this.resolveAll(text)[0] ?? null;
         },
     };
 }
