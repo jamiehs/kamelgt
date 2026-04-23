@@ -243,6 +243,9 @@ export const COTA = {
             },
 ],
         nissangtpzxt: [            {
+                file: "cota/F122_NZXT_COTA_1-6.sto",
+            },
+            {
                 file: "cota/F122_NZXT_COTA_1-3.sto",
             },
 ],
