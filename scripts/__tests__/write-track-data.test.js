@@ -62,12 +62,12 @@ describe('findCarArrayBounds', () => {
 describe('formatEntry', () => {
     it('formats a race entry without comment', () => {
         const entry = formatEntry('summit-point', 'new_R.sto', false);
-        expect(entry).toContain('file: "summit-point/new_R.sto"');
+        expect(entry).toContain("file: 'summit-point/new_R.sto'");
         expect(entry).not.toContain('comment');
     });
     it('formats a qualifying entry with QUAL comment', () => {
         const entry = formatEntry('summit-point', 'new_Q.sto', true);
-        expect(entry).toContain('file: "summit-point/new_Q.sto"');
+        expect(entry).toContain("file: 'summit-point/new_Q.sto'");
         expect(entry).toContain('comment: QUAL');
     });
 });

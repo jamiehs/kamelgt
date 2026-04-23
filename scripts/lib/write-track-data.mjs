@@ -37,7 +37,7 @@ function findCarArrayBounds(content, exportName, carName) {
 }
 
 function formatEntry(trackFolder, filename, isQual) {
-    let entry = `${INDENT}{\n${INDENT}    file: "${trackFolder}/${filename}",\n`;
+    let entry = `${INDENT}{\n${INDENT}    file: '${trackFolder}/${filename}',\n`;
     if (isQual) entry += `${INDENT}    comment: QUAL\n`;
     entry += `${INDENT}},\n`;
     return entry;

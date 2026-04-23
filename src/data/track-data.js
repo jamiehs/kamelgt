@@ -234,21 +234,22 @@ export const COTA = {
             {
                 file: 'cota/maf_cota_r3.sto',
             },
-                    {
-                file: "cota/26s2COTA_Q.sto",
-                comment: QUAL
+            {
+                file: 'cota/26s2COTA_Q.sto',
+                comment: QUAL,
             },
             {
-                file: "cota/26s2COTA_R.sto",
+                file: 'cota/26s2COTA_R.sto',
             },
-],
-        nissangtpzxt: [            {
-                file: "cota/F122_NZXT_COTA_1-6.sto",
+        ],
+        nissangtpzxt: [
+            {
+                file: 'cota/F122_NZXT_COTA_1-6.sto',
             },
             {
-                file: "cota/F122_NZXT_COTA_1-3.sto",
+                file: 'cota/F122_NZXT_COTA_1-3.sto',
             },
-],
+        ],
     },
 };
 export const DAYTONA = {
