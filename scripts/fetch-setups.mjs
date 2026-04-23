@@ -5,6 +5,7 @@ import path from 'path';
 
 import { fetchSetupAttachments, downloadFile } from './lib/discord-fetch.mjs';
 import { buildTrackIndex } from './lib/track-index.mjs';
+import { buildSchedule, pickBySchedule } from './lib/schedule.mjs';
 import { detectType } from './lib/parse-filename.mjs';
 import { writeMeta } from './lib/meta.mjs';
 import { prompt } from './lib/prompt.mjs';
@@ -66,6 +67,7 @@ const CHANNELS = [
 // --- Main ---
 console.log('Building track index...');
 const trackIndex = await buildTrackIndex();
+const schedule = buildSchedule();
 
 // Resolve track arg upfront in track-specific mode
 let targetTrack = null;
@@ -113,42 +115,80 @@ for (const channel of CHANNELS) {
             continue;
         }
 
-        // Stage 1: filename match — try each token individually, take first hit
+        // Stage 1: filename tokens — iterate all; stop early on unambiguous hit
         const filenameTokens = attachment.filename
-            .replace(/\.[^.]+$/, '') // strip extension
+            .replace(/\.[^.]+$/, '')
             .split(/[_\-. ]+/)
-            .filter((t) => t.length >= 4 && !/^\d+$/.test(t)); // skip short/pure-numeric tokens
+            .filter((t) => t.length >= 4 && !/^\d+$/.test(t));
         let resolved = null;
+        let candidates = [];
         for (const token of filenameTokens) {
-            resolved = trackIndex.resolve(token);
-            if (resolved) break;
+            const hits = trackIndex.resolveAll(token);
+            if (hits.length === 1) {
+                resolved = hits[0];
+                break;
+            }
+            if (hits.length > 1 && candidates.length === 0) {
+                candidates = hits;
+            }
         }
 
-        // Stage 2: message text match
+        // Stage 2: message text match — message overrides filename candidates
         if (!resolved && attachment.messageContent) {
-            resolved = trackIndex.resolve(attachment.messageContent);
+            const hits = trackIndex.resolveAll(attachment.messageContent);
+            if (hits.length === 1) {
+                resolved = hits[0];
+            } else if (hits.length > 1) {
+                candidates = hits;
+            }
         }
 
-        // Stage 3: interactive (skipped in track-specific mode — only auto-matched files are wanted)
+        // Stage 3: season heuristic
+        if (!resolved && candidates.length > 0) {
+            const pick = pickBySchedule(candidates, attachment.timestamp, schedule);
+            if (pick) {
+                resolved = pick;
+                console.log(`  ↳ auto-resolved by season schedule: ${pick.folderName}`);
+            }
+        }
+
+        // Stage 4: interactive (skipped in track-specific mode)
         if (!resolved) {
             if (targetTrack) continue;
             console.log(`\n  ? ${attachment.filename}`);
             if (attachment.messageContent) {
                 console.log(`    Message: "${attachment.messageContent.slice(0, 120)}"`);
             }
-            const answer = await prompt(
-                '    Enter track folder name (or press enter to skip): ',
-                trackIndex.folderNames,
-            );
-            if (!answer) {
-                console.log('    Skipped.');
-                continue;
+            if (candidates.length > 0) {
+                console.log('    Multiple tracks matched:');
+                candidates.forEach((c, i) => console.log(`      [${i + 1}] ${c.folderName}`));
+                const answer = await prompt(
+                    '    Enter number, folder name, or press enter to skip: ',
+                    trackIndex.folderNames,
+                );
+                if (!answer) {
+                    console.log('    Skipped.');
+                    continue;
+                }
+                const num = parseInt(answer, 10);
+                if (!isNaN(num) && num >= 1 && num <= candidates.length) {
+                    resolved = candidates[num - 1];
+                } else {
+                    const resolvedByName = trackIndex.resolve(answer);
+                    resolved = { folderName: answer, exportName: resolvedByName?.exportName ?? null };
+                }
+            } else {
+                const answer = await prompt(
+                    '    Enter track folder name (or press enter to skip): ',
+                    trackIndex.folderNames,
+                );
+                if (!answer) {
+                    console.log('    Skipped.');
+                    continue;
+                }
+                const resolvedByName = trackIndex.resolve(answer);
+                resolved = { folderName: answer, exportName: resolvedByName?.exportName ?? null };
             }
-            // Try to resolve the typed text; fall back to using it as a literal folder name
-            // Use the user's literal input as folderName — they're choosing where to put it.
-            // Keep exportName from resolution if available, but don't let it override the folder.
-            const resolvedByName = trackIndex.resolve(answer);
-            resolved = { folderName: answer, exportName: resolvedByName?.exportName ?? null };
         }
 
         // In track-specific mode, only download files for the target track
