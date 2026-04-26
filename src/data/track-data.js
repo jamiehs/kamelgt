@@ -225,21 +225,21 @@ export const COTA = {
     setups: {
         audi90gto: [
             {
+                file: 'cota/maf_cota_26s2_q2.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'cota/maf_cota_26s2_r2.sto',
+            },
+            {
                 file: 'cota/audrius_26s2-30c_ascQ_butCotaGears_rideheight.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'cota/audrius_26s2-30c_ascR_butCotaGears_rideheight.sto',
             },
             {
                 file: 'cota/A90_COTA_21S2_Y_Gijsen_R.sto',
-            },
-            {
-                file: 'cota/maf_cota_q3.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'cota/maf_cota_r3.sto',
             },
             {
                 file: 'cota/26s2COTA_Q.sto',
