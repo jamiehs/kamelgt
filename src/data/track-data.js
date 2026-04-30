@@ -661,6 +661,26 @@ export const MEXICO_NATIONAL_HISTORIC = {
 };
 export const MIAMI_INTERNATIONAL_AUTODROME = {
     title: 'Miami International Autodrome - Grand Prix',
+    aliases: ['MIA'],
+    setups: {
+        audi90gto: [
+            {
+                file: 'mia/26s2-MIA46c.sto',
+            },
+        ],
+        nissangtpzxt: [
+            {
+                file: 'mia/F122_NZXT_MiamiF1_1-3.sto',
+            },
+            {
+                file: 'mia/Lgo26S2_Miami_GP_Q01.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'mia/Lgo26S2_Miami_GP_R02.sto',
+            },
+        ],
+    },
 };
 export const MID_OHIO = {
     title: 'Mid-Ohio',
