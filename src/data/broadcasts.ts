@@ -1409,7 +1409,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.COTA,
-                url: '',
+                url: 'https://youtu.be/5deH6mkJODo?t=236',
             },
             {
                 ...tracks.MIAMI_INTERNATIONAL_AUTODROME,
