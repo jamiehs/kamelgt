@@ -46,11 +46,20 @@ function printPreview(car, track, pairs, existing, suggested) {
         }
     }
 
+    const incomingHasQual = pairs.some((p) => p.qual);
     for (const entry of existing) {
         const filename = filenameFromPath(entry.file);
         const qualTag = isQual(entry) ? ' [QUAL]' : '';
         const isSuggested = suggested.includes(filename);
-        console.log(`  ${isSuggested ? 'REMOVE?' : 'KEEP:  '} ${filename}${qualTag}`);
+        let willRemove = isSuggested;
+        if (!willRemove && incomingHasQual && isQual(entry)) {
+            const qualStem = getStem(filename);
+            const qualLoose = looseKey(filename);
+            willRemove = suggested.some(
+                (r) => getStem(r) === qualStem || (qualLoose && looseKey(r) === qualLoose),
+            );
+        }
+        console.log(`  ${willRemove ? 'REMOVE?' : 'KEEP:  '} ${filename}${qualTag}`);
     }
 }
 
