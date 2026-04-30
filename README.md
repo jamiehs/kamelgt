@@ -42,6 +42,15 @@ Two scripts manage car setups — see **[docs/setup-scripts.md](docs/setup-scrip
 
 `npm run fetch-setups` downloads `.sto` attachments from `#audi-setups` and `#nissan-setups`, fuzzy-matches each file to the correct track folder, and chains into `sync-setups` automatically. Run it on Tuesday after race day.
 
+## Dev Query Parameters
+
+These query parameters are only active when running `npm start` (dev mode). They have no effect in production.
+
+| Parameter | Example | Effect |
+|---|---|---|
+| `?date=YYYY-MM-DD` | `?date=2026-05-05` | Overrides "today's date" used for week calculations. Useful for testing how the setups page looks mid-season or at season boundaries. |
+| `?all_setups` | `?all_setups` | Shows all past rounds plus up to 13 upcoming rounds, instead of the default 3. Useful for reviewing the full season layout. |
+
 `npm run sync-setups` registers files that are already on disk into `track-data.js`. Detects new untracked files via git, pairs qual/race siblings, shows a preview, and prompts for confirmation before writing anything.
 
 #### Broadcasts
