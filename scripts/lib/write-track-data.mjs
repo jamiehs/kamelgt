@@ -55,8 +55,8 @@ function insertEntries(content, exportName, carName, entries) {
 
 // Removes the entry block containing filePath (e.g. "summit-point/foo.sto").
 function removeEntry(content, filePath) {
-    const fileRef = `"${filePath}"`;
-    const refIdx = content.indexOf(fileRef);
+    let refIdx = content.indexOf(`'${filePath}'`);
+    if (refIdx === -1) refIdx = content.indexOf(`"${filePath}"`);
     if (refIdx === -1) return content;
 
     let openBrace = refIdx;

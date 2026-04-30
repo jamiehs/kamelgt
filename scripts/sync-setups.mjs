@@ -328,13 +328,17 @@ for (const [key, rawSetups] of groups) {
         }
     }
 
+    const incomingHasQual = approvedPairs.some((p) => p.qual);
     for (const filename of toRemove) {
         const filePath = existing.find((e) => e.file.endsWith('/' + filename))?.file;
         if (filePath) currentContent = removeEntry(currentContent, filePath);
+        if (!incomingHasQual) continue;
         const raceStem = getStem(filename);
+        const raceLooseKey = looseKey(filename);
         const pairedQual = existing.find((e) => {
             const f = filenameFromPath(e.file);
-            return detectType(f).type === 'qual' && getStem(f) === raceStem;
+            if (detectType(f).type !== 'qual') return false;
+            return getStem(f) === raceStem || (raceLooseKey && looseKey(f) === raceLooseKey);
         });
         if (pairedQual) currentContent = removeEntry(currentContent, pairedQual.file);
     }
