@@ -119,7 +119,8 @@ for (const channel of CHANNELS) {
         const filenameTokens = attachment.filename
             .replace(/\.[^.]+$/, '')
             .split(/[_\-. ]+/)
-            .filter((t) => t.length >= 4 && !/^\d+$/.test(t));
+            .map((t) => t.replace(/\d+[cfCF]$/, '')) // strip temp suffix, e.g. MIA46c → MIA
+            .filter((t) => t.length >= 3 && !/^\d+$/.test(t));
         let resolved = null;
         let candidates = [];
         for (const token of filenameTokens) {

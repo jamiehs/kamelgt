@@ -75,6 +75,7 @@ class App extends React.Component<object, AppState> {
                         title: event.title,
                         thumbText: event.thumbText,
                         alternateTitle: event.alternateTitle,
+                        aliases: event.aliases,
                         url: event.url,
                     };
                 });
@@ -82,7 +83,7 @@ class App extends React.Component<object, AppState> {
             .flat();
 
         this.fuse = new Fuse(this.flattenedBroadcasts, {
-            keys: ['title', 'alternateTitle'],
+            keys: ['title', 'alternateTitle', 'aliases'],
             threshold: 0.2,
             distance: 200,
             minMatchCharLength: 1,

@@ -15,9 +15,12 @@ function normalize(str) {
         .toLowerCase();
 }
 
-function buildSearchText(exportName, title, alternateTitle) {
+function buildSearchText(exportName, title, alternateTitle, aliases) {
     const nameTokens = normalize(exportName).replace(/_/g, ' ');
-    return [nameTokens, normalize(title), normalize(alternateTitle)].filter(Boolean).join(' ');
+    const aliasPart = aliases?.map(normalize).join(' ');
+    return [nameTokens, normalize(title), normalize(alternateTitle), aliasPart]
+        .filter(Boolean)
+        .join(' ');
 }
 
 // Parse "setups: SOME_EXPORT.setups" from a chunk of source text.
@@ -58,7 +61,7 @@ async function buildTrackIndex() {
         entries.push({
             exportName,
             folderName,
-            searchText: buildSearchText(exportName, value.title, value.alternateTitle),
+            searchText: buildSearchText(exportName, value.title, value.alternateTitle, value.aliases),
         });
     }
 
@@ -84,10 +87,23 @@ async function buildTrackIndex() {
             const subMatch = entries
                 .filter((e) => {
                     const fNorm = normalize(e.folderName).replace(/[^a-z0-9]/g, '');
-                    return fNorm.length >= 4 && queryNorm.includes(fNorm);
+                    return fNorm.length >= 3 && queryNorm.includes(fNorm);
                 })
                 .sort((a, b) => b.folderName.length - a.folderName.length)[0];
             if (subMatch) return [subMatch];
+
+            // Exact-word match: if query appears as a standalone word in exactly one folder's searchText,
+            // return it without falling through to Fuse (handles short abbreviations like "MIA").
+            const wordMatches = entries.filter((e) =>
+                normalize(e.searchText)
+                    .replace(/[^a-z0-9]/g, ' ')
+                    .split(/\s+/)
+                    .includes(queryNorm),
+            );
+            const wordFolders = [...new Set(wordMatches.map((e) => e.folderName))];
+            if (wordFolders.length === 1) {
+                return [wordMatches.find((e) => e.folderName === wordFolders[0])];
+            }
 
             const results = fuse.search(t);
             // Dedupe by folderName, keeping the entry with the lowest (best) score.

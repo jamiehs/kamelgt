@@ -9,12 +9,14 @@ interface SingleBroadcast {
     thumbText?: string;
     thumb?: string;
     alternateTitle?: string;
+    aliases?: string[];
     url: string;
 }
 
 interface TrackEntry {
     title: string;
     alternateTitle?: string;
+    aliases?: string[];
     setups?: {
         audi90gto: CarSetup[];
         nissangtpzxt: CarSetup[];
