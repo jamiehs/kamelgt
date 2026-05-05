@@ -168,6 +168,12 @@ export const BATHURST = {
     setups: {
         audi90gto: [
             {
+                file: 'bathurst/26s2-Bathurst20c.sto',
+            },
+            {
+                file: 'bathurst/BATHURST_ON_GARBAGE_TIRE.sto',
+            },
+            {
                 file: 'bathurst/A90_Bathurst_23S3_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
@@ -184,14 +190,19 @@ export const BATHURST = {
                 file: 'bathurst/maf_bathurst_24s2_q0.sto',
                 comment: QUAL,
             },
+        ],
+        nissangtpzxt: [
             {
-                file: 'bathurst/maf_bathurst_24s2_r0.sto',
+                file: 'bathurst/F122_NZXT_Bathurst_1-2.sto',
             },
             {
-                file: 'bathurst/JdelOlmoMountParonama23S1D.sto',
+                file: 'bathurst/Lgo26S2_Bathurst_Q50.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'bathurst/Lgo26S2_Bathurst_R50.sto',
             },
         ],
-        nissangtpzxt: [],
     },
 };
 export const BELLE_ISLE = {
@@ -667,6 +678,9 @@ export const MIAMI_INTERNATIONAL_AUTODROME = {
     aliases: ['MIA'],
     setups: {
         audi90gto: [
+            {
+                file: 'mia/26s2-MIA46c_03.sto',
+            },
             {
                 file: 'mia/26s2-MIA46c.sto',
             },
