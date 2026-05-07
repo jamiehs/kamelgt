@@ -193,6 +193,13 @@ export const BATHURST = {
         ],
         nissangtpzxt: [
             {
+                file: 'bathurst/bath_eg_R4.sto',
+            },
+            {
+                file: 'bathurst/bath_q1.0.0.sto',
+                comment: QUAL,
+            },
+            {
                 file: 'bathurst/F122_NZXT_Bathurst_1-2.sto',
             },
             {
