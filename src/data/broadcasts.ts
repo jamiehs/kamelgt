@@ -1413,11 +1413,11 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.MIAMI_INTERNATIONAL_AUTODROME,
-                url: '',
+                url: 'https://youtu.be/WBpKO3XEoFA?t=470',
             },
             {
                 ...tracks.BATHURST,
-                url: '',
+                url: 'https://youtu.be/LIVDszbeJfA?t=187',
             },
             {
                 ...tracks.LIME_ROCK_CLASSIC,
