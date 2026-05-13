@@ -193,21 +193,28 @@ export const BATHURST = {
         ],
         nissangtpzxt: [
             {
+                file: 'bathurst/2026S2_Bathurst_1q.sto',
+            },
+            {
+                file: 'bathurst/F122_NZXT_Bathurst_1-5_Q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'bathurst/F122_NZXT_Bathurst_1-5.sto',
+            },
+            {
+                file: 'bathurst/Lgo26S2_Bathurst_Q51.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'bathurst/Lgo26S2_Bathurst_R42.sto',
+            },
+            {
                 file: 'bathurst/bath_eg_R4.sto',
             },
             {
                 file: 'bathurst/bath_q1.0.0.sto',
                 comment: QUAL,
-            },
-            {
-                file: 'bathurst/F122_NZXT_Bathurst_1-2.sto',
-            },
-            {
-                file: 'bathurst/Lgo26S2_Bathurst_Q50.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'bathurst/Lgo26S2_Bathurst_R50.sto',
             },
         ],
     },
@@ -614,7 +621,18 @@ export const LIME_ROCK = {
                 file: 'lime-rock/A90_LimeRockC_21S2_Y_Gijsen_R.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [
+            {
+                file: 'lime-rock/F122_NZXT_LimeRock_1-2.sto',
+            },
+            {
+                file: 'lime-rock/Lgo26S2_LRP_Q80.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'lime-rock/Lgo26S2_LRP_R81.sto',
+            },
+        ],
     },
 };
 export const LIME_ROCK_CLASSIC = {
