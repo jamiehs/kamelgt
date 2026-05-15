@@ -614,6 +614,9 @@ export const LIME_ROCK = {
     setups: {
         audi90gto: [
             {
+                file: 'lime-rock/26s2-Limerock30c.sto',
+            },
+            {
                 file: 'lime-rock/A90_LimeRockC_21S2_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
