@@ -1421,7 +1421,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.LIME_ROCK_CLASSIC,
-                url: '',
+                url: 'https://youtu.be/ebQTJUy5RbM?t=405',
             },
             {
                 ...tracks.LONG_BEACH,
