@@ -626,6 +626,9 @@ export const LIME_ROCK = {
         ],
         nissangtpzxt: [
             {
+                file: 'lime-rock/2026S2_Lime_Rock_Dry_1.sto',
+            },
+            {
                 file: 'lime-rock/F122_NZXT_LimeRock_1-2.sto',
             },
             {
@@ -651,24 +654,48 @@ export const LONG_BEACH = {
     setups: {
         audi90gto: [
             {
+                file: 'long-beach/26S2-JK-LongBeach_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'long-beach/26S2-JK-LongBeach.sto',
+            },
+            {
+                file: 'long-beach/26s2-LongBeach34c_HDF.sto',
+            },
+            {
+                file: 'long-beach/LongBeach_2026.sto',
+            },
+            {
+                file: 'long-beach/maf_longbeach_25s2_q4.sto',
+                comment: QUAL
+            },
+            {
+                file: 'long-beach/maf_longbeach_25s2_r4.sto',
+            },
+            {
                 file: 'long-beach/A90_23S4_LongBeach_Y_Gijsen_R.sto',
             },
             {
                 file: 'long-beach/A90_23S4_LongBeach_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
-            {
-                file: 'long-beach/andrius_sl_long_beach.sto',
-            },
-            {
-                file: 'long-beach/maf_longbeach_23s4_r0.sto',
-            },
-            {
-                file: 'long-beach/maf_longbeach_23s4_q0.sto',
-                comment: QUAL,
-            },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'long-beach/Lgo26S2_Long_Beach_Q92.sto',
+                comment: QUAL
+            },
+            {
+                file: 'long-beach/Lgo26S2_Long_Beach_R82.sto',
+            },
+            {
+                file: 'long-beach/longbeachQ.sto',
+                comment: QUAL
+            },
+            {
+                file: 'long-beach/longbeachR70.sto',
+            },
+],
     },
 };
 export const MAGNY_COURS = {
