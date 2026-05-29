@@ -655,7 +655,7 @@ export const LONG_BEACH = {
         audi90gto: [
             {
                 file: 'long-beach/26S2-JK-LongBeach_Q.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'long-beach/26S2-JK-LongBeach.sto',
@@ -668,7 +668,7 @@ export const LONG_BEACH = {
             },
             {
                 file: 'long-beach/maf_longbeach_25s2_q4.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'long-beach/maf_longbeach_25s2_r4.sto',
@@ -681,21 +681,22 @@ export const LONG_BEACH = {
                 comment: QUAL,
             },
         ],
-        nissangtpzxt: [            {
+        nissangtpzxt: [
+            {
                 file: 'long-beach/Lgo26S2_Long_Beach_Q92.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'long-beach/Lgo26S2_Long_Beach_R82.sto',
             },
             {
                 file: 'long-beach/longbeachQ.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'long-beach/longbeachR70.sto',
             },
-],
+        ],
     },
 };
 export const MAGNY_COURS = {
@@ -800,6 +801,9 @@ export const MISANO = {
     setups: {
         audi90gto: [
             {
+                file: 'misano/26s2-Misano45c.sto',
+            },
+            {
                 file: 'misano/A90_Misano_24S2_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
@@ -814,7 +818,15 @@ export const MISANO = {
                 file: 'misano/maf_misano_24s2_r3.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [
+            {
+                file: 'misano/Lgo26S2_Misano_GP_Q81.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'misano/Lgo26S2_Misano_GP_R81.sto',
+            },
+        ],
     },
 };
 export const MONTREAL = {
