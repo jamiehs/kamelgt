@@ -1288,6 +1288,16 @@ export const SPA_CLASSIC_PITS = {
     setups: {
         audi90gto: [
             {
+                file: 'spa/26s2-Spa_DoningtonmodifiedQ.sto',
+                comment: QUAL
+            },
+            {
+                file: 'spa/26s2-Spa_DoningtonmodifiedR.sto',
+            },
+            {
+                file: 'spa/maf_spa_r326.sto',
+            },
+            {
                 file: 'spa/A90_Sliumba_24S2_spa_Q.sto',
                 comment: QUAL,
             },
@@ -1297,18 +1307,15 @@ export const SPA_CLASSIC_PITS = {
             {
                 file: 'spa/maf_spa_r3.sto',
             },
-            {
-                file: 'spa/javier_spa_2022s4_4_ascR.sto',
-            },
-            {
-                file: 'spa/A90_23S3_Spa_Y_Gijsen_Q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'spa/A90_23S3_Spa_Y_Gijsen_R.sto',
-            },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'spa/Lgo26S2_Spa_Q50.sto',
+                comment: QUAL
+            },
+            {
+                file: 'spa/Lgo26S2_Spa_R50.sto',
+            },
+],
     },
 };
 export const SPA_ENDURANCE_PITS = {
