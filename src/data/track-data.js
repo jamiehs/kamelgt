@@ -1288,6 +1288,13 @@ export const SPA_CLASSIC_PITS = {
     setups: {
         audi90gto: [
             {
+                file: 'spa/26s2-Spa36c_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'spa/26s2-Spa36c.sto',
+            },
+            {
                 file: 'spa/26s2-Spa_DoningtonmodifiedQ.sto',
                 comment: QUAL
             },
@@ -1296,13 +1303,6 @@ export const SPA_CLASSIC_PITS = {
             },
             {
                 file: 'spa/maf_spa_r326.sto',
-            },
-            {
-                file: 'spa/A90_Sliumba_24S2_spa_Q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'spa/A90_Sliumba_24S2_spa_R2.sto',
             },
             {
                 file: 'spa/maf_spa_r3.sto',
