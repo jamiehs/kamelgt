@@ -1425,11 +1425,11 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.LONG_BEACH,
-                url: '',
+                url: 'https://youtu.be/gYaxo5pe3iU?t=608',
             },
             {
                 ...tracks.MISANO,
-                url: '',
+                url: 'https://youtu.be/CkgqVgn3hhs?t=428',
             },
             {
                 ...tracks.SPA_CLASSIC_PITS,
