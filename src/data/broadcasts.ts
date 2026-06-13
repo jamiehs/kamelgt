@@ -1437,6 +1437,50 @@ const broadcasts: any[] = [
             },
         ],
     },
+    {
+        id: '26S3',
+        label: '2026 Season 3',
+        startDate: '2026-06-16',
+        endDate: '2026-09-08',
+        youTube: [
+            {
+                ...tracks.PHILLIP_ISLAND,
+            },
+            {
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+            },
+            {
+                ...tracks.ST_PETERSBURG,
+            },
+            {
+                ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+            },
+            {
+                ...tracks.OSCHERSLEBEN,
+            },
+            {
+                ...tracks.BELLE_ISLE,
+            },
+            {
+                ...tracks.TSUKUBA,
+            },
+            {
+                ...tracks.NURBURGRING_GP_BES_WEC,
+            },
+            {
+                ...tracks.MID_OHIO,
+            },
+            {
+                ...tracks.WILLOW_SPRINGS,
+            },
+            {
+                ...tracks.OULTON_PARK_INTL_NO_CHICANES,
+            },
+            {
+                ...tracks.PORTLAND_NO_CHICANE,
+            },
+        ],
+    },
 ];
 
 export default broadcasts;

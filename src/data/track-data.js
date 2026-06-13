@@ -1252,6 +1252,9 @@ export const SNETTERTON_200 = {
     title: 'Snetterton 200',
     alternateTitle: 'Snetterton Circuit - 200',
 };
+export const ST_PETERSBURG = {
+    title: 'St. Petersburg - Grand Prix',
+};
 export const SONOMA = {
     title: 'Sonoma',
     setups: {
@@ -1654,6 +1657,7 @@ const trackData = {
     SILVERSTONE_INTERNATIONAL,
     SILVERSTONE_2008_HISTORICAL_GP,
     SNETTERTON_200,
+    ST_PETERSBURG,
     SONOMA,
     SONOMA_CUP,
     SONOMA_CUP_LONG,

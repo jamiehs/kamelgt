@@ -75,6 +75,7 @@ export declare const SILVERSTONE_GP: TrackEntry;
 export declare const SILVERSTONE_INTERNATIONAL: TrackEntry;
 export declare const SILVERSTONE_2008_HISTORICAL_GP: TrackEntry;
 export declare const SNETTERTON_200: TrackEntry;
+export declare const ST_PETERSBURG: TrackEntry;
 export declare const SONOMA: TrackEntry;
 export declare const SONOMA_CUP: TrackEntry;
 export declare const SONOMA_CUP_LONG: TrackEntry;

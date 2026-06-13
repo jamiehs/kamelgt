@@ -2,54 +2,55 @@ import * as tracks from './track-data.js';
 
 const seasonSetups: SetupWeek[] = [
     {
-        ...tracks.ROAD_ATLANTA,
-        weekStart: '2026-03-17',
+        ...tracks.PHILLIP_ISLAND,
+        weekStart: '2026-06-16',
     },
     {
-        ...tracks.TWIN_RING_MOTEGI,
-        weekStart: '2026-03-24',
+        ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+        weekStart: '2026-06-23',
     },
     {
-        ...tracks.ADELAIDE_STREET_CIRCUIT,
-        weekStart: '2026-03-31',
+        ...tracks.ST_PETERSBURG,
+        weekStart: '2026-06-30',
+        notes: ['First time visit for the series'],
     },
     {
-        ...tracks.LAGUNA_SECA,
-        weekStart: '2026-04-07',
+        ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+        weekStart: '2026-07-07',
         notes: ['60 minute endurance round', 'Fuel stop required'],
     },
     {
-        ...tracks.DONINGTON_PARK,
-        weekStart: '2026-04-14',
+        ...tracks.OSCHERSLEBEN,
+        weekStart: '2026-07-14',
     },
     {
-        ...tracks.COTA,
-        weekStart: '2026-04-21',
+        ...tracks.BELLE_ISLE,
+        weekStart: '2026-07-21',
     },
     {
-        ...tracks.MIAMI_INTERNATIONAL_AUTODROME,
-        weekStart: '2026-04-28',
+        ...tracks.TSUKUBA,
+        weekStart: '2026-07-28',
     },
     {
-        ...tracks.BATHURST,
-        weekStart: '2026-05-05',
+        ...tracks.NURBURGRING_GP_BES_WEC,
+        weekStart: '2026-08-04',
     },
     {
-        ...tracks.LIME_ROCK_CLASSIC,
-        weekStart: '2026-05-12',
+        ...tracks.MID_OHIO,
+        weekStart: '2026-08-11',
     },
     {
-        ...tracks.LONG_BEACH,
-        weekStart: '2026-05-19',
-        notes: ['70 minute endurance round', 'Fuel stop required'],
+        ...tracks.WILLOW_SPRINGS,
+        weekStart: '2026-08-18',
+        notes: ['60 minute endurance round', 'Fuel stop required'],
     },
     {
-        ...tracks.MISANO,
-        weekStart: '2026-05-26',
+        ...tracks.OULTON_PARK_INTL_NO_CHICANES,
+        weekStart: '2026-08-25',
     },
     {
-        ...tracks.SPA_CLASSIC_PITS,
-        weekStart: '2026-06-02',
+        ...tracks.PORTLAND_NO_CHICANE,
+        weekStart: '2026-09-01',
     },
 ];
 
