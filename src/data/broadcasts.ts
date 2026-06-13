@@ -1433,7 +1433,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.SPA_CLASSIC_PITS,
-                url: '',
+                url: 'https://youtu.be/3ht78qAM6rs?t=363',
             },
         ],
     },
