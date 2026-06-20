@@ -1052,23 +1052,45 @@ export const PHILLIP_ISLAND = {
     setups: {
         audi90gto: [
             {
+                file: 'phillip-island/26s3-PhillipIsland20c.sto',
+            },
+            {
+                file: 'phillip-island/DWC_26S3_PI_Q4a.sto',
+                comment: QUAL
+            },
+            {
+                file: 'phillip-island/DWC_26S3_PI_R4.sto',
+            },
+            {
+                file: 'phillip-island/maf_phillip_26s3_q2.sto',
+                comment: QUAL
+            },
+            {
+                file: 'phillip-island/maf_phillip_26s3_r2.sto',
+            },
+            {
                 file: 'phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
             {
                 file: 'phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_R.sto',
             },
-            {
-                file: 'phillip-island/phillip-island-22S3-Phil3.1.1.sto',
-            },
-            {
-                file: 'phillip-island/phillip-island-22S3-r1.sto',
-            },
-            {
-                file: 'phillip-island/phillip-island-22S3-Y_Gijsen-220727-R.sto',
-            },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'phillip-island/F122_NZXT_PhilipIsland_1-3_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'phillip-island/F122_NZXT_PhilipIsland_1-3.sto',
+            },
+            {
+                file: 'phillip-island/Lgo26S3_Phillip_Island_Q55.sto',
+                comment: QUAL
+            },
+            {
+                file: 'phillip-island/Lgo26S3_Phillip_Island_R55.sto',
+            },
+],
     },
 };
 export const POCONO_RACEWAY_2009_INTERNATIONAL = {
