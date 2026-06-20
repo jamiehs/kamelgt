@@ -21,6 +21,38 @@ describe('general date calculations', () => {
     });
 });
 
+// Same-day edge cases: the function must correctly decide whether "today's" race
+// is still upcoming or already over. Aug 6 2022 is a Saturday (dayIndex=6).
+describe('same-day race decisions', () => {
+    it('returns this Saturday when race has not started yet today', () => {
+        // 12:00 now, race at 17:00 — race is still ahead of us
+        let result = nextRaceDay(6, '17:00', '2022-08-06 12:00').toString();
+        let expected = new Date('2022-08-06 17:00 GMT').toString();
+        expect(result).toBe(expected);
+    });
+
+    it('returns next Saturday when race ended earlier today (later hour, on the hour)', () => {
+        // 20:00 now, race was at 17:00 — the buggy && condition makes 20>17 && 0>0 = false
+        let result = nextRaceDay(6, '17:00', '2022-08-06 20:00').toString();
+        let expected = new Date('2022-08-13 17:00 GMT').toString();
+        expect(result).toBe(expected);
+    });
+
+    it('returns next Saturday when race ended earlier today (same hour, later minute)', () => {
+        // 17:30 now, race was at 17:00 — the buggy && condition makes 17>17 && 30>0 = false
+        let result = nextRaceDay(6, '17:00', '2022-08-06 17:30').toString();
+        let expected = new Date('2022-08-13 17:00 GMT').toString();
+        expect(result).toBe(expected);
+    });
+
+    it('returns this Saturday when it is exactly race time (boundary)', () => {
+        // At exactly 17:00 the race is starting — showing this week is correct
+        let result = nextRaceDay(6, '17:00', '2022-08-06 17:00').toString();
+        let expected = new Date('2022-08-06 17:00 GMT').toString();
+        expect(result).toBe(expected);
+    });
+});
+
 // BST is a good test
 describe('British Summer Time for Saturday race', () => {
     beforeAll(() => {

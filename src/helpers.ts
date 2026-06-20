@@ -30,8 +30,9 @@ const nextRaceDay = (dayIndex: number, timeSlot: string, nowString: string | nul
     const baseDate = new Date(nowDate);
 
     if (today === dayIndex) {
-        // race is today, still upcoming
-        if (nowHour > raceHour && nowMinute > raceMinute) {
+        // race is today — compare as total minutes to avoid the &&-trap where
+        // e.g. 17:30 after a 17:00 race gives (17>17 && 30>0) = false
+        if (nowHour * 60 + nowMinute > raceHour * 60 + raceMinute) {
             // race was today
             baseDate.setUTCDate(baseDate.getUTCDate() + 7);
         }
