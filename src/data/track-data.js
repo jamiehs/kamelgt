@@ -1052,45 +1052,50 @@ export const PHILLIP_ISLAND = {
     setups: {
         audi90gto: [
             {
-                file: 'phillip-island/26s3-PhillipIsland20c.sto',
+                file: 'phillip-island/DWC_26S3_PI_Q5.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'phillip-island/DWC_26S3_PI_R5.sto',
+            },
+            {
+                file: 'phillip-island/maf_phillip_26s3_q3.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'phillip-island/maf_phillip_26s3_r3.sto',
             },
             {
                 file: 'phillip-island/DWC_26S3_PI_Q4a.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'phillip-island/DWC_26S3_PI_R4.sto',
             },
             {
                 file: 'phillip-island/maf_phillip_26s3_q2.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'phillip-island/maf_phillip_26s3_r2.sto',
             },
-            {
-                file: 'phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_Q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'phillip-island/A90_PhillipIsland_23S3_Y_Gijsen_R.sto',
-            },
         ],
-        nissangtpzxt: [            {
+        nissangtpzxt: [
+            {
                 file: 'phillip-island/F122_NZXT_PhilipIsland_1-3_Q.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'phillip-island/F122_NZXT_PhilipIsland_1-3.sto',
             },
             {
                 file: 'phillip-island/Lgo26S3_Phillip_Island_Q55.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'phillip-island/Lgo26S3_Phillip_Island_R55.sto',
             },
-],
+        ],
     },
 };
 export const POCONO_RACEWAY_2009_INTERNATIONAL = {
@@ -1269,6 +1274,31 @@ export const SILVERSTONE_INTERNATIONAL = {
 };
 export const SILVERSTONE_2008_HISTORICAL_GP = {
     title: 'Silverstone 2008 - Historical Grand Prix',
+    setups: {
+        audi90gto: [
+            {
+                file: 'silverstone-2008/silvoHistoric_quali_izzydok.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'silverstone-2008/silvoHistoric_race_izzydok.sto',
+            },
+            {
+                file: 'silverstone-2008/A90_23S2_Silverstone08H_Y_Gijsen_Q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'silverstone-2008/A90_23S2_Silverstone08H_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'silverstone-2008/silverstone-2008-historic-22S3-r1.sto',
+            },
+            {
+                file: 'silverstone-2008/A90_-_22S3_-_Silverstone_H_-_Y_Gijsen_-_220719_-_R.sto',
+            },
+        ],
+        nissangtpzxt: [],
+    },
 };
 export const SNETTERTON_200 = {
     title: 'Snetterton 200',
@@ -1314,14 +1344,14 @@ export const SPA_CLASSIC_PITS = {
         audi90gto: [
             {
                 file: 'spa/26s2-Spa36c_Q.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'spa/26s2-Spa36c.sto',
             },
             {
                 file: 'spa/26s2-Spa_DoningtonmodifiedQ.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'spa/26s2-Spa_DoningtonmodifiedR.sto',
@@ -1333,14 +1363,15 @@ export const SPA_CLASSIC_PITS = {
                 file: 'spa/maf_spa_r3.sto',
             },
         ],
-        nissangtpzxt: [            {
+        nissangtpzxt: [
+            {
                 file: 'spa/Lgo26S2_Spa_Q50.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'spa/Lgo26S2_Spa_R50.sto',
             },
-],
+        ],
     },
 };
 export const SPA_ENDURANCE_PITS = {
