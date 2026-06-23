@@ -1445,6 +1445,7 @@ const broadcasts: any[] = [
         youTube: [
             {
                 ...tracks.PHILLIP_ISLAND,
+                url: 'https://youtu.be/g7SyuYWPLB0?t=276',
             },
             {
                 ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
