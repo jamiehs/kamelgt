@@ -1277,6 +1277,13 @@ export const SILVERSTONE_2008_HISTORICAL_GP = {
     setups: {
         audi90gto: [
             {
+                file: 'silverstone-2008/maf_silver_26s3_q0.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'silverstone-2008/maf_silver_26s3_r0.sto',
+            },
+            {
                 file: 'silverstone-2008/silvoHistoric_quali_izzydok.sto',
                 comment: QUAL,
             },
@@ -1291,13 +1298,17 @@ export const SILVERSTONE_2008_HISTORICAL_GP = {
                 file: 'silverstone-2008/A90_23S2_Silverstone08H_Y_Gijsen_R.sto',
             },
             {
-                file: 'silverstone-2008/silverstone-2008-historic-22S3-r1.sto',
-            },
-            {
                 file: 'silverstone-2008/A90_-_22S3_-_Silverstone_H_-_Y_Gijsen_-_220719_-_R.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [
+            {
+                file: 'silverstone-2008/F122_NGTP_SilverstoneH_1-4_Q.sto',
+            },
+            {
+                file: 'silverstone-2008/F122_NGTP_SilverstoneH_1-4B.sto',
+            },
+        ],
     },
 };
 export const SNETTERTON_200 = {
