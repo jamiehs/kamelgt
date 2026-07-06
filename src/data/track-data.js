@@ -1317,6 +1317,40 @@ export const SNETTERTON_200 = {
 };
 export const ST_PETERSBURG = {
     title: 'St. Petersburg - Grand Prix',
+    setups: {
+        audi90gto: [
+            {
+                file: 'st-petersburg/DWC_26S3_StPete_Q3.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'st-petersburg/DWC_26S3_StPete_R3.sto',
+            },
+            {
+                file: 'st-petersburg/maf_stpete_26s3_q1.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'st-petersburg/maf_stpete_26s3_r1.sto',
+            },
+        ],
+        nissangtpzxt: [
+            {
+                file: 'st-petersburg/Lgo26S3_St_Petersburg__Q80.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'st-petersburg/Lgo26S3_St_Petersburg__R81.sto',
+            },
+            {
+                file: 'st-petersburg/petersburgQ.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'st-petersburg/petersburgR.sto',
+            },
+        ],
+    },
 };
 export const SONOMA = {
     title: 'Sonoma',
@@ -1570,6 +1604,13 @@ export const WATKINS_GLEN_BOOT = {
     setups: {
         audi90gto: [
             {
+                file: 'watkins-glen/maf_watkins_boot_26s3_q0.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'watkins-glen/maf_watkins_boot_26s3_r0.sto',
+            },
+            {
                 file: 'watkins-glen/maf_watkins_24s4_q1.sto',
                 comment: QUAL,
             },
@@ -1585,13 +1626,6 @@ export const WATKINS_GLEN_BOOT = {
             },
             {
                 file: 'watkins-glen/WatkinsClassicBoot_BR-GTO_60min_v1.1.sto',
-            },
-            {
-                file: 'watkins-glen/watkins-classic-boot-23S3-q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'watkins-glen/watkins-classic-boot-23S3-r2.sto',
             },
         ],
         nissangtpzxt: [],
