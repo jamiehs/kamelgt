@@ -1604,18 +1604,18 @@ export const WATKINS_GLEN_BOOT = {
     setups: {
         audi90gto: [
             {
+                file: 'watkins-glen/DWC_26S3_WatkinsNoBus_Q1_dryish.sto',
+                comment: QUAL
+            },
+            {
+                file: 'watkins-glen/DWC_26S3_WatkinsNoBus_R1_dry.sto',
+            },
+            {
                 file: 'watkins-glen/maf_watkins_boot_26s3_q0.sto',
                 comment: QUAL,
             },
             {
                 file: 'watkins-glen/maf_watkins_boot_26s3_r0.sto',
-            },
-            {
-                file: 'watkins-glen/maf_watkins_24s4_q1.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'watkins-glen/maf_watkins_24s4_r1.sto',
             },
             {
                 file: 'watkins-glen/Watkins32c.sto',
@@ -1628,7 +1628,17 @@ export const WATKINS_GLEN_BOOT = {
                 file: 'watkins-glen/WatkinsClassicBoot_BR-GTO_60min_v1.1.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'watkins-glen/F122_NZXT_WatkinsNCBoot_1-3.sto',
+            },
+            {
+                file: 'watkins-glen/FRM_Watkins_26s3_Q_wet.sto',
+                comment: QUAL
+            },
+            {
+                file: 'watkins-glen/FRM_Watkins_26s3_R_wet.sto',
+            },
+],
     },
 };
 export const WATKINS_GLEN_CLASSIC = {
