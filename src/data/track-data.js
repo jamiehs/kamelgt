@@ -1040,19 +1040,18 @@ export const ORAN_PARK = {
 };
 export const OSCHERSLEBEN = {
     title: 'Oschersleben',
-,
     setups: {
-        "audi90gto": [
+        audi90gto: [
             {
                 file: 'oschersleben/A90_Oschersleben_26S3_Y_Gijsen_Q.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'oschersleben/A90_Oschersleben_26S3_Y_Gijsen_R.sto',
             },
             {
                 file: 'oschersleben/DWC_26S3_Oscher_Q2.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'oschersleben/DWC_26S3_Oscher_R2.sto',
@@ -1062,29 +1061,30 @@ export const OSCHERSLEBEN = {
             },
             {
                 file: 'oschersleben/maf_oschers_26s3_q0.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'oschersleben/maf_oschers_26s3_r0.sto',
             },
         ],
-        "nissangtpzxt": [
+        nissangtpzxt: [
             {
                 file: 'oschersleben/FRM_Oschersleben_26s3_Q.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'oschersleben/FRM_Oschersleben_26s3_R.sto',
             },
             {
                 file: 'oschersleben/Lgo26S3_Oschersleben_Q81.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'oschersleben/Lgo26S3_Oschersleben_R82.sto',
             },
         ],
-    }};
+    },
+};
 export const OULTON_PARK_INTL_WOUT_HISLOP = {
     title: 'Oulton Park - Intl w/out Hislop',
 };
@@ -1649,7 +1649,7 @@ export const WATKINS_GLEN_BOOT = {
         audi90gto: [
             {
                 file: 'watkins-glen/DWC_26S3_WatkinsNoBus_Q1_dryish.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'watkins-glen/DWC_26S3_WatkinsNoBus_R1_dry.sto',
@@ -1672,17 +1672,18 @@ export const WATKINS_GLEN_BOOT = {
                 file: 'watkins-glen/WatkinsClassicBoot_BR-GTO_60min_v1.1.sto',
             },
         ],
-        nissangtpzxt: [            {
+        nissangtpzxt: [
+            {
                 file: 'watkins-glen/F122_NZXT_WatkinsNCBoot_1-3.sto',
             },
             {
                 file: 'watkins-glen/FRM_Watkins_26s3_Q_wet.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'watkins-glen/FRM_Watkins_26s3_R_wet.sto',
             },
-],
+        ],
     },
 };
 export const WATKINS_GLEN_CLASSIC = {
