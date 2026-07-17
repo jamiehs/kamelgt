@@ -1449,12 +1449,15 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+                url: 'https://youtu.be/kF1pmZKoq-o?t=495',
             },
             {
                 ...tracks.ST_PETERSBURG,
+                url: 'https://youtu.be/iQ65IuQweQU?t=515',
             },
             {
                 ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
+                url: 'https://youtu.be/ksmw6atYu3g?t=866',
             },
             {
                 ...tracks.OSCHERSLEBEN,
