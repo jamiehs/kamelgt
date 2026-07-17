@@ -1040,7 +1040,51 @@ export const ORAN_PARK = {
 };
 export const OSCHERSLEBEN = {
     title: 'Oschersleben',
-};
+,
+    setups: {
+        "audi90gto": [
+            {
+                file: 'oschersleben/A90_Oschersleben_26S3_Y_Gijsen_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'oschersleben/A90_Oschersleben_26S3_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'oschersleben/DWC_26S3_Oscher_Q2.sto',
+                comment: QUAL
+            },
+            {
+                file: 'oschersleben/DWC_26S3_Oscher_R2.sto',
+            },
+            {
+                file: 'oschersleben/Oschersleben_2026.sto',
+            },
+            {
+                file: 'oschersleben/maf_oschers_26s3_q0.sto',
+                comment: QUAL
+            },
+            {
+                file: 'oschersleben/maf_oschers_26s3_r0.sto',
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: 'oschersleben/FRM_Oschersleben_26s3_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'oschersleben/FRM_Oschersleben_26s3_R.sto',
+            },
+            {
+                file: 'oschersleben/Lgo26S3_Oschersleben_Q81.sto',
+                comment: QUAL
+            },
+            {
+                file: 'oschersleben/Lgo26S3_Oschersleben_R82.sto',
+            },
+        ],
+    }};
 export const OULTON_PARK_INTL_WOUT_HISLOP = {
     title: 'Oulton Park - Intl w/out Hislop',
 };
