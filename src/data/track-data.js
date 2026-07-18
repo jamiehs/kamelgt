@@ -1069,6 +1069,13 @@ export const OSCHERSLEBEN = {
         ],
         nissangtpzxt: [
             {
+                file: 'oschersleben/Lgo26S3_Oschersleben_Q62.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'oschersleben/Lgo26S3_Oschersleben_R62.sto',
+            },
+            {
                 file: 'oschersleben/FRM_Oschersleben_26s3_Q.sto',
                 comment: QUAL,
             },

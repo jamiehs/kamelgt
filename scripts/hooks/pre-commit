@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Blocks commits that would introduce syntax errors in src/data.
+# These files are consumed at build/runtime without type-checking in the
+# browser, so a bad file here produces a white screen instead of a build
+# failure caught early. Installed via `npm run prepare` (core.hooksPath).
+set -euo pipefail
+
+staged_data_files=$(git diff --cached --name-only --diff-filter=ACM -- src/data | grep -E '\.(js|jsx|ts|tsx)$' || true)
+
+if [ -z "$staged_data_files" ]; then
+    exit 0
+fi
+
+echo "Checking staged src/data files for syntax errors..."
+
+status=0
+
+while IFS= read -r file; do
+    case "$file" in
+        *.ts | *.tsx) ;; # covered by the project-wide tsc check below
+        *)
+            if ! node --check "$file"; then
+                echo "Syntax error in $file"
+                status=1
+            fi
+            ;;
+    esac
+done <<<"$staged_data_files"
+
+if echo "$staged_data_files" | grep -qE '\.tsx?$'; then
+    if ! npx tsc --noEmit -p tsconfig.json; then
+        status=1
+    fi
+fi
+
+if [ "$status" -ne 0 ]; then
+    echo ""
+    echo "Commit blocked: fix the errors in src/data above before committing."
+    exit 1
+fi

@@ -40,6 +40,7 @@
         "cleanup": "find . -name \"*.Identifier\" -type f -delete",
         "sync-setups": "node scripts/sync-setups.mjs",
         "fetch-setups": "node scripts/fetch-setups.mjs",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "prepare": "git config core.hooksPath scripts/hooks"
     }
 }
