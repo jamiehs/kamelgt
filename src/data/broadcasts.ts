@@ -1461,6 +1461,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.OSCHERSLEBEN,
+                url: 'https://youtu.be/vxDgY0tDTcg?t=461',
             },
             {
                 ...tracks.BELLE_ISLE,
