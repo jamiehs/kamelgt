@@ -221,6 +221,22 @@ export const BATHURST = {
 };
 export const BELLE_ISLE = {
     title: 'Detroit Belle Isle',
+    setups: {
+        audi90gto: [
+            {
+                file: 'belle-isle/maf_belle_26s3_QH0.sto',
+            },
+        ],
+        nissangtpzxt: [
+            {
+                file: 'belle-isle/F122_NZXT_DetroitBI_1-2_Q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'belle-isle/F122_NZXT_DetroitBI_1-2.sto',
+            },
+        ],
+    },
 };
 export const BRANDS_HATCH = {
     title: 'Brands Hatch',
@@ -1042,6 +1058,20 @@ export const OSCHERSLEBEN = {
     title: 'Oschersleben',
     setups: {
         audi90gto: [
+            {
+                file: 'oschersleben/DWC_26S3_Oscher_Q3.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'oschersleben/DWC_26S3_Oscher_R3.sto',
+            },
+            {
+                file: 'oschersleben/maf_oschers_26s3_q1.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'oschersleben/maf_oschers_26s3_r1.sto',
+            },
             {
                 file: 'oschersleben/A90_Oschersleben_26S3_Y_Gijsen_Q.sto',
                 comment: QUAL,
