@@ -64,31 +64,30 @@ describe('buildTrackIndex', () => {
         expect(result?.folderName).toBeTruthy();
     });
 
-    it('resolve("miami") returns miami-international-autodrome', () => {
-        expect(index.resolve('miami')?.folderName).toBe('miami-international-autodrome');
+    it('resolve("miami") returns mia (Miami International Autodrome)', () => {
+        expect(index.resolve('miami')?.folderName).toBe('mia');
     });
 
-    it('resolve("homestead") returns miami-homestead', () => {
-        expect(index.resolve('homestead')?.folderName).toBe('miami-homestead');
+    it('resolve("homestead") returns homestead', () => {
+        expect(index.resolve('homestead')?.folderName).toBe('homestead');
     });
 
-    it('resolve("mia") returns miami-international-autodrome', () => {
-        expect(index.resolve('mia')?.folderName).toBe('miami-international-autodrome');
+    it('resolve("mia") returns mia (Miami International Autodrome)', () => {
+        expect(index.resolve('mia')?.folderName).toBe('mia');
     });
 });
 
 describe('resolveAll', () => {
-    it('resolveAll("miami") returns both miami tracks', () => {
+    it('resolveAll("miami") resolves unambiguously to mia — "homestead" is the separate track\'s own name', () => {
         const results = index.resolveAll('miami');
         const folders = results.map((r) => r.folderName);
-        expect(folders).toContain('miami-homestead');
-        expect(folders).toContain('miami-international-autodrome');
+        expect(folders).toEqual(['mia']);
     });
 
-    it('resolveAll("homestead") returns only miami-homestead', () => {
+    it('resolveAll("homestead") returns only homestead', () => {
         const results = index.resolveAll('homestead');
         expect(results).toHaveLength(1);
-        expect(results[0].folderName).toBe('miami-homestead');
+        expect(results[0].folderName).toBe('homestead');
     });
 
     it('resolveAll returns empty array for gibberish', () => {
