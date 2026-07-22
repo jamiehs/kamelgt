@@ -917,8 +917,8 @@ const broadcasts: any[] = [
                 url: 'https://youtu.be/TbOJqZUhY-U?t=885',
             },
             {
-                ...tracks.DONINGTON_PARK,
-                url: 'https://youtu.be/68Ex20Maghg?t=728',
+                ...tracks.HOCKENHEIM_GP,
+                url: 'https://youtu.be/7d7bgU3_3gI?t=904',
             },
             {
                 ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
