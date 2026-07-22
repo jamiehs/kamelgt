@@ -102,4 +102,7 @@ async function main() {
     console.log('  Review: git diff src/data/broadcasts.ts');
 }
 
-main();
+main().catch((err) => {
+    console.error(err.message);
+    process.exit(1);
+});
