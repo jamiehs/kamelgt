@@ -1,6 +1,656 @@
 import * as tracks from './track-data.js';
 const broadcasts: any[] = [
     {
+        id: '17S2',
+        label: '2017 Season 2',
+        startDate: '2017-04-25',
+        endDate: '2017-05-30',
+        // Only rounds 7-12 were ever archived on YouTube; rounds 1-6 don't exist anywhere we could find.
+        startRound: 7,
+        youTube: [
+            {
+                ...tracks.SUZUKA,
+                url: 'https://youtu.be/NZhbHSog34I',
+            },
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/hm0XAHYPwjw',
+            },
+            {
+                ...tracks.DONINGTON_PARK,
+                url: 'https://youtu.be/68Ex20Maghg',
+            },
+            {
+                ...tracks.SEBRING,
+                url: 'https://youtu.be/sbjEihuxczA',
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: 'https://youtu.be/voC5Pcp0Qhk',
+            },
+            {
+                ...tracks.WATKINS_GLEN_BOOT,
+                url: 'https://youtu.be/qUZP0xhIoUU',
+            },
+        ],
+    },
+    {
+        id: '17S3',
+        label: '2017 Season 3',
+        startDate: '2017-06-13',
+        endDate: '2017-08-29',
+        youTube: [
+            {
+                ...tracks.LE_MANS,
+                url: 'https://youtu.be/yF9LU5V8_zQ',
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: 'https://youtu.be/MybP-bUgASo',
+            },
+            {
+                ...tracks.MID_OHIO,
+                url: 'https://youtu.be/YiaBjPWCuN4',
+            },
+            {
+                ...tracks.VIR,
+                url: 'https://youtu.be/AwEWrjQ6RCU',
+            },
+            {
+                ...tracks.OKAYAMA,
+                url: 'https://youtu.be/SMUubGzWtv8',
+            },
+            {
+                ...tracks.MONTREAL,
+                url: 'https://youtu.be/rdfbezgbn6M',
+            },
+            {
+                ...tracks.LIME_ROCK,
+                url: 'https://youtu.be/EmMT2tPLqes',
+            },
+            {
+                ...tracks.BRANDS_HATCH,
+                url: 'https://youtu.be/U5EQ36hqShs',
+            },
+            {
+                ...tracks.SUMMIT_POINT,
+                url: 'https://youtu.be/Aa2zIKUnWiI',
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: 'https://youtu.be/vj9qdHiFHzA',
+            },
+            {
+                ...tracks.CHARLOTTE_ROVAL,
+                url: 'https://youtu.be/rARaoQ6OunI',
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: 'https://youtu.be/DaQyyqfub0I',
+            },
+        ],
+    },
+    {
+        id: '17S4',
+        label: '2017 Season 4',
+        startDate: '2017-09-12',
+        endDate: '2017-11-28',
+        youTube: [
+            {
+                ...tracks.NORDSCHLEIFE_INDUSTRIEFAHRTEN,
+                url: 'https://youtu.be/j3OkCDGpZuI',
+            },
+            {
+                ...tracks.SNETTERTON_200,
+                url: 'https://youtu.be/dch0UzbH6Ao',
+            },
+            {
+                ...tracks.DAYTONA,
+                url: 'https://youtu.be/0GNcHFCSzOg',
+            },
+            {
+                ...tracks.BARBER,
+                url: 'https://youtu.be/GEIfBP6O_yE',
+            },
+            {
+                ...tracks.SONOMA,
+                url: 'https://youtu.be/z0cQHopRjzM',
+            },
+            {
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+                url: 'https://youtu.be/jzwNA3oIhV8',
+            },
+            {
+                ...tracks.SEBRING,
+                url: 'https://youtu.be/6eXJkmdT4m8',
+            },
+            {
+                ...tracks.MONZA,
+                url: 'https://youtu.be/5-LwZs-wFXI',
+            },
+            {
+                ...tracks.ZOLDER,
+                url: 'https://youtu.be/83lTemeY7r4',
+            },
+            {
+                ...tracks.INTERLAGOS,
+                url: 'https://youtu.be/vm2K1U1C6EY',
+            },
+            {
+                ...tracks.MOSPORT,
+                url: 'https://youtu.be/Lk2rPWOeOq0',
+            },
+            {
+                ...tracks.SUZUKA,
+                url: 'https://youtu.be/Trbpc4XWixk',
+            },
+        ],
+    },
+    {
+        id: '18S1',
+        label: '2018 Season 1',
+        startDate: '2017-12-12',
+        endDate: '2018-02-27',
+        youTube: [
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: 'https://youtu.be/o3wvWF_aeoE',
+            },
+            {
+                ...tracks.IMOLA,
+                url: 'https://youtu.be/3uSYhQvL5qs',
+            },
+            {
+                ...tracks.COTA,
+                url: 'https://youtu.be/jCeVhNhK24k',
+            },
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/Y7QTMs_EuE0',
+            },
+            {
+                ...tracks.NURBURGRING_GP,
+                url: 'https://youtu.be/_G7tI4TvzWg',
+            },
+            {
+                ...tracks.SUZUKA,
+                url: 'https://youtu.be/4wrgR19ZkB0',
+            },
+            {
+                ...tracks.TWIN_RING_MOTEGI,
+                url: 'https://youtu.be/I3bd_pckHJ4',
+            },
+            {
+                ...tracks.SUMMIT_POINT,
+                url: 'https://youtu.be/sJeADrtthYY',
+            },
+            {
+                ...tracks.LIME_ROCK,
+                url: 'https://youtu.be/wuk5-P2wimU',
+            },
+            {
+                ...tracks.WATKINS_GLEN_BOOT,
+                url: 'https://youtu.be/a3ouXqNp4VM',
+            },
+            {
+                ...tracks.OULTON_PARK_INTL_NO_CHICANES,
+                url: 'https://youtu.be/r3Tr0E6eM3g',
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: 'https://youtu.be/R01R0v5BUQI',
+            },
+        ],
+    },
+    {
+        id: '18S2',
+        label: '2018 Season 2',
+        startDate: '2018-03-13',
+        endDate: '2018-05-29',
+        youTube: [
+            {
+                ...tracks.SEBRING,
+                url: 'https://youtu.be/2eUgWvhYj7E',
+            },
+            {
+                ...tracks.LAGUNA_SECA,
+                url: 'https://youtu.be/7TgzJ80_vxc',
+            },
+            {
+                ...tracks.INDY_ROAD,
+                url: 'https://youtu.be/4Qhjq6joRtU',
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: 'https://youtu.be/GnSkS3Rm5Hw',
+            },
+            {
+                ...tracks.MOSPORT,
+                url: 'https://youtu.be/Q7DP9UU2Fk8',
+            },
+            {
+                ...tracks.MONZA,
+                url: 'https://youtu.be/DcmHw4rtfd4',
+            },
+            {
+                ...tracks.ORAN_PARK,
+                url: 'https://youtu.be/C3dkTcT4U0Q',
+            },
+            {
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+                url: 'https://youtu.be/MinYf1xTBtM',
+            },
+            {
+                ...tracks.ZANDVOORT,
+                url: 'https://youtu.be/_xJaYiG48sg',
+            },
+            {
+                ...tracks.NORDSCHLEIFE_INDUSTRIEFAHRTEN,
+                url: 'https://youtu.be/l-tozdeswHs',
+            },
+            {
+                ...tracks.BRANDS_HATCH,
+                url: 'https://youtu.be/kghg_ctKKDo',
+            },
+            {
+                ...tracks.DAYTONA,
+                url: 'https://youtu.be/EEdxOIBRJ8U',
+            },
+        ],
+    },
+    {
+        id: '18S3',
+        label: '2018 Season 3',
+        startDate: '2018-06-12',
+        endDate: '2018-08-28',
+        youTube: [
+            {
+                ...tracks.WATKINS_GLEN_BOOT,
+                url: 'https://youtu.be/dBhLTTe7lU0',
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: 'https://youtu.be/zpIX5rI_lmw',
+            },
+            {
+                ...tracks.BELLE_ISLE,
+                url: 'https://youtu.be/-h9gcSY1FPA',
+            },
+            {
+                ...tracks.SUMMIT_POINT,
+                url: 'https://youtu.be/eDLUWcRm9bM',
+            },
+            {
+                ...tracks.OKAYAMA,
+                url: 'https://youtu.be/YIc9zPtwRyM',
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: 'https://youtu.be/4x-IsAnU4jY',
+            },
+            {
+                ...tracks.VIR,
+                url: 'https://youtu.be/N5EUhYGj69k',
+            },
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/Qj8886cOhQY',
+            },
+            {
+                ...tracks.MONTREAL,
+                url: 'https://youtu.be/KCnlAU0oCgY',
+            },
+            {
+                ...tracks.LE_MANS,
+                url: 'https://youtu.be/mGSsHVWMK9Q',
+            },
+            {
+                ...tracks.DONINGTON_PARK,
+                url: 'https://youtu.be/_XbLkE-tjso',
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: 'https://youtu.be/ZOl-swkabq4',
+            },
+        ],
+    },
+    {
+        id: '18S4',
+        label: '2018 Season 4',
+        startDate: '2018-09-11',
+        endDate: '2018-11-27',
+        youTube: [
+            {
+                ...tracks.SUZUKA,
+                url: 'https://youtu.be/87NE8VLOOrw',
+            },
+            {
+                ...tracks.ZOLDER,
+                url: 'https://youtu.be/Ku3RLSkiswM',
+            },
+            {
+                ...tracks.LIME_ROCK,
+                url: 'https://youtu.be/XO0wQW8Y-bQ',
+            },
+            {
+                ...tracks.MONZA,
+                url: 'https://youtu.be/6XqnLwS2JNM',
+            },
+            {
+                ...tracks.NORDSCHLEIFE_INDUSTRIEFAHRTEN,
+                url: 'https://youtu.be/eXThITBFwgU',
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: 'https://youtu.be/Za-IIRJ1HsA',
+            },
+            {
+                ...tracks.CHARLOTTE_ROVAL,
+                url: 'https://youtu.be/mpvPPFLTibg',
+            },
+            {
+                ...tracks.SEBRING,
+                url: 'https://youtu.be/Uk0SsuxtUWs',
+            },
+            {
+                ...tracks.SNETTERTON_200,
+                url: 'https://youtu.be/tG_4wc2p3t4',
+            },
+            {
+                ...tracks.IMOLA,
+                url: 'https://youtu.be/gdz56KPF0XU',
+            },
+            {
+                ...tracks.INTERLAGOS,
+                url: 'https://youtu.be/Vw5-QxDL-Zk',
+            },
+            {
+                ...tracks.DAYTONA,
+                url: 'https://youtu.be/LYpkSPfZyrA',
+            },
+        ],
+    },
+    {
+        id: '19S1',
+        label: '2019 Season 1',
+        startDate: '2018-12-18',
+        endDate: '2019-03-05',
+        youTube: [
+            {
+                ...tracks.SUMMIT_POINT,
+                url: 'https://youtu.be/fPs1QYTGIbI',
+            },
+            {
+                ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
+                url: 'https://youtu.be/m_mWaUPpxkA',
+            },
+            {
+                ...tracks.SONOMA,
+                url: 'https://youtu.be/m5_4ABsYJaw',
+            },
+            {
+                ...tracks.BELLE_ISLE,
+                url: 'https://youtu.be/OhR6Pd_U1rY',
+            },
+            {
+                ...tracks.INDY_ROAD,
+                url: 'https://youtu.be/wIl39T8oF2o',
+            },
+            {
+                ...tracks.WATKINS_GLEN_BOOT,
+                url: 'https://youtu.be/wtQozgxTfw4',
+            },
+            {
+                ...tracks.TWIN_RING_MOTEGI,
+                url: 'https://youtu.be/A4LmmqSrm5E',
+            },
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/DTTTN1h4m9M',
+            },
+            {
+                ...tracks.VIR,
+                url: 'https://youtu.be/1OZBg8lJA_0',
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: 'https://youtu.be/wr6VaWYk2NY',
+            },
+            {
+                ...tracks.BARBER,
+                url: 'https://youtu.be/UfCCrtY2TP0',
+            },
+            {
+                ...tracks.MOSPORT,
+                url: 'https://youtu.be/bu7q2Zd8Yf8',
+            },
+        ],
+    },
+    {
+        id: '19S2',
+        label: '2019 Season 2',
+        startDate: '2019-03-19',
+        endDate: '2019-06-04',
+        youTube: [
+            {
+                ...tracks.ROAD_AMERICA,
+                url: 'https://youtu.be/6303c3w0iMA',
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: 'https://youtu.be/7wapLOlotvw',
+            },
+            {
+                ...tracks.COTA,
+                url: 'https://youtu.be/bXNnV1Opq90',
+            },
+            {
+                ...tracks.LAGUNA_SECA,
+                url: 'https://youtu.be/EUWSOWNPpUA',
+            },
+            {
+                ...tracks.SEBRING,
+                url: 'https://youtu.be/SLqJ5kxLvjw',
+            },
+            {
+                ...tracks.OULTON_PARK_INTL_WOUT_HISLOP,
+                url: 'https://youtu.be/POeFFB6yaMk',
+            },
+            {
+                ...tracks.LE_MANS,
+                url: 'https://youtu.be/m76VBsf0GhU',
+            },
+            {
+                ...tracks.NURBURGRING_COMBINED_24H,
+                url: 'https://youtu.be/n7sBYbo3U0Y',
+            },
+            {
+                ...tracks.MID_OHIO,
+                url: 'https://youtu.be/f6SrIUnzMmE',
+            },
+            {
+                ...tracks.DAYTONA,
+                url: 'https://youtu.be/1zaKFpq3ho4',
+            },
+            {
+                ...tracks.ZANDVOORT,
+                url: 'https://youtu.be/qdMrHR-RDTQ',
+            },
+            {
+                ...tracks.BRANDS_HATCH,
+                url: 'https://youtu.be/PZYR2a4-pTs',
+            },
+        ],
+    },
+    {
+        id: '19S3',
+        label: '2019 Season 3',
+        startDate: '2019-06-25',
+        endDate: '2019-09-10',
+        youTube: [
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/qVJLAAQTWUE',
+            },
+            {
+                ...tracks.ZOLDER,
+                url: 'https://youtu.be/eN-96ZddLPE',
+            },
+            {
+                ...tracks.SNETTERTON_200,
+                url: 'https://youtu.be/fLTAGO-oybw',
+            },
+            {
+                ...tracks.INTERLAGOS,
+                url: 'https://youtu.be/p4wsv_OfX4o',
+            },
+            {
+                ...tracks.MONZA,
+                url: 'https://youtu.be/bwgx5_27QIQ',
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: 'https://youtu.be/t-wGSvcaz_c',
+            },
+            {
+                ...tracks.LIME_ROCK,
+                url: 'https://youtu.be/nvyGG0Oq1tM',
+            },
+            {
+                ...tracks.BELLE_ISLE,
+                url: 'https://youtu.be/pfNVjmB4_z0',
+            },
+            {
+                ...tracks.OKAYAMA,
+                url: 'https://youtu.be/ta3fXYBeDHo',
+            },
+            {
+                ...tracks.WATKINS_GLEN_BOOT,
+                url: 'https://youtu.be/Pti_jgxI2-U',
+            },
+            {
+                ...tracks.DONINGTON_PARK,
+                url: 'https://youtu.be/m-bElsivZrI',
+            },
+            {
+                ...tracks.MONTREAL,
+                url: 'https://youtu.be/28mxpofFty0',
+            },
+        ],
+    },
+    {
+        id: '19S4',
+        label: '2019 Season 4',
+        startDate: '2019-09-10',
+        endDate: '2019-11-26',
+        youTube: [
+            {
+                ...tracks.SEBRING,
+                url: 'https://youtu.be/dpe97odGfqY',
+            },
+            {
+                ...tracks.IMOLA,
+                url: 'https://youtu.be/wckSxQVm0e4',
+            },
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/jXtNHH92sbg',
+            },
+            {
+                ...tracks.NURBURGRING_COMBINED_24H,
+                url: 'https://youtu.be/tIG8S1ZD4U0',
+            },
+            {
+                ...tracks.BRANDS_HATCH,
+                url: 'https://youtu.be/REhsiHu1z3k',
+            },
+            {
+                ...tracks.INTERLAGOS,
+                url: 'https://youtu.be/vlvTmqUWaeQ',
+            },
+            {
+                ...tracks.MONZA,
+                url: 'https://youtu.be/J-somqkttNU',
+            },
+            {
+                ...tracks.SUZUKA,
+                url: 'https://youtu.be/ZmkVXvXYjlI',
+            },
+            {
+                ...tracks.ROAD_ATLANTA,
+                url: 'https://youtu.be/GTf15o_ktVo',
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+                url: 'https://youtu.be/M6-rsuS85vU',
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: 'https://youtu.be/qM6ElNW-kY8',
+            },
+            {
+                ...tracks.WATKINS_GLEN_BOOT,
+                url: 'https://youtu.be/DrVrD5t56P4',
+            },
+        ],
+    },
+    {
+        id: '20S1',
+        label: '2020 Season 1',
+        startDate: '2019-12-10',
+        endDate: '2020-02-25',
+        youTube: [
+            {
+                ...tracks.LE_MANS,
+                url: 'https://youtu.be/dw9_hy5in4w',
+            },
+            {
+                ...tracks.SILVERSTONE_GP,
+                url: 'https://youtu.be/rsV_1Q_y_FI',
+            },
+            {
+                ...tracks.PHILLIP_ISLAND,
+                url: 'https://youtu.be/XtjYEkBS1wk',
+            },
+            {
+                ...tracks.NORDSCHLEIFE_INDUSTRIEFAHRTEN,
+                url: 'https://youtu.be/JeVF3en1Oig',
+            },
+            {
+                ...tracks.ZANDVOORT,
+                url: 'https://youtu.be/TAXghyXR5pE',
+            },
+            {
+                ...tracks.BARCELONA,
+                url: 'https://youtu.be/1iSZZcNtmnI',
+            },
+            {
+                ...tracks.OULTON_PARK_INTL_NO_CHICANES,
+                url: 'https://youtu.be/4TZgzzIWDD0',
+            },
+            {
+                ...tracks.BATHURST,
+                url: 'https://youtu.be/MwoINIg373o',
+            },
+            {
+                ...tracks.SPA_CLASSIC_PITS,
+                url: 'https://youtu.be/wwlseClQcXA',
+            },
+            {
+                ...tracks.SUZUKA,
+                url: 'https://youtu.be/6yhuKVPEpxg',
+            },
+            {
+                ...tracks.IMOLA,
+                url: 'https://youtu.be/RS5NtK_qdX4',
+            },
+            {
+                ...tracks.MONZA,
+                url: 'https://youtu.be/wgKd1eUZBzI',
+            },
+        ],
+    },
+    {
         id: '20S2',
         label: '2020 Season 2',
         startDate: '2020-03-10',

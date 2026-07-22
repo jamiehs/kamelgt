@@ -67,7 +67,7 @@ class App extends React.Component<object, AppState> {
         this.flattenedBroadcasts = broadcasts
             .map((season) => {
                 return season.youTube.map((event: any, index: number) => {
-                    const round = index + 1;
+                    const round = (season.startRound ?? 1) + index;
                     return {
                         id: season.id,
                         label: season.label,
@@ -556,7 +556,7 @@ class App extends React.Component<object, AppState> {
                                 return (
                                     <div key={season.id} className="videos-grid">
                                         {season.youTube.map((week: any, index: number) => {
-                                            const round = index + 1;
+                                            const round = (season.startRound ?? 1) + index;
                                             const { url, title, thumbText, thumb } = week;
                                             const raceDate = addDaysToDate(
                                                 dateTimeFromString(season.startDate, '17:00'),
