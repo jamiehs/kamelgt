@@ -104,3 +104,47 @@ For example, `npm run sync-setups cota` will scan all `.sto` files in `public/se
 ### After running the script
 
 Review with `git diff src/data/track-data.js`, then commit the setup files and the track-data change together.
+
+---
+
+## add-broadcast
+
+Finds the current season's next unfilled broadcast slot in
+`src/data/broadcasts.ts`, searches YouTube for the matching video, and
+writes a timestamped URL into it:
+
+```bash
+npm run add-broadcast
+```
+
+**Requires:** [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) on your `PATH`
+(`brew install yt-dlp`). No YouTube API key needed — it uses `yt-dlp`'s
+search support, not the official Data API.
+
+### How it works
+
+1. Picks the season block in `broadcasts.ts` whose date range covers today
+   (falling back to the most recent block between seasons), then finds the
+   first `youTube` entry without a `url` — that's this week's target. Its
+   position in the array is treated as the round number (GSRC's video
+   titles are numbered `Round N` in the same order as the season's track
+   list).
+2. Searches `imsa vintage <year> s<n>` via `yt-dlp` and filters results to
+   the `@GSRCBroadcasting` channel with a matching `Round N` in the title.
+3. Estimates the pre-show offset as the average of the last 10 `?t=`
+   values already in the file, and writes
+   `https://youtu.be/<id>?t=<offset>` straight into the entry — there's no
+   scrub/verify step, so double-check the timestamp lands in a reasonable
+   spot and adjust by hand if it's off.
+
+### What to watch out for
+
+- **Video not posted yet:** if GSRC hasn't uploaded the round yet, the
+  script prints a message and exits without changing anything. Safe to
+  re-run later.
+- **Ambiguous match:** if more than one GSRC video matches the round
+  number, you'll be prompted to pick from a numbered list.
+- **Offset accuracy:** the estimate is a trailing average, not a measurement
+  of the actual video — pre-show length varies stream to stream. Treat it
+  as a starting point; edit the `t=` value in `broadcasts.ts` by hand if
+  the timestamp is off.
