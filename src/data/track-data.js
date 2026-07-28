@@ -229,6 +229,13 @@ export const BELLE_ISLE = {
         ],
         nissangtpzxt: [
             {
+                file: 'belle-isle/Lgo26S3_Detroit_Q80.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'belle-isle/Lgo26S3_Detroit_R80.sto',
+            },
+            {
                 file: 'belle-isle/F122_NZXT_DetroitBI_1-2_Q.sto',
                 comment: QUAL,
             },
@@ -1599,6 +1606,18 @@ export const THRUXTON = {
 export const TSUKUBA = {
     title: 'Tsukuba',
     alternateTitle: 'Tsukuba Circuit',
+    setups: {
+        audi90gto: [],
+        nissangtpzxt: [
+            {
+                file: 'tsukuba/FRM_Tsukuba_26s3_Q_3.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'tsukuba/FRM_Tsukuba_26s3_R_3.sto',
+            },
+        ],
+    },
 };
 export const TWIN_RING_MOTEGI = {
     title: 'Mobility Resort Motegi',
