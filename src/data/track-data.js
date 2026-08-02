@@ -1607,8 +1607,30 @@ export const TSUKUBA = {
     title: 'Tsukuba',
     alternateTitle: 'Tsukuba Circuit',
     setups: {
-        audi90gto: [],
+        audi90gto: [
+            {
+                file: 'tsukuba/maf_tsukuba_26s3_q3.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'tsukuba/maf_tsukuba_26s3_r3.sto',
+            },
+        ],
         nissangtpzxt: [
+            {
+                file: 'tsukuba/F122_NZXT_Tsukuba_1-4_Q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'tsukuba/F122_NZXT_Tsukuba_1-4.sto',
+            },
+            {
+                file: 'tsukuba/Lgo26S3_Tsukuba_2k_full_Q81.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'tsukuba/Lgo26S3_Tsukuba_2k_full_R81.sto',
+            },
             {
                 file: 'tsukuba/FRM_Tsukuba_26s3_Q_3.sto',
                 comment: QUAL,
