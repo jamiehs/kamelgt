@@ -2115,9 +2115,11 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.BELLE_ISLE,
+                url: 'https://youtu.be/0ZTqHBlbNug?t=460',
             },
             {
                 ...tracks.TSUKUBA,
+                url: 'https://youtu.be/VuDys9s_BLo?t=488',
             },
             {
                 ...tracks.NURBURGRING_GP_BES_WEC,
