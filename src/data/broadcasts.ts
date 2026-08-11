@@ -2123,6 +2123,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.NURBURGRING_GP_BES_WEC,
+                url: 'https://youtu.be/gndK4H0oJmU?t=496',
             },
             {
                 ...tracks.MID_OHIO,
