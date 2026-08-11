@@ -783,6 +783,9 @@ export const MID_OHIO = {
     setups: {
         audi90gto: [
             {
+                file: 'mid-ohio/audrius_Mid-Ohio30c_24s4_asc26s3.sto',
+            },
+            {
                 file: 'mid-ohio/A90_MidOhio_25S3_Y_Gijsen_R.sto',
             },
             {
@@ -813,7 +816,15 @@ export const MID_OHIO = {
                 file: 'mid-ohio/Mid-Ohio30c.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [
+            {
+                file: 'mid-ohio/F122_NZXT_Mid-Ohio_1-4_Q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'mid-ohio/F122_NZXT_Mid-Ohio_1-4.sto',
+            },
+        ],
     },
 };
 export const MID_OHIO_CHICANE = {
@@ -982,6 +993,13 @@ export const NURBURGRING_GP = {
     alternateTitle: 'Nurburgring GP',
     setups: {
         audi90gto: [
+            {
+                file: 'nurburgring-gp/maf_nurbgp_26s3_q2.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'nurburgring-gp/maf_nurbgp_26s3_r2.sto',
+            },
             {
                 file: 'nurburgring-gp/A90_NurbGP_24S1_Y_Gijsen_Q.sto',
                 comment: QUAL,
