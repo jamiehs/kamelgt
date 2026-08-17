@@ -783,6 +783,13 @@ export const MID_OHIO = {
     setups: {
         audi90gto: [
             {
+                file: 'mid-ohio/maf_midohio_26s3_q1.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'mid-ohio/maf_midohio_26s3_r1.sto',
+            },
+            {
                 file: 'mid-ohio/audrius_Mid-Ohio30c_24s4_asc26s3.sto',
             },
             {
@@ -817,6 +824,13 @@ export const MID_OHIO = {
             },
         ],
         nissangtpzxt: [
+            {
+                file: 'mid-ohio/Lgo26S3_MidOhio_Full_Q91.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'mid-ohio/Lgo26S3_MidOhio_Full_R91.sto',
+            },
             {
                 file: 'mid-ohio/F122_NZXT_Mid-Ohio_1-4_Q.sto',
                 comment: QUAL,
@@ -1799,6 +1813,18 @@ export const WATKINS_GLEN_CUP = {
 };
 export const WILLOW_SPRINGS = {
     title: 'Willow Springs',
+    setups: {
+        audi90gto: [
+            {
+                file: 'willow-springs/maf_willow_26s3_q1.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'willow-springs/maf_willow_26s3_r1.sto',
+            },
+        ],
+        nissangtpzxt: [],
+    },
 };
 export const ZANDVOORT = {
     title: 'Zandvoort',
