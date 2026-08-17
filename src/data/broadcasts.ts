@@ -2127,6 +2127,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.MID_OHIO,
+                url: 'https://youtu.be/tHp90NYy7PQ?t=351',
             },
             {
                 ...tracks.WILLOW_SPRINGS,
