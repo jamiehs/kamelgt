@@ -6,6 +6,7 @@ import {
     parseSeasonBlocks,
     pickCurrentBlock,
     findUnfilledEntry,
+    titleMatchesRound,
     buildSearchQuery,
     averageRecentOffset,
     insertUrl,
@@ -63,8 +64,7 @@ async function main() {
         return;
     }
     const channelResults = results.filter((r) => r.uploaderId === CHANNEL_HANDLE);
-    const roundRe = new RegExp(`round\\s+${roundNumber}\\b`, 'i');
-    const matches = channelResults.filter((r) => roundRe.test(r.title));
+    const matches = channelResults.filter((r) => titleMatchesRound(r.title, roundNumber));
 
     let chosen;
     if (matches.length === 1) {

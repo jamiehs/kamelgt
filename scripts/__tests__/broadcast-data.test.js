@@ -4,6 +4,7 @@ import {
     parseSeasonBlocks,
     pickCurrentBlock,
     findUnfilledEntry,
+    titleMatchesRound,
     buildSearchQuery,
     averageRecentOffset,
     insertUrl,
@@ -125,6 +126,24 @@ describe('findUnfilledEntry', () => {
         const result = findUnfilledEntry(blocks[1]);
         expect(result.entry.trackKey).toBe('MEXICO_NATIONAL_HISTORIC');
         expect(result.roundNumber).toBe(3);
+    });
+});
+
+describe('titleMatchesRound', () => {
+    it('matches the abbreviated "R<N>" form GSRCBroadcasting actually uses', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S3 R10 | Willow Springs Big Willow', 10)).toBe(true);
+    });
+
+    it('does not let "R1" match round 10', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S3 R10 | Willow Springs Big Willow', 1)).toBe(false);
+    });
+
+    it('still matches the spelled-out "Round N" form', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | Round 10 | Willow Springs', 10)).toBe(true);
+    });
+
+    it('does not match unrelated titles', () => {
+        expect(titleMatchesRound('IMSA Vintage, Audi 90 GTO, S3 2026 W11, Oulton Park. Wednesday. iRacing', 11)).toBe(false);
     });
 });
 

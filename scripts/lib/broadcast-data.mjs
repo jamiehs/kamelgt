@@ -97,6 +97,15 @@ function findUnfilledEntry(block) {
     return { entry: block.entries[idx], roundNumber: idx + 1 };
 }
 
+// Whether a YouTube title refers to the given 1-based round number.
+// GSRCBroadcasting titles use the abbreviated "R<N>" form (e.g. "S3 R10"),
+// not the spelled-out "Round N" — match both, word-bounded so "R1" doesn't
+// also match "R10".
+function titleMatchesRound(title, roundNumber) {
+    const re = new RegExp(`\\b(?:round\\s+${roundNumber}|r${roundNumber})\\b`, 'i');
+    return re.test(title);
+}
+
 function buildSearchQuery(seasonId) {
     const m = seasonId.match(/^(\d{2})S(\d+)$/);
     if (!m) throw new Error(`Unrecognized season id format: ${seasonId}`);
@@ -130,6 +139,7 @@ export {
     parseSeasonBlocks,
     pickCurrentBlock,
     findUnfilledEntry,
+    titleMatchesRound,
     buildSearchQuery,
     averageRecentOffset,
     insertUrl,
