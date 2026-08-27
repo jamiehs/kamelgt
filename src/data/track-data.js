@@ -1166,6 +1166,33 @@ export const OULTON_PARK_INTL_WOUT_HISLOP = {
 };
 export const OULTON_PARK_INTL_NO_CHICANES = {
     title: 'Oulton Park - Intl w/no Chicanes',
+    setups: {
+        audi90gto: [
+            {
+                file: 'oulton-park-intl-no-chicanes/maf_oulton_26s3_q0.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'oulton-park-intl-no-chicanes/maf_oulton_26s3_r0.sto',
+            },
+        ],
+        nissangtpzxt: [
+            {
+                file: 'oulton-park-intl-no-chicanes/F122_NZXT_OultonLongNC_1-3_Q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'oulton-park-intl-no-chicanes/F122_NZXT_OultonLongNC_1-3.sto',
+            },
+            {
+                file: 'oulton-park-intl-no-chicanes/Lgo26S3_Oulton_NoCh_Q60.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'oulton-park-intl-no-chicanes/Lgo26S3_Oulton_NoCh_R61.sto',
+            },
+        ],
+    },
 };
 export const PHILLIP_ISLAND = {
     title: 'Phillip Island',
@@ -1816,6 +1843,13 @@ export const WILLOW_SPRINGS = {
     setups: {
         audi90gto: [
             {
+                file: 'willow-springs/maf_willow_26s3_q2.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'willow-springs/maf_willow_26s3_r2.sto',
+            },
+            {
                 file: 'willow-springs/maf_willow_26s3_q1.sto',
                 comment: QUAL,
             },
@@ -1823,7 +1857,15 @@ export const WILLOW_SPRINGS = {
                 file: 'willow-springs/maf_willow_26s3_r1.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [
+            {
+                file: 'willow-springs/2026S2_Willow_q.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'willow-springs/2026S2_Willow.sto',
+            },
+        ],
     },
 };
 export const ZANDVOORT = {
