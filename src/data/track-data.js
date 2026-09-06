@@ -1253,6 +1253,16 @@ export const PORTLAND = {
     setups: {
         audi90gto: [
             {
+                file: 'portland/A90_Portland_26S3_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'portland/maf_portland_26s3_q1.sto',
+                comment: QUAL
+            },
+            {
+                file: 'portland/maf_portland_26s3_r1.sto',
+            },
+            {
                 file: 'portland/A90_Portland_25S3_Y_Gijsen_R.sto',
             },
             {
@@ -1263,7 +1273,17 @@ export const PORTLAND = {
                 file: 'portland/maf_portland_25s3_r1.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'portland/F122_NZXT_Portland_1-7B.sto',
+            },
+            {
+                file: 'portland/Lgo26S3_Portland_Q43.sto',
+                comment: QUAL
+            },
+            {
+                file: 'portland/Lgo26S3_Portland_R43.sto',
+            },
+],
     },
 };
 export const PORTLAND_NO_CHICANE = {
