@@ -2139,6 +2139,51 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.PORTLAND_NO_CHICANE,
+                url: 'https://youtu.be/4WM0EDgSK0o?t=509',
+            },
+        ],
+    },
+    {
+        id: '26S4',
+        label: '2026 Season 4',
+        startDate: '2026-09-15',
+        endDate: '2026-12-08',
+        youTube: [
+            {
+                ...tracks.MOSPORT,
+            },
+            {
+                ...tracks.SUMMIT_POINT,
+            },
+            {
+                ...tracks.QUALCOMM_CIRCUIT,
+            },
+            {
+                ...tracks.INDY_ROAD,
+            },
+            {
+                ...tracks.SNETTERTON_200,
+            },
+            {
+                ...tracks.SEBRING,
+            },
+            {
+                ...tracks.SANDOWN,
+            },
+            {
+                ...tracks.DAYTONA_ROAD,
+            },
+            {
+                ...tracks.SUZUKA,
+            },
+            {
+                ...tracks.ROAD_AMERICA,
+            },
+            {
+                ...tracks.ZOLDER,
+            },
+            {
+                ...tracks.MUGELLO,
             },
         ],
     },

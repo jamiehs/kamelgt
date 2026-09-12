@@ -2,55 +2,56 @@ import * as tracks from './track-data.js';
 
 const seasonSetups: SetupWeek[] = [
     {
-        ...tracks.PHILLIP_ISLAND,
-        weekStart: '2026-06-16',
+        ...tracks.MOSPORT,
+        weekStart: '2026-09-15',
     },
     {
-        ...tracks.SILVERSTONE_2008_HISTORICAL_GP,
-        weekStart: '2026-06-23',
+        ...tracks.SUMMIT_POINT,
+        weekStart: '2026-09-22',
     },
     {
-        ...tracks.ST_PETERSBURG,
-        weekStart: '2026-06-30',
+        ...tracks.QUALCOMM_CIRCUIT,
+        weekStart: '2026-09-29',
         notes: ['First time visit for the series'],
     },
     {
-        ...tracks.WATKINS_GLEN_CLASSIC_BOOT,
-        weekStart: '2026-07-07',
+        ...tracks.INDY_ROAD,
+        weekStart: '2026-10-06',
         notes: ['60 minute endurance round', 'Fuel stop required'],
     },
     {
-        ...tracks.OSCHERSLEBEN,
-        weekStart: '2026-07-14',
+        ...tracks.SNETTERTON_200,
+        weekStart: '2026-10-13',
     },
     {
-        ...tracks.BELLE_ISLE,
-        weekStart: '2026-07-21',
+        ...tracks.SEBRING,
+        weekStart: '2026-10-20',
     },
     {
-        ...tracks.TSUKUBA,
-        weekStart: '2026-07-28',
+        ...tracks.SANDOWN,
+        weekStart: '2026-10-27',
+        notes: ['First time visit for the series'],
     },
     {
-        ...tracks.NURBURGRING_GP_BES_WEC,
-        weekStart: '2026-08-04',
+        ...tracks.DAYTONA_ROAD,
+        weekStart: '2026-11-03',
     },
     {
-        ...tracks.MID_OHIO,
-        weekStart: '2026-08-11',
+        ...tracks.SUZUKA,
+        weekStart: '2026-11-10',
     },
     {
-        ...tracks.WILLOW_SPRINGS,
-        weekStart: '2026-08-18',
+        ...tracks.ROAD_AMERICA,
+        weekStart: '2026-11-17',
         notes: ['60 minute endurance round', 'Fuel stop required'],
     },
     {
-        ...tracks.OULTON_PARK_INTL_NO_CHICANES,
-        weekStart: '2026-08-25',
+        ...tracks.ZOLDER,
+        weekStart: '2026-11-24',
     },
     {
-        ...tracks.PORTLAND_NO_CHICANE,
-        weekStart: '2026-09-01',
+        ...tracks.MUGELLO,
+        weekStart: '2026-12-01',
     },
 ];
 

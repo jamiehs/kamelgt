@@ -1294,6 +1294,10 @@ export const PHOENIX_2008_OVAL = {
     title: 'Phoenix Oval',
     alternateTitle: 'Phoenix Raceway 2008 - Oval',
 };
+export const QUALCOMM_CIRCUIT = {
+    title: 'Qualcomm Circuit',
+    alternateTitle: 'Qualcomm Circuit (Naval Base Coronado)',
+};
 export const RED_BULL_RING = {
     title: 'Red Bull Ring',
 };
@@ -1391,6 +1395,10 @@ export const ROAD_ATLANTA = {
 };
 export const SACHSENRING = {
     title: 'Sachsenring',
+};
+export const SANDOWN = {
+    title: 'Sandown',
+    alternateTitle: 'Sandown International Motor Raceway',
 };
 export const SEBRING = {
     title: 'Sebring',
@@ -1985,10 +1993,12 @@ const trackData = {
     PORTLAND,
     PORTLAND_NO_CHICANE,
     PHOENIX_2008_OVAL,
+    QUALCOMM_CIRCUIT,
     RED_BULL_RING,
     ROAD_AMERICA,
     ROAD_ATLANTA,
     SACHSENRING,
+    SANDOWN,
     SEBRING,
     SILVERSTONE_GP,
     SILVERSTONE_INTERNATIONAL,
