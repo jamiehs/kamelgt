@@ -1529,7 +1529,18 @@ export const SILVERSTONE_2008_HISTORICAL_GP = {
 export const SNETTERTON_200 = {
     title: 'Snetterton 200',
     alternateTitle: 'Snetterton Circuit - 200',
-};
+    setups: {
+        "audi90gto": [
+            {
+                file: 'snetterton/maf_snet_24s3_r2.sto',
+            },
+            {
+                file: 'snetterton/snetterton-22S1-r2.sto',
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }};
 export const ST_PETERSBURG = {
     title: 'St. Petersburg - Grand Prix',
     setups: {
