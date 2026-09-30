@@ -113,8 +113,15 @@ function addSetupsToExport(content, exportName, trackFolder, entries) {
     }
     const closingBrace = i - 1;
 
+    // The export's last existing property may or may not already end in a
+    // trailing comma (both are valid JS, and existing exports use either) —
+    // blindly prepending another comma produces an empty ",\n," slot, which
+    // is a syntax error in an object literal. Only add one when needed.
+    const beforeClose = content.slice(0, closingBrace).replace(/\s+$/, '');
+    const needsComma = beforeClose.length > 0 && !/[{,]$/.test(beforeClose);
+
     const cars = ['audi90gto', 'nissangtpzxt'];
-    let setupsBlock = `,\n    setups: {\n`;
+    let setupsBlock = `${needsComma ? ',' : ''}\n    setups: {\n`;
     for (const car of cars) {
         const carEntries = entries[car] ?? [];
         setupsBlock += `        "${car}": [\n`;

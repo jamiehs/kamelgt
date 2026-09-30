@@ -6,6 +6,7 @@ import {
     insertEntries,
     removeEntry,
     appendNewExport,
+    addSetupsToExport,
 } from '../lib/write-track-data.mjs';
 
 const SAMPLE = `const QUAL = "Qualifying setup";
@@ -153,5 +154,53 @@ describe('appendNewExport', () => {
             nissangtpzxt: [],
         });
         expect(result).toContain('existing_R.sto');
+    });
+});
+
+describe('addSetupsToExport', () => {
+    const entries = { audi90gto: [{ filename: 'x.sto', isQual: false }] };
+
+    it('does not produce a double comma when the last property already has a trailing comma', () => {
+        // Real shape from track-data.js: an export whose last existing
+        // property (e.g. alternateTitle) was authored with a trailing comma.
+        // addSetupsToExport must not blindly prepend another one — doing so
+        // produced an empty ",\n," line, a syntax error (confirmed live on
+        // SNETTERTON_200 and ZOLDER, both authored this way).
+        const content = `export const SNETTERTON_200 = {
+    title: 'Snetterton 200',
+    alternateTitle: 'Snetterton Circuit - 200',
+};
+`;
+        const result = addSetupsToExport(content, 'SNETTERTON_200', 'snetterton', entries);
+        expect(result).not.toMatch(/,\s*,/);
+        expect(result).toContain("file: 'snetterton/x.sto'");
+    });
+
+    it('still separates with a comma when the last property has none', () => {
+        const content = `export const FOO = {
+    title: 'Foo'
+};
+`;
+        const result = addSetupsToExport(content, 'FOO', 'foo', entries);
+        expect(result).not.toMatch(/,\s*,/);
+        expect(result).toMatch(/title: 'Foo'\s*,\s*setups:/);
+    });
+
+    it('does not add a leading comma when the export has no other properties', () => {
+        const content = `export const FOO = {
+};
+`;
+        const result = addSetupsToExport(content, 'FOO', 'foo', entries);
+        expect(result).not.toMatch(/{\s*,/);
+    });
+
+    it('produces syntactically valid output', () => {
+        const content = `export const SNETTERTON_200 = {
+    title: 'Snetterton 200',
+    alternateTitle: 'Snetterton Circuit - 200',
+};
+`;
+        const result = addSetupsToExport(content, 'SNETTERTON_200', 'snetterton', entries);
+        expect(() => new Function(result.replace(/^export /gm, ''))).not.toThrow();
     });
 });
