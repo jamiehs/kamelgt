@@ -976,6 +976,13 @@ export const MUGELLO = {
     setups: {
         audi90gto: [
             {
+                file: 'mugello/A90_24S1_Mugello_Y_Gijsen_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'mugello/A90_24S1_Mugello_Y_Gijsen_R.sto',
+            },
+            {
                 file: 'mugello/A90_Mugello_24S1_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
