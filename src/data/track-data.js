@@ -1257,7 +1257,7 @@ export const PORTLAND = {
             },
             {
                 file: 'portland/maf_portland_26s3_q1.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'portland/maf_portland_26s3_r1.sto',
@@ -1273,17 +1273,18 @@ export const PORTLAND = {
                 file: 'portland/maf_portland_25s3_r1.sto',
             },
         ],
-        nissangtpzxt: [            {
+        nissangtpzxt: [
+            {
                 file: 'portland/F122_NZXT_Portland_1-7B.sto',
             },
             {
                 file: 'portland/Lgo26S3_Portland_Q43.sto',
-                comment: QUAL
+                comment: QUAL,
             },
             {
                 file: 'portland/Lgo26S3_Portland_R43.sto',
             },
-],
+        ],
     },
 };
 export const PORTLAND_NO_CHICANE = {
@@ -1297,6 +1298,21 @@ export const PHOENIX_2008_OVAL = {
 export const QUALCOMM_CIRCUIT = {
     title: 'Qualcomm Circuit',
     alternateTitle: 'Qualcomm Circuit (Naval Base Coronado)',
+    setups: {
+        audi90gto: [],
+        nissangtpzxt: [
+            {
+                file: 'qualcomm-circuit/F122_NZXT_Qualcomm_1-2.sto',
+            },
+            {
+                file: 'qualcomm-circuit/Lgo26S4_Qualcomm_Q01.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'qualcomm-circuit/Lgo26S4_Qualcomm_R01.sto',
+            },
+        ],
+    },
 };
 export const RED_BULL_RING = {
     title: 'Red Bull Ring',
@@ -1609,17 +1625,17 @@ export const SUMMIT_POINT = {
     setups: {
         audi90gto: [
             {
+                file: 'summit-point/maf_summit_26s3_q0.sto',
+                comment: QUAL,
+            },
+            {
+                file: 'summit-point/maf_summit_26s3_r0.sto',
+            },
+            {
                 file: 'summit-point/A90 - 22S4 - SummitPoint - J Del Olmo - R.sto',
             },
             {
                 file: 'summit-point/A90 - 22S4 - SummitPoint - M Ollé - R.sto',
-            },
-            {
-                file: 'summit-point/A90_SummitPoint_21S2_Y_Gijsen_Q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'summit-point/A90_SummitPoint_21S2_Y_Gijsen_R.sto',
             },
             {
                 file: 'summit-point/summit-21S4-q.sto',
