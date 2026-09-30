@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest';
 import {
+    classifyToken,
     detectType,
     getStem,
     pairSetups,
@@ -14,6 +15,36 @@ function authorKey(authorId, folderName, car, filename) {
     const { type } = detectType(filename);
     return `${authorId}|${folderName}|${car}|${type}`;
 }
+
+describe('classifyToken', () => {
+    // fetch-setups.mjs uses this to exclude qual/race markers from the tokens
+    // it tries against the track index — e.g. "quali" fuzzy-matches the real
+    // track "Qualcomm Circuit" in Fuse.js, silently misfiling the setup.
+    it('classifies exact qual/race markers', () => {
+        expect(classifyToken('quali')).toBe('qual');
+        expect(classifyToken('qualy')).toBe('qual');
+        expect(classifyToken('qualifying')).toBe('qual');
+        expect(classifyToken('q')).toBe('qual');
+        expect(classifyToken('race')).toBe('race');
+        expect(classifyToken('r')).toBe('race');
+    });
+
+    it('classifies versioned qual/race markers', () => {
+        expect(classifyToken('q82')).toBe('qual');
+        expect(classifyToken('r2b')).toBe('race');
+    });
+
+    it('is case-insensitive', () => {
+        expect(classifyToken('Quali')).toBe('qual');
+        expect(classifyToken('RACE')).toBe('race');
+    });
+
+    it('returns null for track-name-like tokens, including ones that collide with markers', () => {
+        expect(classifyToken('silvoHistoric')).toBeNull();
+        expect(classifyToken('qualcomm')).toBeNull();
+        expect(classifyToken('izzydok')).toBeNull();
+    });
+});
 
 describe('detectType', () => {
     it('detects qual from exact Q token', () => {

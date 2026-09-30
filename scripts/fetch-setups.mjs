@@ -7,6 +7,7 @@ import { fetchSetupAttachments, downloadFile } from './lib/discord-fetch.mjs';
 import { buildTrackIndex } from './lib/track-index.mjs';
 import { buildSchedule, pickBySchedule } from './lib/schedule.mjs';
 import { detectType } from './lib/parse-filename.mjs';
+import { isTrackCandidateToken } from './lib/track-match-tokens.mjs';
 import { writeMeta } from './lib/meta.mjs';
 import { prompt } from './lib/prompt.mjs';
 
@@ -116,11 +117,15 @@ for (const channel of CHANNELS) {
         }
 
         // Stage 1: filename tokens — iterate all; stop early on unambiguous hit
+        // isTrackCandidateToken excludes qual/race markers and car/series words
+        // (e.g. "quali", "audi"): they're not track names, but short ones can
+        // fuzzy-match a real track in the index (e.g. "quali" ~ "Qualcomm
+        // Circuit", "audi" ~ "Mosport"), silently misfiling the setup.
         const filenameTokens = attachment.filename
             .replace(/\.[^.]+$/, '')
             .split(/[_\-. ]+/)
             .map((t) => t.replace(/\d+[cfCF]$/, '')) // strip temp suffix, e.g. MIA46c → MIA
-            .filter((t) => t.length >= 3 && !/^\d+$/.test(t));
+            .filter(isTrackCandidateToken);
         let resolved = null;
         let candidates = [];
         for (const token of filenameTokens) {

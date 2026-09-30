@@ -139,6 +139,7 @@ function pairSetups(files) {
 }
 
 export {
+    classifyToken,
     detectType,
     getStem,
     pairSetups,
