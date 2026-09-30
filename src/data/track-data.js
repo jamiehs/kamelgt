@@ -1642,27 +1642,45 @@ export const SUMMIT_POINT = {
     setups: {
         audi90gto: [
             {
+                file: 'summit-point/A90_SummitPoint_25S2_Y_Gijsen_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'summit-point/A90_SummitPoint_25S2_Y_Gijsen_R.sto',
+            },
+            {
+                file: 'summit-point/JdelOlmoSummitPointR.sto',
+            },
+            {
+                file: 'summit-point/maf_summit_25s2_q1.sto',
+                comment: QUAL
+            },
+            {
+                file: 'summit-point/maf_summit_25s2_r1.sto',
+            },
+            {
                 file: 'summit-point/maf_summit_26s3_q0.sto',
                 comment: QUAL,
             },
             {
                 file: 'summit-point/maf_summit_26s3_r0.sto',
             },
-            {
-                file: 'summit-point/A90 - 22S4 - SummitPoint - J Del Olmo - R.sto',
-            },
-            {
-                file: 'summit-point/A90 - 22S4 - SummitPoint - M Ollé - R.sto',
-            },
-            {
-                file: 'summit-point/summit-21S4-q.sto',
-                comment: QUAL,
-            },
-            {
-                file: 'summit-point/summit-21S4-r2.sto',
-            },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'summit-point/F122_NZXT_Summit_1-3_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'summit-point/F122_NZXT_Summit_1-3.sto',
+            },
+            {
+                file: 'summit-point/Lgo26S4_Summit_Point_Q60.sto',
+                comment: QUAL
+            },
+            {
+                file: 'summit-point/Lgo26S4_Summit_Point_R61.sto',
+            },
+],
     },
 };
 export const SUZUKA = {
