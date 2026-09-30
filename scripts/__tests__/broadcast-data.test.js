@@ -145,6 +145,30 @@ describe('titleMatchesRound', () => {
     it('does not match unrelated titles', () => {
         expect(titleMatchesRound('IMSA Vintage, Audi 90 GTO, S3 2026 W11, Oulton Park. Wednesday. iRacing', 11)).toBe(false);
     });
+
+    it('matches "Opener" for round 1 when totalRounds is given', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S4 Opener | Mosport', 1, 12)).toBe(true);
+    });
+
+    it('does not match "Opener" for round 1 without totalRounds (unknown season length)', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S4 Opener | Mosport', 1)).toBe(false);
+    });
+
+    it('does not match "Opener" for a non-first round even when totalRounds is given', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S4 Opener | Mosport', 2, 12)).toBe(false);
+    });
+
+    it('matches "Finale" for the last round when totalRounds is given', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S1 Finale | Sonoma Cup Long', 11, 11)).toBe(true);
+    });
+
+    it('does not match "Finale" for a round that is not the last', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S1 Finale | Sonoma Cup Long', 10, 11)).toBe(false);
+    });
+
+    it('still matches numeric rounds normally when totalRounds is given', () => {
+        expect(titleMatchesRound('IMSA Vintage Series | 2026 S4 R2 | Summit Point', 2, 12)).toBe(true);
+    });
 });
 
 describe('buildSearchQuery', () => {

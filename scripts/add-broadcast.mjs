@@ -64,7 +64,8 @@ async function main() {
         return;
     }
     const channelResults = results.filter((r) => r.uploaderId === CHANNEL_HANDLE);
-    const matches = channelResults.filter((r) => titleMatchesRound(r.title, roundNumber));
+    const totalRounds = block.entries.length;
+    const matches = channelResults.filter((r) => titleMatchesRound(r.title, roundNumber, totalRounds));
 
     let chosen;
     if (matches.length === 1) {

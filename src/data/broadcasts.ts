@@ -2151,9 +2151,11 @@ const broadcasts: any[] = [
         youTube: [
             {
                 ...tracks.MOSPORT,
+                url: 'https://youtu.be/2ipbLaiMk6E?t=511',
             },
             {
                 ...tracks.SUMMIT_POINT,
+                url: 'https://youtu.be/KqI9CSRVrhA?t=511',
             },
             {
                 ...tracks.QUALCOMM_CIRCUIT,

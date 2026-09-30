@@ -100,8 +100,15 @@ function findUnfilledEntry(block) {
 // Whether a YouTube title refers to the given 1-based round number.
 // GSRCBroadcasting titles use the abbreviated "R<N>" form (e.g. "S3 R10"),
 // not the spelled-out "Round N" — match both, word-bounded so "R1" doesn't
-// also match "R10".
-function titleMatchesRound(title, roundNumber) {
+// also match "R10". They also title the season's first round "Opener" and
+// its last round "Finale" instead of a number — pass totalRounds (the
+// season's entry count) to recognize those; without it, only numeric forms
+// match, since there's no way to know if this round is first/last.
+function titleMatchesRound(title, roundNumber, totalRounds) {
+    if (totalRounds !== undefined) {
+        if (roundNumber === 1 && /\bopener\b/i.test(title)) return true;
+        if (roundNumber === totalRounds && /\bfinale\b/i.test(title)) return true;
+    }
     const re = new RegExp(`\\b(?:round\\s+${roundNumber}|r${roundNumber})\\b`, 'i');
     return re.test(title);
 }
