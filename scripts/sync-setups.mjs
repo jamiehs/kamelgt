@@ -1,11 +1,12 @@
-import { readFileSync, writeFileSync, readdirSync, renameSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, renameSync, unlinkSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
 import { discoverNewSetups } from './lib/git-discover.mjs';
 import { readMeta } from './lib/meta.mjs';
 import { buildFolderMap, findExportByFolderPrefix } from './lib/track-map.mjs';
-import { pairSetups, seasonSortKey, getStem, detectType, looseKey } from './lib/parse-filename.mjs';
+import { pairSetups, getStem, detectType, looseKey } from './lib/parse-filename.mjs';
+import { selectKeepers } from './lib/setup-pruning.mjs';
 import {
     formatEntry,
     insertEntries,
@@ -25,7 +26,10 @@ const MAX_SETUPS = 4;
 const filenameFromPath = (p) => p.split('/').pop();
 const isQual = (e) => e.comment === 'Qualifying setup';
 
-function printPreview(car, track, pairs, existing, suggested) {
+// flaggedExisting/flaggedNewRaces: Sets of filenames the recency ranking
+// (selectKeepers) picked to drop — shown as REMOVE?/ADD? rather than
+// applied outright, since the pruning decision hasn't happened yet.
+function printPreview(car, track, pairs, existing, flaggedExisting, flaggedNewRaces) {
     const newRaceCount = pairs.reduce((n, p) => n + (p.race ? 1 : 0), 0);
     const existingRaceCount = existing.filter((e) => !isQual(e)).length;
     const total = existingRaceCount + newRaceCount;
@@ -36,13 +40,16 @@ function printPreview(car, track, pairs, existing, suggested) {
     console.log(`\n${car} / ${track}${pruneNote}`);
 
     for (const pair of pairs) {
+        const raceFlagged = pair.race && flaggedNewRaces.has(pair.race);
+        const label = raceFlagged ? 'ADD?  ' : 'ADD:  ';
+        const dropTag = raceFlagged ? ' [older than existing keepers — dropped if pruning applied]' : '';
         if (pair.qual) {
             const flag = pair.ambiguous ? ' [AMBIGUOUS — defaulting to qual]' : ' [QUAL]';
-            console.log(`  ADD:    ${pair.qual}${flag}`);
+            console.log(`  ${label}${pair.qual}${flag}${dropTag}`);
         }
         if (pair.race) {
             const flag = pair.ambiguous ? ' [AMBIGUOUS — defaulting to race]' : '';
-            console.log(`  ADD:    ${pair.race}${flag}`);
+            console.log(`  ${label}${pair.race}${flag}${dropTag}`);
         }
     }
 
@@ -50,12 +57,11 @@ function printPreview(car, track, pairs, existing, suggested) {
     for (const entry of existing) {
         const filename = filenameFromPath(entry.file);
         const qualTag = isQual(entry) ? ' [QUAL]' : '';
-        const isSuggested = suggested.includes(filename);
-        let willRemove = isSuggested;
+        let willRemove = flaggedExisting.has(filename);
         if (!willRemove && incomingHasQual && isQual(entry)) {
             const qualStem = getStem(filename);
             const qualLoose = looseKey(filename);
-            willRemove = suggested.some(
+            willRemove = [...flaggedExisting].some(
                 (r) => getStem(r) === qualStem || (qualLoose && looseKey(r) === qualLoose),
             );
         }
@@ -63,30 +69,39 @@ function printPreview(car, track, pairs, existing, suggested) {
     }
 }
 
-async function getPruningDecision(existing, suggested) {
-    if (suggested.length === 0) return [];
+// flagged: { existing: string[], newRaces: string[] } — filenames the
+// recency ranking picked to drop. Returns the same shape, narrowed to the
+// user's confirmed choice: skip (keep everything, on either side), accept
+// (drop everything flagged), or interactive (review each one).
+async function getPruningDecision(flagged) {
+    const total = flagged.existing.length + flagged.newRaces.length;
+    if (total === 0) return { existing: [], newRaces: [] };
 
     console.log(`\n  Pruning options:`);
     console.log(`    [s] Skip pruning — keep everything`);
-    console.log(`    [a] Accept suggestions — remove ${suggested.length} older entry(s)`);
+    console.log(`    [a] Accept suggestions — drop ${total} older entry(s)`);
     console.log(`    [i] Interactive — review each flagged setup`);
 
     const choice = (await prompt('  Choice [s/a/i]: ')).toLowerCase();
 
     if (choice === 'a') {
-        return suggested.filter((f) => seasonSortKey(f) !== Infinity);
+        return flagged;
     }
 
     if (choice === 'i') {
-        const toRemove = [];
-        for (const filename of suggested) {
-            const answer = await prompt(`  Remove ${filename}? (y/N) `);
-            if (answer.toLowerCase() === 'y') toRemove.push(filename);
+        const confirmed = { existing: [], newRaces: [] };
+        for (const filename of flagged.existing) {
+            const answer = await prompt(`  Remove existing ${filename}? (y/N) `);
+            if (answer.toLowerCase() === 'y') confirmed.existing.push(filename);
         }
-        return toRemove;
+        for (const filename of flagged.newRaces) {
+            const answer = await prompt(`  Skip adding ${filename}? (y/N) `);
+            if (answer.toLowerCase() === 'y') confirmed.newRaces.push(filename);
+        }
+        return confirmed;
     }
 
-    return [];
+    return { existing: [], newRaces: [] };
 }
 
 async function handleNewTrack(car, track, pairs, content) {
@@ -291,26 +306,41 @@ for (const [key, rawSetups] of groups) {
         continue;
     }
 
-    // Budget counts race setups only; qualifying setups are free
-    const newRaceCount = pairs.reduce((n, p) => n + (p.race ? 1 : 0), 0);
-    const total = existingRace.length + newRaceCount;
+    // Budget counts race setups only; qualifying setups are free.
+    // Existing and newly-downloaded race setups are ranked together by
+    // recency (season embedded in the filename, falling back to the real
+    // Discord upload date) — this is what keeps the tool from ever
+    // preferring a demonstrably-older "new" file just because it's new, or
+    // pruning an "existing" one just because it's existing (confirmed live
+    // 2026-09-30: naive "always keep new, prune oldest-existing" discarded
+    // a last-season Summit Point setup to make room for one from 2021).
+    const existingRaceCandidates = existingRace.map((e) => {
+        const filename = filenameFromPath(e.file);
+        const meta = readMeta(path.join(PROJECT_ROOT, 'public/setups', car, resolvedTrack, filename));
+        return { key: `existing:${filename}`, filename, timestamp: meta?.timestamp ?? null };
+    });
+    const newRaceCandidates = pairs
+        .filter((p) => p.race)
+        .map((p) => {
+            const meta = readMeta(path.join(PROJECT_ROOT, 'public/setups', car, resolvedTrack, p.race));
+            return { key: `new:${p.race}`, filename: p.race, timestamp: meta?.timestamp ?? null };
+        });
 
-    // Build pruning suggestions from race setups only, oldest season first
-    let suggested = [];
-    if (total > MAX_SETUPS) {
-        const toFlag = total - MAX_SETUPS;
-        const sorted = [...existingRace]
-            .map((e) => ({
-                filename: filenameFromPath(e.file),
-                sortKey: seasonSortKey(filenameFromPath(e.file)),
-            }))
-            .sort((a, b) => a.sortKey - b.sortKey);
-        suggested = sorted.slice(0, toFlag).map((e) => e.filename);
-    }
+    const { dropKeys } = selectKeepers([...existingRaceCandidates, ...newRaceCandidates], MAX_SETUPS);
+    const flaggedExisting = new Set(
+        existingRaceCandidates.filter((c) => dropKeys.has(c.key)).map((c) => c.filename),
+    );
+    const flaggedNewRaces = new Set(
+        newRaceCandidates.filter((c) => dropKeys.has(c.key)).map((c) => c.filename),
+    );
 
-    printPreview(car, resolvedTrack, pairs, existing, suggested);
+    printPreview(car, resolvedTrack, pairs, existing, flaggedExisting, flaggedNewRaces);
 
-    const toRemove = await getPruningDecision(existing, suggested);
+    const decision = await getPruningDecision({
+        existing: [...flaggedExisting],
+        newRaces: [...flaggedNewRaces],
+    });
+    const droppedNewRaces = new Set(decision.newRaces);
 
     const confirm = (await prompt('\n  Apply changes? [y/n/i] ')).toLowerCase();
     if (confirm !== 'y' && confirm !== 'i') {
@@ -318,10 +348,13 @@ for (const [key, rawSetups] of groups) {
         continue;
     }
 
-    let approvedPairs = pairs;
+    // A pruned-away race's qual (if any) is on the same pair object, so
+    // filtering by race drops both halves in one step.
+    let approvedPairs = pairs.filter((p) => !(p.race && droppedNewRaces.has(p.race)));
+
     if (confirm === 'i') {
-        approvedPairs = [];
-        for (const pair of pairs) {
+        const interactivelyApproved = [];
+        for (const pair of approvedPairs) {
             const label = [
                 pair.qual && `${pair.qual}${pair.ambiguous ? ' [AMBIGUOUS]' : ' [QUAL]'}`,
                 pair.race && `${pair.race}${pair.ambiguous ? ' [AMBIGUOUS]' : ''}`,
@@ -329,18 +362,29 @@ for (const [key, rawSetups] of groups) {
                 .filter(Boolean)
                 .join(' + ');
             const answer = (await prompt(`    Add ${label}? [y/n] `)).toLowerCase();
-            if (answer === 'y') approvedPairs.push(pair);
+            if (answer === 'y') interactivelyApproved.push(pair);
         }
-        if (approvedPairs.length === 0) {
-            console.log('  Nothing approved, skipping.');
-            continue;
-        }
+        approvedPairs = interactivelyApproved;
     }
 
+    if (approvedPairs.length === 0 && decision.existing.length === 0) {
+        console.log('  Nothing to apply, skipping.');
+        continue;
+    }
+
+    // Full disk paths (.sto) queued for deletion — their .meta.json sidecar
+    // (if any) is deleted alongside. Nothing pruned from the UI stays on
+    // disk: there's no point keeping a setup around that track-data.js will
+    // never reference.
+    const filesToDelete = [];
+
     const incomingHasQual = approvedPairs.some((p) => p.qual);
-    for (const filename of toRemove) {
+    for (const filename of decision.existing) {
         const filePath = existing.find((e) => e.file.endsWith('/' + filename))?.file;
-        if (filePath) currentContent = removeEntry(currentContent, filePath);
+        if (filePath) {
+            currentContent = removeEntry(currentContent, filePath);
+            filesToDelete.push(path.join(PROJECT_ROOT, 'public/setups', car, filePath));
+        }
         if (!incomingHasQual) continue;
         const raceStem = getStem(filename);
         const raceLooseKey = looseKey(filename);
@@ -349,7 +393,32 @@ for (const [key, rawSetups] of groups) {
             if (detectType(f).type !== 'qual') return false;
             return getStem(f) === raceStem || (raceLooseKey && looseKey(f) === raceLooseKey);
         });
-        if (pairedQual) currentContent = removeEntry(currentContent, pairedQual.file);
+        if (pairedQual) {
+            currentContent = removeEntry(currentContent, pairedQual.file);
+            filesToDelete.push(path.join(PROJECT_ROOT, 'public/setups', car, pairedQual.file));
+        }
+    }
+
+    for (const pair of pairs) {
+        if (!pair.race || !droppedNewRaces.has(pair.race)) continue;
+        filesToDelete.push(path.join(PROJECT_ROOT, 'public/setups', car, resolvedTrack, pair.race));
+        if (pair.qual) {
+            filesToDelete.push(path.join(PROJECT_ROOT, 'public/setups', car, resolvedTrack, pair.qual));
+        }
+    }
+
+    for (const filePath of filesToDelete) {
+        try {
+            unlinkSync(filePath);
+            console.log(`  🗑  Deleted ${path.relative(PROJECT_ROOT, filePath)}`);
+        } catch {
+            /* already gone */
+        }
+        try {
+            unlinkSync(filePath + '.meta.json');
+        } catch {
+            /* no sidecar */
+        }
     }
 
     const entries = [];
@@ -364,7 +433,7 @@ for (const [key, rawSetups] of groups) {
         if (!hasSetupsBlock(currentContent, resolvedExport)) {
             // Export exists but has no setups key — add one (e.g. COTA stub entries)
             const entriesMap = Object.fromEntries(CARS.map((c) => [c, []]));
-            for (const pair of pairs) {
+            for (const pair of approvedPairs) {
                 if (pair.qual) entriesMap[car].push({ filename: pair.qual, isQual: true });
                 if (pair.race) entriesMap[car].push({ filename: pair.race, isQual: false });
             }
