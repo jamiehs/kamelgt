@@ -1066,7 +1066,17 @@ export const NURBURGRING_GP = {
                 file: 'nurburgring-gp/nurburgring-gp-22S3_JavierNurg4.1.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'nurburgring-gp/F122_NZXT_NurburgGP_1-2.sto',
+            },
+            {
+                file: 'nurburgring-gp/Lgo26S3_Nur_BES_WEC_Q71.sto',
+                comment: QUAL
+            },
+            {
+                file: 'nurburgring-gp/Lgo26S3_Nur_BES_WEC_R71.sto',
+            },
+],
     },
 };
 export const NURBURGRING_GP_BES_WEC = {
