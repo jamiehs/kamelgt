@@ -1346,21 +1346,26 @@ export const ROAD_AMERICA = {
     setups: {
         audi90gto: [
             {
-                file: 'road-america/A90_RoadAmerica_23S2_Y_Gijsen_R.sto',
+                file: 'road-america/A90_RoadAmerica_24S2_Y_Gijsen_R500.sto',
             },
             {
-                file: 'road-america/A90_RoadAmerica_23S2_Y_Gijsen_Q.sto',
-                comment: QUAL,
+                file: 'road-america/A90_RoadAmerica_24S2_Y_Gijsen_R60_asc4r24s4.sto',
             },
             {
-                file: 'road-america/maf_road_america_23s4_r1.sto',
+                file: 'road-america/A90_RoadAmerica_25S2_Y_Gijsen_Q.sto',
+                comment: QUAL
             },
             {
-                file: 'road-america/maf_road_america_23s4_q1.sto',
-                comment: QUAL,
+                file: 'road-america/A90_RoadAmerica_25S2_Y_Gijsen_R500.sto',
+            },
+            {
+                file: 'road-america/maf_RA500_24s2_R.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'road-america/Lag500.sto',
+            },
+],
     },
 };
 export const ROAD_AMERICA_500 = {
