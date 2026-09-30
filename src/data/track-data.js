@@ -1989,7 +1989,23 @@ export const ZANDVOORT = {
 export const ZOLDER = {
     title: 'Zolder',
     alternateTitle: 'Circuit Zolder',
-};
+
+    setups: {
+        "audi90gto": [
+            {
+                file: 'zolder/Zoldergp20c.sto',
+            },
+            {
+                file: 'zolder/maf_zolder_24s4_q2.sto',
+                comment: QUAL
+            },
+            {
+                file: 'zolder/maf_zolder_24s4_r2.sto',
+            },
+        ],
+        "nissangtpzxt": [
+        ],
+    }};
 export const ZOLDER_ALTERNATE = {
     title: 'Zolder Alternate',
     alternateTitle: 'Circuit Zolder - Alternate',
