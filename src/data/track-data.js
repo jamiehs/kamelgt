@@ -930,27 +930,44 @@ export const MOSPORT = {
     setups: {
         audi90gto: [
             {
-                file: 'ctmp/A90_Mosport_ 23S3_Y_Gijsen_Q.sto',
-                comment: QUAL,
+                file: 'ctmp/A90_Mosport__25S3_Y_Gijsen_Q.sto',
+                comment: QUAL
             },
             {
-                file: 'ctmp/A90_Mosport_ 23S3_Y_Gijsen_R.sto',
+                file: 'ctmp/A90_Mosport__25S3_Y_Gijsen_R.sto',
             },
             {
-                file: 'ctmp/ctmp-22S3-Marc-r1.sto',
+                file: 'ctmp/Mosporteh26c.sto',
             },
             {
-                file: 'ctmp/ctmp-22S3-q2.sto',
-                comment: QUAL,
+                file: 'ctmp/asc_mosport_26s4_q1b.sto',
+                comment: QUAL
             },
             {
-                file: 'ctmp/ctmp-22S3-r4.sto',
+                file: 'ctmp/asc_mosport_26s4_r1b.sto',
             },
             {
-                file: 'ctmp/mosport-21S4-r4.sto',
+                file: 'ctmp/maf_mosport_26s4_q0.sto',
+                comment: QUAL
+            },
+            {
+                file: 'ctmp/maf_mosport_26s4_r0.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'ctmp/2026S4_Mosport_B_3.sto',
+            },
+            {
+                file: 'ctmp/F122_NZXT_Mosport_1-7.sto',
+            },
+            {
+                file: 'ctmp/Lgo26S4_Mosport_Q60.sto',
+                comment: QUAL
+            },
+            {
+                file: 'ctmp/Lgo26S4_Mosport_R61.sto',
+            },
+],
     },
 };
 export const MUGELLO = {
