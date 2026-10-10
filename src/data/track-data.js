@@ -495,6 +495,13 @@ export const INDY_ROAD = {
     setups: {
         audi90gto: [
             {
+                file: 'indy-road/maf_indy_26s3_q0.sto',
+                comment: QUAL
+            },
+            {
+                file: 'indy-road/maf_indy_26s3_r0.sto',
+            },
+            {
                 file: 'indy-road/A90_Indy09_21S2_Y_Gijsen_R.sto',
             },
             {
@@ -505,16 +512,31 @@ export const INDY_ROAD = {
                 file: 'indy-road/JdelOlmoIndi23S1E.sto',
             },
             {
-                file: 'indy-road/Indy_Road_1.1.sto',
-            },
-            {
-                file: 'indy-road/Indy_a6_90l.sto',
-            },
-            {
                 file: 'indy-road/23S1_Indy-road_R.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'indy-road/2026S4_indy_rd_q03.sto',
+                comment: QUAL
+            },
+            {
+                file: 'indy-road/2026S4_indy_rd_02.sto',
+            },
+            {
+                file: 'indy-road/F122_NZXT_Indianapolis22_1-3_Q.sto',
+                comment: QUAL
+            },
+            {
+                file: 'indy-road/F122_NZXT_Indianapolis22_1-3.sto',
+            },
+            {
+                file: 'indy-road/Lgo26S4_Indy_RC_Q60.sto',
+                comment: QUAL
+            },
+            {
+                file: 'indy-road/Lgo26S4_Indy_RC_R60.sto',
+            },
+],
     },
 };
 export const INDY_ROAD_2009 = {
@@ -1333,7 +1355,14 @@ export const QUALCOMM_CIRCUIT = {
     title: 'Qualcomm Circuit',
     alternateTitle: 'Qualcomm Circuit (Naval Base Coronado)',
     setups: {
-        audi90gto: [],
+        audi90gto: [            {
+                file: 'qualcomm-circuit/maf_qualcomm_26s3_q0.sto',
+                comment: QUAL
+            },
+            {
+                file: 'qualcomm-circuit/maf_qualcomm_26s3_r0.sto',
+            },
+],
         nissangtpzxt: [
             {
                 file: 'qualcomm-circuit/F122_NZXT_Qualcomm_1-2.sto',

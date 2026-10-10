@@ -2159,6 +2159,7 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.QUALCOMM_CIRCUIT,
+                url: 'https://youtu.be/aouM7ZSXnF0?t=475',
             },
             {
                 ...tracks.INDY_ROAD,
