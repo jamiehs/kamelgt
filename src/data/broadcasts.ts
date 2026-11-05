@@ -2163,15 +2163,19 @@ const broadcasts: any[] = [
             },
             {
                 ...tracks.INDY_ROAD,
+                url: 'https://youtu.be/9NO6ilV0uSY?t=477',
             },
             {
                 ...tracks.SNETTERTON_200,
+                url: 'https://youtu.be/Iq5pBoCxFhs?t=478',
             },
             {
                 ...tracks.SEBRING,
+                url: 'https://youtu.be/hBGWShyvEBQ?t=477',
             },
             {
                 ...tracks.SANDOWN,
+                url: 'https://youtu.be/OwKIy4ZZuv8?t=476',
             },
             {
                 ...tracks.DAYTONA_ROAD,
