@@ -315,6 +315,9 @@ export const DAYTONA = {
     setups: {
         audi90gto: [
             {
+                file: 'daytona/nightona.sto',
+            },
+            {
                 file: 'daytona/A90_DaytonaRC_23S1_Y_Gijsen_Q.sto',
                 comment: QUAL,
             },
@@ -328,7 +331,14 @@ export const DAYTONA = {
                 file: 'daytona/KB_2022-S2_Daytona_Road_R-ih.sto',
             },
         ],
-        nissangtpzxt: [],
+        nissangtpzxt: [            {
+                file: 'daytona/Lgo26S4_Daytona_RC_Q20.sto',
+                comment: QUAL
+            },
+            {
+                file: 'daytona/Lgo26S4_Daytona_RC_R21.sto',
+            },
+],
     },
 };
 export const DAYTONA_ROAD = {
@@ -1483,7 +1493,30 @@ export const SACHSENRING = {
 export const SANDOWN = {
     title: 'Sandown',
     alternateTitle: 'Sandown International Motor Raceway',
-};
+
+    setups: {
+        "audi90gto": [
+            {
+                file: 'sandown/maf_sandown_26s4_q0.sto',
+                comment: QUAL
+            },
+            {
+                file: 'sandown/maf_sandown_26s4_r0.sto',
+            },
+        ],
+        "nissangtpzxt": [
+            {
+                file: 'sandown/2026S4_sandown_02.sto',
+            },
+            {
+                file: 'sandown/Lgo26S4_Sandown_Q72.sto',
+                comment: QUAL
+            },
+            {
+                file: 'sandown/Lgo26S4_Sandown_R72.sto',
+            },
+        ],
+    }};
 export const SEBRING = {
     title: 'Sebring',
     setups: {
@@ -1576,13 +1609,30 @@ export const SNETTERTON_200 = {
     setups: {
         "audi90gto": [
             {
-                file: 'snetterton/maf_snet_24s3_r2.sto',
+                file: 'snetterton/26s4-Snetterton21c.sto',
             },
             {
-                file: 'snetterton/snetterton-22S1-r2.sto',
+                file: 'snetterton/asc_snet_26s4_r1_esports.sto',
+            },
+            {
+                file: 'snetterton/maf_snet_26s4_q0.sto',
+                comment: QUAL
+            },
+            {
+                file: 'snetterton/maf_snet_26s4_r0.sto',
+            },
+            {
+                file: 'snetterton/maf_snet_24s3_r2.sto',
             },
         ],
         "nissangtpzxt": [
+            {
+                file: 'snetterton/Lgo26S4_Snetterton_200_Q61.sto',
+                comment: QUAL
+            },
+            {
+                file: 'snetterton/Lgo26S4_Snetterton_200_R61.sto',
+            },
         ],
     }};
 export const ST_PETERSBURG = {
